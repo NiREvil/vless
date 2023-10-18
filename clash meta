@@ -1,0 +1,1340 @@
+mixed-port: 7890
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: always
+mode: rule
+log-level: error
+ipv6: true
+external-controller: 127.0.0.1:9090
+experimental:
+  ignore-resolve-fail: true
+  sniff-tls-sni: true
+  tracing: true
+hosts:
+  "localhost": 127.0.0.1
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+sniffer:
+  enable: true
+  sniff:
+    http: { ports: [1-442, 444-8442, 8444-65535], override-destination: true }
+    tls: { ports: [1-79, 81-8079, 8081-65535], override-destination: true }
+  force-domain:
+      - "+.v2ex.com"
+      - www.google.com
+      - google.com
+  skip-domain:
+      - Mijia Cloud
+      - dlg.io.mi.com
+  sniffing:
+    - tls
+    - http
+  port-whitelist:
+    - "80"
+    - "443"
+
+tun:
+  enable: true
+  prefer-h3: true
+  listen: 0.0.0.0:53
+  stack: gvisor
+  dns-hijack:
+     - "any:53"
+     - "tcp://any:53"
+  auto-redir: true
+  auto-route: true
+  auto-detect-interface: true
+
+dns:
+  enable: true
+  ipv6: true
+  default-nameserver:
+    - '1.1.1.1'
+    - '8.8.8.8'
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - 'stun.*.*'
+    - 'stun.*.*.*'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*.*.*'
+    - '+.stun.*.*.*.*.*'
+    - '*.lan'
+    - '+.msftncsi.com'
+    - msftconnecttest.com
+    - 'time?.*.com'
+    - 'time.*.com'
+    - 'time.*.gov'
+    - 'time.*.apple.com'
+    - time-ios.apple.com
+    - 'time1.*.com'
+    - 'time2.*.com'
+    - 'time3.*.com'
+    - 'time4.*.com'
+    - 'time5.*.com'
+    - 'time6.*.com'
+    - 'time7.*.com'
+    - 'ntp?.*.com'
+    - 'ntp.*.com'
+    - 'ntp1.*.com'
+    - 'ntp2.*.com'
+    - 'ntp3.*.com'
+    - 'ntp4.*.com'
+    - 'ntp5.*.com'
+    - 'ntp6.*.com'
+    - 'ntp7.*.com'
+    - '+.pool.ntp.org'
+    - '+.ipv6.microsoft.com'
+    - speedtest.cros.wr.pvp.net
+    - network-test.debian.org
+    - detectportal.firefox.com
+    - cable.auth.com
+    - miwifi.com
+    - routerlogin.com
+    - routerlogin.net
+    - tendawifi.com
+    - tendawifi.net
+    - tplinklogin.net
+    - tplinkwifi.net
+    - '*.xiami.com'
+    - tplinkrepeater.net
+    - router.asus.com
+    - '*.*.*.srv.nintendo.net'
+    - '*.*.stun.playstation.net'
+    - '*.openwrt.pool.ntp.org'
+    - resolver1.opendns.com
+    - 'GC._msDCS.*.*'
+    - 'DC._msDCS.*.*'
+    - 'PDC._msDCS.*.*'
+  use-hosts: true
+  nameserver:
+    - '8.8.4.4'
+    - '1.0.0.1'
+    - "https://1.0.0.1/dns-query"
+    - "https://8.8.4.4/dns-query"
+  nameserver-policy:
+    'RULE-SET:ir,ircidr,geoip:ir,+.ir,+.bonyan.co': ["217.218.155.155", "217.218.127.127", "https://dns.403.online/dns-query", "https://dns.shecan.ir/dns-query"]
+
+proxies:
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 0️⃣1️⃣","type":"vless","server":"104.24.184.84","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 0️⃣2️⃣","type":"vless","server":"104.16.219.230","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 0️⃣3️⃣","type":"vless","server":"104.17.88.212","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 0️⃣4️⃣","type":"vless","server":"104.22.75.105","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 0️⃣5️⃣","type":"vless","server":"162.159.1.94","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 0️⃣6️⃣","type":"vless","server":"104.17.42.10","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 0️⃣7️⃣","type":"vless","server":"159.246.55.180","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 0️⃣8️⃣","type":"vless","server":"104.20.149.108","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 0️⃣9️⃣","type":"vless","server":"104.16.29.8","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣","type":"vless","server":"104.20.2.1","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣","type":"vless","server":"104.18.72.191","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣","type":"vless","server":"104.17.232.114","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣","type":"vless","server":"172.67.229.179","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣","type":"vless","server":"104.22.51.45","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣5️⃣","type":"vless","server":"104.16.119.47","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣6️⃣","type":"vless","server":"104.17.225.199","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣7️⃣","type":"vless","server":"104.21.231.123","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣8️⃣","type":"vless","server":"104.27.196.92","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣9️⃣","type":"vless","server":"172.65.188.62","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 2️⃣0️⃣","type":"vless","server":"104.27.38.85","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 2️⃣1️⃣","type":"vless","server":"104.19.180.169","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 2️⃣2️⃣","type":"vless","server":"104.17.20.55","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 2️⃣3️⃣","type":"vless","server":"172.65.237.80","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 2️⃣4️⃣","type":"vless","server":"104.24.255.191","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 2️⃣5️⃣","type":"vless","server":"104.23.123.239","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 2️⃣6️⃣","type":"vless","server":"162.159.32.35","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 2️⃣7️⃣","type":"vless","server":"104.16.183.101","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 2️⃣8️⃣","type":"vless","server":"104.27.115.85","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 2️⃣9️⃣","type":"vless","server":"104.16.246.91","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 3️⃣0️⃣","type":"vless","server":"104.27.122.56","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 3️⃣1️⃣","type":"vless","server":"172.71.160.32","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 3️⃣2️⃣","type":"vless","server":"104.16.169.7","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 3️⃣3️⃣","type":"vless","server":"104.27.101.40","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 3️⃣4️⃣","type":"vless","server":"104.27.96.222","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 3️⃣5️⃣","type":"vless","server":"104.18.190.52","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 3️⃣6️⃣","type":"vless","server":"104.20.251.248","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 3️⃣7️⃣","type":"vless","server":"172.65.9.134","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 3️⃣8️⃣","type":"vless","server":"104.22.4.136","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 3️⃣9️⃣","type":"vless","server":"172.67.84.174","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 4️⃣0️⃣","type":"vless","server":"104.24.160.221","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 4️⃣1️⃣","type":"vless","server":"104.21.211.74","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 4️⃣2️⃣","type":"vless","server":"104.24.194.105","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 4️⃣3️⃣","type":"vless","server":"104.20.9.79","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 4️⃣4️⃣","type":"vless","server":"172.68.62.168","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 4️⃣5️⃣","type":"vless","server":"172.67.123.23","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 4️⃣6️⃣","type":"vless","server":"104.24.154.5","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 4️⃣7️⃣","type":"vless","server":"104.25.92.198","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 4️⃣8️⃣","type":"vless","server":"172.65.137.125","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 4️⃣9️⃣","type":"vless","server":"104.24.183.89","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 5️⃣0️⃣","type":"vless","server":"104.16.106.32","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 5️⃣1️⃣","type":"vless","server":"104.20.151.9","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 5️⃣2️⃣","type":"vless","server":"172.68.118.177","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 5️⃣3️⃣","type":"vless","server":"104.25.235.38","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 5️⃣4️⃣","type":"vless","server":"104.24.145.43","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 5️⃣5️⃣","type":"vless","server":"104.20.66.92","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 5️⃣6️⃣","type":"vless","server":"104.16.8.3","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 5️⃣7️⃣","type":"vless","server":"172.64.162.23","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 5️⃣8️⃣","type":"vless","server":"104.27.203.169","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 5️⃣9️⃣","type":"vless","server":"104.17.229.103","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 6️⃣0️⃣","type":"vless","server":"104.27.1.133","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 6️⃣1️⃣","type":"vless","server":"104.24.1.69","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 6️⃣2️⃣","type":"vless","server":"104.25.35.227","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 6️⃣3️⃣","type":"vless","server":"104.21.198.255","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 6️⃣4️⃣","type":"vless","server":"104.25.64.147","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 6️⃣5️⃣","type":"vless","server":"104.25.193.8","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 6️⃣6️⃣","type":"vless","server":"104.16.206.227","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 6️⃣7️⃣","type":"vless","server":"104.19.240.189","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 6️⃣8️⃣","type":"vless","server":"172.65.64.243","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 6️⃣9️⃣","type":"vless","server":"104.21.55.49","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 7️⃣0️⃣","type":"vless","server":"172.65.14.217","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 7️⃣1️⃣","type":"vless","server":"104.27.1.129","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 7️⃣2️⃣","type":"vless","server":"104.17.80.176","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 7️⃣3️⃣","type":"vless","server":"104.25.33.15","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 7️⃣4️⃣","type":"vless","server":"172.65.229.187","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 7️⃣5️⃣","type":"vless","server":"172.64.150.2","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 7️⃣6️⃣","type":"vless","server":"104.16.250.250","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 7️⃣7️⃣","type":"vless","server":"104.23.113.202","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 7️⃣8️⃣","type":"vless","server":"104.27.97.174","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 7️⃣9️⃣","type":"vless","server":"172.65.57.200","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 8️⃣0️⃣","type":"vless","server":"104.24.189.34","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 8️⃣1️⃣","type":"vless","server":"104.18.40.89","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 8️⃣2️⃣","type":"vless","server":"104.19.244.250","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 8️⃣3️⃣","type":"vless","server":"104.25.99.169","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 8️⃣4️⃣","type":"vless","server":"104.25.225.41","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 8️⃣5️⃣","type":"vless","server":"104.16.32.142","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 8️⃣6️⃣","type":"vless","server":"104.24.24.243","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 8️⃣7️⃣","type":"vless","server":"104.21.33.129","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 8️⃣8️⃣","type":"vless","server":"104.18.71.193","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 8️⃣9️⃣","type":"vless","server":"104.27.97.42","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 9️⃣0️⃣","type":"vless","server":"172.64.106.208","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 9️⃣1️⃣","type":"vless","server":"104.22.38.61","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 9️⃣2️⃣","type":"vless","server":"172.65.181.102","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 9️⃣3️⃣","type":"vless","server":"104.20.181.114","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 9️⃣4️⃣","type":"vless","server":"104.18.10.128","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 9️⃣5️⃣","type":"vless","server":"104.17.47.58","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 9️⃣6️⃣","type":"vless","server":"104.21.93.170","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 9️⃣7️⃣","type":"vless","server":"104.25.63.151","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 9️⃣8️⃣","type":"vless","server":"104.24.225.78","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 9️⃣9️⃣","type":"vless","server":"172.65.92.30","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣0️⃣","type":"vless","server":"104.27.5.173","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣1️⃣","type":"vless","server":"104.24.161.123","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣2️⃣","type":"vless","server":"172.65.29.31","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣3️⃣","type":"vless","server":"104.19.99.238","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣4️⃣","type":"vless","server":"104.24.84.148","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣5️⃣","type":"vless","server":"104.27.65.143","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣6️⃣","type":"vless","server":"172.67.32.82","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣7️⃣","type":"vless","server":"172.67.214.41","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣8️⃣","type":"vless","server":"104.22.51.241","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣9️⃣","type":"vless","server":"104.20.21.111","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣0️⃣","type":"vless","server":"104.16.72.175","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣1️⃣","type":"vless","server":"104.19.75.119","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣2️⃣","type":"vless","server":"172.71.165.178","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣3️⃣","type":"vless","server":"188.114.99.29","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣4️⃣","type":"vless","server":"64.68.192.77","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣5️⃣","type":"vless","server":"188.42.88.227","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣6️⃣","type":"vless","server":"104.24.176.7","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣7️⃣","type":"vless","server":"104.24.177.7","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣8️⃣","type":"vless","server":"172.67.81.238","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣9️⃣","type":"vless","server":"104.31.16.65","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣0️⃣","type":"vless","server":"203.23.104.190","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣1️⃣","type":"vless","server":"203.23.104.242","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣2️⃣","type":"vless","server":"203.23.104.136","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣3️⃣","type":"vless","server":"193.9.49.90","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣4️⃣","type":"vless","server":"203.23.104.207","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣5️⃣","type":"vless","server":"203.23.104.45","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣6️⃣","type":"vless","server":"203.23.106.26","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣7️⃣","type":"vless","server":"66.81.247.133","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣8️⃣","type":"vless","server":"66.81.247.222","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣9️⃣","type":"vless","server":"203.23.104.222","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣0️⃣","type":"vless","server":"203.23.106.145","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣1️⃣","type":"vless","server":"203.23.106.157","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣2️⃣","type":"vless","server":"66.81.247.58","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣3️⃣","type":"vless","server":"203.23.104.127","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣4️⃣","type":"vless","server":"104.25.255.254","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣5️⃣","type":"vless","server":"104.31.16.213","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣6️⃣","type":"vless","server":"168.100.6.250","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣7️⃣","type":"vless","server":"104.31.16.196","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣8️⃣","type":"vless","server":"195.85.23.225","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣9️⃣","type":"vless","server":"168.100.6.249","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣0️⃣","type":"vless","server":"5.226.181.3","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣1️⃣","type":"vless","server":"104.29.104.45","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣2️⃣","type":"vless","server":"104.17.77.94","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣3️⃣","type":"vless","server":"104.18.78.219","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣4️⃣","type":"vless","server":"172.65.34.146","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣5️⃣","type":"vless","server":"104.20.156.248","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣6️⃣","type":"vless","server":"172.66.47.74","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣7️⃣","type":"vless","server":"172.66.43.162","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣8️⃣","type":"vless","server":"203.29.53.252","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣9️⃣","type":"vless","server":"104.25.255.254","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MKH_IRCF | 1️⃣5️⃣0️⃣","type":"vless","server":"172.67.242.38","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣1️⃣","type":"vless","server":"104.17.57.37","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣2️⃣","type":"vless","server":"172.67.186.42","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣3️⃣","type":"vless","server":"104.21.19.124","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣4️⃣","type":"vless","server":"104.19.54.50","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣5️⃣","type":"vless","server":"104.20.224.95","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣6️⃣","type":"vless","server":"104.19.255.51","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣7️⃣","type":"vless","server":"172.65.13.222","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣8️⃣","type":"vless","server":"172.65.103.23","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣9️⃣","type":"vless","server":"104.22.13.192","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣0️⃣","type":"vless","server":"104.27.62.243","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣1️⃣","type":"vless","server":"172.65.130.220","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣2️⃣","type":"vless","server":"104.24.185.137","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣3️⃣","type":"vless","server":"172.65.223.246","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣4️⃣","type":"vless","server":"95.179.155.253","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣5️⃣","type":"vless","server":"95.179.155.229","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣6️⃣","type":"vless","server":"104.27.39.113","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣7️⃣","type":"vless","server":"104.17.4.149","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣8️⃣","type":"vless","server":"104.25.188.126","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣9️⃣","type":"vless","server":"104.25.21.135","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣0️⃣","type":"vless","server":"104.18.200.220","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣1️⃣","type":"vless","server":"154.84.175.90","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣2️⃣","type":"vless","server":"108.61.188.217","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣3️⃣","type":"vless","server":"45.95.241.94","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣4️⃣","type":"vless","server":"45.85.119.207","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣5️⃣","type":"vless","server":"191.101.251.190","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣6️⃣","type":"vless","server":"45.85.119.87","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣7️⃣","type":"vless","server":"45.95.241.150","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣8️⃣","type":"vless","server":"45.95.241.156","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣9️⃣","type":"vless","server":"104.16.106.177","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣0️⃣","type":"vless","server":"104.21.11.206","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣1️⃣","type":"vless","server":"172.71.94.40","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣2️⃣","type":"vless","server":"104.16.1.195","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣3️⃣","type":"vless","server":"104.21.83.92","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣4️⃣","type":"vless","server":"104.19.155.206","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣5️⃣","type":"vless","server":"172.67.197.170","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣6️⃣","type":"vless","server":"104.19.28.32","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣7️⃣","type":"vless","server":"162.158.22.223","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣8️⃣","type":"vless","server":"104.19.20.140","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣9️⃣","type":"vless","server":"104.21.95.137","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣0️⃣","type":"vless","server":"104.29.105.26","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣1️⃣","type":"vless","server":"104.18.27.8","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣2️⃣","type":"vless","server":"172.70.184.144","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣3️⃣","type":"vless","server":"104.20.75.10","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣4️⃣","type":"vless","server":"8.44.0.49","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣5️⃣","type":"vless","server":"104.20.77.131","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣6️⃣","type":"vless","server":"104.16.242.124","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣7️⃣","type":"vless","server":"172.71.129.222","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣8️⃣","type":"vless","server":"104.25.105.122","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣9️⃣","type":"vless","server":"104.26.192.144","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣0️⃣","type":"vless","server":"104.21.209.83","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣1️⃣","type":"vless","server":"104.27.35.232","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣2️⃣","type":"vless","server":"172.65.20.231","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣3️⃣","type":"vless","server":"104.22.60.6","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣4️⃣","type":"vless","server":"172.67.26.173","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣5️⃣","type":"vless","server":"104.27.23.251","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣6️⃣","type":"vless","server":"104.24.137.130","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣7️⃣","type":"vless","server":"104.18.22.254","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣8️⃣","type":"vless","server":"104.17.177.224","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣9️⃣","type":"vless","server":"104.19.160.142","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣0️⃣","type":"vless","server":"104.20.157.73","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣1️⃣","type":"vless","server":"104.24.172.243","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣2️⃣","type":"vless","server":"104.23.99.219","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣3️⃣","type":"vless","server":"31.43.179.212","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣4️⃣","type":"vless","server":"194.36.55.211","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣5️⃣","type":"vless","server":"185.193.31.101","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣6️⃣","type":"vless","server":"199.181.197.106","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣7️⃣","type":"vless","server":"154.85.99.120","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣8️⃣","type":"vless","server":"104.31.16.103","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣9️⃣","type":"vless","server":"185.193.31.201","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣0️⃣","type":"vless","server":"195.85.23.236","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣1️⃣","type":"vless","server":"45.142.120.54","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣2️⃣","type":"vless","server":"104.31.16.181","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣3️⃣","type":"vless","server":"168.100.6.118","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣4️⃣","type":"vless","server":"188.244.122.30","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣5️⃣","type":"vless","server":"45.12.30.144","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣6️⃣","type":"vless","server":"104.234.158.213","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣7️⃣","type":"vless","server":"80.94.83.172","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣8️⃣","type":"vless","server":"188.244.122.10","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣9️⃣","type":"vless","server":"195.245.221.160","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣0️⃣","type":"vless","server":"185.135.9.92","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣1️⃣","type":"vless","server":"45.12.30.154","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣2️⃣","type":"vless","server":"195.245.221.224","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣3️⃣","type":"vless","server":"108.165.216.216","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣4️⃣","type":"vless","server":"195.245.221.29","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣5️⃣","type":"vless","server":"188.244.122.106","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣6️⃣","type":"vless","server":"195.245.221.111","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣7️⃣","type":"vless","server":"45.12.31.82","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣8️⃣","type":"vless","server":"195.245.221.21","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣9️⃣","type":"vless","server":"195.245.221.206","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣0️⃣","type":"vless","server":"104.234.158.77","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣1️⃣","type":"vless","server":"185.135.9.136","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣2️⃣","type":"vless","server":"185.135.9.88","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣3️⃣","type":"vless","server":"195.245.221.108","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣4️⃣","type":"vless","server":"195.245.221.233","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣5️⃣","type":"vless","server":"188.244.122.235","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣6️⃣","type":"vless","server":"185.135.9.126","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣7️⃣","type":"vless","server":"195.245.221.252","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣8️⃣","type":"vless","server":"80.94.83.90","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣9️⃣","type":"vless","server":"195.245.221.211","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣0️⃣","type":"vless","server":"188.244.122.62","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣1️⃣","type":"vless","server":"188.244.122.109","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣2️⃣","type":"vless","server":"195.245.221.250","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣3️⃣","type":"vless","server":"195.245.221.246","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣4️⃣","type":"vless","server":"195.245.221.239","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣5️⃣","type":"vless","server":"172.67.242.38","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣6️⃣","type":"vless","server":"104.25.134.44","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣7️⃣","type":"vless","server":"104.18.53.172","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣8️⃣","type":"vless","server":"162.159.250.246","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣9️⃣","type":"vless","server":"104.18.220.84","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣0️⃣","type":"vless","server":"162.159.25.11","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣1️⃣","type":"vless","server":"104.21.24.116","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣2️⃣","type":"vless","server":"172.65.12.104","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣3️⃣","type":"vless","server":"104.20.19.160","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣4️⃣","type":"vless","server":"104.27.193.64","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣5️⃣","type":"vless","server":"188.42.89.174","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SMT_IRCF | 2️⃣6️⃣6️⃣","type":"vless","server":"104.27.193.64","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SHM_IRCF | 2️⃣6️⃣7️⃣","type":"vless","server":"104.31.16.136","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_HWB_IRCF | 2️⃣6️⃣8️⃣","type":"vless","server":"172.67.1.143","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_HWB_IRCF | 2️⃣6️⃣9️⃣","type":"vless","server":"170.114.46.36","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_AST_IRCF | 2️⃣7️⃣0️⃣","type":"vless","server":"203.23.103.248","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_AST_IRCF | 2️⃣7️⃣1️⃣","type":"vless","server":"66.81.247.240","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_PRS_IRCF | 2️⃣7️⃣2️⃣","type":"vless","server":"172.67.1.143","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_PRS_IRCF | 2️⃣7️⃣3️⃣","type":"vless","server":"188.42.88.252","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣4️⃣","type":"vless","server":"188.114.97.218","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣5️⃣","type":"vless","server":"185.201.139.68","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣6️⃣","type":"vless","server":"104.17.101.35","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣7️⃣","type":"vless","server":"198.41.202.5","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣8️⃣","type":"vless","server":"104.22.11.129","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_PTK_IRCF | 2️⃣7️⃣9️⃣","type":"vless","server":"172.67.1.143","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_ATC_IRCF | 2️⃣8️⃣0️⃣","type":"vless","server":"104.25.254.212","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_SBN_IRCF | 2️⃣8️⃣1️⃣","type":"vless","server":"104.17.57.37","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_ASK_IRCF | 2️⃣8️⃣2️⃣","type":"vless","server":"104.24.184.84","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_RSP_IRCF | 2️⃣8️⃣3️⃣","type":"vless","server":"162.159.62.69","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_AFN_IRCF | 2️⃣8️⃣4️⃣","type":"vless","server":"104.24.184.84","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_ZTL_IRCF | 2️⃣8️⃣5️⃣","type":"vless","server":"104.17.231.69","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_ZTL_IRCF | 2️⃣8️⃣6️⃣","type":"vless","server":"188.42.88.218","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_PSM_IRCF | 2️⃣8️⃣7️⃣","type":"vless","server":"104.25.254.212","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_FNV_IRCF | 2️⃣8️⃣8️⃣","type":"vless","server":"104.24.184.84","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_DBN_IRCF | 2️⃣8️⃣9️⃣","type":"vless","server":"104.24.184.84","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_APT_IRCF | 2️⃣9️⃣0️⃣","type":"vless","server":"104.24.184.84","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_FNP_IRCF | 2️⃣9️⃣1️⃣","type":"vless","server":"104.24.184.84","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+  - {"name":"%7C Freedom %7C_RYN_IRCF | 2️⃣9️⃣2️⃣","type":"vless","server":"104.24.184.84","port":443,"udp":false,"uuid":"0dc35582-a90b-4c74-8271-92eb333d83c3","tls":true,"network":"ws","client-fingerprint":"chrome","servername":"revil.link","ws-opts":{"path":"/?ed=2048","headers":{"host":"revil.link"}}}
+proxy-groups:
+  - name: MANUAL
+    type: select
+    proxies:
+      - URL-TEST
+      - FALLBACK
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣4️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣5️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣6️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣7️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣8️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣9️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣5️⃣0️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣1️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣2️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣3️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣4️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣5️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣6️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣7️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣8️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣9️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣0️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣1️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣2️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣3️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣4️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣5️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣6️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣7️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣8️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣9️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣0️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣1️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣2️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣3️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣4️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣5️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣6️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣7️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣8️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣5️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣6️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣7️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣8️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣9️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣0️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣1️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣2️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣3️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣4️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣5️⃣'
+      - '%7C Freedom %7C_SMT_IRCF | 2️⃣6️⃣6️⃣'
+      - '%7C Freedom %7C_SHM_IRCF | 2️⃣6️⃣7️⃣'
+      - '%7C Freedom %7C_HWB_IRCF | 2️⃣6️⃣8️⃣'
+      - '%7C Freedom %7C_HWB_IRCF | 2️⃣6️⃣9️⃣'
+      - '%7C Freedom %7C_AST_IRCF | 2️⃣7️⃣0️⃣'
+      - '%7C Freedom %7C_AST_IRCF | 2️⃣7️⃣1️⃣'
+      - '%7C Freedom %7C_PRS_IRCF | 2️⃣7️⃣2️⃣'
+      - '%7C Freedom %7C_PRS_IRCF | 2️⃣7️⃣3️⃣'
+      - '%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣4️⃣'
+      - '%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣5️⃣'
+      - '%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣6️⃣'
+      - '%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣7️⃣'
+      - '%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣8️⃣'
+      - '%7C Freedom %7C_PTK_IRCF | 2️⃣7️⃣9️⃣'
+      - '%7C Freedom %7C_ATC_IRCF | 2️⃣8️⃣0️⃣'
+      - '%7C Freedom %7C_SBN_IRCF | 2️⃣8️⃣1️⃣'
+      - '%7C Freedom %7C_ASK_IRCF | 2️⃣8️⃣2️⃣'
+      - '%7C Freedom %7C_RSP_IRCF | 2️⃣8️⃣3️⃣'
+      - '%7C Freedom %7C_AFN_IRCF | 2️⃣8️⃣4️⃣'
+      - '%7C Freedom %7C_ZTL_IRCF | 2️⃣8️⃣5️⃣'
+      - '%7C Freedom %7C_ZTL_IRCF | 2️⃣8️⃣6️⃣'
+      - '%7C Freedom %7C_PSM_IRCF | 2️⃣8️⃣7️⃣'
+      - '%7C Freedom %7C_FNV_IRCF | 2️⃣8️⃣8️⃣'
+      - '%7C Freedom %7C_DBN_IRCF | 2️⃣8️⃣9️⃣'
+      - '%7C Freedom %7C_APT_IRCF | 2️⃣9️⃣0️⃣'
+      - '%7C Freedom %7C_FNP_IRCF | 2️⃣9️⃣1️⃣'
+      - '%7C Freedom %7C_RYN_IRCF | 2️⃣9️⃣2️⃣'
+  - name: URL-TEST
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    proxies:
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣4️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣5️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣6️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣7️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣8️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣9️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣5️⃣0️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣1️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣2️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣3️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣4️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣5️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣6️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣7️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣8️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣9️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣0️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣1️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣2️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣3️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣4️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣5️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣6️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣7️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣8️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣9️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣0️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣1️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣2️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣3️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣4️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣5️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣6️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣7️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣8️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣5️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣6️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣7️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣8️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣9️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣0️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣1️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣2️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣3️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣4️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣5️⃣'
+      - '%7C Freedom %7C_SMT_IRCF | 2️⃣6️⃣6️⃣'
+      - '%7C Freedom %7C_SHM_IRCF | 2️⃣6️⃣7️⃣'
+      - '%7C Freedom %7C_HWB_IRCF | 2️⃣6️⃣8️⃣'
+      - '%7C Freedom %7C_HWB_IRCF | 2️⃣6️⃣9️⃣'
+      - '%7C Freedom %7C_AST_IRCF | 2️⃣7️⃣0️⃣'
+      - '%7C Freedom %7C_AST_IRCF | 2️⃣7️⃣1️⃣'
+      - '%7C Freedom %7C_PRS_IRCF | 2️⃣7️⃣2️⃣'
+      - '%7C Freedom %7C_PRS_IRCF | 2️⃣7️⃣3️⃣'
+      - '%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣4️⃣'
+      - '%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣5️⃣'
+      - '%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣6️⃣'
+      - '%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣7️⃣'
+      - '%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣8️⃣'
+      - '%7C Freedom %7C_PTK_IRCF | 2️⃣7️⃣9️⃣'
+      - '%7C Freedom %7C_ATC_IRCF | 2️⃣8️⃣0️⃣'
+      - '%7C Freedom %7C_SBN_IRCF | 2️⃣8️⃣1️⃣'
+      - '%7C Freedom %7C_ASK_IRCF | 2️⃣8️⃣2️⃣'
+      - '%7C Freedom %7C_RSP_IRCF | 2️⃣8️⃣3️⃣'
+      - '%7C Freedom %7C_AFN_IRCF | 2️⃣8️⃣4️⃣'
+      - '%7C Freedom %7C_ZTL_IRCF | 2️⃣8️⃣5️⃣'
+      - '%7C Freedom %7C_ZTL_IRCF | 2️⃣8️⃣6️⃣'
+      - '%7C Freedom %7C_PSM_IRCF | 2️⃣8️⃣7️⃣'
+      - '%7C Freedom %7C_FNV_IRCF | 2️⃣8️⃣8️⃣'
+      - '%7C Freedom %7C_DBN_IRCF | 2️⃣8️⃣9️⃣'
+      - '%7C Freedom %7C_APT_IRCF | 2️⃣9️⃣0️⃣'
+      - '%7C Freedom %7C_FNP_IRCF | 2️⃣9️⃣1️⃣'
+      - '%7C Freedom %7C_RYN_IRCF | 2️⃣9️⃣2️⃣'
+  - name: FALLBACK
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    proxies:
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 0️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 2️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 3️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 4️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 5️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 6️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 7️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 8️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 9️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣0️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣1️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣2️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣4️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣5️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣6️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣7️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣8️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣3️⃣9️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣0️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣1️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣2️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣3️⃣'
+      - '%7C Freedom %7C_MCI_IRCF | 1️⃣4️⃣4️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣5️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣6️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣7️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣8️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣4️⃣9️⃣'
+      - '%7C Freedom %7C_MKH_IRCF | 1️⃣5️⃣0️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣1️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣2️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣3️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣4️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣5️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣6️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣7️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣8️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣5️⃣9️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣0️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣1️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣2️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣3️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣4️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣5️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣6️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣7️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣8️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣6️⃣9️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣0️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣1️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣2️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣3️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣4️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣5️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣6️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣7️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣8️⃣'
+      - '%7C Freedom %7C_MTN_IRCF | 1️⃣7️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣8️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 1️⃣9️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣0️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣1️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣2️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣3️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣5️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣6️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣7️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣8️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣4️⃣9️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣0️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣1️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣2️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣3️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣4️⃣'
+      - '%7C Freedom %7C_SHT_IRCF | 2️⃣5️⃣5️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣6️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣7️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣8️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣5️⃣9️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣0️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣1️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣2️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣3️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣4️⃣'
+      - '%7C Freedom %7C_RTL_IRCF | 2️⃣6️⃣5️⃣'
+      - '%7C Freedom %7C_SMT_IRCF | 2️⃣6️⃣6️⃣'
+      - '%7C Freedom %7C_SHM_IRCF | 2️⃣6️⃣7️⃣'
+      - '%7C Freedom %7C_HWB_IRCF | 2️⃣6️⃣8️⃣'
+      - '%7C Freedom %7C_HWB_IRCF | 2️⃣6️⃣9️⃣'
+      - '%7C Freedom %7C_AST_IRCF | 2️⃣7️⃣0️⃣'
+      - '%7C Freedom %7C_AST_IRCF | 2️⃣7️⃣1️⃣'
+      - '%7C Freedom %7C_PRS_IRCF | 2️⃣7️⃣2️⃣'
+      - '%7C Freedom %7C_PRS_IRCF | 2️⃣7️⃣3️⃣'
+      - '%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣4️⃣'
+      - '%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣5️⃣'
+      - '%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣6️⃣'
+      - '%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣7️⃣'
+      - '%7C Freedom %7C_MBT_IRCF | 2️⃣7️⃣8️⃣'
+      - '%7C Freedom %7C_PTK_IRCF | 2️⃣7️⃣9️⃣'
+      - '%7C Freedom %7C_ATC_IRCF | 2️⃣8️⃣0️⃣'
+      - '%7C Freedom %7C_SBN_IRCF | 2️⃣8️⃣1️⃣'
+      - '%7C Freedom %7C_ASK_IRCF | 2️⃣8️⃣2️⃣'
+      - '%7C Freedom %7C_RSP_IRCF | 2️⃣8️⃣3️⃣'
+      - '%7C Freedom %7C_AFN_IRCF | 2️⃣8️⃣4️⃣'
+      - '%7C Freedom %7C_ZTL_IRCF | 2️⃣8️⃣5️⃣'
+      - '%7C Freedom %7C_ZTL_IRCF | 2️⃣8️⃣6️⃣'
+      - '%7C Freedom %7C_PSM_IRCF | 2️⃣8️⃣7️⃣'
+      - '%7C Freedom %7C_FNV_IRCF | 2️⃣8️⃣8️⃣'
+      - '%7C Freedom %7C_DBN_IRCF | 2️⃣8️⃣9️⃣'
+      - '%7C Freedom %7C_APT_IRCF | 2️⃣9️⃣0️⃣'
+      - '%7C Freedom %7C_FNP_IRCF | 2️⃣9️⃣1️⃣'
+      - '%7C Freedom %7C_RYN_IRCF | 2️⃣9️⃣2️⃣'
+rule-providers:
+  ir: {type: http, format: text, behavior: domain, path: ./ruleset/ir.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.txt, interval: 86400}
+  ads: {type: http, format: text, behavior: domain, path: ./ruleset/ads.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ads.txt, interval: 86400}
+  ircidr: {type: http, format: text, behavior: ipcidr, path: ./ruleset/ircidr.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.txt, interval: 86400}
+  private: {type: http, format: text, behavior: ipcidr, path: ./ruleset/private.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/private.txt, interval: 86400}
+  apps: {type: http, format: text, behavior: domain, path: ./ruleset/apps.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.txt, interval: 86400}
+  malware: {type: http, format: text, behavior: domain, path: ./ruleset/malware.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/malware.txt, interval: 86400}
+  phishing: {type: http, format: text, behavior: domain, path: ./ruleset/phishing.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/phishing.txt, interval: 86400}
+  cryptominers: {type: http, format: text, behavior: domain, path: ./ruleset/cryptominers.txt, url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/cryptominers.txt, interval: 86400}
+rules:
+  - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
+  - IP-CIDR,198.18.0.1/16,DIRECT,no-resolve
+  - IP-CIDR,28.0.0.1/8,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,local,DIRECT
+  - DOMAIN-SUFFIX,ip6-localhost,DIRECT
+  - DOMAIN-SUFFIX,ip6-loopback,DIRECT
+  - DOMAIN-SUFFIX,lan,DIRECT
+  - DOMAIN-SUFFIX,localhost,DIRECT
+  - DOMAIN-SUFFIX,ir,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,yacd.metacubex.one,DIRECT
+  - DOMAIN,clash.metacubex.one,DIRECT
+  - RULE-SET,ads,REJECT
+  - RULE-SET,malware,REJECT
+  - RULE-SET,phishing,REJECT
+  - RULE-SET,cryptominers,REJECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,apps,DIRECT
+  - RULE-SET,ir,DIRECT
+  - RULE-SET,ircidr,DIRECT
+  - MATCH,MANUAL
