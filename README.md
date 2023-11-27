@@ -3,7 +3,7 @@
 لینک تلگرافی ک این پایین میذارم در واقع توضیحات نحوه ساخت این سبک کانفیگ‌های رایگان هستش به همراه ویدئو اموزش و تمام نکات و لینک های مورد نیاز، دوس داشتین برا خودتون بسازین فعلا تو ایران با این وضعیت فیلترینگ خوب جواب میدن با تمام سرویس دهنده های اینترنت
 اگر در این باره سوالی بود میتونین از طریق این آیدی تلگرام برام پیام بذارین.
 # any questions
-[Telegram ID](https://t.me/NiREvil)
+[Telegram ID](https://t.me/NiREvil) ----
 [Instagram ID](https://instagram.com/nima_radical_?igshid=OGQ5ZDc2ODk2ZA==)
 
 [Learn how to bild ...](https://t.me/NiREvil](https://telegra.ph/%D8%B3%D8%A7%D8%AE%D8%AA-%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF-VlESS-%D8%AA%D8%B9%D8%AF%D8%A7%D8%AF-%D8%A8%D8%A7%D9%84%D8%A7-%D8%AA%D9%85%D8%A7%D9%85-%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86-%D8%A8%D8%AF%D9%88%D9%86-%D9%86%DB%8C%D8%A7%D8%B2-%D8%A8%D9%87-%D8%AF%D8%A7%D9%85%D9%86%D9%87-%D9%88-vps-10-18)https://telegra.ph/%D8%B3%D8%A7%D8%AE%D8%AA-%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF-VlESS-%D8%AA%D8%B9%D8%AF%D8%A7%D8%AF-%D8%A8%D8%A7%D9%84%D8%A7-%D8%AA%D9%85%D8%A7%D9%85-%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86-%D8%A8%D8%AF%D9%88%D9%86-%D9%86%DB%8C%D8%A7%D8%B2-%D8%A8%D9%87-%D8%AF%D8%A7%D9%85%D9%86%D9%87-%D9%88-vps-10-18)
