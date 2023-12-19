@@ -249,7 +249,7 @@ class ContainerController(BaseStorageServer):
             # zip is lazy on py3, but we need a list, so force evaluation.
             # On py2 it's an extra list copy, but the list is so small
             # (one element per replica in account ring, usually 3) that it
-            # doesn't matter.
+            # doesnt matter.
             updates = list(zip(account_hosts, account_devices))
         else:
             updates = []
@@ -344,7 +344,7 @@ class ContainerController(BaseStorageServer):
                 req.headers.get('x-backend-accept-quoted-location', False)):
             # Sender expects the destination to be unquoted, but it isn't safe
             # to send unquoted. Eat the update for now and let the sharder
-            # move it later. Should only come up during rolling upgrades.
+            # move it later.Should only come up during rolling upgrades.
             return None
 
         headers = {'Location': quote(location),
