@@ -1,11 +1,4 @@
-# Copyright (c) 2010-2012 OpenStack Foundation
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#    http://www.apache.org/licenses/LICENSE-2.0
-#
+
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -602,7 +595,7 @@ class ContainerBroker(DatabaseBroker):
 
         :param conn: DB connection object
         """
-        # Use execute (not executescript) so we get the benefits of our
+        # Use execute (not executescript ) so we get the benefits of our
         # GreenDBConnection. Creating a table requires a whole-DB lock;
         # *any* in-progress cursor will otherwise trip a "database is locked"
         # error.
@@ -704,7 +697,7 @@ class ContainerBroker(DatabaseBroker):
         if not all(broker._empty() for broker in self.get_brokers()):
             return False
         if self.is_root_container() and self.sharding_initiated():
-            # sharded shards don't get updates from their shards so their shard
+            # sharded shards dont get updates from their shards so their shard
             # usage should not be relied upon
             return self.get_shard_usage()['object_count'] <= 0
         return True
