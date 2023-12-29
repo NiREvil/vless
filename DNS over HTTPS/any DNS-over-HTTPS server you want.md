@@ -294,5 +294,5 @@ Download a recent snapshot of the above list as JSON from [here](https://github.
 |[Technitium DNS Server](https://github.com/TechnitiumSoftware/DnsServer)|Technitium|A FOSS, cross-platform DNS Server written in C# that can consume as well as host DNS-over-HTTPS (DoH) and DNS-over-TLS (DoT) services.
 # Other
 
-* [DoH IP domain list](https://github.com/NiREvil/vless/blob/main/DNS%20over%20HTTPS/DoH%20IP%20domain%20path}
+* [DoH IP domain list](https://github.com/NiREvil/vless/blob/main/DNS%20over%20HTTPS/DoH%20IP%20domain%20path)
 * [DNSCrypt.info: Interactive list of public DNS servers:](https://dnscrypt.info/public-servers/)
