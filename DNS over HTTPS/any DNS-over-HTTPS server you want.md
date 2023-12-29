@@ -296,3 +296,14 @@ Download a recent snapshot of the above list as JSON from [here](https://github.
 
 * [DoH IP domain list](https://github.com/NiREvil/vless/blob/main/DNS%20over%20HTTPS/DoH%20IP%20domain%20path)
 * [DNSCrypt.info: Interactive list of public DNS servers:](https://dnscrypt.info/public-servers/)
+* [DNS-SP Server Search Engine and Recommender System](https://lrxgoat.github.io/search.html)
+* [Centralization Problem](https://lrxgoat.github.io/Centralization.html)
+
+
+#### 🚬🗿 stay in touch
+[![icons8-GitHub-64](https://img.icons8.com/arcade/64/github.png)](https://github.com/NiREvil)
+[![icons8-gmail-64](https://img.icons8.com/arcade/64/gmail.png)](mailto:nirevil2020@gmail.com)
+[![icons8-Instagram-64](https://img.icons8.com/arcade/64/instagram-new.png)](https://instagram.com/nima_radical_?igshid=OGQ5ZDc2ODk2ZA==)
+[![icons8-Telegram-64](https://img.icons8.com/arcade/64/telegram-app.png)](https://t.me/NiREvil)
+[![icons8-Twitter-64](https://img.icons8.com/arcade/64/twitter.png)](https://twitter.com/NiREvil_)
+[![icons8- Biohazard-644](https://img.icons8.com/arcade/64/poison.png)](https://t.me/F_NiREvil)
