@@ -12,3 +12,5 @@
 [![icons8-gmail-64](https://img.icons8.com/arcade/64/gmail.png)](mailto:nirevil2020@gmail.com)
 [![icons8-Instagram-64](https://img.icons8.com/arcade/64/instagram-new.png)](https://instagram.com/nima_radical_?igshid=OGQ5ZDc2ODk2ZA==)
 [![icons8-Telegram-64](https://img.icons8.com/arcade/64/telegram-app.png)](https://t.me/F_NiREvil)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=NiREvil&layout=pie)
