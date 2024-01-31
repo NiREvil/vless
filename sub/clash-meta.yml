@@ -5,8 +5,8 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: "🌹 rose ", server: ming2.kiwireich.com, port: 443, type: vmess, uuid: 18e5f40f-bda6-4c15-9334-e87cda6047af, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: ming2.kiwireich.com, network: ws, ws-opts: {path: /ray, headers: {Host: ming2.kiwireich.com}}, udp: true}
-  - {name: "🌹 rose 2", server: 149.202.82.172, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: "🌹 rose 🇸🇪Nima ", server: ming2.kiwireich.com, port: 443, type: vmess, uuid: 18e5f40f-bda6-4c15-9334-e87cda6047af, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: ming2.kiwireich.com, network: ws, ws-opts: {path: /ray, headers: {Host: ming2.kiwireich.com}}, udp: true}
+  - {name: "🌹 rose 🇸🇪Nima 2", server: 149.202.82.172, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
   - {name: 🌹 rose 🇨🇦Canada, server: 178.128.237.6, port: 3389, type: vmess, uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 🌹 rose 🇵🇭Philippines, server: 109.248.25.59, port: 29064, type: vmess, uuid: 8958440c-aa86-4ff1-8e88-5c7a052d5961, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ss}, udp: true}
   - {name: 🌹 rose , server: 47.89.211.175, port: 443, type: vmess, uuid: 6cc722d0-f6b5-4179-be13-c15cb9e75dd9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /84BxD2shFYFpsiRGXACUPqWt}, udp: true}
@@ -438,12 +438,10 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ auto
-      - "🌹 rose "
-      - "🌹 rose 2"
+      - "🌹 rose 🇸🇪Nima "
+      - "🌹 rose 🇸🇪Nima 2"
       - 🌹 rose 🇨🇦Canada
       - 🌹 rose 🇵🇭Philippines
-      - 🌹 rose 
-      - 🌹 rose 2
       - 🌹 rose 🇨🇦Canada
       - 🌹 rose 🇨🇦Canada 2
       - 🌹 rose 🇨🇦Canada 3
@@ -463,6 +461,8 @@ proxy-groups:
       - 🌹 rose 🇨🇦Canada 17
       - 🌹 rose 🇨🇦Canada 18
       - 🌹 rose 🇨🇦Canada 19
+      - 🌹 rose 🇨🇦Canada 20
+      - 🌹 rose 🇨🇦Canada 21
       - 🌹 rose 🇩🇪Germany
       - 🌹 rose 🇪🇸Spain
       - 🌹 rose 🇪🇸Spain 2
@@ -871,12 +871,10 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - "🌹 rose "
-      - "🌹 rose 2"
+      - "🌹 rose 🇸🇪Nima "
+      - "🌹 rose 🇸🇪Nima 2"
       - 🌹 rose 🇨🇦Canada
       - 🌹 rose 🇵🇭Philippines
-      - 🌹 rose 🇸🇪Nima 
-      - 🌹 rose 🇸🇪Nima 2
       - 🌹 rose 🇨🇦Canada
       - 🌹 rose 🇨🇦Canada 2
       - 🌹 rose 🇨🇦Canada 3
@@ -896,6 +894,8 @@ proxy-groups:
       - 🌹 rose 🇨🇦Canada 17
       - 🌹 rose 🇨🇦Canada 18
       - 🌹 rose 🇨🇦Canada 19
+      - 🌹 rose 🇨🇦Canada 20
+      - 🌹 rose 🇨🇦Canada 21
       - 🌹 rose 🇩🇪Germany
       - 🌹 rose 🇪🇸Spain
       - 🌹 rose 🇪🇸Spain 2
