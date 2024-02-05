@@ -51,11 +51,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "zula.ir",
-            "port": 443,
+            "address": "time.revil.link",
+            "port": 80,
             "users": [
               {
-                "id": "a4faf5d8-b9a8-433e-9518-2d2e21d76f78",
+                "id": "003bea13-dcaf-49b0-b94c-cd0dbc1906c0",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
@@ -68,21 +68,10 @@
       },
       "streamSettings": {
         "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": true,
-          "serverName": "pUlS.nirEViL.iR",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ],
-          "fingerprint": "chrome",
-          "show": false
-        },
         "wsSettings": {
           "path": "/?ed=2048",
           "headers": {
-            "Host": "pUlS.nirEViL.iR"
+            "Host": "hARMonICA.ReVIL.LINk"
           }
         },
         "sockopt": {
@@ -103,9 +92,9 @@
       "settings": {
         "domainStrategy": "AsIs",
         "fragment": {
-          "packets": "tlshello",
-          "length": "100-200",
-          "interval": "10-20"
+          "packets": "1-1",
+          "length": "10-40",
+          "interval": "5-10"
         }
       },
       "streamSettings": {
