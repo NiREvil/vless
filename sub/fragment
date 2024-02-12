@@ -1,174 +1,149 @@
 {
-    "log": {
-      "access": "",
-      "error": "",
-      "loglevel": "warning"
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
     },
-    "inbounds": [
-      {
-        "tag": "socks",
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "socks",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls"
-          ],
-          "routeOnly": false
-        },
-        "settings": {
-          "auth": "noauth",
-          "udp": true,
-          "allowTransparent": false
-        }
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
       },
-      {
-        "tag": "http",
-        "port": 10809,
-        "listen": "127.0.0.1",
-        "protocol": "http",
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls"
-          ],
-          "routeOnly": false
-        },
-        "settings": {
-          "auth": "noauth",
-          "udp": true,
-          "allowTransparent": false
-        }
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
       }
-    ],
-    "outbounds": [
-      {
-        "tag": "proxy",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "zula.ir",
-              "port": 2053,
-              "users": [
-                {
-                  "id": "2f50c591-920f-476b-caae-7674b61d035e",
-                  "alterId": 0,
-                  "email": "t@t.tt",
-                  "security": "auto",
-                  "encryption": "none",
-                  "flow": ""
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "ws",
-          "security": "tls",
-          "tlsSettings": {
-            "allowInsecure": true,
-            "serverName": "s2.IR-Dl.cc",
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "chrome",
-            "show": false
-          },
-          "wsSettings": {
-            "path": "/",
-            "headers": {
-              "Host": "s2.IR-Dl.cc"
-            }
-          },
-          "sockopt": {
-            "dialerProxy": "fragment",
-            "tcpKeepAliveIdle": 100,
-            "mark": 255,
-            "tcpNoDelay": true
-          }
-        },
-        "mux": {
-          "enabled": true,
-          "concurrency": 8
-        }
-      },
-      {
-        "tag": "fragment",
-        "protocol": "freedom",
-        "settings": {
-          "domainStrategy": "AsIs",
-          "fragment": {
-            "packets": "tlshello",
-            "length": "10-40",
-            "interval": "5-10"
-          }
-        },
-        "streamSettings": {
-          "sockopt": {
-            "tcpNoDelay": true,
-            "tcpKeepAliveIdle": 100
-          }
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom",
-        "settings": {}
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole",
-        "settings": {
-          "response": {
-            "type": "http"
-          }
-        }
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "type": "field",
-          "inboundTag": [
-            "api"
-          ],
-          "outboundTag": "api",
-          "enabled": true
-        },
-        {
-          "id": "5465425548310166497",
-          "type": "field",
-          "outboundTag": "direct",
-          "domain": [
-            "domain:ir",
-            "geosite:cn"
-          ],
-          "enabled": true
-        },
-        {
-          "id": "5425034033205580637",
-          "type": "field",
-          "outboundTag": "direct",
-          "ip": [
-            "geoip:private",
-            "geoip:cn",
-            "geoip:ir"
-          ],
-          "enabled": true
-        },
-        {
-          "id": "5627785659655799759",
-          "type": "field",
-          "port": "0-65535",
-          "outboundTag": "proxy",
-          "enabled": true
-        }
-      ]
     }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "zula.ir",
+            "port": 443,
+            "users": [
+              {
+                "id": "003bea13-dcaf-49b0-b94c-cd0dbc1906c0",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": true,
+          "serverName": "NGInX.RAdICalLy.pro",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "show": false
+        },
+        "wsSettings": {
+          "path": "/?ed=2048",
+          "headers": {
+            "Host": "NGInX.RAdICalLy.pro"
+          }
+        },
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "mark": 255,
+          "tcpNoDelay": true
+        }
+      }
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "AsIs",
+        "fragment": {
+          "packets": "tlshello",
+          "length": "10-33",
+          "interval": "5-10"
+        }
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpNoDelay": true,
+          "tcpKeepAliveIdle": 100
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      }
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "enabled": true
+      },
+      {
+        "id": "5627785659655799759",
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "proxy",
+        "enabled": true
+      }
+    ]
   }
+}
