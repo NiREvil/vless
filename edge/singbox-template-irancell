@@ -11,7 +11,7 @@
     ],
     "servers": [
       {
-        "address": "https://8.8.8.8/dns-query",
+        "address": "https://94.140.14.14/dns-query", // github.com/NiREvil
         "address_resolver": "dns-direct",
         "strategy": "ipv4_only",
         "tag": "dns-remote"
@@ -87,7 +87,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "1.revil.link",
+        "server_name": "1.RadiCAlLy.Pro",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -96,7 +96,7 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "1.revil.link"
+          "Host": "1.RadiCAlLy.Pro"
         },
         "max_early_data": 2048,
         "path": "/",
@@ -117,7 +117,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "2.revil.link",
+        "server_name": "2.RadiCAlLy.Pro",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -126,7 +126,7 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "2.revil.link"
+          "Host": "2.RadiCAlLy.Pro"
         },
         "max_early_data": 2048,
         "path": "/",
@@ -139,7 +139,7 @@
     },
     {
       "packet_encoding": "",
-      "server": "[2606:4700:d0::a29f:c001]",
+      "server": "zula.ir",
       "server_port": 443,
       "tls": {
         "alpn": [
@@ -147,7 +147,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "3.revil.link",
+        "server_name": "3.RadiCAlLy.Pro",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -156,7 +156,7 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "3.revil.link"
+          "Host": "3.RadiCAlLy.Pro"
         },
         "path": "/",
         "type": "ws"
@@ -168,7 +168,7 @@
     },
     {
       "packet_encoding": "",
-      "server": "104.31.16.60",
+      "server": "104.22.51.241",
       "server_port": 443,
       "tls": {
         "alpn": [
@@ -176,7 +176,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "4.revil.link",
+        "server_name": "4.RadiCAlLy.Pro",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -185,7 +185,7 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "4.revil.link"
+          "Host": "4.RadiCAlLy.Pro"
         },
         "max_early_data": 2048,
         "path": "/",
@@ -206,7 +206,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "5.revil.link",
+        "server_name": "5.RadiCAlLy.Pro",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -215,7 +215,7 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "5.revil.link"
+          "Host": "5.RadiCAlLy.Pro"
         },
         "path": "/",
         "type": "ws"
@@ -228,15 +228,15 @@
     {
       "local_address": [
         "172.16.0.2/32",
-        "2606:4700:110:8a0d:444c:a568:474c:f13e/128"
+        "2606:4700:110:8f6a:418a:9b60:35bb:e660/128"
       ],
       "mtu": 1280,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "pre_shared_key": "",
-      "private_key": "oMUx2ZTi1G7ZQvWlClFuKVbWixrdxq+RyIfVpVio/1s=",
-      "reserved": "S3Mu",
-      "server": "188.114.98.224",
-      "server_port": 2408,
+      "private_key": "mL11kkXnNi46gmvLT7Ci1xjn1X3FMKUvF+NeHPC4fFM=",
+      "reserved": "hTlE",
+      "server": "162.159.192.204",
+      "server_port": 1070,
       "type": "wireguard",
       "domain_strategy": "",
       "tag": "wireguard 1"
@@ -244,15 +244,15 @@
     {
       "local_address": [
         "172.16.0.2/32",
-        "2606:4700:110:897b:9c3:13fb:7b2c:8cae/128"
+        "2606:4700:110:84b1:f5ee:50d6:c10:95c4/128"
       ],
       "mtu": 1280,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "pre_shared_key": "",
-      "private_key": "oMUx2ZTi1G7ZQvWlClFuKVbWixrdxq+RyIfVpVio/1s=",
-      "reserved": "S3Mu",
-      "server": "188.114.96.130",
-      "server_port": 880,
+      "private_key": "CPS1lKtya4aFGhRAxDIqEKKRn3tefbTBudg/TqKaF2A=",
+      "reserved": "jHu7",
+      "server": "188.114.98.224",
+      "server_port": 2408,
       "type": "wireguard",
       "domain_strategy": "",
       "tag": "wireguard 2"
@@ -260,24 +260,24 @@
     {
       "local_address": [
         "172.16.0.2/32",
-        "2606:4700:110:8a0d:444c:a568:474c:f13e/128"
+        "2606:4700:110:8a7e:1883:4d5d:2147:ccd1/128"
       ],
       "mtu": 1280,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "pre_shared_key": "",
-      "private_key": "ICCLH6tHCDN711q5MXzSVoaeoEWI44H9/cPyQLyJ110=",
-      "reserved": "",
-      "server": "2606:4700:d0::a29f:c001",
-      "server_port": 1070,
+      "private_key": "EPtDQyBUSMVo9XAaSYMdRIDnRvIgyaHzhVCvqG5kIEU=",
+      "reserved": "x4pX",
+      "server": "162.159.192.225",
+      "server_port": 3854,
       "type": "wireguard",
       "domain_strategy": "",
       "tag": "wireguard 3"
     },
     {
-      "tag": "✋Internet✋",
+      "tag": "✪Internet✪",
       "type": "selector",
-      "outbounds": [
-        "🤤Best Latency🤤",
+      "outbounds":[
+        "💚Best Latency💚",
         "worker 1",
         "worker 2",
         "worker 3",
@@ -289,9 +289,9 @@
       ]
     },
     {
-      "tag": "🤤Best Latency🤤",
+      "tag": "💚Best Latency💚",
       "type": "urltest",
-      "outbounds": [
+      "outbounds":[
         "worker 1",
         "worker 2",
         "worker 3",
