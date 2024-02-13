@@ -76,7 +76,7 @@
             "h2",
             "http/1.1"
           ],
-          "fingerprint": "randomized",
+          "fingerprint": "chrome",
           "show": false
         },
         "wsSettings": {
@@ -100,8 +100,8 @@
         "domainStrategy": "AsIs",
         "fragment": {
           "packets": "tlshello",
-          "length": "10-33",
-          "interval": "5-10"
+          "length": "10-30",
+          "interval": "10"
         }
       },
       "streamSettings": {
