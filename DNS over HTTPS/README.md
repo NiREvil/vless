@@ -1,5 +1,5 @@
 # DoH-cf-workers
-**DNS-over-HTTPS**
+> DNS-over-HTTPS
 
 ### این مخزن شامل اسکریپت یک دی ان اس پروکسی بسیار ساده قابل اجرا بر روی وورکر کلادفلر می‌باشد
 
@@ -7,8 +7,8 @@
 
 1. یک حساب رایگان Cloudflare Workers بسازید.
 2. یک Worker جدید ایجاد کنید.
-3. محتویات فایل [index.js](https://github.com/NiREvil/doh-cf-workers/blob/main/index.js) را جایگزین اسکریپت Worker کنید.
-4. لاین 3 و 4 کد را با DoH دلخواه خود جایگزین کرده و  save and deploy کنید.
+3. محتویات فایل [index.js](https://github.com/NiREvil/vless/blob/main/DNS%20over%20HTTPS/index.js) را جایگزین اسکریپت پیشفرض Worker کنید.
+4. لاین 3 و 4 کد را با DoH دلخواه خود جایگزین کرده و save and deploy کنید.
 5. می‌توانید از آدرس Worker در هر برنامه‌ای که از DoH پشتیبانی می‌کند استفاده کنید (مانند AdGuard، NekoBox, Rethink , تنظیمات DNS امن مرورگرها، YogaDNS، Intra، Nebulo و غیره).
 6. در صورت تمایل می‌توانید متغیر doh را با هر سرور [any DNS-over-HTTPS server you want](https://github.com/NiREvil/vless/blob/main/DNS%20over%20HTTPS/any%20DNS-over-HTTPS%20server%20you%20want.md) جایگزین کنید.
 #
