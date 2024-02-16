@@ -1,4 +1,4 @@
-مرتبط با [پست فرگمنت چنل](https://t.me/F_NiREvil/5433)
+مرتبط با [پست فرگمنت چنل](https://t.me/F_NiREvil/5434)
 #
 **آی‌دی ها + ساب‌دامنه های فیلتر شده**
 > SNI = همون دامنه
@@ -105,4 +105,5 @@
 ## 6
     vless://4d146643-979e-4656-aa78-9b8e18716f06@zula.ir:443/?type=ws&encryption=none&flow=&host=hey-bache-naro-tu-kunam.revil.link&path=%2F%3Fed%3D2048&security=tls&sni=hey-bache-naro-tu-kunam.revil.link&alpn=http%2F1.1&fp=chrome#BFFR
 #
+## 7
     vless://2ab1f238-517d-4319-820b-fe496a146981@zula.ir:443/?type=ws&encryption=none&flow=&host=test.radically.pro&path=%2F%3Fed%3D2048&security=tls&sni=test.radically.pro&alpn=http%2F1.1&fp=chrome#BFFR
