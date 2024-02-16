@@ -83,7 +83,7 @@
 #
 #
 #
-> **ایناهم کانفیگ‌ها با دامنه های فیلتر شده برای استفاده در v2rayNG نسخه آخر یعنی [v1.8.16](https://t.me/F_NiREvil/5436)
+> **ایناهم کانفیگ‌ها با دامنه های فیلتر شده برای استفاده در v2rayNG نسخه آخر یعنی [v1.8.16](https://t.me/F_NiREvil/5436)**
 
 #
 ## 1
@@ -107,3 +107,6 @@
 #
 ## 7
     vless://2ab1f238-517d-4319-820b-fe496a146981@zula.ir:443/?type=ws&encryption=none&flow=&host=test.radically.pro&path=%2F%3Fed%3D2048&security=tls&sni=test.radically.pro&alpn=http%2F1.1&fp=chrome#BFFR
+#
+### 8
+    vless://63e85328-a99f-49e0-9bd9-f2b309c87e99@zula.ir:443/?type=ws&encryption=none&flow=&host=Bia.Paiin.BaCHe.REvil.Link&path=%2F%3Fed%3D2048&security=tls&sni=Bia.Paiin.BaCHe.REvil.Link&alpn=http%2F1.1&fp=chrome#BFFR
