@@ -24,7 +24,7 @@
     5fe0c5a8-140e-4e7a-b451-d4912ae2586e
 **SNI 1:**
 
-    torokhoda-zer-nazan.radically.pro
+    torokhodazernazan.radically.pro
 **SNI 2:**
 
     freedom.radically.pro
@@ -91,7 +91,7 @@
     vless://003bea13-dcaf-49b0-b94c-cd0dbc1906c0@zula.ir:443/?type=ws&encryption=none&flow=&host=consequences.revil.link&path=%2F%3Fed%3D2048&security=tls&sni=consequences.revil.link&alpn=http%2F1.1&fp=chrome#BFFR
 #
 ## 2
-    vless://5fe0c5a8-140e-4e7a-b451-d4912ae2586e@zula.ir:443/?type=ws&encryption=none&flow=&host=torokhoda-zer-nazan.radically.pro&path=%2F%3Fed%3D2048&security=tls&sni=torokhoda-zer-nazan.radically.pro&alpn=http%2F1.1&fp=chrome#BFFR
+    vless://5fe0c5a8-140e-4e7a-b451-d4912ae2586e@zula.ir:443/?type=ws&encryption=none&flow=&host=torokhodazernazan.radically.pro&path=%2F%3Fed%3D2048&security=tls&sni=torokhodazernazan.radically.pro&alpn=http%2F1.1&fp=chrome#BFFR
 #
 ## 3
     vless://003bea13-dcaf-49b0-b94c-cd0dbc1906c0@zula.ir:443/?type=ws&encryption=none&flow=&host=piano.revil.link&path=%2F%3Fed%3D2048&security=tls&sni=piano.revil.link&alpn=http%2F1.1&fp=chrome#BFFR
