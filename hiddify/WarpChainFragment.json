@@ -83,7 +83,7 @@
       "outbounds": [
         "auto",
         "warp-ir",
-        "warp-main"
+        "REvil"
       ],
       "default": "auto"
     },
@@ -92,7 +92,7 @@
       "tag": "auto",
       "outbounds": [
         "warp-ir",
-        "warp-main"
+        "REvil"
       ],
       "url": "http://cp.cloudflare.com/",
       "interval": "10m0s"
@@ -117,7 +117,7 @@
     },
     {
       "type": "wireguard",
-      "tag": "warp-main",
+      "tag": "REvil",
       "detour": "warp-ir",
       "local_address": [
         "172.16.0.2/32","2606:4700:110:8c41:7cbc:b82d:1acd:4fd/128"
