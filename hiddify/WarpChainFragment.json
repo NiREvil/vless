@@ -82,8 +82,8 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "iran",
-        "Frankfurt"
+        "warp-ir",
+        "warp-main"
       ],
       "default": "auto"
     },
@@ -91,15 +91,15 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "iran",
-        "Frankfurt"
+        "warp-ir",
+        "warp-main"
       ],
       "url": "http://cp.cloudflare.com/",
       "interval": "10m0s"
     },
     {
       "type": "wireguard",
-      "tag": "iran",
+      "tag": "warp-ir",
       "local_address": [
         "172.16.0.2/32","2606:4700:110:86ed:83e4:4cb1:c7f8:2aef/128"
       ],
@@ -117,8 +117,8 @@
     },
     {
       "type": "wireguard",
-      "tag": "Frankfurt",
-      "detour": "iran",
+      "tag": "warp-main",
+      "detour": "warp-ir",
       "local_address": [
         "172.16.0.2/32","2606:4700:110:8c41:7cbc:b82d:1acd:4fd/128"
       ],
