@@ -11,7 +11,7 @@
     ],
     "servers": [
       {
-        "address": "https://8.8.8.8/dns-query",
+        "address": "https://94.140.14.14/dns-query",
         "address_resolver": "dns-direct",
         "strategy": "ipv4_only",
         "tag": "dns-remote"
@@ -87,7 +87,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "1.REvil.WorkErs.DEV",
+        "server_name": "1.RadiCAlLy.WorkErs.DEV",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -96,13 +96,13 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "1.REvil.WorkErs.DEV"
+          "Host": "1.RadiCAlLy.WorkErs.DEV"
         },
         "max_early_data": 2048,
         "path": "/",
         "type": "ws"
       },
-      "uuid": "12598ef9-9a40-43e8-baa3-65c52461d43c",
+      "uuid": "7d70c002-bfd7-4420-819f-68fcf42a9375",
       "type": "vless",
       "domain_strategy": "",
       "tag": "worker 1"
@@ -117,7 +117,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "2.REvil.WorkErs.DEV",
+        "server_name": "2.RadiCAlLy.WorkErs.DEV",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -126,20 +126,20 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "2.REvil.WorkErs.DEV"
+          "Host": "2.RadiCAlLy.WorkErs.DEV"
         },
         "max_early_data": 2048,
         "path": "/",
         "type": "ws"
       },
-      "uuid": "8bf1dafd-dd6f-4bb4-b6c5-901b1b023694",
+      "uuid": "29435df4-1b36-487a-8950-9b544541f681",
       "type": "vless",
       "domain_strategy": "",
       "tag": "worker 2"
     },
     {
       "packet_encoding": "",
-      "server": "[2606:4700:d0::a29f:c001]",
+      "server": "zula.ir",
       "server_port": 443,
       "tls": {
         "alpn": [
@@ -147,7 +147,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "3.REvil.WorkErs.DEV",
+        "server_name": "3.RadiCAlLy.WorkErs.DEV",
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
@@ -156,12 +156,12 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "3.REvil.WorkErs.DEV"
+          "Host": "3.RadiCAlLy.WorkErs.DEV"
         },
         "path": "/",
         "type": "ws"
       },
-      "uuid": "37d799f2-0d9e-4758-bc30-294bb0a161e0",
+      "uuid": "5952f1fc-a6e9-462d-976e-eb1c298991c2",
       "type": "vless",
       "domain_strategy": "",
       "tag": "worker 3"
@@ -176,7 +176,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "4.REvil.WorkErs.DEV",
+        "server_name": "4.RadiCAlLy.WorkErs.DEV",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -185,13 +185,13 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "4.REvil.WorkErs.DEV"
+          "Host": "4.RadiCAlLy.WorkErs.DEV"
         },
         "max_early_data": 2048,
         "path": "/",
         "type": "ws"
       },
-      "uuid": "00e595dc-46ea-4d6c-bc62-7df03b191f74",
+      "uuid": "45799ff5-0d6b-4717-90f7-e92e0c7a85dd",
       "type": "vless",
       "domain_strategy": "",
       "tag": "worker 4"
@@ -206,7 +206,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "5.REvil.WorkErs.DEV",
+        "server_name": "5.RadiCAlLy.WorkErs.DEV",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -215,12 +215,12 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "5.REvil.WorkErs.DEV"
+          "Host": "5.RadiCAlLy.WorkErs.DEV"
         },
         "path": "/",
         "type": "ws"
       },
-      "uuid": "ee3ab0eb-1baf-4045-a576-7107b7e80f8f",
+      "uuid": "db683eac-690c-44ac-8ca9-3dc153ddb2ce",
       "type": "vless",
       "domain_strategy": "",
       "tag": "worker 5"
@@ -265,10 +265,10 @@
       "mtu": 1280,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "pre_shared_key": "",
-      "private_key": "UGqDCeCtzr2bPshy0SzdaFIIcvbZPj6frOGhPxKqpHA=",
-      "reserved": "86yW",
-      "server": "2606:4700:d0::a29f:c001",
-      "server_port": 1070,
+      "private_key": "8KKSjWHEz8Nf6u6E+kpUzMhNFM6H55Z8jBnwDTkxT24=",
+      "reserved": "zFGu",
+      "server": "188.114.98.183",
+      "server_port": 3476,
       "type": "wireguard",
       "domain_strategy": "",
       "tag": "wireguard 3"
