@@ -29,7 +29,7 @@ let userID = 'd5d5c3d6-0367-442d-800f-9d013154667d';
 
 
 
-const proxyIPs = ['176.97.77.32', '23.162.136.169', '2.59.119.35', 'cdn-all.xn--b6gac.eu.org'];
+const proxyIPs = ['cdn.xn--b6gac.eu.org', 'cdn-all.xn--b6gac.eu.org'];
 let proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
 
 let dohURL = 'https://dns.adguard-dns.com/dns-query'; // or use https://dns.google/dns-query  or   https://cloudflare-dns.com/dns-query or https://dns.adguard-dns.com/dns-query or https://sky.rethinkdns.com/1:-Pf_____9_8A_AMAIgE8kMABVDDmKOHTAKg=
