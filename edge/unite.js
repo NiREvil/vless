@@ -11,8 +11,8 @@ async function handleRequest(request) {
   const subscriptionUrls = [
       // NiREvil
       'https://raw.githubusercontent.com/NiREvil/vless/main/sub/freedom',
-      'https://octave.revilcloud.workers.dev/',
-      'https://harmony.revil.link/',
+      'https://walker.nirevil.ir/sub/211484ca-3fe6-487b-bb3b-ab06a76c4079?app=singbox/',
+      'https://harmony.nirevil.ir/',
       'https://arcane.nirevil.ir/',
       'https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt',
       'https://raw.githubusercontent.com/NiREvil/vless/main/sub/hz',
