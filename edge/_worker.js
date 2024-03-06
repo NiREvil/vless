@@ -7,7 +7,7 @@ import { connect } from 'cloudflare:sockets';
 // [در ویندوز] Press "Win + R", input cmd and run and paste this:  Powershell -NoExit -Command "[guid]::NewGuid()"  بعد جایگذاری کنید یویوآیدی خودتون رو توی سطر زیر بجای ماله من
 let userID = 'd342d11e-d424-4583-b36e-524ab1f0afa4';
 
-const proxyIPs = ['cdn-all.xn--b6gac.eu.org', 'cdn.xn--b6gac.eu.org', 'cdn-b100.xn--b6gac.eu.org', 'edgetunnel.anycast.eu.org', 'cdn.anycast.eu.org'];
+const proxyIPs = ['cdn.xn--b6gac.eu.org', 'cdn-all.xn--b6gac.eu.org'];
 
 let proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
 
