@@ -2,6 +2,8 @@
 
 **~~proxyIP127.0.0.1~~ means that ip now working anymore**
 
+Latest worker.js code [Link](https://rentry.co/8March)
+
 [found Find and test more proxieIP's from this long list -Not tested :))](https://rentry.co/CF-proxyIP)
 
 ----
