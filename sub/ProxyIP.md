@@ -1,10 +1,12 @@
 #  ProxyIP for cloudflare workers & pages-ws-vless
 
+![Image description](https://i.imgur.com/PYV4crq.png)
+
 **~~proxyIP127.0.0.1~~ means that ip now working anymore**
 
-Latest worker.js code [Link](https://rentry.co/8March)
+Latest worker.js code for CF-workers [Link](https://rentry.co/8March)
 
-[found Find and test more proxieIP's from this long list -Not tested :))](https://rentry.co/CF-proxyIP)
+found Find and test more proxieIP's from this long list -Not tested :) [Link](https://rentry.co/CF-proxyIP)
 
 ----
 #### How to find proxyip for VLESS CF WORKERS using Cyberspace Search Engine [Telegra.ph Link](https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06)
