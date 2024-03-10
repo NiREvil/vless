@@ -21,6 +21,19 @@ Finland, Helsinki, Aeza International LTD
 
 - - - -
 
+ #### *NOTE*
+**About the next two:** After connecting to vless every time, the IP is randomly changed and selected from among these countries.
+
+IP's of Netherlands, Sweden,, Germany, US & ...
+
+    const proxyIPs = [''cdn-all.xn--b6gac.eu.org'];
+
+IP's of Singapore, Indonesia, Korea, Japan, Hong Kong & ...
+
+    const proxyIPs = ['cdn.xn--b6gac.eu.org'];
+
+----
+
 ~~United Kingdom of Great Britain - Mythic Beasts Ltd~~
 
     const proxyIPs = ["[2a00:1098:2b::1:ac40:6d0a]"];
