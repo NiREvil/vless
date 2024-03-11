@@ -134,8 +134,8 @@ async function handleRequest(request) {
                     "domainStrategy": "AsIs",
                     "fragment": {
                         "packets": "tlshello",
-                        "length": "10-30",
-                        "interval": "10"
+                        "length": "100-200",
+                        "interval": "10-20"
                     }
                 },
                 "streamSettings": {
