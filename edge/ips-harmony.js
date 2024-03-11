@@ -1,9 +1,10 @@
 /*!
-* Time is: 19 Dec 2023 02:14 UTC
-* Random Clean Cl IPv4/IPv6 Addresses
-* Each time that you click on the update button in your client = 30 New & Clean Cloudflare IP addresses
+* Last Update: Monday, March 11, 2024
+* Cloudflare Network's Clean IPv4/IPv6 IPs (randomly) For Iranian Internet Providers.
+* Each time that you click on the update button in your client = You will receive up to 30 clean IP addresses, so let's to create a new cf worker & import this code into a worker
 *
-* Released by NiREvil
+* Released by github.com/NiREvil.
+* More Stuff --- @F_NiREvil
 */
 // @ts-ignore
 
@@ -52,7 +53,7 @@ const defaultConfigvless = {
   v: "2",
   ps: "",
   port: "443",
-  id: "e3028426-be3d-4f7c-82b4-dea229e6c23a",//Your UUID set
+  id: "aa15d883-7e22-4e3d-9b5f-2ea87b205215",//Your UUID set
   aid: "0",
   net: "ws",
   type: "none",
@@ -686,9 +687,9 @@ async function handleRequest(request) {
     '[::ffff:c7d4:5a31]', 
     '[::ffff:c7d4:5a46]',
   
-    'www.udacity.com',
-    'www.ipchicken.com',
-    'time.is',
+    'www.speedtest.net',
+    'www.visa.com',
+    'zula.ir',
     '104.18.13.60',
     '104.18.169.34',
     '104.19.117.157',
@@ -762,14 +763,14 @@ async function handleRequest(request) {
   ];
   // your preferred fingerprints
   var fp = [
-    'edge',
-    'firefox',
     'chrome',
+    'firefox',
+    'edge',
     'safari',
-    'ios',
-    'random',
+    'chrome',
+    'firefox',
     'randomized',
-    '360'
+    'random'
   ];
 
   var port = [
@@ -790,18 +791,18 @@ for (let i = 0; i < 1; i++) {
     const shuffledVLESS = shuffleArray(Array.from(new Set(IP1)));
     const ip = shuffledVLESS.shift();
 
-    const config = { ...defaultConfigvless, add: ip, ps: ' | Harmony | ', port: randomport };// 1th set config profile name
+    const config = { ...defaultConfigvless, add: ip, ps: ' | SiLiCON | ', port: randomport };// 1th set config profile name
   
     const queryParams = new URLSearchParams({
 
       path: config.path,
       security: config.tls,
       encryption: config.type,
-      alpn: 'h2,http/1.1',// preferred alpn type
-      host: 'harmony.revil.link',//your subdomain or worker domain link
+      alpn: 'http/1.1',// preferred alpn type
+      host: 'SiLiCON.RadiCalLy.WorKErs.DEV',//your subdomain or worker domain link
       fp: randomfp,
       type: config.net,
-      sni: 'harmony.revil.link',//your subdomain or worker domain link
+      sni: 'SiLiCON.RadiCalLy.WorKErs.DEV',//your subdomain or worker domain link
     });
     const vlessUrl = `vless://${config.id}@${config.add}:${config.port}?${queryParams.toString()}#${config.ps}`;
     configsList.push(vlessUrl);
@@ -828,16 +829,16 @@ for (let i = 0; i < 1; i++) {
     if (uniqueIPsRE1.size >= 10) {
       break;
     }
-    const config = { ...defaultConfigvless, add: ip, ps: ' | Harmony | '};// 2th set config profile name
+    const config = { ...defaultConfigvless, add: ip, ps: ' | SiLiCON | '};// 2th set config profile name
     const queryParams = new URLSearchParams({
       path: config.path,
       security: config.tls,
       encryption: config.type,
-      alpn: 'h2,http/1.1',
-      host: 'harmony.revil.link',//your subdomain or worker domain link
+      alpn: 'http/1.1',
+      host: 'SiLiCON.RadiCalLy.WorKErs.DEV',//your subdomain or worker domain link
       fp: randomfp,
       type: config.net,
-      sni: 'harmony.revil.link',//your subdomain or worker domain link
+      sni: 'SiLiCON.RadiCalLy.WorKErs.DEV',//your subdomain or worker domain link
     });
     const vlessUrl = `vless://${config.id}@${config.add}:${config.port}?${queryParams.toString()}#${config.ps}`;
   if (!uniqueIPsRE1.has(ip)) {configsList.push(vlessUrl);
@@ -849,16 +850,16 @@ for (let i = 0; i < 1; i++) {
     if (uniqueIPsRE2.size >= 10) {
       break;
     }
-    const config = { ...defaultConfigvless, add: ip, ps: ' | Harmony | '};// 3th set config profile name
+    const config = { ...defaultConfigvless, add: ip, ps: ' | SiLiCON | '};// 3th set config profile name
     const queryParams = new URLSearchParams({
       path: config.path,
       security: config.tls,
       encryption: config.type,
-      alpn: 'h2,http/1.1',
-      host: 'harmony.revil.link',//your subdomain or worker domain link
+      alpn: 'http/1.1',
+      host: 'SiLiCON.RadiCalLy.WorKErs.DEV',//your subdomain or worker domain link
       fp: randomfp,
       type: config.net,
-      sni: 'harmony.revil.link',//your subdomain or worker domain link
+      sni: 'SiLiCON.RadiCalLy.WorKErs.DEV',//your subdomain or worker domain link
     });
     const vlessUrl = `vless://${config.id}@${config.add}:${config.port}?${queryParams.toString()}#${config.ps}`;
   if (!uniqueIPsRE2.has(ip)) {configsList.push(vlessUrl);
