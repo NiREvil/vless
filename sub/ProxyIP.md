@@ -30,7 +30,7 @@ Finland, Helsinki, Aeza International LTD
 
 IP's of Netherlands, Sweden,, Germany, US & ...
 
-    const proxyIPs = [''cdn-all.xn--b6gac.eu.org'];
+    const proxyIPs = ['cdn-all.xn--b6gac.eu.org'];
 
 IP's of Singapore, Indonesia, Korea, Japan, Hong Kong & ...
 
