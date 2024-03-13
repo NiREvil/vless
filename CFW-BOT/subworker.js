@@ -32,12 +32,12 @@ let link = '';
 let edgetunnel = 'ed';
 let RproxyIP = 'false';
 let proxyIPs = [
-	'cdn-all.xn--b6gac.eu.org',
+	'176.97.77.32',
 	'cdn.xn--b6gac.eu.org',
-	'proxyip.aliyun.fxxk.dedyn.io',
+	'cdn-all.xn--b6gac.eu.org',
 ];
 let CMproxyIPs = [
-	{ proxyIP: "77.91.78.140", type: "HK" },
+	{ proxyIP: "176.97.77.32", type: "HK" },
 ];
 let BotToken ='';
 let ChatID =''; 
