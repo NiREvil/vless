@@ -17,13 +17,26 @@ United States, Alibaba Technology Co. Ltd.
 
     const proxyIPs = ['proxyip.aliyun.fxxk.dedyn.io'];
 
-- - - -
+----
 
-Finland, Helsinki, Aeza International LTD
+Sweden, Stockholm , M247 Europe SRL
 
-    const proxyIPs = ['77.91.78.140'];
+    const proxyIPs = ['176.97.77.32'];
 
-- - - -
+----
+
+
+United Kingdom of Great Britain, Oracle Corporation
+
+    const proxyIPs = ['143.47.228.52'];
+
+----
+
+United Arab Emirates, Oracle Corporation
+
+    const proxyIPs = ['129.151.152.254'];
+
+------
 
  #### *NOTE*
 **About the next two:** After connecting to vless every time, the IP is randomly changed and selected from among these countries.
