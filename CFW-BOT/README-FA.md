@@ -1,5 +1,4 @@
-[فارسی](https://github.com/2ri4eUI/CFW-BOT/blob/main/README-FA.md) 
-[ENGLISH](https://github.com/2ri4eUI/CFW-BOT/blob/main/README.md)
+
 # CFW-BOT
 ربات ورکر کلادفلر! بدون نیاز به سرور، به راحتی میتونید هر تعداد کانفیگ Xray بسازید،  به راحتی در PythonAnywhere اجرا می شود. یک مسیرکوتاه به آزادی اینترنت! ✨
 
