@@ -11,7 +11,15 @@ found Find and test more proxieIP's from this long list -Not tested :) [Link](ht
 ----
 #### How to find proxyip for VLESS CF WORKERS using Cyberspace Search Engine [Telegra.ph Link](https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06)
 
-- - - -
+------
+
+**note:** After connecting to vless every time, the IP is randomly changed and selected from among these countries.
+
+IP's of Luxembourg, UK & ...
+
+    const proxyIPs = ['workers.bestip.one'];
+
+------
 
 United States, Alibaba Technology Co. Ltd.
 
