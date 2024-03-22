@@ -6,7 +6,75 @@
 
 Latest worker.js code for CF-workers [Link](https://rentry.co/8March)
 
-found Find and test more proxieIP's from this long list -Not tested :) [Link](https://rentry.co/CF-proxyIP)
+------
+
+
+
+
+قبل از اینکه برین پایین اینجارو بخونین،
+
+فک کنم این آسونترین روش برای بدست اوردن proxyIP برا داخل وورکر باشه که بینشون فیلتر شده هم پیدا نمیشه،
+
+روی هر کدوم از این لینک ها کلیک کنی یه خروار پروکسی میبینی.
+تمام CNAME رکود هایی که رو این دامنه ها هست رو میشه ب حای پروکسی آی‌پی داخل وورکر استفاده کرد.
+
+
+1-
+https://www.nslookup.io/domains/workers.bestip.one/dns-records/
+
+https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
+
+https://www.nslookup.io/domains/cdn.xn--b6gac.eu.org/dns-records/
+
+https://www.nslookup.io/domains/edgetunnel.anycast.eu.org/dns-records/
+
+https://www.nslookup.io/domains/proxyip.aliyun.fxxk.dedyn.io/dns-records/
+
+https://www.nslookup.io/domains/proxyip.multacom.fxxk.dedyn.io/dns-records/
+
+
+
+همشو تست کردم همگی سالم بودن
+ 
+Germany, Frankfurt am main
+130.61.23.77
+23.90.144.167
+
+Amsterdam -M247
+141.148.229.106 
+146.70.175.168
+146.70.175.100
+
+Luxembourg
+107.189.7.254 
+
+United States 
+43.153.80.208
+129.159.38.24
+23.156.104.116
+107.189.7.254
+
+England, London
+23.162.136.169
+
+Singapore 
+8.219.54.203
+47.236.87.206
+
+Korea
+144.24.85.158
+
+Japan
+141.147.163.68
+
+India-oracle
+141.148.212.70
+
+> **یکم خلاقیت ب خرج بدی** خودت میفهمی چیو باید سرچ بزنی تو سایت
+
+
+
+
 
 ----
 #### How to find proxyip for VLESS CF WORKERS using Cyberspace Search Engine [Telegra.ph Link](https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06)
