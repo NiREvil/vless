@@ -11,64 +11,85 @@ Latest worker.js code for CF-workers [Link](https://rentry.co/8March)
 
 
 
-قبل از اینکه برین پایین اینجارو بخونین،
+## قبل از اینکه بری پایین اینجارو بخون.
 
-فک کنم این آسونترین روش برای بدست اوردن proxyIP برا داخل وورکر باشه که بینشون فیلتر شده هم پیدا نمیشه،
+**فکر کنم این آسونترین روش برای بدست آوردن proxyIP برای داخل وورکر باشه.
 
-روی هر کدوم از این لینک ها کلیک کنی یه خروار پروکسی میبینی.
-تمام CNAME رکود هایی که رو این دامنه ها هست رو میشه ب حای پروکسی آی‌پی داخل وورکر استفاده کرد.
-
-
-1-
-https://www.nslookup.io/domains/workers.bestip.one/dns-records/
-
-https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
-
-https://www.nslookup.io/domains/cdn.xn--b6gac.eu.org/dns-records/
-
-https://www.nslookup.io/domains/edgetunnel.anycast.eu.org/dns-records/
-
-https://www.nslookup.io/domains/proxyip.aliyun.fxxk.dedyn.io/dns-records/
-
-https://www.nslookup.io/domains/proxyip.multacom.fxxk.dedyn.io/dns-records/
+روی هر کدوم از این لینک ها کلیک کنی یه خروار پروکسی میبینی با مشخصاتشون.
+تمام CNAME رکوردهایی که رو این دامنه ها هست رو میشه ب حجی پروکسی آی‌پی داخل وورکر استفاده کرد.
 
 
+list's 
+- https://www.nslookup.io/domains/workers.bestip.one/dns-records/
 
-همشو تست کردم همگی سالم بودن
+- https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
+
+- https://www.nslookup.io/domains/cdn.xn--b6gac.eu.org/dns-records/
+
+- https://www.nslookup.io/domains/edgetunnel.anycast.eu.org/dns-records/
+
+- https://www.nslookup.io/domains/proxyip.aliyun.fxxk.dedyn.io/dns-records/
+
+- https://www.nslookup.io/domains/proxyip.multacom.fxxk.dedyn.io/dns-records/
+
+
+
+چندتارو تست کردم همگی سالم بودن میذارمم این پایین برا نمونه.
  
-Germany, Frankfurt am main
-130.61.23.77
-23.90.144.167
+**Germany, Frankfurt am main**
 
-Amsterdam -M247
-141.148.229.106 
-146.70.175.168
-146.70.175.100
+-     const proxyIPs = ['130.61.23.77'];
+-     const proxyIPs = ['23.90.144.167'];
+----
+**Netherlands.Amsterdam -M247**
 
-Luxembourg
-107.189.7.254 
+-     const proxyIPs = ['146.70.175.100'];
+-     const proxyIPs = ['141.148.229.106 '];
+-     const proxyIPs = ['146.70.175.168'];
+-----
 
-United States 
-43.153.80.208
-129.159.38.24
-23.156.104.116
-107.189.7.254
+**Luxembourg**
 
-England, London
-23.162.136.169
+-     const proxyIPs = ['107.189.7.254 '];
+-----
 
-Singapore 
-8.219.54.203
-47.236.87.206
+**United States**
+-     const proxyIPs = ['23.162.136.169'];
+-     const proxyIPs = ['43.153.80.208'];
+-     const proxyIPs = ['129.159.38.24'];
+-     const proxyIPs = ['107.189.7.254'];
+-     const proxyIPs = ['64.112.42.231'];
+----
 
-Korea
-144.24.85.158
+**England, London**
 
-Japan
-141.147.163.68
+    const proxyIPs = ['23.162.136.169'];
+----
 
-India-oracle
-141.148.212.70
+**Singapore**
+
+-     const proxyIPs = ['8.219.54.203'];
+
+-     const proxyIPs = ['47.236.87.206'];
+----
+
+**Korea**
+
+    const proxyIPs = ['144.24.85.158'];
+
+----
+
+**Japan**
+
+    const proxyIPs = ['141.147.163.68'];
+----
+
+**India-oracle**
+
+    const proxyIPs = ['141.148.212.70'];
+----
+
+
 
 > **یکم خلاقیت ب خرج بدی** خودت میفهمی چیو باید سرچ بزنی تو سایت
 
@@ -89,26 +110,26 @@ IP's of Luxembourg, UK & ...
 
 ------
 
-United States, Alibaba Technology Co. Ltd.
+**United States, Alibaba Technology Co. Ltd.**
 
     const proxyIPs = ['proxyip.aliyun.fxxk.dedyn.io'];
 
 ----
 
-Sweden, Stockholm , M247 Europe SRL
+**Sweden, Stockholm , M247 Europe SRL**
 
     const proxyIPs = ['176.97.77.32'];
 
 ----
 
 
-United Kingdom of Great Britain, Oracle Corporation
+**United Kingdom of Great Britain, Oracle Corporation**
 
     const proxyIPs = ['143.47.228.52'];
 
 ----
 
-United Arab Emirates, Oracle Corporation
+**United Arab Emirates, Oracle Corporation**
 
     const proxyIPs = ['129.151.152.254'];
 
@@ -158,6 +179,7 @@ IP's of Singapore, Indonesia, Korea, Japan, Hong Kong & ...
 ~~Finland Helsinki - Hetzner~~
 
     const proxyIPs = ['104.28.224.14'];
+    
     const proxyIPs = ['65.21.241.202'];
 
 - - - -
