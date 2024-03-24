@@ -40,15 +40,18 @@ list's
 **Luxembourg**
 -     const proxyIPs = ['107.189.7.254'];
 -----
+**England, London**
+-     const proxyIPs = ['23.162.136.169'];
+-----
+**Germany,Frankfurt am Main**
+-     const proxyIPs = ['150.230.144.235'];
+-----
 **United States**
 -     const proxyIPs = ['23.162.136.169'];
 -     const proxyIPs = ['43.153.80.208'];
 -     const proxyIPs = ['129.159.38.24'];
 -     const proxyIPs = ['107.189.7.254'];
 -     const proxyIPs = ['64.112.42.231'];
-----
-**England, London**
--     const proxyIPs = ['23.162.136.169'];
 ----
 **Singapore**
 -     const proxyIPs = ['8.219.54.203'];
