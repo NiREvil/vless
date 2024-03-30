@@ -1,4 +1,4 @@
-#  ProxyIP for cloudflare workers & pages-ws-vless
+#  $\color{gold} \Huge \text{ProxyIP f or cloudflare workers and pages-ws-vless}$
 
 ----
 ![Alt Tag](https://i.imgur.com/PYV4crq.png "FUCKOFF")
@@ -13,8 +13,8 @@ Latest worker.js code for CF-workers [Link](https://rentry.co/8March)
 تمام `CNAME` رکوردهایی که رو این دامنه ها هست رو میشه ب جای پروکسی آی‌پی داخل وورکر استفاده کرد.
 
 
-list's 
-- https://www.nslookup.io/domains/workers.bestip.one/dns-records/
+$\color{gold} \Large \text{List's}$
+- https://www.nslookup.io/domains/workers.cloudflare.cyou/dns-records/
 
 - https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
 
@@ -23,9 +23,8 @@ list's
 - https://www.nslookup.io/domains/edgetunnel.anycast.eu.org/dns-records/
 
 - https://www.nslookup.io/domains/proxyip.aliyun.fxxk.dedyn.io/dns-records/
-- - https://www.nslookup.io/domains/workers.bestip.one/dns-records/
-
 - https://www.nslookup.io/domains/workers.bestip.one/dns-records/
+
 
 
 > **یکم خلاقیت ب خرج بدی** خودت میفهمی چیو باید سرچ بزنی تو سایت
@@ -37,7 +36,7 @@ list's
 **note:** After connecting to vless every time, the IP is randomly changed and selected from among these countries.
 
 IP's of Luxembourg, US, canada UK & ...
--     const proxyIPs = ['workers.bestip.one'];
+-     const proxyIPs = ["workers.cloudflare.cyou"];
 ----
 
 IP's of Luxembourg, UK & ...
