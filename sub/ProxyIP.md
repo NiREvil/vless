@@ -1,6 +1,7 @@
 #  ProxyIP for cloudflare workers & pages-ws-vless
 
-![Image description](https://i.imgur.com/PYV4crq.png)
+----
+![Alt Tag](https://i.imgur.com/PYV4crq.png "FUCKOFF")
 
 **~~proxyIP127.0.0.1~~ means that ip now working anymore**
 
@@ -22,50 +23,9 @@ list's
 - https://www.nslookup.io/domains/edgetunnel.anycast.eu.org/dns-records/
 
 - https://www.nslookup.io/domains/proxyip.aliyun.fxxk.dedyn.io/dns-records/
+- - https://www.nslookup.io/domains/workers.bestip.one/dns-records/
 
-- https://www.nslookup.io/domains/proxyip.multacom.fxxk.dedyn.io/dns-records/
-
-
-
-> چندتارو تست کردم همگی سالم بودن میذارمم این پایین برا نمونه.
-**Germany, Frankfurt am main**
--     const proxyIPs = ['130.61.23.77'];
--     const proxyIPs = ['23.90.144.167'];
-----
-**Netherlands.Amsterdam -M247**
--     const proxyIPs = ['146.70.175.100'];
--     const proxyIPs = ['141.148.229.106'];
--     const proxyIPs = ['146.70.175.168'];
------
-**Luxembourg**
--     const proxyIPs = ['107.189.7.254'];
------
-**England, London**
--     const proxyIPs = ['23.162.136.169'];
------
-**Germany,Frankfurt am Main**
--     const proxyIPs = ['150.230.144.235'];
------
-**United States**
--     const proxyIPs = ['23.162.136.169'];
--     const proxyIPs = ['43.153.80.208'];
--     const proxyIPs = ['129.159.38.24'];
--     const proxyIPs = ['107.189.7.254'];
--     const proxyIPs = ['64.112.42.231'];
-----
-**Singapore**
--     const proxyIPs = ['8.219.54.203'];
--     const proxyIPs = ['47.236.87.206'];
-----
-**Korea**
--     const proxyIPs = ['144.24.85.158'];
-----
-**Japan**
--     const proxyIPs = ['141.147.163.68'];
-----
-**India-oracle**
--     const proxyIPs = ['141.148.212.70'];
-----
+- https://www.nslookup.io/domains/workers.bestip.one/dns-records/
 
 
 > **یکم خلاقیت ب خرج بدی** خودت میفهمی چیو باید سرچ بزنی تو سایت
@@ -75,6 +35,10 @@ list's
 ------
 
 **note:** After connecting to vless every time, the IP is randomly changed and selected from among these countries.
+
+IP's of Luxembourg, US, canada UK & ...
+-     const proxyIPs = ['workers.bestip.one'];
+----
 
 IP's of Luxembourg, UK & ...
 -     const proxyIPs = ['workers.bestip.one'];
