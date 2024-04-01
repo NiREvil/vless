@@ -1,4 +1,4 @@
-#  $\color{gold} \Huge \text{ProxyIP f or cloudflare workers and pages-ws-vless}$
+#  $\color{gold} \Large \text{ProxyIP for cl workers & pages}$
 
 ----
 ![Alt Tag](https://i.imgur.com/PYV4crq.png "FUCKOFF")
