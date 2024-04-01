@@ -7,8 +7,9 @@
 
 **~~proxyIP127.0.0.1~~ means that ip now working anymore**
 
-Latest worker.js code for CF-workers [Link](https://rentry.co/8March)
 
+latest pages.dev code is [Here-bpb](https://github.com/NiREvil/bia-pain-bache/blob/main/_worker.js)
+Latest worker.js code for CF-workers [Link](https://rentry.co/8March)
 ------
 ## فکر کنم این آسونترین روش برای بدست آوردن proxyIP برای داخل وورکر باشه.
 روی هر کدوم از این لینک ها کلیک کنی یه خروار پروکسی میبینی با مشخصاتشون.
