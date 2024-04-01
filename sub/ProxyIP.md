@@ -1,7 +1,9 @@
 #  $\color{gold} \Large \text{ProxyIP for cl workers - pages}$
 
-----
-![Alt Tag](https://i.imgur.com/PYV4crq.png "FUCKOFF")
+<p align="left">
+<img src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN-199x250.png" alt="Fuckoff" style="width:20%; border:0;">
+</p>
+
 
 **~~proxyIP127.0.0.1~~ means that ip now working anymore**
 
@@ -13,7 +15,7 @@ Latest worker.js code for CF-workers [Link](https://rentry.co/8March)
 تمام `CNAME` رکوردهایی که رو این دامنه ها هست رو میشه ب جای پروکسی آی‌پی داخل وورکر استفاده کرد.
 
 
-$\color{gold} \Large \text{List's}$
+$\color{gold} \Large \text{YUPPP}$
 - https://www.nslookup.io/domains/workers.cloudflare.cyou/dns-records/
 
 - https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
@@ -38,7 +40,6 @@ $\color{gold} \Large \text{List's}$
 IP's of Luxembourg, US, canada UK & ...
 -     const proxyIPs = ["workers.cloudflare.cyou"];
 ----
-
 IP's of Luxembourg, UK & ...
 -     const proxyIPs = ['workers.bestip.one'];
 ----
@@ -68,6 +69,13 @@ IP's of Netherlands, Sweden,, Germany, US & ...
 IP's of Singapore, Korea, Japan, Hong Kong & ...
 -     const proxyIPs = ['cdn.xn--b6gac.eu.org'];
 ----
+
+IP's of Singapore
+-     const proxyIPs = ["edgetunnel.anycast.eu.org"];
+----
+
+IP's of Luxembourg, UK & ...
+-     const proxyIPs = ['workers.bestip.one'];
 ~~United Kingdom of Great Britain - Mythic Beasts Ltd~~
 -     const proxyIPs = ["[2a00:1098:2b::1:ac40:6d0a]"];
 -     const proxyIPs = ["[2a00:1098:2b::1:ac40:6c0a]"];
