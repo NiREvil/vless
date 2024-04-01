@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Cloudflare, Inc. All rights reserved.
+// Copyright (c) 2024 Cloudflare, Inc. All rights reserved.
 // SPDX-License-Identifier: BSD-3-Clause
 
 use boringtun::device::drop_privileges::drop_privileges;
@@ -171,7 +171,7 @@ fn main() {
         }
     }
 
-    // Notify parent that tunnel initialization succeeded
+    // Notify parent that tunnels initialization succeeded
     sock1.send(&[1]).unwrap();
     drop(sock1);
 
