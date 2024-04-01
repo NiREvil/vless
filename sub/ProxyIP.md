@@ -41,7 +41,11 @@ IP's of Luxembourg, US, canada UK & ...
 
 IP's of Luxembourg, UK & ...
 -     const proxyIPs = ['workers.bestip.one'];
+----
+**Germany, Frankfurt am main, Oracle**
+-     const proxyIPs = ['23.90.144.167'];
 ------
+
 **United States, Alibaba Technology Co. Ltd.**
 -     const proxyIPs = ['proxyip.aliyun.fxxk.dedyn.io'];
 ----
@@ -61,7 +65,7 @@ IP's of Luxembourg, UK & ...
 IP's of Netherlands, Sweden,, Germany, US & ...
 -     const proxyIPs = ['cdn-all.xn--b6gac.eu.org'];
 
-IP's of Singapore, Indonesia, Korea, Japan, Hong Kong & ...
+IP's of Singapore, Korea, Japan, Hong Kong & ...
 -     const proxyIPs = ['cdn.xn--b6gac.eu.org'];
 ----
 ~~United Kingdom of Great Britain - Mythic Beasts Ltd~~
