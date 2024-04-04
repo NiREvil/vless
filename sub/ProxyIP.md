@@ -49,8 +49,10 @@ IP's of Luxembourg, UK & ...
 ----
 **Germany, Frankfurt am main, Oracle**
 -     const proxyIPs = ['23.90.144.167'];
-------
-
+----
+**United Kingdom, London, Hostaris LLC**
+-     const proxyIPs = ['176.97.77.32'];
+----
 **United States, Alibaba Technology Co. Ltd.**
 -     const proxyIPs = ['proxyip.aliyun.fxxk.dedyn.io'];
 ----
