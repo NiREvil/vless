@@ -41,6 +41,9 @@ $\color{gold} \Large \text{YUPPP}$
 IP's of Luxembourg, US, canada UK & ...
 -     const proxyIPs = ["workers.cloudflare.cyou"];
 ----
+**United Kingdom, Hostaris L.L.C**
+-     const proxyIPs = ['ircpipproxy.duckdns.org'];
+----
 IP's of Luxembourg, UK & ...
 -     const proxyIPs = ['workers.bestip.one'];
 ----
