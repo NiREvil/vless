@@ -44,7 +44,10 @@ IP's of Luxembourg, US, canada UK & ...
 **United Kingdom, Hostaris L.L.C**
 -     const proxyIPs = ['ircpipproxy.duckdns.org'];
 ----
-IP's of Luxembourg, UK & ...
+**Turkey, izmir**
+-     const proxyIPs = ['62.3.12.185'];
+----
+**IP's of Luxembourg, UK & ...**
 -     const proxyIPs = ['workers.bestip.one'];
 ----
 **Germany, Frankfurt am main, Oracle**
