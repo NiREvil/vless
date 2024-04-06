@@ -1,4 +1,4 @@
-### $\color{gold} \Large \text{ProxyIP for cl workers - pages}$
+### $\color{gold} \Large \text{ProxyIP Cl}$
 **~~proxyIP127.0.0.1~~ means that ip now working anymore**
 
 ---
