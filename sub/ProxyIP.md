@@ -2,12 +2,12 @@
 **~~proxyIP127.0.0.1~~ means that ip now working anymore**
 
 ---
-## RE
+## Proxy Time
 - [latest worker and page](#latest-worker-and-page)
-  - [Best proxies](#Best_proxies)
-  - [Find proxyIP](#Find_proxyIP)
-  - [A few more](#A-few_more)
+  - [Best proxies](#Best-proxies)
+  - [Find proxyIP](#Find-proxyIP)
   - [Advanced](#advanced)
+  - [A few more](#A-few-more)
 
 ---
 ## latest worker and page
