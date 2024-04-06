@@ -1,16 +1,53 @@
-#  $\color{gold} \Large \text{ProxyIP for cl workers - pages}$
-
-<p align="left">
-<img src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN-199x250.png" alt="Fuckoff" style="width:20%; border:0;">
-</p>
-
-
+### $\color{gold} \Large \text{ProxyIP for cl workers - pages}$
 **~~proxyIP127.0.0.1~~ means that ip now working anymore**
+/
+latest pages.dev code is Here [bpb](https://github.com/NiREvil/bia-pain-bache/blob/main/_worker.js)
+
+Latest worker.js code for CF-workers [Clw](https://rentry.co/8March)
 
 
-latest pages.dev code is [Here-bpb](https://github.com/NiREvil/bia-pain-bache/blob/main/_worker.js)
-Latest worker.js code for CF-workers [Link](https://rentry.co/8March)
-------
+---
+**note:** After connecting to vless every time, the IP is randomly changed and selected from among these countries.
+
+IP's of Luxembourg, US, canada UK & ...
+-     const proxyIPs = ["workers.cloudflare.cyou"];
+---
+**United Kingdom, Hostaris L.L.C**
+-     const proxyIPs = ['ircpipproxy.duckdns.org'];
+---
+**Turkey, izmir**
+-     const proxyIPs = ['62.3.12.185'];
+---
+**IP's of Luxembourg, UK & ...**
+-     const proxyIPs = ['workers.bestip.one'];
+---
+**Germany, Frankfurt am main, Oracle**
+-     const proxyIPs = ['23.90.144.167'];
+---
+**Germany, Frankfurt am main, Oracle**
+-     const proxyIPs = ['23.90.144.167'];
+---
+**Germany, Frankfurt am main, Oracle**
+-     const proxyIPs = ['23.90.144.167'];
+---
+**United Kingdom, London, Hostaris LLC**
+-     const proxyIPs = ['176.97.77.32'];
+---
+**United States, Alibaba Technology Co. Ltd.**
+-     const proxyIPs = ['proxyip.aliyun.fxxk.dedyn.io'];
+---
+**Sweden, Stockholm , M247 Europe SRL**
+-     const proxyIPs = ['176.97.77.32'];
+---
+**United Kingdom of Great Britain, Oracle Corporation**
+-     const proxyIPs = ['143.47.228.52'];
+---
+**United Arab Emirates, Oracle Corporation**
+-     const proxyIPs = ['129.151.152.254'];
+---
+
+
+---
 ## فکر کنم این آسونترین روش برای بدست آوردن proxyIP برای داخل وورکر باشه.
 روی هر کدوم از این لینک ها کلیک کنی یه خروار پروکسی میبینی با مشخصاتشون.
 تمام `CNAME` رکوردهایی که رو این دامنه ها هست رو میشه ب جای پروکسی آی‌پی داخل وورکر استفاده کرد.
@@ -36,38 +73,7 @@ $\color{gold} \Large \text{YUPPP}$
 #### How to find proxyip for VLESS CF WORKERS using Cyberspace Search Engine [Telegra.ph Link](https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06)
 ------
 
-**note:** After connecting to vless every time, the IP is randomly changed and selected from among these countries.
 
-IP's of Luxembourg, US, canada UK & ...
--     const proxyIPs = ["workers.cloudflare.cyou"];
-----
-**United Kingdom, Hostaris L.L.C**
--     const proxyIPs = ['ircpipproxy.duckdns.org'];
-----
-**Turkey, izmir**
--     const proxyIPs = ['62.3.12.185'];
-----
-**IP's of Luxembourg, UK & ...**
--     const proxyIPs = ['workers.bestip.one'];
-----
-**Germany, Frankfurt am main, Oracle**
--     const proxyIPs = ['23.90.144.167'];
-----
-**United Kingdom, London, Hostaris LLC**
--     const proxyIPs = ['176.97.77.32'];
-----
-**United States, Alibaba Technology Co. Ltd.**
--     const proxyIPs = ['proxyip.aliyun.fxxk.dedyn.io'];
-----
-**Sweden, Stockholm , M247 Europe SRL**
--     const proxyIPs = ['176.97.77.32'];
-----
-**United Kingdom of Great Britain, Oracle Corporation**
--     const proxyIPs = ['143.47.228.52'];
-----
-**United Arab Emirates, Oracle Corporation**
--     const proxyIPs = ['129.151.152.254'];
-------
 
  #### *NOTE*
 **About the next two:** After connecting to vless every time, the IP is randomly changed and selected from among these countries.
@@ -131,6 +137,12 @@ Australia, Sydney Amazon Tech Inc.
 Amsterdam, The Infrastructure Gp
 -     const proxyIPs = ['5.2.77.100'];
 ----
+
+
+<p align="left">
+<img src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN-199x250.png" alt="Fuckoff" style="width:80%; border:0;">
+</p>
+
 Haifa, Israel BroadBand
 -     const proxyIPs = ['5.29.194.1'];
 ----
