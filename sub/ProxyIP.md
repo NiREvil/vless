@@ -79,7 +79,6 @@ United Kingdom of Great Britain, Oracle co
 United Arab Emirates, Oracle co
 
     const proxyIPs = ['129.151.152.254'];
----
 
 
 ---
@@ -92,7 +91,8 @@ United Arab Emirates, Oracle co
 تمام `CNAME` رکوردهایی که رو این دامنه ها هست رو میشه ب جای پروکسی آی‌پی داخل وورکر استفاده کرد.
 
 
-- $\color{gold} \Large \text{Cname Records}$
+- $\color{gold} \Large \text{in this case}$
+  - Cname Records
   - https://www.nslookup.io/domains/workers.cloudflare.cyou/dns-records/
   - https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
   - https://www.nslookup.io/domains/cdn.xn--b6gac.eu.org/dns-records/
