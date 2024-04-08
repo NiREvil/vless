@@ -10,18 +10,16 @@
   - [A few more](#A-few-more)
 
 ---
-## latest worker and page
+## latest workers and pages
 latest pages.dev code is here [bpb](https://github.com/NiREvil/bia-pain-bache/blob/main/_worker.js)
-
 Latest worker.js code for CF-workers [Clw](https://rentry.co/8March)
 
-
 ---
+### Best proxies
+**note:**
+After connecting to vless every time, the IP is randomly changed and selected from among these countries.
 
-## Best proxies
-**note:** After connecting to vless every time, the IP is randomly changed and selected from among these countries.
-
-IP's from Luxembourg, US, UK & ...
+**IP's from** Luxembourg, US, UK, ES, IT, CA & ...
 
     const proxyIPs = ["workers.cloudflare.cyou"];
 
