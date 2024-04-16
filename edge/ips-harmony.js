@@ -781,7 +781,7 @@ async function handleRequest(request) {
   ];
 
   var port = [
-    '443',
+    '8443', '2083',
   ];
 
 
@@ -815,7 +815,7 @@ for (let i = 0; i < 1; i++) {
     configsList.push(vlessUrl);
   }
 
-  const ipv4urlRE1 = 'https://raw.githubusercontent.com/hossein-mohseni/CF-Web/main/domains.json';
+  const ipv4urlRE1 = 'https://raw.githubusercontent.com/vfarid/cf-clean-ips/main/list.json';
   const ipv4listRE1 = await fetch(ipv4urlRE1);
   const ipListDataRE1 = await ipv4listRE1.json();
   const ipv4ListRE1 = ipListDataRE1.ipv4 || [];
