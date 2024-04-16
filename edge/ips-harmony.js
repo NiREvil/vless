@@ -1,11 +1,9 @@
-/*!
-* Last Update: Monday, March 11, 2024
-* Cloudflare Network's Clean IPv4/IPv6 IPs (randomly) For Iranian Internet Providers.
-* Each time that you click on the update button in your client = You will receive up to 30 clean IP addresses, so let's to create a new cf worker & import this code into a worker
-*
-* Released by github.com/NiREvil.
-* More Stuff --- @F_NiREvil
-*/
+// @ts-nocheck  Last Update: Sunday, april 16, 2024
+// Built a subscription link with the ability to automatically add CF clean IPs to VLESS configurations.
+// Replace these lines with your uuid and hostname, uuid line (54) - hostname lines (809-812) and (845-848) and (866-869)
+
+// By NiREvil
+
 // @ts-ignore
 
 function shufflEArray(array) {
@@ -53,7 +51,7 @@ const defaultConfigvless = {
   v: "2",
   ps: "",
   port: "443",
-  id: "aa15d883-7e22-4e3d-9b5f-2ea87b205215",//Your UUID set
+  id: "664f5f11-1231-486d-b416-b7b3ecdae76a",// your UUID set
   aid: "0",
   net: "ws",
   type: "none",
@@ -687,36 +685,45 @@ async function handleRequest(request) {
     '[::ffff:c7d4:5a31]', 
     '[::ffff:c7d4:5a46]',
   
-    'www.speedtest.net',
-    'www.visa.com',
-    'zula.ir',
-    '104.18.13.60',
-    '104.18.169.34',
-    '104.19.117.157',
-    '104.18.218.1',
-    '104.18.213.153',
-    '104.19.140.234',
-    '104.19.18.195',
-    '104.17.159.188',
-    '104.24.41.128',
-    '104.18.53.121',
-    '104.18.63.116',
-    '23.227.38.6',
-    '23.227.38.12',
-    '23.227.38.14', 
+    'www.speedtest.net', 
+    'zula.ir', 
+    'www.visa.com', 
+    'time.cloudflare.com', 
+    'creativecommons.org', 
+    'go.inmobi.com', 
+    'arcane.radicalization.ir', 
+    'nginx.pages.dev', 
+    'hetzner-d.pages.dev', 
+    'discord.com', 
+    'singapore.com', 
+    'nginx-a.radicalization.ir', 
+    'resistance.nirevil.ir', 
+    'resilience.nirevil.ir', 
+    '104.17.80.227', 
+    '146.19.21.248', 
+    '104.18.213.153', 
+    '104.19.140.234', 
+    '193.9.49.48', 
+    '104.18.218.1', 
+    '104.21.21.59', 
+    '104.18.53.121', 
+    '104.18.63.116', 
+    '146.19.21.234', 
+    '146.19.21.97', 
+    '146.19.21.9', 
     '23.227.38.21', 
-    '23.227.38.34',
-    '23.227.38.41', 
-    '23.247.163.222', 
-    '45.131.208.140', 
-    '64.68.192.231', 
-    '66.81.247.182', 
-    '66.235.200.124', 
-    '66.235.200.220', 
+    '146.19.21.218', 
+    '146.19.21.248', 
+    '146.19.21.67', 
+    '104.17.143.121', 
+    '146.19.21.248', 
+    '104.17.154.253', 
+    '104.18.123.101', 
+    '146.19.21.100', 
     '104.16.0.6', 
-    '104.16.0.7', 
-    '104.16.0.16', 
-    '104.16.0.173', 
+    '146.19.21.113', 
+    '162.159.1.94', 
+    '146.19.21.9', 
     '108.162.192.8', 
     '108.162.192.16', 
     '108.162.192.28', 
@@ -726,11 +733,11 @@ async function handleRequest(request) {
     '141.101.115.30', 
     '141.101.121.87', 
     '141.101.122.104', 
-    '188.114.96.5', 
-    '188.114.96.44', 
-    '188.114.96.60',
-    '141.101.121.87',
-    '141.101.122.104',
+    '193.9.49.48', 
+    '193.9.49.67', 
+    '104.16.120.114',
+    '146.19.21.113',
+    '188.114.97.3',
     '162.159.39.34',
     '162.159.44.158',
     '162.159.44.236',
@@ -738,28 +745,28 @@ async function handleRequest(request) {
     '172.64.17.159',
     '172.64.20.155',
     '172.64.26.182',
-    '198.41.200.185',
-    '198.41.201.175',
-    '198.41.203.126',
-    '198.41.206.64',  
+    '172.67.1.191',
+    '172.67.198.197',
+    '172.66.213.38',
+    '104.17.145.132', 
 
-    '64.68.192.77',
-    '104.16.32.14',
-    '104.16.188.173', 
-    '104.17.88.212', 
-    '104.18.13.60', 
-    '104.18.190.52', 
+    '104.17.34.93',
+    '104.18.34.21',
+    '104.17.143.121', 
+    '104.17.80.220', 
+    '104.17.53.78', 
+    '104.17.34.93', 
     '104.19.255.51', 
-    '104.20.75.10', 
-    '104.22.13.192', 
-    '104.24.189.34', 
-    '104.25.188.126', 
-    '104.25.255.254', 
+    '104.19.54.50', 
+    '104.31.16.136', 
+    '104.26.15.16', 
+    '104.21.21.59', 
+    '104.20.105.27', 
     '104.27.1.133', 
-    '170.114.45.85', 
-    '172.67.26.173', 
-    '172.67.84.174', 
-    '172.67.186.42',
+    '172.66.213.38', 
+    '162.159.62.69', 
+    '172.64.35.226', 
+    '172.64.153.235',
   ];
   // your preferred fingerprints
   var fp = [
@@ -769,8 +776,8 @@ async function handleRequest(request) {
     'safari',
     'chrome',
     'firefox',
-    'randomized',
-    'random'
+    'random',
+    'randomized'
   ];
 
   var port = [
@@ -791,7 +798,7 @@ for (let i = 0; i < 1; i++) {
     const shuffledVLESS = shuffleArray(Array.from(new Set(IP1)));
     const ip = shuffledVLESS.shift();
 
-    const config = { ...defaultConfigvless, add: ip, ps: ' | SiLiCON | ', port: randomport };// 1th set config profile name
+    const config = { ...defaultConfigvless, add: ip, ps: ' | SiLiCON 1 | ', port: randomport };// 1th set config profile name
   
     const queryParams = new URLSearchParams({
 
@@ -799,16 +806,16 @@ for (let i = 0; i < 1; i++) {
       security: config.tls,
       encryption: config.type,
       alpn: 'http/1.1',// preferred alpn type
-      host: 'SiLiCON.RadiCalLy.WorKErs.DEV',//your subdomain or worker domain link
+      host: 'hetzner.pages.dev',// replace your hostname -1
       fp: randomfp,
       type: config.net,
-      sni: 'SiLiCON.RadiCalLy.WorKErs.DEV',//your subdomain or worker domain link
+      sni: 'hetzner.pages.dev',// your hostname -2
     });
     const vlessUrl = `vless://${config.id}@${config.add}:${config.port}?${queryParams.toString()}#${config.ps}`;
     configsList.push(vlessUrl);
   }
 
-  const ipv4urlRE1 = 'https://raw.githubusercontent.com/vfarid/cf-clean-ips/main/list.json';
+  const ipv4urlRE1 = 'https://raw.githubusercontent.com/hossein-mohseni/CF-Web/main/domains.json';
   const ipv4listRE1 = await fetch(ipv4urlRE1);
   const ipListDataRE1 = await ipv4listRE1.json();
   const ipv4ListRE1 = ipListDataRE1.ipv4 || [];
@@ -829,16 +836,16 @@ for (let i = 0; i < 1; i++) {
     if (uniqueIPsRE1.size >= 10) {
       break;
     }
-    const config = { ...defaultConfigvless, add: ip, ps: ' | SiLiCON | '};// 2th set config profile name
+    const config = { ...defaultConfigvless, add: ip, ps: ' | SiLiCON 2 | '};// 2th set config profile name
     const queryParams = new URLSearchParams({
       path: config.path,
       security: config.tls,
       encryption: config.type,
       alpn: 'http/1.1',
-      host: 'SiLiCON.RadiCalLy.WorKErs.DEV',//your subdomain or worker domain link
+      host: 'hetzner.pages.dev',// your hostname -3
       fp: randomfp,
       type: config.net,
-      sni: 'SiLiCON.RadiCalLy.WorKErs.DEV',//your subdomain or worker domain link
+      sni: 'hetzner.pages.dev',// your hostname -4
     });
     const vlessUrl = `vless://${config.id}@${config.add}:${config.port}?${queryParams.toString()}#${config.ps}`;
   if (!uniqueIPsRE1.has(ip)) {configsList.push(vlessUrl);
@@ -850,16 +857,16 @@ for (let i = 0; i < 1; i++) {
     if (uniqueIPsRE2.size >= 10) {
       break;
     }
-    const config = { ...defaultConfigvless, add: ip, ps: ' | SiLiCON | '};// 3th set config profile name
+    const config = { ...defaultConfigvless, add: ip, ps: ' | SiLiCON 3 | '};// 3th set config profile name
     const queryParams = new URLSearchParams({
       path: config.path,
       security: config.tls,
       encryption: config.type,
       alpn: 'http/1.1',
-      host: 'SiLiCON.RadiCalLy.WorKErs.DEV',//your subdomain or worker domain link
+      host: 'hetzner.pages.dev',// your hostname -5
       fp: randomfp,
       type: config.net,
-      sni: 'SiLiCON.RadiCalLy.WorKErs.DEV',//your subdomain or worker domain link
+      sni: 'hetzner.pages.dev',// your hostname -6
     });
     const vlessUrl = `vless://${config.id}@${config.add}:${config.port}?${queryParams.toString()}#${config.ps}`;
   if (!uniqueIPsRE2.has(ip)) {configsList.push(vlessUrl);
