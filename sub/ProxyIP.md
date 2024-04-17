@@ -23,10 +23,6 @@ After connecting to vless every time, the IP is randomly changed and selected fr
 
     const proxyIPs = ["workers.cloudflare.cyou"];
 ---
-UK, Hostaris L.L.C
-
-    const proxyIPs = ['ircpipproxy.duckdns.org'];
----
 Turkey, izmir
 
     const proxyIPs = ['62.3.12.185'];
@@ -51,6 +47,10 @@ USA, Dallas Texas, Cloudie Networks
 Haifa, Israel BroadBand
 
     const proxyIPs = ['5.29.194.1'];
+---
+UK, Hostaris L.L.C
+
+    const proxyIPs = ['ircpipproxy.duckdns.org'];
 ---
 UK, London, Hostaris LLC
 
@@ -124,7 +124,10 @@ IP's from Netherlands, Sweden,, Germany, US & ...
 IP's of Singapore, Korea, Japan, Hong Kong & ...
 -     const proxyIPs = ['cdn.xn--b6gac.eu.org'];
 ----
+IP's of Japan, Singapore, Hong Kong
 
+    const proxyIP = ['bestproxy.onecf.eu.org'];
+---
 IP's of Singapore
 -     const proxyIPs = ["edgetunnel.anycast.eu.org"];
 - 
