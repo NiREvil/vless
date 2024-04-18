@@ -55,7 +55,7 @@
             "port": 443,
             "users": [
               {
-                "id": "601e59c8-511f-4101-a9c7-d7aaddadb779",
+                "id": "7fff5c98-b6ae-4081-92e0-3f510e256741",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
@@ -71,7 +71,7 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": true,
-          "serverName": "NGINX.NiREvil.IR",
+          "serverName": "arcane.radicalization.ir",
           "alpn": [
             "h2",
             "http/1.1"
@@ -82,7 +82,7 @@
         "wsSettings": {
           "path": "/?ed=2048",
           "headers": {
-            "Host": "NGINX.NiREvil.IR"
+            "Host": "arcane.radicalization.ir"
           }
         },
         "sockopt": {
