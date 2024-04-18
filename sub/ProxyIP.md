@@ -16,57 +16,62 @@ Latest worker.js code for CF-workers [Clw](https://rentry.co/8March)
 
 ---
 ### Best proxies
-**note:**
-After connecting to vless every time, the IP is randomly changed and selected from among these countries.
-
-**IP's from** Luxembourg, US, UK, ES, IT, CA & ...
-
-    const proxyIPs = ["workers.cloudflare.cyou"];
 ---
-Turkey, izmir
+Australia, Victoria, Melbourne
 
-    const proxyIPs = ['62.3.12.185'];
+    152.69.178.16
 ---
-Luxembourg, US, UK, DE & ...
+Germany, Frankfurt am Main, Oracle Co
 
-    const proxyIPs = ['workers.bestip.one'];
-
+    138.3.254.39
 ---
-Germany, Hesse, Oliver Horscht
+USA California, Alibaba.com LLC
 
-    const proxyIPs = ['45.142.115.59'];
----
-Germany, Frankfurt am main, Oracle
-
-    const proxyIPs = ['23.90.144.167'];
+    47.254.66.75
 ---
 USA, Dallas Texas, Cloudie Networks
 
-    const proxyIPs = ['216.146.25.209'];
+    216.146.25.209
+---
+United Kingdom, Slough, Oracle Corporation
+
+    152.67.151.178
+---
+Turkey, izmir
+
+    62.3.12.185
+---
+Germany, Hesse, Oliver Horscht
+
+    45.142.115.59
+---
+Germany, Frankfurt am main, Oracle
+
+    23.90.144.167
 ---
 Haifa, Israel BroadBand
 
-    const proxyIPs = ['5.29.194.1'];
+    5.29.194.1
 ---
 UK, Hostaris L.L.C
 
-    const proxyIPs = ['ircpipproxy.duckdns.org'];
+    ircpipproxy.duckdns.org
 ---
 UK, London, Hostaris LLC
 
-    const proxyIPs = ['176.97.77.32'];
+    176.97.77.32
 ---
 Sweden, Stockholm , M247 Europe SRL
 
-    const proxyIPs = ['176.97.77.32'];
+    176.97.77.32
 ---
 ~~United Kingdom of Great Britain, Oracle co~~
 
-    const proxyIPs = ['143.47.228.52'];
+    143.47.228.52
 ---
 United Arab Emirates, Oracle co
 
-    const proxyIPs = ['129.151.152.254'];
+    129.151.152.254
 ---
 
 ## Find proxyIP
@@ -100,38 +105,41 @@ United Arab Emirates, Oracle co
 
 *
 
-*
-
-*
-
-*
-
-*
-
-*
 
 ## Advanced
 How to find proxyip for VLESS CF WORKERS using Cyberspace Search Engine [Telegra.ph Link](https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06)
 
 ---
 
-
 ## little more 
+**note:**
+After connecting to vless every time, the IP is randomly changed and selected from among these countries.
 
+**IP's from** Luxembourg, US, UK, ES, IT, CA & ...
+
+    const proxyIPs = ["workers.cloudflare.cyou"];
+---
 IP's from Netherlands, Sweden,, Germany, US & ...
--     const proxyIPs = ['cdn-all.xn--b6gac.eu.org'];
 
+    const proxyIPs = ['cdn-all.xn--b6gac.eu.org'];
+---
 IP's of Singapore, Korea, Japan, Hong Kong & ...
--     const proxyIPs = ['cdn.xn--b6gac.eu.org'];
-----
+
+    const proxyIPs = ['cdn.xn--b6gac.eu.org'];
+---
 IP's of Japan, Singapore, Hong Kong
 
     const proxyIP = ['bestproxy.onecf.eu.org'];
 ---
 IP's of Singapore
--     const proxyIPs = ["edgetunnel.anycast.eu.org"];
-- 
-----
+
+    const proxyIPs = ["edgetunnel.anycast.eu.org"];
+---
+Luxembourg, US, UK, DE & ...
+
+    const proxyIPs = ['workers.bestip.one'];
+
+---
 USA, Alibaba Technology Co. Ltd.
 
     const proxyIPs = ['proxyip.aliyun.fxxk.dedyn.io'];
