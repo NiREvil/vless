@@ -19,8 +19,8 @@ const randomizeCase = (str) => str.split('').map(char => Math.random() > 0.5 ? c
 async function handleRequest(request) {
     // Constants
     const portsList = [443, 8443, 2053, 2096, 2087, 2083];
-    const domain = 'consequences.revil.workers.dev'; // Replace with your domain.
-    const userUUID = 'f9344391-0caf-4816-a5cb-51d748f128ba'; // Replace with your User UUID.
+    const domain = 'arcane.radicalization.ir'; // Replace with your domain.
+    const userUUID = '7fff5c98-b6ae-4081-92e0-3f510e256741'; // Replace with your User UUID.
 
     // Randomized constants
     const randomPort = selectRandomItem(portsList);
