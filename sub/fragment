@@ -1,4 +1,5 @@
 {
+  "remarks": "Fragment",
   "log": {
     "access": "",
     "error": "",
@@ -51,8 +52,8 @@
       "settings": {
         "vnext": [
           {
-            "address": "creativecommons.org",
-            "port": 443,
+            "address": "zula.ir",
+            "port": 2052,
             "users": [
               {
                 "id": "7fff5c98-b6ae-4081-92e0-3f510e256741",
@@ -71,18 +72,18 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": true,
-          "serverName": "arcane.radicalization.ir",
+          "serverName": "ARcAnE.RaDicaLIzatION.Ir",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "fingerprint": "chrome",
+          "fingerprint": "randomized",
           "show": false
         },
         "wsSettings": {
           "path": "/?ed=2048",
           "headers": {
-            "Host": "arcane.radicalization.ir"
+            "Host": "ARcAnE.RaDicaLIzatION.Ir"
           }
         },
         "sockopt": {
