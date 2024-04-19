@@ -53,11 +53,21 @@ Haifa, Israel BroadBand
 
     5.29.194.1
 ---
+Luxembourg, FranTech Solutions
+
+    107.189.7.254
+---
+Singapore, Alibaba Technology Co. Ltd.
+
+    8.219.193.202
+    8.219.174.142
+    47.236.12.195
+---
 UK, Hostaris L.L.C
 
     ircpipproxy.duckdns.org
 ---
-UK, London, Hostaris LLC
+~~UK, London, Hostaris LLC~~
 
     176.97.77.32
 ---
@@ -138,13 +148,19 @@ IP's of Singapore
 Luxembourg, US, UK, DE & ...
 
     const proxyIPs = ['workers.bestip.one'];
-
 ---
 USA, Alibaba Technology Co. Ltd.
 
     const proxyIPs = ['proxyip.aliyun.fxxk.dedyn.io'];
 ---
+USA, 	Los Angeles, California, Vultr Holdings, LLC
 
+    const proxyIPs = ['proxyip.vultr.fxxk.dedyn.io'];
+---
+USA, 	Los Angeles, California, CloudCone, LLC
+
+    const proxyIPs = ['proxyip.multacom.fxxk.dedyn.io'];
+---
 IP's of Luxembourg, UK & ...
 -     const proxyIPs = ['workers.bestip.one'];
 ~~United Kingdom of Great Britain - Mythic Beasts Ltd~~
