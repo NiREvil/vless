@@ -12,14 +12,21 @@
 ---
 ## latest workers and pages
 latest pages.dev code is here [bpb](https://github.com/NiREvil/bia-pain-bache/blob/main/_worker.js)
-Latest worker.js code for CF-workers [Clw](https://rentry.co/8March)
+Latest worker.js code for CF-workers [Clw](https://rentry.co/8March/raw)
 
----
 ### Best proxies
----
-Australia, Victoria, Melbourne
 
-    152.69.178.16
+<img width="250" height="250" src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" alt="logan-paul-maverick"/>
+
+
+
+United Arab Emirates,Dubai
+
+    193.123.69.77
+---
+United Kingdom, Slough, Oracle Corporation
+
+    152.67.151.178
 ---
 Germany, Frankfurt am Main, Oracle Co
 
@@ -48,6 +55,10 @@ Germany, Hesse, Oliver Horscht
 Germany, Frankfurt am main, Oracle
 
     23.90.144.167
+---
+Australia, Victoria, Melbourne
+
+    152.69.178.16
 ---
 Haifa, Israel BroadBand
 
