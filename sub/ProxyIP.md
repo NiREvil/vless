@@ -12,57 +12,71 @@
 ---
 ## latest workers and pages
 latest pages.dev code is here [bpb](https://github.com/NiREvil/bia-pain-bache/blob/main/_worker.js)
-Latest worker.js code for CF-workers [Clw](https://rentry.co/8March/raw)
+Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
 
 ### Best proxies
 
 <img width="250" height="250" src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" alt="logan-paul-maverick"/>
 
 
+**🇬🇧Landon & 🇦🇪 Dubay**
 
-United Arab Emirates,Dubai
+    ni.radically.pro
+---
+
+**United Arab Emirates,Dubai**
 
     193.123.69.77
 ---
-United Kingdom, Slough, Oracle Corporation
+**UK, Slough, Oracle Corporation**
 
     152.67.151.178
 ---
-Germany, Frankfurt am Main, Oracle Co
+**Haifa, Israel BroadBand**
+
+    5.29.194.1
+---
+**Germany, Frankfurt am Main, Oracle Co**
 
     138.3.254.39
+    23.90.144.167
+    130.162.244.14
+    129.159.246.132
+    130.61.23.77
+    138.3.247.197
+    144.24.170.164
 ---
-USA California, Alibaba.com LLC
+**USA California, Alibaba.com LLC**
 
     47.254.66.75
 ---
-USA, Dallas Texas, Cloudie Networks
+**USA, Dallas Texas, Cloudie Networks**
 
     216.146.25.209
 ---
-United Kingdom, Slough, Oracle Corporation
+**Netherlands, Amsterdam, Oracle Cor**
 
-    152.67.151.178
+    146.70.175.190
+    146.70.175.116
+    193.123.34.24
+    150.230.127.119
 ---
-Turkey, izmir
+**Turkey, izmir**
 
     62.3.12.185
 ---
-Germany, Hesse, Oliver Horscht
+**Germany, Hesse, Oliver Horscht**
 
     45.142.115.59
 ---
-Germany, Frankfurt am main, Oracle
-
-    23.90.144.167
+**Japan, Tokyo, alibaba corporation**
+    
+    192.169.127.184
+    152.70.86.93   
 ---
 Australia, Victoria, Melbourne
 
     152.69.178.16
----
-Haifa, Israel BroadBand
-
-    5.29.194.1
 ---
 Luxembourg, FranTech Solutions
 
@@ -74,7 +88,7 @@ Singapore, Alibaba Technology Co. Ltd.
     8.219.174.142
     47.236.12.195
 ---
-UK, Hostaris L.L.C
+**UK, Hostaris L.L.C**
 
     ircpipproxy.duckdns.org
 ---
@@ -82,7 +96,7 @@ UK, Hostaris L.L.C
 
     176.97.77.32
 ---
-Sweden, Stockholm , M247 Europe SRL
+**Sweden, Stockholm , M247 Europe SRL**
 
     176.97.77.32
 ---
@@ -90,7 +104,7 @@ Sweden, Stockholm , M247 Europe SRL
 
     143.47.228.52
 ---
-United Arab Emirates, Oracle co
+**United Arab Emirates, Oracle co**
 
     129.151.152.254
 ---
@@ -107,12 +121,13 @@ United Arab Emirates, Oracle co
 
 
 - $\color{gold} \Large \text{in this case}$
-  - https://www.nslookup.io/domains/workers.cloudflare.cyou/dns-records/
+  - https://www.nslookup.io/domains/ni.radically.pro/dns-records/
   - https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
   - https://www.nslookup.io/domains/cdn.xn--b6gac.eu.org/dns-records/
   - https://www.nslookup.io/domains/edgetunnel.anycast.eu.org/dns-records/
   - https://www.nslookup.io/domains/proxyip.aliyun.fxxk.dedyn.io/dns-records/
   - https://www.nslookup.io/domains/workers.bestip.one/dns-records/
+  - https://www.nslookup.io/domains/workers.cloudflare.cyou/dns-records/
 
 - > یکم خلاقیت ب خرج بدی خودت میفهمی که باید دنبال چی بگردی تو سایت
  
