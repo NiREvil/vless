@@ -11,7 +11,7 @@
 
 ---
 ## latest workers and pages
-latest pages.dev code is here [bpb](https://github.com/NiREvil/bia-pain-bache/blob/main/_worker.js)
+latest pages.dev code is here [BPB](https://github.com/NiREvil/bia-pain-bache/blob/main/_worker.js)
 Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
 
 ### Best proxies
