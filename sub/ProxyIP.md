@@ -38,13 +38,8 @@ Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
 ---
 **Germany, Frankfurt am Main, Oracle Co**
 
-    138.3.254.39
     23.90.144.167
-    130.162.244.14
-    129.159.246.132
     130.61.23.77
-    138.3.247.197
-    144.24.170.164
 ---
 **USA California, Alibaba.com LLC**
 
