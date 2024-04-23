@@ -1,5 +1,5 @@
 {
-    "remarks": "Arc Fragment",
+    "remarks": "Arm Fragment",
     "dns": {
         "hosts": {
             "geosite:category-ads-all": "127.0.0.1",
@@ -24,7 +24,7 @@
     },
     "inbounds": [
         {
-            "port": 2080,
+            "port": 10808,
             "protocol": "socks",
             "settings": {
                 "auth": "noauth",
@@ -42,7 +42,7 @@
             "tag": "socks"
         },
         {
-            "port": 2081,
+            "port": 10809,
             "protocol": "http",
             "settings": {
                 "userLevel": 8
@@ -88,11 +88,11 @@
                         "h2",
                         "http/1.1"
                     ],
-                    "serverName": "ARcane-E.pages.DEV"
+                    "serverName": "ARM64-V8A.pages.DEV"
                 },
                 "wsSettings": {
                     "headers": {
-                        "Host": "ARcane-E.pages.DEV"
+                        "Host": "ARM64-V8A.pages.DEV"
                     },
                     "path": "/xmIf2egX4MARaUPe?ed=2560"
                 }
