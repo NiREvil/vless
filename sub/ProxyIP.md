@@ -44,10 +44,13 @@ Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
 **USA California, Alibaba.com LLC**
 
     47.254.66.75
+    141.147.107.234
+    141.147.119.139
 ---
 **USA, Dallas Texas, Cloudie Networks**
 
     216.146.25.209
+    155.248.196.218
 ---
 **Netherlands, Amsterdam, Oracle Cor**
 
@@ -65,7 +68,8 @@ Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
     45.142.115.59
 ---
 **Japan, Tokyo, alibaba corporation**
-    
+
+    64.110.104.30
     192.169.127.184
     152.70.86.93   
 ---
