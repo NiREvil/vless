@@ -12,8 +12,8 @@
     {
       "type": "wireguard",
       "tag": "Warp-IR",
-      "server": "162.159.192.15",
-      "server_port": 3138,
+      "server": "188.114.98.224",
+      "server_port": 908,
 
       "local_address": [
         "172.16.0.2/32",
@@ -30,16 +30,16 @@
       "type": "wireguard",
       "tag": "REvil",
       "detour": "Warp-IR",
-      "server": "162.159.192.15",
-      "server_port": 3138,
+      "server": "188.114.98.224",
+      "server_port": 908,
       
       "local_address": [
           "172.16.0.2/32",
-          "2606:4700:110:8b3d:ae3b:d9b7:7c50:308f/128"
+          "2606:4700:110:8520:3540:21b9:ef62:a869/128"
       ],
-      "private_key": "IMGsK+OwNrfMsxqPvK+a/BkwETC4x/lD5rgkLbvgHUw=",
+      "private_key": "+IN5EGMdgJn7AnrUXwfwB2cwtvFYsnOjR2oR5EyFyWI=",
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved":  [173,175,123],  
+      "reserved":  [179,157,67],  
 
       "mtu": 1120,
       "fake_packets": "5-10"
