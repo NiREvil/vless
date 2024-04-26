@@ -109,23 +109,6 @@ Singapore, Alibaba Technology Co. Ltd.
 **UK, Hostaris L.L.C**
 
     ircpipproxy.duckdns.org
----
-~~UK, London, Hostaris LLC~~
-
-    176.97.77.32
----
-**Sweden, Stockholm , M247 Europe SRL**
-
-    176.97.77.32
----
-~~United Kingdom of Great Britain, Oracle co~~
-
-    143.47.228.52
----
-**United Arab Emirates, Oracle co**
-
-    129.151.152.254
----
 
 ## Find proxyIP
 
@@ -139,7 +122,7 @@ Singapore, Alibaba Technology Co. Ltd.
 
 
 - $\color{gold} \Large \text{in this case}$
-  - https://www.nslookup.io/domains/ni.radically.pro/dns-records/
+  - https://www.nslookup.io/domains/ipdb.rr.nu/dns-records/
   - https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
   - https://www.nslookup.io/domains/cdn.xn--b6gac.eu.org/dns-records/
   - https://www.nslookup.io/domains/edgetunnel.anycast.eu.org/dns-records/
@@ -169,9 +152,9 @@ How to find proxyip for VLESS CF WORKERS using Cyberspace Search Engine [Telegra
 **note:**
 After connecting to vless every time, the IP is randomly changed and selected from among these countries.
 
-**IP's from** Luxembourg, US, UK, ES, IT, CA & ...
+**IP's from....** 
 
-    const proxyIPs = ["workers.cloudflare.cyou"];
+    const proxyIPs = ["ipdb.rr.nu"];
 ---
 IP's from Netherlands, Sweden,, Germany, US & ...
 
@@ -181,9 +164,9 @@ IP's of Singapore, Korea, Japan, Hong Kong & ...
 
     const proxyIPs = ['cdn.xn--b6gac.eu.org'];
 ---
-IP's of Japan, Singapore, Hong Kong
+IP's of Luxembourg, US, UK, ES, IT, CA & ...
 
-    const proxyIP = ['bestproxy.onecf.eu.org'];
+    const proxyIP = ['workers.cloudflare.cyou'];
 ---
 IP's of Singapore
 
@@ -204,6 +187,22 @@ USA, 	Los Angeles, California, Vultr Holdings, LLC
 USA, 	Los Angeles, California, CloudCone, LLC
 
     const proxyIPs = ['proxyip.multacom.fxxk.dedyn.io'];
+---
+~~UK, London, Hostaris LLC~~
+
+    176.97.77.32
+---
+~~Sweden, Stockholm , M247 Europe SRL~~
+
+    176.97.77.32
+---
+~~United Kingdom of Great Britain, Oracle co~~
+
+    143.47.228.52
+---
+~~United Arab Emirates, Oracle co~~
+
+    129.151.152.254
 ---
 IP's of Luxembourg, UK & ...
 -     const proxyIPs = ['workers.bestip.one'];
