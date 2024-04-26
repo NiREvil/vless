@@ -19,7 +19,7 @@ Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
 <img width="250" height="250" src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" alt="logan-paul-maverick"/>
 
 
-**🇬🇧Landon & 🇦🇪 Dubay**
+**🇬🇧Landon & US**
 
     ni.radically.pro
 ---
@@ -27,7 +27,7 @@ Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
 
     152.67.9.19
 ---
-**United Arab Emirates,Dubai**
+**United Arab Emirates, Abu Dhabi**
 
     193.123.69.77
 ---
