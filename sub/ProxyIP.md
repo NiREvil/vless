@@ -60,12 +60,7 @@ Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
 ---
 **USA, Dallas Texas, Cloudie Networks**
 
-    216.146.25.209
     155.248.196.218
----
-**USA, 	San Jose, California, Oracle Networks**
-
-    216.146.25.209
 ----
 **Netherlands, Amsterdam, Oracle Cor**
 
