@@ -23,10 +23,21 @@ Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
 
     ni.radically.pro
 ---
+**India, Maharashtra, Oracle**
 
+    152.67.9.19
+---
 **United Arab Emirates,Dubai**
 
     193.123.69.77
+---
+**USA, California Santa Clara, Tencent Computer Systems Company Limited**
+
+    43.153.80.208
+----
+**USA, Hetzner Online GmbH, Hetzner**
+
+    5.161.210.3
 ---
 **UK, Slough, Oracle Corporation**
 
@@ -52,8 +63,13 @@ Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
     216.146.25.209
     155.248.196.218
 ---
+**USA, 	San Jose, California, Oracle Networks**
+
+    216.146.25.209
+----
 **Netherlands, Amsterdam, Oracle Cor**
 
+    146.70.169.114
     146.70.175.190
     146.70.175.116
     193.123.34.24
@@ -76,6 +92,10 @@ Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
 Australia, Victoria, Melbourne
 
     152.69.178.16
+---
+Australia, Huntingwood, Oracle Public Cloud
+
+    140.238.195.98
 ---
 i don't know
 
