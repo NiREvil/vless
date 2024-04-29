@@ -21,7 +21,7 @@ function shufflEArray(array) {
     }
     return shuffled;
   }
-  
+  // jump tu line 47 my friend
   const defaultConfig1 = {
     "v": "2",
     "ps": "",
@@ -44,9 +44,9 @@ function shufflEArray(array) {
     "fp": ""
   };
   // چطور  یویو آی‌دی خودمونو بگیریم:
-  // با مراجعه به این سایت
-  //https://www.uuidgenerator.net/  و یا
-  // [در ویندوز] Press "Win + R", input "CMD" and run and paste this:  Powershell -NoExit -Command "[guid]::NewGuid()"
+  // از داخل یکی از کانفیگ‌هایی که قصد دارید برای آن لینک‌ساب بسازید و یا
+  // از داخل وورکر یا پیج کلادفلر که به منظور تولید کانفیگ‌های ویلس ایجاد کردید رفته و 
+  // و یویو آیدی آن را کپی و در لاین پنجاه و چهارم از این کد جایگذاری کنید
   const defaultConfigvless = {
     v: "2",
     ps: "",
@@ -56,7 +56,7 @@ function shufflEArray(array) {
     net: "ws",
     type: "none",
     host: "",
-    path: "/?ed=2560",
+    path: "/?ed=2560",// preferred path value, also can set "/?ed=2048"
     tls: "tls",
     sni: "",
   };
