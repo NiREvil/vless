@@ -19,50 +19,61 @@ Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
 <img width="250" height="250" src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" alt="logan-paul-maverick"/>
 
 
-**🇬🇧Landon & US**
+**🇬🇧UK & 🇺🇸US**
 
     ni.radically.pro
 ---
-**India, Maharashtra, Oracle**
+**🇩🇪 Germany, mix ...
+
+    proxy.nirevil.ir
+---
+**🇮🇳 India, Maharashtra, Oracle**
 
     152.67.9.19
 ---
-**United Arab Emirates, Abu Dhabi**
+**🇦🇪 United Arab Emirates, Abu Dhabi**
 
     193.123.69.77
+*
+
+     139.185.34.131
 ---
-**USA, California Santa Clara, Tencent Computer Systems Company Limited**
+**🇺🇸 USA, California Santa Clara, Tencent Computer Systems Company Limited**
 
     43.153.80.208
 ----
-**USA, Hetzner Online GmbH, Hetzner**
+**🇺🇸 USA, Hetzner Online GmbH, Hetzner**
 
     5.161.210.3
 ---
-**UK, Slough, Oracle Corporation**
+**🇬🇧 UK, Slough, Oracle Corporation**
 
     152.67.151.178
 ---
-**Haifa, Israel BroadBand**
+**🇮🇱 Israel, Haifa, BroadBand**
 
     5.29.194.1
 ---
-**Germany, Frankfurt am Main, Oracle Co**
+**🇩🇪 Germany, Frankfurt am Main, Oracle**
 
     23.90.144.167
     130.61.23.77
 ---
-**USA California, Alibaba.com LLC**
+**🇩🇪 Germany, Hesse, Oliver Horscht**
+
+    45.142.115.59
+---
+**🇺🇸 USA California, Alibaba.com LLC**
 
     47.254.66.75
     141.147.107.234
     141.147.119.139
 ---
-**USA, Dallas Texas, Cloudie Networks**
+**🇺🇸 USA, Dallas Texas, Cloudie Networks**
 
     155.248.196.218
 ----
-**Netherlands, Amsterdam, Oracle Cor**
+**🇳🇱 Netherlands, Amsterdam, Oracle**
 
     146.70.169.114
     146.70.175.190
@@ -70,43 +81,39 @@ Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
     193.123.34.24
     150.230.127.119
 ---
-**Turkey, izmir**
+**🇹🇷 Turkey, izmir**
 
     62.3.12.185
 ---
-**Germany, Hesse, Oliver Horscht**
-
-    45.142.115.59
----
-**Japan, Tokyo, alibaba corporation**
+**🇯🇵 Japan, Tokyo, alibaba corporation**
 
     64.110.104.30
     192.169.127.184
     152.70.86.93   
 ---
-Australia, Victoria, Melbourne
+**🇦🇺 Australia, Victoria, Melbourne**
 
     152.69.178.16
 ---
-Australia, Huntingwood, Oracle Public Cloud
+**🇦🇺 Australia, Huntingwood, Oracle**
 
     140.238.195.98
 ---
-i don't know
+**i don't know**
 
     ipdb.rr.nu
 ---
-Luxembourg, FranTech Solutions
+**🇱🇺 Luxembourg, FranTech Solutions**
 
     107.189.7.254
 ---
-Singapore, Alibaba Technology Co. Ltd.
+**🇸🇬 Singapore, Alibaba Technology Co**
 
     8.219.193.202
     8.219.174.142
     47.236.12.195
 ---
-**UK, Hostaris L.L.C**
+**🇬🇧 UK, Hostaris L.L.C**
 
     ircpipproxy.duckdns.org
 
