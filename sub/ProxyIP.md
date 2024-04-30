@@ -12,18 +12,18 @@
 ---
 ## latest workers and pages
 latest pages.dev code is here [BPB](https://github.com/NiREvil/bia-pain-bache/blob/main/_worker.js)
-Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
+Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/blob/main/_worker.js)
 
 ### Best proxies
 
 <img width="250" height="250" src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" alt="logan-paul-maverick"/>
 
 
-**🇬🇧UK & 🇺🇸US**
+**🇬🇧 UK & 🇺🇸 US**
 
     ni.radically.pro
 ---
-**🇩🇪 Germany, mix ...
+**🇩🇪 Germany, mix ...**
 
     proxy.nirevil.ir
 ---
@@ -63,7 +63,7 @@ Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
 
     45.142.115.59
 ---
-**🇺🇸 USA California, Alibaba.com LLC**
+**🇺🇸 USA, California, Alibaba.com LLC**
 
     47.254.66.75
     141.147.107.234
@@ -99,7 +99,7 @@ Latest worker.js code for CF-workers [CFW](https://rentry.co/21April/raw)
 
     140.238.195.98
 ---
-**i don't know**
+**🇳🇮 i don't know**
 
     ipdb.rr.nu
 ---
