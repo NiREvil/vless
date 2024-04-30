@@ -57,7 +57,9 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 **🇩🇪 Germany, Frankfurt am Main, Oracle**
 
     23.90.144.167
-    130.61.23.77
+*
+  
+     130.61.23.77
 ---
 **🇩🇪 Germany, Hesse, Oliver Horscht**
 
@@ -75,9 +77,8 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 ----
 **🇳🇱 Netherlands, Amsterdam, Oracle**
 
+    144.21.63.143
     146.70.169.114
-    146.70.175.190
-    146.70.175.116
     193.123.34.24
     150.230.127.119
 ---
