@@ -1,5 +1,5 @@
 ### $\color{gold} \Large \text{CF ProxyIP's}$
-**~~proxyIP127.0.0.1~~ means that ip now working anymore**
+**~~proxyIP127.0.0.1~~ means the proxy is no longer working**
 
 ---
 ## What do we have
