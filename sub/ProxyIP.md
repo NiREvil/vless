@@ -50,6 +50,11 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 
     proxyip.nirevil.ir
 ---
+**🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies, LLC**
+
+    72.13.122.137
+    192.237.192.175
+---
 **🇬🇧 UK, Slough, Oracle Corporation**
 
     152.67.151.178
@@ -61,12 +66,12 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 **🇩🇪 Germany, Frankfurt am Main, Oracle**
 
     138.3.254.39
-*
-  
-     130.61.23.77
+    130.61.23.77
+    8.211.55.176
 ---
 **🇺🇸 USA, California, Alibaba.com LLC**
 
+    47.89.244.253
     47.254.66.75
     141.147.107.234
     141.147.119.139
@@ -78,7 +83,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 **🇳🇱 Netherlands, Amsterdam, Oracle**
 
     144.21.63.143
-    146.70.169.114
+    146.70.169.118
     193.123.34.24
     150.230.127.119
 ---
@@ -88,7 +93,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 ---
 **🇯🇵 Japan, Tokyo, alibaba corporation**
 
-    64.110.104.30
+    152.70.86.93
     192.169.127.184
     152.70.86.93   
 ---
