@@ -34,6 +34,10 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 
      139.185.34.131
 ---
+**🇺🇸 USA, New York Buffalo, HostPapa**
+
+    198.12.95.225
+---
 **🇺🇸 USA, California Santa Clara, Tencent Computer Systems Company Limited**
 
     43.153.80.208
@@ -41,6 +45,10 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 **🇺🇸 USA, Hetzner Online GmbH, Hetzner**
 
     5.161.210.3
+---
+**🇺🇸 USA, rand**
+
+    proxyip.nirevil.ir
 ---
 **🇬🇧 UK, Slough, Oracle Corporation**
 
@@ -53,14 +61,9 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 **🇩🇪 Germany, Frankfurt am Main, Oracle**
 
     138.3.254.39
-
 *
   
      130.61.23.77
----
-**🇩🇪 Germany, Hesse, Oliver Horscht**
-
-    45.142.115.59
 ---
 **🇺🇸 USA, California, Alibaba.com LLC**
 
