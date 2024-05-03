@@ -29,7 +29,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 ---
 **🇦🇪 United Arab Emirates, Abu Dhabi**
 
-    193.123.69.77
+    193.123.69.3
 *
 
      139.185.34.131
