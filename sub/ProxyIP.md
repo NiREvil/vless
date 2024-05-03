@@ -19,7 +19,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 <img width="250" height="250" src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" alt="logan-paul-maverick"/>
 
 
-**🇬🇧 UK & 🇩🇪 DE **
+**🇺🇸 United States of America **
 
     ni.radically.pro
 ---
@@ -50,10 +50,6 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 
     5.161.130.113
     5.161.210.3
----
-**🇺🇸 USA, rand**
-
-    proxyip.nirevil.ir
 ---
 **🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies, LLC**
 
