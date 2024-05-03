@@ -34,6 +34,10 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 
      139.185.34.131
 ---
+**🇺🇸 USA, California, Cloudflare network**
+
+    198.46.200.132
+---
 **🇺🇸 USA, New York Buffalo, HostPapa**
 
     198.12.95.225
@@ -44,6 +48,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 ----
 **🇺🇸 USA, Hetzner Online GmbH, Hetzner**
 
+    5.161.130.113
     5.161.210.3
 ---
 **🇺🇸 USA, rand**
