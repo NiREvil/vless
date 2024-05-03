@@ -58,13 +58,13 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 ---
 **🇬🇧 UK, Slough, Oracle Corporation**
 
-    152.67.151.178
+    140.238.64.65
 ---
 **🇮🇱 Israel, Haifa, BroadBand**
 
     5.29.194.1
 ---
-**🇩🇪 Germany, Frankfurt am Main, Oracle**
+~~**🇩🇪 Germany, Frankfurt am Main, Oracle**~~
 
     138.3.254.39
     130.61.23.77
