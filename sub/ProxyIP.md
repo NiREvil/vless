@@ -19,7 +19,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 <img width="250" height="250" src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" alt="logan-paul-maverick"/>
 
 
-**🇺🇸 United States of America **
+**🇺🇸 United States of America**
 
     ni.radically.pro
 ---
