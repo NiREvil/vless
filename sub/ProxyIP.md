@@ -34,27 +34,31 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 
      139.185.34.131
 ---
-**🇺🇸 USA, California, Cloudflare network**
+**🇺🇸 USA, Chicago Council Bluffs, Google LLC**
 
+    34.72.146.82
     198.46.200.132
 ---
-**🇺🇸 USA, New York Buffalo, HostPapa**
+**🇺🇸 USA, Texas Dallas, Rackspace Hosting**
 
-    198.12.95.225
+    192.237.192.175
 ---
-**🇺🇸 USA, California Santa Clara, Tencent Computer Systems Company Limited**
+**🇺🇸 USA, California Santa Clara, encent cloud computing**
 
     43.153.80.208
 ----
 **🇺🇸 USA, Hetzner Online GmbH, Hetzner**
 
-    5.161.130.113
     5.161.210.3
 ---
 **🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies, LLC**
 
     72.13.122.137
     192.237.192.175
+---
+**🇬🇧 UK, London Stepney Green, Hostaris L.L.C**
+
+    23.162.136.169
 ---
 **🇬🇧 UK, Slough, Oracle Corporation**
 
@@ -64,11 +68,9 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 
     5.29.194.1
 ---
-~~**🇩🇪 Germany, Frankfurt am Main, Oracle**~~
+**🇩🇪 Germany, Frankfurt am Main, Oracle**
 
-    138.3.254.39
-    130.61.23.77
-    8.211.55.176
+    132.145.235.245
 ---
 **🇺🇸 USA, California, Alibaba.com LLC**
 
@@ -81,12 +83,11 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 
     155.248.196.218
 ----
-**🇳🇱 Netherlands, Amsterdam, Oracle**
+**🇳🇱 Netherlands, Amsterdam, M247 Europe SRL**
 
-    144.21.63.143
-    146.70.169.118
-    193.123.34.24
-    150.230.127.119
+    146.70.175.162
+    146.70.175.108
+    143.47.184.73
 ---
 **🇹🇷 Turkey, izmir**
 
@@ -104,6 +105,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 ---
 **🇦🇺 Australia, Huntingwood, Oracle**
 
+    192.9.177.204
     140.238.195.98
 ---
 **🇳🇮 i don't know**
