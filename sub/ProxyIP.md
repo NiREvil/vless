@@ -1,7 +1,6 @@
 ### $\color{gold} \Large \text{CF ProxyIP's}$
 **~~proxyIP127.0.0.1~~ means the proxy is no longer working**
-
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/e9c65472-4b88-45ad-b9d1-e7bb25149b47)
 ## What do we have
 - [latest worker and page](#latest-worker-and-page)
   - [Best proxies](#Best-proxies)
@@ -9,11 +8,11 @@
   - [Advanced](#advanced)
   - [A few more](#A-few-more)
 
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 ## latest workers and pages
 latest pages.dev code is here [BPB](https://github.com/NiREvil/bia-pain-bache/blob/main/_worker.js)
 Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/blob/main/_worker.js)
-
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 ### Best proxies
 
 <img width="250" height="250" src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" alt="logan-paul-maverick"/>
@@ -22,113 +21,115 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 **🇺🇸 United States of America**
 
     ni.radically.pro
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇮🇳 India, Maharashtra, Oracle**
 
     152.67.9.19
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇪 United Arab Emirates, Abu Dhabi**
 
     193.123.69.3
 *
 
      139.185.34.131
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Chicago Council Bluffs, Google LLC**
 
     34.72.146.82
     198.46.200.132
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Texas Dallas, Nexeon Technologies**
 
     64.44.157.169
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Texas Dallas, Rackspace Hosting**
 
     192.237.192.175
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, California Santa Clara, encent cloud computing**
 
     43.153.80.208
-----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Hetzner Online GmbH, Hetzner**
 
     5.161.210.3
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies, LLC**
 
     72.13.122.137
     192.237.192.175
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇬🇧 UK, London Stepney Green, Hostaris L.L.C**
 
     23.162.136.169
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇬🇧 UK, Slough, Oracle Corporation**
 
     140.238.64.65
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇮🇱 Israel, Haifa, BroadBand**
 
     5.29.194.1
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇩🇪 Germany, Frankfurt am Main, Oracle**
 
     132.145.235.245
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, California, Alibaba.com LLC**
 
     47.89.244.253
     47.254.66.75
     141.147.107.234
     141.147.119.139
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Dallas Texas, Cloudie Networks**
 
     155.248.196.218
-----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇳🇱 Netherlands, Amsterdam, M247 Europe SRL**
 
     146.70.175.162
     146.70.175.108
     143.47.184.73
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇹🇷 Turkey, izmir**
 
     62.3.12.185
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇯🇵 Japan, Tokyo, alibaba corporation**
 
     152.70.86.93
     192.169.127.184
     152.70.86.93   
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇺 Australia, Victoria, Melbourne**
 
     152.69.178.16
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇺 Australia, Huntingwood, Oracle**
 
     192.9.177.204
     140.238.195.98
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇳🇮 i don't know**
 
     ipdb.rr.nu
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇱🇺 Luxembourg, FranTech Solutions**
 
     107.189.7.254
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇸🇬 Singapore, Alibaba Technology Co**
 
     8.219.193.202
     8.219.174.142
     47.236.12.195
----
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇬🇧 UK, Hostaris L.L.C**
 
     ircpipproxy.duckdns.org
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+
 
 ## Find proxyIP
 
@@ -154,20 +155,19 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
  
 </details>
  
-*
-
-*
-
-*
-
-*
-
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
 ## Advanced
-How to find proxyip for VLESS CF WORKERS using Cyberspace Search Engine [Telegra.ph Link](https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06)
-
----
-
+How to find proxyip for VLESS CF WORKERS using Cyberspace Search Engine [Telegra.ph Link](https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06) 
+ 
+ 
+ 
+ 
+ 
+ 
+ ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 ## little more 
 **note:**
 After connecting to vless every time, the IP is randomly changed and selected from among these countries.
