@@ -39,6 +39,10 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
     34.72.146.82
     198.46.200.132
 ---
+**🇺🇸 USA, Texas Dallas, Nexeon Technologies**
+
+    64.44.157.169
+---
 **🇺🇸 USA, Texas Dallas, Rackspace Hosting**
 
     192.237.192.175
