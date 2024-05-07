@@ -59,9 +59,9 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
     72.13.122.137
     192.237.192.175
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇬🇧 UK, London Stepney Green, Hostaris L.L.C**
+**🇺🇸 US, California Fremont, Akamai**
 
-    23.162.136.169
+    45.79.84.193
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇬🇧 UK, Slough, Oracle Corporation**
 
