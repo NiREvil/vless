@@ -141,6 +141,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 - $\color{gold} \Large \text{in this case}$
   - https://www.nslookup.io/domains/ipdb.rr.nu/dns-records/
   - https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
+  - https://www.nslookup.io/domains/my-telegram-is-herocore.onecf.eu.org/dns-records/
   - https://www.nslookup.io/domains/cdn.xn--b6gac.eu.org/dns-records/
   - https://www.nslookup.io/domains/edgetunnel.anycast.eu.org/dns-records/
   - https://www.nslookup.io/domains/proxyip.aliyun.fxxk.dedyn.io/dns-records/
