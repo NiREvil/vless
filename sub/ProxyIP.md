@@ -50,6 +50,10 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 
     88.119.175.79
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies**
+
+    72.13.122.137
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Hetzner Online GmbH, Hetzner**
 
     5.161.210.3
