@@ -33,22 +33,18 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 
      139.185.34.131
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇺🇸 USA, California Santa Clara, encent cloud computing**
+
+    43.153.80.208
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Chicago Council Bluffs, Google LLC**
 
     34.72.146.82
     198.46.200.132
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇺🇸 USA, Texas Dallas, Nexeon Technologies**
-
-    64.44.157.169
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Texas Dallas, Rackspace Hosting**
 
     192.237.192.175
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇺🇸 USA, California Santa Clara, encent cloud computing**
-
-    43.153.80.208
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Hetzner Online GmbH, Hetzner**
 
