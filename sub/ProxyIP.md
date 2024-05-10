@@ -85,6 +85,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇩🇪 Germany, Frankfurt am Main, Oracle**
 
+    129.159.206.179
     132.145.235.245
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, California, Alibaba.com LLC**
@@ -101,7 +102,8 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 **🇳🇱 Netherlands, Amsterdam, M247 Europe SRL**
 
     146.70.175.162
-    146.70.175.108
+    146.70.175.186
+    146.70.175.113
     143.47.184.73
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇹🇷 Turkey, izmir**
