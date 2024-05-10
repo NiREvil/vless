@@ -1,3 +1,9 @@
+#profile-title: base64:2LfZh9ix2KfZhiDYqtinINmF2YjZhtuM2K4=
+#profile-update-interval: 12
+#subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
+#support-url: https://t.me/F_NiREvil
+#profile-web-page-url: https://github.com/NiREvil
+
 {
   "log": {
     "level": "warn",
@@ -97,8 +103,8 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "تهران §",
-        "REvil §"
+        "طهران § 0",
+        "مونیخ § 1"
       ],
       "default": "auto"
     },
@@ -106,8 +112,8 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "تهران §",
-        "REvil §"
+        "طهران § 0",
+        "مونیخ § 1"
       ],
       "url": "http://cp.cloudflare.com/",
       "interval": "10m0s",
@@ -115,14 +121,14 @@
     },
     {
       "type": "wireguard",
-      "tag": "تهران §",
+      "tag": "طهران § 0",
       "local_address": [
         "172.16.0.2/24",
         "2606:4700:110:8f75:7e79:4154:de93:c7d4/128"
       ],
       "private_key": "6KAmexpk9YKE5DAYxXIUVFqCQWEOf9+ZwrT20zBl3lk=",
-      "server": "162.159.195.93",
-      "server_port": 2506,
+      "server": "162.159.192.240",
+      "server_port": 939,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1280,
@@ -132,15 +138,15 @@
     },
     {
       "type": "wireguard",
-      "tag": "REvil §",
-      "detour": "تهران §",
+      "tag": "مونیخ § 1",
+      "detour": "طهران § 0",
       "local_address": [
         "172.16.0.2/24",
         "2606:4700:110:81eb:f9c8:ad84:9d4b:9ead/128"
       ],
       "private_key": "yCR6P0h656qnDCNA/sTu5i4lxj+tfoFhnaU2uTGgK1k=",
-      "server": "162.159.195.93",
-      "server_port": 2506,
+      "server": "162.159.192.240",
+      "server_port": 939,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1120,
