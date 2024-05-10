@@ -21,6 +21,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 **🇺🇸 United States of America**
 
     ni.radically.pro
+    usa.revil.link
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇮🇳 India, Maharashtra, Oracle**
 
@@ -28,7 +29,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇪 United Arab Emirates, Abu Dhabi**
 
-    193.123.69.3
+    193.123.81.105
 *
 
      139.185.34.131
@@ -56,12 +57,19 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Hetzner Online GmbH, Hetzner**
 
+    5.161.153.90
+    5.161.154.143
     5.161.210.3
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇩🇪 Germany, Frankfurt am Main, Zenlayer Inc**
+
+    132.145.235.245    
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies, LLC**
 
     72.13.122.137
     192.237.192.175
+    155.248.196.218
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 US, WashingtonCity	Seattle, RackNerd LLC**~~~
 
