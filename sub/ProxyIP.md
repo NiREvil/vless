@@ -43,6 +43,17 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
     34.72.146.82
     198.46.200.132
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇹🇷 Turkey, izmir**
+
+    62.3.12.185    
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇺🇸 USA, New Jersey Clifton, DigitalOcean, LLC**
+
+    159.65.228.185
+    45.55.71.106
+    167.71.176.15
+    129.146.186.4
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Texas Dallas, Rackspace Hosting**
 
     192.237.192.175
@@ -58,6 +69,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 **🇺🇸 USA, Hetzner Online GmbH, Hetzner**
 
     5.161.153.90
+    5.161.225.35
     5.161.154.143
     5.161.210.3
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
@@ -102,19 +114,12 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 **🇳🇱 Netherlands, Amsterdam, M247 Europe SRL**
 
     146.70.175.162
-    146.70.175.121
-    146.70.175.186
-    146.70.175.113
-    143.47.184.73
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇹🇷 Turkey, izmir**
-
-    62.3.12.185
+    143.47.227.123
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇯🇵 Japan, Tokyo, alibaba corporation**
 
+    132.226.10.65
     152.70.86.93
-    192.169.127.184
     152.70.86.93   
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇺 Australia, Victoria, Melbourne**
@@ -136,9 +141,8 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇸🇬 Singapore, Alibaba Technology Co**
 
-    8.219.193.202
+    47.236.203.169
     8.219.174.142
-    47.236.12.195
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇬🇧 UK, Hostaris L.L.C**
 
