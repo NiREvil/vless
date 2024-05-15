@@ -23,44 +23,48 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
     ni.radically.pro
     usa.revil.link
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇮🇳 India, Maharashtra, Oracle**
+**🇮🇳 India, maharashtra, Oracle Co**
 
     152.67.9.19
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇦🇪 United Arab Emirates, Abu Dhabi**
+**🇦🇪 United arab emirates, Abu Dhabi**
 
     193.123.81.105
-*
+\*
 
      139.185.34.131
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇺🇸 USA, California Santa Clara, encent cloud computing**
+**🇺🇸 USA, California, santa clara, Tencent cloud computing**
 
     43.153.80.208
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇺🇸 USA, Chicago Council Bluffs, Google LLC**
+🇺🇸 **USA, Randomly selected, Oracle, D ocean, Data camp, Akamai, Amazon**
 
-    34.72.146.82
-    198.46.200.132
+    proxyip.us.hw.090227.xyz
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+🇺🇸 **USA, California, santa clara, Digital ocean LLC**
+
+    proxyip.digitalocean.hw.090227.xyz
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+🇺🇸 **USA, Arizona, phoenix, Oracle corporation**
+
+    proxyip.oracle.fxxk.dedyn.io
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+🇺🇸 **USA, California, san jose, DataCamp Limited**
+
+    156.146.53.83
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+🇺🇸 **USA, Washington, Seattle, amazon com.inc**
+
+    99.83.209.185
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇹🇷 Turkey, izmir**
 
     62.3.12.185    
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇺🇸 USA, New Jersey Clifton, DigitalOcean, LLC**
-
-    159.65.228.185
-    45.55.71.106
-    167.71.176.15
-    129.146.186.4
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Texas Dallas, Rackspace Hosting**
 
     192.237.192.175
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇺🇸 USA, Illinois Chicago, Informacines sistemos ir tech**
-
-    88.119.175.79
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies**
 
@@ -73,20 +77,16 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
     5.161.154.143
     5.161.210.3
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇩🇪 Germany, Frankfurt am Main, Zenlayer Inc**
+~~🇩🇪 Germany, Frankfurt am Main, Zenlayer Inc~~
 
-    132.145.235.245    
+    132.145.235.245 
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies, LLC**
 
     72.13.122.137
     192.237.192.175
     155.248.196.218
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇺🇸 US, WashingtonCity	Seattle, RackNerd LLC**~~~
-
-    23.94.212.4
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow](httqps://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇬🇧 UK, Slough, Oracle Corporation**
 
     140.238.64.65
@@ -95,17 +95,10 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 
     5.29.194.1
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇩🇪 Germany, Frankfurt am Main, Oracle**
+~~🇩🇪 Germany, Frankfurt am Main, Oracle~~
 
     129.159.206.179
     132.145.235.245
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇺🇸 USA, California, Alibaba.com LLC**
-
-    47.89.244.253
-    47.254.66.75
-    141.147.107.234
-    141.147.119.139
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Dallas Texas, Cloudie Networks**
 
@@ -192,27 +185,27 @@ How to find proxyip for VLESS CF WORKERS using Cyberspace Search Engine [Telegra
 **note:**
 After connecting to vless every time, the IP is randomly changed and selected from among these countries.
 
-**IP's from....** 
+**IP's load from....** 
 
     const proxyIPs = ["ipdb.rr.nu"];
 ---
-IP's from Netherlands, Sweden,, Germany, US & ...
+IP's load from Netherlands, Sweden,, Germany, US & ...
 
     const proxyIPs = ['cdn-all.xn--b6gac.eu.org'];
 ---
-IP's of Singapore, Korea, Japan, Hong Kong & ...
+IP's load from Singapore, Korea, Japan, Hong Kong & ...
 
     const proxyIPs = ['cdn.xn--b6gac.eu.org'];
 ---
-IP's of Luxembourg, US, UK, ES, IT, CA & ...
+IP's load from Luxembourg, US, UK, ES, IT, CA & ...
 
     const proxyIP = ['workers.cloudflare.cyou'];
 ---
-IP's of Singapore
+IP's: Singapore
 
     const proxyIPs = ["edgetunnel.anycast.eu.org"];
 ---
-Luxembourg, US, UK, DE & ...
+IP's:Luxembourg, US, UK, DE & ...
 
     const proxyIPs = ['workers.bestip.one'];
 ---
@@ -235,6 +228,15 @@ USA, 	Los Angeles, California, CloudCone, LLC
 ~~Sweden, Stockholm , M247 Europe SRL~~
 
     176.97.77.32
+
+~~🇺🇸 USA, New Jersey Clifton, DigitalOcean, LLC~~
+
+    23.94.212.4
+    88.119.175.79
+    159.65.228.185
+    45.55.71.106
+    167.71.176.15
+    129.146.186.4
 ---
 ~~United Kingdom of Great Britain, Oracle co~~
 
@@ -244,7 +246,7 @@ USA, 	Los Angeles, California, CloudCone, LLC
 
     129.151.152.254
 ---
-IP's of Luxembourg, UK & ...
+~~IP's: Luxembourg, UK~~
 -     const proxyIPs = ['workers.bestip.one'];
 ~~United Kingdom of Great Britain - Mythic Beasts Ltd~~
 -     const proxyIPs = ["[2a00:1098:2b::1:ac40:6d0a]"];
