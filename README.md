@@ -51,11 +51,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sub/wireguardv
 
 ## v2ray
 
-https://github.com/mermeroo/V2RAY-FREE/raw/main/Base64/Sub1_base64.txt
-
 https://github.com/mermeroo/telegram-configs-collector/raw/main/protocols/hysteria
-
-https://raw.githubusercontent.com/mermeroo/free-v2ray-collector/main/main/mix
 
 https://raw.githubusercontent.com/NiREvil/vless/main/sub/SSTime
 
@@ -63,19 +59,9 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sub/fragment
 
 https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet_iOS.txt
 
-https://raw.githubusercontent.com/LalatinaHub/Mineral/master/result/nodes
-
-https://raw.githubusercontent.com/LalatinaHub/Mineral/master/result/nodes2
-
-https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray
-
-https://raw.githubusercontent.com/satrom/V2SSR/master/V2RAY/Sub.txt
-
 https://raw.githubusercontent.com/hotsymbol/vpnsetting/master/v2rayopen
 
 https://raw.githubusercontent.com/ntkernel/lantern/master/vmess_base64.txt
-
-https://raw.githubusercontent.com/satrom/V2SSR/master/SSR/Day.txt
 
 https://raw.githubusercontent.com/ssrsub/ssr/master/ss-sub
 
