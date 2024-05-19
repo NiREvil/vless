@@ -41,6 +41,11 @@ https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/WarpOnWarp.json
 https://raw.githubusercontent.com/NiREvil/vless/main/sub/warp-ios
 
 https://raw.githubusercontent.com/NiREvil/vless/main/sub/warp%2B-ios
+
+https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/rand-ip
+
+https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/custom-ip
+
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
 #### Warp NekoBox
