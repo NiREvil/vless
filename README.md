@@ -125,6 +125,12 @@ https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/main/sub/ssbase64
 
 https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/main/sub/trojanbase64
 
+https://raw.githubusercontent.com/mermeroo/Clash-V2ray/main/v2ray
+
+https://raw.githubusercontent.com/personqianduixue/SubCrawler/main/sub/share/all
+
+https://raw.githubusercontent.com/Leon406/SubCrawler/main/sub/share/all3
+
 https://raw.githubusercontent.com/hotsymbol/vpnsetting/master/v2rayopen
 
 https://raw.githubusercontent.com/ntkernel/lantern/master/vmess_base64.txt
