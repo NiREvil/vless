@@ -1,4 +1,4 @@
-// @ts-nocheck  Last Update: Sunday, April 23, 2024
+// @ts-nocheck  Last Update: Thursday, May 30, 2024
 // Built a subscription link with the ability to automatically add CF clean IPs to VLESS configurations.
 // Replace these lines with your uuid and hostname, uuid line (54) - hostname lines (817-820) and (853-856) and (874-877)
 
@@ -21,7 +21,7 @@ function shufflEArray(array) {
     }
     return shuffled;
   }
-  // jump tu line 47 my friend
+  // jump to line 47 my friend
   const defaultConfig1 = {
     "v": "2",
     "ps": "",
@@ -51,7 +51,7 @@ function shufflEArray(array) {
     v: "2",
     ps: "",
     port: "443",
-    id: "664f5f11-1231-486d-b416-b7b3ecdae76a",
+    id: "1235b6fb-7f15-4361-8da3-d1a079bdf484",
     aid: "0",
     net: "ws",
     type: "none",
@@ -688,92 +688,92 @@ function shufflEArray(array) {
       'www.speedtest.net', 
       'zula.ir', 
       'www.visa.com', 
-      'time.cloudflare.com', 
+      'sky.rethinkdns.com', 
       'creativecommons.org', 
       'go.inmobi.com', 
-      'armeabi-v7a.pages.dev', 
       'fbi.gov', 
-      'edtunnel-dgp.pages.dev', 
+      'time.is', 
+      'www.wto.org', 
       'discord.com', 
       'singapore.com', 
       'www.udacity.com', 
       'icook.hk', 
-      'arcane.revil.workers.dev', 
-      'www.udemy.com',
-      'www.d-555.com', 
-      'www.csgo.com', 
+      'time.cloudflare.com', 
+      'csgo.com', 
       'www.ipget.net', 
-      'arm64-v8a.pages.dev', 
-      '162.159.23.161', 
-      '104.17.210.121', 
-      '104.19.150.250', 
-      '104.17.80.227', 
-      '146.19.21.248', 
-      '104.18.213.153', 
-      '104.19.140.234', 
-      '193.9.49.48', 
-      '104.18.218.1', 
-      '104.21.21.59', 
-      '104.18.53.121', 
-      '104.18.63.116', 
-      '146.19.21.234', 
-      '146.19.21.97', 
-      '146.19.21.9', 
+      'cdnjs.com', 
+      'ip.sb', 
+      'holyfuck.xcdi.workers.dev', 
+      'horsefucker.pages.dev', 
+      'sky.rethinkdns.com', 
+      '188.114.96.3', 
+      '188.114.96.6', 
+      '188.114.97.3', 
+      '188.114.97.6', 
+      '104.24.196.20', 
+      '172.67.214.246', 
+      '104.21.90.210', 
+      '104.18.44.195', 
+      '104.24.196.20', 
+      '172.67.161.104', 
+      '172.67.66.177', 
+      '104.21.69.44', 
+      '104.24.197.20', 
+      '104.26.13.54', 
+      '172.67.131.36', 
       '23.227.38.21', 
-      '146.19.21.218', 
-      '146.19.21.248', 
-      '146.19.21.67', 
-      '104.17.143.121', 
+      '172.67.49.246', 
+      '172.67.192.211', 
+      '172.67.204.84', 
+      '172.67.68.157', 
       '146.19.21.248', 
       '104.17.154.253', 
-      '104.18.123.101', 
-      '146.19.21.100', 
-      '104.16.0.6', 
-      '146.19.21.113', 
+      '104.19.219.185', 
+      '104.19.219.89', 
+      '104.20.115.188', 
+      '104.24.33.126', 
       '162.159.1.94', 
-      '146.19.21.9', 
-      '108.162.192.8', 
-      '108.162.192.16', 
-      '108.162.192.28', 
-      '108.162.192.40', 
-      '108.162.192.57', 
-      '108.162.196.133', 
-      '141.101.115.30', 
-      '141.101.121.87', 
-      '141.101.122.104', 
-      '193.9.49.67', 
+      '172.67.164.37', 
+      '104.18.249.33', 
+      '104.19.96.203', 
+      '104.18.44.127', 
+      '104.18.249.87', 
+      '104.16.150.214', 
+      '104.16.221.248', 
+      '104.16.124.110', 
+      '104.27.126.250', 
+      '104.27.126.35', 
       '104.16.120.114',
-      '146.19.21.113',
-      '188.114.97.3',
-      '162.159.39.34',
-      '162.159.44.158',
-      '162.159.44.236',
-      '162.159.45.222',
+      '190.93.244.18',
+      '104.21.216.26',
+      '104.24.58.13',
+      '104.16.150.94',
+      '104.24.58.75',
+      '190.93.244.18',
       '172.64.17.159',
-      '172.64.20.155',
+      '190.93.246.247',
       '172.64.26.182',
-      '172.67.1.191',
-      '172.67.198.197',
-      '172.66.213.38',
-      '104.17.145.132', 
+      '45.159.219.194',
+      '185.148.107.101',
+      '190.93.245.219',
+      '23.227.39.227', 
   
       '104.17.34.93',
-      '104.18.34.21',
-      '104.17.143.121', 
-      '104.17.80.220', 
-      '104.17.53.78', 
+      '172.67.214.246',
+      '104.21.83.62', 
+      '185.148.105.23', 
       '104.17.34.93', 
-      '104.19.255.51', 
-      '104.19.54.50', 
+      '190.93.247.238', 
+      '104.24.197.20', 
       '104.31.16.136', 
-      '104.26.15.16', 
+      '104.26.13.54', 
       '104.21.21.59', 
-      '104.20.105.27', 
+      '104.24.196.20', 
       '104.27.1.133', 
-      '172.66.213.38', 
-      '162.159.62.69', 
+      '104.18.44.195', 
+      '104.21.90.210', 
       '172.64.35.226', 
-      '172.64.153.235', 
+      '172.67.68.157', 
     ];
     
     var fp = [
@@ -789,7 +789,7 @@ function shufflEArray(array) {
   
     var port = [// preferred port for 1st configs
       '8443',
-        '2053',
+      '2053',
     ];
   
   
@@ -814,10 +814,10 @@ function shufflEArray(array) {
           security: config.tls,
           encryption: config.type,
           alpn: 'http/1.1',// preferred alpn type
-          host: 'blacklivesmatter.pages.dev',// replace your hostname -1
+          host: 'armeabi-v7a.pages.dev',// replace your hostname -1
           fp: randomfp,
           type: config.net,
-          sni: 'blacklivesmatter.pages.dev',// replace your hostname -2
+          sni: 'armeabi-v7a.pages.dev',// replace your hostname -2
         });
         const vlessUrl = `vless://${config.id}@${config.add}:${config.port}?${queryParams.toString()}#${config.ps}`;
         configsList.push(vlessUrl);
@@ -850,10 +850,10 @@ function shufflEArray(array) {
           security: config.tls,
           encryption: config.type,
           alpn: 'http/1.1',// preferred alpn type
-          host: 'blacklivesmatter.pages.dev',// replace your hostname -3
+          host: 'armeabi-v7a.pages.dev',// replace your hostname -3
           fp: randomfp,
           type: config.net,
-          sni: 'blacklivesmatter.pages.dev',// replace your hostname -4
+          sni: 'armeabi-v7a.pages.dev',// replace your hostname -4
         });
         const vlessUrl = `vless://${config.id}@${config.add}:${config.port}?${queryParams.toString()}#${config.ps}`;
       if (!uniqueIPsRE1.has(ip)) {configsList.push(vlessUrl);
@@ -871,10 +871,10 @@ function shufflEArray(array) {
           security: config.tls,
           encryption: config.type,
           alpn: '',// preferred alpn type
-          host: 'blacklivesmatter.pages.dev',// replace your hostname -5
+          host: 'armeabi-v7a.pages.dev',// replace your hostname -5
           fp: randomfp,
           type: config.net,
-          sni: 'blacklivesmatter.pages.dev',// replace your hostname -6
+          sni: 'armeabi-v7a.pages.dev',// replace your hostname -6
         });
         const vlessUrl = `vless://${config.id}@${config.add}:${config.port}?${queryParams.toString()}#${config.ps}`;
       if (!uniqueIPsRE2.has(ip)) {configsList.push(vlessUrl);
