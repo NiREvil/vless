@@ -6,7 +6,7 @@ const bestIP = ""; // 空字符串表示未设置
 
 const userID = '13516920-8ff7-4382-a55b-f0dc2c4378f7';
 
-const proxyIPs = ["ircpipproxy.duckdns.org"];
+const proxyIPs = ["ni.radically.pro"];
 
 const proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
 
@@ -107,14 +107,14 @@ function translateFieldsToChinese(data) {
 function generateHTTPLinks(host) {
 	const httpPorts = [80, 8080, 8880, 2052, 2086, 2095];
 	return httpPorts.map(port =>
-		`vless://${userID}@${main}:${port}?encryption=none&security=none&fp=random&type=ws&host=${host}&path=%2F%3D2048#CFW_${port}`
+		`vless://${userID}@${main}:${port}?encryption=none&security=none&fp=randomized&type=ws&host=${host}&path=%2F%3D2560#REvil_${port}`
 	);
 }
 
 function generateHTTPSLinks(host) {
 	const httpsPorts = [443, 8443, 2053, 2096, 2087, 2083];
 	return httpsPorts.map(port =>
-		`vless://${userID}@${main}:${port}?encryption=none&security=tls&sni=${host}&fp=random&type=ws&host=${host}&path=%2F%3Fed%3D2048#CFW_${port}`
+		`vless://${userID}@${main}:${port}?encryption=none&security=tls&sni=${host}&fp=randomized&type=ws&host=${host}&path=%2F%3Fed%3D2560#REvil_${port}`
 	);
 }
 
