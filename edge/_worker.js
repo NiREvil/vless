@@ -1,38 +1,16 @@
-/*!
-* Last Update: March 8, 2024
-* Free VPN - cloudflare workers - vless
-*
-* Many thanks to Yonggekkk for his amazing work and also CF-vless code author dear 3Kmfi6HP. (https://github.com/yonggekkk)
-* Edit by NiREvil. (https://github.com/NiREvil.
-*
-*/
 // @ts-ignore
+// FREEDOM TO DREAM          -NiREvil
+
 import { connect } from 'cloudflare:sockets';
 
-
-
-// ابتدا از سایت زیر یک یویوآیدی بگیرید
+// How to generate your own UUID:
 // https://www.uuidgenerator.net/
-// و آن را بجای *کد 36 کاراکتری* در لاین زیر جایگذاری کنید
+let userID = 'cf943265-445a-4c81-9c2d-ffa4a4a16354';
 
-let userID = 'a4faf5d8-b9a8-433e-9518-2d2e21d76f78';
-
-
-
-
-
-
-
-
-
-
-
-
-
-const proxyIPs = ['workers.bestip.one']; // OR USE ['cdn.xn--b6gac.eu.org', 'cdn-all.xn--b6gac.eu.org'];
+const proxyIPs = ['ni.radically.pro'];// OR USE 'ni.radically.pro'  OR  'proxyip.nirevil.ir'  OR 'cdn-all.xn--b6gac.eu.org'
 let proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
 
-let dohURL = 'https://dns.adguard-dns.com/dns-query'; // OR USE https://cloudflare-dns.com/dns-query OR https://dns.google/dns-query OR https://dns.adguard-dns.com/dns-query OR THIS ONE https://sky.rethinkdns.com/1:-Pf_____9_8A_AMAIgE8kMABVDDmKOHTAKg=
+let dohURL = 'https://dns.adguard-dns.com/dns-query';// OR USE  https://sky.rethinkdns.com/1:-Pf_____9_8A_AMAIgE8kMABVDDmKOHTAKg= OR https://8.8.8.8/dns-query OR https://cloudflare-dns.com/dns-query
 
 let nodeId = '';
 
@@ -766,8 +744,8 @@ async function handleUDPOutBound(webSocket, vlessResponseHeader, log) {
  * @returns {string}
  */
 function getVLESSConfig(userID, hostName) {
-  const wvlessws = `vless://${userID}@www.speedtest.net:8880?encryption=none&security=none&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
-  const pvlesswstls = `vless://${userID}@www.speedtest.net:8443?encryption=none&security=tls&type=ws&host=${hostName}&sni=${hostName}&fp=random&path=%2F%3Fed%3D2048#${hostName}`;
+  const wvlessws = `vless://${userID}@creativecommons.org:8880?encryption=none&security=none&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#${hostName}`;
+  const pvlesswstls = `vless://${userID}@creativecommons.org:8443?encryption=none&security=tls&type=ws&host=${hostName}&sni=${hostName}&fp=random&path=%2F%3Fed%3D2560#${hostName}`;
   
   if (hostName.includes('pages.dev')) {
     return `
