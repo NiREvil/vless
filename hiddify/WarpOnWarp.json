@@ -85,8 +85,8 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "warp-ir § 0  § 0",
-        "REvil § 1 § 1"
+        "warp-ir  § 0",
+        "REvil  § 1"
       ],
       "default": "auto"
     },
@@ -94,22 +94,22 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "warp-ir § 0  § 0",
-        "REvil § 1 § 1"
+        "warp-ir  § 0",
+        "REvil  § 1"
       ],
       "url": "http://cp.cloudflare.com/",
       "interval": "10m0s"
     },
     {
       "type": "wireguard",
-      "tag": "warp-ir § 0  § 0",
+      "tag": "warp-ir  § 0",
       "local_address": [
         "172.16.0.2/24",
-        "2606:4700:110:8732:875c:4484:9c56:c0fd/128"
+        "2606:4700:110:8200:cf14:cba7:914:6805/128"
       ],
-      "private_key": "ACzN0cPLSF3CZmz8DiuQlYXJsu95NDr4Q+0oL+VFE3Y=",
-      "server": "188.114.98.14",
-      "server_port": 4198,
+      "private_key": "wOOpxchOqf7URgYQUBmsj7qk+PbW6JR9MFMEc7uqBmo=",
+      "server": "188.114.98.18",
+      "server_port": 3138,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1280,
@@ -119,15 +119,15 @@
     },
     {
       "type": "wireguard",
-      "tag": "REvil § 1 § 1",
-      "detour": "warp-ir § 0  § 0",
+      "tag": "REvil  § 1",
+      "detour": "warp-ir  § 0",
       "local_address": [
         "172.16.0.2/24",
-        "2606:4700:110:8bbe:b890:57ef:db89:d8c/128"
+        "2606:4700:110:8f6c:2db6:d84:fc5a:5b5b/128"
       ],
-      "private_key": "SBOEYMV7D8fH4wC7aOVe/jYaY6qPx1gQ19pntOgW3kk=",
-      "server": "188.114.96.116",
-      "server_port": 878,
+      "private_key": "eK1YHxa2fxQUwL657MnU/chcL9ex2gT2xZlbbSFweU0=",
+      "server": "162.159.192.114",
+      "server_port": 1070,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1120,
