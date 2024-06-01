@@ -19,8 +19,8 @@ const randomizeCase = (str) => str.split('').map(char => Math.random() > 0.5 ? c
 async function handleRequest(request) {
     // Constants
     const portsList = [443, 8443, 2053, 2096, 2087, 2083];
-    const domain = 'arcane.radicalization.ir'; // Replace with your domain.
-    const userUUID = '7fff5c98-b6ae-4081-92e0-3f510e256741'; // Replace with your User UUID.
+    const domain = 'biaaaa.pages.dev'; // Replace with your domain.
+    const userUUID = '3c36eadb-747a-4166-8db0-23fec9883ea2'; // Replace with your User UUID.
 
     // Randomized constants
     const randomPort = selectRandomItem(portsList);
@@ -134,7 +134,7 @@ async function handleRequest(request) {
                     "domainStrategy": "AsIs",
                     "fragment": {
                         "packets": "tlshello",
-                        "length": "100-200",
+                        "length": "20-40",
                         "interval": "10-20"
                     }
                 },
