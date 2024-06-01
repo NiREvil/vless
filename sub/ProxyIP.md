@@ -23,16 +23,12 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
     ni.radically.pro
     usa.revil.link
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇮🇳 India, maharashtra, Oracle Co**
-
-    152.67.9.19
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇪 United arab emirates, Abu Dhabi**
 
     193.123.81.105
-\*
 
-     139.185.34.131
+    
+    139.185.34.131
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, California, santa clara, Tencent cloud computing**
 
@@ -61,7 +57,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇹🇷 Turkey, izmir**
 
-    62.3.12.185    
+    62.3.12.185
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Texas Dallas, Rackspace Hosting**
 
@@ -88,7 +84,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
     192.237.192.175
     155.248.196.218
 ![rainbow](httqps://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇬🇧 UK, Slough, Oracle Corporation**
+~~**🇬🇧 UK, Slough, Oracle Corporation**~~
 
     140.238.64.65
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
