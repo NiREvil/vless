@@ -102,7 +102,7 @@
     },
     {
       "type": "wireguard",
-      "tag": "warp-ir § 0",
+      "tag": "Warp-IR",
       "local_address": [
         "172.16.0.2/24",
         "2606:4700:110:8200:cf14:cba7:914:6805/128"
@@ -119,8 +119,8 @@
     },
     {
       "type": "wireguard",
-      "tag": "REvil § 1",
-      "detour": "warp-ir § 0",
+      "tag": "Warp-Main",
+      "detour": "Warp-IR",
       "local_address": [
         "172.16.0.2/24",
         "2606:4700:110:8f6c:2db6:d84:fc5a:5b5b/128"
