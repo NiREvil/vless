@@ -8,21 +8,18 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "udp://1.1.1.1",
-        "address_resolver": "dns-direct",
-        "strategy": "prefer_ipv4"
+        "address": "tls://8.8.8.8",
+        "address_resolver": "dns-direct"
       },
       {
         "tag": "dns-trick-direct",
         "address": "https://sky.rethinkdns.com/",
-        "strategy": "prefer_ipv4",
         "detour": "direct-fragment"
       },
       {
         "tag": "dns-direct",
-        "address": "1.1.1.1",
+        "address": "8.8.8.8",
         "address_resolver": "dns-local",
-        "strategy": "prefer_ipv4",
         "detour": "direct"
       },
       {
@@ -50,33 +47,46 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "188.114.96.3",
         "188.114.97.3",
+        "188.114.96.3",
+        "2a06:98c1:3120::3",
+        "2a06:98c1:3121::3",
         "104.18.202.232",
         "104.18.203.232",
+        "188.114.96.3",
         "188.114.97.3",
-        "188.114.96.3"
+        "2a06:98c1:3120::3",
+        "2a06:98c1:3121::3"
       ]
     },
     "independent_cache": true
   },
   "inbounds": [
     {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 9000,
+      "inet4_address": "172.19.0.1/28",
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
       "type": "mixed",
       "tag": "mixed-in",
-      "listen": "0.0.0.0",
+      "listen": "127.0.0.1",
       "listen_port": 2334,
       "sniff": true,
-      "sniff_override_destination": true,
-      "set_system_proxy": true
+      "sniff_override_destination": true
     },
     {
       "type": "direct",
       "tag": "dns-in",
-      "listen": "0.0.0.0",
-      "listen_port": 6450,
-      "override_address": "1.1.1.1",
-      "override_port": 53
+      "listen": "127.0.0.1",
+      "listen_port": 6450
     }
   ],
   "outbounds": [
@@ -85,8 +95,8 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "warp-ir § 0",
-        "REvil § 1"
+        "Warp-IR",
+        "Warp-Main"
       ],
       "default": "auto"
     },
@@ -94,45 +104,42 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "warp-ir § 0",
-        "REvil § 1"
+        "Warp-IR",
+        "Warp-Main"
       ],
       "url": "http://cp.cloudflare.com/",
-      "interval": "10m0s"
+      "interval": "10m0s",
+      "idle_timeout": "1h40m0s"
     },
     {
       "type": "wireguard",
       "tag": "Warp-IR",
       "local_address": [
-        "172.16.0.2/24",
-        "2606:4700:110:8200:cf14:cba7:914:6805/128"
+        "172.16.0.2/32",
+        "2606:4700:110:81ce:ac8:6185:22b4:2e93/128"
       ],
-      "private_key": "wOOpxchOqf7URgYQUBmsj7qk+PbW6JR9MFMEc7uqBmo=",
-      "server": "188.114.98.18",
-      "server_port": 3138,
+      "private_key": "KI1CafDZRZFoyuxs3r2aGhhm3e5TLhgdvV3xr0e102Y=",
+      "server": "162.159.192.208",
+      "server_port": 955,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": "AAAA",
+      "reserved": [ 67, 59, 210 ],
       "mtu": 1280,
-      "fake_packets": "8-15",
-      "fake_packets_size": "40-100",
-      "fake_packets_delay": "20-250"
+      "fake_packets": "5-10"
     },
     {
       "type": "wireguard",
       "tag": "Warp-Main",
       "detour": "Warp-IR",
       "local_address": [
-        "172.16.0.2/24",
-        "2606:4700:110:8f6c:2db6:d84:fc5a:5b5b/128"
+        "172.16.0.2/32",
+        "2606:4700:110:8c70:3022:5217:1309:dc1f/128"
       ],
-      "private_key": "eK1YHxa2fxQUwL657MnU/chcL9ex2gT2xZlbbSFweU0=",
-      "server": "162.159.192.114",
-      "server_port": 1070,
+      "private_key": "MH3HeTsnjoRkdM5tciVxV/QL6PO26Pzbe03xMwIunHQ=",
+      "server": "162.159.192.208",
+      "server_port": 955,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": "AAAA",
-      "mtu": 1120,
-      "fake_packets_size": "40-100",
-      "fake_packets_delay": "20-250"
+      "reserved": [ 242, 173, 228 ],
+      "mtu": 1120
     },
     {
       "type": "dns",
@@ -162,10 +169,10 @@
   ],
   "route": {
     "geoip": {
-      "path": "geo-assets\\sagernet-sing-geoip-geoip.db"
+      "path": "geo-assets/sagernet-sing-geoip-geoip.db"
     },
     "geosite": {
-      "path": "geo-assets\\sagernet-sing-geosite-geosite.db"
+      "path": "geo-assets/sagernet-sing-geosite-geosite.db"
     },
     "rules": [
       {
@@ -191,6 +198,7 @@
         "outbound": "bypass"
       }
     ],
+    "final": "select",
     "auto_detect_interface": true,
     "override_android_vpn": true
   },
@@ -200,7 +208,8 @@
       "path": "clash.db"
     },
     "clash_api": {
-      "external_controller": "127.0.0.1:6756"
+      "external_controller": "127.0.0.1:6756",
+      "secret": "awdBQB3-yzVPjt7l"
     }
   }
 }
