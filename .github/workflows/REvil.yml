@@ -3,8 +3,8 @@ name: REvil_Warp
 on:
   push:
     branches: [ "main" ]
-  schedule: #every fuckin 30 minutes
-    - cron: '*/30 * * * *'
+  schedule: #every fuckin 45 minutes
+    - cron: '*/45 * * * *'
 
 jobs:
   build:
