@@ -110,8 +110,8 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇷 WARP - Iran",
-        "🇩🇪 WARP - Germany"
+        "warp-ir",
+        "warp-main"
       ],
       "default": "auto"
     },
@@ -119,15 +119,15 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇷 WARP - Iran",
-        "🇩🇪 WARP - Germany"
+        "warp-ir",
+        "warp-main"
       ],
       "url": "http://cp.cloudflare.com/",
       "interval": "10m0s"
     },
     {
       "type": "wireguard",
-      "tag": "🇮🇷 WARP - Iran",
+      "tag": "warp-ir",
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:8c91:4063:21d0:7dd5:f218/128"
@@ -144,8 +144,8 @@
     },
     {
       "type": "wireguard",
-      "tag": "🇩🇪 WARP - Germany",
-      "detour": "🇮🇷 WARP - Iran",
+      "tag": "warp-main",
+      "detour": "warp-ir",
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:8c15:3f90:ad2d:8810:77f3/128"
