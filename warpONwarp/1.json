@@ -4,7 +4,7 @@
   [
     {
       "type": "wireguard",
-      "tag": "(@mansor427)2",
+      "tag": "warp-ir-2",
       "server": "162.159.192.223",
       "server_port": 2371,
 
@@ -21,8 +21,8 @@
     },
     {
       "type": "wireguard",
-      "tag": "ÐΛɌ₭ᑎΞ𐒡𐒡2",
-      "detour": "(@mansor427)2",
+      "tag": "warp-main-2",
+      "detour": "warp-ir-2",
       "server": "162.159.192.223",
       "server_port": 2371,
       
@@ -38,7 +38,7 @@
       "fake_packets": "5-10"
     },{
       "type": "wireguard",
-      "tag": "(@mansor427)3",
+      "tag": "warp-ir-3",
       "server": "162.159.192.96",
       "server_port": 2371,
 
@@ -55,8 +55,8 @@
     },
     {
       "type": "wireguard",
-      "tag": "ÐΛɌ₭ᑎΞ𐒡𐒡3",
-      "detour": "(@mansor427)3",
+      "tag": "warp-main-3",
+      "detour": "warp-ir-3",
       "server": "162.159.192.96",
       "server_port": 2371,
       
@@ -72,7 +72,7 @@
       "fake_packets": "5-10"
     },{
       "type": "wireguard",
-      "tag": "(@mansor427)4",
+      "tag": "warp-ir-4",
       "server": "162.159.192.43",
       "server_port": 2371,
 
@@ -89,8 +89,8 @@
     },
     {
       "type": "wireguard",
-      "tag": "ÐΛɌ₭ᑎΞ𐒡𐒡4",
-      "detour": "(@mansor427)4",
+      "tag": "warp-main-4",
+      "detour": "warp-ir-4",
       "server": "162.159.192.43",
       "server_port": 2371,
       
@@ -106,7 +106,7 @@
       "fake_packets": "5-10"
     },{
       "type": "wireguard",
-      "tag": "(@mansor427)5",
+      "tag": "warp-ir-5",
       "server": "162.159.192.238",
       "server_port": 859,
 
@@ -123,8 +123,8 @@
     },
     {
       "type": "wireguard",
-      "tag": "ÐΛɌ₭ᑎΞ𐒡𐒡5",
-      "detour": "(@mansor427)5",
+      "tag": "warp-main-5",
+      "detour": "warp-ir-5",
       "server": "162.159.192.238",
       "server_port": 859,
       
@@ -140,7 +140,7 @@
       "fake_packets": "5-10"
     },{
       "type": "wireguard",
-      "tag": "(@mansor427)6",
+      "tag": "warp-ir-6",
       "server": "162.159.192.19",
       "server_port": 2371,
 
@@ -157,8 +157,8 @@
     },
     {
       "type": "wireguard",
-      "tag": "ÐΛɌ₭ᑎΞ𐒡𐒡6",
-      "detour": "(@mansor427)6",
+      "tag": "warp-main-6",
+      "detour": "warp-ir-6",
       "server": "162.159.192.19",
       "server_port": 2371,
       
@@ -174,7 +174,7 @@
       "fake_packets": "5-10"
     },{
       "type": "wireguard",
-      "tag": "(@mansor427)7",
+      "tag": "warp-ir-7",
       "server": "162.159.192.68",
       "server_port": 859,
 
@@ -191,8 +191,8 @@
     },
     {
       "type": "wireguard",
-      "tag": "ÐΛɌ₭ᑎΞ𐒡𐒡7",
-      "detour": "(@mansor427)7",
+      "tag": "warp-main-7",
+      "detour": "warp-ir-7",
       "server": "162.159.192.68",
       "server_port": 859,
       
