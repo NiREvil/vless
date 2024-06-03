@@ -3,11 +3,11 @@ $$\color{silver} \Huge \text{\R $\sum{\vil_t = \mathbb{N108}\infty}$}$$
 
 ---
 * یه خروار لینک اشتراک ساب برای هیدیفای و کلش و ویتوری که از گیت‌هاب و یه سری منابع دیگه مثل تلگرام جمع‌آوری شده.
+  
 * Lots of Clash and V2ray subscription links collected from GitHub and other public sources.
 * 从 GitHub 和公共资源收集大量 Clash 和 V2ray 订阅链接.
 *  Соберите множество ссылок на подписку на Clash и V2ray из GitHub и общедоступных источников.
 
-   
 
   
 ## $\color{silver} \normalsize \text{The subscription link for the Hiddify clients}$
@@ -19,10 +19,10 @@ $$\color{silver} \Huge \text{\R $\sum{\vil_t = \mathbb{N108}\infty}$}$$
 ```
 https://raw.githubusercontent.com/NiREvil/vless/main/warp.json
 ```
-## $\color{gold} \normalsize \text{Scan with hiddify}$
+## $\color{gold} \normalsize \text{Scan it}$
 
 <p align="center">
-  <br><img src="./QR.gif" width="640px">
+  <br><img src="./QR.gif" width="520px">
 </p>
 
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
