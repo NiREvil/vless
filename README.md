@@ -15,11 +15,12 @@ $$\color{silver} \Huge \text{\R $\sum{\vil_t = \mathbb{N108}\infty}$}$$
 >
 > is automatically updated every thirty minutes.
 
-## $\color{gold} \normalsize \text{subscription URL link}$
+## $\color{gold} \normalsize \text{Subscription URL link}$
 ```
 https://raw.githubusercontent.com/NiREvil/vless/main/warp.json
 ```
-## $\color{gold} \normalsize \text{Scan it}$
+---
+<p align="center">$\color{silver} \Large \text{ Scan it }$</p>
 
 <p align="center">
   <br><img src="./QR.gif" width="520px">
