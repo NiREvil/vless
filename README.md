@@ -2,9 +2,9 @@
 $$\color{silver} \Huge \text{\R $\sum{\vil_t = \mathbb{N108}\infty}$}$$
 
 ---
-* یه خروار لینک اشتراک ساب برای هیدیفای و کلش و ویتوری که از گیت‌هاب و یه سری منابع دیگه مثل تلگرام جمع‌آوری شده.
+* تعداد زیادی لینک اشتراک (ساب) برای هیدیفای، کلش، نکوباکس، ویتوری و ... که از گیت‌هاب و یه سری منابع دیگه مثل تلگرام جمع‌آوری شده.
   
-* Lots of Clash and V2ray subscription links collected from GitHub and other public sources.
+* Lots of subscription links for Clash, 2ray, Hiddify, NekoBox ... collected from GitHub and other public sources.
 * 从 GitHub 和公共资源收集大量 Clash 和 V2ray 订阅链接.
 *  Соберите множество ссылок на подписку на Clash и V2ray из GitHub и общедоступных источников.
 
@@ -20,7 +20,7 @@ $$\color{silver} \Huge \text{\R $\sum{\vil_t = \mathbb{N108}\infty}$}$$
 https://raw.githubusercontent.com/NiREvil/vless/main/warp.json
 ```
 ---
-<p align="center">$\color{silver} \Large \text{ Scan it }$</p>
+<p align="center">$\color{silver} \large \text{OR SCAN THIS QR }$</p>
 
 <p align="center">
   <br><img src="./QR.gif" width="520px">
