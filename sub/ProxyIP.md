@@ -13,10 +13,8 @@
 latest pages.dev code is here [BPB](https://github.com/NiREvil/bia-pain-bache/blob/main/_worker.js)
 Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/blob/main/_worker.js)
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-### Best proxies
 
-<img width="250" height="250" src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" alt="logan-paul-maverick"/>
-
+## Best proxies
 
 **🇺🇸 United States of America**
 ```
@@ -156,6 +154,11 @@ usa.revil.link
 
     ircpipproxy.duckdns.org
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+
+<p align="center">
+  <br><img src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" width="360px">
+</p>
+
 
 
 ## Find proxyIP
