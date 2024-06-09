@@ -60,17 +60,22 @@ usa.revil.link
 
     proxyip.oracle.fxxk.dedyn.io
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-🇺🇸 **USA, California, san jose, DataCamp Limited**
+🇺🇸 **USA, California, san jose, DataCamp Limited & 
+Zenlayer**
 ```
 192.9.138.241
 ```
 ```
 156.146.53.83
 ```
+```
+163.5.187.104
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 🇺🇸 **USA, Washington, Seattle, amazon com.inc**
-
-    99.83.209.185
+```
+99.83.209.185
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇹🇷 Turkey, izmir**
 
