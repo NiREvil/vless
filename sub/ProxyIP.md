@@ -19,16 +19,32 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 
 
 **🇺🇸 United States of America**
+```
+ni.radically.pro
+```
+```
+usa.revil.link
+```
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**DE Germany, Frankfurt am Main, Oracle Cloud**
 
-    ni.radically.pro
-    usa.revil.link
+```
+141.144.232.159
+```
+```
+130.61.23.77
+```
+```
+130.61.23.77
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇪 United arab emirates, Abu Dhabi**
-
-    193.123.81.105
-
-    
-    139.185.34.131
+```
+193.123.81.105
+```
+```
+139.185.34.131
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, California, santa clara, Tencent cloud computing**
 
@@ -47,9 +63,12 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
     proxyip.oracle.fxxk.dedyn.io
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 🇺🇸 **USA, California, san jose, DataCamp Limited**
-
-    192.9.138.241
-    156.146.53.83
+```
+192.9.138.241
+```
+```
+156.146.53.83
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 🇺🇸 **USA, Washington, Seattle, amazon com.inc**
 
