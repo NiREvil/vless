@@ -63,6 +63,9 @@ Zenlayer**
 192.9.138.241
 ```
 ```
+155.248.196.123
+```
+```
 156.146.53.83
 ```
 ```
@@ -122,9 +125,10 @@ Zenlayer**
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇳🇱 Netherlands, Amsterdam, M247 Europe SRL**
 
-    146.70.175.182
-    146.70.175.162
-    143.47.227.123
+    146.70.175.106
+    146.70.169.122
+    146.70.175.117
+    146.70.169.114
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇯🇵 Japan, Tokyo, alibaba corporation**
 
