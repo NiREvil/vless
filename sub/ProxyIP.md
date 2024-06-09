@@ -24,13 +24,10 @@ ni.radically.pro
 usa.revil.link
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**DE Germany, Frankfurt am Main, Oracle Cloud**
+**🇩🇪 Germany, Frankfurt am Main, Oracle Cloud**
 
 ```
 141.144.232.159
-```
-```
-130.61.23.77
 ```
 ```
 130.61.23.77
