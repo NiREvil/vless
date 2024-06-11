@@ -42,8 +42,12 @@ usa.revil.link
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, California, santa clara, Tencent cloud computing**
-
-    43.153.80.208
+```
+43.153.80.208
+```
+```
+193.123.57.229
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 🇺🇸 **USA, Randomly selected, Oracle, D ocean, Data camp, Akamai, Amazon**
 
@@ -69,7 +73,7 @@ Zenlayer**
 156.146.53.83
 ```
 ```
-163.5.187.104
+129.146.254.39
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 🇺🇸 **USA, Washington, Seattle, amazon com.inc**
@@ -132,7 +136,12 @@ Zenlayer**
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇯🇵 Japan, Tokyo, alibaba corporation**
 
-    163.5.187.104
+```
+163.5.187.104
+```
+```
+163.5.187.104
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇺 Australia, Victoria, Melbourne**
 
