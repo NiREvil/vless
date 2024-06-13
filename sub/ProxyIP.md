@@ -24,7 +24,7 @@ ni.radically.pro
 usa.revil.link
 ```
 ```
-ni.radically.pro
+de.radically.pro
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇩🇪 Germany, Frankfurt am Main, Zenlayer & Oracle Cloud**
@@ -36,6 +36,9 @@ ni.radically.pro
 ```
 ```
 130.61.23.77
+```
+```
+130.61.239.203
 ```
 ```
 193.122.61.167
@@ -69,21 +72,21 @@ Zenlayer**
 150.230.47.17
 ```
 ```
-192.9.138.241
-```
-```
 155.248.196.123
 ```
 ```
 156.146.53.83
 ```
 ```
-129.146.254.39
-```
+
+
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 🇺🇸 **USA, California, san jose, Oracle Corporation**
 ```
 192.9.138.241
+```
+```
+129.146.254.39
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies**
