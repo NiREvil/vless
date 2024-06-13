@@ -16,37 +16,39 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 
 ## Best proxies
 
-**🇺🇸 United States of America**
+**🇺🇸 United States of America & Germany**
 ```
 ni.radically.pro
 ```
 ```
 usa.revil.link
 ```
+```
+ni.radically.pro
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇩🇪 Germany, Frankfurt am Main, Oracle Cloud**
-
+**🇩🇪 Germany, Frankfurt am Main, Zenlayer & Oracle Cloud**
+```
+23.90.151.62
+```
 ```
 141.144.232.159
 ```
 ```
 130.61.23.77
 ```
+```
+193.122.61.167
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇪 United arab emirates, Abu Dhabi**
 ```
 193.123.81.105
 ```
-```
-139.185.34.131
-```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, California, santa clara, Tencent cloud computing**
 ```
 43.153.80.208
-```
-```
-193.123.57.229
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 🇺🇸 **USA, Randomly selected, Oracle, D ocean, Data camp, Akamai, Amazon**
@@ -64,6 +66,9 @@ usa.revil.link
 🇺🇸 **USA, California, san jose, DataCamp Limited & 
 Zenlayer**
 ```
+150.230.47.17
+```
+```
 192.9.138.241
 ```
 ```
@@ -76,56 +81,41 @@ Zenlayer**
 129.146.254.39
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-🇺🇸 **USA, Washington, Seattle, amazon com.inc**
+🇺🇸 **USA, California, san jose, Oracle Corporation**
 ```
-99.83.209.185
+192.9.138.241
+```
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies**
+```
+72.13.122.137
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇹🇷 Turkey, izmir**
-
-    62.3.12.185
+```
+62.3.12.185
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Texas Dallas, Rackspace Hosting**
 
     192.237.192.175
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies**
-
-    72.13.122.137
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Hetzner Online GmbH, Hetzner**
 
-    5.161.153.90
     5.161.225.35
     5.161.154.143
-    5.161.210.3
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-~~🇩🇪 Germany, Frankfurt am Main, Zenlayer Inc~~
-
-    132.145.235.245 
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies, LLC**
-
-    72.13.122.137
-    192.237.192.175
-    155.248.196.218
-![rainbow](httqps://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-~~**🇬🇧 UK, Slough, Oracle Corporation**~~
-
-    140.238.64.65
+```
+192.237.192.175
+```
+```
+155.248.196.218
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇮🇱 Israel, Haifa, BroadBand**
 
     5.29.194.1
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-~~🇩🇪 Germany, Frankfurt am Main, Oracle~~
-
-    129.159.206.179
-    132.145.235.245
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇺🇸 USA, Dallas Texas, Cloudie Networks**
-
-    155.248.196.218
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇳🇱 Netherlands, Amsterdam, M247 Europe SRL**
 
