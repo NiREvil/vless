@@ -1,8 +1,8 @@
 // <----- Time is 3:34am -  Saturday, June 16 -  NiREvil ----->
 // Create a subscription link containing a configured fragment with random parameters in Cloudflare Workers.
-// replace this line (29) with your domain
-// replace this line (30) with your config UUID
-// Fragment values can be edited from these lines: (143-144-145)
+// replace this line (28) with your domain
+// replace this line (29) with your config UUID and line (30) with your preferred cf clean ip or your workers.dev / pages.dev domain.
+// Fragment values can be edited from these lines: (145-146-147)
 
 addEventListener('fetch', event => {
     event.respondWith(handleRequest(event.request))
@@ -27,15 +27,17 @@ async function handleRequest(request) {
     const portsList = [443, 8443, 2053, 2096, 2087, 2083];
     const domain = 'randomfrag.pages.dev'; // Replace with your domain.
     const userUUID = '048ce287-6a7b-4dad-98fe-b5f3f6789b57'; // Replace with your User UUID.
+    const cleanip = 'zula.ir'; // Replace with your preferred cf clean ip or your workers.dev / pages.dev domain.
 
     // Randomized constants
     const randomPort = selectRandomItem(portsList);
     const randomizedDomain = randomizeCase(domain);
     const randomPath = '/' + generateRandomString(59);
+    const cleanip = 'zula.ir'; // Replace with your preferred cf ip or domain.
 
     // Configuration object
     const config = {
-        "remarks": "NiREvil Rand Frag",
+        "remarks": "REvil R-Frag",
         "log": {
             "access": "",
             "error": "",
@@ -88,7 +90,7 @@ async function handleRequest(request) {
                 "settings": {
                     "vnext": [
                         {
-                            "address": randomizedDomain,
+                            "address": cleanip,
                             "port": randomPort,
                             "users": [
                                 {
@@ -141,7 +143,7 @@ async function handleRequest(request) {
                     "domainStrategy": "AsIs",
                     "fragment": {
                         "packets": "1-1",
-                        "length": "1371",
+                        "length": "2024",
                         "interval": "1-5"
                     }
                 },
