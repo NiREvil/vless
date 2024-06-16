@@ -1,3 +1,9 @@
+// <----- Time is 3:34am -  Saturday, June 16 -  NiREvil ----->
+// Create a subscription link containing a configured fragment with random parameters in Cloudflare Workers.
+// replace this line (29) with your domain
+// replace this line (30) with your config UUID
+// Fragment values can be edited from these lines: (143-144-145)
+
 addEventListener('fetch', event => {
     event.respondWith(handleRequest(event.request))
 })
@@ -19,8 +25,8 @@ const randomizeCase = (str) => str.split('').map(char => Math.random() > 0.5 ? c
 async function handleRequest(request) {
     // Constants
     const portsList = [443, 8443, 2053, 2096, 2087, 2083];
-    const domain = 'biaaaa.pages.dev'; // Replace with your domain.
-    const userUUID = '3c36eadb-747a-4166-8db0-23fec9883ea2'; // Replace with your User UUID.
+    const domain = 'randomfrag.pages.dev'; // Replace with your domain.
+    const userUUID = '048ce287-6a7b-4dad-98fe-b5f3f6789b57'; // Replace with your User UUID.
 
     // Randomized constants
     const randomPort = selectRandomItem(portsList);
@@ -29,6 +35,7 @@ async function handleRequest(request) {
 
     // Configuration object
     const config = {
+        "remarks": "NiREvil Rand Frag",
         "log": {
             "access": "",
             "error": "",
@@ -133,9 +140,9 @@ async function handleRequest(request) {
                 "settings": {
                     "domainStrategy": "AsIs",
                     "fragment": {
-                        "packets": "tlshello",
-                        "length": "20-40",
-                        "interval": "10-20"
+                        "packets": "1-1",
+                        "length": "1371",
+                        "interval": "1-5"
                     }
                 },
                 "streamSettings": {
