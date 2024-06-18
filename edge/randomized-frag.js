@@ -27,13 +27,13 @@ async function handleRequest(request) {
     const portsList = [443, 8443, 2053, 2096, 2087, 2083];
     const domain = 'randomfrag.pages.dev'; // Replace with your domain.
     const userUUID = '048ce287-6a7b-4dad-98fe-b5f3f6789b57'; // Replace with your User UUID.
-    const cleanip = 'zula.ir'; // Replace with your preferred cf clean ip or your workers.dev / pages.dev domain.
+    const bestip = 'zula.ir'; // Replace with your preferred cf clean ip or your workers.dev / pages.dev domain.
 
     // Randomized constants
     const randomPort = selectRandomItem(portsList);
     const randomizedDomain = randomizeCase(domain);
     const randomPath = '/' + generateRandomString(59);
-    const cleanip = 'zula.ir'; // Replace with your preferred cf ip or domain.
+
 
     // Configuration object
     const config = {
@@ -90,7 +90,7 @@ async function handleRequest(request) {
                 "settings": {
                     "vnext": [
                         {
-                            "address": cleanip,
+                            "address": bestip,
                             "port": randomPort,
                             "users": [
                                 {
