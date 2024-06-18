@@ -1,8 +1,8 @@
-// <----- Time is 3:34am -  Tuesday, June 18 -  NiREvil ----->
+// <----- Time is 02:24am -  Wednesday, June 19 -  NiREvil ----->
 // Create a subscription link containing a configured fragment with random parameters in Cloudflare Workers.
 // replace this line (28) with your domain
-// replace this line (29) with your config UUID and line (30) with your preferred cf ip or your workers.dev / pages.dev domain.
-// Fragment values can be edited from these lines: (145-146-147)
+// replace this line (29) with your config UUID and line (30) with your preferred cf clean ip or your workers.dev / pages.dev domain.
+// Fragment values can be edited from these lines: (138-139-140)
 
 addEventListener('fetch', event => {
     event.respondWith(handleRequest(event.request))
@@ -27,7 +27,7 @@ async function handleRequest(request) {
     const portsList = [443, 8443, 2053, 2096, 2087, 2083];
     const domain = 'randomfrag.pages.dev'; // Replace with your domain.
     const userUUID = '048ce287-6a7b-4dad-98fe-b5f3f6789b57'; // Replace with your User UUID.
-    const bestip = 'zula.ir'; // Replace with your preferred cf clean ip or your workers.dev / pages.dev domain.
+    const bestip = '188.114.97.3'; // Replace with your preferred cf clean ip or your workers.dev / pages.dev domain.
 
     // Randomized constants
     const randomPort = selectRandomItem(portsList);
@@ -37,162 +37,182 @@ async function handleRequest(request) {
 
     // Configuration object
     const config = {
-        "remarks": "REvil R-Frag",
-        "log": {
-            "access": "",
-            "error": "",
-            "loglevel": "warning"
-        },
-        "inbounds": [
-            {
-                "tag": "socks",
-                "port": 10808,
-                "listen": "127.0.0.1",
-                "protocol": "socks",
-                "sniffing": {
-                    "enabled": true,
-                    "destOverride": [
-                        "http",
-                        "tls"
-                    ],
-                    "routeOnly": false
-                },
-                "settings": {
-                    "auth": "noauth",
-                    "udp": true,
-                    "allowTransparent": false
-                }
-            },
-            {
-                "tag": "http",
-                "port": 10809,
-                "listen": "127.0.0.1",
-                "protocol": "http",
-                "sniffing": {
-                    "enabled": true,
-                    "destOverride": [
-                        "http",
-                        "tls"
-                    ],
-                    "routeOnly": false
-                },
-                "settings": {
-                    "auth": "noauth",
-                    "udp": true,
-                    "allowTransparent": false
-                }
-            }
+  "remarks": "REvil ⫤ϜɹɐɡϻϵŊͳ",
+  "log": {
+    "loglevel": "warning"
+  },
+  "dns": {
+    "hosts": {},
+    "servers": [
+      "https://94.140.14.14/dns-query"
+    ],
+    "tag": "dns"
+  },
+  "inbounds": [
+    {
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
         ],
-        "outbounds": [
-            {
-                "tag": "proxy",
-                "protocol": "vless",
-                "settings": {
-                    "vnext": [
-                        {
-                            "address": bestip,
-                            "port": randomPort,
-                            "users": [
-                                {
-                                    "id": userUUID,
-                                    "alterId": 0,
-                                    "email": "t@t.tt",
-                                    "security": "auto",
-                                    "encryption": "none",
-                                    "flow": ""
-                                }
-                            ]
-                        }
-                    ]
-                },
-                "streamSettings": {
-                    "network": "ws",
-                    "security": "tls",
-                    "tlsSettings": {
-                        "allowInsecure": false,
-                        "serverName": randomizedDomain,
-                        "alpn": [
-                            "h2",
-                            "http/1.1"
-                        ],
-                        "fingerprint": "chrome",
-                        "show": false
-                    },
-                    "wsSettings": {
-                        "path": randomPath,
-                        "headers": {
-                            "Host": randomizedDomain
-                        }
-                    },
-                    "sockopt": {
-                        "dialerProxy": "fragment",
-                        "tcpKeepAliveIdle": 100,
-                        "mark": 255,
-                        "tcpNoDelay": true
-                    }
-                },
-                "mux": {
-                    "enabled": false,
-                    "concurrency": -1
-                }
-            },
-            {
-                "tag": "fragment",
-                "protocol": "freedom",
-                "settings": {
-                    "domainStrategy": "AsIs",
-                    "fragment": {
-                        "packets": "1-1",
-                        "length": "1403",
-                        "interval": "1"
-                    }
-                },
-                "streamSettings": {
-                    "sockopt": {
-                        "tcpNoDelay": true,
-                        "tcpKeepAliveIdle": 100
-                    }
-                }
-            },
-            {
-                "tag": "direct",
-                "protocol": "freedom",
-                "settings": {}
-            },
-            {
-                "tag": "block",
-                "protocol": "blackhole",
-                "settings": {
-                    "response": {
-                        "type": "http"
-                    }
-                }
-            }
+        "enabled": true
+      },
+      "tag": "socks-in"
+    },
+    {
+      "port": 10809,
+      "protocol": "http",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
         ],
-        "routing": {
-            "domainStrategy": "AsIs",
-            "rules": [
-                {
-                    "type": "field",
-                    "inboundTag": [
-                        "api"
-                    ],
-                    "outboundTag": "api",
-                    "enabled": true
-                },
-                {
-                    "id": "5627785659655799759",
-                    "type": "field",
-                    "port": "0-65535",
-                    "outboundTag": "proxy",
-                    "enabled": true
-                }
+        "enabled": true
+      },
+      "tag": "http-in"
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": bestip,
+            "port": randomPort,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": userUUID,
+                "level": 8,
+                "security": "auto"
+              }
             ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": randomizedDomain,
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": randomizedDomain,
+          },
+          "path": randomPath,
         }
-    };
+      },
+      "tag": "proxy"
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "packets": "1-1",
+          "length": "1403",
+          "interval": "1"
+        }
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
+        }
+      }
+    },
+    {
+      "protocol": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    }
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "handshake": 4,
+        "uplinkOnly": 1
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "ip": [
+          "8.8.8.8"
+        ],
+        "outboundTag": "direct",
+        "port": "53",
+        "type": "field"
+      },
+      {
+        "inboundTag": [
+          "socks-in",
+          "http-in"
+        ],
+        "type": "field",
+        "port": "53",
+        "outboundTag": "dns-out",
+        "enabled": true
+      },
+      {
+        "outboundTag": "proxy",
+        "type": "field",
+        "network": "tcp,udp"
+      }
+    ]
+  },
+  "stats": {}
+}
 
-    // Respond with the JSON configuration
-    return new Response(JSON.stringify(config), {
-        headers: { 'content-type': 'application/json' }
-    });
+// Respond with the JSON configuration in pretty printed format
+return new Response(JSON.stringify(config, null, 2), {
+  headers: { 'content-type': 'application/json' }
+});
 }
