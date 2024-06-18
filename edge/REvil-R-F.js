@@ -1,7 +1,7 @@
-// <----- Time is 3:34am -  Saturday, June 16 -  NiREvil ----->
+// <----- Time is 3:34am -  Tuesday, June 18 -  NiREvil ----->
 // Create a subscription link containing a configured fragment with random parameters in Cloudflare Workers.
 // replace this line (28) with your domain
-// replace this line (29) with your config UUID and line (30) with your preferred cf clean ip or your workers.dev / pages.dev domain.
+// replace this line (29) with your config UUID and line (30) with your preferred cf ip or your workers.dev / pages.dev domain.
 // Fragment values can be edited from these lines: (145-146-147)
 
 addEventListener('fetch', event => {
@@ -142,9 +142,9 @@ async function handleRequest(request) {
                 "settings": {
                     "domainStrategy": "AsIs",
                     "fragment": {
-                        "packets": "tlshello",
-                        "length": "499-500",
-                        "interval": "1-2"
+                        "packets": "1-1",
+                        "length": "1403",
+                        "interval": "1"
                     }
                 },
                 "streamSettings": {
