@@ -1,8 +1,8 @@
 // <----- Time is 02:24am -  Wednesday, June 19 -  NiREvil ----->
-// Create a subscription link containing a configured fragment with random parameters in Cloudflare Workers.
-// replace this line (28) with your domain
-// replace this line (29) with your config UUID and line (30) with your preferred cf clean ip or your workers.dev / pages.dev domain.
-// Fragment values can be edited from these lines: (138-139-140)
+// Create a subscription link containing a configured fragment with random parameters in Cloudflare Workers for use in v2rayNG Client.
+// replace contents of line (28) with your vless configuration hostname, the line of (30) with your UUID and also line (31) with your preferred cf clean ip or your worker/pages.dev domain.
+// Fragment values can be edited from these lines: (139-140-141)
+// If you don't have the VLESS config, create it for yourself by cloudflare pages using this code: https://github.com/NiREvil/Emotional-Damage
 
 addEventListener('fetch', event => {
     event.respondWith(handleRequest(event.request))
@@ -24,10 +24,11 @@ const randomizeCase = (str) => str.split('').map(char => Math.random() > 0.5 ? c
 // Main handler function
 async function handleRequest(request) {
     // Constants
-    const portsList = [443, 8443, 2053, 2096, 2087, 2083];
-    const domain = 'randomfrag.pages.dev'; // Replace with your domain.
-    const userUUID = '048ce287-6a7b-4dad-98fe-b5f3f6789b57'; // Replace with your User UUID.
-    const bestip = '188.114.97.3'; // Replace with your preferred cf clean ip or your workers.dev / pages.dev domain.
+    const portsList = [443, 8443, 2053, 2096, 2087, 2083];//Cf HTTPS Port's
+    const domain = 'randomfrag.pages.dev';// Replace with your VLESS hostname.
+    //If you wanted to use Trojan configuration instead of vless, in this section instead of uuid, you should put the Trojan password.
+    const userUUID = '048ce287-6a7b-4dad-98fe-b5f3f6789b57'; // Replace with your User vless config UUID.
+    const bestip = '188.114.97.3';// your preferred cf clean ip/domain.
 
     // Randomized constants
     const randomPort = selectRandomItem(portsList);
@@ -37,7 +38,7 @@ async function handleRequest(request) {
 
     // Configuration object
     const config = {
-  "remarks": "REvil ⫤ϜɹɐɡϻϵŊͳ",
+  "remarks": "⨵ Frɑgϻϵͷ₺",
   "log": {
     "loglevel": "warning"
   },
@@ -50,7 +51,7 @@ async function handleRequest(request) {
   },
   "inbounds": [
     {
-      "port": 10808,
+      "port": 10808,// v2rayNG
       "protocol": "socks",
       "settings": {
         "auth": "noauth",
@@ -67,7 +68,7 @@ async function handleRequest(request) {
       "tag": "socks-in"
     },
     {
-      "port": 10809,
+      "port": 10809,// v2rayNG
       "protocol": "http",
       "settings": {
         "auth": "noauth",
@@ -135,9 +136,9 @@ async function handleRequest(request) {
       "protocol": "freedom",
       "settings": {
         "fragment": {
-          "packets": "1-1",
-          "length": "1403",
-          "interval": "1"
+          "packets": "1-1",// 1-1 OR 1-5 OR tlshello
+          "length": "1403",// 20 ~ 7500
+          "interval": "1"// 1 ~ 30 
         }
       },
       "streamSettings": {
