@@ -28,12 +28,12 @@ async function handleRequest(request) {
     const domain = 'randomfrag.pages.dev';// Replace with your hostname.
     //If you wanted to use Trojan configuration instead of vless, in this section instead of userUUID, you should put the Trojan password.
     const userUUID = '048ce287-6a7b-4dad-98fe-b5f3f6789b57';// Replace with your vless config UUID.
-    const bestip = '188.114.97.3';// your preferred cf clean ip/domain.
+    const cleanIPs = '188.114.97.3';// your preferred cf clean ip/domain.
 
     // Randomized constants
     const randomPort = selectRandomItem(portsList);
     const randomizedDomain = randomizeCase(domain);
-    const randomPath = '/' + generateRandomString(59);
+    const randomPath = '/NiREvil' + generateRandomString(44) + '?ed=2560';
 
 
     // Configuration object
@@ -91,7 +91,7 @@ async function handleRequest(request) {
       "settings": {
         "vnext": [
           {
-            "address": bestip,
+            "address": cleanIPs,
             "port": randomPort,
             "users": [
               {
@@ -211,9 +211,11 @@ async function handleRequest(request) {
   },
   "stats": {}
 }
-
 // Respond with the JSON configuration in pretty printed format
 return new Response(JSON.stringify(config, null, 2), {
-  headers: { 'content-type': 'application/json' }
+  status: 200,
+  headers: {
+      'Content-Type': 'application/json;charset=utf-8',
+  },
 });
 }
