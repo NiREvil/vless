@@ -1,7 +1,7 @@
 // <----- Time is 16:57pm  Wednesday, 19 June 2024 UTC -  NiREvil ----->
 // Create a subscription link containing a configured fragment with random parameters in Cloudflare Workers for use in v2rayNG Client.
 // replace contents of line (28) with your vless configuration hostname, the line of (30) with your UUID and also line (31) with your preferred cf clean ip or your worker/pages.dev domain.
-// Fragment values can be edited from these lines: (139-140-141)
+// Fragment values can be edited from these lines: (139-140-141).
 // If you don't have the VLESS config, create it for yourself by cloudflare pages using this code: https://github.com/NiREvil/Emotional-Damage
 
 addEventListener('fetch', event => {
