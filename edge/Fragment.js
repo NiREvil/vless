@@ -28,7 +28,7 @@ async function handleRequest(request) {
     const domain = 'randomfrag.pages.dev';// Replace with your hostname.
     //If you wanted to use Trojan configuration instead of vless, in this section instead of userUUID, you should put the Trojan password.
     const userUUID = '048ce287-6a7b-4dad-98fe-b5f3f6789b57';// Replace with your vless config UUID.
-    const cleanIPs = '188.114.97.3';// your preferred cf clean ip/domain.
+    const cleanIPs = 'creativecommons.org';// your preferred cf clean ip/domain.
 
     // Randomized constants
     const randomPort = selectRandomItem(portsList);
