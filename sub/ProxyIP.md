@@ -77,9 +77,6 @@ Zenlayer**
 ```
 156.146.53.83
 ```
-```
-
-
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 🇺🇸 **USA, California, san jose, Oracle Corporation**
 ```
