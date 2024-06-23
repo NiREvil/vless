@@ -2,7 +2,7 @@
 >
 > :bulb: ~~proxyIP127.0.0.1~~ means the proxy is no longer working.
 
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/e9c65472-4b88-45ad-b9d1-e7bb25149b47)
+
 ## What do we have here
 - [latest workers and pages](#latest-worker-and-page)
   - [Best proxies](#Best-proxies)
