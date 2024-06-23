@@ -1,8 +1,10 @@
-### $\color{gold} \Large \text{CF ProxyIP's}$
-**~~proxyIP127.0.0.1~~ means the proxy is no longer working**
+## $\color{gold} \Large \text{CF ProxyIP's}$
+>
+> :bulb: ~~proxyIP127.0.0.1~~ means the proxy is no longer working.
+
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/e9c65472-4b88-45ad-b9d1-e7bb25149b47)
-## What do we have
-- [latest worker and page](#latest-worker-and-page)
+## What do we have here
+- [latest workers and pages](#latest-worker-and-page)
   - [Best proxies](#Best-proxies)
   - [Find proxyIP](#Find-proxyIP)
   - [Advanced](#advanced)
@@ -16,7 +18,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 
 ## Best proxies
 
-**🇺🇸 United States of America & Germany**
+**🇺🇸 United States of America & 🇩🇪 Germany**
 ```CSS
 ni.radically.pro
 ```
@@ -27,11 +29,28 @@ usa.revil.link
 de.radically.pro
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇩🇪 Germany, Frankfurt am Main, Zenlayer & Oracle Cloud**
+🇺🇸 **USA, Random locations, Oracle, Digital ocean, Data camp, Akamai, Amazon**
+```CSS
+proxyip.us.hw.090227.xyz
+```
+🇺🇸 **USA, California, santa clara, Digital ocean LLC**
+```
+proxyip.digitalocean.hw.090227.xyz
+```
+🇺🇸 **USA, Arizona, phoenix, Oracle corporation**
+```POV-Ray SDL
+proxyip.oracle.fxxk.dedyn.io
+```
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇩🇪 Germany, Frankfurt am Main, Zenlayer**
 ```POV-Ray SDL
 23.90.151.62
 ```
+```POV-Ray SDL
+141.147.118.69
 ```
+**🇩🇪 Germany, Frankfurt am Main, Oracle Cloud**
+```POV-Ray SDL
 141.144.232.159
 ```
 ```
@@ -43,28 +62,19 @@ de.radically.pro
 ```
 193.122.61.167
 ```
+```
+130.61.87.219
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇪 United arab emirates, Abu Dhabi**
 ```
 193.123.81.105
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇺🇸 USA, California, santa clara, Tencent cloud computing**
+**🇫🇷 Île de France, Oracle Svenska AB**
 ```
-43.153.80.208
+141.145.199.188
 ```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-🇺🇸 **USA, Randomly selected, Oracle, D ocean, Data camp, Akamai, Amazon**
-
-    proxyip.us.hw.090227.xyz
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-🇺🇸 **USA, California, santa clara, Digital ocean LLC**
-
-    proxyip.digitalocean.hw.090227.xyz
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-🇺🇸 **USA, Arizona, phoenix, Oracle corporation**
-
-    proxyip.oracle.fxxk.dedyn.io
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 🇺🇸 **USA, California, san jose, DataCamp Limited & 
 Zenlayer**
@@ -77,7 +87,10 @@ Zenlayer**
 ```
 156.146.53.83
 ```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇺🇸 USA, California, santa clara, Tencent cloud computing**
+```
+43.153.80.208
+```
 🇺🇸 **USA, California, san jose, Oracle Corporation**
 ```
 192.9.138.241
@@ -85,7 +98,6 @@ Zenlayer**
 ```
 129.146.254.39
 ```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies**
 ```
 72.13.122.137
