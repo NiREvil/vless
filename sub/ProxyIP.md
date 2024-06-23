@@ -17,18 +17,18 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 ## Best proxies
 
 **🇺🇸 United States of America & Germany**
-```
+```CSS
 ni.radically.pro
 ```
 ```
 usa.revil.link
 ```
-```
+```POV-Ray SDL
 de.radically.pro
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇩🇪 Germany, Frankfurt am Main, Zenlayer & Oracle Cloud**
-```
+```POV-Ray SDL
 23.90.151.62
 ```
 ```
