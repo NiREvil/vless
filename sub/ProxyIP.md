@@ -14,6 +14,7 @@
 ## latest workers and pages
 latest pages.dev code is here [BPB](https://github.com/NiREvil/bia-pain-bache/blob/main/_worker.js)
 Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/blob/main/_worker.js)
+And also [EDtunnel](https://github.com/NiREvil/Emotional-Damage)
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
 ## Best proxies
@@ -53,16 +54,16 @@ proxyip.oracle.fxxk.dedyn.io
 ```POV-Ray SDL
 141.144.232.159
 ```
-```
+```POV-Ray SDL
 130.61.23.77
 ```
-```
+```POV-Ray SDL
 130.61.239.203
 ```
-```
+```POV-Ray SDL
 193.122.61.167
 ```
-```
+```POV-Ray SDL
 130.61.87.219
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
