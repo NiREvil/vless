@@ -34,7 +34,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/warp.json
   - [Warp NekoBox](#Warp-NekoBox)
   - [Warp v2rayNG](#Warp-v2rayNG)
 - [Amnezia](#Amnezia)
-- [wire.conf](#./.conf)
+- [wire.conf](/.conf)
 - [v2ray](#v2ray)
 - [Clash](#Clash)
 - [Countries](#Countries)
