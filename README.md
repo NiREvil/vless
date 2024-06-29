@@ -41,7 +41,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
 - [v2ray](#v2ray)
 - [Clash](#Clash)
 - [Countries](#Countries)
-- [Other source](#Other-source)
+- [Other sources](#Other-Sources)
 
 ---
 > [!NOTE]
