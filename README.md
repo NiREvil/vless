@@ -10,11 +10,11 @@ $$\color{silver} \Huge \text{\R $\sum{\vil_t = \mathbb{N108}\infty}$}$$
 
 
 ## $\color{silver} \normalsize \text{The subscription link for the Hiddify clients}$
-> built in GitHub Actions
+> 
 >
 > Updated every 45 minutes.
 
-### Hiddify URL <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="20"/>
+### Hiddify URL <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="30"/>
 ```
 https://raw.githubusercontent.com/NiREvil/vless/main/warp.json
 ```
@@ -22,7 +22,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/warp.json
 ```
 https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
 ```
-### Scan with Hiddify  👇
+### Scan with Hiddify 👇🏿
 
  <img src="edge/assets/QR-Code.svg" alt="QR" width="400px"/>
 
@@ -35,6 +35,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
   - [Warp NekoBox](#Warp-NekoBox)
   - [Warp v2rayNG](#Warp-v2rayNG)
   - [Warp v2rayN](#Warp-v2rayN)
+  - [Warp SFI](#Warp-SFI)
 - [Amnezia](#Amnezia)
 - [wire.conf](/.conf)
 - [v2ray](#v2ray)
@@ -49,7 +50,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
 
 ## Warp
 
-#### Warp Hiddify <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="20"/>
+#### Warp Hiddify <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="30"/>
 
 https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/auto-gen-warp
 
@@ -83,7 +84,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sub/wire-v2rayN.txt
 
 ---
 #### Warp SFI 
-> singbox for IOS <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="20"/>
+> singbox for IOS <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="15"/>
 
 https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
