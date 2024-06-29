@@ -5,26 +5,27 @@ $$\color{silver} \Huge \text{\R $\sum{\vil_t = \mathbb{N108}\infty}$}$$
 * تعداد زیادی لینک اشتراک (ساب) برای هیدیفای، کلش، نکوباکس، ویتوری و ... که از گیت‌هاب و یه سری منابع دیگه مثل تلگرام جمع‌آوری شده.
   
 * Lots of subscription links for Clash, 2ray, Hiddify, NekoBox ... collected from GitHub and other public sources.
-* 从 GitHub 和公共资源收集大量 Clash 和 V2ray 订阅链接.
 *  Соберите множество ссылок на подписку на Clash и V2ray из GitHub и общедоступных источников.
 
 
-  
+
 ## $\color{silver} \normalsize \text{The subscription link for the Hiddify clients}$
 > built in GitHub Actions
 >
-> is automatically updated every thirty minutes.
+> Updated every 45 minutes.
 
-## $\color{gold} \normalsize \text{Subscription URL link}$
+### Hiddify URL <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="20"/>
 ```
 https://raw.githubusercontent.com/NiREvil/vless/main/warp.json
 ```
----
-<p align="center">$\color{silver} \large \text{OR SCAN THIS QR }$</p>
+### Sing-Box URL <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="20"/>
+```
+https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
+```
+### Scan with Hiddify  👇
 
-<p align="center">
-  <br><img src="./QR.gif" width="520px">
-</p>
+ <img src="edge/assets/QR-Code.svg" alt="QR" width="400px"/>
+
 
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
@@ -33,6 +34,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/warp.json
   - [Warp Hiddify](#warp-hiddify)
   - [Warp NekoBox](#Warp-NekoBox)
   - [Warp v2rayNG](#Warp-v2rayNG)
+  - [Warp v2rayN](#Warp-v2rayN)
 - [Amnezia](#Amnezia)
 - [wire.conf](/.conf)
 - [v2ray](#v2ray)
@@ -45,11 +47,10 @@ https://raw.githubusercontent.com/NiREvil/vless/main/warp.json
 > قبل از اینکه لینک سابی رو کپی و اد کنید توی کلاینت، همینجا یه کلیک کنید روش تا باز بشه و مطمعن بشید داخلش خالی نیست، چون پیش میاد که طرف آدرس لینک رو تغییر داده باشه.
 
 
-
-
 ## Warp
 
-#### Warp Hiddify
+#### Warp Hiddify <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="20"/>
+
 https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/auto-gen-warp
 
 https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/WarpOnWarp.json  
@@ -69,13 +70,23 @@ https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/custom-ip
 #### Warp NekoBox
 
 https://raw.githubusercontent.com/NiREvil/vless/main/sub/wireguardn
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
-#### Warp v2rayng
+---
+#### Warp v2rayNG
 
 https://raw.githubusercontent.com/NiREvil/vless/main/sub/wireguardv
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
+---
+#### Warp v2rayN
+
+https://raw.githubusercontent.com/NiREvil/vless/main/sub/wire-v2rayN.txt
+
+---
+#### Warp SFI 
+> singbox for IOS <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="20"/>
+
+https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
 ## Amnezia
 
@@ -683,11 +694,6 @@ https://v2ray.neocities.org/v2ray.txt
 
 https://sub.pmsub.me/base64
 
-
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-
-# roleplay
-
 https://raw.githubusercontent.com/mermeroo/Clash-V2ray/main/v2ray
 
 https://raw.githubusercontent.com/personqianduixue/SubCrawler/main/sub/share/all
@@ -922,6 +928,7 @@ https://nodefree.org/dy/2023/08/20230806.yaml
 https://cxsub.club/link/V3Th0AyWhutlptyH?clash=1
 
 https://sub.pmsub.me/clash.yaml
+
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
 # COUNTRIES
