@@ -47,9 +47,6 @@ proxyip.oracle.fxxk.dedyn.io
 ```POV-Ray SDL
 23.90.151.62
 ```
-```POV-Ray SDL
-141.147.118.69
-```
 **🇩🇪 Germany, Frankfurt am Main, Oracle Cloud**
 ```POV-Ray SDL
 141.144.232.159
@@ -59,6 +56,9 @@ proxyip.oracle.fxxk.dedyn.io
 ```
 ```POV-Ray SDL
 130.61.239.203
+```
+```POV-Ray SDL
+138.3.254.39
 ```
 ```POV-Ray SDL
 130.61.23.77
@@ -75,6 +75,9 @@ proxyip.oracle.fxxk.dedyn.io
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇪 United arab emirates, Abu Dhabi**
 ```
+193.123.69.77
+```
+```
 193.123.81.105
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
@@ -83,8 +86,16 @@ proxyip.oracle.fxxk.dedyn.io
 141.145.199.188
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇮🇹Italy, siziano, Oracle Cloud**
+```
+204.216.222.126
+```
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 🇺🇸 **USA, California, san jose, DataCamp Limited & 
 Zenlayer**
+```
+128.1.18.29
+```
 ```
 150.230.47.17
 ```
@@ -144,6 +155,9 @@ Zenlayer**
 **🇳🇱 Netherlands, Amsterdam, Oracle Corporation**
 ```
 141.148.229.106
+```
+```
+141.144.255.45
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇮🇱 Israel, Haifa, BroadBand**
