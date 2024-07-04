@@ -58,6 +58,9 @@ proxyip.oracle.fxxk.dedyn.io
 130.61.239.203
 ```
 ```POV-Ray SDL
+129.159.241.172
+```
+```POV-Ray SDL
 138.3.254.39
 ```
 ```POV-Ray SDL
@@ -85,14 +88,20 @@ proxyip.oracle.fxxk.dedyn.io
 ```
 141.145.199.188
 ```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇮🇹Italy, siziano, Oracle Cloud**
+**🇫🇷 France, Marseille, Oracle corporation**
 ```
-204.216.222.126
+144.24.200.164
+```
+**🇭🇰 Hong Kong, Zenlayer Inc.**
+```
+129.227.139.137
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 🇺🇸 **USA, California, san jose, DataCamp Limited & 
 Zenlayer**
+```
+192.9.157.76
+```
 ```
 128.1.18.29
 ```
@@ -180,12 +189,14 @@ Zenlayer**
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇯🇵 Japan, Tokyo, alibaba corporation**
-
+```
+141.147.173.72
+```
 ```
 163.5.187.104
 ```
 ```
-163.5.187.104
+150.230.102.15
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇺 Australia, Victoria, Melbourne**
@@ -198,9 +209,12 @@ Zenlayer**
     ipdb.rr.nu
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇸🇬 Singapore, Alibaba Technology Co**
-
-    47.236.203.169
-    8.219.174.142
+```
+8.219.66.156
+```
+```
+8.219.103.65
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇬🇧 UK, Hostaris L.L.C**
 
