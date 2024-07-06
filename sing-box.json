@@ -22,14 +22,14 @@
         "servers": [
             {
                 "tag": "dns-remote",
-                "address": "https://1.1.1.1/dns-query",
+                "address": "tcp://185.228.168.9",
                 "address_resolver": "dns-direct",
                 "address_strategy": "prefer_ipv4",
                 "strategy": "prefer_ipv4"
             },
             {
                 "tag": "dns-direct",
-                "address": "tcp://8.8.8.8",
+                "address": "tcp://185.228.168.9",
                 "address_resolver": "dns-local",
                 "strategy": "prefer_ipv4",
                 "detour": "direct"
@@ -63,7 +63,7 @@
             "domain_strategy": "prefer_ipv4",
             "interface_name": "sing-tun",
             "inet4_address": "172.19.0.1/30",
-            "mtu": 1492,
+            "mtu": 1300,
             "auto_route": true,
             "strict_route": true,
             "stack": "gvisor",
@@ -85,18 +85,18 @@
         },
         {
             "type": "wireguard",
-            "server": "162.159.192.206",
-            "server_port": 890,
+            "server": "188.114.96.250",
+            "server_port": 8854,
             "local_address": [
                 "172.16.0.2/32",
-                "2606:4700:110:850c:23fb:253b:3046:7159/128"
+                "2606:4700:110:8932:3b8:ad23:e20b:dfdd/128"
             ],
-            "private_key": "eEpg9vDD+ARKjHTHXWZ6Fmqw5QFgh4ohMrL8ii/1gVA=",
+            "private_key": "yM2xS1xS9+Ma5qm0mqrdcRBn4MjdpfaeXIqHq8bXGlU=",
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
             "reserved": [
-                98,
-                71,
-                66
+                110,
+                162,
+                139
             ],
             "mtu": 1300,
             "workers": 2,
@@ -105,18 +105,18 @@
         },
         {
             "type": "wireguard",
-            "server": "162.159.195.32",
-            "server_port": 890,
+            "server": "188.114.96.142",
+            "server_port": 7152,
             "local_address": [
                 "172.16.0.2/32",
-                "2606:4700:110:86ef:24be:25d6:f9a4:de52/128"
+                "2606:4700:110:89de:44e0:9ffd:a25f:268e/128"
             ],
-            "private_key": "KPQ17Q+VTBNaoOfMbUzPn0dXGSbEtRJT6h6L8EMtdVo=",
+            "private_key": "wHOohCSu2oNWJJUOUTu8H3s5xAQybL4X2cdt4S0l6EI=",
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
             "reserved": [
-                166,
-                93,
-                143
+                92,
+                111,
+                49
             ],
             "mtu": 1300,
             "workers": 2,
