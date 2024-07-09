@@ -4,7 +4,6 @@
 //support-url:  https://t.me/F_NiREvil
 //profile-web-page-url: https://github.com/NiREvil
 
-
 {
   "log": {
     "level": "warn",
@@ -58,16 +57,17 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "172.67.204.84",
-        "104.21.69.44",
-        "2606:4700:3032::6815:452c",
-        "2606:4700:3031::ac43:cc54",
-        "104.18.203.232",
-        "104.18.202.232",
-        "172.64.172.4",
-        "172.64.173.4",
-        "2606:4700:e4::ac40:ad04",
-        "2606:4700:e4::ac40:ac04"
+        "sky.rethinkdns.com": [
+        "188.114.96.6",
+        "188.114.97.6",
+        "2a06:98c1:3120::6",
+        "2a06:98c1:3121::6",
+        "104.17.147.22",
+        "104.17.148.22",
+        "188.114.96.3",
+        "188.114.97.3",
+        "2a06:98c1:3121::3",
+        "2a06:98c1:3120::3"
       ]
     },
     "independent_cache": true
@@ -110,8 +110,8 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "warp-ir",
-        "warp-main"
+        "warp 🇮🇷",
+        "wOw 🇩🇪"
       ],
       "default": "auto"
     },
@@ -119,21 +119,21 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "warp-ir",
-        "warp-main"
+        "warp 🇮🇷",
+        "wOw 🇩🇪"
       ],
       "url": "http://cp.cloudflare.com/",
       "interval": "10m0s"
     },
     {
       "type": "wireguard",
-      "tag": "warp-ir",
+      "tag": "warp 🇮🇷",
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:8c91:4063:21d0:7dd5:f218/128"
       ],
       "private_key": "AJ0si9MKGCtoC/NHwKc8G0MADbTPl/1M7KNWvM24W1g=",
-      "server": "ipw.bachebiapain.ir",
+      "server": "162.159.192.240",
       "server_port": 939,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
@@ -144,15 +144,15 @@
     },
     {
       "type": "wireguard",
-      "tag": "warp-main",
-      "detour": "warp-ir",
+      "tag": "wOw 🇩🇪",
+      "detour": "warp 🇮🇷",
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:8c15:3f90:ad2d:8810:77f3/128"
       ],
       "private_key": "iKXZlb1y3GtpI6shoSD3OMaC3RWmvO1kebNJRHeOm14=",
       "server": "ipw.bachebiapain.ir",
-      "server_port": 939,
+      "server_port": 890,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "AAAA",
       "mtu": 1280,
