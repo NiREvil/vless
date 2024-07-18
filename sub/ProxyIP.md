@@ -19,12 +19,9 @@ And also [EDtunnel](https://github.com/NiREvil/Emotional-Damage)
 
 ## Best proxies
 
-**🇺🇸 United States of America & 🇩🇪 Germany**
+**🇺🇸 USA & 🇩🇪 Germany**
 ```CSS
 ni.radically.pro
-```
-```
-usa.revil.link
 ```
 ```POV-Ray SDL
 de.radically.pro
@@ -42,12 +39,22 @@ proxyip.digitalocean.hw.090227.xyz
 ```POV-Ray SDL
 proxyip.oracle.fxxk.dedyn.io
 ```
+**🇸🇪 Sweden, Stockholm, Oracle Cloud**
+```POV-Ray SDL
+129.151.205.193
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇩🇪 Germany, Frankfurt am Main, Zenlayer**
 ```POV-Ray SDL
 23.90.151.62
 ```
 **🇩🇪 Germany, Frankfurt am Main, Oracle Cloud**
+```POV-Ray SDL
+144.24.189.21
+```
+```POV-Ray SDL
+138.3.254.39
+```
 ```POV-Ray SDL
 141.144.232.159
 ```
@@ -97,6 +104,13 @@ proxyip.oracle.fxxk.dedyn.io
 129.227.139.137
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇺🇸 USA, California, santa clara, Tencent cloud computing**
+```
+43.153.103.203
+```
+```
+43.153.80.208
+```
 🇺🇸 **USA, California, san jose, DataCamp Limited & 
 Zenlayer**
 ```
@@ -113,10 +127,6 @@ Zenlayer**
 ```
 ```
 156.146.53.83
-```
-**🇺🇸 USA, California, santa clara, Tencent cloud computing**
-```
-43.153.80.208
 ```
 🇺🇸 **USA, California, san jose, Oracle Corporation**
 ```
@@ -202,6 +212,10 @@ Zenlayer**
 **🇦🇺 Australia, Victoria, Melbourne**
 ```POV-Ray SDL
 192.9.177.204
+```
+**🇦🇺 Australia, New South Wales, Huntingwood**
+```POV-Ray SDL
+192.9.180.162
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇳🇮 i don't know**
