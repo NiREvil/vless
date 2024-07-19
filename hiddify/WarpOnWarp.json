@@ -14,7 +14,7 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "tcp://185.228.168.9",
+        "address": "https://94.140.14.14/dns-query",
         "address_resolver": "dns-direct"
       },
       {
@@ -24,7 +24,7 @@
       },
       {
         "tag": "dns-direct",
-        "address": "1.1.1.1",
+        "address": "https://94.140.14.14/dns-query",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -127,13 +127,13 @@
         "2606:4700:110:89a8:fd64:26c3:e66c:aeb5/128"
       ],
       "private_key": "QALMq3+ZfwxtIxXFVy3Drs0QeIbTnSoWOYxJM9ajemk=",
-      "server": "188.114.98.131",
-      "server_port": 894,
+      "server": "188.114.98.240",
+      "server_port": 2408,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": [55,160,170],
-      "mtu": 1280,
-      "fake_packets": "10-20",
-      "fake_packets_size": "20-60",
+      "mtu": 1300,
+      "fake_packets": "5-10",
+      "fake_packets_size": "20-40",
       "fake_packets_delay": "5-10"
     },
     {
@@ -145,11 +145,11 @@
         "2606:4700:110:8c7e:84d3:cc39:2b67:d765/128"
       ],
       "private_key": "YPhnBcnEhb2jghr943+/sVz76VwQUDCQgPWeX000dFc=",
-      "server": "188.114.98.131",
-      "server_port": 894,
+      "server": "ipw.nscl.ir",
+      "server_port": 955,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": [192,186,142],
-      "mtu": 1230
+      "mtu": 1260
     },
     {
       "type": "dns",
@@ -165,7 +165,7 @@
       "tls_fragment": {
         "enabled": true,
         "size": "5-10",
-        "sleep": "1-5"
+        "sleep": "1-2"
       }
     },
     {
