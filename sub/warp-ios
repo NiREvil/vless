@@ -93,7 +93,7 @@
     {
       "domain_strategy": "",
       "listen": "0.0.0.0",
-      "listen_port": 2080,
+      "listen_port": 2334,
       "sniff": true,
       "sniff_override_destination": false,
       "tag": "mixed-in",
@@ -106,14 +106,14 @@
       "type": "selector",
       "outbounds": [
         "URL-TEST",
-        "Warp IR"
+        "Tehran"
       ]
     },
     {
       "tag": "URL-TEST",
       "type": "urltest",
       "outbounds": [
-        "Warp IR"
+        "Tehran"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "3m",
@@ -138,16 +138,16 @@
     {
       "type": "wireguard",
       "server": "162.159.195.32",
-      "server_port": 7103,
+      "server_port": 928,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:8bc8:e72f:712f:1241:cfb9/128"
       ],
       "private_key": "YAjsLAjybhUkEVHLZMq/Cwe697koi0jpsVLlqrReU1A=",
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "mtu": 1300,
+      "mtu": 1306,
       "reserved": "ynRJ",
-      "tag": "Warp IR"
+      "tag": "Tehran"
     }
   ],
   "route": {
