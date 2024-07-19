@@ -84,15 +84,15 @@
       "tag": "Proxy",
       "type": "selector",
       "outbounds": [
-        "Warp-IR",
-        "Warp-main"
+        "Tehran",
+        "Berlin"
       ],
-      "default": "Warp-main",
+      "default": "Berlin",
       "interrupt_exist_connections": false
     },
     {
       "type": "wireguard",
-      "server": "162.159.192.240",
+      "server": "162.159.192.126",
       "server_port": 928,
       "local_address": [
         "172.16.0.2/32",
@@ -108,7 +108,7 @@
       "mtu": 1306,
       "workers": 2,
       "detour": "direct",
-      "tag": "Warp-IR"
+      "tag": "Tehran"
     },
     {
       "type": "wireguard",
@@ -127,8 +127,8 @@
       ],
       "mtu": 1300,
       "workers": 2,
-      "detour": "Warp-IR",
-      "tag": "Warp-main"
+      "detour": "Tehran",
+      "tag": "Berlin"
     },
     {
       "tag": "direct",
