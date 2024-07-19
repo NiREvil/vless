@@ -14,7 +14,7 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "https://94.140.14.14/dns-query",
+        "address": "https://wikimedia-dns.org/dns-query",
         "address_resolver": "dns-direct"
       },
       {
@@ -24,7 +24,7 @@
       },
       {
         "tag": "dns-direct",
-        "address": "https://94.140.14.14/dns-query",
+        "address": "https://wikimedia-dns.org/dns-query",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -55,16 +55,16 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "188.114.96.2",
-        "188.114.97.2",
-        "2a06:98c1:3123::",
-        "2a06:98c1:3122::",
-        "104.17.147.22",
-        "104.17.148.22",
         "188.114.96.3",
         "188.114.97.3",
-        "2a06:98c1:3121::6",
-        "2a06:98c1:3120::6"
+        "2a06:98c1:3120::",
+        "2a06:98c1:3121::",
+        "104.17.147.22",
+        "104.17.148.22",
+        "188.114.97.8",
+        "188.114.96.8",
+        "2a06:98c1:3121::",
+        "2a06:98c1:3120::"
       ]
     },
     "independent_cache": true
@@ -75,6 +75,7 @@
       "tag": "tun-in",
       "mtu": 9000,
       "inet4_address": "172.19.0.1/28",
+      "inet6_address": "fdfe:dcba:9876::1/126",
       "auto_route": true,
       "strict_route": true,
       "endpoint_independent_nat": true,
@@ -127,13 +128,14 @@
         "2606:4700:110:89a8:fd64:26c3:e66c:aeb5/128"
       ],
       "private_key": "QALMq3+ZfwxtIxXFVy3Drs0QeIbTnSoWOYxJM9ajemk=",
-      "server": "188.114.98.240",
-      "server_port": 2408,
+      "server": "188.114.98.136",
+      "server_port": 4233,
+      
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": [55,160,170],
-      "mtu": 1300,
-      "fake_packets": "5-10",
-      "fake_packets_size": "20-40",
+      "mtu": 1306,
+      "fake_packets": "10-20",
+      "fake_packets_size": "20-60",
       "fake_packets_delay": "5-10"
     },
     {
@@ -149,7 +151,7 @@
       "server_port": 955,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": [192,186,142],
-      "mtu": 1260
+      "mtu": 1300
     },
     {
       "type": "dns",
