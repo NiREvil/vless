@@ -1,0 +1,469 @@
+{
+  "log": {
+    "level": "warn",
+    "output": "box.log",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-remote",
+        "address": "https://94.140.14.14/dns-query",
+        "address_resolver": "dns-direct"
+      },
+      {
+        "tag": "dns-trick-direct",
+        "address": "https://sky.rethinkdns.com/",
+        "detour": "direct-fragment"
+      },
+      {
+        "tag": "dns-direct",
+        "address": "https://94.140.14.14/dns-query",
+        "address_resolver": "dns-local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-local",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "wikimedia-dns.org",
+          "ipw.nscl.ir",
+          "ipw.bachebiapain.ir"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "domain": "cp.cloudflare.com",
+        "server": "dns-remote",
+        "rewrite_ttl": 3000
+      },
+      {
+        "rule_set": [
+          "geoip-ir",
+          "geosite-ir"
+        ],
+        "server": "dns-direct"
+      }
+    ],
+    "final": "dns-remote",
+    "static_ips": {
+      "sky.rethinkdns.com": [
+        "188.114.96.0",
+        "188.114.97.0",
+        "2a06:98c1:3120::",
+        "2a06:98c1:3121::",
+        "104.17.147.22",
+        "104.17.148.22",
+        "188.114.97.0",
+        "188.114.96.0",
+        "2a06:98c1:3121::",
+        "2a06:98c1:3120::"
+      ]
+    },
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 9000,
+      "inet4_address": "172.19.0.1/28",
+      "inet6_address": "fdfe:dcba:9876::1/126",
+      "auto_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "0.0.0.0",
+      "listen_port": 2334,
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "0.0.0.0",
+      "listen_port": 6450
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "Warp 1",
+        "Warp 2",
+        "Warp 3",
+        "Warp 4",
+        "Warp 5",
+        "Warp 6",
+        "Warp 7",
+        "Warp 8",
+        "Warp 9",
+        "Warp 10"
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+          "Warp 1",
+        "Warp 2",
+        "Warp 3",
+        "Warp 4",
+        "Warp 5",
+        "Warp 6",
+        "Warp 7",
+        "Warp 8",
+        "Warp 9",
+        "Warp 10"
+      ],
+      "url": "http://connectivitycheck.gstatic.com/generate_204",
+      "interval": "10m0s",
+      "idle_timeout": "1h40m0s"
+    },
+    {
+      "type": "wireguard",
+      "tag": "Warp 1",
+      "domain_strategy": "prefer_ipv4",
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8aff:fe41:fbc6:4c1:9393/128"
+      ],
+      "private_key": "gLuRidLUXlzIOguffh1NpwQ29mvgU0eWZ7ru8L5hwGg=",
+      "server": "162.159.195.130",
+      "server_port": 928,
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": "05Pf",
+      "mtu": 1340,
+      "fake_packets_mode": "m1",
+      "fake_packets": "25-30",
+      "fake_packets_size": "10-30",
+      "fake_packets_delay": "10-30"
+    },
+    {
+      "type": "wireguard",
+      "tag": "Warp 2",
+      "domain_strategy": "prefer_ipv4",
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8a2c:4b4b:d41b:2a64:e4f4/128"
+      ],
+      "private_key": "MACnL4XM4jMQ3bgmaClUt/6eTYOFigu5MiuiM1HIiUI=",
+      "server": "162.159.192.126",
+      "server_port": 928,
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": "idBT",
+      "mtu": 1340,
+      "fake_packets_mode": "m2",
+      "fake_packets": "25-30",
+      "fake_packets_size": "10-30",
+      "fake_packets_delay": "10-30"
+    },
+    {
+      "type": "wireguard",
+      "tag": "Warp 3",
+      "domain_strategy": "prefer_ipv4",
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8cca:c935:d1f9:e1eb:e785/128"
+      ],
+      "private_key": "WKsqrewZBWtCI22IbRV4DcR3Zndqxs/3P3htEAkL0n4=",
+      "server": "162.159.195.41",
+      "server_port": 928,
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": "lcKa",
+      "mtu": 1340,
+       "fake_packets_mode": "m3",
+      "fake_packets": "25-30",
+      "fake_packets_size": "10-30",
+      "fake_packets_delay": "10-30"
+    },
+    {
+      "type": "wireguard",
+      "tag": "Warp 4",
+      "domain_strategy": "prefer_ipv4",
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8654:6b66:3333:c4e2:dcc1/128"
+      ],
+      "private_key": "ADzfRTqKlT9u7MG0YVBx7gIkqMquCdiLb+4JeCr7X3w=",
+      "server": "ZulA.IR",
+      "server_port": 928,
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": "RG/l",
+      "mtu": 1306,
+      "fake_packets_mode": "m4",
+      "fake_packets": "25-30",
+      "fake_packets_size": "10-30",
+      "fake_packets_delay": "10-30"
+    },
+    {
+      "type": "wireguard",
+      "tag": "Warp 5",
+      "domain_strategy": "prefer_ipv4",
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8489:bd31:4efa:1a41:5744/128"
+      ],
+      "private_key": "6LwadIWYvaC/qN7RgrFjaFRgRKljfMCCk+NMdrXAM1I=",
+      "server": "162.159.192.176",
+      "server_port": 928,
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": "Cd2T",
+      "mtu": 1306,
+       "fake_packets_mode": "m5",
+      "fake_packets": "25-30",
+      "fake_packets_size": "10-30",
+      "fake_packets_delay": "10-30"
+    },
+    {
+      "type": "wireguard",
+      "tag": "Warp 6",
+      "domain_strategy": "prefer_ipv4",
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:87cd:11d1:9c5b:ec0f:1f1e/128"
+      ],
+      "private_key": "EHrQ3mMv6K++5vidZPziwe0oxeWFq/Fb9AJ49tzIW3w=",
+      "server": "162.159.192.6",
+      "server_port": 928,
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": "c9vC",
+      "mtu": 1306,
+       "fake_packets_mode": "m6",
+      "fake_packets": "25-30",
+      "fake_packets_size": "10-30",
+      "fake_packets_delay": "10-30"
+    },
+    {
+      "type": "wireguard",
+      "tag": "Warp 7",
+      "domain_strategy": "prefer_ipv4",
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:882c:8bfa:6440:d459:491c/128"
+      ],
+      "private_key": "MI/6kwkfLoPBhVWsLt6cPwzNXna69bupzOE9PnsBq24=",
+      "server": "162.159.192.126",
+      "server_port": 928,
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": "gebS",
+      "mtu": 1306,
+      "fake_packets_mode": "h_30",
+      "fake_packets": "25-30",
+      "fake_packets_size": "10-30",
+      "fake_packets_delay": "10-30"
+    },
+    {
+      "type": "wireguard",
+      "tag": "Warp 8",
+      "domain_strategy": "prefer_ipv4",
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8630:1cfa:2c27:a320:34cf/128"
+      ],
+      "private_key": "wHIM7G1x3zNXbquNJxO0V1248I02jsgnJF/KSfDJXUY=",
+      "server": "ipw.bachebiapain.ir",
+      "server_port": 928,
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": "nA6q",
+      "mtu": 1306,
+      "fake_packets_mode": "g_10_20_30",
+      "fake_packets": "25-30",
+      "fake_packets_size": "10-30",
+      "fake_packets_delay": "10-30"
+    },
+ {
+      "type": "wireguard",
+      "tag": "Warp 9",
+      "domain_strategy": "prefer_ipv4",
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8630:1cfa:2c27:a320:34cf/128"
+      ],
+      "private_key": "wHIM7G1x3zNXbquNJxO0V1248I02jsgnJF/KSfDJXUY=",
+      "server": "ipw.nscl.ir",
+      "server_port": 928,
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": "nA6q",
+      "mtu": 1306,
+      "fake_packets_mode": "g_30_40_50",
+      "fake_packets": "25-30",
+      "fake_packets_size": "10-30",
+      "fake_packets_delay": "10-30"
+    },
+ {
+      "type": "wireguard",
+      "tag": "Warp 10",
+      "domain_strategy": "prefer_ipv4",
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:87cd:11d1:9c5b:ec0f:1f1e/128"
+      ],
+      "private_key": "EHrQ3mMv6K++5vidZPziwe0oxeWFq/Fb9AJ49tzIW3w=",
+      "server": "162-159-192-6.sslip.io",
+      "server_port": 928,
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": "c9vC",
+      "mtu": 1306,
+      "fake_packets_mode": "h_50",
+      "fake_packets": "25-30",
+      "fake_packets_size": "10-30",
+      "fake_packets_delay": "10-30"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "direct",
+      "tag": "direct-fragment",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "20-40",
+        "sleep": "2-4"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "bypass"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "rule_set": [
+          "geosite-ads",
+          "geosite-malware",
+          "geosite-phishing",
+          "geosite-cryptominers",
+          "geoip-malware",
+          "geoip-phishing"
+        ],
+        "outbound": "block"
+      },
+      {
+        "rule_set": [
+          "geoip-ir",
+          "geosite-ir"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "select"
+      },
+      {
+        "geoip": "private",
+        "outbound": "bypass"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geoip-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-ir.srs",
+        "update_interval": "120h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-ir",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-ir.srs",
+        "update_interval": "120h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-ads",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/block/geosite-category-ads-all.srs",
+        "update_interval": "120h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-malware",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/block/geosite-malware.srs",
+        "update_interval": "120h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-phishing",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/block/geosite-phishing.srs",
+        "update_interval": "120h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-cryptominers",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/block/geosite-cryptominers.srs",
+        "update_interval": "120h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-phishing",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/block/geoip-phishing.srs",
+        "update_interval": "120h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-malware",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/block/geoip-malware.srs",
+        "update_interval": "120h0m0s"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "clash.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:6756",
+      "secret": "xdQr0yp6812ahHY8"
+    }
+  }
+}
