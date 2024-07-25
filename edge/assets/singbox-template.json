@@ -22,14 +22,14 @@
         "servers": [
             {
                 "tag": "dns-remote",
-                "address": "tcp://185.228.168.9",
+                "address": "tcp://8.8.4.4",
                 "address_resolver": "dns-direct",
                 "address_strategy": "prefer_ipv4",
                 "strategy": "prefer_ipv4"
             },
             {
                 "tag": "dns-direct",
-                "address": "tcp://185.228.168.9",
+                "address": "tcp://8.8.4.4",
                 "address_resolver": "dns-local",
                 "strategy": "prefer_ipv4",
                 "detour": "direct"
@@ -63,7 +63,7 @@
             "domain_strategy": "prefer_ipv4",
             "interface_name": "sing-tun",
             "inet4_address": "172.19.0.1/30",
-            "mtu": 1300,
+            "mtu": 1306,
             "auto_route": true,
             "strict_route": true,
             "stack": "gvisor",
@@ -77,10 +77,10 @@
             "tag": "Proxy",
             "type": "selector",
             "outbounds": [
-                "WARP-MAIN",
-                "WARP-WOW"
+                "Tehran",
+                "Berlin"
             ],
-            "default": "WARP-WOW",
+            "default": "Berlin",
             "interrupt_exist_connections": false
         },
         {
