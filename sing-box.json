@@ -22,14 +22,14 @@
         "servers": [
             {
                 "tag": "dns-remote",
-                "address": "tcp://185.228.168.9",
+                "address": "tcp://8.8.4.4",
                 "address_resolver": "dns-direct",
                 "address_strategy": "prefer_ipv4",
                 "strategy": "prefer_ipv4"
             },
             {
                 "tag": "dns-direct",
-                "address": "tcp://185.228.168.9",
+                "address": "tcp://8.8.4.4",
                 "address_resolver": "dns-local",
                 "strategy": "prefer_ipv4",
                 "detour": "direct"
@@ -63,7 +63,7 @@
             "domain_strategy": "prefer_ipv4",
             "interface_name": "sing-tun",
             "inet4_address": "172.19.0.1/30",
-            "mtu": 1300,
+            "mtu": 1306,
             "auto_route": true,
             "strict_route": true,
             "stack": "gvisor",
@@ -77,26 +77,26 @@
             "tag": "Proxy",
             "type": "selector",
             "outbounds": [
-                "WARP-MAIN",
-                "WARP-WOW"
+                "Tehran",
+                "Berlin"
             ],
-            "default": "WARP-WOW",
+            "default": "Berlin",
             "interrupt_exist_connections": false
         },
         {
             "type": "wireguard",
-            "server": "188.114.97.72",
-            "server_port": 4198,
+            "server": "162.159.195.144",
+            "server_port": 945,
             "local_address": [
                 "172.16.0.2/32",
-                "2606:4700:110:80ea:7572:83df:646d:2f42/128"
+                "2606:4700:110:8a3e:6d69:c730:9e68:d0b6/128"
             ],
-            "private_key": "+AeLyy8y19RfOEutXeBSKJ3hSJUB69v6Idg5qbQaTkQ=",
+            "private_key": "2KGyPZpSzfsJXk0CA4mGjRYj6AfSB3EUB8NbpbLoD0w=",
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
             "reserved": [
-                141,
-                146,
-                69
+                152,
+                22,
+                91
             ],
             "mtu": 1300,
             "workers": 2,
@@ -105,18 +105,18 @@
         },
         {
             "type": "wireguard",
-            "server": "162.159.192.223",
-            "server_port": 8319,
+            "server": "188.114.99.65",
+            "server_port": 3476,
             "local_address": [
                 "172.16.0.2/32",
-                "2606:4700:110:8918:de45:4414:6af6:6fdf/128"
+                "2606:4700:110:8515:32fc:eccc:7ef:1ce/128"
             ],
-            "private_key": "IK+9qzehmzaTmueg5tXYTx/D/5J51Y40l0paleBAEGg=",
+            "private_key": "iIaIgX17WETvFfNPu5+CNrvyulFlI9RsdhsdTJdAqmg=",
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
             "reserved": [
-                170,
-                243,
-                207
+                220,
+                179,
+                245
             ],
             "mtu": 1300,
             "workers": 2,
