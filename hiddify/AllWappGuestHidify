@@ -1,0 +1,233 @@
+{
+  "outbounds": [
+    {
+      "type": "wireguard",
+      "tag": "warp+🇮🇷zula",
+      "server": "zula.ir",
+      "server_port": 903,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
+      ],
+      "private_key": "UIa+x5F1VZ1fEjsJhq1/+hdz/wD75mSGDjqxiFVQ4k8=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        8,
+        84,
+        156
+      ],
+      "mtu": 1280,
+      "fake_packets": "5-10"
+    },
+    {
+      "type": "wireguard",
+      "tag": "warp+🇮🇷1",
+      "server": "188.114.98.224",
+      "server_port": 2371,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
+      ],
+      "private_key": "UIa+x5F1VZ1fEjsJhq1/+hdz/wD75mSGDjqxiFVQ4k8=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        8,
+        84,
+        156
+      ],
+      "mtu": 1280,
+      "fake_packets": "5-10"
+    },
+    {
+      "type": "wireguard",
+      "tag": "warp+🇮🇷2",
+      "server": "188.114.98.224",
+      "server_port": 903,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
+      ],
+      "private_key": "UIa+x5F1VZ1fEjsJhq1/+hdz/wD75mSGDjqxiFVQ4k8=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        8,
+        84,
+        156
+      ],
+      "mtu": 1280,
+      "fake_packets": "5-10"
+    },
+    {
+      "type": "wireguard",
+      "tag": "warp+🇮🇷3",
+      "server": "188.114.96.0",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
+      ],
+      "private_key": "UIa+x5F1VZ1fEjsJhq1/+hdz/wD75mSGDjqxiFVQ4k8=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        8,
+        84,
+        156
+      ],
+      "mtu": 1280,
+      "fake_packets": "5-10"
+    },
+    {
+      "type": "wireguard",
+      "tag": "warp+🇮🇷5",
+      "server": "162.159.192.105",
+      "server_port": 1018,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
+      ],
+      "private_key": "UIa+x5F1VZ1fEjsJhq1/+hdz/wD75mSGDjqxiFVQ4k8=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        8,
+        84,
+        156
+      ],
+      "mtu": 1280,
+      "fake_packets": "5-10"
+    },
+    {
+      "type": "wireguard",
+      "tag": "warp+🇮🇷6",
+      "server": "188.114.96.230",
+      "server_port": 1018,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
+      ],
+      "private_key": "UIa+x5F1VZ1fEjsJhq1/+hdz/wD75mSGDjqxiFVQ4k8=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        8,
+        84,
+        156
+      ],
+      "mtu": 1280,
+      "fake_packets": "5-10"
+    },
+    {
+      "type": "wireguard",
+      "tag": "warp+🇮🇷7",
+      "server": "188.114.99.249",
+      "server_port": 4177,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
+      ],
+      "private_key": "UIa+x5F1VZ1fEjsJhq1/+hdz/wD75mSGDjqxiFVQ4k8=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        8,
+        84,
+        156
+      ],
+      "mtu": 1280,
+      "fake_packets": "5-10"
+    },
+    {
+      "type": "wireguard",
+      "tag": "warp+🇮🇷8",
+      "server": "188.114.99.78",
+      "server_port": 878,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
+      ],
+      "private_key": "UIa+x5F1VZ1fEjsJhq1/+hdz/wD75mSGDjqxiFVQ4k8=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        8,
+        84,
+        156
+      ],
+      "mtu": 1280,
+      "fake_packets": "5-10"
+    },
+
+    {
+      "type": "wireguard",
+      "tag": "warp+🇮🇷6️⃣ 1",
+      "server": "2606:4700:d0::4649:80ce:36a6",
+      "server_port": 7152,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
+      ],
+      "private_key": "UIa+x5F1VZ1fEjsJhq1/+hdz/wD75mSGDjqxiFVQ4k8=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        8,
+        84,
+        156
+      ],
+      "mtu": 1280,
+      "fake_packets": "5-10"
+    },
+    {
+      "type": "wireguard",
+      "tag": "warp+🇮🇷6️⃣ 2",
+      "server": "2606:4700:d0::4649:80ce:36a6",
+      "server_port": 903,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
+      ],
+      "private_key": "UIa+x5F1VZ1fEjsJhq1/+hdz/wD75mSGDjqxiFVQ4k8=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        8,
+        84,
+        156
+      ],
+      "mtu": 1280,
+      "fake_packets": "5-10"
+    },
+    {
+      "type": "wireguard",
+      "tag": "warp+🇮🇷6️⃣ 3",
+      "server": "2606:4700:d0::6b9c:3dd2:24cf",
+      "server_port": 1074,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
+      ],
+      "private_key": "UIa+x5F1VZ1fEjsJhq1/+hdz/wD75mSGDjqxiFVQ4k8=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        8,
+        84,
+        156
+      ],
+      "mtu": 1280,
+      "fake_packets": "5-10"
+    },
+    {
+      "type": "wireguard",
+      "tag": "warp+🇮🇷6️⃣ 4",
+      "server": "2606:4700:d0::061c:7f00:92c3",
+      "server_port": 2408,
+      "local_address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
+      ],
+      "private_key": "UIa+x5F1VZ1fEjsJhq1/+hdz/wD75mSGDjqxiFVQ4k8=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": [
+        8,
+        84,
+        156
+      ],
+      "mtu": 1280,
+      "fake_packets": "5-10"
+    }
+]
+}
