@@ -8,7 +8,7 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "tcp://8.8.4.4",
+        "address": "tcp://185.228.168.9",
         "address_resolver": "dns-direct"
       },
       {
@@ -18,7 +18,7 @@
       },
       {
         "tag": "dns-direct",
-        "address": "tcp://8.8.4.4",
+        "address": "tcp://185.228.168.9",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -134,7 +134,7 @@
       "server_port": 987,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "bfY2",
-      "mtu": 1340,
+      "mtu": 1306,
       "fake_packets_mode": "m1",
       "fake_packets": "25-30",
       "fake_packets_size": "10-30",
