@@ -1,12 +1,12 @@
-name: NiREvil_Warp
+name: REvil_Warp
 
 on:
   push:
     branches: [ "main" ]
     paths:
       - 'warp.py'
-  schedule: #every fuckin 45 minutes
-    - cron: '*/45 * * * *'
+  schedule: #every fuckin 60 minutes
+    - cron: '0 * * * *'
 
 jobs:
   build:
