@@ -9,7 +9,7 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "https://pb30cfa381.cloudflare-gateway.com/dns-query",
+        "address": "https://2tnc6zpc9c.cloudflare-gateway.com/dns-query",
         "address_resolver": "dns-direct"
       },
       {
@@ -30,7 +30,7 @@
     ],
     "rules": [
       {
-        "domain": "pb30cfa381.cloudflare-gateway.com",
+        "domain": "2tnc6zpc9c.cloudflare-gateway.com",
         "server": "dns-direct"
       },
       {
