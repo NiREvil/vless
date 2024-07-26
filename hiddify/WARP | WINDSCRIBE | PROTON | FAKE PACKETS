@@ -1,0 +1,80 @@
+{
+  "outbounds": 
+  [
+    {
+  "local_address": [
+    "100.100.196.8/32"
+  ],
+  "mtu": 1280,
+  "peer_public_key": "cmaT8JIehfRf5PWWDkcBRwLWDb3jrIkk/SDbw4JmUAc=",
+  "pre_shared_key": "p9oZWElz4vn74dOqa0+UNIJGxy2/VeBF6b8YIfmVgY0=",
+  "private_key": "qKgJJNTkkAr37k74Ix7FkdB3tVIHE1rQBOp4adjm2HU=",
+  "server": "138.199.47.222",
+  "server_port": 65142,
+  "type": "wireguard",
+  "domain_strategy": "",
+  "tag": "Windscribe 🇫🇷",
+   "fake_packets": "5-10"
+    },
+    {
+      "type": "wireguard",
+      "tag": "WARP+ 🇮🇷",
+      "local_address": [
+        "172.16.0.2/24",
+        "2606:4700:110:8056:6ec9:563a:d8e7:5097/128"
+      ],
+      "private_key": "AN/vE11+V8r25aGti20+ZPv3LfWckXfzGJlDQuxpCkc=",
+      "server": "zula.ir",
+      "server_port": 1018,
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "reserved": "bfY2",
+      "mtu": 1280,
+      "fake_packets": "5-10"
+    },
+{
+  "type": "wireguard",
+  "tag": "WARP+ 🇩🇪",
+  "detour": "WARP+ 🇮🇷",
+  "server": "188.114.98.224",
+  "server_port": 3854,
+  "local_address": [
+    "172.16.0.2/32",
+    "2606:4700:110:8d6c:45f2:d6c:544e:49e5/128"
+  ],
+  "private_key": "ONlvNUodQ5sUM6cB7v1D/OasYhX9UI1XcPMlETaM730=",
+  "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+  "reserved": [
+    240,
+    151,
+    246
+  ],
+  "mtu": 1280
+},
+    {
+      "type": "wireguard",
+      "tag": "Proton 🇳🇱",
+      "local_address": [
+        "10.2.0.2/32"
+      ],
+      "private_key": "2HbmAORFGVs9RQ3wk91D3xl46ug+fjVg1yH5hBfQemk=",
+      "server": "169.150.218.1",
+      "server_port": 51820,
+      "peer_public_key": "bF0RahG8sdUqVt/3Q3Awy46kJ06zV0mzywelGyM/DVw=",
+      "mtu": 1280,
+   "fake_packets": "5-10"
+    },
+    {
+      "type": "wireguard",
+      "tag": "Proton 🇺🇲",
+      "local_address": [
+        "10.2.0.2/32"
+      ],
+      "private_key": "EHdMrOWtSRgouLS0nW0ZZn1pUuHzuCA1IN6vsDXKOXc=",
+      "server": "156.146.54.81",
+      "server_port": 51820,
+      "peer_public_key": "FF79Ab2fcEYtsyNYxviTUtVxJLuvUcoEOpl8DYbdsgg=",
+      "mtu": 1280,
+   "fake_packets": "5-10"
+    }
+  ]
+}
