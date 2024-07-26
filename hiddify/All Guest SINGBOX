@@ -61,7 +61,7 @@
       "inet6_address": "fdfe:dcba:9876::1/126",
       "auto_route": true,
       "strict_route": true,
-      "stack": "mixed",
+      "stack": "gvisor",
       "sniff": true
     },
     {
@@ -80,9 +80,9 @@
         "Best Latency",
         "🇮🇷 WARP+",
         "🇮🇷 WARP+6️⃣",
-            "🇩🇪 WARP+ detour4️⃣",
-            "🇩🇪 WARP+ detour6️⃣",
-        "warp+🇮🇷zula",
+        "🇩🇪 WARP+ detour4️⃣",
+        "🇩🇪 WARP+ detour6️⃣",
+        "warp+🇮🇷REvil",
         "warp+🇮🇷1",
         "warp+🇮🇷2",
         "warp+🇮🇷3",
@@ -94,7 +94,7 @@
         "warp+🇮🇷6️⃣ 2",
         "warp+🇮🇷6️⃣ 3",
         "warp+🇮🇷6️⃣ 4",
-            "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § hy2+ech",
+        "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § hy2+ech",
         "🇳🇱 𝐈𝐑𝐂𝐏 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § hy2+ech",
         "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § sstls",
         "🇳🇱 𝐈𝐑𝐂𝐏 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § sstls",
@@ -136,9 +136,9 @@
       "outbounds": [
         "🇮🇷 WARP+",
         "🇮🇷 WARP+6️⃣",
-            "🇩🇪 WARP+ detour4️⃣",
-            "🇩🇪 WARP+ detour6️⃣",
-        "warp+🇮🇷zula",
+        "🇩🇪 WARP+ detour4️⃣",
+        "🇩🇪 WARP+ detour6️⃣",
+        "warp+🇮🇷REvil",
         "warp+🇮🇷1",
         "warp+🇮🇷2",
         "warp+🇮🇷3",
@@ -150,7 +150,7 @@
         "warp+🇮🇷6️⃣ 2",
         "warp+🇮🇷6️⃣ 3",
         "warp+🇮🇷6️⃣ 4",
-            "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § hy2+ech",
+        "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § hy2+ech",
         "🇳🇱 𝐈𝐑𝐂𝐏 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § hy2+ech",
         "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § sstls",
         "🇳🇱 𝐈𝐑𝐂𝐏 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § sstls",
@@ -199,7 +199,7 @@
       ],
       "private_key": "AN/vE11+V8r25aGti20+ZPv3LfWckXfzGJlDQuxpCkc=",
       "server": "188.114.96.61",
-      "server_port": 945,
+      "server_port": 891,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "bfY2",
       "mtu": 1280
@@ -212,8 +212,8 @@
         "2606:4700:110:8056:6ec9:563a:d8e7:5097/128"
       ],
       "private_key": "AN/vE11+V8r25aGti20+ZPv3LfWckXfzGJlDQuxpCkc=",
-      "server": "2606:4700:d1::a29f:c004",
-      "server_port": 903,
+      "server": "[2606:4700:d0::19b6:22c2:9e32:6d93]",
+      "server_port": 891,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "bfY2",
       "mtu": 1280
@@ -223,7 +223,7 @@
   "tag": "🇩🇪 WARP+ detour4️⃣",
   "detour": "🇮🇷 WARP+",
   "server": "188.114.96.78",
-  "server_port": 891,
+  "server_port": 955,
   "local_address": [
     "172.16.0.2/32",
     "2606:4700:110:8d6c:45f2:d6c:544e:49e5/128"
@@ -242,7 +242,7 @@
   "tag": "🇩🇪 WARP+ detour6️⃣",
   "detour": "🇮🇷 WARP+6️⃣",
   "server": "188.114.96.78",
-  "server_port": 891,
+  "server_port": 955,
   "local_address": [
     "172.16.0.2/32",
     "2606:4700:110:8d6c:45f2:d6c:544e:49e5/128"
@@ -258,9 +258,9 @@
 },
     {
       "type": "wireguard",
-      "tag": "warp+🇮🇷zula",
-      "server": "zula.ir",
-      "server_port": 903,
+      "tag": "warp+🇮🇷REvil",
+      "server": "ipw.nscl.ir",
+      "server_port": 1070,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
@@ -295,7 +295,7 @@
     {
       "type": "wireguard",
       "tag": "warp+🇮🇷2",
-      "server": "188.114.98.224",
+      "server": "162.159.192.36",
       "server_port": 903,
       "local_address": [
         "172.16.0.2/32",
@@ -314,7 +314,7 @@
       "type": "wireguard",
       "tag": "warp+🇮🇷3",
       "server": "188.114.96.0",
-      "server_port": 2408,
+      "server_port": 864,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
@@ -349,8 +349,8 @@
     {
       "type": "wireguard",
       "tag": "warp+🇮🇷6",
-      "server": "188.114.96.230",
-      "server_port": 1018,
+      "server": "162.159.192.118",
+      "server_port": 987,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
@@ -385,7 +385,7 @@
     {
       "type": "wireguard",
       "tag": "warp+🇮🇷8",
-      "server": "188.114.99.78",
+      "server": "wa.bachebiapain.ir",
       "server_port": 878,
       "local_address": [
         "172.16.0.2/32",
@@ -403,8 +403,8 @@
     {
       "type": "wireguard",
       "tag": "warp+🇮🇷6️⃣ 1",
-      "server": "2606:4700:d0::4649:80ce:36a6",
-      "server_port": 7152,
+      "server": "[2606:4700:d1::94fc:8373:1e65:dc53]",
+      "server_port": 943,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
@@ -421,7 +421,7 @@
     {
       "type": "wireguard",
       "tag": "warp+🇮🇷6️⃣ 2",
-      "server": "2606:4700:d0::4649:80ce:36a6",
+      "server": "[2606:4700:d0::4649:80ce:36a6]",
       "server_port": 903,
       "local_address": [
         "172.16.0.2/32",
@@ -439,8 +439,8 @@
     {
       "type": "wireguard",
       "tag": "warp+🇮🇷6️⃣ 3",
-      "server": "2606:4700:d0::6b9c:3dd2:24cf",
-      "server_port": 1074,
+      "server": "[2606:4700:d0::19b6:22c2:9e32:6d93]",
+      "server_port": 943,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
@@ -457,8 +457,8 @@
     {
       "type": "wireguard",
       "tag": "warp+🇮🇷6️⃣ 4",
-      "server": "2606:4700:d0::061c:7f00:92c3",
-      "server_port": 2408,
+      "server": "[2606:4700:d0::061c:7f00:92c3]",
+      "server_port": 8886,
       "local_address": [
         "172.16.0.2/32",
         "2606:4700:110:8b3d:48e6:7685:15cc:d26d/128"
