@@ -39,10 +39,6 @@ proxyip.digitalocean.hw.090227.xyz
 ```POV-Ray SDL
 proxyip.oracle.fxxk.dedyn.io
 ```
-**🇸🇪 Sweden, Stockholm, Oracle Cloud**
-```POV-Ray SDL
-129.151.205.193
-```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇩🇪 Germany, Frankfurt am Main, Zenlayer**
 ```POV-Ray SDL
@@ -84,6 +80,9 @@ proxyip.oracle.fxxk.dedyn.io
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇪 United arab emirates, Abu Dhabi**
+```
+139.185.34.131
+```
 ```
 193.123.69.77
 ```
