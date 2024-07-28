@@ -1,5 +1,5 @@
 //profile-title: base64:d2FycCBPTiB3YXJw
-//profile-update-interval: 36
+//profile-update-interval: 24
 //subscription-userinfo: upload=2147483648; download=3221225472; total=966367641600; expire=1731335400
 //support-url:  https://t.me/F_NiREvil
 //profile-web-page-url: https://github.com/NiREvil
@@ -14,7 +14,7 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "https://wikimedia-dns.org/dns-query",
+        "address": "tcp://185.228.168.9",
         "address_resolver": "dns-direct"
       },
       {
@@ -24,7 +24,7 @@
       },
       {
         "tag": "dns-direct",
-        "address": "https://wikimedia-dns.org/dns-query",
+        "address": "tcp://185.228.168.9",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -55,8 +55,8 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "188.114.96.3",
-        "188.114.97.3",
+        "188.114.96.0",
+        "188.114.97.0",
         "2a06:98c1:3120::",
         "2a06:98c1:3121::",
         "104.17.147.22",
@@ -129,14 +129,15 @@
       ],
       "private_key": "QALMq3+ZfwxtIxXFVy3Drs0QeIbTnSoWOYxJM9ajemk=",
       "server": "162.159.192.88",
-      "server_port": 1070,
+      "server_port": 1018,
       
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": [55,160,170],
-      "mtu": 1280,
-      "fake_packets": "10-20",
-      "fake_packets_size": "20-60",
-      "fake_packets_delay": "5-10"
+      "mtu": 1306,
+      "fake_packets_mode": "m4",
+      "fake_packets": "40-80",
+      "fake_packets_size": "40-100",
+      "fake_packets_delay": "4-8"
     },
     {
       "type": "wireguard",
@@ -147,8 +148,8 @@
         "2606:4700:110:8c7e:84d3:cc39:2b67:d765/128"
       ],
       "private_key": "YPhnBcnEhb2jghr943+/sVz76VwQUDCQgPWeX000dFc=",
-      "server": "[2606:4700:d0::19b6:22c2:9e32:6d93]",
-      "server_port": 943,
+      "server": "[2606:4700:d1::27d0:ac63:30e2:5dfb]",
+      "server_port": 864,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": [192,186,142],
       "mtu": 1280
@@ -166,8 +167,8 @@
       "tag": "direct-fragment",
       "tls_fragment": {
         "enabled": true,
-        "size": "20-40",
-        "sleep": "5-10"
+        "size": "100-200",
+        "sleep": "10-15"
       }
     },
     {
