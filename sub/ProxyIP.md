@@ -39,11 +39,15 @@ proxyip.digitalocean.hw.090227.xyz
 ```POV-Ray SDL
 proxyip.oracle.fxxk.dedyn.io
 ```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇩🇪 Germany, Frankfurt am Main, Zenlayer**
+🇺🇸 **USA, Virginia, Ashburn, Amazon Technologies Inc.**
 ```POV-Ray SDL
-23.90.151.62
+75.2.32.4
 ```
+🇺🇸 **USA, Washington, Seattle, Amazon Technologies Inc.**
+```
+99.83.209.185
+```
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇩🇪 Germany, Frankfurt am Main, Oracle Cloud**
 ```POV-Ray SDL
 144.24.189.21
