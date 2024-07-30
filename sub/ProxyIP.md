@@ -19,12 +19,17 @@ And also [EDtunnel](https://github.com/NiREvil/Emotional-Damage)
 
 ## Best proxies
 
-**🇺🇸 USA & 🇩🇪 Germany**
+**🇺🇸 USA, Tencent & Amazon Tech Inc**
 ```CSS
-ni.radically.pro
+bpb.radically.pro
 ```
+**🇩🇪 Germany, Frankfurt am Main, Multiple ASN's**
 ```POV-Ray SDL
 de.radically.pro
+```
+**🇺🇸 USA, Ashburn, Virginia, Oracle corporation**
+```CSS
+ni.radically.pro
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 🇺🇸 **USA, Random locations, Oracle, Digital ocean, Data camp, Akamai, Amazon**
@@ -94,11 +99,15 @@ proxyip.oracle.fxxk.dedyn.io
 193.123.81.105
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇫🇷 Île de France, Oracle Svenska AB**
+**🇸🇪 Swedenm, Stockholm, Oracle Corporation**
+```
+129.151.221.152
+```
+**🇫🇷 France, Marseille, Oracle Svenska AB**
 ```
 141.145.199.188
 ```
-**🇫🇷 France, Marseille, Oracle corporation**
+
 ```
 144.24.200.164
 ```
