@@ -44,8 +44,8 @@
   "type": "wireguard",
   "tag": "WARP+ 🇩🇪",
   "detour": "WARP+ 🇮🇷",
-  "server": "188.114.98.224",
-  "server_port": 3854,
+  "server": "zula.ir",
+  "server_port": 864,
   "local_address": [
     "172.16.0.2/32",
     "2606:4700:110:8d6c:45f2:d6c:544e:49e5/128"
@@ -57,7 +57,7 @@
     151,
     246
   ],
-  "mtu": 1280
+  "mtu": 1285
 },
     {
       "type": "wireguard",
@@ -70,7 +70,6 @@
       "server_port": 51820,
       "peer_public_key": "RGkflpj8nU73t7WgEmZQ45f+wF1QM3fDiKjimp5iCGA=",
       "mtu": 1280,
-   "fake_packets": "5-10"
     },
     {
       "type": "wireguard",
@@ -83,7 +82,6 @@
       "server_port": 51820,
       "peer_public_key": "DYS0yRzlf5QlioXwjvnmhsee0loEDTcryxkOS7rUjCE=",
       "mtu": 1280,
-   "fake_packets": "5-10"
     }
   ]
 }
