@@ -27,28 +27,36 @@
       "tag": "WARP+ 🇮🇷",
       "local_address": [
         "172.16.0.2/24",
-        "2606:4700:110:8af4:914b:4c07:6713:2819/128"
+        "2606:4700:110:8056:6ec9:563a:d8e7:5097/128"
       ],
-      "private_key": "eBfZedhiWGjf5iz3FtHOERpUJM6+ZJu8djMluvULYlg=",
-      "server": "162.159.192.106",
-      "server_port": 890,
+      "private_key": "AN/vE11+V8r25aGti20+ZPv3LfWckXfzGJlDQuxpCkc=",
+      "server": "zula.ir",
+      "server_port": 1018,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": "e4tN",
-      "mtu": 1306
+      "reserved": "bfY2",
+      "mtu": 1306,
+      "fake_packets_mode": "m4",
+      "fake_packets": "40-80",
+      "fake_packets_size": "40-100",
+      "fake_packets_delay": "4-8"
     },
 {
   "type": "wireguard",
   "tag": "WARP+ 🇩🇪",
   "detour": "WARP+ 🇮🇷",
-  "server": "162.159.192.106",
-  "server_port": 890,
+  "server": "188.114.98.224",
+  "server_port": 3854,
   "local_address": [
     "172.16.0.2/32",
-    "2606:4700:110:85db:c90d:813e:40ce:74c3/128"
+    "2606:4700:110:8d6c:45f2:d6c:544e:49e5/128"
   ],
-  "private_key": "IFCJj1oqXpQLrVk28XCyBg25JYv+pLWm5Hg26HM00n4=",
+  "private_key": "ONlvNUodQ5sUM6cB7v1D/OasYhX9UI1XcPMlETaM730=",
   "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-  "reserved": "+zMW",
+  "reserved": [
+    240,
+    151,
+    246
+  ],
   "mtu": 1280
 },
     {
