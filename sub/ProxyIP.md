@@ -32,10 +32,7 @@ de.radically.pro
 ni.radically.pro
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-🇺🇸 **USA, Random locations, Oracle, Digital ocean, Data camp, Akamai, Amazon**
-```CSS
-proxyip.us.hw.090227.xyz
-```
+
 🇺🇸 **USA, California, santa clara, Digital ocean LLC**
 ```
 proxyip.digitalocean.hw.090227.xyz
@@ -53,6 +50,10 @@ proxyip.oracle.fxxk.dedyn.io
 99.83.209.185
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇩🇪 Germany, Frankfurt am Main, Hesse, Aceville Pte.ltd**
+```POV-Ray SDL
+43.131.49.250
+```
 **🇩🇪 Germany, Frankfurt am Main, Oracle Cloud**
 ```POV-Ray SDL
 144.24.189.21
