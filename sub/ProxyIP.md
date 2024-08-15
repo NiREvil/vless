@@ -72,9 +72,6 @@ proxyip.oracle.fxxk.dedyn.io
 141.144.232.159
 ```
 ```POV-Ray SDL
-193.122.61.167
-```
-```POV-Ray SDL
 130.61.239.203
 ```
 ```POV-Ray SDL
@@ -209,6 +206,12 @@ Zenlayer**
 **🇯🇵 Japan, Ōi, Saitama, The Constant Company, LLC**
 ```
 66.42.34.203
+```
+```
+45.77.130.245
+```
+```
+45.76.220.61
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇺 Australia, Victoria, Melbourne**
