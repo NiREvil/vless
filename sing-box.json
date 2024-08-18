@@ -22,14 +22,14 @@
         "servers": [
             {
                 "tag": "dns-remote",
-                "address": "tcp://8.8.4.4",
+                "address": "tcp://185.228.168.9",
                 "address_resolver": "dns-direct",
                 "address_strategy": "prefer_ipv4",
                 "strategy": "prefer_ipv4"
             },
             {
                 "tag": "dns-direct",
-                "address": "tcp://8.8.4.4",
+                "address": "tcp://185.228.168.9",
                 "address_resolver": "dns-local",
                 "strategy": "prefer_ipv4",
                 "detour": "direct"
@@ -77,16 +77,16 @@
             "tag": "Proxy",
             "type": "selector",
             "outbounds": [
-                "WARP-MAIN",
-                "WARP-WOW"
+                "🇮🇷 Tehran",
+                "🇩🇪 Berlin"
             ],
-            "default": "WARP-WOW",
+            "default": "🇩🇪 Berlin",
             "interrupt_exist_connections": false
         },
         {
             "type": "wireguard",
-            "server": "162.159.195.215",
-            "server_port": 1180,
+            "server": "162.159.192.161",
+            "server_port": 891,
             "local_address": [
                 "172.16.0.2/32",
                 "2606:4700:110:872b:661c:a60e:8269:8ae1/128"
@@ -98,15 +98,15 @@
                 40,
                 182
             ],
-            "mtu": 1300,
+            "mtu": 1306,
             "workers": 2,
             "detour": "direct",
-            "tag": "WARP-MAIN"
+            "tag": "🇮🇷 Tehran"
         },
         {
             "type": "wireguard",
-            "server": "188.114.98.185",
-            "server_port": 943,
+            "server": "162.159.192.161",
+            "server_port": 8886,
             "local_address": [
                 "172.16.0.2/32",
                 "2606:4700:110:892c:2b9:aeb6:8c02:c9c6/128"
@@ -118,10 +118,10 @@
                 98,
                 179
             ],
-            "mtu": 1300,
+            "mtu": 1280,
             "workers": 2,
-            "detour": "WARP-MAIN",
-            "tag": "WARP-WOW"
+            "detour": "🇮🇷 Tehran",
+            "tag": "🇩🇪 Berlin"
         },
         {
             "tag": "direct",
