@@ -141,11 +141,17 @@ def toSingBox(tag, clean_ip, detour):
                 "mtu": 1306,
                 "reserved": data["config"]["reserved"],
                 "detour": f"{detour}",
-                "workers": 2,
+                "workers": 2
             }
-
-           
-
+            
+            # Safely remove files if they exist
+            for file in ["api.sh"]:
+                if os.path.exists(file):
+                    os.remove(file)
+                    print(f"Removed {file}")
+                else:
+                    print(f"{file} not found, skipping removal")
+            
             return wg
         except json.JSONDecodeError:
             print("Error: Unable to parse JSON output")
