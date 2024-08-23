@@ -1,19 +1,25 @@
-import platform, subprocess, os, datetime, base64, json
+import ipaddress
+import platform
+import subprocess
+import os
+import datetime
+import base64
+import json
 
+warp_cidr = [
+    '162.159.192.0/24',
+    '162.159.193.0/24',
+    '162.159.195.0/24',
+    '162.159.204.0/24',
+    '188.114.96.0/24',
+    '188.114.97.0/24',
+    '188.114.98.0/24',
+    '188.114.99.0/24'
+]
 
-def arch_suffix():
-    machine = platform.machine().lower()
-    if machine.startswith('i386') or machine.startswith('i686'):
-        return '386'
-    elif machine.startswith(('x86_64', 'amd64')):
-        return 'amd64'
-    elif machine.startswith(('armv8', 'arm64', 'aarch64')):
-        return 'arm64'
-    elif machine.startswith('s390x'):
-        return 's390x'
-    else:
-        raise ValueError("Unsupported CPU architecture")
-
+script_directory = os.path.dirname(__file__)
+Bestip_path = os.path.join(script_directory, 'Bestip.txt')
+result_path = os.path.join(script_directory, 'result.csv')
 
 def export_bestIPS(path):
     Bestip = []
