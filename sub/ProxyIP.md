@@ -33,9 +33,17 @@ ni.radically.pro
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
+🇺🇸 **USA, New Jersey, Piscataway, Vultr Holdings, LLC**
+```
+proxyip.vultr.fxxk.dedyn.io
+```
 🇺🇸 **USA, California, santa clara, Digital ocean LLC**
 ```
 proxyip.digitalocean.hw.090227.xyz
+```
+🇺🇸 **USA, California, LA, multacom corporation**
+```
+proxyip..fxxk.dedyn.io
 ```
 🇺🇸 **USA, Arizona, phoenix, Oracle corporation**
 ```POV-Ray SDL
@@ -112,9 +120,14 @@ proxyip.oracle.fxxk.dedyn.io
 ```
 141.145.199.188
 ```
-
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇸🇬 Singapore, Stockholm, Amazon Technologies Inc.**
 ```
-144.24.200.164
+13.228.170.74
+```
+**🇯🇵 Japan, Tokyo Shibuya,  Amazon Technologies Inc.**
+```
+3.112.21.102
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, California, santa clara, Tencent cloud computing**
