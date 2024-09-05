@@ -102,7 +102,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sub/warp%2B-ios
 https://raw.githubusercontent.com/NiREvil/vless/main/sub/wireguardn
 
 ---
-#### NikaNG
+#### Warp NikaNG
 > [About NikaNG](https://github.com/mahsanet/NikaNG/releases)
 
 ```CSS
