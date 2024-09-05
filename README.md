@@ -14,8 +14,6 @@ $$\color{silver} \Huge \text{\R $\sum{\vil_t = \mathbb{N108}\infty}$}$$
 v2rayNG、NikaNG、Hiddify、Nekobox、Clash-Meta、Sing-Box等。
 
 
-$$\color{silver} \Huge \text{\R $\sum{\vil_t = \mathbb{N108}\infty}$}$$
-
 ## $\color{silver} \normalsize \text{The subscription link for the Hiddify and singbox clients}$
 
 ### Built-in github actions sublink <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="20"/>  <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>
