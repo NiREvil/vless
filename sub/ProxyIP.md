@@ -417,8 +417,3 @@ proxyip.multacom.fxxk.dedyn.io
 -     const proxyIPs = ['5.101.180.145'];
 
 and more ["rentry.co/CF-proxyIP"](https://rentry.co/CF-proxyIP)
-
-
-<p align="left">
-<img src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN-199x250.png" alt="Fuckoff" style="width:40%; border:0;">
-</p>
