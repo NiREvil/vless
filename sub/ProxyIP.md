@@ -31,6 +31,10 @@ de.radically.pro
 ```CSS
 ni.radically.pro
 ```
+**🇹🇷 Turkey, Stark Industries Solutions LTD**
+```
+turk.radicalization.ir
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
 🇺🇸 **USA, New Jersey, Piscataway, Vultr Holdings, LLC**
@@ -101,6 +105,15 @@ proxyip.oracle.fxxk.dedyn.io
 130.61.87.219
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇹🇷 Turkey, Istanbul, Poyraz Hosting Bilisim Hizmetleri**
+```
+2.59.117.217
+```
+**🇹🇷 Turkey, izmir, Stark Industries Solutions LTD**
+```
+62.3.12.185
+```
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇪 United arab emirates, Abu Dhabi**
 ```
 139.185.34.131
@@ -113,9 +126,7 @@ proxyip.oracle.fxxk.dedyn.io
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇸🇪 Swedenm, Stockholm, Oracle Corporation**
-```
-129.151.221.152
-```
+~~129.151.221.152~~
 **🇫🇷 France, Marseille, Oracle Svenska AB**
 ```
 141.145.199.188
@@ -123,7 +134,7 @@ proxyip.oracle.fxxk.dedyn.io
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇸🇬 Singapore, Stockholm, Amazon Technologies Inc.**
 ```
-13.228.170.74
+18.141.204.88
 ```
 **🇯🇵 Japan, Tokyo Shibuya,  Amazon Technologies Inc.**
 ```
@@ -133,9 +144,6 @@ proxyip.oracle.fxxk.dedyn.io
 **🇺🇸 USA, California, santa clara, Tencent cloud computing**
 ```
 43.153.103.203
-```
-```
-43.153.80.208
 ```
 🇺🇸 **USA, California, san jose, DataCamp Limited & 
 Zenlayer**
@@ -161,11 +169,6 @@ Zenlayer**
 **🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies**
 ```
 72.13.122.137
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇹🇷 Turkey, izmir**
-```
-62.3.12.185
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇱🇺 Luxembourg, FranTech Solutions**
@@ -265,17 +268,18 @@ ircpipproxy.duckdns.org
 
 فکر کنم این آسونترین روش باشه
 برای بدست آوردن proxyIP برای داخل وورکر باشه.
-<details>
-<summary> برای دیدن ادامه توضیحات کلیک کن </summary>
-  
-- روی هر کدوم از لینک‌های زیر کلیک کنی کلی پروکسی می‌بینی با توضیحات مربوط ب اون‌ها.
--  بعد از اینکه یکی از `proxyIP` هارو به وورکر یا پیجت اضافه کردی باید تست کنی ببینی سایت‌هایی مثل [whoer.net](whoer.net) و یا [speedtest.net](speedtest.net) یا بقیه سایت‌های پشت کلادفلر برات بالا میان یانه، اگر باز شدن ینی پروکسی ک انتخاب کردی اوکیه فیلتر هم نیست.
 
+__ادامه توضیحات__
+  
+- روی هر کدوم از لینک‌های زیر کلیک کنی کلی پروکسی می‌بینی با مشخصات مربوط ب اون‌ها.
+-  بعد از اینکه یکی از `proxyIP` هارو به وورکر یا پیجت اضافه کردی باید تست کنی ببینی سایت‌هایی مثل [whoer.net](whoer.net) و یا [speedtest.net](speedtest.net) یا بقیه سایت‌های پشت کلادفلر برات بالا میان یانه، اگر باز شدن ینی پروکسی ک انتخاب کردی اوکیه می‌تونی ازش استفاده کنی.
 
 - $\color{gold} \Large \text{in this case}$
-  - https://www.nslookup.io/domains/ipdb.rr.nu/dns-records/
-  - https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
   - https://www.nslookup.io/domains/my-telegram-is-herocore.onecf.eu.org/dns-records/
+  - https://www.nslookup.io/domains/bpb.radically.pro/dns-records/
+  - https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
+  - https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
+  - https://www.nslookup.io/domains/ipdb.rr.nu/dns-records/
   - https://www.nslookup.io/domains/cdn.xn--b6gac.eu.org/dns-records/
   - https://www.nslookup.io/domains/edgetunnel.anycast.eu.org/dns-records/
   - https://www.nslookup.io/domains/proxyip.aliyun.fxxk.dedyn.io/dns-records/
@@ -300,45 +304,42 @@ How to find proxyip for VLESS CF WORKERS using Cyberspace Search Engine [Telegra
  
  ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 ## little more 
-**note:**
-After connecting to vless every time, the IP is randomly changed and selected from among these countries.
 
-**IP's load from....** 
-
-    const proxyIPs = ["ipdb.rr.nu"];
----
 IP's load from Netherlands, Sweden,, Germany, US & ...
-
-    const proxyIPs = ['cdn-all.xn--b6gac.eu.org'];
+```
+cdn-all.xn--b6gac.eu.org
+```
 ---
 IP's load from Singapore, Korea, Japan, Hong Kong & ...
-
-    const proxyIPs = ['cdn.xn--b6gac.eu.org'];
+```
+cdn.xn--b6gac.eu.org'];
+```
 ---
-IP's load from Luxembourg, US, UK, ES, IT, CA & ...
-
-    const proxyIP = ['workers.cloudflare.cyou'];
----
+xxxxxx
+```
+workers.cloudflare.cyou
+```
 IP's: Singapore
-
-    const proxyIPs = ["edgetunnel.anycast.eu.org"];
+```
+edgetunnel.anycast.eu.org
+```
+xxxxxx
+```
+workers.bestip.one
+```
 ---
-IP's:Luxembourg, US, UK, DE & ...
-
-    const proxyIPs = ['workers.bestip.one'];
----
-USA, Alibaba Technology Co. Ltd.
-
-    const proxyIPs = ['proxyip.aliyun.fxxk.dedyn.io'];
----
-USA, 	Los Angeles, California, Vultr Holdings, LLC
-
-    const proxyIPs = ['proxyip.vultr.fxxk.dedyn.io'];
----
-USA, 	Los Angeles, California, CloudCone, LLC
-
-    const proxyIPs = ['proxyip.multacom.fxxk.dedyn.io'];
----
+Alibaba
+```
+proxyip.aliyun.fxxk.dedyn.io
+```
+vultr
+```
+proxyip.vultr.fxxk.dedyn.io
+````
+multacom
+```
+proxyip.multacom.fxxk.dedyn.io
+```
 ~~UK, London, Hostaris LLC~~
 
     176.97.77.32
