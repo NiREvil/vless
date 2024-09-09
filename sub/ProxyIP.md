@@ -32,21 +32,21 @@ de.radically.pro
 ni.radically.pro
 ```
 **🇹🇷 Turkey, Stark Industries Solutions LTD**
-```
+```POV-Ray SDL
 turk.radicalization.ir
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
 🇺🇸 **USA, New Jersey, Piscataway, Vultr Holdings, LLC**
-```
+```POV-Ray SDL
 proxyip.vultr.fxxk.dedyn.io
 ```
 🇺🇸 **USA, California, santa clara, Digital ocean LLC**
-```
+```POV-Ray SDL
 proxyip.digitalocean.hw.090227.xyz
 ```
 🇺🇸 **USA, California, LA, multacom corporation**
-```
+```POV-Ray SDL
 proxyip..fxxk.dedyn.io
 ```
 🇺🇸 **USA, Arizona, phoenix, Oracle corporation**
@@ -54,15 +54,15 @@ proxyip..fxxk.dedyn.io
 proxyip.oracle.fxxk.dedyn.io
 ```
 🇺🇸 **USA, Virginia, Ashburn, Amazon Technologies Inc.**
-```POV-Ray SDL
+```CSS
 75.2.32.4
 ```
 🇺🇸 **USA, Washington, Seattle, Amazon Technologies Inc.**
-```
+```CSS
 99.83.209.185
 ```
 🇺🇸 **USA, Chicago, Illinois, GigeNET**
-```
+```CSS
 169.197.131.196
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
@@ -106,22 +106,22 @@ proxyip.oracle.fxxk.dedyn.io
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇹🇷 Turkey, Istanbul, Poyraz Hosting Bilisim Hizmetleri**
-```
+```CSS
 2.59.117.217
 ```
 **🇹🇷 Turkey, izmir, Stark Industries Solutions LTD**
-```
+```CSS
 62.3.12.185
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇪 United arab emirates, Abu Dhabi**
-```
+```POV-Ray SDL
 139.185.34.131
 ```
-```
+```POV-Ray SDL
 193.123.69.77
 ```
-```
+```POV-Ray SDL
 193.123.81.105
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
@@ -231,16 +231,16 @@ Zenlayer**
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇺 Australia, Victoria, Melbourne**
-```POV-Ray SDL
+```CSS
 192.9.177.204
 ```
 **🇦🇺 Australia, New South Wales, Huntingwood**
-```POV-Ray SDL
+```CSS
 192.9.180.162
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇳🇮 i don't know**
-```
+```CSS
 ipdb.rr.nu
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
@@ -253,13 +253,14 @@ ipdb.rr.nu
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇬🇧 UK, Hostaris L.L.C**
-```
+```POV-Ray SDL
 ircpipproxy.duckdns.org
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
+
 <p align="center">
-  <br><img src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" width="360px">
+  <br><img src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png">
 </p>
 
 
@@ -288,56 +289,47 @@ __ادامه توضیحات__
 
 - > یکم خلاقیت ب خرج بدی خودت میفهمی که باید دنبال چی بگردی تو سایت
  
-</details>
  
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
 ## Advanced
 How to find proxyip for VLESS CF WORKERS using Cyberspace Search Engine [Telegra.ph Link](https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06) 
  
- 
- 
- 
- 
- 
  ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 ## little more 
 
 IP's load from Netherlands, Sweden,, Germany, US & ...
-```
+```POV-Ray SDL
 cdn-all.xn--b6gac.eu.org
 ```
 ---
 IP's load from Singapore, Korea, Japan, Hong Kong & ...
-```
+```POV-Ray SDL
 cdn.xn--b6gac.eu.org'];
 ```
----
 xxxxxx
-```
+```POV-Ray SDL
 workers.cloudflare.cyou
 ```
 IP's: Singapore
-```
+```POV-Ray SDL
 edgetunnel.anycast.eu.org
 ```
 xxxxxx
-```
+```POV-Ray SDL
 workers.bestip.one
 ```
 ---
 Alibaba
-```
+```POV-Ray SDL
 proxyip.aliyun.fxxk.dedyn.io
 ```
 vultr
-```
+```POV-Ray SDL
 proxyip.vultr.fxxk.dedyn.io
-````
-multacom
 ```
+multacom
+```POV-Ray SDL
 proxyip.multacom.fxxk.dedyn.io
 ```
 ~~UK, London, Hostaris LLC~~
