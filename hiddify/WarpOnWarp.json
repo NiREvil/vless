@@ -14,7 +14,7 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "https://2tnc6zpc9c.cloudflare-gateway.com/dns-query",
+        "address": "https://dns.dynx.pro/dns-query",
         "address_resolver": "dns-direct"
       },
       {
@@ -24,7 +24,7 @@
       },
       {
         "tag": "dns-direct",
-        "address": "tcp://8.8.4.4",
+        "address": "1.1.1.1",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -112,7 +112,7 @@
         "TEHRAN",
         "BERLIN"
       ],
-      "url": "http://connectivitycheck.gstatic.com/generate_204",
+      "url": "https://connectivitycheck.gstatic.com/generate_204",
       "interval": "10m0s",
       "idle_timeout": "1h40m0s"
     },
@@ -132,7 +132,7 @@
       "mtu": 1330,
       "fake_packets": "40-80",
       "fake_packets_size": "40-100",
-      "fake_packets_delay": "4-8",
+      "fake_packets_delay": "2-4",
       "fake_packets_mode": "m4"
     },
     {
@@ -148,7 +148,7 @@
       "server_port": 1010,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "CSHc"و
-      "mtu": 1230
+      "mtu": 1280
     },
     {
       "type": "dns",
@@ -164,7 +164,7 @@
       "tls_fragment": {
         "enabled": true,
         "size": "40-80",
-        "sleep": "4-8"
+        "sleep": "1-2"
       }
     },
     {
