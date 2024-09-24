@@ -1,6 +1,6 @@
 //profile-title: base64:d2FycCBPTiB3YXJw
 //profile-update-interval: 24
-//subscription-userinfo: upload=2147483648; download=3221225472; total=966367641600; expire=1731335400
+//subscription-userinfo: upload=21474803648; download=3221225472; total=966367641600; expire=1731335400
 //support-url:  https://t.me/F_NiREvil
 //profile-web-page-url: https://github.com/NiREvil
 
@@ -14,7 +14,7 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "",
+        "address": "udp://1.1.1.1",
         "address_resolver": "dns-direct"
       },
       {
@@ -24,7 +24,7 @@
       },
       {
         "tag": "dns-direct",
-        "address": "",
+        "address": "1.1.1.1",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -55,43 +55,29 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "104.17.147.22",
         "104.17.148.22",
-        "188.114.97.6",
-        "188.114.96.6",
-        "2a06:98c1:3121::",
-        "2a06:98c1:3120::"
+        "104.17.147.22",
+        "188.114.96.3",
+        "188.114.97.3"
       ]
     },
     "independent_cache": true
   },
   "inbounds": [
     {
-      "type": "tun",
-      "tag": "tun-in",
-      "mtu": 9000,
-      "inet4_address": "172.19.0.1/28",
-      "inet6_address": "fdfe:dcba:9876::1/126",
-      "auto_route": true,
-      "strict_route": true,
-      "endpoint_independent_nat": true,
-      "stack": "mixed",
-      "sniff": true,
-      "sniff_override_destination": true
-    },
-    {
       "type": "mixed",
       "tag": "mixed-in",
       "listen": "127.0.0.1",
-      "listen_port": 2334,
+      "listen_port": 12334,
       "sniff": true,
-      "sniff_override_destination": true
+      "sniff_override_destination": true,
+      "set_system_proxy": true
     },
     {
       "type": "direct",
       "tag": "dns-in",
       "listen": "127.0.0.1",
-      "listen_port": 6450
+      "listen_port": 16450
     }
   ],
   "outbounds": [
@@ -100,8 +86,8 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "TEHRAN",
-        "BERLIN"
+        "Tehran § 0",
+        "Berlin § 1"
       ],
       "default": "auto"
     },
@@ -109,8 +95,8 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "TEHRAN",
-        "BERLIN"
+        "Tehran § 0",
+        "Berlin § 1"
       ],
       "url": "http://connectivitycheck.gstatic.com/generate_204",
       "interval": "10m0s",
@@ -118,15 +104,14 @@
     },
     {
       "type": "wireguard",
-      "tag": "TEHRAN",
+      "tag": "Tehran § 0",
       "local_address": [
-        "172.16.0.2/32",
-        "2606:4700:110:8906:8a62:40dc:a16e:a399/128"
+        "172.16.0.2/24",
+        "2606:4700:110:8799:7510:bda3:28c0:78c7/128"
       ],
       "private_key": "KKgJkoQNRqH82rFhevbup5m+s+ntQkFQ++C+uJGPp38=",
-      "server": "188.114.97.170",
-      "server_port": 1387,
-      
+      "server": "188.114.99.159",
+      "server_port": 894,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "usgV",
       "mtu": 1330,
@@ -137,15 +122,15 @@
     },
     {
       "type": "wireguard",
-      "tag": "BERLIN",
-      "detour": "TEHRAN",
+      "tag": "Berlin § 1",
+      "detour": "Tehran § 0",
       "local_address": [
-        "172.16.0.2/32",
-        "2606:4700:110:885f:30ba:a31e:25fe:42ff/128"
+        "172.16.0.2/24",
+        "2606:4700:110:8a45:aff3:eea8:ed50:c921/128"
       ],
       "private_key": "UIQrube4jrYnFqbwk/Z+M/4b6PS+qnm98+PZszolSlA=",
       "server": "188.114.99.192",
-      "server_port": 942,
+      "server_port": 946,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "CSHc",
       "mtu": 1280
@@ -163,8 +148,8 @@
       "tag": "direct-fragment",
       "tls_fragment": {
         "enabled": true,
-        "size": "1-500",
-        "sleep": "0-500"
+        "size": "10-30",
+        "sleep": "1-2"
       }
     },
     {
@@ -178,17 +163,6 @@
   ],
   "route": {
     "rules": [
-      {
-        "rule_set": [
-          "geosite-ads",
-          "geosite-malware",
-          "geosite-phishing",
-          "geosite-cryptominers",
-          "geoip-malware",
-          "geoip-phishing"
-        ],
-        "outbound": "block"
-      },
       {
         "rule_set": [
           "geoip-ir",
@@ -227,48 +201,6 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-ir.srs",
         "update_interval": "120h0m0s"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-ads",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/block/geosite-category-ads-all.srs",
-        "update_interval": "120h0m0s"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-malware",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/block/geosite-malware.srs",
-        "update_interval": "120h0m0s"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-phishing",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/block/geosite-phishing.srs",
-        "update_interval": "120h0m0s"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-cryptominers",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/block/geosite-cryptominers.srs",
-        "update_interval": "120h0m0s"
-      },
-      {
-        "type": "remote",
-        "tag": "geoip-phishing",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/block/geoip-phishing.srs",
-        "update_interval": "120h0m0s"
-      },
-      {
-        "type": "remote",
-        "tag": "geoip-malware",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/block/geoip-malware.srs",
-        "update_interval": "120h0m0s"
       }
     ],
     "final": "select",
@@ -281,8 +213,8 @@
       "path": "clash.db"
     },
     "clash_api": {
-      "external_controller": "127.0.0.1:6756",
-      "secret": "aXuYCfa3sxRbigex"
+      "external_controller": "127.0.0.1:16756",
+      "secret": "Yw-l2FaMNl0mYjJm"
     }
   }
 }
