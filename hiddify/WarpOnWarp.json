@@ -14,7 +14,7 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "https://dns.dynx.pro/dns-query",
+        "address": "",
         "address_resolver": "dns-direct"
       },
       {
@@ -24,7 +24,7 @@
       },
       {
         "tag": "dns-direct",
-        "address": "1.1.1.1",
+        "address": "",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -112,7 +112,7 @@
         "TEHRAN",
         "BERLIN"
       ],
-      "url": "https://connectivitycheck.gstatic.com/generate_204",
+      "url": "http://connectivitycheck.gstatic.com/generate_204",
       "interval": "10m0s",
       "idle_timeout": "1h40m0s"
     },
@@ -130,9 +130,9 @@
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "usgV",
       "mtu": 1330,
-      "fake_packets": "40-80",
-      "fake_packets_size": "40-100",
-      "fake_packets_delay": "2-4",
+      "fake_packets": "10-20",
+      "fake_packets_size": "20-60",
+      "fake_packets_delay": "5-10",
       "fake_packets_mode": "m4"
     },
     {
@@ -144,8 +144,8 @@
         "2606:4700:110:885f:30ba:a31e:25fe:42ff/128"
       ],
       "private_key": "UIQrube4jrYnFqbwk/Z+M/4b6PS+qnm98+PZszolSlA=",
-      "server": "[2606:4700:d0::1855:9308:6a17:8d03]",
-      "server_port": 1010,
+      "server": "188.114.99.192",
+      "server_port": 942,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "CSHc",
       "mtu": 1280
@@ -163,8 +163,8 @@
       "tag": "direct-fragment",
       "tls_fragment": {
         "enabled": true,
-        "size": "40-80",
-        "sleep": "1-2"
+        "size": "1-500",
+        "sleep": "0-500"
       }
     },
     {
