@@ -14,7 +14,7 @@
       },
       {
         "tag": "dns-direct",
-        "address": "8.8.4.4",
+        "address": "1.1.1.1",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -78,8 +78,8 @@
   "outbounds": [
     {
       "type": "wireguard",
-      "tag": "Windscribe",
-      "detour": "🇳🇱 H2",
+      "tag": "🇫🇷Windscribe",
+      "detour": "🇳🇱H2",
       "local_address": "100.100.196.8/32",
       "private_key": "qKgJJNTkkAr37k74Ix7FkdB3tVIHE1rQBOp4adjm2HU=",
       "server": "138.199.47.222",
@@ -106,7 +106,7 @@
       },
       "type": "hysteria2",
       "domain_strategy": "",
-      "tag": "🇳🇱 H2"
+      "tag": "🇳🇱H2"
     },
     {
       "type": "direct",
