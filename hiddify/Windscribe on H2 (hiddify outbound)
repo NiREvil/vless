@@ -1,5 +1,5 @@
 //profile-title: base64:V2luZHNjcmliZSBvbiBIMiAoaGlkZGlmeSBvdXRib3VuZCk=
-//profile-update-interval: 12
+//profile-update-interval: 48
 //subscription-userinfo: upload=2147483648; download=845034815488; total=966367641600; expire=1731335400
 //support-url:  https://t.me/F_NiREvil
 //profile-web-page-url: https://github.com/NiREvil
@@ -9,7 +9,7 @@
     {
       "type": "wireguard",
       "tag": "🇫🇷Windscribe",
-      "detour": "🇸🇪H2",
+      "detour": "🇳🇱H2",
       "local_address": "100.100.196.8/32",
       "private_key": "qKgJJNTkkAr37k74Ix7FkdB3tVIHE1rQBOp4adjm2HU=",
       "server": "138.199.47.222",
@@ -20,12 +20,12 @@
     },
     {
       "obfs": {
-        "password": "4ff648165e163025",
+        "password": "5449c086723e86d4",
         "type": "salamander"
       },
-      "password": "234454ef8c3beddc",
-      "server": "193.188.20.199",
-      "server_port": 443,
+      "password": "f0126e9fe4014e17",
+      "server": "77.91.77.27",
+      "server_port": 39292,
       "tls": {
         "alpn": [
           "h3"
@@ -36,7 +36,7 @@
       },
       "type": "hysteria2",
       "domain_strategy": "",
-      "tag": "🇸🇪H2"
+      "tag": "🇳🇱H2"
 }
 ]
 }
