@@ -125,11 +125,16 @@ proxyip.oracle.fxxk.dedyn.io
 193.123.81.105
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇸🇪 Swedenm, Stockholm, Oracle Corporation**
-~~129.151.221.152~~
+**🇧🇷 Brazil, Sao paulo, Oracle Corporation**
+```
+144.22.252.124
+```
 **🇫🇷 France, Marseille, Oracle Svenska AB**
 ```
 141.145.199.188
+```
+```
+144.24.200.164
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇸🇬 Singapore, Stockholm, Amazon Technologies Inc.**
@@ -139,6 +144,9 @@ proxyip.oracle.fxxk.dedyn.io
 **🇯🇵 Japan, Tokyo Shibuya,  Amazon Technologies Inc.**
 ```
 3.112.21.102
+```
+```
+45.32.25.171
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, California, santa clara, Tencent cloud computing**
@@ -169,11 +177,6 @@ Zenlayer**
 **🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies**
 ```
 72.13.122.137
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇱🇺 Luxembourg, FranTech Solutions**
-```POV-Ray SDL
-107.189.7.254
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, Texas Dallas, Rackspace Hosting**
