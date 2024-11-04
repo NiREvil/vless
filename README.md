@@ -3,7 +3,7 @@ $$\color{silver} \Huge \text{\R $\sum{\vil_t = \mathbb{N108}\infty}$}$$
 
 
 
-- تعدادی لینک اشتراک (ساب) برای v2rayNG, Sing-Box,Hiddify, NikaNG, MahsaNG, Nekobox, Amnezia, Clash-Meta و غیره
+- تعدادی لینک اشتراک (ساب) برای v2rayNG, Sing-Box,Hiddify, NikaNG, MahsaNG, Nekobox, Amnezia, Clash-Meta و ...
   
 - Some subscription links are available for v2rayNG, Sing-Box,Hiddify, NikaNG, MahsaNG, Nekobox, Amnezia, Clash-Meta and other platforms...  
 
