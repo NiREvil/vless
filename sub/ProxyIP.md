@@ -23,13 +23,8 @@ And also [EDtunnel](https://github.com/NiREvil/Emotional-Damage)
 ```CSS
 bpb.radically.pro
 ```
-**🇩🇪 Germany, Frankfurt am Main, Multiple ASN's**
-```POV-Ray SDL
-de.radically.pro
-```
-**🇺🇸 USA, Ashburn, Virginia, Oracle corporation**
-```CSS
-ni.radically.pro
+```CSS   
+nima.nscl.ir
 ```
 **🇹🇷 Turkey, Stark Industries Solutions LTD**
 ```POV-Ray SDL
@@ -88,21 +83,6 @@ proxyip.oracle.fxxk.dedyn.io
 ```
 ```POV-Ray SDL
 129.159.241.172
-```
-```POV-Ray SDL
-138.3.254.39
-```
-```POV-Ray SDL
-130.61.23.77
-```
-```POV-Ray SDL
-130.61.239.203
-```
-```POV-Ray SDL
-193.122.61.167
-```
-```POV-Ray SDL
-130.61.87.219
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇹🇷 Turkey, Istanbul, Poyraz Hosting Bilisim Hizmetleri**
@@ -282,10 +262,10 @@ __ادامه توضیحات__
   - https://www.nslookup.io/domains/my-telegram-is-herocore.onecf.eu.org/dns-records/
   - https://www.nslookup.io/domains/bpb.radically.pro/dns-records/
   - https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
+  - https://www.nslookup.io/domains/proxyip.fxxk.dedyn.io/dns-records/
   - https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
   - https://www.nslookup.io/domains/ipdb.rr.nu/dns-records/
   - https://www.nslookup.io/domains/cdn.xn--b6gac.eu.org/dns-records/
-  - https://www.nslookup.io/domains/edgetunnel.anycast.eu.org/dns-records/
   - https://www.nslookup.io/domains/proxyip.aliyun.fxxk.dedyn.io/dns-records/
   - https://www.nslookup.io/domains/workers.bestip.one/dns-records/
   - https://www.nslookup.io/domains/workers.cloudflare.cyou/dns-records/
