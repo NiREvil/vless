@@ -18,7 +18,7 @@
       "server_port": 955,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "cQuo",
-      "mtu": 1280,
+      "mtu": 1330,
       "fake_packets": "40-80",
       "fake_packets_size": "40-100",
       "fake_packets_delay": "4-8",
@@ -26,7 +26,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇵🇱🔴November",
+      "tag": "🇵🇱-🔴November❄️D",
       "detour": "Hiddify Warp",
       "server": "31.186.87.205",
       "server_port": 19468,
@@ -39,7 +39,7 @@
     },
     {
       "type": "tuic",
-      "tag": "🇵🇱🔴November",
+      "tag": "🇵🇱-🔴November-D",
       "detour": "Hiddify Warp",
       "server": "31.186.87.205",
       "server_port": 19469,
@@ -60,7 +60,7 @@
     },
     {
       "type": "vmess",
-      "tag": "🇵🇱November|vmess",
+      "tag": "🇵🇱-⚪️November|vmess",
       "server": "31.186.87.205",
       "server_port": 13076,
       "uuid": "bc97f674-c578-4940-9234-0a1da46041b9",
@@ -81,7 +81,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇵🇱November❄️",
+      "tag": "🇵🇱-⚪️November❄️D",
       "detour": "Hiddify Warp",
       "server": "31.186.87.205",
       "server_port": 13074,
@@ -94,7 +94,7 @@
     },
     {
       "type": "tuic",
-      "tag": "🇵🇱November",
+      "tag": "🇵🇱-⚪️November-D",
       "detour": "Hiddify Warp",
       "server": "31.186.87.205",
       "server_port": 13075,
@@ -115,7 +115,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇵🇱November❄️", 
+      "tag": "🇵🇱-⚪️November❄️", 
       "server": "31.186.87.205",
       "server_port": 13074,
       "password": "bc97f674-c578-4940-9234-0a1da46041b9",
@@ -135,12 +135,12 @@
   "server": "82.102.26.226",
   "server_port": 60100,
   "type": "wireguard",
-  "tag": "🌵Cactus 🇪🇸",
+  "tag": "🌵Cactus-🇪🇸",
    "detour": "Hiddify Warp"
 },
 {
   "type": "wireguard",
-  "tag": "Proton 🇳🇱1",
+  "tag": "Proton-🇳🇱1",
       "detour": "Hiddify Warp",
   "local_address": [
     "10.2.0.2/32"
@@ -153,7 +153,7 @@
 },
 {
   "type": "wireguard",
-  "tag": "Proton 🇺🇸1",
+  "tag": "Proton-US1",
       "detour": "Hiddify Warp",
   "local_address": [
     "10.2.0.2/32"
@@ -167,7 +167,7 @@
 },
 {
   "type": "wireguard",
-  "tag": "Windscribe🇫🇷",
+  "tag": "Windscribe🇫🇷D",
       "detour": "Hiddify Warp",
   "local_address": [
     "100.100.196.8/32"
@@ -181,7 +181,7 @@
 },
 {
   "type": "wireguard",
-  "tag": "Proton 🇺🇸2",
+  "tag": "Proton-US2",
       "detour": "Hiddify Warp",
   "local_address": [
     "10.2.0.2/32"
@@ -194,7 +194,7 @@
 },
 {
   "type": "wireguard",
-  "tag": "Proton 🇺🇸3",
+  "tag": "Proton-US3",
       "detour": "Hiddify Warp",
   "local_address": [
     "10.2.0.2/32"
@@ -207,8 +207,8 @@
 },
 {
   "type": "wireguard",
-  "tag": "WsW🇵🇱❄️",
-   "detour": "🇵🇱November❄️",
+  "tag": "WsW🇵🇱⚪️🔴",
+   "detour": "🇵🇱-⚪️November❄️D",
   "local_address": [
     "172.16.0.2/32",
     "2606:4700:110:8867:f596:5ee6:1434:ef0/128"
@@ -222,8 +222,8 @@
 },
 {
   "type": "wireguard",
-  "tag": "Proton 🇺🇸",
-   "detour": "Proton 🇺🇸2",
+  "tag": "Proton-US",
+   "detour": "Proton-US2",
   "local_address": [
     "172.16.0.2/32",
     "2606:4700:110:8867:f596:5ee6:1434:ef0/128"
