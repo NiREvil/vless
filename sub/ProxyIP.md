@@ -61,16 +61,13 @@ proxyip.oracle.fxxk.dedyn.io
 99.83.209.185
 ```
 **🇺🇸 USA, Texas Dallas, Rackspace Hosting, Cloud Loadbalancing as a Service-LBaaS**
-```
+```POV-Ray SDL
 192.237.192.175
 ```
 🇺🇸 **USA, California, san jose, DataCamp Limited & 
 Zenlayer**
 ```POV-Ray SDL
 156.146.53.83
-```
-```POV-Ray SDL
-128.1.18.29
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇩🇪 Germany, Frankfurt am Main, Hetzner online**
@@ -93,7 +90,7 @@ Zenlayer**
 ```POV-Ray SDL
 129.159.241.172
 ```
-```
+```POV-Ray SDL
 130.61.170.78
 ```
 ```POV-Ray SDL
@@ -111,8 +108,12 @@ Zenlayer**
 ```CSS
 62.3.12.185
 ```
+**🇮🇳 India, Telangana-Hyderabad, Oracle Corporation**
+```CSS
+129.159.22.4
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇦🇪 United arab emirates, Abu Dhabi**
+~~**🇦🇪 United arab emirates, Abu Dhabi**~~
 ```POV-Ray SDL
 193.123.81.105
 ```
@@ -129,50 +130,65 @@ Zenlayer**
 ```POV-Ray SDL
 141.145.199.188
 ```
-```POV-Ray SDL
-144.24.200.164
-```
+
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇸🇬 Singapore, Amazon Technologies Inc.**
 ```POV-Ray SDL
 18.141.204.88
 ```
+```POV-Ray SDL
+13.250.131.37
+```
 **🇸🇬 Singapore, Hetzner online**
 ```POV-Ray SDL
 5.223.41.42
 ```
-**🇯🇵 Japan, Tokyo Shibuya,  Amazon Technologies Inc.**
+**🇸🇬 Singapore, NPO G-net**
+```POV-Ray SDL
+185.217.5.3
+```
+**🇯🇵 Japan, Tokyo, M247 Europe SRL**
+```CSS
+176.97.73.20
+```
+**🇯🇵 Japan, Tokyo, Amazon Technologies Inc.**
+```POV-Ray SDL
+154.31.113.72
+```
+**🇯🇵 Japan, Tokyo Shibuya, DMIT Cloud Services**
 ```POV-Ray SDL
 3.112.21.102
 ```
-```POV-Ray SDL
-45.32.25.171
-```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, California, santa clara, Tencent cloud computing**
-```
+```CSS
 43.153.103.203
 ```
 **🇺🇸 USA, Hetzner Online GmbH, Hetzner**
-```
+```CSS
 5.161.71.41
 ```
-```
+```CSS
 5.161.225.35
 ```
 🇺🇸 **USA, Chicago, Elk Grove Village, Vultr Holdings, LLC**
-```
+```POV-Ray SDL
 45.77.109.191
 ```
-```
+```POV-Ray SDL
 149.28.62.21
 ```
-```
+```POV-Ray SDL
 108.61.85.153
 ```
 **🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies**
-```
+```POV-Ray SDL
 72.13.122.137
+```
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+~~**🇮🇱 Israel, Haifa, BroadBand**~~
+```
+5.29.194.1
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇳🇱 Netherlands, Amsterdam, Oracle Corporation**
@@ -180,32 +196,23 @@ Zenlayer**
 141.148.229.106
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇮🇱 Israel, Haifa, BroadBand**
+**🇯🇵 Japan, Tokyo Shibuya, ZENLA**
+```POV-Ray SDL
+128.1.18.29
 ```
-5.29.194.1
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇳🇱 Netherlands, Amsterdam, M247 Europe SRL**
-```
-146.70.175.106
-```
-```
-146.70.169.122
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇯🇵 Japan, Tokyo, akami technologies**
 ```
 172.104.120.67
 ```
-**🇯🇵 Japan, Ōi, Saitama, The Constant Company, LLC**
-```
-66.42.34.203
-```
+**🇯🇵 Japan, Ōi, Saitama, Vultr Holdings, LLC**
 ```
 45.77.130.245
 ```
 ```
 45.76.220.61
+```
+```
+66.42.34.203
 ```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇦🇺 Australia, New South Wales, Huntingwood**
@@ -319,7 +326,6 @@ proxyip.multacom.fxxk.dedyn.io
 
 ~~🇺🇸 USA, New Jersey Clifton, DigitalOcean, LLC~~
 
-    23.94.212.4
     88.119.175.79
     159.65.228.185
     45.55.71.106
