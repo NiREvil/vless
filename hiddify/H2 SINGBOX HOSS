@@ -1,6 +1,6 @@
 //profile-title: base64:SDIgT04gU0lOR0JPWA==
 //profile-update-interval: 68
-//subscription-userinfo: upload=64424500944; download=45097156608; total=1073741824000; expire=1731335400
+//subscription-userinfo: upload=64424500944; download=45097156608; total=1073741824000; expire=1794182400
 //support-url:  https://t.me/F_NiREvil
 //profile-web-page-url: https://github.com/NiREvil
 
@@ -15,7 +15,7 @@
       },
       {
         "tag": "dns-direct",
-        "address": "8.8.4.4",
+        "address": "78.157.42.100",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -79,19 +79,31 @@
   "outbounds": [
     {
       "type": "hysteria2",
-      "tag": "🇳🇱H2",
-      "server": "212.113.100.126",
+      "tag": "🇸🇪 H2",
+      "domain_strategy": "prefer_ipv4",
+      "server": "for-real.hpcode.ir",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "0c9e44a9a1647525"
+        "password": "kaoIHUtTlE"
       },
-      "password": "517b1fa2800fd55b",
+      "password": "kaoIHUtTlE",
       "tls": {
         "enabled": true,
-        "server_name": "www.google.com",
-        "insecure": true,
-        "alpn": "h3"
+        "server_name": "for-real.hpcode.ir",
+        "alpn": "h3",
+        "min_version": "1.3",
+        "max_version": "1.3",
+        "ech": {
+          "enabled": true,
+          "pq_signature_schemes_enabled": true,
+          "config": [
+            "-----BEGIN ECH CONFIGS-----",
+            "ADn+DQA1AAAgACD+8M2QHQke/lsD3DoCAK3fX8Sp751h7nzJqN37Eua4WwAIAAEA",
+            "AQABAAMAAicnAAA=",
+            "-----END ECH CONFIGS-----"
+          ]
+        }
       }
     },
     {
