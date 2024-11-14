@@ -10,7 +10,7 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "https://2tnc6zpc9c.cloudflare-gateway.com/dns-query",
+        "address": "udp://1.1.1.1",
         "address_resolver": "dns-direct"
       },
       {
@@ -52,7 +52,7 @@
       "type": "direct",
       "tag": "dns-in",
       "listen": "0.0.0.0",
-      "listen_port": 6450,
+      "listen_port": 16450,
       "override_address": "8.8.8.8",
       "override_port": 53
     },
@@ -80,21 +80,18 @@
     {
       "type": "tuic",
       "tag": "🇳🇱 tuic",
-      "server": "77.221.158.52",
-      "server_port": 8922,
-      "uuid": "2f2dada7-b8af-49e7-a26e-d2d592c82846",
-      "password": "734da957528baa43",
+      "server": "62.60.217.48",
+      "server_port": 11223,
+      "uuid": "8481b0a8-f20b-4671-8e05-a060efece75b",
+      "password": "63cd0123c7b46eb1",
       "congestion_control": "bbr",
-      "udp_relay_mode": "native",
-      "heartbeat": "10s",
       "tls": {
-        "enabled": true,
-        "server_name": "www.google.com",
-        "insecure": true,
-        "alpn": [
-          "h3",
-          "spdy/3.1"
-        ]
+          "enabled": true,
+          "insecure": true,
+          "alpn": [
+              "h3",
+              "spdy/3.1"
+          ]
       }
     },
     {
