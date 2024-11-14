@@ -1,9 +1,8 @@
 //profile-title: base64:VFVJQyBPTiBTSU5HQk9Y
-//profile-update-interval: 68
-//subscription-userinfo: upload=64424500944; download=45097156608; total=107370041824000; expire=1731335400
+//profile-update-interval: 48
+//subscription-userinfo: upload=64424500944; download=45097156608; total=107370041824000; expire=1762646400
 //support-url:  https://t.me/F_NiREvil
 //profile-web-page-url: https://github.com/NiREvil
-
 
 {
   "dns": {
@@ -86,12 +85,12 @@
       "password": "63cd0123c7b46eb1",
       "congestion_control": "bbr",
       "tls": {
-          "enabled": true,
-          "insecure": true,
-          "alpn": [
-              "h3",
-              "spdy/3.1"
-          ]
+        "enabled": true,
+        "insecure": true,
+        "alpn": [
+          "h3",
+          "spdy/3.1"
+        ]
       }
     },
     {
