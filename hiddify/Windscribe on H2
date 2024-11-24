@@ -1,6 +1,6 @@
 //profile-title: base64:V2luZHNjcmliZSBvbiBIeXN0ZXJpYQ==
 //profile-update-interval: 48
-//subscription-userinfo: upload=2147483648; download=845034815488; total=966367641600; expire=1740774601
+//subscription-userinfo: upload=2100483648; download=841034815488; total=966367641600; expire=1740774601
 //support-url:  https://t.me/F_NiREvil
 //profile-web-page-url: https://github.com/NiREvil
 
@@ -9,12 +9,12 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "https://2tnc6zpc9c.cloudflare-gateway.com/dns-query",
+        "address": "tcp://8.8.8.8",
         "address_resolver": "dns-direct"
       },
       {
         "tag": "dns-direct",
-        "address": "1.1.1.1",
+        "address": "tcp://8.8.8.8",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -86,23 +86,29 @@
       "server_port": 65142,
       "peer_public_key": "cmaT8JIehfRf5PWWDkcBRwLWDb3jrIkk/SDbw4JmUAc=",
       "pre_shared_key": "p9oZWElz4vn74dOqa0+UNIJGxy2/VeBF6b8YIfmVgY0=",
-      "mtu": 1280
+      "mtu": 1280,
+      "fake_packets": "5-10"
     },
     {
       "obfs": {
-        "password": "f6d407e645e57cac",
+        "password": "fd784f88798796c1",
         "type": "salamander"
       },
-      "password": "a20e411bdcb3f2f1",
-      "server": "94.228.164.226",
-      "server_port": 11122,
-      "tag": "🇸🇪H2",
+      "password": "04bb42227f7c629c",
+      "server": "77.91.87.167",
+      "server_port": 2087,
       "tls": {
+        "alpn": [
+          "h3"
+        ],
         "enabled": true,
         "insecure": true,
-        "server_name": "www.google.com"
+        "server_name": "www.google.c"
       },
-      "type": "hysteria2"
+      "up_mbps": 0,
+      "type": "hysteria2",
+      "domain_strategy": "",
+      "tag": "🇸🇪H2"
     },
     {
       "type": "direct",
