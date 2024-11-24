@@ -13,8 +13,13 @@
         "address_resolver": "dns-direct"
       },
       {
+        "tag": "dns-trick-direct",
+        "address": "https://sky.rethinkdns.com/",
+        "detour": "direct-fragment"
+      },
+      {
         "tag": "dns-direct",
-        "address": "78.157.42.100",
+        "address": "1.1.1.1",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -51,8 +56,8 @@
       "type": "direct",
       "tag": "dns-in",
       "listen": "0.0.0.0",
-      "listen_port": 6450,
-      "override_address": "8.8.8.8",
+      "listen_port": 16450,
+      "override_address": "1.1.1.1",
       "override_port": 53
     },
     {
