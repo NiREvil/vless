@@ -15,21 +15,23 @@
       {
         "tag": "dns-remote",
         "address": "tcp://185.228.168.9",
-        "address_resolver": "dns-direct",
-        "address_strategy": "prefer_ipv4",
-        "strategy": "prefer_ipv4"
+        "address_resolver": "dns-direct"
+      },
+      {
+        "tag": "dns-trick-direct",
+        "address": "https://sky.rethinkdns.com/",
+        "detour": "direct-fragment"
       },
       {
         "tag": "dns-direct",
         "address": "tcp://8.8.4.4",
         "address_resolver": "dns-local",
-        "strategy": "prefer_ipv4",
         "detour": "direct"
       },
       {
         "tag": "dns-local",
         "address": "local",
-        "detour": "bypass"
+        "detour": "direct"
       },
       {
         "tag": "dns-block",
@@ -38,30 +40,55 @@
     ],
     "rules": [
       {
-        "rule_set": [
-          "geosite-ir"
-        ],
         "domain_suffix": ".ir",
+        "geosite": "ir",
         "server": "dns-direct"
+      },
+      {
+        "domain": "clients3.google.com",
+        "server": "dns-remote",
+        "rewrite_ttl": 3000
       }
     ],
     "final": "dns-remote",
+    "static_ips": {
+      "sky.rethinkdns.com": [
+        "188.114.96.3",
+        "188.114.97.3",
+        "2a06:98c1:3121::3",
+        "2a06:98c1:3120::3"
+      ]
+    },
     "independent_cache": true
   },
   "inbounds": [
     {
       "type": "tun",
       "tag": "tun-in",
-      "domain_strategy": "prefer_ipv4",
-      "interface_name": "sing-tun",
-      "inet4_address": "172.19.0.1/30",
-      "mtu": 1306,
+      "mtu": 9000,
+      "inet4_address": "172.19.0.1/28",
+      "inet6_address": "fdfe:dcba:9876::1/126",
       "auto_route": true,
       "strict_route": true,
-      "stack": "gvisor",
       "endpoint_independent_nat": true,
       "sniff": true,
-      "sniff_override_destination": false
+      "sniff_override_destination": true
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 12334,
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "127.0.0.1",
+      "listen_port": 16440,
+      "override_address": "1.1.1.1",
+      "override_port": 53
     }
   ],
   "outbounds": [
@@ -188,6 +215,14 @@
       "tag": "direct"
     },
     {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
       "type": "direct",
       "tag": "direct-fragment",
       "tls_fragment": {
@@ -206,6 +241,12 @@
     }
   ],
   "route": {
+    "geoip": {
+      "path": "geo-assets/chocolate4u-iran-sing-box-rules-geoip.db"
+    },
+    "geosite": {
+      "path": "geo-assets/chocolate4u-iran-sing-box-rules-geosite.db"
+    },
     "rules": [
       {
         "inbound": "dns-in",
@@ -216,41 +257,26 @@
         "outbound": "dns-out"
       },
       {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "select"
+      },
+      {
         "domain_suffix": ".ir",
-        "outbound": "direct"
-      },
-      {
-        "rule_set": [
-          "geoip-ir",
-          "geosite-ir"
-        ],
-        "outbound": "direct"
+        "geosite": "ir",
+        "geoip": "ir",
+        "outbound": "bypass"
       }
     ],
-    "rule_set": [
-      {
-        "type": "remote",
-        "tag": "geoip-ir",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-ir.srs",
-        "update_interval": "120h0m0s"
-      },
-      {
-        "type": "remote",
-        "tag": "geosite-ir",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-ir.srs",
-        "update_interval": "120h0m0s"
-      }
-    ],
-    "final": "select",
     "auto_detect_interface": true,
     "override_android_vpn": true
   },
   "experimental": {
     "clash_api": {
-      "external_controller": "127.0.0.1:16756",
-      "secret": "Yw-l2FaMNl0mYjJm"
+      "external_controller": "127.0.0.1:6756"
     }
   }
 }
