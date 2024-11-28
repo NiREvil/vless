@@ -52,14 +52,6 @@ proxyip..fxxk.dedyn.io
 ```POV-Ray SDL
 proxyip.oracle.fxxk.dedyn.io
 ```
-🇺🇸 **USA, Virginia, Ashburn, Amazon Technologies Inc.**
-```CSS
-75.2.32.4
-```
-🇺🇸 **USA, Washington, Seattle, Amazon Technologies Inc.**
-```CSS
-99.83.209.185
-```
 **🇺🇸 USA, Texas Dallas, Rackspace Hosting, Cloud Loadbalancing as a Service-LBaaS**
 ```POV-Ray SDL
 192.237.192.175
@@ -83,9 +75,6 @@ Zenlayer**
 ```POV-Ray SDL
 65.109.167.39
 ```
-```POV-Ray SDL
-188.245.144.178
-```
 **🇩🇪 Germany, Frankfurt am Main, Oracle Cloud**
 ```POV-Ray SDL
 129.159.241.172
@@ -108,10 +97,6 @@ Zenlayer**
 ```CSS
 62.3.12.185
 ```
-**🇮🇳 India, Telangana-Hyderabad, Oracle Corporation**
-```CSS
-129.159.22.4
-```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 ~~**🇦🇪 United arab emirates, Abu Dhabi**~~
 ```POV-Ray SDL
@@ -122,6 +107,10 @@ Zenlayer**
 ```POV-Ray SDL
 129.151.204.91
 ```
+**🇮🇳 India, Telangana-Hyderabad, Oracle Corporation**
+```CSS
+129.159.22.4
+```
 **🇧🇷 Brazil, Sao paulo, Oracle Corporation**
 ```POV-Ray SDL
 144.22.252.124
@@ -130,7 +119,10 @@ Zenlayer**
 ```POV-Ray SDL
 141.145.199.188
 ```
-
+**🇨🇭 Switzerland, Zurich Oberengstringen, Oracle Svenska AB**
+```POV-Ray SDL
+140.238.212.95
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇸🇬 Singapore, Amazon Technologies Inc.**
 ```POV-Ray SDL
@@ -155,19 +147,12 @@ Zenlayer**
 ```POV-Ray SDL
 154.31.113.72
 ```
-**🇯🇵 Japan, Tokyo Shibuya, DMIT Cloud Services**
-```POV-Ray SDL
-3.112.21.102
-```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 **🇺🇸 USA, California, santa clara, Tencent cloud computing**
 ```CSS
 43.153.103.203
 ```
 **🇺🇸 USA, Hetzner Online GmbH, Hetzner**
-```CSS
-5.161.71.41
-```
 ```CSS
 5.161.225.35
 ```
