@@ -5,7 +5,7 @@
 
 ## What do we have here
 - [latest workers and pages](#latest-worker-and-page)
-  - [Best proxies](#Best-proxies)
+  - [Best proxies](#Best-proxy-IPs)
   - [Find proxyIP](#Find-proxyIP)
   - [Advanced](#advanced)
   - [A few more](#A-few-more)
@@ -17,7 +17,7 @@ Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/bl
 And also [EDtunnel](https://github.com/NiREvil/Emotional-Damage)
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
-## Best proxies
+## Best proxy IPs 
 
 **🇺🇸 USA, Tencent & Amazon Tech Inc**
 ```CSS
