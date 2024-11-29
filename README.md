@@ -3,7 +3,8 @@ $$\color{silver} \Huge \text{\R $\sum{\vil_t = \mathbb{N108}\infty}$}$$
 
 
 
-- تعدادی لینک اشتراک (ساب) برای v2rayNG, Sing-Box,Hiddify, NikaNG, MahsaNG, Nekobox, Amnezia, Clash-Meta و ...
+- تعدادی لینک اشتراک (ساب) برای سینگ‌باکس، هیدیفای،   
+v2rayNG, NikaNG, MahsaNG, Nekobox, Amnezia, Clash-Meta و ...
   
 - Some subscription links are available for v2rayNG, Sing-Box,Hiddify, NikaNG, MahsaNG, Nekobox, Amnezia, Clash-Meta and other platforms...  
 
@@ -13,8 +14,8 @@ $$\color{silver} \Huge \text{\R $\sum{\vil_t = \mathbb{N108}\infty}$}$$
 - 为以下软件提供一些共享链接：v2rayNG, Sing-Box,Hiddify, NikaNG, MahsaNG, Nekobox, Amnezia, Clash-Meta 等。
 
 
-## $\color{silver} \normalsize \text{The subscription link for the Hiddify and singbox clients}$
-> Built-in github actions  
+## $\color{silver} \normalsize \text{The subscriptions link}$
+> Built-in github actions 
 > Updateable every sixty minutes
 
 ### Hiddify URL <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="30"/>
@@ -40,7 +41,6 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
   - [Warp NikaNG](#Warp-NikaNG)  
   - [Warp SFI](#Warp-SFI)  
   - [Warp v2rayNG](#Warp-v2rayNG)
-  - [Warp v2rayN](#Warp-v2rayN)
 - [Amnezia](#Amnezia)
 - [wire.conf](/.conf)
 - [v2ray](#v2ray)
@@ -57,6 +57,9 @@ https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/H2%20SINGBOX%20HOSS
 **TUIC ON Singbox**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/TUIC%20ON%20SINGBOX
 
+**Proton + Warp on Hiddify**  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Poroton%20ON%20WARP%2B
+
 **Proton on Hiddify with DNS clean**  
 https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/Proton%20ON%20WARP%2B%20DNS%20Clean
 
@@ -69,14 +72,14 @@ https://raw.githubusercontent.com/azadiazinjamigzare/Service/main/Sub
 **Meshkintaj**[?](https://t.me/FreeVpnHomes/432)  
 https://singbox-freevpnhomes-subscription.meshkintaj.homes
 
-**Windscribe on Hiddify**  
-https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/Windscribe%20on%20H2%20(hiddify%20outbound)
+**Windscribe on Hysteria - Hiddify**  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscribe%20on%20H2
 
 **Warp in M1,M2, ... ,h04FA0A mode with rand ip:port**  
 https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/rand-ip
 
 **All Guest ON Hiddify**  
-https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/All%20Guest%20Hiddify
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/All%20%20Warp%20Windscribe%20Poroton%20Hysteria
 
 **windscribe, proton, warp+ ( Fake packets)**  
 https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/Warp%20Windscribe%20Proton%20Fake%20Packets
@@ -87,6 +90,10 @@ https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/WarpOnWarp.json
 
 **Auto gen in actions**  
 https://raw.githubusercontent.com/NiREvil/vless/main/warp.json
+
+**Just Warp**  
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Warp  
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Warp2
 
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
@@ -100,35 +107,33 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sub/wireguardn
 > Configs are from [Arshia warp](https://t.me/warpscanner) and [The Darkness](https://t.me/ConfigWireguard)
 
 ```CSS
-wireguard://iD%2Bq509RZd4safVaFaNhAuJKQ7CJW4BPNATKtVCPtHg%3D@188.114.99.200:894?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=75%2C201%2C169#Tel= @arshiacomplus
+wireguard://aFGqJfF1Xq2W3GkdrIeOxWM5KkszQmjIcso1F1UtA08%3D@162.159.195.86:8742?address=172.16.0.2/32, 2606:4700:110:846c:e510:bfa1:ea9f:5247/128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=161%2C193%2C233#Tel= @arshiacomplus wire 
 ```
 
 ```CSS
-wireguard://4Go9no90%2B3CbgGC1rWtWh2WGyijT7lCljozxkwjV4Es%3D@162.159.195.147:1002?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=196%2C61%2C178#Tel= @arshiacomplus
+wireguard://aFGqJfF1Xq2W3GkdrIeOxWM5KkszQmjIcso1F1UtA08%3D@162.159.195.86:8742?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=161%2C193%2C233#Tel= @arshiacomplus wire 
 ```
 
 ```CSS
-wireguard://QJ%2FrIJA7Ev%2Ba%2FY%2FFs7Q%2F2o0EwHYCr18qZ7hs5CVSAU0%3D@188.114.99.166:7559?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=78%2C255%2C253#Tel= @arshiacomplus
+wireguard://EKcnAgEpqzsDEgugHoT6NMz3Z8CmDequ%2BNDJRAASd3I%3D@188.114.97.157:1014?address=172.16.0.2/32, 2606:4700:110:846c:e510:bfa1:ea9f:5247/128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=176%2C110%2C65#Tel= @arshiacomplus wire 
 ```
 
 ```CSS
-wireguard://KMpBLD66%2BU79CyZtJP5Wc7QSQW7XNhxlFkPueJkno28%3D@162.159.195.235:928?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=72%2C104%2C152#Tel= @arshiacomplus
+wireguard://EKcnAgEpqzsDEgugHoT6NMz3Z8CmDequ%2BNDJRAASd3I%3D@188.114.97.157:1014?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=176%2C110%2C65#Tel= @arshiacomplus wire 
 ```
 
 ```CSS
-wireguard://INCx5JtdAjGFcGGSyDIICPeq6kssBRumKYeRsjOreWg%3D@188.114.98.9:908?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=38%2C82%2C15#Tel= @arshiacomplus
+wireguard://QFIdKXpE0ijN3VAcSWo9FQhxS81eCPSi2WCy8BmHYFc%3D@[2606:4700:d0::45dd:b927:8c4d:ceec]:878?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=149%2C69%2C184#Tel= @arshiacomplus wire 
 ```
+
 ---
 #### Warp v2rayNG
 https://raw.githubusercontent.com/NiREvil/vless/main/sub/wireguardv
 
 ---
-#### Warp v2rayN
-https://raw.githubusercontent.com/NiREvil/vless/main/sub/wire-v2rayN.txt
 
----
-#### Warp SFI 
-> singbox for IOS <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="13"/>
+#### Warp SFA & SFI 
+> singbox for <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="13"/>
 
 **Hysteria ON singbox**  
 https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/H2%20SINGBOX%20HOSS
@@ -156,15 +161,25 @@ https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/All%20Guest%20SINGB
 
 **A**
 ```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJxcjV5elZsYi5sSnVwY3hVVlc3TTBmY2k0TzdCMVFDdVJpS0ZBdjkxaiJ9
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWEgRnJlZSBJUiIsICJkZXNjcmlwdGlvbiI6ICJBbW5lemlhIEZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJYbWtoWjhTay5UaTY0NENQTnBnTnQydW12ektUSGJRY1NSY2hpRXhlWSJ9
 ```
 
 **B**
 ```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAidlZxckZIa3guZ0V6M0tKTk44YWlwaFU0MjNGS2Roc2R6MUVXbnNZZ1cifQ==
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWEgRnJlZSBJUiIsICJkZXNjcmlwdGlvbiI6ICJBbW5lemlhIEZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJCSmE1R0FlVy44ZzFXOXl6Q3VGZXMwQzFJREdhM2k3VGE0MDNuSU02NiJ9
 ```
 
 **C**
+```POV-Ray SDL
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJxcjV5elZsYi5sSnVwY3hVVlc3TTBmY2k0TzdCMVFDdVJpS0ZBdjkxaiJ9
+```
+
+**D**
+```POV-Ray SDL
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAidlZxckZIa3guZ0V6M0tKTk44YWlwaFU0MjNGS2Roc2R6MUVXbnNZZ1cifQ==
+```
+
+**E**
 ```mupad
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJRNE9YYkdaei4wUTJDN1NoMEM1UXBGcURyenBtcktaYmZtMU00ZE1SSyJ9
 ```
@@ -324,6 +339,12 @@ https://v2.alicivil.workers.dev/?list=4&locations=all&count=250
 https://raw.githubusercontent.com/itsyebekhe/HiN-VPN/main/subscription/location/normal/%F0%9F%87%B8%F0%9F%87%AA%20SE
 
 https://robin.nscl.ir
+
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Vless
+
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality
+
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/SS
 
 https://raw.githubusercontent.com/NiREvil/vless/main/sub/fragment  
 
