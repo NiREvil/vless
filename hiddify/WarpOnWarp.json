@@ -1,214 +1,240 @@
 //profile-title: base64:d2FycCBPTiB3YXJw
 //profile-update-interval: 8
-//subscription-userinfo: upload=51474803648; download=3221225472; total=966367641600; expire=1762646400
+//subscription-userinfo: upload=51474803648; download=3221225472; total=966367641600; expire=1762889400
 //support-url:  https://t.me/F_NiREvil
 //profile-web-page-url: https://github.com/NiREvil
 
+
 {
-    "log": {
-        "level": "warn",
-        "output": "box.log",
-        "timestamp": true
-    },
-    "dns": {
-        "servers": [{
-                "tag": "dns-remote",
-                "address": "udp://1.1.1.1",
-                "address_resolver": "dns-direct"
-            },
-            {
-                "tag": "dns-trick-direct",
-                "address": "https://sky.rethinkdns.com/",
-                "detour": "direct-fragment"
-            },
-            {
-                "tag": "dns-direct",
-                "address": "1.1.1.1",
-                "address_resolver": "dns-local",
-                "detour": "direct"
-            },
-            {
-                "tag": "dns-local",
-                "address": "local",
-                "detour": "direct"
-            },
-            {
-                "tag": "dns-block",
-                "address": "rcode://success"
-            }
-        ],
-        "rules": [{
-                "domain": "clients3.google.com",
-                "server": "dns-remote",
-                "rewrite_ttl": 3000
-            },
-            {
-                "rule_set": [
-                    "geoip-ir",
-                    "geosite-ir"
-                ],
-                "server": "dns-direct"
-            }
-        ],
-        "final": "dns-remote",
-        "static_ips": {
-            "sky.rethinkdns.com": [
-                "104.17.148.22",
-                "104.17.147.22",
-                "188.114.96.3",
-                "188.114.97.3"
-            ]
-        },
-        "independent_cache": true
-    },
-    "inbounds": [{
-            "type": "mixed",
-            "tag": "mixed-in",
-            "listen": "127.0.0.1",
-            "listen_port": 12334,
-            "sniff": true,
-            "sniff_override_destination": true,
-            "set_system_proxy": true
-        },
-        {
-            "type": "direct",
-            "tag": "dns-in",
-            "listen": "127.0.0.1",
-            "listen_port": 16450
-        }
-    ],
-    "outbounds": [{
-            "type": "selector",
-            "tag": "select",
-            "outbounds": [
-                "auto",
-                "Tehran § 0",
-                "Berlin § 1"
+   "log": {
+      "level": "warn",
+      "output": "box.log",
+      "timestamp": true
+   },
+   "dns": {
+      "servers": [
+         {
+            "tag": "dns-remote",
+            "address": "tcp://185.228.168.9",
+            "address_resolver": "dns-direct"
+         },
+         {
+            "tag": "dns-trick-direct",
+            "address": "https://sky.rethinkdns.com/",
+            "detour": "direct-fragment"
+         },
+         {
+            "tag": "dns-direct",
+            "address": "tcp://8.8.4.4",
+            "address_resolver": "dns-local",
+            "detour": "direct"
+         },
+         {
+            "tag": "dns-local",
+            "address": "local",
+            "detour": "direct"
+         },
+         {
+            "tag": "dns-block",
+            "address": "rcode://success"
+         }
+      ],
+      "rules": [
+         {
+            "domain": "clients3.google.com",
+            "server": "dns-remote",
+            "rewrite_ttl": 3000
+         },
+         {
+            "domain_suffix": ".ir",
+            "server": "dns-direct"
+         },
+         {
+            "rule_set": [
+               "geoip-ir",
+               "geosite-ir"
             ],
-            "default": "auto"
-        },
-        {
-            "type": "urltest",
-            "tag": "auto",
-            "outbounds": [
-                "Tehran § 0",
-                "Berlin § 1"
-            ],
-            "url": "http://clients3.google.com/generate_204",
-            "interval": "10m0s",
-            "idle_timeout": "1h40m0s"
-        },
-        {
-            "type": "wireguard",
-            "tag": "Tehran § 0",
-            "local_address": [
-                "172.16.0.2/32",
-                "2606:4700:110:80ba:1928:b48:898b:f763/128"
-            ],
-            "private_key": "YG1POPQsAPkj0hwBYlxw0FKz7StDApciR2IlnouL23A=",
-            "server": "188.114.99.159",
-            "server_port": 894,
-            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-            "reserved": "xF0e",
-            "mtu": 1330,
-            "fake_packets": "10-20",
-            "fake_packets_size": "20-60",
-            "fake_packets_delay": "5-10",
-            "fake_packets_mode": "m4"
-        },
-        {
-            "type": "wireguard",
-            "tag": "Berlin § 1",
-            "detour": "Tehran § 0",
-            "local_address": [
-                "172.16.0.2/32",
-                "2606:4700:110:8f59:5299:9e0b:23dd:2ccf/128"
-            ],
-            "private_key": "KFD1MrWxzbOK88HQzMAPg0LwU6sHB0zP4zG/QEZk10Y=",
-            "server": "188.114.99.192",
-            "server_port": 946,
-            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-            "reserved": "Q0og",
-            "mtu": 1280
-        },
-        {
-            "type": "dns",
-            "tag": "dns-out"
-        },
-        {
-            "type": "direct",
-            "tag": "direct"
-        },
-        {
-            "type": "direct",
-            "tag": "direct-fragment",
-            "tls_fragment": {
-                "enabled": true,
-                "size": "10-30",
-                "sleep": "1-2"
-            }
-        },
-        {
-            "type": "direct",
-            "tag": "bypass"
-        },
-        {
-            "type": "block",
-            "tag": "block"
-        }
-    ],
-    "route": {
-        "rules": [{
-                "rule_set": [
-                    "geoip-ir",
-                    "geosite-ir"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "inbound": "dns-in",
-                "outbound": "dns-out"
-            },
-            {
-                "port": 53,
-                "outbound": "dns-out"
-            },
-            {
-                "clash_mode": "Direct",
-                "outbound": "direct"
-            },
-            {
-                "clash_mode": "Global",
-                "outbound": "select"
-            }
-        ],
-        "rule_set": [{
-                "type": "remote",
-                "tag": "geoip-ir",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-ir.srs",
-                "update_interval": "120h0m0s"
-            },
-            {
-                "type": "remote",
-                "tag": "geosite-ir",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-ir.srs",
-                "update_interval": "120h0m0s"
-            }
-        ],
-        "final": "select",
-        "auto_detect_interface": true,
-        "override_android_vpn": true
-    },
-    "experimental": {
-        "cache_file": {
+            "server": "dns-direct"
+         }
+      ],
+      "final": "dns-remote",
+      "static_ips": {
+         "sky.rethinkdns.com": [
+            "104.17.148.22",
+            "104.17.147.22",
+            "188.114.99.0",
+            "188.114.98.0"
+         ]
+      },
+      "independent_cache": true
+   },
+   "inbounds": [
+      {
+         "type": "mixed",
+         "tag": "mixed-in",
+         "listen": "127.0.0.1",
+         "listen_port": 12334,
+         "sniff": true,
+         "sniff_override_destination": true,
+         "set_system_proxy": true
+      },
+      {
+         "type": "direct",
+         "tag": "dns-in",
+         "listen": "127.0.0.1",
+         "listen_port": 16450
+      }
+   ],
+   "outbounds": [
+      {
+         "type": "selector",
+         "tag": "select",
+         "outbounds": [
+            "auto",
+            "Tehran § 0",
+            "Berlin § 1"
+         ],
+         "default": "Berlin § 1"
+      },
+      {
+         "type": "urltest",
+         "tag": "auto",
+         "outbounds": [
+            "Tehran § 0",
+            "Berlin § 1"
+         ],
+         "url": "https://clients3.google.com/generate_204",
+         "interval": "10m0s",
+         "tolerance": 1,
+         "idle_timeout": "30m0s",
+         "interrupt_exist_connections": true
+      },
+      {
+         "type": "wireguard",
+         "tag": "Tehran § 0",
+         "local_address": [
+            "172.16.0.2/24",
+            "2606:4700:110:8f3a:ea39:ed71:ca5e:9ea4/128"
+         ],
+         "private_key": "6GfrYbYs9UZ5HKsLGoc5LH1TmFByE/UnabqLuknljmU=",
+         "server": "162.159.195.19",
+         "server_port": 987,
+         "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+         "reserved": "AlVc",
+         "mtu": 1330,
+         "fake_packets": "40-80",
+         "fake_packets_size": "20-30",
+         "fake_packets_delay": "4-8",
+         "fake_packets_mode": "m4"
+      },
+      {
+         "type": "wireguard",
+         "tag": "Berlin § 1",
+         "detour": "Tehran § 0",
+         "local_address": [
+            "172.16.0.2/24",
+            "2606:4700:110:8061:8e85:f4d5:8aa7:689d/128"
+         ],
+         "private_key": "ELUO4KtjhCeH/evb3ji59Ex8mZ5cfOSbY+nelIO9j0Q=",
+         "server": "188.114.98.236",
+         "server_port": 1387,
+         "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+         "reserved": "JSrY",
+         "mtu": 1260
+      },
+      {
+         "type": "dns",
+         "tag": "dns-out"
+      },
+      {
+         "type": "direct",
+         "tag": "direct"
+      },
+      {
+         "type": "direct",
+         "tag": "direct-fragment",
+         "tls_fragment": {
             "enabled": true,
-            "path": "clash.db"
-        },
-        "clash_api": {
-            "external_controller": "127.0.0.1:16756",
-            "secret": "Yw-l2FaMNl0mYjJm"
-        }
-    }
+            "size": "10-30",
+            "sleep": "1-2"
+         }
+      },
+      {
+         "type": "dns",
+         "tag": "dns-out"
+      },
+      {
+         "type": "direct",
+         "tag": "direct"
+      },
+      {
+         "type": "direct",
+         "tag": "direct-fragment",
+         "tls_fragment": {
+            "enabled": true,
+            "size": "10-30",
+            "sleep": "1-2"
+         }
+      },
+      {
+         "type": "direct",
+         "tag": "bypass"
+      },
+      {
+         "type": "block",
+         "tag": "block"
+      }
+   ],
+   "route": {
+      "rules": [
+         {
+            "inbound": "dns-in",
+            "outbound": "dns-out"
+         },
+         {
+            "port": 53,
+            "outbound": "dns-out"
+         },
+         {
+            "domain_suffix": ".ir",
+            "outbound": "direct"
+         },
+         {
+            "rule_set": [
+               "geoip-ir",
+               "geosite-ir"
+            ],
+            "outbound": "direct"
+         }
+      ],
+      "rule_set": [
+         {
+            "type": "remote",
+            "tag": "geoip-ir",
+            "format": "binary",
+            "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-ir.srs",
+            "update_interval": "120h0m0s"
+         },
+         {
+            "type": "remote",
+            "tag": "geosite-ir",
+            "format": "binary",
+            "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-ir.srs",
+            "update_interval": "120h0m0s"
+         }
+      ],
+      "final": "select",
+      "auto_detect_interface": true,
+      "override_android_vpn": true
+   },
+   "experimental": {
+      "cache_file": {
+         "enabled": true,
+         "path": "clash.db"
+      },
+      "clash_api": {
+         "external_controller": "127.0.0.1:16756",
+         "secret": "gT1fIsgho6sk83ZH"
+      }
+   }
 }
