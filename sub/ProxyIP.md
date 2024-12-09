@@ -11,10 +11,15 @@
   - [A few more](#A-few-more)
 
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-## latest workers and pages
-latest pages.dev code is here [BPB](https://github.com/NiREvil/bia-pain-bache/blob/main/_worker.js)
-Latest worker.js code for CF-workers [CFW](https://github.com/NiREvil/Harmony/blob/main/_worker.js)
-And also [EDtunnel](https://github.com/NiREvil/Emotional-Damage)
+
+## Workers & Pages  
+
+The latest code for creating a VLESS configuration on Cloudflare is here: [![Here](https://img.shields.io/badge/zizifn-blue?logo=opencollective)](https://github.com/NiREvil/zizifn)  
+
+VLESS node subscription content generator built with Cloudflare Workers to automatically generate the preferred route: [![Here](https://img.shields.io/badge/Harmony-blue?logo=opencollective)](https://github.com/NiREvil/Harmony)  
+
+And also A GUI Panel providing Worker subscriptions and Fragment settings and Warp configurations and ...   [![Here](https://img.shields.io/badge/BPB-blue?logo=opencollective)](https://github.com/NiREvil/bia-pain-bache)  
+
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
 ## Best proxies
@@ -30,7 +35,7 @@ nima.nscl.ir
 ```POV-Ray SDL
 de.radically.pro
 ```
-**🇹🇷 Turkey, Stark Industries Solutions LTD**
+**🇹🇷 Turkey, Istanbul, Stark Industries Solutions LTD**
 ```POV-Ray SDL
 turk.radicalization.ir
 ```
