@@ -54,9 +54,6 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
 **Hysteria ON Singbox**  
 https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/H2%20SINGBOX%20HOSS
 
-**TUIC ON Singbox**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/TUIC%20ON%20SINGBOX
-
 **Proton + Warp on Hiddify**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Poroton%20ON%20WARP%2B
 
@@ -80,10 +77,6 @@ https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/rand-ip
 
 **All Guest ON Hiddify**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/All%20%20Warp%20Windscribe%20Poroton%20Hysteria
-
-**windscribe, proton, warp+ ( Fake packets)**  
-https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/Warp%20Windscribe%20Proton%20Fake%20Packets
-
 
 **Chaining two Warp cong**  
 https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/WarpOnWarp.json  
