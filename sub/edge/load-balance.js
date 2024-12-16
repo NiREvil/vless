@@ -731,7 +731,7 @@ function getAutoConfs(userID,hostName) {
 				"show": false
 			},
 			"wsSettings": {
-				"path": "%2F%3Fed%3D2048",
+				"path": "/assets/images?ed=2560",
 				"headers": {
 					"Host": hostName
 				}
@@ -780,9 +780,9 @@ function getAutoConfs(userID,hostName) {
 					tempBase["burstObservatory"] = {
 						"subjectSelector": ["o"],
 						"pingConfig": {
-							"destination": "https://www.gstatic.com/generate_204",
+							"destination": "https://clients3.google.com/generate_204",
 							"interval": "1h",
-							"connectivity": "http://www.gstatic.com/generate_204",
+							"connectivity": "https://clients3.google.com/generate_204",
 							"timeout": "3s",
 							"sampling": 5
 						}
@@ -904,8 +904,8 @@ let baseConfig = {
 				"domainStrategy": "AsIs",
 				"fragment": {
 					"packets": "tlshello",
-					"length": "10-20",
-					"interval": "20-30"
+					"length": "10-30",
+					"interval": "1-2"
 				}
 			},
 			"streamSettings": {
