@@ -140,24 +140,7 @@
          "server_port": 1387,
          "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
          "reserved": "JSrY",
-         "mtu": 1260
-      },
-      {
-         "type": "dns",
-         "tag": "dns-out"
-      },
-      {
-         "type": "direct",
-         "tag": "direct"
-      },
-      {
-         "type": "direct",
-         "tag": "direct-fragment",
-         "tls_fragment": {
-            "enabled": true,
-            "size": "10-30",
-            "sleep": "1-2"
-         }
+         "mtu": 1280
       },
       {
          "type": "dns",
