@@ -1,5 +1,5 @@
 //profile-title: base64:UHJvdG9uIE9OIFdBUlArIEROUyBDbGVhbg==
-//profile-update-interval: 15
+//profile-update-interval: 16
 //subscription-userinfo: upload=6768709120; download=117037858816; total=955630223360; expire=1762646400
 //support-url: https://t.me/F_NiREvil
 //profile-web-page-url: https://github.com/NiREvil
@@ -110,15 +110,7 @@
     {
       "type": "urltest",
       "tag": "auto",
-      "outbounds": [
-        "WARP+",
-        " 🇳🇱",
-        " 🇯🇵",
-        " 🇺🇲",
-        " 🇳🇱 2",
-        " 🇯🇵 2",
-        " 🇺🇲 2"
-      ],
+      "outbounds": ["WARP+", " 🇳🇱", " 🇯🇵", " 🇺🇲", " 🇳🇱 2", " 🇯🇵 2", " 🇺🇲 2"],
       "url": "https://clients3.google.com/generate_204",
       "interval": "10m0s"
     },
