@@ -9,12 +9,12 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "tcp://8.8.8.8",
+        "address": "tcp://8.8.4.4",
         "address_resolver": "dns-direct"
       },
       {
         "tag": "dns-direct",
-        "address": "tcp://8.8.8.8",
+        "address": "tcp://8.8.4.4",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -52,7 +52,7 @@
       "tag": "dns-in",
       "listen": "0.0.0.0",
       "listen_port": 16450,
-      "override_address": "1.1.1.1",
+      "override_address": "8.8.8.8",
       "override_port": 53
     },
     {
@@ -98,9 +98,7 @@
       "server": "77.91.87.167",
       "server_port": 2087,
       "tls": {
-        "alpn": [
-          "h3"
-        ],
+        "alpn": ["h3"],
         "enabled": true,
         "insecure": true,
         "server_name": "www.google.c"
@@ -163,14 +161,8 @@
         "outbound": "bypass"
       },
       {
-        "source_ip_cidr": [
-          "224.0.0.0/3",
-          "ff00::/8"
-        ],
-        "ip_cidr": [
-          "224.0.0.0/3",
-          "ff00::/8"
-        ],
+        "source_ip_cidr": ["224.0.0.0/3", "ff00::/8"],
+        "ip_cidr": ["224.0.0.0/3", "ff00::/8"],
         "outbound": "block"
       }
     ],
