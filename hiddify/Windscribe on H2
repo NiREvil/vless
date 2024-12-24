@@ -9,12 +9,12 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "tcp://8.8.4.4",
+        "address": "udp://1.1.1.1",
         "address_resolver": "dns-direct"
       },
       {
         "tag": "dns-direct",
-        "address": "tcp://8.8.4.4",
+        "address": "8.8.4.4",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
