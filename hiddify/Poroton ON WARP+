@@ -52,10 +52,7 @@
         "enabled": true,
         "server_name": "www.bing.com",
         "insecure": true,
-        "alpn": [
-          "h3",
-          "spdy/3.1"
-        ]
+        "alpn": ["h3", "spdy/3.1"]
       }
     },
     {
@@ -107,10 +104,7 @@
         "enabled": true,
         "server_name": "www.bing.com",
         "insecure": true,
-        "alpn": [
-          "h3",
-          "spdy/3.1"
-        ]
+        "alpn": ["h3", "spdy/3.1"]
       }
     },
     {
@@ -126,9 +120,7 @@
       }
     },
     {
-      "local_address": [
-        "10.1.13.168/32"
-      ],
+      "local_address": ["10.1.13.168/32"],
       "mtu": 1280,
       "peer_public_key": "PCHW67+lEKBQI+qRFaRptHN+RrUBIXYZ/v2Xhi+CoRk=",
       "private_key": "4NMyzSD/4t5zT6exVIjgvyOwopaoMTkL1YxmkTpseVM=",
@@ -142,9 +134,7 @@
       "type": "wireguard",
       "tag": "Proton-🇳🇱1",
       "detour": "Hiddify Warp",
-      "local_address": [
-        "10.2.0.2/32"
-      ],
+      "local_address": ["10.2.0.2/32"],
       "peer_public_key": "3H83oJvvo4pMX9Lisc1/wNPhnGXoTe6FTubLo8JknSs=",
       "private_key": "+KwejYEefMfkKt1b+QVwuaf9wR2e4a0qOn08ySUtOHE=",
       "server": "190.2.153.215",
@@ -155,9 +145,7 @@
       "type": "wireguard",
       "tag": "Proton-US1",
       "detour": "Hiddify Warp",
-      "local_address": [
-        "10.2.0.2/32"
-      ],
+      "local_address": ["10.2.0.2/32"],
       "peer_public_key": "FF79Ab2fcEYtsyNYxviTUtVxJLuvUcoEOpl8DYbdsgg=",
       "pre_shared_key": "",
       "private_key": "AGFOClYlKyqeLbjpBGkWVz/dxko8FvyVhrux5INxBEQ=",
@@ -169,9 +157,7 @@
       "type": "wireguard",
       "tag": "Windscribe🇫🇷D",
       "detour": "Hiddify Warp",
-      "local_address": [
-        "100.100.196.8/32"
-      ],
+      "local_address": ["100.100.196.8/32"],
       "peer_public_key": "cmaT8JIehfRf5PWWDkcBRwLWDb3jrIkk/SDbw4JmUAc=",
       "pre_shared_key": "p9oZWElz4vn74dOqa0+UNIJGxy2/VeBF6b8YIfmVgY0=",
       "private_key": "qKgJJNTkkAr37k74Ix7FkdB3tVIHE1rQBOp4adjm2HU=",
@@ -183,9 +169,7 @@
       "type": "wireguard",
       "tag": "Proton-US2",
       "detour": "Hiddify Warp",
-      "local_address": [
-        "10.2.0.2/32"
-      ],
+      "local_address": ["10.2.0.2/32"],
       "peer_public_key": "veE2/V9BCKn+sbselhBFcc2vyhtuJ2Fqaf4jL6buDX8=",
       "private_key": "gNgbSMZoxMIs1J7XH1FP9SXm9QMQj8lcee/l9dz2zlw=",
       "server": "89.187.180.54",
@@ -196,9 +180,7 @@
       "type": "wireguard",
       "tag": "Proton-US3",
       "detour": "Hiddify Warp",
-      "local_address": [
-        "10.2.0.2/32"
-      ],
+      "local_address": ["10.2.0.2/32"],
       "peer_public_key": "u8TqDmhDMeQcMJbMbi8uRcFfXEm5RdOGHygvuEesV0Y=",
       "private_key": "yMCUxuczMTGSDJTHY+TSCZAep9aMzVOtA5aZtuNTG3o=",
       "server": "149.40.62.56",
