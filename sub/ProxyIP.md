@@ -3,7 +3,7 @@
 > :bulb: ~~proxyIP127.0.0.1~~ means the proxy is no longer working.
 
 
-## What do we have here
+## We have:
 - [latest workers and pages](#latest-worker-and-page)
   - [Best proxies](#Best-proxies)
   - [Find proxyIP](#Find-proxyIP)
@@ -14,24 +14,26 @@
 
 ## Workers & Pages  
 
-The latest code for creating a VLESS configuration on Cloudflare is here: [![Here](https://img.shields.io/badge/zizifn-blue?logo=opencollective)](https://github.com/NiREvil/zizifn)  
+* The latest code for creating a VLESS configuration on Cloudflare is here: [![Here](https://img.shields.io/badge/zizifn-blue?logo=opencollective)](https://github.com/NiREvil/zizifn)  
 
-VLESS node subscription content generator built with Cloudflare Workers to automatically generate the preferred route: [![Here](https://img.shields.io/badge/Harmony-blue?logo=opencollective)](https://github.com/NiREvil/Harmony)  
+* VLESS node subscription content generator built with Cloudflare Workers to automatically generate the preferred route: [![Here](https://img.shields.io/badge/Harmony-blue?logo=opencollective)](https://github.com/NiREvil/Harmony)  
 
-And also A GUI Panel providing Worker subscriptions and Fragment settings and Warp configurations and ...   [![Here](https://img.shields.io/badge/BPB-blue?logo=opencollective)](https://github.com/NiREvil/bia-pain-bache)  
+* And also A GUI Panel providing Worker subscriptions and Fragment settings and Warp configurations and ...   [![Here](https://img.shields.io/badge/BPB-blue?logo=opencollective)](https://github.com/NiREvil/bia-pain-bache)  
 
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
+<br>
+
 ## Best proxies
 
-**🇺🇸 USA, Tencent & Amazon Tech Inc**
-```CSS
+**🇺🇸 USA, Tencent, Google & Amazon Tech Inc**
+```POV-Ray SDL
 bpb.radically.pro
 ```
 ```CSS   
 nima.nscl.ir
 ```
-**🇩🇪 Germany, Frankfurt am Main, Hetzner online**
+**🇩🇪 Germany, Frankfurt, Amazon & Hetzner online**
 ```POV-Ray SDL
 de.radically.pro
 ```
@@ -39,8 +41,260 @@ de.radically.pro
 ```POV-Ray SDL
 turk.radicalization.ir
 ```
+**🎌 Randomized, Everywhere, BPB Tech LTD**
+```POV-Ray SDL
+bpb.yousef.isegaro.com
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-
+**🇺🇸 USA, Texas Dallas, Rackspace Hosting, Cloud Loadbalancing as a Service-LBaaS**
+```POV-Ray SDL
+192.237.192.175
+```
+🇺🇸 **USA, California, san jose, DataCamp Limited & 
+Zenlayer**
+```POV-Ray SDL
+156.146.53.83
+```
+**🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies**
+```POV-Ray SDL
+72.13.122.137
+```
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇩🇪 Germany - Frankfurt am Main, Hesse, Amazon tech**
+```POV-Ray SDL
+3.75.170.179
+```
+```POV-Ray SDL
+3.75.149.151
+```
+**🇩🇪 Germany, Frankfurt am Main, Hetzner online**
+```POV-Ray SDL
+37.27.80.227
+```
+```POV-Ray SDL
+135.181.81.147
+```
+```POV-Ray SDL
+88.198.172.25
+```
+```POV-Ray SDL
+65.109.167.39
+```
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇺🇸 USA, random cities, Amazon Technologies Inc**
+```POV-Ray SDL
+3.13.196.41
+```
+```POV-Ray SDL
+52.42.71.111
+```
+```POV-Ray SDL
+3.137.160.207
+```
+```POV-Ray SDL
+18.221.188.241
+```
+```POV-Ray SDL
+213.170.157.1
+```
+```POV-Ray SDL
+3.135.194.214
+```
+```POV-Ray SDL
+3.15.3.38
+```
+```POV-Ray SDL
+52.4.8.214
+```
+```POV-Ray SDL
+44.200.195.84
+```
+```POV-Ray SDL
+3.16.135.101
+```
+```POV-Ray SDL
+3.12.71.127
+```
+```POV-Ray SDL
+3.129.183.128
+```
+```POV-Ray SDL
+3.135.212.13
+```
+```POV-Ray SDL
+3.140.211.75
+```
+```POV-Ray SDL
+3.137.221.83
+```
+```POV-Ray SDL
+50.112.33.254
+```
+```POV-Ray SDL
+18.221.62.181
+```
+```POV-Ray SDL
+3.149.234.141
+```
+```POV-Ray SDL
+18.224.38.201
+```
+```POV-Ray SDL
+18.220.206.47
+```
+```POV-Ray SDL
+35.155.38.149
+```
+```POV-Ray SDL
+3.214.164.221
+```
+```POV-Ray SDL
+54.210.245.85
+```
+```POV-Ray SDL
+3.133.156.22
+```
+```POV-Ray SDL
+54.81.103.76
+```
+```POV-Ray SDL
+3.145.78.39
+```
+```POV-Ray SDL
+34.225.195.136
+```
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇹🇷 Turkey, Istanbul, Poyraz Hosting Bilisim Hizmetleri**
+```POV-Ray SDL
+2.59.117.217
+```
+**🇹🇷 Turkey, izmir, Stark Industries Solutions LTD**
+```POV-Ray SDL
+62.3.12.185
+```
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇸🇪 Sweden, Stockholm, Sweden, Amazon tech**
+```POV-Ray SDL
+51.20.161.26
+```
+```POV-Ray SDL
+13.60.209.207
+```
+```POV-Ray SDL
+51.20.207.0
+```
+**🇮🇪 Ireland, Dublin Leinster, Amazon tech**
+```POV-Ray SDL
+54.74.167.219
+```
+**🇫🇷 France, Paris, Amazon tech**
+```POV-Ray SDL
+35.180.229.1
+```
+**🇬🇧 England London, Amazon tech**
+```POV-Ray SDL
+18.170.77.148
+```
+```POV-Ray SDL
+3.11.236.175
+```
+**🇦🇪 United arab emirates, Abu Dhabi**
+```POV-Ray SDL
+193.123.81.105
+```
+**🇸🇪 Sweden, Stockholm, Oracle Corporation**
+```POV-Ray SDL
+129.151.204.91
+```
+**🇧🇷 Brazil, Sao paulo, Oracle Corporation**
+```POV-Ray SDL
+144.22.252.124
+```
+**🇫🇷 France, Marseille, Oracle Svenska AB**
+```POV-Ray SDL
+141.145.199.188
+```
+**🇨🇭 Switzerland, Zurich Oberengstringen, Oracle Corporation**
+```POV-Ray SDL
+140.238.212.95
+```
+**🇸🇬 Singapore, Amazon Technologies Inc.**
+```POV-Ray SDL
+13.250.38.94
+```
+```POV-Ray SDL
+18.141.204.88
+```
+**🇸🇬 Singapore, Hetzner online**
+```POV-Ray SDL
+5.223.41.42
+```
+**🇸🇬 Singapore, Alibaba Technology Co**
+```POV-Ray SDL
+8.219.66.156
+```
+```POV-Ray SDL
+8.219.103.65
+```
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇺🇸 USA, California, santa clara, Tencent cloud computing**
+```CSS
+43.153.103.203
+```
+**🇺🇸 USA, Hetzner Online GmbH, Hetzner**
+```CSS
+5.161.225.35
+```
+🇺🇸 **USA, Chicago, Elk Grove Village, Vultr Holdings, LLC**
+```POV-Ray SDL
+45.77.109.191
+```
+```POV-Ray SDL
+66.135.19.169
+```
+```POV-Ray SDL
+173.199.117.101
+```
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+~~**🇮🇱 Israel, Haifa, BroadBand**~~
+```POV-Ray SDL
+5.29.194.1
+```
+**🇳🇱 Netherlands, Amsterdam, Oracle Corporation**
+```
+141.148.229.106
+```
+**🇯🇵 Japan, Tokyo Shibuya, ZENLA**
+```POV-Ray SDL
+128.1.18.29
+```
+**🇯🇵 Japan, Tokyo, akami technologies**
+```POV-Ray SDL
+172.104.120.67
+```
+**🇯🇵 Japan, Ōi, Saitama, Vultr Holdings, LLC**
+```POV-Ray SDL
+45.77.130.245
+```
+```POV-Ray SDL
+45.76.220.61
+```
+```POV-Ray SDL
+66.42.34.203
+```
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇦🇺 Australia, New South Wales, Huntingwood**
+```POV-Ray SDL
+192.9.180.162
+```
+```POV-Ray SDL
+192.9.177.204
+```
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+**🇳🇮 I Don't know**
+```POV-Ray SDL
+ipdb.rr.nu
+```
 🇺🇸 **USA, New Jersey, Piscataway, Vultr Holdings, LLC**
 ```POV-Ray SDL
 proxyip.vultr.fxxk.dedyn.io
@@ -57,190 +311,32 @@ proxyip..fxxk.dedyn.io
 ```POV-Ray SDL
 proxyip.oracle.fxxk.dedyn.io
 ```
-**🇺🇸 USA, Texas Dallas, Rackspace Hosting, Cloud Loadbalancing as a Service-LBaaS**
-```POV-Ray SDL
-192.237.192.175
-```
-🇺🇸 **USA, California, san jose, DataCamp Limited & 
-Zenlayer**
-```POV-Ray SDL
-156.146.53.83
-```
-**🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies**
-```POV-Ray SDL
-72.13.122.137
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇩🇪 Germany, Frankfurt am Main, Hetzner online**
-```POV-Ray SDL
-37.27.80.227
-```
-```POV-Ray SDL
-135.181.81.147
-```
-```POV-Ray SDL
-88.198.172.25
-```
-```POV-Ray SDL
-65.109.167.39
-```
-**🇩🇪 Germany, Frankfurt am Main, Oracle Cloud**
-```POV-Ray SDL
-129.159.241.172
-```
-```POV-Ray SDL
-130.61.170.78
-```
-```POV-Ray SDL
-138.3.254.39
-```
-```POV-Ray SDL
-130.61.23.77
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇹🇷 Turkey, Istanbul, Poyraz Hosting Bilisim Hizmetleri**
-```CSS
-2.59.117.217
-```
-**🇹🇷 Turkey, izmir, Stark Industries Solutions LTD**
-```CSS
-62.3.12.185
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇦🇪 United arab emirates, Abu Dhabi**
-```POV-Ray SDL
-193.123.81.105
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇸🇪 Sweden, Stockholm, Oracle Corporation**
-```POV-Ray SDL
-129.151.204.91
-```
-**🇮🇳 India, Telangana-Hyderabad, Oracle Corporation**
-```POV-Ray SDL
-129.159.22.4
-```
-**🇧🇷 Brazil, Sao paulo, Oracle Corporation**
-```POV-Ray SDL
-144.22.252.124
-```
-**🇫🇷 France, Marseille, Oracle Svenska AB**
-```POV-Ray SDL
-141.145.199.188
-```
-**🇨🇭 Switzerland, Zurich Oberengstringen, Oracle Corporation**
-```POV-Ray SDL
-140.238.212.95
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇸🇬 Singapore, OVH SAS**
-```POV-Ray SDL
-15.235.162.49
-```
-**🇸🇬 Singapore, Amazon Technologies Inc.**
-```POV-Ray SDL
-18.141.204.88
-```
-**🇸🇬 Singapore, Hetzner online**
-```POV-Ray SDL
-5.223.41.42
-```
-**🇸🇬 Singapore, NPO G-net**
-```POV-Ray SDL
-185.217.5.3
-```
-**🇯🇵 Japan, Tokyo, M247 Europe SRL**
-```POV-Ray SDL
-176.97.73.20
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇺🇸 USA, California, santa clara, Tencent cloud computing**
-```CSS
-43.153.103.203
-```
-**🇺🇸 USA, Hetzner Online GmbH, Hetzner**
-```CSS
-5.161.225.35
-```
-🇺🇸 **USA, Chicago, Elk Grove Village, Vultr Holdings, LLC**
-```POV-Ray SDL
-45.77.109.191
-```
-```POV-Ray SDL
-104.207.132.10
-```
-```POV-Ray SDL
-108.61.85.153
-```
-```POV-Ray SDL
-66.135.19.169
-```
-```POV-Ray SDL
-173.199.117.101
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-~~**🇮🇱 Israel, Haifa, BroadBand**~~
-```
-5.29.194.1
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇳🇱 Netherlands, Amsterdam, Oracle Corporation**
-```
-141.148.229.106
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇯🇵 Japan, Tokyo Shibuya, ZENLA**
-```POV-Ray SDL
-128.1.18.29
-```
-**🇯🇵 Japan, Tokyo, akami technologies**
-```
-172.104.120.67
-```
-**🇯🇵 Japan, Ōi, Saitama, Vultr Holdings, LLC**
-```
-45.77.130.245
-```
-```
-45.76.220.61
-```
-```
-66.42.34.203
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇦🇺 Australia, New South Wales, Huntingwood**
-```CSS
-192.9.180.162
-```
-```
-192.9.177.204
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇳🇮 i don't know**
-```CSS
-ipdb.rr.nu
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇸🇬 Singapore, Alibaba Technology Co**
-```
-8.219.66.156
-```
-```
-8.219.103.65
-```
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-**🇬🇧 UK, Hostaris L.L.C**
+**🇬🇧 England, Hostaris L.L.C**
 ```POV-Ray SDL
 ircpipproxy.duckdns.org
 ```
+**🇩🇪 Germany, Frankfurt am Main, Oracle Cloud**
+```CSS
+129.159.241.172
+```
+```CSS
+130.61.170.78
+```
+```CSS
+138.3.254.39
+```
+```CSS
+130.61.23.77
+```
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
+<br><br>
 
 <p align="center">
   <br><img src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png">
 </p>
 
-
+<br><br>
 
 ## Find proxyIP
 
@@ -266,14 +362,20 @@ __ادامه توضیحات__
 
 - > یکم خلاقیت ب خرج بدی خودت میفهمی که باید دنبال چی بگردی تو سایت
  
+ <br><br>
  
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
 ## Advanced
 How to find proxyip for VLESS CF WORKERS using Cyberspace Search Engine [Telegra.ph Link](https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06) 
+
+ <br><br>
  
  ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
-## little more 
+ 
+ <br><br>
+ 
+ ## little more 
 
 IP's load from Netherlands, Sweden,, Germany, US & ...
 ```POV-Ray SDL
