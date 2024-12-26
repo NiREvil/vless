@@ -24,7 +24,7 @@
       },
       {
         "tag": "dns-direct",
-        "address": "tcp://8.8.4.4",
+        "address": "tcp://185.228.168.9",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -105,12 +105,12 @@
         "172.16.0.2/24",
         "2606:4700:110:8f3a:ea39:ed71:ca5e:9ea4/128"
       ],
-      "private_key": "6GfrYbYs9UZ5HKsLGoc5LH1TmFByE/UnabqLuknljmU=",
-      "server": "162.159.195.19",
-      "server_port": 987,
+      "private_key": "yNbtLWHvVlXrayxosI7l/aja+6KiMajKdbdVFbhUmFw=",
+      "server": "162.159.192.126",
+      "server_port": 928,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": "AlVc",
-      "mtu": 1330,
+      "reserved": [250, 199, 106],
+      "mtu": 1306,
       "fake_packets": "1-3",
       "fake_packets_size": "10-30",
       "fake_packets_delay": "10-30",
@@ -121,15 +121,15 @@
       "tag": "Berlin § 1",
       "detour": "Tehran § 0",
       "local_address": [
-        "172.16.0.2/24",
-        "2606:4700:110:8061:8e85:f4d5:8aa7:689d/128"
+        "172.16.0.2/32",
+        "2606:4700:110:897b:9c3:13fb:7b2c:8cae/128"
       ],
-      "private_key": "ELUO4KtjhCeH/evb3ji59Ex8mZ5cfOSbY+nelIO9j0Q=",
-      "server": "188.114.98.236",
-      "server_port": 1387,
+      "private_key": "oMUx2ZTi1G7ZQvWlClFuKVbWixrdxq+RyIfVpVio/1s=",
+      "server": "162.159.192.126",
+      "server_port": 928,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": "JSrY",
-      "mtu": 1306
+      "reserved": [75, 115, 46],
+      "mtu": 1300
     },
     {
       "type": "dns",
