@@ -12,6 +12,7 @@
   - [Amazon Technologies Inc.](#Amazon-Technologies-Inc.)
   - [Hetzner Online tech](#Hetzner-Online-tech)
   - [Oracle cloud corporations](#Oracle-cloud-corporations)
+  - [M247 Europe SLR](#M247-Europe-SLR)
   - [Others](#Others)
   - [Who am i ?](#Who-am-i-)
 - [Test proxyIPs](#Test-proxyIPs)
@@ -411,6 +412,9 @@ bpb.yousef.isegaro.com
 
 **🇦🇪 United arab emirates, Abu Dhabi, Oracle**
 ```POV-Ray SDL
+193.123.69.77
+```
+```POV-Ray SDL
 193.123.81.105
 ```
 **🇮🇳 India, Airoli, Maharashtra, Oracle**
@@ -449,6 +453,12 @@ bpb.yousef.isegaro.com
 ```
 **🇳🇱 Netherlands, Amsterdam, Oracle**
 ```POV-Ray SDL
+150.230.20.156
+```
+```POV-Ray SDL
+152.70.59.90
+```
+```POV-Ray SDL
 143.47.191.154
 ```
 ```POV-Ray SDL
@@ -475,7 +485,16 @@ bpb.yousef.isegaro.com
 ```
 **🇩🇪 Germany, Frankfurt am Main, Oracle**
 ```POV-Ray SDL
+141.147.47.32
+```
+```POV-Ray SDL
 138.2.136.25
+```
+```POV-Ray SDL
+141.147.61.116
+```
+```POV-Ray SDL
+144.24.169.81
 ```
 ```POV-Ray SDL
 130.162.223.59
@@ -493,14 +512,41 @@ bpb.yousef.isegaro.com
 ```POV-Ray SDL
 144.22.252.124
 ```
+**🇸🇬 Singapore, Oracle**
+```POV-Ray SDL
+18.141.204.88
+```
+
+## M247 Europe SRL
+![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+
+**🇯🇵 Japan, M247 SRL**
+```POV-Ray SDL
+176.97.73.20
+```
+**🇳🇱 Netherlands, Amsterdam, M247 SRL**
+```POV-Ray SDL
+141.144.202.203
+```
+```POV-Ray SDL
+158.101.223.154
+```
 
 ## Others
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+
 **🇺🇸 USA, California, santa clara, Tencent cloud**
 ```CSS
 43.153.103.203
 ```
-🇺🇸 **USA, Chicago, Elk Grove Village, Vultr Holdings, LLC**
+**🇺🇸 USA, LA, HostPapa**
+```POV-Ray SDL
+198.46.200.132
+```
+```POV-Ray SDL
+23.94.212.4
+```
+**🇺🇸 USA, Chicago, Elk Grove Village, Vultr Holdings, LLC**
 ```POV-Ray SDL
 45.77.109.191
 ```
@@ -537,36 +583,66 @@ bpb.yousef.isegaro.com
 ## Who am i ?
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
-**🇳🇮 I Don't know**
+
+**🇳🇱 IP's load from Germany, korea, CH, NL & ...**
 ```POV-Ray SDL
-ipdb.rr.nu
+bestproxy.onecf.eu.org
 ```
-🇺🇸 **USA, New Jersey, Piscataway, Vultr Holdings, LLC**
+**🇸🇬 Loads from Singapore, NL, DE, US, JP & ...**
+```POV-Ray SDL
+cdn-all.xn--b6gac.eu.org
+```
+**🇺🇸 Loads from USA new jersey, Vultr Holdings LLC**
 ```POV-Ray SDL
 proxyip.vultr.fxxk.dedyn.io
 ```
-🇺🇸 **USA, California, santa clara, Digital ocean LLC**
+**🇺🇸 Loads from USA california,Digital Ocean LLC**
 ```POV-Ray SDL
 proxyip.digitalocean.hw.090227.xyz
 ```
-🇺🇸 **USA, California, LA, multacom corporation**
+**🇰🇷Loads from Singapore, Korea, Japan & ...**
 ```POV-Ray SDL
-proxyip..fxxk.dedyn.io
+cdn-b100.xn--b6gac.eu.org
 ```
-🇺🇸 **USA, Arizona, phoenix, Oracle corporation**
+**🇳🇮 Loads from around the world**
+```POV-Ray SDL
+ipdb.rr.nu
+```
+**🇺🇸 Loads from USA california, multacom corporation**
+```POV-Ray SDL
+proxyip.multacom.fxxk.dedyn.io
+```
+**🇺🇸 Loads from USA arizona, Oracle corporation**
 ```POV-Ray SDL
 proxyip.oracle.fxxk.dedyn.io
 ```
-**🇬🇧 England, Hostaris L.L.C**
+**🇭🇰 Loads from Hong Kong & Japan, Oracle corporation**
+```POV-Ray SDL
+proxy.xxxxxxxx.tk
+```
+**🇹🇼 Single IP load from Taipei, Taiwan,Taipei, Province of China, Pittqiao Network**
+```POV-Ray SDL
+ts.hpc.tw
+```
+**🇧🇬 Loads From around the world**
+```POV-Ray SDL
+my-telegram-is-herocore.onecf.eu.org
+```
+**🇯🇵 IPs load from japan, alibaba tech**
+```POV-Ray SDL
+proxyip.aliyun.fxxk.dedyn.io
+```
+**🇩🇪 Loads from Germany, alibaba tech**
 ```POV-Ray SDL
 ircpipproxy.duckdns.org
 ```
+
 <br><br><br>
 
 ## Test proxyIPs
 
 ### 1. تست از طریق وب‌سایت
-اولین روش آسون اینه که وب‌سایت [![Here](https://img.shields.io/badge/EDtunnelProxyTester-blue?logo=opencollective)](https://proxyip.edtunnel.best)  رو باز کنی پروکسی دلخواهت رو تو کادر IP قرار بدی و `443:` بذار بمونه آخرش. گزبنه tls و هاست هم پیشفرض باقی بمونه و submit کنی چند ثانیه بعد پایین صفحه نتایج به نمایش درمیاد، گزینه proxyip برابر با True باشه حله میتونی استفادش کنی.
+اولین روش آسون اینه که وب‌سایت [![Here](https://img.shields.io/badge/EDtunnelProxyTester-blue?logo=opencollective)](https://proxyip.edtunnel.best)  رو باز کنیم پروکسی دلخواهمون رو تو کادر IP قرار بدیم (`443:` بذار بمونه آخرش)، در سطر بعدی گزبنه tls و هاست هم پیشفرض باقی بمونن و submit رو می‌زنیم و چند ثانیه بعد انتهای صفحه نتایج به نمایش درمیاد، گزینه proxyip برابر با True باشه حله میتونیم استفاده کنیم.
 
 ![1000048541](https://github.com/user-attachments/assets/dfa8fc22-f5ed-44c2-843c-5a8cb55cce71)
 ![1000048540](https://github.com/user-attachments/assets/7c902603-9f58-43d4-9e0c-8aa4ac81c059)  
@@ -574,10 +650,11 @@ ircpipproxy.duckdns.org
 <br>
 
 ### 2. تست از طریق پنل BPB
-همه می‌دونید که تو پنل [![Here](https://img.shields.io/badge/BPB-blue?logo=opencollective)](https://github.com/NiREvil/bia-pain-bache) یه قسمت هست برای وارد کردن پروکسی‌ آی‌پی و کار مارو راحت می‌کنه از ادیت کد و ساخت متغیر و غیره ...  
-نحوه انجام کار به این شکل هستش که ما پروکسی‌آی‌پی یا دامین دلخواه رو تو پنل قرار داده و دکمه `apply settings` رو می‌زنیم، حالا واسه اینکه این پروکسی جدید رو کانفیگ‌های‌ما اعمال بشه باید یکبار لینک اشتراک یا همون لینک ساب رو آپدیت بزنیم داخل کلاینت، تا قبل از آپدیت پروکسی آی‌پی‌ما قبلا هرچی بود همونه، بعد از آپدیت این جدیده میاد روی‌کار.  
+همه می‌دونید که تو پنل [![Here](https://img.shields.io/badge/BPB-blue?logo=opencollective)](https://github.com/NiREvil/bia-pain-bache) یه قسمت هست برای وارد کردن پروکسی‌ آی‌پی و مارو خیلی راحت می‌کنه از ادیت کد و ساخت متغیر و غیره.  
+نحوه انجام کار به این شکل هستش که ما پروکسی‌آی‌پی یا دامین دلخواه رو تو پنل قرار داده و دکمه `Apply Settings` رو می‌زنیم، حالا واسه اینکه این پروکسی جدید رو کانفیگ‌های‌ما اعمال بشه باید یکبار لینک اشتراک یا همون لینک ساب رو آپدیت بزنیم داخل کلاینت، تا قبل از آپدیت پروکسی آی‌پی‌ما قبلا هرچی بود همونه، بعد از آپدیت این جدیده میاد روی‌کار.  
 بعد باید به یکی از کانفیگ‌ها وصل شد و رفت سراغ یکی از سایت‌هایی که از CDN کلادفلر استفاده میکنن یا به اصطلاح پشت کلادفلر هستند، مثل لینک وورکر یا پیج خودمون، یا سایت‌های عمومی مثل [![Here](https://img.shields.io/badge/WHOER-blue?logo=opencollective)](https://whoer.net) و یا [![Here](https://img.shields.io/badge/SPEEDTEST-blue?logo=opencollective)](https://www.speedtest.net) و غیره تا ببینیم سایت برامون بالا میاد یانه.  
-اگه عادی بالا میان ک اوکی پس پروکسی که انتخاب کردیم درست کار می‌کنه می‌تونیم ازش استفاده کنیم. اگه بالا نیومد سایت یا هر خطای دیگه‌ای داد یا هردفعه مرورگرمون کپچا نشون داد (تو پروکسی‌آی‌پی‌های مسخره‌ی oracle این خیلی پیش میاد) یا تو ربات های تلگرامی کپچا نشون داده میشه یا بالا نمیان اونوقت باید یکی دیگه انتخاب کنیم چون این منتخبمون داغونه.
+اگه عادی بالا میان که اوکی پس پروکسی که انتخاب کردیم درست کار می‌کنه می‌تونیم ازش استفاده کنیم. اگه بالا نیومد سایت یا هر خطای دیگه‌ای داد یا هردفعه مرورگرمون کپچا نشون داد (تو پروکسی‌آی‌پی‌های مسخره‌ی oracle این خیلی پیش میاد) یا تو ربات های تلگرامی کپچا نشون داده میشه یا بالا نمیان اونوقت باید یکی دیگه انتخاب کنیم چون این منتخبمون داغونه.
+
 <br>
 
 ### 3. قراردادن پروکسی داخل کد یا ازطریق متغیرها
@@ -617,11 +694,13 @@ ircpipproxy.duckdns.org
 >
 > https://www.nslookup.io/domains/nima.nscl.ir/dns-records/
 >
-> https://www.nslookup.io/domains/bpb.radically.pro/dns-records/
+> https://www.nslookup.io/domains/bestproxy.onecf.eu.org/dns-records/
 >
-> https://www.nslookup.io/domains/proxyip.fxxk.dedyn.io/dns-records/
+> 
+https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
 >
-> https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
+>
+>https://www.nslookup.io/domains/proxy.xxxxxxxx.tk/dns-records/
 >
 > https://www.nslookup.io/domains/ipdb.rr.nu/dns-records/
 >
@@ -629,12 +708,14 @@ ircpipproxy.duckdns.org
 >
 > https://www.nslookup.io/domains/proxyip.aliyun.fxxk.dedyn.io/dns-records/
 >
-> https://www.nslookup.io/domains/workers.bestip.one/dns-records/
+> https://www.nslookup.io/domains/proxyip.vultr.fxxk.dedyn.io/dns-records/
 >
 > https://www.nslookup.io/domains/workers.cloudflare.cyou/dns-records/
 
 > [!NOTE]
 > یکم خلاقیت ب خرج بدی خودت میفهمی که باید دنبال چی بگردی تو سایت
+
+
 <br><br>
 <br><br>
 
@@ -644,40 +725,12 @@ ircpipproxy.duckdns.org
 How to find ProxyIPs for VLESS/VMESS/TROJAN CF Workers & Pages using Cyberspace Search Engine [Telegra.ph Link](https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06) 
  
 <br><br>
+
  
 ## Trash
  ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
-**IP's load from Netherlands, Germany, US & ...**
-```POV-Ray SDL
-cdn-all.xn--b6gac.eu.org
-```
----
-**IP's load from Singapore, Korea, Japan, Hong Kong & ...**
-```POV-Ray SDL
-cdn.xn--b6gac.eu.org'];
-```
-**IP's: Singapore**
-```POV-Ray SDL
-edgetunnel.anycast.eu.org
-```
-**xxxxxx**
-```POV-Ray SDL
-workers.bestip.one
-```
----
-**Alibaba**
-```POV-Ray SDL
-proxyip.aliyun.fxxk.dedyn.io
-```
-**vultr**
-```POV-Ray SDL
-proxyip.vultr.fxxk.dedyn.io
-```
-**multacom**
-```POV-Ray SDL
-proxyip.multacom.fxxk.dedyn.io
-```
+
 ~~UK, London, Hostaris LLC~~
 
     176.97.77.32
