@@ -3,11 +3,11 @@ import { connect } from 'cloudflare:sockets';
 
 let userID = '00dc6dd8-885d-42f6-9c17-2e88bab84360';
 
-
-const proxyIPs = ['bpb.radically.pro'];//'141.147.94.64', '141.147.110.13', '150.230.125.138'
+// Find proxyIP : https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
+const proxyIPs = ['nima.nscl.ir'];// can using more than once: ['IP1', 'IP2', 'IP3', 'IP4']
 let proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
 
-let dohURL = 'https://sky.rethinkdns.com/1:-Pf_____9_8A_AMAIgE8kMABVDDmKOHTAKg='; // OR use. https://melbourne-k0ypv0z4bjr2.deno.dev/1:AKA4vAAg. OR  https://dns.adguard-dns.com/dns-query  OR https://sky.rethinkdns.com/1:-Pf_____9_8A_AMAIgE8kMABVDDmKOHTAKg= OR https://8.8.8.8/dns-query OR https://cloudflare-dns.com/dns-query
+let dohURL = 'https://sky.rethinkdns.com/1:-Pf_____9_8A_AMAIgE8kMABVDDmKOHTAKg='; // OR use https://dns.adguard-dns.com/dns-query  OR  https://sky.rethinkdns.com/1:-Pf_____9_8A_AMAIgE8kMABVDDmKOHTAKg=  OR  https://8.8.8.8/dns-query OR https://cloudflare-dns.com/dns-query
 
 let nodeId = '';
 
