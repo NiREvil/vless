@@ -1,4 +1,4 @@
-name: "REvil_PHP "
+name: "RE PHP"
 
 on:
   workflow_dispatch:
@@ -26,18 +26,18 @@ jobs:
         with:
           php-version: '8.4'
 
-      - name: Execute PHP script
+      - name: Execute PHP
         run: php edge/Troy.php
 
       - name: Configure Git
         run: |
           git config --global user.email "nirevil@proton.me"
-          git config --global user.name "nirevil"
+          git config --global user.name "REvil"
 
       - name: Commit changes
         run: |
           git add -A
-          git diff --cached --quiet || git commit -m "ⅣⅪⅮ Updated at: $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M')"
+          git diff --cached --quiet || git commit -m "ⅣⅬⅬⅯ UPDATED: $(TZ='Asia/Tehran' date '+%a, %d %b, %l:%M %p')"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
