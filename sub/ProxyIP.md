@@ -9,7 +9,7 @@
 ## $\color{ghostwhite} \large \text{We have}$
 - [Best proxies](#Best-proxies)
   - [Google LLC](#Google-LLC)
-  - [Amazon Technologies Inc.](#Amazon-Technologies-Inc.)
+  - [Amazon Technologies Inc](#Amazon-Technologies-Inc)
   - [Hetzner Online tech](#Hetzner-Online-tech)
   - [Oracle cloud corporations](#Oracle-cloud-corporations)
   - [M247 Europe SLR](#M247-Europe-SLR)
@@ -74,6 +74,9 @@ bpb.yousef.isegaro.com
 34.82.76.253
 ```
 ```POV-Ray SDL
+34.66.72.229
+```
+```POV-Ray SDL
 34.105.49.234
 ```
 ```POV-Ray SDL
@@ -103,10 +106,19 @@ bpb.yousef.isegaro.com
 35.200.202.118
 ```
 
-## Amazon Technologies Inc.
+## Amazon Technologies Inc
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
 **🇩🇪 Germany, Frankfurt am Main, Amazon**
+```POV-Ray SDL
+3.126.159.12
+```
+```POV-Ray SDL
+3.64.205.189
+```
+```POV-Ray SDL
+3.78.187.212
+```
 ```POV-Ray SDL
 3.75.170.179
 ```
@@ -145,6 +157,15 @@ bpb.yousef.isegaro.com
 ```
 
 **🇺🇸 USA, random, Amazon Technologies Inc**
+```POV-Ray SDL
+34.227.133.207
+```
+```POV-Ray SDL
+184.169.181.217
+```
+```POV-Ray SDL
+52.4.8.214
+```
 ```POV-Ray SDL
 3.13.196.41
 ```
@@ -195,12 +216,6 @@ bpb.yousef.isegaro.com
 ```
 ```POV-Ray SDL
 18.221.62.181
-```
-```POV-Ray SDL
-3.149.234.141
-```
-```POV-Ray SDL
-18.224.38.201
 ```
 ```POV-Ray SDL
 18.220.206.47
@@ -324,6 +339,9 @@ bpb.yousef.isegaro.com
 ```
 **🇸🇪 Sweden, Stockholm, Amazon tech**
 ```POV-Ray SDL
+51.20.215.255
+```
+```POV-Ray SDL
 13.49.80.142
 ```
 ```POV-Ray SDL
@@ -346,6 +364,9 @@ bpb.yousef.isegaro.com
 3.99.192.219
 ```
 **🇬🇧 England, London, Amazon tech**
+```POV-Ray SDL
+35.178.235.225
+```
 ```POV-Ray SDL
 35.179.187.249
 ```
@@ -485,6 +506,9 @@ bpb.yousef.isegaro.com
 ```
 **🇩🇪 Germany, Frankfurt am Main, Oracle**
 ```POV-Ray SDL
+193.122.58.158
+```
+```POV-Ray SDL
 141.147.47.32
 ```
 ```POV-Ray SDL
@@ -564,9 +588,9 @@ bpb.yousef.isegaro.com
 ```POV-Ray SDL
 47.90.141.204
 ```
-**🇯🇵 Japan, Tokyo Shibuya, ZENLA**
+**🇯🇵 Japan, Ōi, Saitama, The Constant Company, LLC**
 ```POV-Ray SDL
-128.1.18.29
+45.77.130.245
 ```
 **🇯🇵 Japan, Tokyo, akami technologies**
 ```POV-Ray SDL
