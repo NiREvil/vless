@@ -1,4 +1,4 @@
-name: "RE PHP"
+name: "REvil CF-IPs"
 
 on:
   workflow_dispatch:
@@ -31,14 +31,14 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.email "nirevil@proton.me"
-          git config --global user.name "REvil"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Commit changes
         run: |
           git add -A
-          git diff --cached --quiet || git commit -m "ⅣⅬⅬⅯ UPDATED: $(TZ='Asia/Tehran' date '+%a, %d %b, %l:%M %p')"
-
+          git diff --cached --quiet || git commit -m "ⅣⅭ Updated: $(TZ='Asia/Tehran' date '+%l:%M %p, %A, %d %b %Y')"
+          
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
