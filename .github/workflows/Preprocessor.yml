@@ -26,18 +26,18 @@ jobs:
         with:
           php-version: '8.4'
 
-      - name: Execute PHP
+      - name: Lets go sweetie
         run: php edge/Troy.php
 
       - name: Configure Git
         run: |
-          git config --global user.name "github-actions[bot]"
+          git config --global user.name "github-actions"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit changes
+      - name: Commit changes with timestamp
         run: |
           git add -A
-          git diff --cached --quiet || git commit -m "ⅣⅭ Updated: $(TZ='Asia/Tehran' date '+%l:%M %p, %A, %d %b %Y')"
+          git diff --cached --quiet || git commit -m "ⅣⅭ SYNCED AT: $(TZ='Asia/Tehran' date '+%a, %d %b %y, %H:%M"
           
       - name: Push changes
         uses: ad-m/github-push-action@master
