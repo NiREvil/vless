@@ -24,13 +24,18 @@ jobs:
         python -m pip install --upgrade pip
         pip install ipaddress
    
-    - name: Run script
+    - name: Lets go
       run: python warp.py
-    - name: Commit and push changes
+    - name: Commit changes with timestamp
       run: |          
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "REvil"
+          git config --global user.email "nirevil@proton.me"
           git config credential.helper store
           git add -A
-          git commit -m "ⅣⅭ Updated: $(TZ='Asia/Tehran' date '+%l:%M %p, %A, %d %b %Y')"
+          git diff --cached --quiet || git commit -m "ⅨⅣ SYNCED AT: $(TZ='Asia/Tehran' date '+%a, %d %b %y, %H:%M')"
           git push
+          
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
