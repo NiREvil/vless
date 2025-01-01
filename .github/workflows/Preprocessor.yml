@@ -37,7 +37,7 @@ jobs:
       - name: Commit changes with timestamp
         run: |
           git add -A
-          git diff --cached --quiet || git commit -m "ⅣⅭ SYNCED AT: $(TZ='Asia/Tehran' date '+%a, %d %b %y, %H:%M"
+          git diff --cached --quiet || git commit -m "ⅣⅭ SYNCED AT: $(TZ='Asia/Tehran' date '+%a, %d %b %y, %H:%M')"
           
       - name: Push changes
         uses: ad-m/github-push-action@master
