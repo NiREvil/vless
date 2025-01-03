@@ -60,13 +60,13 @@ def arch_suffix():
 
 arch = arch_suffix()
 
-print("Fetch warp program...")
+print("Fetching warp program...")
 url = f"https://gitlab.com/Misaka-blog/warp-script/-/raw/main/files/warp-yxip/warp-linux-{arch}"
 
 subprocess.run(["wget", url, "-O", "warp"])
 os.chmod("warp", 0o755)
 command = "./warp >/dev/null 2>&1"
-print("Scanning ips...")
+print("Scanning IPs...")
 process = subprocess.Popen(command, shell=True)
 
 process.wait()
@@ -92,21 +92,23 @@ with open("Bestip.txt", "w") as f:
         f.write(f"{ip}\n")
 
 
-formatted_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+formatted_time = datetime.datetime.now().strftime("%A, %d %b %Y, %H:%M")
 
 
 def export_Hiddify(t_ips):
-    config_prefix = f"warp://{t_ips[0]}?ifp=1-3&ifpm=m4#TEHRAN&&detour=warp://{t_ips[1]}?ifp=1-2&ifpm=m5#BERLIN"
+    config_prefix = (
+        f"warp://{t_ips[0]}?ifp=1-3&ifpm=m4#⚪️Tehran&&detour=warp://{t_ips[1]}?ifp=1-2&ifpm=m5#🟡Berlin"
+    )
     return config_prefix, formatted_time
 
 
 title = (
     "//profile-title: base64:"
-    + base64.b64encode("Women Life Freedom 🤍".encode("utf-8")).decode("utf-8")
+    + base64.b64encode("Freedom to Dream 💛✨".encode("utf-8")).decode("utf-8")
     + "\n"
 )
-update_interval = "//profile-update-interval: 1\n"
-sub_info = "//subscription-userinfo: upload=5368709120; download=117037858816; total=955630223360; expire=1762677732\n"
+update_interval = "//profile-update-interval: 4\n"
+sub_info = "//subscription-userinfo: upload=805306368000; download=2576980377600; total=6012954214400; expire=1762677732\n"
 profile_web = "//profile-web-page-url: https://github.com/NiREvil\n"
 last_modified = "//last update on: " + formatted_time + "\n"
 
@@ -171,19 +173,19 @@ def export_SingBox(t_ips):
     with open("edge/assets/singbox-template.json", "r") as f:
         data = json.load(f)
 
-    data["outbounds"][1]["outbounds"].extend(["TEHRAN", "BERLIN"])
+    data["outbounds"][1]["outbounds"].extend(["⚪️Tehran", "🟡Berlin"])
 
-    tehran_wg = toSingBox("TEHRAN", t_ips[0], "direct")
+    tehran_wg = toSingBox("⚪️Tehran", t_ips[0], "direct")
     if tehran_wg:
         data["outbounds"].insert(2, tehran_wg)
     else:
-        print("Failed to generate TEHRAN configuration")
+        print("Failed to generate ⚪️Tehran configuration")
 
-    berlin_wg = toSingBox("BERLIN", t_ips[1], "TEHRAN")
+    berlin_wg = toSingBox("🟡Berlin", t_ips[1], "⚪️Tehran")
     if berlin_wg:
         data["outbounds"].insert(3, berlin_wg)
     else:
-        print("Failed to generate BERLIN configuration")
+        print("Failed to generate 🟡Berlin configuration")
 
     with open("sing-box.json", "w") as f:
         json.dump(data, f, indent=4)
@@ -196,7 +198,7 @@ def main(script_dir):
         url = f"https://gitlab.com/Misaka-blog/warp-script/-/raw/main/files/warp-yxip/warp-linux-{arch}"
         subprocess.run(["wget", url, "-O", "warp"], check=True)
         os.chmod("warp", 0o755)
-        print("Scanning ips...")
+        print("Scanning IPs...")
         subprocess.run(
             ["./warp"], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
         )
