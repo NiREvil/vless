@@ -77,63 +77,63 @@
             "tag": "Proxy",
             "type": "selector",
             "outbounds": [
-                "TEHRAN",
-                "BERLIN"
+                "\u26aa\ufe0fTehran",
+                "\ud83d\udfe1Berlin"
             ],
-            "default": "BERLIN",
+            "default": "\ud83d\udfe1Berlin",
             "interrupt_exist_connections": false
         },
         {
             "tag": "Auto",
             "type": "urltest",
             "outbounds": [
-                "TEHRAN",
-                "BERLIN"
+                "\u26aa\ufe0fTehran",
+                "\ud83d\udfe1Berlin"
             ],
-            "url": "http://connectivitycheck.gstatic.com/generate_204",
+            "url": "https://www.gstatic.com/generate_204",
             "interval": "10m",
             "tolerance": 50,
             "idle_timeout": "30m",
             "interrupt_exist_connections": false
         },
         {
-            "tag": "TEHRAN",
+            "tag": "\u26aa\ufe0fTehran",
             "type": "wireguard",
-            "server": "188.114.96.37",
-            "server_port": 955,
+            "server": "188.114.96.172",
+            "server_port": 859,
             "local_address": [
                 "172.16.0.2/32",
                 "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
             ],
-            "private_key": "IFjrWy6KFOCAoYYzdNPU8I1p32rRtf+5zY0EhFOUB0o=",
+            "private_key": "oDUP8QKg7EWtd7HXRkZ4VRNFtGGikgHGyPFfUczdpkU=",
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
             "mtu": 1300,
             "reserved": [
-                24,
-                254,
-                145
+                201,
+                37,
+                40
             ],
             "detour": "direct",
             "workers": 2
         },
         {
-            "tag": "BERLIN",
+            "tag": "\ud83d\udfe1Berlin",
             "type": "wireguard",
-            "server": "188.114.98.89",
-            "server_port": 7559,
+            "server": "188.114.99.202",
+            "server_port": 4500,
             "local_address": [
                 "172.16.0.2/32",
                 "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
             ],
-            "private_key": "YG3kjzRmvZ+Ub3ZWWCCs2QR1lzoVvKPLLq/5qaPOp1w=",
+            "private_key": "aJ/A8zqrC567+ihsdJOVPPnHVM5JE0zfWPt6VkDRRFk=",
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
             "mtu": 1300,
             "reserved": [
-                254,
-                232,
-                216
+                95,
+                6,
+                128
             ],
-            "detour": "TEHRAN",
+            "detour": "\u26aa\ufe0fTehran",
             "workers": 2
         },
         {
@@ -207,7 +207,7 @@
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs",
                 "download_detour": "bypass",
-                "update_interval": "8d"
+                "update_interval": "4d"
             },
             {
                 "tag": "geosite-category-ads-all",
@@ -215,7 +215,7 @@
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs",
                 "download_detour": "bypass",
-                "update_interval": "8d"
+                "update_interval": "4d"
             },
             {
                 "tag": "geosite-malware",
@@ -223,7 +223,7 @@
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-malware.srs",
                 "download_detour": "bypass",
-                "update_interval": "8d"
+                "update_interval": "4d"
             },
             {
                 "tag": "geosite-phishing",
@@ -231,7 +231,7 @@
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-phishing.srs",
                 "download_detour": "bypass",
-                "update_interval": "8d"
+                "update_interval": "4d"
             },
             {
                 "tag": "geosite-cryptominers",
@@ -239,7 +239,7 @@
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-cryptominers.srs",
                 "download_detour": "bypass",
-                "update_interval": "8d"
+                "update_interval": "4d"
             },
             {
                 "tag": "geoip-ir",
@@ -247,7 +247,7 @@
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
                 "download_detour": "bypass",
-                "update_interval": "8d"
+                "update_interval": "4d"
             },
             {
                 "tag": "geoip-malware",
@@ -255,7 +255,7 @@
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-malware.srs",
                 "download_detour": "bypass",
-                "update_interval": "8d"
+                "update_interval": "4d"
             },
             {
                 "tag": "geoip-phishing",
@@ -263,7 +263,7 @@
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-phishing.srs",
                 "download_detour": "bypass",
-                "update_interval": "8d"
+                "update_interval": "4d"
             }
         ]
     }
