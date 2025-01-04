@@ -111,7 +111,13 @@ bpb.yousef.isegaro.com
 
 **🇩🇪 Germany, Frankfurt am Main, Amazon**
 ```POV-Ray SDL
+3.70.219.196
+```
+```POV-Ray SDL
 3.126.159.12
+```
+```POV-Ray SDL
+3.123.255.167
 ```
 ```POV-Ray SDL
 3.64.205.189
@@ -440,6 +446,9 @@ bpb.yousef.isegaro.com
 ```
 **🇮🇳 India, Airoli, Maharashtra, Oracle**
 ```POV-Ray SDL
+141.148.220.141
+```
+```POV-Ray SDL
 141.148.203.6
 ```
 ```POV-Ray SDL
@@ -474,7 +483,7 @@ bpb.yousef.isegaro.com
 ```
 **🇳🇱 Netherlands, Amsterdam, Oracle**
 ```POV-Ray SDL
-150.230.20.156
+141.144.197.111
 ```
 ```POV-Ray SDL
 152.70.59.90
