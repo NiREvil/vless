@@ -1,6 +1,6 @@
 /**
- * Last update: Monday, 4:20 UTC, 6 January 2025  ---We are all REvil---
- * - The subscription link contains a v2ray fragmented Configuration with random parameters created in cf Workers.
+ * Last update: Monday, 4:20 UTC, 6 January 2025  ----We are all REvil----
+ * - The subscription link contains a v2ray fragmented configuration with random parameters created in cf Workers.
  * - Replace these lines with your hostname & uuid, Hostname in line (28), UUID in lines (29), and in the line of (30) you can add your preferred cf clean ip addresses ;)
  * - Fragment values can be changed from (151-152-153).
  */
@@ -148,9 +148,9 @@ async function handleRequest(request) {
         protocol: "freedom",
         settings: {
           fragment: {
-            packets: "1-1", // "1-2"  or  "1-5"  or  "tlshello"  or ...
-            length: "1403", // "100-200"  or  "10-30"  or  "100-200" ...
-            interval: "1", // "1-2"  or  "1-3"  or  "2-4" ...
+            packets: "1-1", // "1-2"      Or  "1-5"    Or  "tlshello"
+            length: "1403", // "100-200"  Or  "10-30"  Or  "100-200"
+            interval: "1",  // "1-2"      Or  "1-3"    Or  "2-4"
           },
         },
         streamSettings: {
