@@ -1,82 +1,80 @@
 {
-  "remarks": "🟡fragment - LB",
+  "remarks": "🟡fragment-load balance ",
   "log": {
-    "loglevel": "warning"
+      "loglevel": "warning"
   },
   "dns": {
-    "hosts": {
-      "domain:googleapis.cn": [
-        "googleapis.com"
+      "hosts": {
+          "domain:googleapis.cn": [
+              "googleapis.com"
+          ],
+          "dns.google": [
+              "8.8.8.8",
+              "8.8.4.4",
+              "2001:4860:4860::8888",
+              "2001:4860:4860::8844"
+          ]
+      },
+      "servers": [
+          "https://8.8.8.8/dns-query",
+          {
+              "address": "8.8.8.8",
+              "domains": [
+                  "full:sky.rethinkdns.com",
+                  "full:www.speedtest.net"
+              ]
+          }
       ],
-      "dns.adguard-dns.com": [
-        "94.140.14.14",
-        "94.140.15.15",
-        "2a10:50c0::ad1:ff",
-        "2a10:50c0::ad2:ff"
-      ]
-    },
-    "servers": [
-      "https://dns.adguard-dns.com/dns-query",
-      {
-        "address": "8.8.8.8",
-        "domains": [
-          "geosite:category-ir"
-        ],
-        "expectIPs": [
-          "geoip:ir"
-        ]
-      }
-    ],
-    "tag": "dns"
+      "tag": "dns"
   },
   "inbounds": [
-    {
-      "port": 10808,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
+      {
+          "port": 10808,
+          "protocol": "socks",
+          "settings": {
+              "auth": "noauth",
+              "udp": true,
+              "userLevel": 8
+          },
+          "sniffing": {
+              "destOverride": [
+                  "http",
+                  "tls"
+              ],
+              "enabled": true,
+              "routeOnly": true
+          },
+          "tag": "socks-in"
       },
-      "sniffing": {
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "enabled": true,
-        "routeOnly": true
+      {
+          "port": 10809,
+          "protocol": "http",
+          "settings": {
+              "auth": "noauth",
+              "udp": true,
+              "userLevel": 8
+          },
+          "sniffing": {
+              "destOverride": [
+                  "http",
+                  "tls"
+              ],
+              "enabled": true,
+              "routeOnly": true
+          },
+          "tag": "http-in"
       },
-      "tag": "socks-in"
-    },
-    {
-      "port": 10809,
-      "protocol": "http",
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
-      },
-      "sniffing": {
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "enabled": true,
-        "routeOnly": true
-      },
-      "tag": "http-in"
-    },
-    {
-      "listen": "127.0.0.1",
-      "port": 10853,
-      "protocol": "dokodemo-door",
-      "settings": {
-        "address": "1.1.1.1",
-        "network": "tcp,udp",
-        "port": 53
-      },
-      "tag": "dns-in"
-    }
+      {
+          "listen": "127.0.0.1",
+          "port": 10853,
+          "protocol": "dokodemo-door",
+          "settings": {
+              "address": "1.1.1.1",
+              "network": "tcp,udp",
+              "port": 53
+          },
+          "tag": "dns-in"
+      }
   ],
   "outbounds": [
     {
@@ -84,7 +82,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "ip.sb",
+            "address": "creativecommons.org",
             "port": 443,
             "users": [
               {
@@ -174,7 +172,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "172.66.47.88",
+            "address": "104.19.241.179",
             "port": 443,
             "users": [
               {
@@ -219,7 +217,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "172.66.44.168",
+            "address": "104.17.73.80",
             "port": 443,
             "users": [
               {
@@ -254,7 +252,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/assets?ed=2560"
         }
       },
       "tag": "prox-4"
@@ -264,7 +262,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "[2606:4700:310c::ac42:2f58]",
+            "address": "[::ffff:a29f:86e9]",
             "port": 443,
             "users": [
               {
@@ -299,7 +297,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/assets?ed=2560"
         }
       },
       "tag": "prox-5"
@@ -309,7 +307,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "[2606:4700:310c::ac42:2ca8]",
+            "address": "[::ffff:6812:9d42]",
             "port": 443,
             "users": [
               {
@@ -1029,7 +1027,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.96.52",
+            "address": "[::ffff:bc72:6103]",
             "port": 443,
             "users": [
               {
@@ -1064,7 +1062,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/AKb7lyARvdZ7mcxl?ed=2560"
+          "path": "/assets?ed=2560"
         }
       },
       "tag": "prox-22"
@@ -1074,7 +1072,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.96.49",
+            "address": "[::ffff:681f:100b]",
             "port": 443,
             "users": [
               {
@@ -1109,7 +1107,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/chrd7EHL6SeKxWzH?ed=2560"
+          "path": "/api?ed=2560"
         }
       },
       "tag": "prox-23"
@@ -1154,7 +1152,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/gnS7jnI142ADgAIL?ed=2560"
+          "path": "/assets?ed=2560"
         }
       },
       "tag": "prox-24"
@@ -1164,7 +1162,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.96.51",
+            "address": "[::ffff:681a:7ca]",
             "port": 443,
             "users": [
               {
@@ -1199,7 +1197,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/0iIrwmz14m0EDACm?ed=2560"
+          "path": "/assets?ed=2560"
         }
       },
       "tag": "prox-25"
@@ -1244,7 +1242,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/vIYI3KlLtPgYUJN3?ed=2560"
+          "path": "/api?ed=2560"
         }
       },
       "tag": "prox-26"
@@ -1254,7 +1252,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.96.63",
+            "address": "162.159.243.142",
             "port": 443,
             "users": [
               {
@@ -1379,7 +1377,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/innYivMe6qaYWmSS?ed=2560"
+          "path": "/assets?ed=2560"
         }
       },
       "tag": "prox-29"
@@ -1389,7 +1387,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.96.59",
+            "address": "172.67.204.18",
             "port": 443,
             "users": [
               {
@@ -1469,7 +1467,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/rRQNslhkOTg7n0y2?ed=2560"
+          "path": "/assets?ed=2560"
         }
       },
       "tag": "prox-31"
@@ -1524,7 +1522,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.96.60",
+            "address": "172.67.191.147",
             "port": 443,
             "users": [
               {
@@ -1559,7 +1557,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/96FNnJm4h0aXUFLt?ed=2560"
+          "path": "/images?ed=2560"
         }
       },
       "tag": "prox-33"
@@ -1569,7 +1567,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.96.70",
+            "address": "172.67.94.131",
             "port": 443,
             "users": [
               {
@@ -1659,7 +1657,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.96.62",
+            "address": "172.67.93.250",
             "port": 443,
             "users": [
               {
@@ -1739,7 +1737,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/oCMJ2uzGbeQMfWUh?ed=2560"
+          "path": "/assets?ed=2560"
         }
       },
       "tag": "prox-37"
@@ -1749,7 +1747,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.96.64",
+            "address": "172.67.89.173",
             "port": 443,
             "users": [
               {
@@ -1784,7 +1782,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/IkEIaHU3GcsGVk9I?ed=2560"
+          "path": "/api?ed=2560"
         }
       },
       "tag": "prox-38"
@@ -1829,7 +1827,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/QHLftC5Qh8fSWeTi?ed=2560"
+          "path": "/apii?ed=2560"
         }
       },
       "tag": "prox-39"
@@ -1839,7 +1837,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.96.75",
+            "address": "172.67.252.214",
             "port": 443,
             "users": [
               {
@@ -1919,7 +1917,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/KjlLx6zaW5hxrf0l?ed=2560"
+          "path": "/api?ed=2560"
         }
       },
       "tag": "prox-41"
@@ -1929,7 +1927,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.96.69",
+            "address": "creativecommons.org",
             "port": 443,
             "users": [
               {
@@ -3314,7 +3312,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/7D9LC9OnPgMht1bb?ed=2560"
+          "path": "/assets?ed=2560"
         }
       },
       "tag": "prox-72"
@@ -3674,7 +3672,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/hN2QUC1wq22fqJVe?ed=2560"
+          "path": "/assets?ed=2560"
         }
       },
       "tag": "prox-80"
@@ -3684,7 +3682,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "[2606:4700:3032::6815:180f]",
+            "address": "[2606:4700:99e3:f452:6f11:31c6:84f6:4f5a]",
             "port": 443,
             "users": [
               {
@@ -3719,7 +3717,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/OFTlyfZksOxT7vUE?ed=2560"
+          "path": "/api?ed=2560"
         }
       },
       "tag": "prox-81"
@@ -3729,7 +3727,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.97.63",
+            "address": "172.67.89.173",
             "port": 443,
             "users": [
               {
@@ -3774,7 +3772,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "[2606:4700:3037::6815:e3]",
+            "address": "[2606:4700:99e3:6208:ab9c:28a:f875:2381]",
             "port": 443,
             "users": [
               {
@@ -4106,7 +4104,7 @@
     ]
   },
   "observatory": {
-    "probeInterval": "20s",
+    "probeInterval": "25s",
     "probeURL": "https://www.gstatic.com/generate_204",
     "subjectSelector": [
       "prox"
