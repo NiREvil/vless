@@ -2,7 +2,7 @@ name: fetching wg-7th
 
 on:
   schedule:
-    - cron: '15 3 * * 6-5'
+    - cron: '15 3 * * *'
   workflow_dispatch:
 
 permissions:
