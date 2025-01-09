@@ -28,7 +28,7 @@ jobs:
         pip install -r edge/requirements.txt
     
     - name: run script
-      run: python edge/5th.py
+      run: python edge/7th.py
     
     - name: Commit and push if changed
       run: |
