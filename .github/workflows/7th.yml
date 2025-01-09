@@ -2,7 +2,7 @@ name: fetching wg-7th
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '15 3 * * 6-5'
   workflow_dispatch:
 
 permissions:
@@ -35,4 +35,4 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add sub/rayng7th sub/nbox7th
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Do nott use, For testing purposes only" && git push)
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Do not use, For testing purposes only" && git push)
