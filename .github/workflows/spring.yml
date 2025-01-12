@@ -1,0 +1,42 @@
+name: Spring
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'edge/spring.py'
+      - 'edge/**'
+  schedule: # Runs every 3 fuckin hours
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+        cache: pip
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install ipaddress
+
+    - name: Run the script
+      run: python edge/spring.py
+
+    - name: Commit changes
+      run: |
+        git config --global user.name "REvil"
+        git config --global user.email "nirevil@proton.me"
+        git add -A
+        git diff --cached --quiet || git commit -m "ⅨⅣ $(TZ='Asia/Tehran' date '+%H:%M:%S')"
+        git push
