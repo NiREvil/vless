@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
   push:
     branches: [ "main" ]
-  schedule:
-    - cron: '0 * * * *'
+ # schedule:
+ #   - cron: '0 * * * *'
 
 jobs:
   build:
@@ -37,7 +37,7 @@ jobs:
       - name: Commit changes with timestamp
         run: |
           git add -A
-          git diff --cached --quiet || git commit -m "ⅣⅭ SYNCED AT: $(TZ='Asia/Tehran' date '+%a, %d %b %y, %H:%M')"
+          git diff --cached --quiet || git commit -m "ⅣⅭ $(TZ='Asia/Tehran' date '+%H:%M:%S')"
           
       - name: Push changes
         uses: ad-m/github-push-action@master
