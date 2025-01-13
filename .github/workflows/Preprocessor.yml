@@ -1,11 +1,11 @@
-name: "REvil CF-IPs"
+name: "The fallen crown"
 
 on:
   workflow_dispatch:
   push:
     branches: [ "main" ]
- # schedule:
- #   - cron: '0 * * * *'
+  schedule:
+    - cron: '0 */3 * * *'
 
 jobs:
   build:
@@ -26,8 +26,8 @@ jobs:
         with:
           php-version: '8.4'
 
-      - name: Lets go sweetie
-        run: php edge/Troy.php
+      - name: Lets go sweetheart
+        run: php edge/The-fallen-crown.php
 
       - name: Configure Git
         run: |
