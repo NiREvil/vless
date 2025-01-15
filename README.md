@@ -11,23 +11,25 @@ v2rayNG, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Clash-Meta & ...
   
 - Несколько ссылок для подписки на: v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Clash-Meta и ... Вернуть результат только   
 
-- 为以下软件提供一些共享链接：v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, Nekobox, Husi, Exclave, Amnezia, Clash-Meta 等。
+- 为以下软件提供一些共享链接：v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, Nekobox, Husi, Exclave, Amnezia, Clash-Meta 等。 
 
 <br>  
 
-<details>
-<summary>| در صورت عدم رضایت ...</summary>  
-
-* سلام امیدوارم حالتون فوق‌العاده باشه  
-
-* لینک‌های ساب وایرگارد هیدیفای و ویتوری و ...  
-عموما برای الگو گرفتن و ساخت کانفیگ شخصی هستن و برای استفاده عموم مناسب نیستن، لینک‌های singbox همه ساب‌های مورد علاقه خودمون هستن و تا جای ممکن سورس ساب‌هارو پیدا کرده و با [?] در جلوی اونها مشخص کردم. 
-* اگر لینک شما مابین‌ اونها بود و نمی‌خواستید که باشه لطفا پیام بدید تا با یک‌دنیا شرمندگی و معذرت‌خواهی از لیست حذف کنم.  
-* اگر سورس هرکدوم رو سراغ داشتید لطفا اطلاع بدید اضافه کنم جلوی لینک. 
-اگر لینک عمومی سراغ داشتید که براتون خوب کار کرده می‌تونید بفرستید اضافه کنم و مردممون استفاده کنن. 
-* متاسفانه از مرداد ماه نیما دیگه بینمون نیست و من و چند دوست دیگه اکانت گیت رو در حد توان اداره می‌کنیم. به امید آزادی 🤍
-* تلگرام من: [[Di4Diana]].  
-</details> 
+> [!IMPORTANT]
+> <details>  
+> <summary> |    In case of dissatisfaction ... </summary>  
+> 
+> * سلام امیدوارم حالتون فوق‌العاده باشه    
+  > 
+> * لینک‌های ساب وایرگارد هیدیفای و ویتوری و ...  
+> * عموما برای الگو گرفتن و ساخت کانفیگ شخصی هستن و برای استفاده عموم مناسب نیستن،  
+> * لینک‌های singbox همه ساب‌های مورد علاقه خودمون هستن و تا جای ممکن سورس ساب‌هارو پیدا کرده و با [?] در جلوی اونها مشخص کردم. 
+> * اگر لینک شما مابین‌ اونها بود و نمی‌خواستید که باشه لطفا پیام بدید تا با یک‌دنیا شرمندگی و معذرت‌خواهی از لیست حذف کنم.  
+> * اگر سورس هرکدوم رو سراغ داشتید لطفا اطلاع بدید اضافه کنم جلوی لینک. 
+> * اگر لینک عمومی سراغ داشتید که براتون خوب کار کرده می‌تونید بفرستید اضافه کنم و مردممون استفاده کنن. 
+> * متاسفانه از مرداد ماه نیما دیگه بینمون نیست و من و چند دوست دیگه اکانت گیت رو در حد توان اداره می‌کنیم. به امید آزادی 🤍
+> * تلگرام من: [[Di4Diana]].  
+> </details> 
 
 <br><br>  
 <br>  
@@ -66,9 +68,8 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
 
 - [Cloudflare IPs](#Cloudflare-IPs)
   - [All IPs](#All-IPs)
-  - [Only IPv4](#Only-IPv4)
-  - [Only IPv6](#Only-IPv6)
-  - [Warp Endpoints](#Warp-Endpoints)
+  - [Only IPv6](#All-IPs)
+  - [Warp Endpoints](#All-IPs)
   - [ProxyIP](#ProxyIP)
 - [WireGuards](#WireGuards)
   - [Warp for Hiddify](#warp-for-Hiddify) 
@@ -86,7 +87,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
 <br><br> 
 
 ## Cloudflare IPs  
-> [!TIP]  
+> [!IMPORTANT]  
 > Built-in github workflows
 > 
 > Fetching cloudflare fresh & clean ip's
@@ -103,21 +104,23 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
 https://github.com/NiREvil/vless/blob/main/Cloudflare-IPs.json  
 
 **Only IPv4**  
+
 https://github.com/NiREvil/vless/blob/main/sub/Cf-ipv4.json  
 
 **Only IPv6**  
+
 https://github.com/NiREvil/vless/blob/main/sub/Cf-ipv6.json  
 
 **Warp Endpoints**  
+
 https://github.com/NiREvil/vless/blob/main/result.csv  
 
-**ProxyIP**  
+#### ProxyIP  
 https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
-
 
 <br><br> 
 
-## WIREGUARDS  
+## WIREGUARDS 
 
 ### Warp for [Hiddify] <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>  
 
@@ -127,7 +130,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/H2%20SINGBOX%20HOSS
 **Warp+ Proton on Hiddify**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Poroton%20ON%20WARP%2B
 
-**Warp+ Proton on Hiddify with DNS clean [[Ni?]]**  
+**Warp+ Proton on Hiddify with DNS clean [[∏I?]]**  
 https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/Proton%20ON%20WARP%2B%20DNS%20Clean
 
 **All Hysteria [[FR?]]**  
@@ -141,11 +144,10 @@ https://singbox-freevpnhomes-subscription.meshkintaj.homes
 
 https://backup-singbox-freevpnhomes-subscription.meshkintaj.homes  
 
-
 **Warp +Windscribe + Hysteria - Hiddify**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscribe%20on%20H2
 
-**Warp in M1,M2, ... ,h04FA0A mode with random ip:port [[Ni?]]**  
+**Warp in M1,M2, ... ,h04FA0A mode with random ip:port [[∏I?]]**  
 https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/rand-ip
 
 **All Guest ON Hiddify**  
@@ -187,7 +189,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sub/v2rayng-wg.txt
 <br>  
 
 **Warp for [MahsaNG] & [NikaNG]**  
-> [!TIP]  
+> [!NOTE] 
 > Configs are from [Arshia] and [The Darkness]  TG channels.  
 
 <br>
@@ -209,13 +211,14 @@ wireguard://EKcnAgEpqzsDEgugHoT6NMz3Z8CmDequ%2BNDJRAASd3I%3D@188.114.97.157:1014
 <br>  
 
 ### Warp [SFA] and [SFI]  
+> [!NOTE]
 > singbox for
 > Android & IOS <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="13"/>
 
 **Warp + Hysteria ON singbox**  
 https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/H2%20SINGBOX%20HOSS
 
-**Built-in workflows, warp ON warp [[Ni?]]**  
+**Built-in workflows, warp ON warp [[∏I?]]**  
 https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json  
 
 **Meshkintaj [[ME?]]**  
@@ -242,7 +245,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/All%20Guest%20SINGB
 > What do we [know about] the amnezia
 
 
-**A** [[Ni?]]
+**A** [[∏I?]]
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWEgRnJlZSBJUiIsICJkZXNjcmlwdGlvbiI6ICJBbW5lemlhIEZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJYbWtoWjhTay5UaTY0NENQTnBnTnQydW12ektUSGJRY1NSY2hpRXhlWSJ9
 ```
@@ -426,7 +429,7 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 
 https://raw.githubusercontent.com/NiREvil/vless/main/sub/SSTime  
 
-https://robin.nscl.ir [[Ni?]]  
+https://robin.nscl.ir [[∏I?]]  
 
 https://v2.alicivil.workers.dev/?list=4&locations=all&count=250 [[GE?]]   
 
@@ -715,8 +718,8 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
 </picture>
 
-<br>
 
+<br>
 
 [Harmony]: <https://github.com/NiREvil/Harmony/blob/b923d67dd5702886b0965de86182896373ade4e5/harmony.js#L892>  
 
@@ -742,10 +745,9 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 
 [KV?]: <https://t.me/s/KevinZakarian>  
 
-[Ni?]: <https://t.me/s/F_NiREvil>  
+[∏I?]: <https://t.me/s/F_NiREvil>  
 
 [MB?]: <https://github.com/mahdibland/ShadowsocksAggregator>
-
 
 [ME?]: <https://t.me/s/FreeVpnHomes>  
 
@@ -770,8 +772,6 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [MahsaNG]: <https://github.com/mahsanet/MahsaaNG/releases>  
 
 [NikaNG]: <https://github.com/mahsanet/NikaNG/releases>  
-
-[About NikaNG]: <https://t.me/s/F_NiREvil/6821>  
 
 [Sing-Box]: <https://github.com/SagerNet/sing-box/releases>  
 
