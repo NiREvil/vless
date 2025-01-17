@@ -23,7 +23,7 @@
 <br><br>
 
 ## Best proxies
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow]
 
 **🇺🇸 USA, Google LLC, Tencent & Amazon Technologies**
 ```CSS   
@@ -67,7 +67,7 @@ bpb.yousef.isegaro.com
 ```
 
 ## Google LLC
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow]
 
 **🇺🇸 USA, Dalles, Google LLC**
 ```POV-Ray SDL
@@ -107,7 +107,7 @@ bpb.yousef.isegaro.com
 ```
 
 ## Amazon Technologies Inc
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow]
 
 **🇩🇪 Germany, Frankfurt am Main, Amazon**
 ```POV-Ray SDL
@@ -116,6 +116,10 @@ bpb.yousef.isegaro.com
 ```POV-Ray SDL
 3.126.159.12
 ```
+
+<details>
+<summary> |   And the list goes on ... </summary>  
+
 ```POV-Ray SDL
 3.123.255.167
 ```
@@ -162,13 +166,19 @@ bpb.yousef.isegaro.com
 3.78.125.180
 ```
 
-**🇺🇸 USA, random, Amazon Technologies Inc**
+</details>  
+
+**🇺🇸 USA, random, Amazon Technologies Inc**  
 ```POV-Ray SDL
 34.227.133.207
 ```
 ```POV-Ray SDL
 184.169.181.217
 ```
+
+<details>
+<summary> |   And the list goes on ... </summary>  
+
 ```POV-Ray SDL
 52.4.8.214
 ```
@@ -342,7 +352,9 @@ bpb.yousef.isegaro.com
 ```
 ```POV-Ray SDL
 3.139.83.4
-```
+```  
+</details>
+
 **🇸🇪 Sweden, Stockholm, Amazon tech**
 ```POV-Ray SDL
 51.20.215.255
@@ -374,13 +386,7 @@ bpb.yousef.isegaro.com
 35.178.235.225
 ```
 ```POV-Ray SDL
-35.179.187.249
-```
-```POV-Ray SDL
 18.170.77.148
-```
-```POV-Ray SDL
-3.11.236.175
 ```
 **🇮🇪 Ireland, Dublin Leinster, Amazon tech**
 ```POV-Ray SDL
@@ -410,7 +416,7 @@ bpb.yousef.isegaro.com
 ```
 
 ## Hetzner Online tech
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow]
 
 **🇩🇪 Germany, Frankfurt am Main, Hetzner online**
 ```POV-Ray SDL
@@ -435,7 +441,7 @@ bpb.yousef.isegaro.com
 ```
 
 ## Oracle cloud corporations 
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow]
 
 **🇦🇪 United arab emirates, Abu Dhabi, Oracle**
 ```POV-Ray SDL
@@ -551,7 +557,7 @@ bpb.yousef.isegaro.com
 ```
 
 ## M247 Europe SRL
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow]
 
 **🇯🇵 Japan, M247 SRL**
 ```POV-Ray SDL
@@ -566,7 +572,7 @@ bpb.yousef.isegaro.com
 ```
 
 ## Others
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow]
 
 **🇺🇸 USA, California, santa clara, Tencent cloud**
 ```CSS
@@ -614,7 +620,7 @@ bpb.yousef.isegaro.com
 ```
 
 ## Who am i ?
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow]
 
 
 **🇳🇱 IP's load from Germany, korea, CH, NL & ...**
@@ -711,8 +717,7 @@ ircpipproxy.duckdns.org
 
 * And also A GUI Panel providing Worker subscriptions and Fragment settings and Warp configurations and ...   [![Here](https://img.shields.io/badge/BPB-blue?logo=opencollective)](https://github.com/NiREvil/bia-pain-bache)  
 
-<br><br>
-<br><br>
+<br><br><br><br>  
 
 ## Find proxyIPs
 
@@ -720,13 +725,17 @@ ircpipproxy.duckdns.org
 روی هر کدوم از لینک‌های زیر کلیک کنی کلی پروکسی‌آی‌پی هست که با کلیک روی هرکدوم کادر مشخصات مربوط ب اون‌ها باز میشه.  
 روش های تست پروکسی‌آی‌پی‌ها در بخش قبلی نوشته شده.  
 
-### $\color{gray} \Large \text{Let's go}$
+### $\color{gray} \Large \text{Let's go sweetheart}$
+
 > https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
 >
+> 
 > https://www.nslookup.io/domains/my-telegram-is-herocore.onecf.eu.org/dns-records/
 >
+> 
 > https://www.nslookup.io/domains/nima.nscl.ir/dns-records/
 >
+> 
 > https://www.nslookup.io/domains/bestproxy.onecf.eu.org/dns-records/
 >
 > 
@@ -735,15 +744,21 @@ https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
 >
 >https://www.nslookup.io/domains/proxy.xxxxxxxx.tk/dns-records/
 >
+>
 > https://www.nslookup.io/domains/ipdb.rr.nu/dns-records/
+>
 >
 > https://www.nslookup.io/domains/cdn.xn--b6gac.eu.org/dns-records/
 >
+>
 > https://www.nslookup.io/domains/proxyip.aliyun.fxxk.dedyn.io/dns-records/
+>
 >
 > https://www.nslookup.io/domains/proxyip.vultr.fxxk.dedyn.io/dns-records/
 >
+>
 > https://www.nslookup.io/domains/workers.cloudflare.cyou/dns-records/
+
 
 > [!NOTE]
 > یکم خلاقیت ب خرج بدی خودت میفهمی که باید دنبال چی بگردی تو سایت
@@ -753,15 +768,15 @@ https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
 <br><br>
 
 ## Advanced
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow]
 
-How to find ProxyIPs for VLESS/VMESS/TROJAN CF Workers & Pages using Cyberspace Search Engine [Telegra.ph Link](https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06) 
+How to find ProxyIPs for VLESS/VMESS/TROJAN CF Workers & Pages using Cyberspace Search Engine [Telegra.ph] 
  
 <br><br>
 
  
 ## Trash
- ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+ ![rainbow]
 
 
 ~~UK, London, Hostaris LLC~~
@@ -839,4 +854,10 @@ How to find ProxyIPs for VLESS/VMESS/TROJAN CF Workers & Pages using Cyberspace 
 ~~Tallinn, Estonia PAGM network~~
 -     const proxyIPs = ['5.101.180.145'];
 
-and more ["rentry.co/CF-proxyIP"](https://rentry.co/CF-proxyIP)
+and more shit's - [Rentry.co/CF-proxyIP]  
+
+[Rentry.co/CF-proxyIP]: <https://rentry.co/CF-proxyIP>
+
+[Telegra.ph]: <https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06> 
+
+[rainbow]: <https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256>
