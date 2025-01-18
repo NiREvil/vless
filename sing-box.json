@@ -22,7 +22,7 @@
         "servers": [
             {
                 "tag": "dns-remote",
-                "address": "tcp://185.228.168.9",
+                "address": "https://dns.nscl.ir/dns-query",
                 "address_resolver": "dns-direct",
                 "address_strategy": "prefer_ipv4",
                 "strategy": "prefer_ipv4"
@@ -105,13 +105,13 @@
                 "172.16.0.2/32",
                 "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
             ],
-            "private_key": "SMCog2dQKm/i/lGXPeqOyjrVo0LYJzFeHxxSArT4QXg=",
+            "private_key": "QBQheQ/VtlIi/zlzYm7Nld3rkpqNSUAaVvLm9rwiSHs=",
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
             "mtu": 1300,
             "reserved": [
-                12,
-                174,
-                200
+                209,
+                126,
+                161
             ],
             "detour": "direct",
             "workers": 2
@@ -125,13 +125,13 @@
                 "172.16.0.2/32",
                 "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
             ],
-            "private_key": "OPZFAF+Kv/jfOVJ3ggryWbAmNGSClWwyZ4GxaVFiWVA=",
+            "private_key": "0KvI/dOiRgsy4XsZaV5YwHng6OsCfF2SeI8E4jzubV8=",
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
             "mtu": 1300,
             "reserved": [
-                104,
-                243,
-                122
+                11,
+                4,
+                67
             ],
             "detour": "\u26aa\ufe0fTehran",
             "workers": 2
