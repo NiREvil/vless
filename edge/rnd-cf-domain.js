@@ -17,8 +17,8 @@ export default {
     // backend domain list
     let backendDomains = [
       "cdnjs.com",
+      "nginx.nscl.ir",
       "creativecommons.org",
-      "download.yunzhongzhuan.com",
       "fbi.gov",
       "go.inmobi.com",
       "gur.gov.ua",
