@@ -7,6 +7,7 @@
  * - If the response from the backend domain matches the expected status code, it returns the response.
  * - If all backend domains fail, it returns a 404 response.
  * - It includes timeout functionality for backend requests and logs various details for debugging.
+ * - Set environment variable as (HOST = domain1,domain2,domain3). Separate domains by comma.
  */
 
 export default {
@@ -19,16 +20,14 @@ export default {
       "cdnjs.com",
       "nginx.nscl.ir",
       "creativecommons.org",
+      "diana.nscl.ir",
       "fbi.gov",
       "go.inmobi.com",
       "gur.gov.ua",
       "icook.hk",
-      "icook.tw",
       "ip.sb",
       "iplocation.io",
       "japan.com",
-      "log.bpminecraft.com",
-      "malaysia.com",
       "nginx-z.pages.dev",
       "russia.com",
       "singapore.com",
@@ -37,20 +36,15 @@ export default {
       "strawberry.victoriacross.workers.dev",
       "time.is",
       "whatismyipaddress.com",
-      "www.boba88slot.com",
       "www.csgo.com",
       "www.glassdoor.com",
       "www.gov.ua",
       "www.iakeys.com",
       "www.ipaddress.my",
       "www.ipchicken.com",
-      "www.ipget.net",
-      "www.iplocation.net",
       "www.speedtest.net",
       "www.udacity.com",
-      "www.visa.com",
       "www.wto.org",
-      "www.whatismyip.com",
       "zula.ir"
     ];
 
