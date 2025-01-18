@@ -10,24 +10,48 @@
  */
 
 export default {
-  // Main function to handle incoming HTTP requests
   async fetch(request, env, ctx) {
-    // Parse the request URL
     let url = new URL(request.url);
     const path = url.pathname;
     const params = url.search;
     // backend domain list
     let backendDomains = [
-      "creativecommons.org",
-      "sky.rethinkdns.com",
-      "www.speedtest.net",
-      "go.inmobi.com",
-      "www.wto.org",
       "cdnjs.com",
-      "icook.hk",
-      "zula.ir",
+      "creativecommons.org",
+      "download.yunzhongzhuan.com",
       "fbi.gov",
+      "go.inmobi.com",
+      "gur.gov.ua",
+      "icook.hk",
+      "icook.tw",
+      "ip.sb",
+      "iplocation.io",
+      "japan.com",
+      "log.bpminecraft.com",
+      "malaysia.com",
+      "nginx-z.pages.dev",
+      "russia.com",
+      "singapore.com",
+      "skk.moe",
+      "sky.rethinkdns.com",
+      "strawberry.victoriacross.workers.dev",
       "time.is",
+      "whatismyipaddress.com",
+      "www.boba88slot.com",
+      "www.csgo.com",
+      "www.glassdoor.com",
+      "www.gov.ua",
+      "www.iakeys.com",
+      "www.ipaddress.my",
+      "www.ipchicken.com",
+      "www.ipget.net",
+      "www.iplocation.net",
+      "www.speedtest.net",
+      "www.udacity.com",
+      "www.visa.com",
+      "www.wto.org",
+      "www.whatismyip.com",
+      "zula.ir"
     ];
 
     // If HOST exists in environment variables, get new backend domain list using ADD function
