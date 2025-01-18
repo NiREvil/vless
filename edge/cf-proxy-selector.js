@@ -17,35 +17,30 @@ export default {
     const params = url.search;
     // backend domain list
     let backendDomains = [
-      "cdnjs.com",
-      "nginx.nscl.ir",
       "creativecommons.org",
       "diana.nscl.ir",
-      "fbi.gov",
       "go.inmobi.com",
       "gur.gov.ua",
-      "icook.hk",
+      "fbi.gov",
       "ip.sb",
-      "iplocation.io",
-      "japan.com",
+      "icook.hk",
+      "nginx.nscl.ir",
       "nginx-z.pages.dev",
-      "russia.com",
+      "sky.rethinkdns.com",
       "singapore.com",
       "skk.moe",
-      "sky.rethinkdns.com",
-      "strawberry.victoriacross.workers.dev",
       "time.is",
-      "whatismyipaddress.com",
-      "www.csgo.com",
-      "www.glassdoor.com",
+      "zula.ir",
       "www.gov.ua",
-      "www.iakeys.com",
-      "www.ipaddress.my",
-      "www.ipchicken.com",
-      "www.speedtest.net",
-      "www.udacity.com",
       "www.wto.org",
-      "zula.ir"
+      "www.csgo.com",
+      "www.cdnjs.com",
+      "www.iakeys.com",
+      "www.udacity.com",
+      "www.ipaddress.my",
+      "www.speedtest.net",
+      "www.ipchicken.com",
+      "www.glassdoor.com"
     ];
 
     // If HOST exists in environment variables, get new backend domain list using ADD function
