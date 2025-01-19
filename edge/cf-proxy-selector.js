@@ -1,13 +1,12 @@
 /**
  * We are all REvil
- * This script handles incoming HTTP requests and proxies them to a list of backend domains.
- * - It parses the request URL and initializes a default list of backend domains.
- * - If provided, it updates the backend domain list from an environment variable.
- * - It attempts to forward the request to a randomly selected backend domain.
- * - If the response from the backend domain matches the expected status code, it returns the response.
- * - If all backend domains fail, it returns a 404 response.
- * - It includes timeout functionality for backend requests and logs various details for debugging.
- * - Set environment variable as (HOST = domain1,domain2,domain3). Separate domains by comma.
+ * - This script handles incoming HTTP requests and proxies them to a list of backend domains.
+ * - it parses the request URL and initializes a default list of backend domains.
+ * - if provided, it updates the backend domain list from an environment variable.
+ * - it attempts to forward the request to a randomly selected backend domain.
+ * - if the response from the backend domain matches the expected status code, it returns the response.
+ * - if all backend domains fail, it returns a 404 response.
+ * - documentation: https://diana.nscl.ir/2025/01/18/cf-backend-selector
  */
 
 export default {
@@ -15,6 +14,7 @@ export default {
     let url = new URL(request.url);
     const path = url.pathname;
     const params = url.search;
+    
     // backend domain list
     let backendDomains = [
       "creativecommons.org",
@@ -25,7 +25,6 @@ export default {
       "ip.sb",
       "icook.hk",
       "nginx.nscl.ir",
-      "nginx-z.pages.dev",
       "sky.rethinkdns.com",
       "singapore.com",
       "skk.moe",
@@ -59,8 +58,8 @@ export default {
     // Store failed backend domains
     let failedBackends = [];
 
-    // Function to wrap request logic with timeout functionality
-    async function fetchWithTimeout(resource, options = {}) {
+      // Function to wrap request logic with timeout functionality
+      async function fetchWithTimeout(resource, options = {}) {
       const { timeout = 1618 } = options;
 
       const controller = new AbortController();
@@ -74,8 +73,8 @@ export default {
       return response;
     }
 
-    // Function to select backend domain and make request
-    async function getValidResponse(request, backendDomains) {
+  // Function to select backend domain and make request
+  async function getValidResponse(request, backendDomains) {
       // Loop while backend domain list is not empty
       while (backendDomains.length > 0) {
         // Randomly select a backend domain
@@ -111,6 +110,7 @@ export default {
           failedBackends.push(randomBackend);
         }
       }
+      
       // If all backends fail, throw error
       return new Response("All backends are unavailable!", {
         status: 404,
