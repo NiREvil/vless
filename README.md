@@ -34,13 +34,13 @@ v2rayNG, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Clash-Meta & ...
 <br><br>  
 <br>  
 
-## The subscription links  
+##   
 > Built-in github workflows 
 > Updateable every 2 hours  
 
 <br>
 
-### Hiddify URL  <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="30"/>
+### Hiddify URL  <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>
 
 ```POV-Ray SDL
 https://raw.githubusercontent.com/NiREvil/vless/main/warp.json
@@ -419,6 +419,7 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJxcjV5elZsYi5sSnVwY3hVVlc3TTBmY2k0TzdCMVFDdVJpS0ZBdjkxaiJ9
 ```  
 
+
 </details>
 
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
@@ -433,17 +434,13 @@ https://robin.nscl.ir [[∏I?]]
 
 https://v2.alicivil.workers.dev/?list=4&locations=all&count=250 [[GE?]]   
 
-https://raw.githubusercontent.com/MrPooyaX/SansorchiFucker/main/data.txt  
-
-https://raw.githubusercontent.com/MrPooyaX/VpnsFucking/main/Shenzo.txt  
-
 https://raw.githubusercontent.com/Proxydaemitelegram/Proxydaemi44/refs/heads/main/Proxydaemi44 [[PR?]]  
 
 https://raw.githubusercontent.com/FRDYAK/teryak-configs/refs/heads/main/FRDYAK-pashmak  
 
 https://raw.githubusercontent.com/ndsphonemy/proxy-sub/main/speed.txt  
 
-https://iserver.store/KevinVPN.json  [[KV?]]  
+[https://join_to_channel_join.json](https://t.me/KevinZakarian/304)  [[KV?]] 
 
 https://shadowmere.xyz/api/b64sub [[SW?]]   
 https://shadowmere.xyz/api/sub  
