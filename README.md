@@ -9,18 +9,19 @@ v2rayNG, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Clash-Meta & ...
 - Some subscription links are available for [v2rayNG], [Sing-Box], [Hiddify], [NikaNG], [MahsaNG], [NekoBox], [Husi], [Exclave], [Amnezia], [Clash-Meta] and other Clients.
 
   
-- Несколько ссылок для подписки на: v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Clash-Meta и ... Вернуть результат только   
+- Несколько ссылок для подписки на: v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Clash-Meta и ... Вернуть результат только
 
+   
 - 为以下软件提供一些共享链接：v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, Nekobox, Husi, Exclave, Amnezia, Clash-Meta 等。 
 
 <br>  
 
 > [!IMPORTANT]
 > <details>  
-> <summary> |    In case of dissatisfaction ... </summary>  
+> <summary> In case of dissatisfaction </summary>  
 > 
 > * سلام امیدوارم حالتون فوق‌العاده باشه    
-  > 
+> 
 > * لینک‌های ساب وایرگارد هیدیفای و ویتوری و ...  
 > * عموما برای الگو گرفتن و ساخت کانفیگ شخصی هستن و برای استفاده عموم مناسب نیستن،  
 > * لینک‌های singbox همه ساب‌های مورد علاقه خودمون هستن و تا جای ممکن سورس ساب‌هارو پیدا کرده و با [?] در جلوی اونها مشخص کردم. 
@@ -29,17 +30,41 @@ v2rayNG, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Clash-Meta & ...
 > * اگر لینک عمومی سراغ داشتید که براتون خوب کار کرده می‌تونید بفرستید اضافه کنم و مردممون استفاده کنن. 
 > * متاسفانه از مرداد ماه نیما دیگه بینمون نیست و من و چند دوست دیگه اکانت گیت رو در حد توان اداره می‌کنیم. به امید آزادی 🤍
 > * تلگرام من: [[Di4Diana]].  
-> </details> 
+> </details>   
 
-<br><br>  
+> [!IMPORTANT]
+> <details>  
+> <summary> Automated Project Management Notice </summary>  
+>
+> **⚙️ Dynamic Updates:**  
+> Approximately **23% of this repository** (including configuration files, templates, and metadata) is **automatically regenerated every hours in a day** via GitHub Actions workflows.  
+>  
+> **🛠️ Manual Edits Warning:**  
+Any changes made to files in the following directories **may be overwritten** without prior notice:  
+>
+> github/workflow/*  
+> boringtun/*  
+> edge/*  
+> sub/*  
+> root/*  
+> */.js  
+> */.json  
+> */.py  
+> */.html  
+> */.css  
+> */.yml  
+> */.csv  
+> </details>
+
+<br><br> 
+
+
+##
+> 📦 This configuration is dynamically generated and continuously updated via GitHub Actions workflows every 2 hours to ensure consistency and best practices.  
+
 <br>  
-
-##   
-> Built-in github workflows 
-> Updateable every 2 hours  
-
-<br>
-
+  
+##
 ### Hiddify URL  <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>
 
 ```POV-Ray SDL
@@ -56,16 +81,15 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
 
 <br>  
 
-### Scan with Hiddify 👇🏿  
+### Scan with Hiddify   
 
 <img src="edge/assets/QR-Code.svg" alt="QR" width="400px"/>  
-  
+
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)  
 
 <br><br>  
 
-<h2>$$\color{silver} \Huge \text{Table of Contents}$$</h2>  
-
+## Table of Contents   
 - [Cloudflare IPs](#Cloudflare-IPs)
   - [All IPs](#All-IPs)
   - [Only IPv6](#All-IPs)
@@ -87,18 +111,13 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
 <br><br> 
 
 ## Cloudflare IPs  
-> [!IMPORTANT]  
-> Built-in github workflows
+> [!NOTE]  
+> 📦 This configuration is dynamically Fetching cloudflare fresh & clean ip's every 3 hours and continuously updated via GitHub Actions workflows, Any manual edits may be overwritten by automated workflows.
 > 
-> Fetching cloudflare fresh & clean ip's
->  every 3 hours.  
-> 
->  I use the same IPs for the **[Harmony]** script. 
->  Additionally, you can utilize the **[Strawberry.js]**  
+> I use the same IPs for the **[Harmony]** script.  
+> Additionally, you can utilize the **[Strawberry.js]**  
 > script to modify the arrangement of the IPs or to combine them with other repositories.  
 > for ex:  https://strawberry.victoriacross.ir
-
-<br>    
 
 #### All IPs  
 https://github.com/NiREvil/vless/blob/main/Cloudflare-IPs.json  
