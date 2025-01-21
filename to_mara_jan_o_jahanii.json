@@ -1,0 +1,265 @@
+#profile-title: base64:d2Ugd2VyZSBCT1JOIHRvIERJRSAtIElPUys=
+#profile-update-interval: 28
+#subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
+#support-url: https://t.me/F_NiREvil
+#profile-web-page-url: https://github.com/NiREvil
+
+{
+    "log": {
+        "disabled": false,
+        "level": "info",
+        "timestamp": true
+    },
+    "experimental": {
+        "clash_api": {
+            "external_controller": "127.0.0.1:9090",
+            "external_ui": "metacubexd",
+            "external_ui_download_url": "https://github.com\/MetaCubeX\/metacubexd\/archive\/refs\/heads\/gh-pages.zip",
+            "external_ui_download_detour": "direct",
+            "default_mode": "rule"
+        },
+        "cache_file": {
+            "enabled": true,
+            "path": "cache.db",
+            "store_fakeip": false,
+            "store_rdrc": false,
+            "rdrc_timeout": "7d"
+        }
+    },
+    "dns": {
+        "servers": [
+            {
+                "address": "tcp://8.8.8.8",
+                "address_resolver": "dns-local",
+                "detour": "Proxy",
+                "strategy": "ipv4_only",
+                "tag": "dns-remote"
+            },
+            {
+                "address": "tcp://8.8.8.8",
+                "address_resolver": "dns-local",
+                "detour": "direct",
+                "strategy": "ipv4_only",
+                "tag": "dns-direct"
+            },
+            {
+                "address": "tcp://8.8.8.8",
+                "detour": "direct",
+                "tag": "dns-local"
+            },
+            {
+                "address": "rcode://success",
+                "tag": "dns-block"
+            }
+        ],
+        "rules": [
+            {
+                "domain_suffix": [
+                    ".ir"
+                ],
+                "rule_set": [
+                    "geosite-ir"
+                ],
+                "server": "dns-direct"
+            },
+            {
+                "disable_cache": true,
+                "rule_set": [
+                    "geosite-category-ads-all",
+                    "geosite-malware",
+                    "geosite-phishing",
+                    "geosite-cryptominers"
+                ],
+                "server": "dns-block"
+            },
+            {
+                "outbound": "any",
+                "server": "dns-direct"
+            }
+        ],
+        "independent_cache": true
+    },
+    "inbounds": [
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "domain_strategy": "ipv4_only",
+            "interface_name": "sing-tun",
+            "inet4_address": "172.19.0.1\/30",
+            "mtu": 1492,
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "gvisor",
+            "endpoint_independent_nat": true,
+            "sniff": true,
+            "sniff_override_destination": false
+        }
+    ],
+    "outbounds": [
+        {
+            "tag": "Proxy",
+            "type": "selector",
+            "outbounds": [
+                "URL-TEST",
+                "KevinVPN"
+            ],
+            "interrupt_exist_connections": false
+        },
+        {
+            "tag": "URL-TEST",
+            "type": "urltest",
+            "outbounds": [
+                "KevinVPN"
+            ],
+            "url": "https://www.gstatic.com\/generate_204",
+            "interval": "3m",
+            "tolerance": 50,
+            "interrupt_exist_connections": false
+        },
+        {
+            "tag": "direct",
+            "type": "direct"
+        },
+        {
+            "tag": "block",
+            "type": "block"
+        },
+        {
+            "tag": "dns-out",
+            "type": "dns"
+        },
+        {
+            "tag": "KevinVPN",
+            "type": "hysteria2",
+            "server": "kevin.iserver.store",
+            "server_port": 8443,
+            "up_mbps": 0,
+            "down_mbps": 0,
+            "password": "Telegram",
+            "network": "tcp",
+            "obfs": {
+                "type": "salamander",
+                "password": "Telegram:@KevinZakarian"
+            },
+            "tls": {
+                "enabled": true,
+                "disable_sni": true,
+                "server_name": "",
+                "insecure": true,
+                "alpn": [
+                    "h3"
+                ]
+            }
+        }
+    ],
+    "route": {
+        "auto_detect_interface": true,
+        "override_android_vpn": true,
+        "final": "Proxy",
+        "rules": [
+            {
+                "protocol": "dns",
+                "outbound": "dns-out"
+            },
+            {
+                "network": "udp",
+                "port": 443,
+                "outbound": "block"
+            },
+            {
+                "ip_is_private": true,
+                "outbound": "direct"
+            },
+            {
+                "domain_suffix": [
+                    ".ir"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "rule_set": [
+                    "geosite-category-ads-all",
+                    "geosite-malware",
+                    "geosite-phishing",
+                    "geosite-cryptominers",
+                    "geoip-malware",
+                    "geoip-phishing"
+                ],
+                "outbound": "block"
+            },
+            {
+                "rule_set": [
+                    "geoip-ir",
+                    "geosite-ir"
+                ],
+                "outbound": "direct"
+            }
+        ],
+        "rule_set": [
+            {
+                "tag": "geosite-ir",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com\/Chocolate4U\/Iran-sing-box-rules\/rule-set\/geosite-ir.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
+            },
+            {
+                "tag": "geosite-category-ads-all",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com\/Chocolate4U\/Iran-sing-box-rules\/rule-set\/geosite-category-ads-all.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
+            },
+            {
+                "tag": "geosite-malware",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com\/Chocolate4U\/Iran-sing-box-rules\/rule-set\/geosite-malware.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
+            },
+            {
+                "tag": "geosite-phishing",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com\/Chocolate4U\/Iran-sing-box-rules\/rule-set\/geosite-phishing.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
+            },
+            {
+                "tag": "geosite-cryptominers",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com\/Chocolate4U\/Iran-sing-box-rules\/rule-set\/geosite-cryptominers.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
+            },
+            {
+                "tag": "geoip-ir",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com\/Chocolate4U\/Iran-sing-box-rules\/rule-set\/geoip-ir.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
+            },
+            {
+                "tag": "geoip-malware",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com\/Chocolate4U\/Iran-sing-box-rules\/rule-set\/geoip-malware.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
+            },
+            {
+                "tag": "geoip-phishing",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com\/Chocolate4U\/Iran-sing-box-rules\/rule-set\/geoip-phishing.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
+            }
+        ]
+    }
+}
