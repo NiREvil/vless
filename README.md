@@ -6,10 +6,10 @@ $$\color{#a5a5a5} \Huge \text{\R $\sum{\vil_t = \mathbb{N108}\infty}$}$$
 - تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، هیدیفای،
 v2rayNG, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Clash-Meta & ...
   
-- Some subscription links are available for [v2rayNG], [Sing-Box], [Hiddify], [NikaNG], [MahsaNG], [NekoBox], [Husi], [Exclave], [Amnezia], [Clash-Meta] and other Clients.
+- Some subscription links are available for [v2rayNG], [Sing-Box], [Hiddify], [NikaNG], [MahsaNG], [NekoBox], [Husi], [Exclave], [Amnezia], [Clash-Meta] and other Clients.  
 
   
-- Несколько ссылок для подписки на: v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Clash-Meta и ... Вернуть результат только
+- Несколько ссылок для подписки на: v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Clash-Meta и ... Вернуть результат только  
 
    
 - 为以下软件提供一些共享链接：v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, Nekobox, Husi, Exclave, Amnezia, Clash-Meta 等。 
@@ -20,7 +20,7 @@ v2rayNG, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Clash-Meta & ...
 > <details>  
 > <summary> In case of dissatisfaction </summary>  
 > 
-> * سلام امیدوارم حالتون فوق‌العاده باشه    
+> * سلام امیدوارم حالتون عالی باشه    
 > 
 > * لینک‌های ساب وایرگارد هیدیفای و ویتوری و ...  
 > * عموما برای الگو گرفتن و ساخت کانفیگ شخصی هستن و برای استفاده عموم مناسب نیستن،  
@@ -112,17 +112,17 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
 
 ## Cloudflare IPs  
 > [!NOTE]  
-> 📦 This configuration is dynamically Fetching cloudflare fresh & clean ip's every 3 hours and continuously updated via GitHub Actions workflows, Any manual edits may be overwritten by automated workflows.
-> 
+> 📦 The links below all include fresh & clean IP addresses that are dynamically fetched every 3 hours and continuously updated via GitHub Actions workflows. Any manual edits may be overwritten by automated workflows.  
+>  
 > I use the same IPs for the **[Harmony]** script.  
 > Additionally, you can utilize the **[Strawberry.js]**  
 > script to modify the arrangement of the IPs or to combine them with other repositories.  
-> for ex:  https://strawberry.victoriacross.ir
+> for ex:  https://strawberry.victoriacross.ir  
 
 #### All IPs  
 https://github.com/NiREvil/vless/blob/main/Cloudflare-IPs.json  
 
-**Only IPv4**  
+**Only IPv4**   
 
 https://github.com/NiREvil/vless/blob/main/sub/Cf-ipv4.json  
 
