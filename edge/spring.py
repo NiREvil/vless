@@ -7,11 +7,11 @@ import base64
 import json
 import shutil
 
-TEHRAN_SYMBOL = "\u26AA\uFE0F"  # IOS white circle 
-BERLIN_SYMBOL = "\U0001F7E1"    #    yellow circle
+IRAN_SYMBOL = "⚪️"
+GERMANY_SYMBOL = "🟡"
 
-TEHRAN_TAG = f"{TEHRAN_SYMBOL}Tehran"
-BERLIN_TAG = f"{BERLIN_SYMBOL}Berlin"
+IR_TAG = f"{IRAN_SYMBOL}Tehran"
+DE_TAG = f"{GERMANY_SYMBOL}Berlin"
 
 
 warp_cidr = [
@@ -33,9 +33,9 @@ edge_directory = os.path.join(main_directory, "edge")
 # Define file paths
 edge_bestip_path = os.path.join(edge_directory, "Bestip.txt")
 edge_result_path = os.path.join(edge_directory, "Endpoints.csv")
-main_result_path = os.path.join(main_directory, "Endpoints.csv")
 main_singbox_path = os.path.join(main_directory, "sing-box.json")
 main_warp_path = os.path.join(main_directory, "warp.json")
+
 
 # Create a list of cloudflare wireguard endpoints
 def create_ips():
@@ -43,13 +43,10 @@ def create_ips():
     top_ips = sum(len(list(ipaddress.IPv4Network(cidr))) for cidr in warp_cidr)
 
     with open(edge_bestip_path, "w") as file:
-        for cidr in warp_cidr:
-            ip_addresses = list(ipaddress.IPv4Network(cidr))
-            for addr in ip_addresses:
-                c += 1
-                file.write(str(addr))
-                if c != top_ips:
-                    file.write("\n")
+        all_ips = [str(addr)
+                   for cidr in warp_cidr for addr in ipaddress.IPv4Network(cidr)]
+        file.write("\n".join(all_ips))
+
 
 def arch_suffix():
     machine = platform.machine().lower()
@@ -62,15 +59,17 @@ def arch_suffix():
     elif machine.startswith("s390x"):
         return "s390x"
     else:
-        raise ValueError("Unsupported CPU architecture")
+        raise ValueError(
+            "Unsupported CPU architecture. Supported architectures are: i386, i686, x86_64, amd64, armv8, arm64, aarch64, s390x")
+
 
 # warp ON warp wireguard configurations, Exclusively for hidfify clients
 def export_Hiddify(t_ips):
-    config_prefix = (
-        f"warp://{t_ips[0]}?ifp=1-3&ifpm=m4#{TEHRAN_TAG}&&detour=warp://{t_ips[1]}?ifp=1-2&ifpm=m5#{BERLIN_TAG}"
-    )
+    config_prefix = f"warp://{t_ips[0]}?ifp=1-3&ifpm=m4#{
+        IR_TAG}&&detour=warp://{t_ips[1]}?ifp=1-2&ifpm=m5#{DE_TAG}"
     formatted_time = datetime.datetime.now().strftime("%A, %d %b %Y, %H:%M")
     return config_prefix, formatted_time
+
 
 # warp ON warp wireguard configurations, Only for official sinbox clients
 def toSingBox(tag, clean_ip, detour):
@@ -83,7 +82,7 @@ def toSingBox(tag, clean_ip, detour):
         try:
             data = json.loads(output)
             wg = {
-                "tag": f"{tag}",
+                "tag": tag,
                 "type": "wireguard",
                 "server": f"{clean_ip.split(':')[0]}",
                 "server_port": int(clean_ip.split(":")[1]),
@@ -111,27 +110,30 @@ def toSingBox(tag, clean_ip, detour):
         print("Error: Command execution failed or produced no output")
         return None
 
+
 def export_SingBox(t_ips):
-    template_path = os.path.join(edge_directory, "assets", "singbox-template.json")
+    template_path = os.path.join(
+        edge_directory, "assets", "singbox-template.json")
     with open(template_path, "r") as f:
         data = json.load(f)
 
-    data["outbounds"][1]["outbounds"].extend([TEHRAN_TAG, BERLIN_TAG])
+    data["outbounds"][1]["outbounds"].extend([IR_TAG, DE_TAG])
 
-    tehran_wg = toSingBox(TEHRAN_TAG, t_ips[0], "direct")
+    tehran_wg = toSingBox(IR_TAG, t_ips[0], "direct")
     if tehran_wg:
         data["outbounds"].insert(2, tehran_wg)
     else:
-        print("Failed to generate {TEHRAN_TAG} configuration")
+        print(f"Failed to generate {IR_TAG} configuration")
 
-    berlin_wg = toSingBox(BERLIN_TAG, t_ips[1], TEHRAN_TAG)
+    berlin_wg = toSingBox(DE_TAG, t_ips[1], IR_TAG)
     if berlin_wg:
         data["outbounds"].insert(3, berlin_wg)
     else:
-        print("Failed to generate {BERLIN_TAG} configuration")
+        print(f"Failed to generate {DE_TAG} configuration")
 
     with open(main_singbox_path, "w") as f:
-        json.dump(data, f, indent=4)
+        json.dump(data, f, indent=2)
+
 
 def main():
     try:
@@ -145,27 +147,24 @@ def main():
             create_ips()
             print("Bestip.txt File Created Successfully!")
 
-        # Running warp for scan clean ips 
+        # Running warp for scan clean ips
         arch = arch_suffix()
         print("Fetching warp program...")
         url = f"https://gitlab.com/Misaka-blog/warp-script/-/raw/main/files/warp-yxip/warp-linux-{arch}"
-        
+
         warp_executable = os.path.join(edge_directory, "warp")
         subprocess.run(["wget", url, "-O", warp_executable], check=True)
         os.chmod(warp_executable, 0o755)
-        
+
         print("Scanning IPs...")
         subprocess.run(
             [warp_executable],
             check=True,
             stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL
+            stderr=subprocess.DEVNULL,
         )
         print("Warp executed successfully.")
 
-        if os.path.exists(edge_result_path):
-            shutil.copy2(edge_result_path, main_result_path)
-            
         Bestip = []
         with open(edge_result_path, "r") as csv_file:
             next(csv_file)
@@ -180,17 +179,30 @@ def main():
         config_prefix, _ = export_Hiddify(Bestip)
 
         # Hiddify profile shits
-        title = "//profile-title: base64:" + base64.b64encode("Freedom to Dream 💛✨".encode("utf-8")).decode("utf-8") + "\n"
+        title = (
+            "//profile-title: base64:"
+            + base64.b64encode("Freedom to Dream 💛✨".encode("utf-8")
+                               ).decode("utf-8")
+            + "\n"
+        )
         update_interval = "//profile-update-interval: 4\n"
-        sub_info = "//subscription-userinfo: upload=805306368000; download=2576980377600; total=6012954214400; expire=1762677732\n"
+        sub_info = "//subscription-userinfo: upload = 805306368000; download = 2576980377600; total = 6012954214400; expire = 1762677732\n"
         profile_web = "//profile-web-page-url: https://github.com/NiREvil\n"
         last_modified = "//last update on: " + formatted_time + "\n"
 
         with open(main_warp_path, "w") as op:
-            op.write(title + update_interval + sub_info + profile_web + last_modified + config_prefix)
+            op.write(
+                title
+                + update_interval
+                + sub_info
+                + profile_web
+                + last_modified
+                + config_prefix
+            )
 
         export_SingBox(Bestip)
 
+    # Catch errors related to subprocess command execution
     except subprocess.CalledProcessError as e:
         print(f"Error executing command: {e}")
     except Exception as e:
@@ -202,5 +214,7 @@ def main():
         if os.path.exists(warp_executable):
             os.remove(warp_executable)
 
+
 if __name__ == "__main__":
     main()
+    
