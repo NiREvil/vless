@@ -1,0 +1,176 @@
+name: Code Formatting and Style
+
+on:
+  # Trigger on push events to specific file types
+  push:
+    paths:
+      - '**/*.js'   # JavaScript files in any directory.
+      - '**/*.py'    # Python 
+      - '**/*.md'    # Markdown 
+      - '**/*.css'   # CSS 
+      - '**/*.yml'   # YAML 
+      - '**/*.json'  # JSON 
+      - '**/*.html'  # HTML 
+    branches:
+      - main
+  pull_request:
+    branches: 
+      - main
+  # Allow manual triggering of the workflow
+  workflow_dispatch:
+
+# Environment variables used across jobs
+env:
+  NODE_VERSION: '20'
+  PYTHON_VERSION: '3.12'
+  PRETTIER_VERSION: '3.1.0'
+
+# Define the jobs to run
+jobs:
+  formatting:
+    name: Code Formatting
+    runs-on: ubuntu-22.04  
+    timeout-minutes: 25 
+    
+    # Define required permissions
+    permissions:
+      contents: write  
+      pull-requests: write  
+    
+    strategy:
+      fail-fast: false 
+
+    steps:
+      # Check out the repository code
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0           
+          submodules: 'recursive'  # Include all submodules
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      # Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          architecture: x64
+
+      # Cache Python dependencies
+      - name: Cache Python packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      # Install Python formatting tools
+      - name: Install Python formatting dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install black[d] flake8 isort
+          
+      # Run Black formatter with error handling
+      - name: Run Black formatter
+        run: |
+          echo "Running Black formatter check..."
+          if ! black --check .; then
+            echo "Formatting required. Applying changes..."
+            black .
+          fi
+        continue-on-error: true
+
+      # Set up Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Initialize npm if needed
+        run: |
+          if [ ! -f package.json ]; then
+            npm init -y
+          fi
+      
+      # Install Prettier formatting tools
+      - name: Install Prettier
+        run: |
+          npm install prettier@${{ env.PRETTIER_VERSION }}
+          npm install prettier-plugin-toml
+
+      # Validate configuration files
+      - name: Validate formatting configs
+        run: |
+          if [ -f .prettierrc ]; then
+            prettier --check .prettierrc* || echo "Prettier config validation failed"
+          fi
+          if [ -f pyproject.toml ]; then
+            black --check pyproject.toml || echo "Black config validation failed"
+          fi
+
+      - name: Initialize npm project
+        run: |
+          if [ ! -f package.json ]; then
+            npm init -y
+          fi
+
+      # Run Prettier formatter
+      - name: Run Prettier
+        uses: creyD/prettier_action@v4.3
+        with:
+          prettier_options: --write **/*.{js,json,html,css,yml,md} --ignore-unknown
+          commit_message: "style: apply code formatting standards"
+          commit_description: "Applied automatic formatting using Black and Prettier"
+          prettier_version: ${{ env.PRETTIER_VERSION }}
+          only_changed: true  # Only format changed files
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        continue-on-error: true
+
+      # Add a manual commit step in case the Prettier action fails to commit
+      - name: Commit changes if any
+        if: failure()
+        run: |
+          git config --local user.name "actions-user"
+          git config --local user.email "actions-user@example.com"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || git commit -m "style: apply code formatting standards" -m "Applied automatic formatting using Black and Prettier"
+        continue-on-error: true
+
+      # Optional: Set up pre-commit hooks for local development
+      - name: Setup pre-commit hooks
+        run: |
+          pip install pre-commit
+          pre-commit install
+        continue-on-error: true
+
+      # Report formatting status
+      - name: Check formatting status
+        if: always()
+        run: |
+          echo "Formatting Status Report"
+          echo "======================="
+          if [ ${{ job.status }} == 'success' ]; then
+            echo "✅ All files are properly formatted!"
+          else
+            echo "⚠️ Some files needed formatting. Check the commits for changes."
+          fi
+
+      # Add PR comment with formatting results
+      - name: Comment on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const formatting_status = '${{ job.status }}' === 'success' 
+              ? '✅ Code formatting checks passed!'
+              : '⚠️ Some files needed formatting. Please check the commits for changes.';
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: formatting_status
+            });

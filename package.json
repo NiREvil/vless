@@ -1,0 +1,33 @@
+{
+  "name": "@vless/vless",
+  "version": "1.0.0",
+  "description": "$$\\color{#a5a5a5} \\Huge \\text{\\R $\\sum{\\vil_t = \\mathbb{N108}\\infty}$}$$",
+  "main": ".prettierrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js,.json,.html,.css,.yml,.md",
+    "format": "prettier --write **/*.{js,json,html,css,yml,md} --ignore-unknown",
+    "lint:fix": "eslint . --ext .js,.json,.html,.css,.yml,.md --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NiREvil/vless.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NiREvil/vless/issues"
+  },
+  "homepage": "https://github.com/NiREvil/vless#readme",
+  "dependencies": {
+    "package-lock.json": "^1.0.0",
+    "prettier": "^3.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier-plugin-toml": "^2.0.1"
+  }
+}
