@@ -1,6 +1,6 @@
 {
   "dns": {
-    "final": "local-dns",
+    "final": "proxy-dns",
     "rules": [
       {
         "clash_mode": "Global",
@@ -28,13 +28,13 @@
     ],
     "servers": [
       {
-        "address": "tcp://185.228.168.9",
+        "address": "udp://1.1.1.1",
         "address_resolver": "local-dns",
         "detour": "proxy",
-        "tag": "proxy-dns"
+        "tag": "proxy-7dns"
       },
       {
-        "address": "local",
+        "address": "8.8.8.8",
         "detour": "direct",
         "tag": "local-dns"
       },
@@ -58,7 +58,7 @@
       ],
       "auto_route": true,
       "endpoint_independent_nat": false,
-      "mtu": 1300,
+      "mtu": 1480,
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -68,7 +68,7 @@
       },
       "sniff": true,
       "stack": "system",
-      "strict_route": false,
+      "strict_route": true,
       "type": "tun"
     },
     {
@@ -109,13 +109,13 @@
         "172.16.0.2/32",
         "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
       ],
-      "private_key": "0Fvkbro+4mQM9rezR1yPhs7uXemk+M2O7P6jaBv2uHM=",
+      "private_key": "4JOLYCXTQl65jyYDJkJ4xQJ8xRyfj7zeZEiR0oACy2k=",
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "mtu": 1300,
       "reserved": [
-        246,
-        135,
-        244
+        215,
+        53,
+        228
       ],
       "detour": "direct",
       "workers": 2
@@ -129,13 +129,13 @@
         "172.16.0.2/32",
         "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
       ],
-      "private_key": "mE9gU/MDTpIgudG1MwSMDdJQWPXK9fnQ6hOjvKrzrms=",
+      "private_key": "uIjviinyImZaKkqh4SZLPJuzjjcVcCXFX7EYLd2m+X8=",
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "mtu": 1300,
       "reserved": [
-        97,
-        77,
-        109
+        157,
+        48,
+        46
       ],
       "detour": "\u26aa\ufe0fTehran",
       "workers": 2
@@ -155,6 +155,7 @@
   ],
   "route": {
     "auto_detect_interface": true,
+    "override_android_vpn": true,
     "final": "proxy",
     "rule_set": [
       {
