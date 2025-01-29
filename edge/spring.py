@@ -150,7 +150,8 @@ def main():
         # Running warp for scan clean ips
         arch = arch_suffix()
         print("Fetching warp program...")
-        url = f"https://gitlab.com/Misaka-blog/warp-script/-/raw/main/files/warp-yxip/warp-linux-{arch}"
+        url = f"https://gitlab.com/Misaka-blog/warp-script/-/raw/main/files/warp-yxip/warp-linux-{
+            arch}"
 
         warp_executable = os.path.join(edge_directory, "warp")
         subprocess.run(["wget", url, "-O", warp_executable], check=True)
@@ -217,4 +218,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
+

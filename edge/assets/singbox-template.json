@@ -1,6 +1,6 @@
 {
   "dns": {
-    "final": "local-dns",
+    "final": "proxy-dns",
     "rules": [
       {
         "clash_mode": "Global",
@@ -22,13 +22,13 @@
     ],
     "servers": [
       {
-        "address": "tcp://185.228.168.9",
+        "address": "udp://1.1.1.1",
         "address_resolver": "local-dns",
         "detour": "proxy",
-        "tag": "proxy-dns"
+        "tag": "proxy-7dns"
       },
       {
-        "address": "local",
+        "address": "8.8.8.8",
         "detour": "direct",
         "tag": "local-dns"
       },
@@ -49,7 +49,7 @@
       "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
       "endpoint_independent_nat": false,
-      "mtu": 1300,
+      "mtu": 1480,
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -59,7 +59,7 @@
       },
       "sniff": true,
       "stack": "system",
-      "strict_route": false,
+      "strict_route": true,
       "type": "tun"
     },
     {
@@ -100,6 +100,7 @@
   ],
   "route": {
     "auto_detect_interface": true,
+    "override_android_vpn": true,
     "final": "proxy",
     "rule_set": [
       {
