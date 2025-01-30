@@ -4,17 +4,17 @@ on:
   # Trigger on push events to specific file types
   push:
     paths:
-      - '**/*.js'   # JavaScript files in any directory.
-      - '**/*.py'    # Python 
-      - '**/*.md'    # Markdown 
-      - '**/*.css'   # CSS 
-      - '**/*.yml'   # YAML 
-      - '**/*.json'  # JSON 
-      - '**/*.html'  # HTML 
+      - '**/*.js' # JavaScript files in any directory.
+      - '**/*.py' # Python
+      - '**/*.md' # Markdown
+      - '**/*.css' # CSS
+      - '**/*.yml' # YAML
+      - '**/*.json' # JSON
+      - '**/*.html' # HTML
     branches:
       - main
   pull_request:
-    branches: 
+    branches:
       - main
   # Allow manual triggering of the workflow
   workflow_dispatch:
@@ -23,31 +23,31 @@ on:
 env:
   NODE_VERSION: '20'
   PYTHON_VERSION: '3.12'
-  PRETTIER_VERSION: '3.1.0'
+  PRETTIER_VERSION: '3.4.2'
 
 # Define the jobs to run
 jobs:
   formatting:
     name: Code Formatting
-    runs-on: ubuntu-22.04  
-    timeout-minutes: 25 
-    
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+
     # Define required permissions
     permissions:
-      contents: write  
-      pull-requests: write  
-    
+      contents: write
+      pull-requests: write
+
     strategy:
-      fail-fast: false 
+      fail-fast: false
 
     steps:
       # Check out the repository code
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0           
-          submodules: 'recursive'  # Include all submodules
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          fetch-depth: 0
+          submodules: 'recursive' # Include all submodules
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       # Set up Python environment
       - name: Set up Python
@@ -71,7 +71,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install black[d] flake8 isort
-          
+
       # Run Black formatter with error handling
       - name: Run Black formatter
         run: |
@@ -93,7 +93,7 @@ jobs:
           if [ ! -f package.json ]; then
             npm init -y
           fi
-      
+
       # Install Prettier formatting tools
       - name: Install Prettier
         run: |
@@ -121,12 +121,12 @@ jobs:
         uses: creyD/prettier_action@v4.3
         with:
           prettier_options: --write **/*.{js,json,html,css,yml,md} --ignore-unknown
-          commit_message: "style: apply code formatting standards"
-          commit_description: "Applied automatic formatting using Black and Prettier"
+          commit_message: 'style: apply code formatting standards'
+          commit_description: 'Applied automatic formatting using Black and Prettier'
           prettier_version: ${{ env.PRETTIER_VERSION }}
-          only_changed: true  # Only format changed files
+          only_changed: true # Only format changed files
         env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
 
       # Add a manual commit step in case the Prettier action fails to commit
@@ -167,7 +167,7 @@ jobs:
             const formatting_status = '${{ job.status }}' === 'success' 
               ? '✅ Code formatting checks passed!'
               : '⚠️ Some files needed formatting. Please check the commits for changes.';
-            
+
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
