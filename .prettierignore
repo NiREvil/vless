@@ -1,22 +1,20 @@
 ## Specific directories
-dist/
-build/
-.github/
 *.lock
 *.log
 .env
 .env.*
+.github/
+dist/
+build/
+Hiddify/
 node_modules/
 DNS over HTTPS/
-sub/ProxyIP.md
 boringtun-boringtun-cli-0.5.2/
-Hiddify/
 
-## The files  we don't want to format
-result.csv
+## The files we don't want to format
 warp.json
-Endpoints.csv
-WarpOnWarp.json
-package.json
-package-lock.json
 README.md
+result.csv
+package.json
+pyproject.toml
+package-lock.json
