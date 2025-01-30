@@ -127,16 +127,10 @@ bpb.yousef.isegaro.com
 3.64.205.189
 ```
 ```POV-Ray SDL
-3.78.187.212
-```
-```POV-Ray SDL
 3.75.170.179
 ```
 ```POV-Ray SDL
 3.75.149.151
-```
-```POV-Ray SDL
-18.198.197.84
 ```
 ```POV-Ray SDL
 3.123.242.99
@@ -151,9 +145,6 @@ bpb.yousef.isegaro.com
 18.153.244.138
 ```
 ```POV-Ray SDL
-18.159.149.255
-```
-```POV-Ray SDL
 3.79.117.14
 ```
 ```POV-Ray SDL
@@ -161,9 +152,6 @@ bpb.yousef.isegaro.com
 ```
 ```POV-Ray SDL
 18.198.168.3
-```
-```POV-Ray SDL
-3.78.125.180
 ```
 
 </details>  
