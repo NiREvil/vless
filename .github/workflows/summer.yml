@@ -2,10 +2,10 @@ name: Summer time
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
     paths:
       - '**/summer.*' # 'summer' in any directory and all types
-      - 'sub/*.txt' 
+      - 'sub/*.txt'
   schedule:
     - cron: '0 */6 * * *' # Runs every 6 hours
   # Allow manual triggering of the workflow
@@ -16,60 +16,59 @@ permissions:
 
 jobs:
   update-configs:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
-    # Step 1: Checkout the repository
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0  # Fetch full history
-        submodules: 'recursive' # Include submodules
-        token: ${{ secrets.GITHUB_TOKEN }} # Use PAT for authentication
-    
+      # Step 1: Checkout the repository
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch full history
+          submodules: 'recursive' # Include submodules
+          token: ${{ secrets.GITHUB_TOKEN }} # Use PAT for authentication
 
-    # Step 2: Set up Python
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.12' # Use Python 3.12
-        cache: pip # Enable pip caching
-        architecture: x64 # Use 64-bit architecture
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12' # Use Python 3.12
+          cache: pip # Enable pip caching
+          architecture: x64 # Use 64-bit architecture
 
-    # Step 3: Cache Python dependencies
-    - name: Cache Python packages
-      uses: actions/cache@v4
-      with:
-        path: ~/.cache/pip # Cache directory
-        key: ${{ runner.os }}-pip-${{ hashFiles('edge/requirements.txt') }} # Cache key
-        restore-keys: |
-          ${{ runner.os }}-pip- # Fallback cache keys
+      # Step 3: Cache Python dependencies
+      - name: Cache Python packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
-    # Step 4: Install Python dependencies
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip || exit 1
-        pip install -r edge/requirements.txt || exit 1
+      # Step 4: Install Python dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip || exit 1
+          pip install -r edge/requirements.txt || exit 1
 
-    # Step 5: Run the summer.py script
-    - name: Run summer.py to fetch Cloudflare clean IPs
-      run: |
-        python edge/summer.py || exit 1
+      # Step 5: Run the summer.py script
+      - name: Run summer.py to fetch Cloudflare clean IPs
+        run: |
+          python edge/summer.py || exit 1
 
-    # Step 6: Commit and push changes if there are any
-    - name: Commit and push if changes are detected
-      run: |
-        git config --local user.name "Diana-Cl"
-        git config --local user.email "135276904+Diana-Cl@users.noreply.github.com"
-        git add sub/*.txt
+      # Step 6: Commit and push changes if there are any
+      - name: Commit and push if changes are detected
+        run: |
+          git config --local user.name "REvil"
+          git config --local user.email "nirevil@proton.me"
+          git add sub/*.txt
 
-        # Check if there are changes to commit
-        if ! git diff --quiet || ! git diff --staged --quiet; then
-          git commit -m "Updated $(TZ='Asia/Tehran' date '+%H:%M:%S')" \
-                     -m "The new WireGuard configurations were obtained from Telegram channels --Dwire-- and --FreeWireGuard--, and subsequently added to the beginning of the list corresponding to their respective clients."
-          git -c author.name="Diana-Cl" -c author.email="135276904+Diana-Cl@users.noreply.github.com" \
-              -c committer.name="github-actions[bot]" -c committer.email="41898282+github-actions[bot]@users.noreply.github.com" \
-              commit --amend --no-edit
-          git push || exit 1
-        else
-          echo "No changes detected. Skipping commit and push."
-        fi
-
+          # Check if there are changes to commit
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "Updated $(TZ='Asia/Tehran' date '+%H:%M:%S')" \
+                       -m "The new WireGuard configurations were obtained from Telegram channels --Dwire-- and --FreeWireGuard--, and subsequently added to the beginning of the list corresponding to their respective clients."
+            git -c author.name="REvil" -c author.email="nirevil@proton.me" \
+                -c committer.name="github-actions[bot]" -c committer.email="41898282+github-actions[bot]@users.noreply.github.com" \
+                commit --amend --no-edit
+            git push || exit 1
+          else
+            echo "No changes detected. Skipping commit and push."
+          fi
+          
