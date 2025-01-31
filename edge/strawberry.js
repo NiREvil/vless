@@ -29,7 +29,6 @@ async function handleRequest(request) {
       const ipv4data = json.ipv4.filter((item) => item.ip !== null); // Filter out null IPv4 entries
       ipv4data.forEach((item) => {
         if (!seenIPv4.has(item.ip)) {
-          // Check if the IPv4 address has already been seen
           seenIPv4.add(item.ip); // Add the IPv4 address to the set of seen addresses
           resultData.push({
             domain: item.domain || "", // Add the domain if present
