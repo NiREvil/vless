@@ -48,7 +48,7 @@ def fetch_configs():
             'v2ray': set()
         }
 
-        # Fetch Fetch the WireGuard config compatible with the nekobox, husi and excclave clients core from Diwire telegram channel
+        # Fetch the WireGuard config compatible with the nekobox, husi and excclave clients core from Diwire telegram channel
         response = requests.get(CHANNELS['diwire'], headers=headers)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -82,7 +82,7 @@ def fetch_configs():
                 config = match.group(0)
                 base_config = config.split('#')[0]
                 if base_config not in existing_configs['v2ray']:
-                    new_configs['v2ray'].add(f"{base_config}#NiREvil{len(new_configs['v2ray'])+1}")
+                    new_configs['v2ray'].add(f"{base_config}#REvil{len(new_configs['v2ray'])+1}")
 
         os.makedirs(OUTPUT_DIR, exist_ok=True)
         
