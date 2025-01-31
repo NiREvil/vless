@@ -7,8 +7,7 @@ on:
       - '**/summer.*' # 'summer' in any directory and all types
       - 'sub/*.txt'
   schedule:
-    - cron: '0 */6 * * *' # Runs every 6 hours
-  # Allow manual triggering of the workflow
+    - cron: '0 */6 * * *' 
   workflow_dispatch:
 
 permissions:
@@ -18,18 +17,17 @@ jobs:
   update-configs:
     runs-on: ubuntu-24.04
     steps:
-      # Step 1: Checkout the repository
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Fetch full history
-          submodules: 'recursive' # Include submodules
+          fetch-depth: 0 
+          submodules: 'recursive' 
           token: ${{ secrets.GITHUB_TOKEN }} # Use PAT for authentication
 
       # Step 2: Set up Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12' # Use Python 3.12
+          python-version: '3.13' # Use Python 3.13
           cache: pip # Enable pip caching
           architecture: x64 # Use 64-bit architecture
 
@@ -53,17 +51,16 @@ jobs:
         run: |
           python edge/summer.py || exit 1
 
-      # Step 6: Commit and push changes if there are any
-      - name: Commit and push if changes are detected
+      # Step 6: Commit and push 
+      - name: Commit and push if changes if there are any
         run: |
           git config --local user.name "REvil"
           git config --local user.email "nirevil@proton.me"
           git add sub/*.txt
 
-          # Check if there are changes to commit
           if ! git diff --quiet || ! git diff --staged --quiet; then
-            git commit -m "Updated $(TZ='Asia/Tehran' date '+%H:%M:%S')" \
-                       -m "The new WireGuard configurations were obtained from Telegram channels --Dwire-- and --FreeWireGuard--, and subsequently added to the beginning of the list corresponding to their respective clients."
+            git commit -m "Task done $(TZ='Asia/Tehran' date '+%H:%M:%S')" \
+                       -m "The new wireguard configurations were obtained from Telegram channels --Dwire-- and --FreeWireGuard--, and subsequently added to the beginning of the list corresponding to their respective clients."
             git -c author.name="REvil" -c author.email="nirevil@proton.me" \
                 -c committer.name="github-actions[bot]" -c committer.email="41898282+github-actions[bot]@users.noreply.github.com" \
                 commit --amend --no-edit
@@ -71,4 +68,3 @@ jobs:
           else
             echo "No changes detected. Skipping commit and push."
           fi
-          
