@@ -1,10 +1,10 @@
-name: "WARP"
+name: 'WARP'
 
 on:
   push:
     branches: ['main']
     paths:
-      - '**/warpauto.*' 
+      - '**/warpauto.*'
   schedule:
     - cron: '*/45 * * * *'
   workflow_dispatch:
@@ -19,14 +19,14 @@ jobs:
     runs-on: ubuntu-24.04
     defaults:
       run:
-        shell: bash -e {0} 
-        
+        shell: bash -e {0}
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 
-          submodules: 'recursive' 
+          fetch-depth: 0
+          submodules: 'recursive'
           github_token: ${{ secrets.GITHUB_TOKEN }}
         env:
           NODE_VERSION: '20'
