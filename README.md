@@ -159,9 +159,8 @@ https://igdux.top/~FREE2CONFIG,T,H
 https://raw.githubusercontent.com/azadiazinjamigzare/Service/main/Sub
 
 **Meshkintaj [[ME?]]**  
-https://singbox-freevpnhomes-subscription.meshkintaj.homes  
+https://karing-freevpnhomes-subscription.shampoosirsehat.homes    
 
-https://backup-singbox-freevpnhomes-subscription.meshkintaj.homes  
 
 **Warp +Windscribe + Hysteria - Hiddify**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscribe%20on%20H2
@@ -241,7 +240,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/H2%20SINGBOX%20HOSS
 https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json  
 
 **Meshkintaj [[ME?]]**  
-https://singbox-freevpnhomes-subscription.meshkintaj.homes  
+https://karing-freevpnhomes-subscription.shampoosirsehat.homes  
 
 **Cypherpunks [[CY?]]**  
 https://raw.githubusercontent.com/IranianCypherpunks/SingBox/main/Sub  
@@ -765,7 +764,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 
 [MB?]: <https://github.com/mahdibland/ShadowsocksAggregator>
 
-[ME?]: <https://t.me/s/FreeVpnHomes>  
+[ME?]: <https://t.me/s/FreeVPNHomes/532>  
 
 [PR?]: <https://t.me/s/ProxyDaemi>  
 
