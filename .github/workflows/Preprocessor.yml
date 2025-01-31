@@ -23,13 +23,13 @@ jobs:
         with:
           fetch-depth: 0 # Fetch full history
           submodules: 'recursive' # Include submodules
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       # Step 2: Set up PHP
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.4' # Use PHP 8.4
+          php-version: '8.2' # Use PHP 8.2
 
       # Step 3: Run the preprocessor.php script
       - name: Run preprocessor.php
@@ -56,4 +56,4 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
