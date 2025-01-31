@@ -1,13 +1,13 @@
-name: Spring
+name: warp_REvil
 
 on:
   push:
     branches: ['main']
     paths:
-      - '**/spring.*'
-      - 'edge/assets/*.json'
+      - 'warpREvil.py'
+      - '**/*.json'
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '0 */12 * * *'
   workflow_dispatch:
 
 jobs:
@@ -16,14 +16,13 @@ jobs:
     timeout-minutes: 25
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           submodules: 'recursive'
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # Set up Python environments
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -31,7 +30,6 @@ jobs:
           cache: pip
           architecture: x64
 
-      # Cache Python shits
       - name: Cache Python packages
         uses: actions/cache@v4
         with:
@@ -40,26 +38,29 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      # install Python ip tools
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip || exit 1
-          pip install -r edge/requirements.txt || exit 1
+          pip install -r assets/requirements.txt || exit 1
 
-      # Run spring to fetch warp IP's and create wireguard configurations
-      - name: Run python
-        run: python edge/spring.py
-
-      # Commit and push if chanes
-      - name: Commit and push if changed
+      - name: Run script
         run: |
-          git config --local user.name "Diana-Cl"
-          git config --local user.email "135276904+Diana-Cl@users.noreply.github.com"
-          git add *.json
-          git diff --quiet && git diff --staged --quiet || (
-            git commit -m "Task done $(TZ='Asia/Tehran' date '+%H:%M:%S')" -m "wireuard private key, addresses, reserved and all IPs have been renewed"
-            git -c author.name="Diana-Cl" -c author.email="135276904+Diana-Cl@users.noreply.github.com" \
+          python warpREvil.py || exit 1
+
+      - name: Commit and push if changes are detected
+        run: |
+          git config --local user.name "arshiacomplus"
+          git config --local user.email "163334604+arshiacomplus@users.noreply.github.com"
+          git add -A
+          # Check if there are changes to commit
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Automatic update $(TZ='Asia/Tehran' date '+%H:%M:%S')" \
+                       -m "Warp private key, addresses, reserved and all IP's have been renewed"
+            git -c author.name="arshiacomplus" -c author.email="163334604+arshiacomplus@users.noreply.github.com" \
                 -c committer.name="github-actions[bot]" -c committer.email="41898282+github-actions[bot]@users.noreply.github.com" \
                 commit --amend --no-edit
-          )
-          git push
+            git push || exit 1
+          else
+            echo "No changes detected. Skipping commit and push."
+          fi
+          
