@@ -5,7 +5,7 @@ on:
     branches: ['main']
     paths:
       - '**/warp2*'
-  schedule: 
+  schedule:
     - cron: '*/45 * * * *'
   workflow_dispatch:
 
@@ -15,51 +15,50 @@ jobs:
     timeout-minutes: 25
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-        submodules: 'recursive' 
-        token: ${{ secrets.GITHUB_TOKEN }}
-          
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.13'
-        cache: pip
-        architecture: x64
-        
-    - name: Cache Python packages
-      uses: actions/cache@v4
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: 'recursive'
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-    # install Python ip tools
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip || exit 1
-        pip install -r edge/requirements.txt || exit 1
-   
-    - name: Run script
-      run: python warp2.py
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          architecture: x64
 
-    - name: Commit and push if changes are detected
-      run: |
-        git config --local user.name "arshiacomplus"
-        git config --local user.email "163334604+arshiacomplus@users.noreply.github.com"
-        git add -A
-        # Check if there are changes to commit
-        if [ -n "$(git status --porcelain)" ]; then
-          git commit -m "Automatic update $(TZ='Asia/Tehran' date '+%H:%M:%S')" \
-                     -m "Warp private key, addresses, reserved and all IP's have been renewed"
-          git -c author.name="arshiacomplus" -c author.email="163334604+arshiacomplus@users.noreply.github.com" \
-              -c committer.name="github-actions[bot]" -c committer.email="41898282+github-actions[bot]@users.noreply.github.com" \
-              commit --amend --no-edit
-          git push || exit 1
-        else
-          echo "No changes detected. Skipping commit and push."
-        fi
-        
+      - name: Cache Python packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      # install Python ip tools
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip || exit 1
+          pip install -r edge/requirements.txt || exit 1
+
+      - name: Run script
+        run: python warp2.py
+
+      - name: Commit and push if changes are detected
+        run: |
+          git config --local user.name "arshiacomplus"
+          git config --local user.email "163334604+arshiacomplus@users.noreply.github.com"
+          git add -A
+          # Check if there are changes to commit
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Automatic update $(TZ='Asia/Tehran' date '+%H:%M:%S')" \
+                       -m "Warp private key, addresses, reserved and all IP's have been renewed"
+            git -c author.name="arshiacomplus" -c author.email="163334604+arshiacomplus@users.noreply.github.com" \
+                -c committer.name="github-actions[bot]" -c committer.email="41898282+github-actions[bot]@users.noreply.github.com" \
+                commit --amend --no-edit
+            git push || exit 1
+          else
+            echo "No changes detected. Skipping commit and push."
+          fi
