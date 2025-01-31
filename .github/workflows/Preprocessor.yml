@@ -2,34 +2,34 @@ name: Preprocessor
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
     paths:
-      - '**/preprocessor.*'  # 'preprocessor' in any directory and all types
+      - '**/preprocessor.*' # 'preprocessor' in any directory and all types
       - 'sub/*.json'
   schedule:
-    - cron: '0 */4 * * *'  # Runs every 4 hours
-  workflow_dispatch:  # Allow manual triggering of the workflow
+    - cron: '0 */4 * * *' # Runs every 4 hours
+  workflow_dispatch: # Allow manual triggering of the workflow
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     defaults:
       run:
-        shell: bash -e {0}  # Fail the job if any command fails
+        shell: bash -e {0} # Fail the job if any command fails
     steps:
       # Step 1: Checkout the repository
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch full history
-          submodules: 'recursive'  # Include submodules
-          github_token: ${{ secrets.GITHUB_TOKEN }} 
+          fetch-depth: 0 # Fetch full history
+          submodules: 'recursive' # Include submodules
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       # Step 2: Set up PHP
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.4'  # Use PHP 8.4
+          php-version: '8.4' # Use PHP 8.4
 
       # Step 3: Run the preprocessor.php script
       - name: Run preprocessor.php
@@ -38,16 +38,16 @@ jobs:
       # Step 4: Configure Git
       - name: Configure Git
         run: |
-          git config --local user.name "Diana-Cl"
-          git config --local user.email "135276904+Diana-Cl@users.noreply.github.com"
+          git config --local user.name "REvil"
+          git config --local user.email "nirevil@proton.me"
 
       # Step 5: Commit changes if there are any
       - name: Commit changes with timestamp
         run: |
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "ⅣⅭ Updated $(TZ='Asia/Tehran' date '+%H:%M:%S')" \
-                       -m "The list of Cloudflare IPs has been updated."
+            git commit -m "ⅣⅭ Update $(TZ='Asia/Tehran' date '+%H:%M:%S')" \
+                       -m "The list of Cloudflare IPs has been updated"
           else
             echo "No changes detected. Skipping commit."
           fi
