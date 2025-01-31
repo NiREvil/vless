@@ -2,34 +2,34 @@ name: Preprocessor
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
     paths:
-      - '**/preprocessor.*'  # 'preprocessor' in any directory and all types
+      - '**/preprocessor.*' # 'preprocessor' in any directory and all types
       - 'sub/*.json'
   schedule:
-    - cron: '0 */4 * * *'  # Runs every 4 hours
-  workflow_dispatch:  # Allow manual triggering of the workflow
+    - cron: '0 */4 * * *' # Runs every 4 hours
+  workflow_dispatch: # Allow manual triggering of the workflow
 
 jobs:
   build:
     runs-on: ubuntu-24.04
     defaults:
       run:
-        shell: bash -e {0}  # Fail the job if any command fails
+        shell: bash -e {0} # Fail the job if any command fails
     steps:
       # Step 1: Checkout the repository
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch full history
-          submodules: 'recursive'  # Include submodules
-          github_token: ${{ secrets.GITHUB_TOKEN }} 
+          fetch-depth: 0 # Fetch full history
+          submodules: 'recursive' # Include submodules
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       # Step 2: Set up PHP
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.4'  # Use PHP 8.4
+          php-version: '8.4' # Use PHP 8.4
 
       # Step 3: Run the preprocessor.php script
       - name: Run preprocessor.php
@@ -57,4 +57,3 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          
