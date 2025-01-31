@@ -7,8 +7,8 @@ import base64
 import json
 import shutil
 
-IRAN_SYMBOL = "⚪️"
-GERMANY_SYMBOL = "🟡"
+IRAN_SYMBOL = "⚪️" 
+GERMANY_SYMBOL = "🟡" 
 
 IR_TAG = f"{IRAN_SYMBOL}Tehran"
 DE_TAG = f"{GERMANY_SYMBOL}Berlin"
@@ -218,4 +218,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
