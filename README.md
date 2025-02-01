@@ -54,10 +54,9 @@ Any changes made to files in the following directories **may be overwritten** wi
 > */.css  
 > */.yml  
 > */.csv  
-> </details>
+> </details> 
 
 <br><br> 
-
 
 ##
 > 📦 This configuration is dynamically generated and continuously updated via GitHub Actions workflows every 2 hours to ensure consistency and best practices.  
@@ -117,7 +116,9 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
 > I use the same IPs for the **[Harmony]** script.  
 > Additionally, you can utilize the **[Strawberry.js]**  
 > script to modify the arrangement of the IPs or to combine them with other repositories.  
-> for ex:  https://strawberry.victoriacross.ir  
+> for ex:  https://strawberry.victoriacross.ir
+
+[![Here](https://img.shields.io/badge/DEMO_FOR_LATEST_REAL_ADDRESS_GENERATOR-blue?logo=opencollective)](https://real-address1.victoriacross.ir/)  <br>  
 
 #### All IPs  
 https://github.com/NiREvil/vless/blob/main/Cloudflare-IPs.json  
