@@ -6,7 +6,7 @@
  * - And paste it into the Cloudflare worker and hit the deploy button.
  * We are all REvil
  */
- 
+
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
 });
