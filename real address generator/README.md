@@ -13,5 +13,25 @@ You can either use the **DEMO** or simply copy and paste the [latest_worker.js](
 <br><br>  
 
 <p align="center">
-  <br><img src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png">
-</p>
+     <br>
+     <img src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" style="width: 60%; max-width: 150px;">
+   </p> <br>
+
+![1000053281](https://github.com/user-attachments/assets/a58c6216-82fd-4f35-bae1-9ca326be02cb)
+![1000053283](https://github.com/user-attachments/assets/2af27c4b-a98b-4991-92ba-9847ba34a0d6)
+![1000053282](https://github.com/user-attachments/assets/ba61d168-0954-4e5c-9cd5-845ab2b41f1d)
+![1000053284](https://github.com/user-attachments/assets/65679dfd-677b-4de0-8f32-94f78e3a8b00)
+![1000053274](https://github.com/user-attachments/assets/abc45499-0cd1-499a-8041-f6b972bf6483)
+![1000053279](https://github.com/user-attachments/assets/3e2411f8-5386-408c-a435-30d421634c96)  
+
+
+## Credits
+#### Many thanks to:
+- My sweet **[Anthropic Claude🪽]**  
+- My dear ‌‌ ‌ ‌ **[DeepSeek🪽]**
+
+
+[DeepSeek🪽]: <https://play.google.com/store/apps/details?id=com.deepseek.chat>  
+
+[Anthropic Claude🪽]: <https://play.google.com/store/apps/details?id=com.anthropic.claude>
+
