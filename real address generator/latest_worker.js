@@ -1,180 +1,257 @@
+/**
+ * Last update: Saturday, 1 February 2025, 11:59 PM
+ * - Real fake address generator.
+ * - There are no specific instructions; simply copy and paste it into the Cloudflare worker and hit the deploy button.
+ * We are all REvil
+ */
+
 addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request));
-});
+  event.respondWith(handleRequest(event.request))
+})
 
 async function handleRequest(request) {
-  const { searchParams } = new URL(request.url);
-  const country = searchParams.get('country') || getRandomCountry();
-  let address, name, gender, phone, timezone, picture;
+  const { searchParams } = new URL(request.url)
+  const country = searchParams.get('country') || getRandomCountry()
+  let address, name, gender, phone, timezone, picture
 
   for (let i = 0; i < 100; i++) {
-    const location = getRandomLocationInCountry(country);
-    const apiUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${location.lat}&lon=${location.lng}&zoom=18&addressdetails=1`;
+    const location = getRandomLocationInCountry(country)
+    const apiUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${location.lat}&lon=${location.lng}&zoom=18&addressdetails=1`
 
     const response = await fetch(apiUrl, {
-      headers: { 'User-Agent': 'Cloudflare Worker' },
-    });
-    const data = await response.json();
+      headers: { 'User-Agent': 'Cloudflare Worker' }
+    })
+    const data = await response.json()
 
-    if (
-      data &&
-      data.address &&
-      data.address.house_number &&
-      data.address.road &&
-      (data.address.city || data.address.town)
-    ) {
-      address = formatAddress(data.address, country);
-      break;
+    if (data && data.address && data.address.house_number && data.address.road && (data.address.city || data.address.town)) {
+      address = formatAddress(data.address, country)
+      break
     }
   }
 
   if (!address) {
-    return new Response('Failed to retrieve detailed address, please refresh the interface', {
-      status: 500,
-    });
+    return new Response('Failed to retrieve detailed address, please refresh', { status: 500 })
   }
 
-  const userData = await fetch('https://randomuser.me/api/');
-  const userJson = await userData.json();
-  if (userJson && userJson.results && userJson.results.length > 0) {
-    const user = userJson.results[0];
-    name = `${user.name.first} ${user.name.last}`;
-    gender = user.gender.charAt(0).toUpperCase() + user.gender.slice(1);
-    phone = getRandomPhoneNumber(country);
-    timezone = user.location.timezone;
-    picture = user.picture.large;
+  const userData = await fetch('https://randomuser.me/api/')
+  const userJson = await userData.json()
+  if (userJson?.results?.length > 0) {
+    const user = userJson.results[0]
+    name = `${user.name.first} ${user.name.last}`
+    gender = user.gender.charAt(0).toUpperCase() + user.gender.slice(1)
+    phone = getRandomPhoneNumber(country)
+    timezone = user.location.timezone
+    picture = user.picture.large
   } else {
-    name = getRandomName();
-    gender = 'Unknown';
-    phone = getRandomPhoneNumber(country);
-    timezone = { offset: '+00:00', description: 'Unknown Timezone' };
-    picture = 'https://randomuser.me/api/portraits/men/1.jpg';
+    name = getRandomName()
+    gender = "Unknown"
+    phone = getRandomPhoneNumber(country)
   }
 
   const html = `
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Real fake Address Generator</title>
+  <title>Real Address Generator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #3498db;
+      --background: #f8f9fa;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       min-height: 100vh;
-      background-color: #f0f0f0;
       margin: 0;
+      background: linear-gradient(135deg, var(--background) 0%, #e9ecef 100%);
+      color: var(--primary);
     }
+
     .container {
-      text-align: center;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
       background: white;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 90%;
-      max-width: 600px;
-      margin: 20px;
-      box-sizing: border-box;
-      position: relative;
+      border-radius: 1rem;
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
     }
-    .profile-picture {
-      width: 150px;
-      height: 150px;
+
+    .profile-header {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .profile-photo {
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      margin-bottom: 20px;
-      border: 3px solid #007bff;
+      object-fit: cover;
+      border: 4px solid var(--secondary);
     }
-    .info {
-      font-size: 1.2em;
-      margin-bottom: 10px;
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .user-name {
+      font-size: 1.8rem;
+      margin: 0 0 0.5rem;
+      color: var(--primary);
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .detail-item {
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 0.5rem;
+      transition: transform 0.2s;
       cursor: pointer;
+      border-left: 4px solid var(--secondary);
     }
-    .info:hover {
-      color: #007bff;
+
+    .detail-item:hover {
+      transform: translateY(-2px);
     }
-    .refresh-btn {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
+
+    .timezone {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.8rem 1.5rem;
       border: none;
-      border-radius: 5px;
+      border-radius: 0.5rem;
       cursor: pointer;
-      margin-bottom: 20px;
+      font-weight: 600;
+      transition: all 0.2s;
     }
-    .refresh-btn:hover {
-      background-color: #0056b3;
+
+    .btn-primary {
+      background: var(--secondary);
+      color: white;
     }
-    .country-select {
-      margin-bottom: 20px;
+
+    .btn-primary:hover {
+      background: #2980b9;
     }
+
+    .btn-secondary {
+      background: #e9ecef;
+      color: var(--primary);
+    }
+
+    .btn-secondary:hover {
+      background: #dee2e6;
+    }
+
     .map {
       width: 100%;
       height: 400px;
       border: 0;
-      margin-bottom: 20px;
+      border-radius: 0.5rem;
+      margin-top: 2rem;
     }
-    .title {
-      font-size: 2em;
-      margin: 20px 0;
-      color: #333;
-    }
-    .subtitle {
-      font-size: 1.5em;
-      margin-bottom: 20px;
-      color: #555;
-    }
+
     .footer {
-      margin-top: auto;
-      padding: 10px 0;
-      background-color: #f0f0f0;
-      width: 100%;
       text-align: center;
-      font-size: 0.9em;
+      padding: 2rem;
+      color: #888;
+      line-height: 1.6;
     }
+
     .footer a {
-      color: #007bff;
+      color: var(--secondary);
       text-decoration: none;
+      font-weight: 600;
     }
+
     .footer a:hover {
       text-decoration: underline;
     }
-    .timezone {
-      font-size: 1em;
-      color: #777;
-      margin-bottom: 20px;
+
+    .copied {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: #27ae60;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.5rem;
+      display: none;
+      box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
-  <div class="title">Real Fake Address Generator</div>
-  <div class="subtitle">Click to copy information</div>
   <div class="container">
-    <img src="${picture}" alt="Profile Picture" class="profile-picture">
-    <div class="info" onclick="copyToClipboard('${name}')">Name: ${name}</div>
-    <div class="info" onclick="copyToClipboard('${gender}')">Gender: ${gender}</div>
-    <div class="info" onclick="copyToClipboard('${phone.replace(/[()\s-]/g, '')}')">Phone: ${phone}</div>
-    <div class="info" onclick="copyToClipboard('${address}')">Address: ${address}</div>
-    <div class="timezone">Timezone: ${timezone.description} (${timezone.offset})</div>
-    <button class="refresh-btn" onclick="window.location.reload();">Get Another Address</button>
-    <div class="country-select">
-      <label for="country">Select country, new address will be generated automatically after checking the box</label><br>
-      <select id="country" onchange="changeCountry(this.value)">
+    <div class="profile-header">
+      <img src="${picture}" class="profile-photo" alt="Profile picture">
+      <div class="user-info">
+        <h1 class="user-name">${name}</h1>
+        <div class="gender">${gender}</div>
+        <div class="timezone">
+          ${timezone.description} (UTC${timezone.offset})
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail-item" onclick="copyToClipboard('${phone.replace(/[()\s-]/g, '')}')">
+        <div class="detail-label">Phone</div>
+        <div class="detail-value">${phone}</div>
+      </div>
+      
+      <div class="detail-item" onclick="copyToClipboard('${address}')">
+        <div class="detail-label">Address</div>
+        <div class="detail-value">${address}</div>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button class="btn btn-primary" onclick="window.location.reload()">Generate New</button>
+      <select class="btn btn-secondary" id="country" onchange="changeCountry(this.value)">
         ${getCountryOptions(country)}
       </select>
     </div>
+
     <iframe class="map" src="https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed"></iframe>
   </div>
+
   <div class="footer">
-    <div>.copyright © <a href="https://diana.nscl.ir/" target="_blank">Diana's Blog</a> 2025 Right Reserved</div>
-    <div>Supported by <a href="https://github.com/NiREvil/" target="_blank">REvil</a></div>
+      <div class="footer">
+      <div>© 2025 <a href="https://www.legislation.gov.au/C1968A00063/latest/text" target="_blank">Diana</a>, All Rights Reserved</div>
+      <div>Supported by <a href="https://github.com/NiREvil/" target="_blank">REvil</a></div>
   </div>
+
+  <div class="copied" id="copied">Copied to clipboard!</div>
 
   <script>
     function copyToClipboard(text) {
       navigator.clipboard.writeText(text).then(() => {
-        alert('Copied to clipboard: ' + text);
+        const copied = document.getElementById('copied')
+        copied.style.display = 'block'
+        setTimeout(() => copied.style.display = 'none', 2000)
       })
     }
 
@@ -184,11 +261,9 @@ async function handleRequest(request) {
   </script>
 </body>
 </html>
-`;
+`
 
-  return new Response(html, {
-    headers: { 'content-type': 'text/html;charset=UTF-8' },
-  });
+  return new Response(html, { headers: { 'content-type': 'text/html;charset=UTF-8' } })
 }
 
 function getRandomLocationInCountry(country) {
