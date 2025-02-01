@@ -6,46 +6,52 @@
  */
 
 addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request))
-})
+  event.respondWith(handleRequest(event.request));
+});
 
 async function handleRequest(request) {
-  const { searchParams } = new URL(request.url)
-  const country = searchParams.get('country') || getRandomCountry()
-  let address, name, gender, phone, timezone, picture
+  const { searchParams } = new URL(request.url);
+  const country = searchParams.get('country') || getRandomCountry();
+  let address, name, gender, phone, timezone, picture;
 
   for (let i = 0; i < 100; i++) {
-    const location = getRandomLocationInCountry(country)
-    const apiUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${location.lat}&lon=${location.lng}&zoom=18&addressdetails=1`
+    const location = getRandomLocationInCountry(country);
+    const apiUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${location.lat}&lon=${location.lng}&zoom=18&addressdetails=1`;
 
     const response = await fetch(apiUrl, {
-      headers: { 'User-Agent': 'Cloudflare Worker' }
-    })
-    const data = await response.json()
+      headers: { 'User-Agent': 'Cloudflare Worker' },
+    });
+    const data = await response.json();
 
-    if (data && data.address && data.address.house_number && data.address.road && (data.address.city || data.address.town)) {
-      address = formatAddress(data.address, country)
-      break
+    if (
+      data &&
+      data.address &&
+      data.address.house_number &&
+      data.address.road &&
+      (data.address.city || data.address.town)
+    ) {
+      address = formatAddress(data.address, country);
+      break;
     }
   }
 
   if (!address) {
-    return new Response('Failed to retrieve detailed address, please refresh', { status: 500 })
+    return new Response('Failed to retrieve detailed address, please refresh', { status: 500 });
   }
 
-  const userData = await fetch('https://randomuser.me/api/')
-  const userJson = await userData.json()
+  const userData = await fetch('https://randomuser.me/api/');
+  const userJson = await userData.json();
   if (userJson?.results?.length > 0) {
-    const user = userJson.results[0]
-    name = `${user.name.first} ${user.name.last}`
-    gender = user.gender.charAt(0).toUpperCase() + user.gender.slice(1)
-    phone = getRandomPhoneNumber(country)
-    timezone = user.location.timezone
-    picture = user.picture.large
+    const user = userJson.results[0];
+    name = `${user.name.first} ${user.name.last}`;
+    gender = user.gender.charAt(0).toUpperCase() + user.gender.slice(1);
+    phone = getRandomPhoneNumber(country);
+    timezone = user.location.timezone;
+    picture = user.picture.large;
   } else {
-    name = getRandomName()
-    gender = "Unknown"
-    phone = getRandomPhoneNumber(country)
+    name = getRandomName();
+    gender = 'Unknown';
+    phone = getRandomPhoneNumber(country);
   }
 
   const html = `
@@ -261,9 +267,9 @@ async function handleRequest(request) {
   </script>
 </body>
 </html>
-`
+`;
 
-  return new Response(html, { headers: { 'content-type': 'text/html;charset=UTF-8' } })
+  return new Response(html, { headers: { 'content-type': 'text/html;charset=UTF-8' } });
 }
 
 function getRandomLocationInCountry(country) {
