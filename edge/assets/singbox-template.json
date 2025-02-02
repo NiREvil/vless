@@ -18,13 +18,13 @@
     ],
     "servers": [
       {
-        "address": "udp://1.1.1.1",
+        "address": "tcp://185.228.168.9",
         "address_resolver": "local-dns",
         "detour": "proxy",
         "tag": "proxy-dns"
       },
       {
-        "address": "8.8.8.8",
+        "address": "tcp://8.8.8.8",
         "detour": "direct",
         "tag": "local-dns"
       },
