@@ -14,7 +14,7 @@ You can either use the **DEMO** or simply copy and paste the [latest_worker.js](
 
 <p align="center">
      <br>
-     <img src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" style="width: 60%; max-width: 150px;">
+     <img src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" style="width: 40%; max-width: 120px;">
    </p> <br>
 
 ![1000053281](https://github.com/user-attachments/assets/a58c6216-82fd-4f35-bae1-9ca326be02cb)
@@ -30,6 +30,32 @@ You can either use the **DEMO** or simply copy and paste the [latest_worker.js](
 - My sweet **[Anthropic Claude🪽]**  
 - My dear ‌‌ ‌ ‌ **[DeepSeek🪽]**
 
+```geojson
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "ID": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+              [-90,35],
+              [-90,30],
+              [-85,30],
+              [-85,35],
+              [-90,35]
+          ]
+        ]
+      }
+    }
+  ]
+}
+```
 
 [DeepSeek🪽]: <https://play.google.com/store/apps/details?id=com.deepseek.chat>  
 
