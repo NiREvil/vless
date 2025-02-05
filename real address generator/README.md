@@ -27,8 +27,8 @@ You can either use the **DEMO** or simply copy and paste the [latest_worker.js](
 
 ## Credits
 #### Many thanks to:
-- My sweet **[Anthropic Claude🪽]**  
-- My dear ‌‌ ‌ ‌ **[DeepSeek🪽]**
+- My sweet **[Anthropic Claude🤍]**  
+- My dear ‌‌ ‌**[DeepSeek💛]**
 
 ```geojson
 {
@@ -57,7 +57,7 @@ You can either use the **DEMO** or simply copy and paste the [latest_worker.js](
 }
 ```
 
-[DeepSeek🪽]: <https://play.google.com/store/apps/details?id=com.deepseek.chat>  
+[Anthropic Claude🤍]: <https://play.google.com/store/apps/details?id=com.anthropic.claude>  
 
-[Anthropic Claude🪽]: <https://play.google.com/store/apps/details?id=com.anthropic.claude>
 
+[DeepSeek💛]: <https://play.google.com/store/apps/details?id=com.deepseek.chat>  
