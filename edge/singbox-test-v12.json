@@ -54,20 +54,14 @@
       "tag": "wg-tehran",
       "name": "wg0",
       "mtu": 1300,
-      "address": [
-        "172.16.0.2/32",
-        "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
-      ],
+      "address": ["172.16.0.2/32", "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"],
       "private_key": "ODpMX0c+ZkiG1Ts1pNDAm8kbEgsXQNdJBxIItA5nfGg=",
       "peers": [
         {
           "address": "162.159.192.23",
           "port": 1014,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "allowed_ips": [
-            "0.0.0.0/0",
-            "::/0"
-          ],
+          "allowed_ips": ["0.0.0.0/0", "::/0"],
           "reserved": "LcWP"
         }
       ],
@@ -79,20 +73,14 @@
       "tag": "wg-berlin",
       "name": "wg1",
       "mtu": 1300,
-      "address": [
-        "172.16.0.2/32",
-        "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
-      ],
+      "address": ["172.16.0.2/32", "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"],
       "private_key": "KPEz4KmtofhMNQtSfsMQVNZmx3wrqO6p++lXhqM9UGE=",
       "peers": [
         {
           "address": "188.114.98.253",
           "port": 1010,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "allowed_ips": [
-            "0.0.0.0/0",
-            "::/0"
-          ],
+          "allowed_ips": ["0.0.0.0/0", "::/0"],
           "reserved": "OdLX"
         }
       ],
@@ -128,19 +116,13 @@
     {
       "type": "selector",
       "tag": "proxy",
-      "outbounds": [
-        "wg-tehran",
-        "wg-berlin"
-      ],
+      "outbounds": ["wg-tehran", "wg-berlin"],
       "default": "wg-berlin"
     },
     {
       "type": "urltest",
       "tag": "auto",
-      "outbounds": [
-        "wg-tehran",
-        "wg-berlin"
-      ],
+      "outbounds": ["wg-tehran", "wg-berlin"],
       "url": "https://www.gstatic.com/generate_204",
       "tolerance": 50
     },
@@ -172,12 +154,7 @@
         "override_port": 443
       },
       {
-        "rule_set": [
-          "geoip-private",
-          "geosite-private",
-          "geosite-ir",
-          "geoip-ir"
-        ],
+        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"],
         "action": "direct"
       },
       {
