@@ -7,12 +7,11 @@ import base64
 import json
 import shutil
 
-IRAN_SYMBOL = "⚪️" 
-GERMANY_SYMBOL = "🟡" 
+IRAN_SYMBOL = "⚪️"
+GERMANY_SYMBOL = "🟡"
 
 IR_TAG = f"{IRAN_SYMBOL}Tehran"
 DE_TAG = f"{GERMANY_SYMBOL}Berlin"
-
 
 warp_cidr = [
     "162.159.192.0/24",
@@ -43,8 +42,7 @@ def create_ips():
     top_ips = sum(len(list(ipaddress.IPv4Network(cidr))) for cidr in warp_cidr)
 
     with open(edge_bestip_path, "w") as file:
-        all_ips = [str(addr)
-                   for cidr in warp_cidr for addr in ipaddress.IPv4Network(cidr)]
+        all_ips = [str(addr) for cidr in warp_cidr for addr in ipaddress.IPv4Network(cidr)]
         file.write("\n".join(all_ips))
 
 
@@ -60,13 +58,13 @@ def arch_suffix():
         return "s390x"
     else:
         raise ValueError(
-            "Unsupported CPU architecture. Supported architectures are: i386, i686, x86_64, amd64, armv8, arm64, aarch64, s390x")
+            "Unsupported CPU architecture. Supported architectures are: i386, i686, x86_64, amd64, armv8, arm64, aarch64, s390x"
+        )
 
 
 # warp ON warp wireguard configurations, Exclusively for hidfify clients
 def export_Hiddify(t_ips):
-    config_prefix = f"warp://{t_ips[0]}?ifp=1-3&ifpm=m4#{
-        IR_TAG}&&detour=warp://{t_ips[1]}?ifp=1-2&ifpm=m5#{DE_TAG}"
+    config_prefix = f"warp://{t_ips[0]}?ifp=1-3&ifpm=m4#{IR_TAG}&&detour=warp://{t_ips[1]}?ifp=1-2&ifpm=m5#{DE_TAG}"
     formatted_time = datetime.datetime.now().strftime("%A, %d %b %Y, %H:%M")
     return config_prefix, formatted_time
 
@@ -82,18 +80,22 @@ def toSingBox(tag, clean_ip, detour):
         try:
             data = json.loads(output)
             wg = {
-                "tag": tag,
                 "type": "wireguard",
-                "server": f"{clean_ip.split(':')[0]}",
-                "server_port": int(clean_ip.split(":")[1]),
-                "local_address": [
-                    "172.16.0.2/32",
-                    "2606:4700:110:8735:bb29:91bc:1c82:aa73/128",
-                ],
+                "tag": tag,
+                "name": "wg0",
+                "mtu": 1280,
+                "address": ["172.16.0.2/32", "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"],
                 "private_key": f"{data['private_key']}",
-                "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-                "mtu": 1300,
-                "reserved": data["config"]["reserved"],
+                "peers": [
+                    {
+                        "address": f"{clean_ip.split(':')[0]}",
+                        "port": int(clean_ip.split(":")[1]),
+                        "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+                        "allowed_ips": ["0.0.0.0/0", "::/0"],
+                        "persistent_keepalive_interval": 30,
+                        "reserved": data["config"]["reserved"],
+                    }
+                ],
                 "detour": f"{detour}",
                 "workers": 2,
             }
@@ -112,22 +114,22 @@ def toSingBox(tag, clean_ip, detour):
 
 
 def export_SingBox(t_ips):
-    template_path = os.path.join(
-        edge_directory, "assets", "singbox-template.json")
+    template_path = os.path.join(edge_directory, "assets", "singbox-template.json")
     with open(template_path, "r") as f:
         data = json.load(f)
 
+    data["outbounds"][0]["outbounds"].extend([IR_TAG, DE_TAG])
     data["outbounds"][1]["outbounds"].extend([IR_TAG, DE_TAG])
 
     tehran_wg = toSingBox(IR_TAG, t_ips[0], "direct")
     if tehran_wg:
-        data["outbounds"].insert(2, tehran_wg)
+        data["endpoints"].append(tehran_wg)
     else:
         print(f"Failed to generate {IR_TAG} configuration")
 
     berlin_wg = toSingBox(DE_TAG, t_ips[1], IR_TAG)
     if berlin_wg:
-        data["outbounds"].insert(3, berlin_wg)
+        data["endpoints"].append(berlin_wg)
     else:
         print(f"Failed to generate {DE_TAG} configuration")
 
@@ -150,8 +152,7 @@ def main():
         # Running warp for scan clean ips
         arch = arch_suffix()
         print("Fetching warp program...")
-        url = f"https://gitlab.com/Misaka-blog/warp-script/-/raw/main/files/warp-yxip/warp-linux-{
-            arch}"
+        url = f"https://gitlab.com/Misaka-blog/warp-script/-/raw/main/files/warp-yxip/warp-linux-{arch}"
 
         warp_executable = os.path.join(edge_directory, "warp")
         subprocess.run(["wget", url, "-O", warp_executable], check=True)
@@ -182,8 +183,7 @@ def main():
         # Hiddify profile shits
         title = (
             "//profile-title: base64:"
-            + base64.b64encode("Freedom to Dream 💛✨".encode("utf-8")
-                               ).decode("utf-8")
+            + base64.b64encode("Freedom to Dream 🤍".encode("utf-8")).decode("utf-8")
             + "\n"
         )
         update_interval = "//profile-update-interval: 4\n"
@@ -193,12 +193,7 @@ def main():
 
         with open(main_warp_path, "w") as op:
             op.write(
-                title
-                + update_interval
-                + sub_info
-                + profile_web
-                + last_modified
-                + config_prefix
+                title + update_interval + sub_info + profile_web + last_modified + config_prefix
             )
 
         export_SingBox(Bestip)
@@ -218,3 +213,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
