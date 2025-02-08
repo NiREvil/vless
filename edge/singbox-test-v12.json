@@ -51,7 +51,7 @@
   "endpoints": [
     {
       "type": "wireguard",
-      "tag": "wg-tehran",
+      "tag": "⚪️Tehran",
       "name": "wg0",
       "mtu": 1300,
       "address": ["172.16.0.2/32", "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"],
@@ -70,7 +70,7 @@
     },
     {
       "type": "wireguard",
-      "tag": "wg-berlin",
+      "tag": "🟡Berlin",
       "name": "wg1",
       "mtu": 1300,
       "address": ["172.16.0.2/32", "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"],
@@ -85,7 +85,7 @@
         }
       ],
       "workers": 2,
-      "detour": "wg-tehran"
+      "detour": "⚪️Tehran"
     }
   ],
   "inbounds": [
@@ -116,13 +116,13 @@
     {
       "type": "selector",
       "tag": "proxy",
-      "outbounds": ["wg-tehran", "wg-berlin"],
-      "default": "wg-berlin"
+      "outbounds": ["⚪️Tehran", "🟡Berlin"],
+      "default": "🟡Berlin"
     },
     {
       "type": "urltest",
       "tag": "auto",
-      "outbounds": ["wg-tehran", "wg-berlin"],
+      "outbounds": ["⚪️Tehran", "🟡Berlin"],
       "url": "https://www.gstatic.com/generate_204",
       "tolerance": 50
     },
