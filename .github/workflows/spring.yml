@@ -1,13 +1,13 @@
 name: Spring
 
 on:
-  push:
-    branches: ['main']
-    paths:
-      - '**/spring.*'
-      - 'edge/assets/*.json'
-  schedule:
-    - cron: '0 */4 * * *'
+#  push:
+#    branches: ['main']
+#    paths:
+#      - '**/spring.*'
+#      - 'edge/assets/*.json'
+#  schedule:
+#    - cron: '0 */4 * * *'
   workflow_dispatch:
 
 jobs:
