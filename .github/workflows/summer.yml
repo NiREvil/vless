@@ -4,10 +4,10 @@ on:
   push:
     branches: ['main']
     paths:
-      - '**/summer.*' # 'summer' in any directory and all types
+      - '**/summer.*'
       - 'sub/*.txt'
   schedule:
-    - cron: '0 */6 * * *' 
+    - cron: '0 */10 * * *' 
   workflow_dispatch:
 
 permissions:
@@ -47,7 +47,7 @@ jobs:
           pip install -r edge/requirements.txt || exit 1
 
       # Step 5: Run the summer.py script
-      - name: Run summer.py to fetch Cloudflare clean IPs
+      - name: Run summer time
         run: |
           python edge/summer.py || exit 1
 
@@ -60,9 +60,9 @@ jobs:
 
           if ! git diff --quiet || ! git diff --staged --quiet; then
             git commit -m "Task done $(TZ='Asia/Tehran' date '+%H:%M:%S')" \
-                       -m "The new wireguard configurations were obtained from Telegram channels --Dwire-- and --FreeWireGuard--, and subsequently added to the beginning of the list corresponding to their respective clients."
+                       -m "The new wireguard configurations were obtained from Telegram channels --Diwire-- and --FreeWireGuard--, and subsequently added to the beginning of the list corresponding to their respective clients."
             git -c author.name="REvil" -c author.email="nirevil@proton.me" \
-                -c committer.name="github-actions[bot]" -c committer.email="41898282+github-actions[bot]@users.noreply.github.com" \
+                -c committer.name="Github Actions" -c committer.email="actions@github.com" \
                 commit --amend --no-edit
             git push || exit 1
           else
