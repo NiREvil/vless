@@ -23,11 +23,11 @@ OUTPUT_FILES = {
 
 
 def read_existing_configs(file_path):
+    logger.info(f"Reading existing configs from {file_path}")
     if os.path.exists(file_path):
         with open(file_path, "r", encoding="utf-8") as f:
             return set(f.read().strip().split("\n"))
     return set()
-
 
 def fetch_configs():
     try:
@@ -40,7 +40,7 @@ def fetch_configs():
 
         new_configs = {"neko": set(), "husi": set(), "exclave": set(), "v2ray": set()}
 
-        # Fetch the WireGuard config compatible with the nekobox, husi and excclave clients core from Diwire telegram channel
+        logger.info("Fetching configs from Diwire channel")
         response = requests.get(CHANNELS["diwire"], headers=headers)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
@@ -61,7 +61,7 @@ def fetch_configs():
                     if config not in existing_configs[config_type]:
                         new_configs[config_type].add(config)
 
-        # Fetch the WireGuard config compatible with the Xray core from freewireguard telegram channel.
+        logger.info("Fetching configs from freewireguard channel")
         response = requests.get(CHANNELS["freewireguard"], headers=headers)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
@@ -93,6 +93,8 @@ def fetch_configs():
     except Exception as e:
         logger.error(f"Error occurred: {str(e)}")
 
-
 if __name__ == "__main__":
+    logger.info("Starting the configuration fetch process")
     fetch_configs()
+    logger.info("Completed the configuration fetch process")
+
