@@ -67,7 +67,7 @@ $$\color{gray}\Huge \mathfrak{R}\color{red}{\sum}\color{gray}{\nu\iota\mathcal{l
 ### Hiddify URL  <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>
 
 ```POV-Ray SDL
-https://raw.githubusercontent.com/NiREvil/vless/main/warp.json
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
 ```
 
 <br>
@@ -75,18 +75,19 @@ https://raw.githubusercontent.com/NiREvil/vless/main/warp.json
 ### Sing-Box URL <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="20"/>
 
 ```mupad
-https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 ```
 
 <br>
 
 ### Scan with Hiddify
 
-<img src="edge/assets/QR-Code.svg" alt="QR" width="400px"/>
+<img src="edge/assets/QR-Code.svg" alt="QR" width="350px"/>
 
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
-<br><br>
+<br>  
+
 
 ## Table of Contents
 
@@ -121,7 +122,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
 > script to modify the arrangement of the IPs or to combine them with other repositories.  
 > for ex: https://strawberry.victoriacross.ir
 
-[![Here](https://img.shields.io/badge/DEMO_FOR_LATEST_REAL_ADDRESS_GENERATOR-blue?logo=opencollective)](https://real-address1.victoriacross.ir/) <br>
+[![Here](https://img.shields.io/badge/DEMO_FOR_LATEST_REAL_ADDRESS_GENERATOR-blue?logo=opencollective)](https://real-address1.victoriacross.ir/) <br><br>  
 
 #### All IPs
 
@@ -150,19 +151,19 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 ### Warp for [Hiddify] <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>
 
 **Warp+ Hysteria ON Singbox**  
-https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/H2%20SINGBOX%20HOSS
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
 
 **Warp+ Proton on Hiddify**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Poroton%20ON%20WARP%2B
 
 **Warp+ Proton on Hiddify with DNS clean [[∏I?]]**  
-https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/Proton%20ON%20WARP%2B%20DNS%20Clean
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Proton%20ON%20WARP%2B%20DNS%20Clean
 
 **All Hysteria [[FR?]]**  
 https://igdux.top/~FREE2CONFIG,T,H
 
 **Azadi az inja migzare [[A?]]**  
-https://raw.githubusercontent.com/azadiazinjamigzare/Service/main/Sub
+https://raw.githubusercontent.com/azadiazinjamigzare/Service/refs/heads/main/Sub
 
 **Meshkintaj [[ME?]]**  
 https://karing-freevpnhomes-subscription.shampoosirsehat.homes
@@ -171,16 +172,16 @@ https://karing-freevpnhomes-subscription.shampoosirsehat.homes
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscribe%20on%20H2
 
 **Warp in M1,M2, ... ,h04FA0A mode with random ip:port [[∏I?]]**  
-https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/rand-ip
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/rand-ip
 
 **All Guest ON Hiddify**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/All%20%20Warp%20Windscribe%20Poroton%20Hysteria
 
 **Chaining Warp confs**  
-https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/WarpOnWarp.json
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/WarpOnWarp.json
 
 **Auto generate in workflows - warp ON warp**  
-https://raw.githubusercontent.com/NiREvil/vless/main/warp.json
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
 
 **Just Warp [[FR?]]**  
 https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Warp  
@@ -192,13 +193,13 @@ https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Warp2
 
 #### Warp for [NekoBox]
 
-https://raw.githubusercontent.com/NiREvil/vless/main/sub/nekobox-wg.txt
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/nekobox-wg.txt
 
 **Warp for [Husi]**  
-https://raw.githubusercontent.com/NiREvil/vless/main/sub/husi-wg.txt
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/husi-wg.txt
 
 **Warp for [Exclave]**  
-https://raw.githubusercontent.com/NiREvil/vless/main/sub/exclave-wg.txt
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/exclave-wg.txt
 
 ---
 
@@ -208,7 +209,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sub/exclave-wg.txt
 > [!NOTE]
 > It is also applicable within the clients Mahsa & NikaNG
 
-https://raw.githubusercontent.com/NiREvil/vless/main/sub/v2rayng-wg.txt
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/v2rayng-wg.txt
 
 <br>
 
@@ -242,22 +243,22 @@ wireguard://EKcnAgEpqzsDEgugHoT6NMz3Z8CmDequ%2BNDJRAASd3I%3D@188.114.97.157:1014
 > Android & IOS <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="13"/>
 
 **Warp + Hysteria ON singbox**  
-https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/H2%20SINGBOX%20HOSS
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
 
 **Built-in workflows, warp ON warp [[∏I?]]**  
-https://raw.githubusercontent.com/NiREvil/vless/main/sing-box.json
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 **Meshkintaj [[ME?]]**  
 https://karing-freevpnhomes-subscription.shampoosirsehat.homes
 
 **Cypherpunks [[CY?]]**  
-https://raw.githubusercontent.com/IranianCypherpunks/SingBox/main/Sub
+https://raw.githubusercontent.com/IranianCypherpunks/SingBox/refs/heads/main/Sub
 
 **DeamNet [[DN?]]**  
-https://raw.githubusercontent.com/HenryPorternew/sbs/main/ssb/sg
+https://raw.githubusercontent.com/HenryPorternew/sbs/refs/heads/main/ssb/sg
 
 **Warp+ Windscribe on sing-box**  
-https://raw.githubusercontent.com/NiREvil/vless/main/hiddify/Windscribe%20on%20H2
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscribe%20on%20H2
 
 ---
 
@@ -503,7 +504,7 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 
 ## XRAY
 
-https://raw.githubusercontent.com/NiREvil/vless/main/sub/SSTime
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
 
 https://robin.nscl.ir [[∏I?]]
 
@@ -513,14 +514,14 @@ https://raw.githubusercontent.com/Proxydaemitelegram/Proxydaemi44/refs/heads/mai
 
 https://raw.githubusercontent.com/FRDYAK/teryak-configs/refs/heads/main/FRDYAK-pashmak
 
-https://raw.githubusercontent.com/ndsphonemy/proxy-sub/main/speed.txt
+https://raw.githubusercontent.com/ndsphonemy/proxy-sub/refs/heads/main/speed.txt
 
 [https://join_to_channel_join.json](https://t.me/KevinZakarian/304) [[KV?]]
 
 https://shadowmere.xyz/api/b64sub [[SW?]]  
 https://shadowmere.xyz/api/sub
 
-https://raw.githubusercontent.com/NiREvil/vless/main/sub/fragment
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/fragment
 
 https://raw.githubusercontent.com/Mahdi0024/ProxyCollector/master/sub/proxies.txt
 
@@ -528,65 +529,69 @@ https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Vless [[
 
 https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality
 
-https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/SS
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/SS  
 
-https://raw.githubusercontent.com/bamdad23/JavidnamanIran/main/latest
+https://github.com/ALIILAPRO/v2rayNG-Config/blob/main/server.txt [[ALP?]]  
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/channels/protocols/shadowsocks [[SR?]]
+https://raw.githubusercontent.com/bamdad23/JavidnamanIran/refs/heads/main/latest
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/shadowsocks
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/channels/protocols/shadowsocks [[SR?]]  
 
-https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet_iOS.txt [[AZ?]]
+https://raw.githubusercontent.com/barry-far/V2ray-Configs/refs/heads/main/Sub1.txt [[BR?]]
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/tuic
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/protocols/shadowsocks
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/hysteria
+https://raw.githubusercontent.com/AzadNetCH/Clash/refs/heads/main/AzadNet_iOS.txt [[AZ?]]
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/juicity
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/protocols/tuic
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/reality
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/protocols/hysteria
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/trojan
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/protocols/juicity
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/vless
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/protocols/reality
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/vmess
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/protocols/trojan
 
-https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub1.txt [[BR?]]
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/protocols/vless
 
-https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub2.txt
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/protocols/vmess
 
-https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub3.txt
+https://raw.githubusercontent.com/barry-far/V2ray-Configs/refs/heads/main/Sub2.txt
 
-https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub4.txt
+https://raw.githubusercontent.com/barry-far/V2ray-Configs/refs/heads/main/Sub3.txt
 
-https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub5.txt
+https://raw.githubusercontent.com/barry-far/V2ray-Configs/refs/heads/main/Sub4.txt
 
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Config%20list1.txt [[EP?]]
+https://raw.githubusercontent.com/barry-far/V2ray-Configs/refs/heads/main/Sub5.txt
 
-https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/ss.txt
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Config%20list1.txt [[EP?]]
 
-https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vless.txt
+https://github.com/Epodonios/v2ray-configs/raw/refs/heads/main/Splitted-By-Protocol/ss.txt
 
-https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vmess.txt
+https://github.com/Epodonios/v2ray-configs/raw/refs/heads/main/Splitted-By-Protocol/vless.txt
 
-https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/trojan.txt
+https://github.com/Epodonios/v2ray-configs/raw/refs/heads/main/Splitted-By-Protocol/vmess.txt
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/channels/protocols/tuic
+https://github.com/Epodonios/v2ray-configs/raw/refs/heads/main/Splitted-By-Protocol/trojan.txt
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/channels/protocols/hysteria
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/channels/protocols/tuic
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/channels/protocols/juicity
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/channels/protocols/hysteria
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/channels/protocols/reality
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/channels/protocols/juicity
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/channels/protocols/shadowsocks
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/channels/protocols/reality
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/channels/protocols/trojan
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/channels/protocols/shadowsocks
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/channels/protocols/vless
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/channels/protocols/trojan
 
-https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/channels/protocols/vmess
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/channels/protocols/vless
+
+https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/channels/protocols/vmess  
+
+https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/refs/heads/master/collected-proxies/xray-json-full/actives_all.json
 
 https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/row-url/all.txt
 
@@ -793,6 +798,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Strawberry.js]: https://github.com/NiREvil/vless/blob/main/edge/strawberry.js
 [A?]: https://t.me/s/Azadi_az_inja_migzare
 [AZ?]: https://t.me/s/AzadNet
+[ALP]: https://github.com/ALIILAPRO/v2rayNG-Config
 [BR?]: https://github.com/barry-far/V2ray-Configs
 [CY?]: https://t.me/s/Ln2Ray
 [CW?]: https://github.com/coldwater-10/Vpnclashfa
