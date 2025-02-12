@@ -29,6 +29,7 @@ def read_existing_configs(file_path):
             return set(f.read().strip().split("\n"))
     return set()
 
+
 def fetch_configs():
     try:
         headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
@@ -93,8 +94,8 @@ def fetch_configs():
     except Exception as e:
         logger.error(f"Error occurred: {str(e)}")
 
+
 if __name__ == "__main__":
     logger.info("Starting the configuration fetch process")
     fetch_configs()
     logger.info("Completed the configuration fetch process")
-
