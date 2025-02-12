@@ -533,6 +533,8 @@ https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/SS
 
 https://github.com/ALIILAPRO/v2rayNG-Config/blob/main/server.txt [[ALP?]]  
 
+https://raw.githubusercontent.com/Surfboardv2ray/TGParse/refs/heads/main/splitted/hysteria2  
+
 https://raw.githubusercontent.com/bamdad23/JavidnamanIran/refs/heads/main/latest
 
 https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/channels/protocols/shadowsocks [[SR?]]  
@@ -565,6 +567,10 @@ https://raw.githubusercontent.com/barry-far/V2ray-Configs/refs/heads/main/Sub4.t
 
 https://raw.githubusercontent.com/barry-far/V2ray-Configs/refs/heads/main/Sub5.txt
 
+https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/ss
+
+https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/trojan
+
 https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Config%20list1.txt [[EP?]]
 
 https://github.com/Epodonios/v2ray-configs/raw/refs/heads/main/Splitted-By-Protocol/ss.txt
@@ -593,7 +599,7 @@ https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs
 
 https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/refs/heads/master/collected-proxies/xray-json-full/actives_all.json
 
-https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/row-url/all.txt
+
 
 https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub6.txt
 
