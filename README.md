@@ -1,10 +1,17 @@
-$$\color{#a5a5a5} \Huge \mathfrak{R}\color{red} \sum \color{#a5a5a5}\mathfrak{vil}_n$$
+$$\color{gray}\Huge \mathfrak{R}\color{red}{\sum}\color{gray}{\nu\iota\mathcal{l}_\sqrt{n}}$$
 
-- تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، هیدیفای،
-  v2rayNG, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Clash-Meta & ...
+<div dir="rtl">  
+
+- تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، هیدیفای، نکوباکس، کلش‌متا، آمنزیا، نیکا، مهسا، ویتوری‌، نکوری و ...
+
+</div>
+
 - Some subscription links are available for [v2rayNG], [Sing-Box], [Hiddify], [NikaNG], [MahsaNG], [NekoBox], [Husi], [Exclave], [Amnezia], [Clash-Meta] and other Clients.
+
 - Несколько ссылок для подписки на: v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Clash-Meta и ... Вернуть результат только
+
 - 为以下软件提供一些共享链接：v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, Nekobox, Husi, Exclave, Amnezia, Clash-Meta 等。
+
 
 <br>
 
