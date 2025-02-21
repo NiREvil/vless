@@ -54,16 +54,26 @@
       "tag": "\u26aa\ufe0fTehran",
       "name": "wg0",
       "mtu": 1280,
-      "address": ["172.16.0.2/32", "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"],
-      "private_key": "kP5NgppSmkhgMD3CzQxwUjfZeY1L2/7N1ByIsLbPVkg=",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
+      ],
+      "private_key": "gFkmp0qzcmN2gRlTMKIT+T8jdphzyZ0zkxQ/Jb4hHEg=",
       "peers": [
         {
           "address": "188.114.96.214",
           "port": 8854,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "allowed_ips": ["0.0.0.0/0", "::/0"],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
           "persistent_keepalive_interval": 30,
-          "reserved": [0, 146, 28]
+          "reserved": [
+            193,
+            81,
+            167
+          ]
         }
       ],
       "detour": "direct",
@@ -74,16 +84,26 @@
       "tag": "\ud83d\udfe1Berlin",
       "name": "wg0",
       "mtu": 1280,
-      "address": ["172.16.0.2/32", "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"],
-      "private_key": "+GZDue4wmtNwfUekTrXQ3XJh0axF0hIyeFzUPLKf23I=",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
+      ],
+      "private_key": "aBMVrmHxvtQS37z3L8h6zAqGuKsjq6px9q7F+DuL4XQ=",
       "peers": [
         {
           "address": "188.114.99.22",
           "port": 4233,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "allowed_ips": ["0.0.0.0/0", "::/0"],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
           "persistent_keepalive_interval": 30,
-          "reserved": [69, 39, 239]
+          "reserved": [
+            215,
+            214,
+            13
+          ]
         }
       ],
       "detour": "\u26aa\ufe0fTehran",
@@ -118,13 +138,19 @@
     {
       "type": "selector",
       "tag": "proxy",
-      "outbounds": ["\u26aa\ufe0fTehran", "\ud83d\udfe1Berlin"],
+      "outbounds": [
+        "\u26aa\ufe0fTehran",
+        "\ud83d\udfe1Berlin"
+      ],
       "default": "\ud83d\udfe1Berlin"
     },
     {
       "type": "urltest",
       "tag": "auto",
-      "outbounds": ["\u26aa\ufe0fTehran", "\ud83d\udfe1Berlin"],
+      "outbounds": [
+        "\u26aa\ufe0fTehran",
+        "\ud83d\udfe1Berlin"
+      ],
       "url": "https://www.gstatic.com/generate_204",
       "tolerance": 50
     },
@@ -156,7 +182,12 @@
         "override_port": 443
       },
       {
-        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"],
+        "rule_set": [
+          "geoip-private",
+          "geosite-private",
+          "geosite-ir",
+          "geoip-ir"
+        ],
         "action": "direct"
       },
       {
