@@ -7,24 +7,14 @@
     "servers": [
       {
         "type": "https",
-        "tag": "proxy-dns",
-        "detour": "proxy",
-        "domain_resolver": "google",
-        "server": "dns.google",
-        "server_port": 0
+        "domain_resolver": "local-dns",
+        "server": "doh.cleanbrowsing.org"
       },
       {
         "type": "udp",
-        "tag": "google",
-        "server": "1.1.1.1",
-        "server_port": 0
-      },
-      {
-        "type": "tcp",
         "tag": "local-dns",
         "detour": "direct",
-        "server": "8.8.8.8",
-        "server_port": 0
+        "server": "1.1.1.1"
       },
       {
         "type": "local",
@@ -51,67 +41,39 @@
         "server": "direct-dns"
       }
     ],
-    "final": "proxy-dns",
+    "final": "direct-dns",
     "strategy": "prefer_ipv4"
   },
   "inbounds": [
     {
-      "type": "direct",
-      "tag": "dns-in",
-      "listen": "0.0.0.0",
-      "listen_port": 6450,
-      "override_address": "1.1.1.1",
-      "override_port": 53
-    },
-    {
       "type": "tun",
       "tag": "tun-in",
       "mtu": 9000,
-      "address": "172.18.0.1/28",
+      "address": "172.19.0.1/30",
       "auto_route": true,
-      "stack": "mixed"
+      "stack": "mixed",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 2080
+        }
+      }
     },
     {
       "type": "mixed",
       "tag": "mixed-in",
-      "listen": "0.0.0.0",
+      "listen": "127.0.0.1",
       "listen_port": 2080
     }
   ],
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "vless-out",
-      "server": "31.44.0.141",
-      "server_port": 8443,
-      "uuid": "f9a296d9-01c6-440b-aac2-4d92df085653",
-      "transport": {
-        "type": "grpc",
-        "service_name": "freedom-to-dream",
-        "idle_timeout": "15s",
-        "ping_timeout": "15s",
-        "permit_without_stream": false
-      },
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "alpn": [],
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Yfsv32R_HAXEi1l8Tc-sEHiMiNEuqAEL_7dFSFWwtzQ",
-          "short_id": "3ea6"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "proxy",
       "outbounds": [
+        "auto",
+        "direct",
         "vless-out"
       ],
       "default": "vless-out"
@@ -123,12 +85,41 @@
         "vless-out"
       ],
       "url": "https://www.gstatic.com/generate_204",
+      "interval": "10m0s",
       "tolerance": 50
     },
     {
       "type": "direct",
       "tag": "direct",
       "domain_strategy": "ipv4_only"
+    },
+    {
+      "type": "vless",
+      "tag": "vless-out",
+      "domain_resolver": "local-dns",
+      "server": "creativecommons.org",
+      "server_port": 443,
+      "uuid": "3c36eadb-747a-4166-8db0-23fec9883ea2",
+      "tls": {
+        "enabled": true,
+        "server_name": "harmony-427.pages.dev",
+        "alpn": [
+          "h3"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api/v8",
+        "headers": {
+          "Host": "harmony-427.pages.dev"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
     }
   ],
   "route": {
@@ -143,14 +134,11 @@
       },
       {
         "clash_mode": "Direct",
-        "action": "resolve",
-        "strategy": "prefer_ipv4"
+        "outbound": "direct"
       },
       {
         "clash_mode": "Global",
-        "action": "route-options",
-        "override_address": "1.1.1.1",
-        "override_port": 443
+        "outbound": "proxy"
       },
       {
         "rule_set": [
@@ -159,12 +147,11 @@
           "geosite-ir",
           "geoip-ir"
         ],
-        "action": "direct"
+        "outbound": "direct"
       },
       {
         "rule_set": "geosite-ads",
-        "action": "reject",
-        "method": "default"
+        "outbound": "block"
       }
     ],
     "rule_set": [
@@ -205,7 +192,6 @@
       }
     ],
     "final": "proxy",
-    "auto_detect_interface": true,
-    "override_android_vpn": true
+    "auto_detect_interface": true
   }
-}
+ }
