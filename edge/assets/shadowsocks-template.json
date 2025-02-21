@@ -9,14 +9,13 @@
         "type": "tcp",
         "tag": "proxy-dns",
         "detour": "proxy",
-        "domain_resolver": "local-dns",
-        "server": "185.228.168.9"
+        "server": "8.8.4.4"
       },
       {
-        "type": "tcp",
+        "type": "udp",
         "tag": "local-dns",
         "detour": "direct",
-        "server": "8.8.4.4"
+        "server": "1.1.1.1"
       },
       {
         "type": "local",
@@ -43,65 +42,61 @@
         "server": "direct-dns"
       }
     ],
-    "final": "proxy-dns",
+    "final": "direct-dns",
     "strategy": "prefer_ipv4"
   },
   "inbounds": [
     {
-      "type": "direct",
-      "tag": "dns-in",
-      "listen": "0.0.0.0",
-      "listen_port": 6450,
-      "override_address": "1.1.1.1",
-      "override_port": 53
-    },
-    {
       "type": "tun",
       "tag": "tun-in",
       "mtu": 9000,
-      "address": "172.18.0.1/28",
+      "address": "172.19.0.1/30",
       "auto_route": true,
-      "stack": "mixed"
+      "stack": "system",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 2080
+        }
+      }
     },
     {
       "type": "mixed",
       "tag": "mixed-in",
-      "listen": "0.0.0.0",
+      "listen": "127.0.0.1",
       "listen_port": 2080
     }
   ],
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "ss-out",
-      "domain_strategy": "prefer_ipv4",
-      "server": "109.201.152.181",
-      "server_port": 443,
-      "method": "aes-128-cfb",
-      "password": "shadowsocks",
-      "udp_over_tcp": true
-    },
-    {
       "type": "selector",
       "tag": "proxy",
-      "outbounds": [
-        "ss-out"
-      ],
-      "default": "ss-out"
+      "outbounds": ["auto", "direct", "shadowsocks"],
+      "default": "shadowsocks"
     },
     {
       "type": "urltest",
       "tag": "auto",
-      "outbounds": [
-        "ss-out"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
+      "outbounds": ["shadowsocks"],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
       "tolerance": 50
     },
     {
       "type": "direct",
       "tag": "direct",
       "domain_strategy": "ipv4_only"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks",
+      "domain_strategy": "prefer_ipv4",
+      "server": "109.201.152.181",
+      "server_port": 443,
+      "method": "aes-128-cfb",
+      "password": "shadowsocks",
+      "udp_over_tcp": true
     }
   ],
   "route": {
@@ -116,28 +111,19 @@
       },
       {
         "clash_mode": "Direct",
-        "action": "resolve",
-        "strategy": "prefer_ipv4"
+        "outbound": "direct"
       },
       {
         "clash_mode": "Global",
-        "action": "route-options",
-        "override_address": "1.1.1.1",
-        "override_port": 443
+        "outbound": "proxy"
       },
       {
-        "rule_set": [
-          "geoip-private",
-          "geosite-private",
-          "geosite-ir",
-          "geoip-ir"
-        ],
-        "action": "direct"
+        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"],
+        "outbound": "direct"
       },
       {
         "rule_set": "geosite-ads",
-        "action": "reject",
-        "method": "default"
+        "outbound": "block"
       }
     ],
     "rule_set": [
@@ -178,7 +164,6 @@
       }
     ],
     "final": "proxy",
-    "auto_detect_interface": true,
-    "override_android_vpn": true
+    "auto_detect_interface": true
   }
 }
