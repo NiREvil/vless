@@ -1,7 +1,7 @@
 {
- "log": {
-   "level": "error",
-   "timestamp": true
+  "log": {
+    "level": "error",
+    "timestamp": true
   },
   "dns": {
     "servers": [
@@ -124,12 +124,7 @@
         "outbound": "proxy"
       },
       {
-        "rule_set": [
-          "geoip-private",
-          "geosite-private",
-          "geosite-ir",
-          "geoip-ir"
-        ],
+        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"],
         "outbound": "direct"
       },
       {
@@ -177,5 +172,4 @@
     "final": "proxy",
     "auto_detect_interface": true
   }
- }
-
+}
