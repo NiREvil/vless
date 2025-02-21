@@ -13,13 +13,13 @@ proxy-groups:
 
   - name: AutoTest
     type: url-test
-    proxies: []  
+    proxies: []
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
   - name: LoadBalance
     type: load-balance
-    proxies: []  # مبدل 
+    proxies: [] # مبدل
     strategy: round-robin
 
 rules:
