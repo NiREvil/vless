@@ -133,8 +133,8 @@ jobs:
       - name: Commit changes if any
         if: failure()
         run: |
-          git config --local user.name "actions-user"
-          git config --local user.email "actions-user@example.com"
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<eslint@googlegroups.com>"
           git add -A
           git diff --quiet && git diff --staged --quiet || git commit -m "style: apply code formatting standards" -m "Applied automatic formatting using Black and Prettier"
         continue-on-error: true
