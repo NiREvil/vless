@@ -138,7 +138,7 @@ https://github.com/NiREvil/vless/blob/main/sub/Cf-ipv6.json
 
 **Warp Endpoints**
 
-https://github.com/NiREvil/vless/blob/main/result.csv
+https://ircfspace.github.io/endpoint/
 
 #### ProxyIP
 
