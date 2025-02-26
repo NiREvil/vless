@@ -3,7 +3,7 @@ allow-lan: true
 mode: Rule
 log-level: silent
 proxies:
-  - name: "Austria-Vienna|✭nginx_1"
+  - name: 'Austria-Vienna|✭nginx_1'
     type: ss
     server: shadowsocks.ctsubvpn.ggff.net
     port: 2927
@@ -11,7 +11,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: ug4Fu79SEREdFGlt2sUyT4
 
-  - name: "Austria-Vienna|✭nginx_2"
+  - name: 'Austria-Vienna|✭nginx_2'
     type: ss
     server: 95.164.9.144
     port: 2927
@@ -19,7 +19,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: ug4Fu79SEREdFGlt2sUyT4
 
-  - name: "Bahrain-Manama|✭nginx_3"
+  - name: 'Bahrain-Manama|✭nginx_3'
     type: ss
     server: admin.c3.webramz.co
     port: 443
@@ -27,7 +27,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: Bog0ELmMM9DSxDdQ
 
-  - name: "Bolivia-La+Paz|✭nginx_4"
+  - name: 'Bolivia-La+Paz|✭nginx_4'
     type: ss
     server: 185.93.173.218
     port: 990
@@ -35,7 +35,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Brazil-S?o Paulo|✭nginx_5"
+  - name: 'Brazil-S?o Paulo|✭nginx_5'
     type: vmess
     server: pq-brazil1.09vpn.com
     port: 80
@@ -49,7 +49,7 @@ proxies:
       headers:
         Host: pq-brazil1.09vpn.com
 
-  - name: "Brazil-S?o Paulo|✭nginx_6"
+  - name: 'Brazil-S?o Paulo|✭nginx_6'
     type: vmess
     server: pq-brazil1.09vpn.com
     port: 80
@@ -63,7 +63,7 @@ proxies:
       headers:
         Host: pq-brazil1.09vpn.com
 
-  - name: "Canada-Beauharnois|✭nginx_8"
+  - name: 'Canada-Beauharnois|✭nginx_8'
     type: ss
     server: 142.4.216.225
     port: 80
@@ -71,7 +71,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: JIhN6rBKkaEboLNXVSv5rq
 
-  - name: "Canada-Beauharnois|✭nginx_9"
+  - name: 'Canada-Beauharnois|✭nginx_9'
     type: ss
     server: ca225.vpnbook.com
     port: 80
@@ -79,7 +79,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: JIhN6rBKkaEboLNXVSv5rq
 
-  - name: "Canada-Pointe-Claire|✭nginx_12"
+  - name: 'Canada-Pointe-Claire|✭nginx_12'
     type: ss
     server: 64.74.163.130
     port: 990
@@ -87,7 +87,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Canada-Toronto|✭nginx_17"
+  - name: 'Canada-Toronto|✭nginx_17'
     type: vmess
     server: s2.db-link02.top
     port: 2086
@@ -101,7 +101,7 @@ proxies:
       headers:
         Host: 100-171-104-238.s2.db-link02.top
 
-  - name: "Canada-Toronto|✭nginx_28"
+  - name: 'Canada-Toronto|✭nginx_28'
     type: vmess
     server: 104.17.221.248
     port: 80
@@ -115,7 +115,7 @@ proxies:
       headers:
         Host: chunchuan.kejixiaoqi666.store
 
-  - name: "Canada-Toronto|✭nginx_31"
+  - name: 'Canada-Toronto|✭nginx_31'
     type: vmess
     server: 92.53.188.185
     port: 8443
@@ -130,7 +130,7 @@ proxies:
     skip-cert-verify: true
     servername: lax1.ibgfw.top
 
-  - name: "Canada-Toronto|✭nginx_33"
+  - name: 'Canada-Toronto|✭nginx_33'
     type: vmess
     server: 104.18.149.75
     port: 443
@@ -145,7 +145,7 @@ proxies:
     skip-cert-verify: true
     servername: kr.insbot.filegear-sg.me
 
-  - name: "Canada-Toronto|✭nginx_41"
+  - name: 'Canada-Toronto|✭nginx_41'
     type: vmess
     server: 38.111.114.153
     port: 14812
@@ -154,7 +154,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "Canada-Toronto|✭nginx_57"
+  - name: 'Canada-Toronto|✭nginx_57'
     type: ss
     server: ca1.ssocks.wiki
     port: 8388
@@ -162,7 +162,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: MzZjN
 
-  - name: "Canada-Toronto|✭nginx_62"
+  - name: 'Canada-Toronto|✭nginx_62'
     type: vmess
     server: 104.17.221.248
     port: 80
@@ -176,7 +176,7 @@ proxies:
       headers:
         Host: chunchuan.kejixiaoqi666.store
 
-  - name: "Canada-Toronto|✭nginx_65"
+  - name: 'Canada-Toronto|✭nginx_65'
     type: vmess
     server: 104.18.149.75
     port: 443
@@ -191,7 +191,7 @@ proxies:
     skip-cert-verify: true
     servername: hk.insbot.filegear-sg.me
 
-  - name: "Canada-Toronto|✭nginx_70"
+  - name: 'Canada-Toronto|✭nginx_70'
     type: vmess
     server: 104.21.16.100
     port: 2053
@@ -206,9 +206,9 @@ proxies:
         Host: qurantv.iribquran.com
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "Canada-Toronto|✭nginx_72"
+  - name: 'Canada-Toronto|✭nginx_72'
     type: vmess
     server: Reza.ns.cloudflare.com
     port: 2087
@@ -218,12 +218,12 @@ proxies:
     cipher: auto
     network: grpc
     grpc-opts:
-      grpc-service-name: ""
+      grpc-service-name: ''
     tls: true
     skip-cert-verify: true
     servername: 155138206163.datrsmbmrm.fun
 
-  - name: "Canada-Vancouver|✭nginx_74"
+  - name: 'Canada-Vancouver|✭nginx_74'
     type: ss
     server: 79.127.233.170
     port: 990
@@ -231,7 +231,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Canada-Vancouver|✭nginx_75"
+  - name: 'Canada-Vancouver|✭nginx_75'
     type: ss
     server: 149.22.95.183
     port: 443
@@ -239,7 +239,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "Canada-Vancouver|✭nginx_76"
+  - name: 'Canada-Vancouver|✭nginx_76'
     type: ss
     server: 79.127.233.170
     port: 990
@@ -247,7 +247,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "China-Chengdu|✭nginx_77"
+  - name: 'China-Chengdu|✭nginx_77'
     type: vmess
     server: 142.4.108.140
     port: 38007
@@ -260,9 +260,9 @@ proxies:
       path: /path/081412110418
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "China-Chengdu|✭nginx_78"
+  - name: 'China-Chengdu|✭nginx_78'
     type: vmess
     server: 142.4.108.131
     port: 38007
@@ -275,9 +275,9 @@ proxies:
       path: /path/283126261303
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "China-Chengdu|✭nginx_79"
+  - name: 'China-Chengdu|✭nginx_79'
     type: vmess
     server: 142.4.108.139
     port: 38007
@@ -290,9 +290,9 @@ proxies:
       path: /path/021101252414
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "China-Taiyuan|✭nginx_80"
+  - name: 'China-Taiyuan|✭nginx_80'
     type: vmess
     server: 142.4.104.33
     port: 52143
@@ -301,7 +301,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "Colombia-Bogotá|✭nginx_81"
+  - name: 'Colombia-Bogotá|✭nginx_81'
     type: ss
     server: 181.119.30.20
     port: 990
@@ -309,7 +309,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Cyprus-Limassol|✭nginx_82"
+  - name: 'Cyprus-Limassol|✭nginx_82'
     type: ss
     server: 134.255.210.49
     port: 990
@@ -317,7 +317,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Cyprus-Limassol|✭nginx_83"
+  - name: 'Cyprus-Limassol|✭nginx_83'
     type: ss
     server: 134.255.210.49
     port: 990
@@ -325,7 +325,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Czechia-Prague|✭nginx_84"
+  - name: 'Czechia-Prague|✭nginx_84'
     type: ss
     server: 195.181.160.6
     port: 990
@@ -333,7 +333,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Ecuador-Quito|✭nginx_85"
+  - name: 'Ecuador-Quito|✭nginx_85'
     type: ss
     server: 185.47.253.227
     port: 990
@@ -341,7 +341,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Ecuador-Quito|✭nginx_86"
+  - name: 'Ecuador-Quito|✭nginx_86'
     type: ss
     server: 185.47.253.227
     port: 990
@@ -349,7 +349,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Estonia-Tallinn|✭nginx_87"
+  - name: 'Estonia-Tallinn|✭nginx_87'
     type: ss
     server: 147.45.60.33
     port: 16356
@@ -357,7 +357,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: LqlPI19oqnunGNSLMvdXyB
 
-  - name: "Estonia-Tallinn|✭nginx_88"
+  - name: 'Estonia-Tallinn|✭nginx_88'
     type: ss
     server: 147.45.60.33
     port: 16356
@@ -365,7 +365,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: LqlPI19oqnunGNSLMvdXyB
 
-  - name: "Finland-Helsinki|✭nginx_89"
+  - name: 'Finland-Helsinki|✭nginx_89'
     type: ss
     server: 150.241.97.216
     port: 26039
@@ -373,7 +373,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: gj1dvw15nnjIyMSjSficeC
 
-  - name: "France-Gravelines|✭nginx_90"
+  - name: 'France-Gravelines|✭nginx_90'
     type: trojan
     server: 51.210.182.170
     port: 443
@@ -383,7 +383,7 @@ proxies:
     skip-cert-verify: true
     servername: chatbuzzteambhm.chatbuzzt7150.workers.dev
 
-  - name: "France-Lyon|✭nginx_92"
+  - name: 'France-Lyon|✭nginx_92'
     type: vmess
     server: az05.beyondy.cfd
     port: 443
@@ -400,7 +400,7 @@ proxies:
     skip-cert-verify: true
     servername: az05.beyondy.cfd
 
-  - name: "France-Lyon|✭nginx_93"
+  - name: 'France-Lyon|✭nginx_93'
     type: vmess
     server: 146.19.168.161
     port: 443
@@ -415,7 +415,7 @@ proxies:
     skip-cert-verify: true
     servername: az05.beyondy.cfd
 
-  - name: "France-Paris|✭nginx_94"
+  - name: 'France-Paris|✭nginx_94'
     type: ss
     server: fr1.opensocks.site
     port: 8388
@@ -423,7 +423,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: OTVlMzcy
 
-  - name: "France-Paris|✭nginx_98"
+  - name: 'France-Paris|✭nginx_98'
     type: ss
     server: 86.104.74.243
     port: 14255
@@ -431,7 +431,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: fDDmH4QefmWqMJ8UURZrGh
 
-  - name: "France-Paris|✭nginx_100"
+  - name: 'France-Paris|✭nginx_100'
     type: ss
     server: 185.231.205.179
     port: 8388
@@ -439,7 +439,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: OTVlMzcy
 
-  - name: "France-Roubaix|✭nginx_101"
+  - name: 'France-Roubaix|✭nginx_101'
     type: ss
     server: 149.202.82.172
     port: 5001
@@ -447,7 +447,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "France-Roubaix|✭nginx_102"
+  - name: 'France-Roubaix|✭nginx_102'
     type: ss
     server: 149.202.82.172
     port: 8882
@@ -455,7 +455,7 @@ proxies:
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
 
-  - name: "France-Roubaix|✭nginx_103"
+  - name: 'France-Roubaix|✭nginx_103'
     type: ss
     server: 149.202.82.172
     port: 8888
@@ -463,7 +463,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "France-Roubaix|✭nginx_104"
+  - name: 'France-Roubaix|✭nginx_104'
     type: ss
     server: 149.202.82.172
     port: 5500
@@ -471,7 +471,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "France-Roubaix|✭nginx_105"
+  - name: 'France-Roubaix|✭nginx_105'
     type: ss
     server: 149.202.82.172
     port: 3389
@@ -479,7 +479,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "France-Roubaix|✭nginx_106"
+  - name: 'France-Roubaix|✭nginx_106'
     type: ss
     server: 149.202.82.172
     port: 2376
@@ -487,7 +487,7 @@ proxies:
     cipher: aes-256-gcm
     password: faBAoD54k87UJG7
 
-  - name: "France-Roubaix|✭nginx_107"
+  - name: 'France-Roubaix|✭nginx_107'
     type: ss
     server: 149.202.82.172
     port: 5600
@@ -495,7 +495,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "France-Roubaix|✭nginx_108"
+  - name: 'France-Roubaix|✭nginx_108'
     type: ss
     server: 149.202.82.172
     port: 8091
@@ -503,7 +503,7 @@ proxies:
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
 
-  - name: "France-Roubaix|✭nginx_109"
+  - name: 'France-Roubaix|✭nginx_109'
     type: ss
     server: 149.202.82.172
     port: 7001
@@ -511,7 +511,7 @@ proxies:
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
 
-  - name: "France-Roubaix|✭nginx_110"
+  - name: 'France-Roubaix|✭nginx_110'
     type: ss
     server: 149.202.82.172
     port: 5003
@@ -519,7 +519,7 @@ proxies:
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
 
-  - name: "France-Roubaix|✭nginx_111"
+  - name: 'France-Roubaix|✭nginx_111'
     type: ss
     server: 149.202.82.172
     port: 9101
@@ -527,7 +527,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "France-Roubaix|✭nginx_112"
+  - name: 'France-Roubaix|✭nginx_112'
     type: ss
     server: 149.202.82.172
     port: 8881
@@ -535,7 +535,7 @@ proxies:
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
 
-  - name: "France-Roubaix|✭nginx_113"
+  - name: 'France-Roubaix|✭nginx_113'
     type: ss
     server: 149.202.82.172
     port: 5601
@@ -543,7 +543,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "France-Roubaix|✭nginx_114"
+  - name: 'France-Roubaix|✭nginx_114'
     type: ss
     server: 149.202.82.172
     port: 6697
@@ -551,7 +551,7 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
 
-  - name: "France-Roubaix|✭nginx_115"
+  - name: 'France-Roubaix|✭nginx_115'
     type: ss
     server: 149.202.82.172
     port: 5004
@@ -559,7 +559,7 @@ proxies:
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
 
-  - name: "France-Roubaix|✭nginx_116"
+  - name: 'France-Roubaix|✭nginx_116'
     type: ss
     server: 149.202.82.172
     port: 3306
@@ -567,7 +567,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "France-Roubaix|✭nginx_117"
+  - name: 'France-Roubaix|✭nginx_117'
     type: ss
     server: 149.202.82.172
     port: 7307
@@ -575,7 +575,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "France-Roubaix|✭nginx_118"
+  - name: 'France-Roubaix|✭nginx_118'
     type: ss
     server: 149.202.82.172
     port: 8008
@@ -583,7 +583,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "France-Roubaix|✭nginx_119"
+  - name: 'France-Roubaix|✭nginx_119'
     type: ss
     server: 149.202.82.172
     port: 8090
@@ -591,7 +591,7 @@ proxies:
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
 
-  - name: "France-Roubaix|✭nginx_120"
+  - name: 'France-Roubaix|✭nginx_120'
     type: ss
     server: 149.202.82.172
     port: 8080
@@ -599,7 +599,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "France-Roubaix|✭nginx_121"
+  - name: 'France-Roubaix|✭nginx_121'
     type: ss
     server: 149.202.82.172
     port: 4444
@@ -607,7 +607,7 @@ proxies:
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
 
-  - name: "France-Roubaix|✭nginx_122"
+  - name: 'France-Roubaix|✭nginx_122'
     type: ss
     server: 149.202.82.172
     port: 7002
@@ -615,7 +615,7 @@ proxies:
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
 
-  - name: "France-Roubaix|✭nginx_123"
+  - name: 'France-Roubaix|✭nginx_123'
     type: ss
     server: 149.202.82.172
     port: 2375
@@ -623,7 +623,7 @@ proxies:
     cipher: aes-256-gcm
     password: faBAoD54k87UJG7
 
-  - name: "France-Roubaix|✭nginx_124"
+  - name: 'France-Roubaix|✭nginx_124'
     type: ss
     server: 149.202.82.172
     port: 8118
@@ -631,7 +631,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "France-Roubaix|✭nginx_125"
+  - name: 'France-Roubaix|✭nginx_125'
     type: ss
     server: 149.202.82.172
     port: 6379
@@ -639,7 +639,7 @@ proxies:
     cipher: aes-256-gcm
     password: zDNVedRFPQexG9v
 
-  - name: "France-Roubaix|✭nginx_126"
+  - name: 'France-Roubaix|✭nginx_126'
     type: ss
     server: 149.202.82.172
     port: 5000
@@ -647,7 +647,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "France-Roubaix|✭nginx_127"
+  - name: 'France-Roubaix|✭nginx_127'
     type: ss
     server: 149.202.82.172
     port: 8000
@@ -655,7 +655,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "France-Roubaix|✭nginx_128"
+  - name: 'France-Roubaix|✭nginx_128'
     type: ss
     server: 149.202.82.172
     port: 7306
@@ -663,7 +663,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "France-Roubaix|✭nginx_129"
+  - name: 'France-Roubaix|✭nginx_129'
     type: ss
     server: 149.202.82.172
     port: 8009
@@ -671,7 +671,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "France-Roubaix|✭nginx_130"
+  - name: 'France-Roubaix|✭nginx_130'
     type: ss
     server: 149.202.82.172
     port: 443
@@ -679,7 +679,7 @@ proxies:
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
 
-  - name: "France-Roubaix|✭nginx_131"
+  - name: 'France-Roubaix|✭nginx_131'
     type: ss
     server: 149.202.82.172
     port: 9102
@@ -687,7 +687,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "France-Roubaix|✭nginx_132"
+  - name: 'France-Roubaix|✭nginx_132'
     type: ss
     server: 149.202.82.172
     port: 6679
@@ -695,7 +695,7 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
 
-  - name: "France-Roubaix|✭nginx_133"
+  - name: 'France-Roubaix|✭nginx_133'
     type: ss
     server: 149.202.82.172
     port: 8119
@@ -703,7 +703,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "Germany-Frankfurt+am+Main|✭nginx_135"
+  - name: 'Germany-Frankfurt+am+Main|✭nginx_135'
     type: trojan
     server: nextstepcareer.online
     port: 443
@@ -711,9 +711,9 @@ proxies:
     password: 4732adfa16c6450bbef87264e41332db
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "Germany-Frankfurt+am+Main|✭nginx_136"
+  - name: 'Germany-Frankfurt+am+Main|✭nginx_136'
     type: ss
     server: 146.19.247.183
     port: 8388
@@ -721,7 +721,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: ZTUxOTQ5
 
-  - name: "Germany-Frankfurt|✭nginx_137"
+  - name: 'Germany-Frankfurt|✭nginx_137'
     type: ss
     server: 185.177.229.245
     port: 1866
@@ -729,7 +729,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oXGp1+ihlfKg826H
 
-  - name: "Germany-Frankfurt|✭nginx_138"
+  - name: 'Germany-Frankfurt|✭nginx_138'
     type: ss
     server: 193.108.119.63
     port: 7002
@@ -737,7 +737,7 @@ proxies:
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
 
-  - name: "Germany-Frankfurt|✭nginx_139"
+  - name: 'Germany-Frankfurt|✭nginx_139'
     type: ss
     server: 185.177.229.245
     port: 1866
@@ -745,7 +745,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oXGp1+ihlfKg826H
 
-  - name: "Germany-Limburg+an+der+Lahn|✭nginx_143"
+  - name: 'Germany-Limburg+an+der+Lahn|✭nginx_143'
     type: ss
     server: 51.195.119.47
     port: 1080
@@ -753,7 +753,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: qXvO7zYU7KeaB0Md7DQLow
 
-  - name: "Germany-Saarbrücken|✭nginx_146"
+  - name: 'Germany-Saarbrücken|✭nginx_146'
     type: ss
     server: 217.182.198.219
     port: 8119
@@ -761,7 +761,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "Germany-Saarbrücken|✭nginx_147"
+  - name: 'Germany-Saarbrücken|✭nginx_147'
     type: ss
     server: 217.182.198.219
     port: 4444
@@ -769,7 +769,7 @@ proxies:
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
 
-  - name: "Germany-Saarbrücken|✭nginx_148"
+  - name: 'Germany-Saarbrücken|✭nginx_148'
     type: ss
     server: 217.182.198.219
     port: 8090
@@ -777,7 +777,7 @@ proxies:
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
 
-  - name: "Germany-Saarbrücken|✭nginx_149"
+  - name: 'Germany-Saarbrücken|✭nginx_149'
     type: ss
     server: 217.182.198.219
     port: 7306
@@ -785,7 +785,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "Germany-Saarbrücken|✭nginx_150"
+  - name: 'Germany-Saarbrücken|✭nginx_150'
     type: ss
     server: 217.182.198.219
     port: 2375
@@ -793,7 +793,7 @@ proxies:
     cipher: aes-256-gcm
     password: faBAoD54k87UJG7
 
-  - name: "Germany-Saarbrücken|✭nginx_151"
+  - name: 'Germany-Saarbrücken|✭nginx_151'
     type: ss
     server: 217.182.198.219
     port: 3389
@@ -801,7 +801,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Germany-Saarbrücken|✭nginx_152"
+  - name: 'Germany-Saarbrücken|✭nginx_152'
     type: ss
     server: ns3849026.ip-217-182-198.eu
     port: 8888
@@ -809,7 +809,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Germany-Saarbrücken|✭nginx_153"
+  - name: 'Germany-Saarbrücken|✭nginx_153'
     type: ss
     server: 217.182.198.219
     port: 2376
@@ -817,7 +817,7 @@ proxies:
     cipher: aes-256-gcm
     password: faBAoD54k87UJG7
 
-  - name: "Germany-Saarbrücken|✭nginx_154"
+  - name: 'Germany-Saarbrücken|✭nginx_154'
     type: ss
     server: 217.182.198.219
     port: 6697
@@ -825,7 +825,7 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
 
-  - name: "Germany-Saarbrücken|✭nginx_155"
+  - name: 'Germany-Saarbrücken|✭nginx_155'
     type: ss
     server: ns3849026.ip-217-182-198.eu
     port: 9101
@@ -833,7 +833,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "Germany-Saarbrücken|✭nginx_156"
+  - name: 'Germany-Saarbrücken|✭nginx_156'
     type: ss
     server: 217.182.198.219
     port: 8008
@@ -841,7 +841,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "Germany-Saarbrücken|✭nginx_157"
+  - name: 'Germany-Saarbrücken|✭nginx_157'
     type: ss
     server: 217.182.198.219
     port: 3306
@@ -849,7 +849,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Germany-Saarbrücken|✭nginx_158"
+  - name: 'Germany-Saarbrücken|✭nginx_158'
     type: ss
     server: 217.182.198.219
     port: 8091
@@ -857,7 +857,7 @@ proxies:
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
 
-  - name: "Germany-Saarbrücken|✭nginx_159"
+  - name: 'Germany-Saarbrücken|✭nginx_159'
     type: ss
     server: 217.182.198.219
     port: 5000
@@ -865,7 +865,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Germany-Saarbrücken|✭nginx_160"
+  - name: 'Germany-Saarbrücken|✭nginx_160'
     type: ss
     server: 217.182.198.219
     port: 5004
@@ -873,7 +873,7 @@ proxies:
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
 
-  - name: "Germany-Saarbrücken|✭nginx_161"
+  - name: 'Germany-Saarbrücken|✭nginx_161'
     type: ss
     server: 217.182.198.219
     port: 9102
@@ -881,7 +881,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "Germany-Saarbrücken|✭nginx_162"
+  - name: 'Germany-Saarbrücken|✭nginx_162'
     type: ss
     server: 217.182.198.219
     port: 5003
@@ -889,7 +889,7 @@ proxies:
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
 
-  - name: "Germany-Saarbrücken|✭nginx_163"
+  - name: 'Germany-Saarbrücken|✭nginx_163'
     type: ss
     server: 217.182.198.219
     port: 5001
@@ -897,7 +897,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Germany-Saarbrücken|✭nginx_164"
+  - name: 'Germany-Saarbrücken|✭nginx_164'
     type: ss
     server: 217.182.198.219
     port: 8009
@@ -905,7 +905,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "Germany-Saarbrücken|✭nginx_165"
+  - name: 'Germany-Saarbrücken|✭nginx_165'
     type: ss
     server: 217.182.198.219
     port: 8118
@@ -913,7 +913,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "Germany-Saarbrücken|✭nginx_166"
+  - name: 'Germany-Saarbrücken|✭nginx_166'
     type: ss
     server: 217.182.198.219
     port: 9101
@@ -921,7 +921,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "Guatemala-Guatemala+City|✭nginx_167"
+  - name: 'Guatemala-Guatemala+City|✭nginx_167'
     type: ss
     server: 185.47.254.87
     port: 990
@@ -929,7 +929,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Hong Kong-Wan Chai|✭nginx_168"
+  - name: 'Hong Kong-Wan Chai|✭nginx_168'
     type: vmess
     server: 103.149.183.178
     port: 54675
@@ -938,7 +938,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "Hong Kong-Wan Chai|✭nginx_169"
+  - name: 'Hong Kong-Wan Chai|✭nginx_169'
     type: vmess
     server: 103.149.183.178
     port: 27512
@@ -947,7 +947,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "Hong Kong-Wan Chai|✭nginx_170"
+  - name: 'Hong Kong-Wan Chai|✭nginx_170'
     type: vmess
     server: 103.149.183.178
     port: 27512
@@ -956,7 +956,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "Hong+Kong-Hong+Kong|✭nginx_171"
+  - name: 'Hong+Kong-Hong+Kong|✭nginx_171'
     type: ss
     server: 141.98.234.93
     port: 20012
@@ -964,7 +964,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: WfmxKX2FBJRU0Ie9VLIYDL
 
-  - name: "Hong+Kong-Hong+Kong|✭nginx_172"
+  - name: 'Hong+Kong-Hong+Kong|✭nginx_172'
     type: ss
     server: hong-kong.keenvpn.me
     port: 443
@@ -972,7 +972,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 2afbc97400ca71c8f3306f9843a6e1c2
 
-  - name: "Hong+Kong-Hong+Kong|✭nginx_173"
+  - name: 'Hong+Kong-Hong+Kong|✭nginx_173'
     type: ss
     server: 156.245.190.18
     port: 15009
@@ -980,7 +980,7 @@ proxies:
     cipher: aes-256-gcm
     password: AN3FTAV65XV9BQKG
 
-  - name: "Hong+Kong-Hong+Kong|✭nginx_174"
+  - name: 'Hong+Kong-Hong+Kong|✭nginx_174'
     type: ss
     server: 216.250.97.118
     port: 443
@@ -988,7 +988,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 2afbc97400ca71c8f3306f9843a6e1c2
 
-  - name: "Hong+Kong-Hong+Kong|✭nginx_175"
+  - name: 'Hong+Kong-Hong+Kong|✭nginx_175'
     type: ss
     server: 156.245.190.15
     port: 15006
@@ -996,7 +996,7 @@ proxies:
     cipher: aes-256-gcm
     password: RAMLXXTO5NSM786O
 
-  - name: "Hong+Kong-Hong+Kong|✭nginx_177"
+  - name: 'Hong+Kong-Hong+Kong|✭nginx_177'
     type: ss
     server: 203.23.128.33
     port: 990
@@ -1004,7 +1004,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Hong+Kong-Hong+Kong|✭nginx_178"
+  - name: 'Hong+Kong-Hong+Kong|✭nginx_178'
     type: trojan
     server: 104.251.227.182
     port: 443
@@ -1014,7 +1014,7 @@ proxies:
     skip-cert-verify: true
     servername: hezijiasuqi.com
 
-  - name: "Hungary-Budapest|✭nginx_179"
+  - name: 'Hungary-Budapest|✭nginx_179'
     type: ss
     server: 86.104.75.103
     port: 49264
@@ -1022,7 +1022,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: LI4obOEIDLzDjd7xYlhhTJ
 
-  - name: "Hungary-Budapest|✭nginx_180"
+  - name: 'Hungary-Budapest|✭nginx_180'
     type: ss
     server: 86.104.75.103
     port: 49264
@@ -1030,7 +1030,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: LI4obOEIDLzDjd7xYlhhTJ
 
-  - name: "Iceland-Keflavík|✭nginx_181"
+  - name: 'Iceland-Keflavík|✭nginx_181'
     type: ss
     server: is3.opensocks.site
     port: 8388
@@ -1038,7 +1038,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: NjBlZDlk
 
-  - name: "Iceland-Keflavík|✭nginx_182"
+  - name: 'Iceland-Keflavík|✭nginx_182'
     type: ss
     server: 89.221.224.166
     port: 8388
@@ -1046,7 +1046,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: NjBlZDlk
 
-  - name: "India-Bengaluru|✭nginx_183"
+  - name: 'India-Bengaluru|✭nginx_183'
     type: ss
     server: 159.65.149.72
     port: 51348
@@ -1054,7 +1054,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: p7EhC8MR7o7GuRn27YF8SQNAKJ2lUbBNIjcyqSmBHsy8wLbJ
 
-  - name: "Indonesia-Cileunyi|✭nginx_184"
+  - name: 'Indonesia-Cileunyi|✭nginx_184'
     type: vmess
     server: 103.67.79.157
     port: 45365
@@ -1063,7 +1063,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "Indonesia-Jakarta|✭nginx_185"
+  - name: 'Indonesia-Jakarta|✭nginx_185'
     type: ss
     server: 154.205.159.100
     port: 990
@@ -1071,7 +1071,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Ireland-Dublin|✭nginx_186"
+  - name: 'Ireland-Dublin|✭nginx_186'
     type: vmess
     server: f2.maryam1900.com
     port: 8443
@@ -1081,12 +1081,12 @@ proxies:
     cipher: auto
     network: grpc
     grpc-opts:
-      grpc-service-name: ""
+      grpc-service-name: ''
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "Ireland-Dublin|✭nginx_187"
+  - name: 'Ireland-Dublin|✭nginx_187'
     type: vmess
     server: f2.maryam1900.com
     port: 8443
@@ -1096,12 +1096,12 @@ proxies:
     cipher: auto
     network: grpc
     grpc-opts:
-      grpc-service-name: ""
+      grpc-service-name: ''
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "Italy-Arezzo|✭nginx_188"
+  - name: 'Italy-Arezzo|✭nginx_188'
     type: ss
     server: 185.213.20.227
     port: 990
@@ -1109,7 +1109,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Japan-Tokyo|✭nginx_189"
+  - name: 'Japan-Tokyo|✭nginx_189'
     type: ss
     server: 103.106.228.132
     port: 990
@@ -1117,7 +1117,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Japan-Tokyo|✭nginx_190"
+  - name: 'Japan-Tokyo|✭nginx_190'
     type: ss
     server: 149.22.87.240
     port: 443
@@ -1125,7 +1125,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "Japan-Tokyo|✭nginx_191"
+  - name: 'Japan-Tokyo|✭nginx_191'
     type: ss
     server: 54.248.54.190
     port: 1234
@@ -1133,7 +1133,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 1234
 
-  - name: "Japan-Tokyo|✭nginx_192"
+  - name: 'Japan-Tokyo|✭nginx_192'
     type: ss
     server: 149.22.87.241
     port: 443
@@ -1141,7 +1141,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "Japan-Tokyo|✭nginx_193"
+  - name: 'Japan-Tokyo|✭nginx_193'
     type: ss
     server: 149.22.87.204
     port: 443
@@ -1149,7 +1149,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "Lithuania-Vilnius|✭nginx_194"
+  - name: 'Lithuania-Vilnius|✭nginx_194'
     type: ss
     server: 192.36.61.59
     port: 990
@@ -1157,7 +1157,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Lithuania-Vilnius|✭nginx_195"
+  - name: 'Lithuania-Vilnius|✭nginx_195'
     type: ss
     server: 107.181.155.244
     port: 55330
@@ -1165,7 +1165,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: rtR4YX74vwqRJu9MGH3e1N3CQdGMWCUFkyLisijiFuvhkU9McV5TpygfkernJ4UQe63JtcDQkrQ9HfchzqQz1kLCnTRor8jg
 
-  - name: "Mexico-Mexico+City|✭nginx_196"
+  - name: 'Mexico-Mexico+City|✭nginx_196'
     type: ss
     server: 147.78.1.27
     port: 990
@@ -1173,7 +1173,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Mexico-Mexico+City|✭nginx_197"
+  - name: 'Mexico-Mexico+City|✭nginx_197'
     type: ss
     server: 147.78.1.27
     port: 990
@@ -1181,7 +1181,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Montenegro-Podgorica|✭nginx_198"
+  - name: 'Montenegro-Podgorica|✭nginx_198'
     type: ss
     server: 95.164.249.61
     port: 54075
@@ -1189,7 +1189,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: o38yuvzSe3m5aDNpHtUPH1zGwbGEXXMDsGwVaub2SYEmHUa2WGZUjiezX3Vvva9CCzpjxYtuJLgKsSnsyKBf9ciPVba3y4o3
 
-  - name: "Morocco-Fes|✭nginx_199"
+  - name: 'Morocco-Fes|✭nginx_199'
     type: ss
     server: 188.214.157.154
     port: 990
@@ -1197,7 +1197,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Netherlands-Amsterdam|✭nginx_200"
+  - name: 'Netherlands-Amsterdam|✭nginx_200'
     type: ss
     server: 213.109.147.242
     port: 62685
@@ -1205,7 +1205,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: VpKABcOpNNA0l5G2AVOmw8
 
-  - name: "Norway-Oslo|✭nginx_201"
+  - name: 'Norway-Oslo|✭nginx_201'
     type: ss
     server: 185.5.38.111
     port: 55988
@@ -1213,7 +1213,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oHguU86Hoa41HAncW88o4kEspy8sos9tkbnK6uLvsgfMetuFKEChk2QY6eR3a67NXAmWe2kD8vbhZEyuw2Gx1hDPXXSgmimt
 
-  - name: "Norway-Oslo|✭nginx_202"
+  - name: 'Norway-Oslo|✭nginx_202'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1221,7 +1221,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: w78Sda3RQciJY89Vkk8zrvTphxBg4RKVLXujHreZp6MjXCKzmQ3RVc7xFLSpbRcCwtyLdU3MtUWVGgcNnCKxePfXdNy8Znz3
 
-  - name: "Norway-Oslo|✭nginx_203"
+  - name: 'Norway-Oslo|✭nginx_203'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1229,7 +1229,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oHguU86Hoa41HAncW88o4kEspy8sos9tkbnK6uLvsgfMetuFKEChk2QY6eR3a67NXAmWe2kD8vbhZEyuw2Gx1hDPXXSgmimt
 
-  - name: "Norway-Oslo|✭nginx_204"
+  - name: 'Norway-Oslo|✭nginx_204'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1237,7 +1237,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 2WJbjavFHQv7vgKhyHEMg7oYTLzQ98GqTTU7LmW2ZuCHy9eZLBkojcCygB1GydiWYmDiwhGHun3Xi9Dm4s9Ho9QSnCMeHaPH
 
-  - name: "Norway-Oslo|✭nginx_205"
+  - name: 'Norway-Oslo|✭nginx_205'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1245,7 +1245,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: JzBgepep1p3V6xxmDvpfM2GwmKJM2Gpj9KgRYwKBVwWybMe4iSNVqA4uafdJctEz3Kt5zGNHhryRm9XiQiJXEFxu2826jk7H
 
-  - name: "Norway-Oslo|✭nginx_206"
+  - name: 'Norway-Oslo|✭nginx_206'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1253,7 +1253,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: bg9rGNza4dcmnDAXMiBaa4pUf9q8fc2EDePQ96UDfJrmohfvK7L27bLsJW2jikJPw97LYW76ypYK347TtUKZ6ebkw5Zf6C4s
 
-  - name: "Norway-Oslo|✭nginx_207"
+  - name: 'Norway-Oslo|✭nginx_207'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1261,7 +1261,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: bZ87amPpdG7KuWM62bKtm1KHoowuVjnV8CKtq653ymHcg2dPYcPJfnaQ61stuAjr2ZiLDaqH56XpkxEYuwDzzRrMWieebWGt
 
-  - name: "Norway-Oslo|✭nginx_208"
+  - name: 'Norway-Oslo|✭nginx_208'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1269,7 +1269,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: iZDJs2CDckHKqJ5W7cpvCq2veqsqWn95iqs6Kr6F3YNnyMsk2uPdRrChQfShvH1v56Br1qWEW44qJna5QcMcZF7RCJmdvwuq
 
-  - name: "Norway-Oslo|✭nginx_209"
+  - name: 'Norway-Oslo|✭nginx_209'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1277,7 +1277,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: wUcoYw1SAVnxhKb1PGmqe69uCJjggJoDogXfPCmDCkvhnM1mJbExnxJethPBEiC49dsUdurRBCn9gh2U231vYAyYPSwtYAaw
 
-  - name: "Norway-Oslo|✭nginx_210"
+  - name: 'Norway-Oslo|✭nginx_210'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1285,7 +1285,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: eDaTAEdydK7MizwYH2LmRrEHf7NhStESQj4ubzhRPQKG1QPtpmnTqLkWGq8hiJVtMNhb7CYBdPxi4zNakyDdnJE5vnBueo7J
 
-  - name: "Norway-Oslo|✭nginx_211"
+  - name: 'Norway-Oslo|✭nginx_211'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1293,7 +1293,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: Lt8kpKewHp2rBaDcJPdDQeJX7QQuHpNkNF2g6zRkAdueq1LyNXLRgcGZTjqXpwuYJHenfMjqA4BprvbyJKm66Yv5W71z8RmC
 
-  - name: "Norway-Oslo|✭nginx_212"
+  - name: 'Norway-Oslo|✭nginx_212'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1301,7 +1301,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 3XNjxfSJbdo3YWsvrEG7E2hnZ85AP1qch9Dt8Fm4fZHeWEsFcnhKcoQgMNTdxridN2af1tzQVBt1S5oiSPCETFnhS3nmAYDa
 
-  - name: "Norway-Oslo|✭nginx_213"
+  - name: 'Norway-Oslo|✭nginx_213'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1309,7 +1309,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 2DvuGfaUJ7oM9E6mHWkZN9dAjPxtpndv4ckpPpyuexJxKLn6SpDQdBBJDFE6Gqj9MXpRHPDwYfNAqKgpBWTCWPrG4eDmnGTZ
 
-  - name: "Norway-Oslo|✭nginx_214"
+  - name: 'Norway-Oslo|✭nginx_214'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1317,7 +1317,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: tRVH6ZVjtjWCvREPvSgTx6jwmensa6of9w26NwnZ5n1V3bWeNBsq2A86K3RWGRyjA89Tqibnri4HuDtvE24KU2Sb65RUeVJz
 
-  - name: "Norway-Oslo|✭nginx_215"
+  - name: 'Norway-Oslo|✭nginx_215'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1325,7 +1325,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: wyRjDzZYC9E2aQ9iamj1vuj7ZckYVGLHn9yq92jRUUCdoz1AEKtSJRpiMPxXaiXfpXBJCp3gjsNbM9i2PbqeteCsXUWwDEAc
 
-  - name: "Norway-Oslo|✭nginx_216"
+  - name: 'Norway-Oslo|✭nginx_216'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1333,7 +1333,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 2UYegpEi8L3c8zmUQ5VB4LAkHuQtcFGypWFmActtkve4wnzsJnK1Chfj4izLJokYY8WegBuhABtp82nVxAtzs5JFftkQCHEd
 
-  - name: "Norway-Oslo|✭nginx_217"
+  - name: 'Norway-Oslo|✭nginx_217'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1341,7 +1341,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: YK6GT67yU6Sq5tddkkqgz28RAqh16VcftFxck4xbkXyYNQ98SCn4YG3vthQ6y1rJEfnzxmHt9UGvuin6kDnC1cRercRMTYs1
 
-  - name: "Norway-Oslo|✭nginx_218"
+  - name: 'Norway-Oslo|✭nginx_218'
     type: ss
     server: 185.5.38.111
     port: 55988
@@ -1349,7 +1349,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: BpFieMT6SobpqRiKFefvYu7eXk99XfCeWfjpntzSh81FfMx9R7rJW6LTmzH78StTEhCd7w32ZMxbGJZS98gpn1ozr9jAbMoa
 
-  - name: "Norway-Oslo|✭nginx_219"
+  - name: 'Norway-Oslo|✭nginx_219'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1357,7 +1357,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: wnJisPLkxtvHCoRZti2JtkQVkPH3FBBQMTBJeci2r1s1R6MtVib1gprsHcov1KaLssQJm6wkJAoBeXZ6F5x1ex9Sc18TThdx
 
-  - name: "Norway-Oslo|✭nginx_220"
+  - name: 'Norway-Oslo|✭nginx_220'
     type: ss
     server: 185.5.38.111
     port: 55988
@@ -1365,7 +1365,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 2EmWRS1TkS3TkxKApnrihb3aHjDSXRvT1T1K9U2Bruxrnp5A8zmpTxwwTNje6BkVqmn9BgRF6pq8qoRHCfZdcah7BLbjrpT1
 
-  - name: "Norway-Oslo|✭nginx_221"
+  - name: 'Norway-Oslo|✭nginx_221'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1373,7 +1373,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: qYu8NKq5EHv1UTYWye2Fc2kdsEk6jBEXt8Ar9E26nBCijhrWejwCYkGz4wK7oXT9V75SjLTiSjBsEShWJ3J5HeF14JRAKnqC
 
-  - name: "Norway-Oslo|✭nginx_222"
+  - name: 'Norway-Oslo|✭nginx_222'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1381,7 +1381,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cEj6eThfmuZsTFQq4829Q87x84hFSFDwSb76b81nYC5WJ47MAKWyG7q9tBTKbhRQJJtPpCmQyR5B8r1oALUYNxSuEAmVicp4
 
-  - name: "Norway-Oslo|✭nginx_223"
+  - name: 'Norway-Oslo|✭nginx_223'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1389,7 +1389,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: BpFieMT6SobpqRiKFefvYu7eXk99XfCeWfjpntzSh81FfMx9R7rJW6LTmzH78StTEhCd7w32ZMxbGJZS98gpn1ozr9jAbMoa
 
-  - name: "Norway-Oslo|✭nginx_224"
+  - name: 'Norway-Oslo|✭nginx_224'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1397,7 +1397,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 7TYPgynLAQr2uHr4wUqw3KZzH9Uyb89ExvNTKvWEmimnygAzj7E6FGfh8VijxNh5scjUtV4s1wS4B4ihvPnuDLCAHjRUbjMC
 
-  - name: "Norway-Oslo|✭nginx_225"
+  - name: 'Norway-Oslo|✭nginx_225'
     type: ss
     server: mx2.drawnrisha.one
     port: 55988
@@ -1405,7 +1405,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: WCvca7VF1142ECcQJBQSB69gHyvn4JbwXJM4q5AR9bFnG7TCXCbPhieVb2GZzRnTzG58rnYEMmsFtNF14c1XpmWg4mXpMghH
 
-  - name: "Philippines-Manila|✭nginx_226"
+  - name: 'Philippines-Manila|✭nginx_226'
     type: ss
     server: 154.90.37.139
     port: 990
@@ -1413,7 +1413,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Philippines-Manila|✭nginx_227"
+  - name: 'Philippines-Manila|✭nginx_227'
     type: ss
     server: 154.90.37.139
     port: 990
@@ -1421,7 +1421,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Poland-Warsaw|✭nginx_228"
+  - name: 'Poland-Warsaw|✭nginx_228'
     type: ss
     server: 51.77.53.200
     port: 8009
@@ -1429,7 +1429,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "Poland-Warsaw|✭nginx_229"
+  - name: 'Poland-Warsaw|✭nginx_229'
     type: ss
     server: 51.77.53.200
     port: 5001
@@ -1437,7 +1437,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Warsaw|✭nginx_230"
+  - name: 'Poland-Warsaw|✭nginx_230'
     type: ss
     server: 51.77.53.200
     port: 8090
@@ -1445,7 +1445,7 @@ proxies:
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
 
-  - name: "Poland-Warsaw|✭nginx_231"
+  - name: 'Poland-Warsaw|✭nginx_231'
     type: ss
     server: 51.77.53.200
     port: 8008
@@ -1453,7 +1453,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "Poland-Warsaw|✭nginx_232"
+  - name: 'Poland-Warsaw|✭nginx_232'
     type: ss
     server: 51.77.53.200
     port: 8881
@@ -1461,7 +1461,7 @@ proxies:
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
 
-  - name: "Poland-Warsaw|✭nginx_233"
+  - name: 'Poland-Warsaw|✭nginx_233'
     type: ss
     server: 51.77.53.200
     port: 8090
@@ -1469,7 +1469,7 @@ proxies:
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
 
-  - name: "Poland-Warsaw|✭nginx_234"
+  - name: 'Poland-Warsaw|✭nginx_234'
     type: ss
     server: 51.77.53.200
     port: 5004
@@ -1477,7 +1477,7 @@ proxies:
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
 
-  - name: "Poland-Warsaw|✭nginx_235"
+  - name: 'Poland-Warsaw|✭nginx_235'
     type: ss
     server: 51.77.53.200
     port: 7002
@@ -1485,7 +1485,7 @@ proxies:
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
 
-  - name: "Poland-Warsaw|✭nginx_236"
+  - name: 'Poland-Warsaw|✭nginx_236'
     type: ss
     server: 51.77.53.200
     port: 6679
@@ -1493,7 +1493,7 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
 
-  - name: "Poland-Warsaw|✭nginx_237"
+  - name: 'Poland-Warsaw|✭nginx_237'
     type: ss
     server: 51.77.53.200
     port: 7306
@@ -1501,7 +1501,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "Poland-Warsaw|✭nginx_238"
+  - name: 'Poland-Warsaw|✭nginx_238'
     type: ss
     server: 51.77.53.200
     port: 5601
@@ -1509,7 +1509,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Warsaw|✭nginx_239"
+  - name: 'Poland-Warsaw|✭nginx_239'
     type: ss
     server: 51.77.53.200
     port: 6379
@@ -1517,7 +1517,7 @@ proxies:
     cipher: aes-256-gcm
     password: zDNVedRFPQexG9v
 
-  - name: "Poland-Warsaw|✭nginx_240"
+  - name: 'Poland-Warsaw|✭nginx_240'
     type: ss
     server: 51.77.53.200
     port: 8118
@@ -1525,7 +1525,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "Poland-Warsaw|✭nginx_241"
+  - name: 'Poland-Warsaw|✭nginx_241'
     type: ss
     server: 51.77.53.200
     port: 7307
@@ -1533,7 +1533,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "Poland-Warsaw|✭nginx_242"
+  - name: 'Poland-Warsaw|✭nginx_242'
     type: ss
     server: 51.77.53.200
     port: 3389
@@ -1541,7 +1541,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Warsaw|✭nginx_243"
+  - name: 'Poland-Warsaw|✭nginx_243'
     type: ss
     server: 92.118.205.228
     port: 990
@@ -1549,7 +1549,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Poland-Warsaw|✭nginx_244"
+  - name: 'Poland-Warsaw|✭nginx_244'
     type: ss
     server: 51.77.53.200
     port: 5000
@@ -1557,7 +1557,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Warsaw|✭nginx_245"
+  - name: 'Poland-Warsaw|✭nginx_245'
     type: ss
     server: 51.77.53.200
     port: 8080
@@ -1565,7 +1565,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "Poland-Warsaw|✭nginx_246"
+  - name: 'Poland-Warsaw|✭nginx_246'
     type: ss
     server: 45.144.48.63
     port: 57456
@@ -1573,7 +1573,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: d3837224ed465f00
 
-  - name: "Poland-Warsaw|✭nginx_247"
+  - name: 'Poland-Warsaw|✭nginx_247'
     type: ss
     server: 51.77.53.200
     port: 6697
@@ -1581,7 +1581,7 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
 
-  - name: "Poland-Warsaw|✭nginx_248"
+  - name: 'Poland-Warsaw|✭nginx_248'
     type: ss
     server: 51.77.53.200
     port: 443
@@ -1589,7 +1589,7 @@ proxies:
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
 
-  - name: "Poland-Warsaw|✭nginx_249"
+  - name: 'Poland-Warsaw|✭nginx_249'
     type: ss
     server: 51.77.53.200
     port: 5001
@@ -1597,7 +1597,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Warsaw|✭nginx_250"
+  - name: 'Poland-Warsaw|✭nginx_250'
     type: ss
     server: 51.77.53.200
     port: 8118
@@ -1605,7 +1605,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "Poland-Warsaw|✭nginx_251"
+  - name: 'Poland-Warsaw|✭nginx_251'
     type: ss
     server: 51.77.53.200
     port: 4444
@@ -1613,7 +1613,7 @@ proxies:
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
 
-  - name: "Poland-Warsaw|✭nginx_252"
+  - name: 'Poland-Warsaw|✭nginx_252'
     type: ss
     server: 51.77.53.200
     port: 7307
@@ -1621,7 +1621,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "Poland-Warsaw|✭nginx_253"
+  - name: 'Poland-Warsaw|✭nginx_253'
     type: ss
     server: 51.77.53.200
     port: 5003
@@ -1629,7 +1629,7 @@ proxies:
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
 
-  - name: "Poland-Warsaw|✭nginx_254"
+  - name: 'Poland-Warsaw|✭nginx_254'
     type: ss
     server: 51.77.53.200
     port: 2376
@@ -1637,7 +1637,7 @@ proxies:
     cipher: aes-256-gcm
     password: faBAoD54k87UJG7
 
-  - name: "Poland-Warsaw|✭nginx_255"
+  - name: 'Poland-Warsaw|✭nginx_255'
     type: ss
     server: war.ssvpnapp.win
     port: 57456
@@ -1645,7 +1645,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: d3837224ed465f00
 
-  - name: "Poland-Warsaw|✭nginx_256"
+  - name: 'Poland-Warsaw|✭nginx_256'
     type: ss
     server: 51.77.53.200
     port: 8119
@@ -1653,7 +1653,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "Poland-Warsaw|✭nginx_257"
+  - name: 'Poland-Warsaw|✭nginx_257'
     type: ss
     server: 51.77.53.200
     port: 2376
@@ -1661,7 +1661,7 @@ proxies:
     cipher: aes-256-gcm
     password: faBAoD54k87UJG7
 
-  - name: "Poland-Warsaw|✭nginx_258"
+  - name: 'Poland-Warsaw|✭nginx_258'
     type: ss
     server: 51.77.53.200
     port: 7001
@@ -1669,7 +1669,7 @@ proxies:
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
 
-  - name: "Poland-Warsaw|✭nginx_259"
+  - name: 'Poland-Warsaw|✭nginx_259'
     type: ss
     server: 51.77.53.200
     port: 3306
@@ -1677,7 +1677,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Warsaw|✭nginx_260"
+  - name: 'Poland-Warsaw|✭nginx_260'
     type: ss
     server: 51.77.53.200
     port: 3306
@@ -1685,7 +1685,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Warsaw|✭nginx_261"
+  - name: 'Poland-Warsaw|✭nginx_261'
     type: ss
     server: 51.77.53.200
     port: 7001
@@ -1693,7 +1693,7 @@ proxies:
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
 
-  - name: "Poland-Warsaw|✭nginx_262"
+  - name: 'Poland-Warsaw|✭nginx_262'
     type: ss
     server: 51.77.53.200
     port: 8882
@@ -1701,7 +1701,7 @@ proxies:
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
 
-  - name: "Poland-Warsaw|✭nginx_263"
+  - name: 'Poland-Warsaw|✭nginx_263'
     type: ss
     server: 51.77.53.200
     port: 2375
@@ -1709,7 +1709,7 @@ proxies:
     cipher: aes-256-gcm
     password: faBAoD54k87UJG7
 
-  - name: "Poland-Warsaw|✭nginx_264"
+  - name: 'Poland-Warsaw|✭nginx_264'
     type: ss
     server: 51.77.53.200
     port: 9101
@@ -1717,7 +1717,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "Poland-Warsaw|✭nginx_265"
+  - name: 'Poland-Warsaw|✭nginx_265'
     type: ss
     server: 51.77.53.200
     port: 8000
@@ -1725,7 +1725,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "Poland-Warsaw|✭nginx_266"
+  - name: 'Poland-Warsaw|✭nginx_266'
     type: ss
     server: 51.77.53.200
     port: 8091
@@ -1733,7 +1733,7 @@ proxies:
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
 
-  - name: "Poland-Warsaw|✭nginx_267"
+  - name: 'Poland-Warsaw|✭nginx_267'
     type: ss
     server: 51.77.53.200
     port: 9102
@@ -1741,7 +1741,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "Poland-Warsaw|✭nginx_268"
+  - name: 'Poland-Warsaw|✭nginx_268'
     type: ss
     server: 51.77.53.200
     port: 3389
@@ -1749,7 +1749,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Warsaw|✭nginx_269"
+  - name: 'Poland-Warsaw|✭nginx_269'
     type: ss
     server: 51.77.53.200
     port: 5500
@@ -1757,7 +1757,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "Poland-Warsaw|✭nginx_270"
+  - name: 'Poland-Warsaw|✭nginx_270'
     type: ss
     server: 51.77.53.200
     port: 7002
@@ -1765,7 +1765,7 @@ proxies:
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
 
-  - name: "Poland-Warsaw|✭nginx_271"
+  - name: 'Poland-Warsaw|✭nginx_271'
     type: ss
     server: 51.77.53.200
     port: 8888
@@ -1773,7 +1773,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Warsaw|✭nginx_272"
+  - name: 'Poland-Warsaw|✭nginx_272'
     type: ss
     server: 51.77.53.200
     port: 6679
@@ -1781,7 +1781,7 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
 
-  - name: "Poland-Wroclaw|✭nginx_273"
+  - name: 'Poland-Wroclaw|✭nginx_273'
     type: ss
     server: 54.36.174.181
     port: 4444
@@ -1789,7 +1789,7 @@ proxies:
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
 
-  - name: "Poland-Wroclaw|✭nginx_274"
+  - name: 'Poland-Wroclaw|✭nginx_274'
     type: ss
     server: 54.36.174.181
     port: 7002
@@ -1797,7 +1797,7 @@ proxies:
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
 
-  - name: "Poland-Wroclaw|✭nginx_275"
+  - name: 'Poland-Wroclaw|✭nginx_275'
     type: ss
     server: 54.36.174.181
     port: 5000
@@ -1805,7 +1805,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Wroclaw|✭nginx_276"
+  - name: 'Poland-Wroclaw|✭nginx_276'
     type: ss
     server: 54.36.174.181
     port: 3306
@@ -1813,7 +1813,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Wroclaw|✭nginx_277"
+  - name: 'Poland-Wroclaw|✭nginx_277'
     type: ss
     server: 54.36.174.181
     port: 8000
@@ -1821,7 +1821,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "Poland-Wroclaw|✭nginx_278"
+  - name: 'Poland-Wroclaw|✭nginx_278'
     type: ss
     server: 54.36.174.181
     port: 2376
@@ -1829,7 +1829,7 @@ proxies:
     cipher: aes-256-gcm
     password: faBAoD54k87UJG7
 
-  - name: "Poland-Wroclaw|✭nginx_279"
+  - name: 'Poland-Wroclaw|✭nginx_279'
     type: ss
     server: 54.36.174.181
     port: 3389
@@ -1837,7 +1837,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Wroclaw|✭nginx_280"
+  - name: 'Poland-Wroclaw|✭nginx_280'
     type: ss
     server: 54.36.174.181
     port: 9102
@@ -1845,7 +1845,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "Poland-Wroclaw|✭nginx_281"
+  - name: 'Poland-Wroclaw|✭nginx_281'
     type: ss
     server: 54.36.174.181
     port: 8881
@@ -1853,7 +1853,7 @@ proxies:
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
 
-  - name: "Poland-Wroclaw|✭nginx_282"
+  - name: 'Poland-Wroclaw|✭nginx_282'
     type: ss
     server: 54.36.174.181
     port: 8882
@@ -1861,7 +1861,7 @@ proxies:
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
 
-  - name: "Poland-Wroclaw|✭nginx_283"
+  - name: 'Poland-Wroclaw|✭nginx_283'
     type: ss
     server: 54.36.174.181
     port: 5003
@@ -1869,7 +1869,7 @@ proxies:
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
 
-  - name: "Poland-Wroclaw|✭nginx_284"
+  - name: 'Poland-Wroclaw|✭nginx_284'
     type: ss
     server: 54.36.174.181
     port: 8091
@@ -1877,7 +1877,7 @@ proxies:
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
 
-  - name: "Poland-Wroclaw|✭nginx_285"
+  - name: 'Poland-Wroclaw|✭nginx_285'
     type: ss
     server: 54.36.174.181
     port: 8008
@@ -1885,7 +1885,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "Poland-Wroclaw|✭nginx_286"
+  - name: 'Poland-Wroclaw|✭nginx_286'
     type: ss
     server: 54.36.174.181
     port: 5500
@@ -1893,7 +1893,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "Poland-Wroclaw|✭nginx_287"
+  - name: 'Poland-Wroclaw|✭nginx_287'
     type: ss
     server: 54.36.174.181
     port: 2375
@@ -1901,7 +1901,7 @@ proxies:
     cipher: aes-256-gcm
     password: faBAoD54k87UJG7
 
-  - name: "Poland-Wroclaw|✭nginx_288"
+  - name: 'Poland-Wroclaw|✭nginx_288'
     type: ss
     server: 54.36.174.181
     port: 8009
@@ -1909,7 +1909,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "Poland-Wroclaw|✭nginx_289"
+  - name: 'Poland-Wroclaw|✭nginx_289'
     type: ss
     server: 54.36.174.181
     port: 8000
@@ -1917,7 +1917,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "Poland-Wroclaw|✭nginx_290"
+  - name: 'Poland-Wroclaw|✭nginx_290'
     type: ss
     server: 54.36.174.181
     port: 9102
@@ -1925,7 +1925,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "Poland-Wroclaw|✭nginx_291"
+  - name: 'Poland-Wroclaw|✭nginx_291'
     type: ss
     server: 54.36.174.181
     port: 7306
@@ -1933,7 +1933,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "Poland-Wroclaw|✭nginx_292"
+  - name: 'Poland-Wroclaw|✭nginx_292'
     type: ss
     server: 54.36.174.181
     port: 8888
@@ -1941,7 +1941,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Wroclaw|✭nginx_293"
+  - name: 'Poland-Wroclaw|✭nginx_293'
     type: ss
     server: 54.36.174.181
     port: 5000
@@ -1949,7 +1949,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Wroclaw|✭nginx_294"
+  - name: 'Poland-Wroclaw|✭nginx_294'
     type: ss
     server: 54.36.174.181
     port: 7306
@@ -1957,7 +1957,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "Poland-Wroclaw|✭nginx_295"
+  - name: 'Poland-Wroclaw|✭nginx_295'
     type: ss
     server: 54.36.174.181
     port: 9101
@@ -1965,7 +1965,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "Poland-Wroclaw|✭nginx_296"
+  - name: 'Poland-Wroclaw|✭nginx_296'
     type: ss
     server: 54.36.174.181
     port: 5601
@@ -1973,7 +1973,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Wroclaw|✭nginx_297"
+  - name: 'Poland-Wroclaw|✭nginx_297'
     type: ss
     server: 54.36.174.181
     port: 8090
@@ -1981,7 +1981,7 @@ proxies:
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
 
-  - name: "Poland-Wroclaw|✭nginx_298"
+  - name: 'Poland-Wroclaw|✭nginx_298'
     type: ss
     server: 54.36.174.181
     port: 5600
@@ -1989,7 +1989,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Wroclaw|✭nginx_299"
+  - name: 'Poland-Wroclaw|✭nginx_299'
     type: ss
     server: 54.36.174.181
     port: 6697
@@ -1997,7 +1997,7 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
 
-  - name: "Poland-Wroclaw|✭nginx_300"
+  - name: 'Poland-Wroclaw|✭nginx_300'
     type: ss
     server: 54.36.174.181
     port: 6679
@@ -2005,7 +2005,7 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
 
-  - name: "Poland-Wroclaw|✭nginx_301"
+  - name: 'Poland-Wroclaw|✭nginx_301'
     type: ss
     server: 54.36.174.181
     port: 5001
@@ -2013,7 +2013,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Wroclaw|✭nginx_302"
+  - name: 'Poland-Wroclaw|✭nginx_302'
     type: ss
     server: 54.36.174.181
     port: 443
@@ -2021,7 +2021,7 @@ proxies:
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
 
-  - name: "Poland-Wroclaw|✭nginx_303"
+  - name: 'Poland-Wroclaw|✭nginx_303'
     type: ss
     server: 54.36.174.181
     port: 8009
@@ -2029,7 +2029,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "Poland-Wroclaw|✭nginx_304"
+  - name: 'Poland-Wroclaw|✭nginx_304'
     type: ss
     server: 54.36.174.181
     port: 7001
@@ -2037,7 +2037,7 @@ proxies:
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
 
-  - name: "Poland-Wroclaw|✭nginx_305"
+  - name: 'Poland-Wroclaw|✭nginx_305'
     type: ss
     server: 54.36.174.181
     port: 8118
@@ -2045,7 +2045,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "Poland-Wroclaw|✭nginx_306"
+  - name: 'Poland-Wroclaw|✭nginx_306'
     type: ss
     server: 54.36.174.181
     port: 5600
@@ -2053,7 +2053,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "Poland-Wroclaw|✭nginx_307"
+  - name: 'Poland-Wroclaw|✭nginx_307'
     type: ss
     server: 54.36.174.181
     port: 8119
@@ -2061,7 +2061,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "Poland-Wroclaw|✭nginx_308"
+  - name: 'Poland-Wroclaw|✭nginx_308'
     type: ss
     server: 54.36.174.181
     port: 8080
@@ -2069,7 +2069,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "Poland-Wroclaw|✭nginx_309"
+  - name: 'Poland-Wroclaw|✭nginx_309'
     type: ss
     server: 54.36.174.181
     port: 5004
@@ -2077,7 +2077,7 @@ proxies:
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
 
-  - name: "Poland-Wroclaw|✭nginx_310"
+  - name: 'Poland-Wroclaw|✭nginx_310'
     type: ss
     server: 54.36.174.181
     port: 6379
@@ -2085,7 +2085,7 @@ proxies:
     cipher: aes-256-gcm
     password: zDNVedRFPQexG9v
 
-  - name: "Poland-Wroclaw|✭nginx_311"
+  - name: 'Poland-Wroclaw|✭nginx_311'
     type: ss
     server: 54.36.174.181
     port: 7002
@@ -2093,7 +2093,7 @@ proxies:
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
 
-  - name: "Poland-Wroclaw|✭nginx_312"
+  - name: 'Poland-Wroclaw|✭nginx_312'
     type: ss
     server: 54.36.174.181
     port: 7307
@@ -2101,7 +2101,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "Puerto+Rico-San+Juan|✭nginx_313"
+  - name: 'Puerto+Rico-San+Juan|✭nginx_313'
     type: ss
     server: 185.47.255.22
     port: 990
@@ -2109,7 +2109,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Puerto+Rico-San+Juan|✭nginx_314"
+  - name: 'Puerto+Rico-San+Juan|✭nginx_314'
     type: ss
     server: 185.47.255.22
     port: 990
@@ -2117,7 +2117,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Russia-Moscow|✭nginx_315"
+  - name: 'Russia-Moscow|✭nginx_315'
     type: ss
     server: 185.126.239.250
     port: 990
@@ -2125,7 +2125,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Russia-Moscow|✭nginx_316"
+  - name: 'Russia-Moscow|✭nginx_316'
     type: ss
     server: 45.151.62.54
     port: 28825
@@ -2133,7 +2133,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 0zyDRZ1XmNXaaCAN7KEA8a
 
-  - name: "Singapore-Singapore|✭nginx_318"
+  - name: 'Singapore-Singapore|✭nginx_318'
     type: ss
     server: 156.244.9.92
     port: 990
@@ -2141,7 +2141,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Singapore-Singapore|✭nginx_319"
+  - name: 'Singapore-Singapore|✭nginx_319'
     type: ss
     server: 154.196.244.22
     port: 16012
@@ -2149,7 +2149,7 @@ proxies:
     cipher: aes-256-gcm
     password: XO1SG6ZYE5JP7FW0
 
-  - name: "Singapore-Singapore|✭nginx_320"
+  - name: 'Singapore-Singapore|✭nginx_320'
     type: ss
     server: 64.176.85.73
     port: 1866
@@ -2157,7 +2157,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oXGp1+ihlfKg826H
 
-  - name: "South Korea-Geumcheon-gu|✭nginx_322"
+  - name: 'South Korea-Geumcheon-gu|✭nginx_322'
     type: vmess
     server: 27.124.8.230
     port: 443
@@ -2174,7 +2174,7 @@ proxies:
     skip-cert-verify: true
     servername: www.98355923.xyz
 
-  - name: "South+Africa-Cape+Town|✭nginx_323"
+  - name: 'South+Africa-Cape+Town|✭nginx_323'
     type: ss
     server: 129.232.134.112
     port: 990
@@ -2182,7 +2182,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "South+Korea-Seoul|✭nginx_324"
+  - name: 'South+Korea-Seoul|✭nginx_324'
     type: ss
     server: south-korea-2.keenvpn.me
     port: 443
@@ -2190,7 +2190,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 2afbc97400ca71c8f3306f9843a6e1c2
 
-  - name: "Spain-Barcelona|✭nginx_325"
+  - name: 'Spain-Barcelona|✭nginx_325'
     type: ss
     server: 45.154.206.192
     port: 990
@@ -2198,7 +2198,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Spain-Madrid|✭nginx_326"
+  - name: 'Spain-Madrid|✭nginx_326'
     type: vmess
     server: 67.220.66.194
     port: 443
@@ -2213,7 +2213,7 @@ proxies:
     skip-cert-verify: true
     servername: 67.220.66.194
 
-  - name: "Sweden-Stockholm|✭nginx_327"
+  - name: 'Sweden-Stockholm|✭nginx_327'
     type: ss
     server: 46.246.98.155
     port: 44013
@@ -2221,7 +2221,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: UDcjYQ6Z6AIWxViZpqyOmO
 
-  - name: "Switzerland-Zurich|✭nginx_328"
+  - name: 'Switzerland-Zurich|✭nginx_328'
     type: ss
     server: 156.146.62.161
     port: 443
@@ -2229,7 +2229,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "Switzerland-Zurich|✭nginx_329"
+  - name: 'Switzerland-Zurich|✭nginx_329'
     type: ss
     server: 156.146.62.163
     port: 443
@@ -2237,7 +2237,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "Switzerland-Zurich|✭nginx_330"
+  - name: 'Switzerland-Zurich|✭nginx_330'
     type: ss
     server: 156.146.62.164
     port: 443
@@ -2245,7 +2245,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "Switzerland-Zurich|✭nginx_331"
+  - name: 'Switzerland-Zurich|✭nginx_331'
     type: ss
     server: 204.136.10.115
     port: 1866
@@ -2253,7 +2253,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oXGp1+ihlfKg826H
 
-  - name: "Switzerland-Zurich|✭nginx_332"
+  - name: 'Switzerland-Zurich|✭nginx_332'
     type: ss
     server: 156.146.62.162
     port: 443
@@ -2261,7 +2261,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "Thailand-Bang+Rak|✭nginx_333"
+  - name: 'Thailand-Bang+Rak|✭nginx_333'
     type: ss
     server: 119.59.98.58
     port: 990
@@ -2269,7 +2269,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_334"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_334'
     type: ss
     server: 103.104.247.47
     port: 8080
@@ -2277,7 +2277,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oZIoA69Q8yhcQV8ka3Pa3A
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_335"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_335'
     type: ss
     server: 208.67.105.87
     port: 42501
@@ -2285,7 +2285,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: nq96KftrZAj3LuFQESqmn44Mo5oCuo2cipoEsae25mrmHG2oJ4VT37scBfVBpN5DWtUELZutVhhXs8Le5B8fZ9hLn9ytwvbf
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_336"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_336'
     type: ss
     server: 193.29.139.133
     port: 8080
@@ -2293,7 +2293,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_337"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_337'
     type: ss
     server: 208.67.105.196
     port: 42029
@@ -2301,7 +2301,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: SjdGCHwafjktt1rzpGxTKYTvVBWb8Xa6E5DTr6MzbdHQSwvpLiDczj3n6MBjy2uyFSzgqgvCWsDQmpM4VQzfPzyGYF58wdyD
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_338"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_338'
     type: ss
     server: 149.34.244.77
     port: 443
@@ -2309,7 +2309,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_339"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_339'
     type: ss
     server: 198.105.123.190
     port: 46902
@@ -2317,7 +2317,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 2UrSffeNABXGXXfNhoL6xBUnh1RzqMizrQ2s9QfC38P2YPuYPRTqW5zZg6jGisiNhkzM4SRjF6nzvFb18GPtESWoXWjhqyC8
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_341"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_341'
     type: ss
     server: 103.104.247.49
     port: 8080
@@ -2325,7 +2325,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oZIoA69Q8yhcQV8ka3Pa3A
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_342"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_342'
     type: ss
     server: 149.34.244.72
     port: 443
@@ -2333,7 +2333,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_343"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_343'
     type: ss
     server: 193.29.139.206
     port: 8080
@@ -2341,7 +2341,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_344"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_344'
     type: ss
     server: 193.29.139.227
     port: 8080
@@ -2349,7 +2349,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_345"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_345'
     type: ss
     server: 193.29.139.202
     port: 8080
@@ -2357,7 +2357,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oZIoA69Q8yhcQV8ka3Pa3A
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_346"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_346'
     type: ss
     server: 149.34.244.68
     port: 443
@@ -2365,7 +2365,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_347"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_347'
     type: ss
     server: 193.29.139.189
     port: 8080
@@ -2373,7 +2373,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: QCXDxuDlTTMD7jtgHUjIoj
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_348"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_348'
     type: ss
     server: 149.34.244.82
     port: 443
@@ -2381,7 +2381,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_349"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_349'
     type: ss
     server: 149.34.244.80
     port: 443
@@ -2389,7 +2389,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_350"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_350'
     type: ss
     server: 193.29.139.251
     port: 8080
@@ -2397,7 +2397,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oZIoA69Q8yhcQV8ka3Pa3A
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_352"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_352'
     type: ss
     server: 193.29.139.157
     port: 8080
@@ -2405,7 +2405,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
 
-  - name: "The+Netherlands-Amsterdam|✭nginx_353"
+  - name: 'The+Netherlands-Amsterdam|✭nginx_353'
     type: ss
     server: 193.29.139.138
     port: 8080
@@ -2413,7 +2413,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: QCXDxuDlTTMD7jtgHUjIoj
 
-  - name: "The+Netherlands-Meppel|✭nginx_354"
+  - name: 'The+Netherlands-Meppel|✭nginx_354'
     type: ss
     server: 103.106.1.92
     port: 23492
@@ -2421,7 +2421,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: yMX9WGPgUEcRZmlaa0YHHC
 
-  - name: "Turkey-Ataşehir|✭nginx_355"
+  - name: 'Turkey-Ataşehir|✭nginx_355'
     type: ss
     server: 185.24.151.214
     port: 52952
@@ -2429,7 +2429,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj
 
-  - name: "Turkey-Ataşehir|✭nginx_356"
+  - name: 'Turkey-Ataşehir|✭nginx_356'
     type: ss
     server: exchange.gameaurela.click
     port: 52952
@@ -2437,7 +2437,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj
 
-  - name: "Türkiye-Istanbul|✭nginx_357"
+  - name: 'Türkiye-Istanbul|✭nginx_357'
     type: ss
     server: 185.123.101.241
     port: 990
@@ -2445,7 +2445,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "Türkiye-Izmir|✭nginx_358"
+  - name: 'Türkiye-Izmir|✭nginx_358'
     type: ss
     server: tr1.ssocks.wiki
     port: 8388
@@ -2453,7 +2453,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: ZTFkZ
 
-  - name: "Türkiye-Izmir|✭nginx_359"
+  - name: 'Türkiye-Izmir|✭nginx_359'
     type: ss
     server: uk1.ssocks.wiki
     port: 8388
@@ -2461,7 +2461,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: ZTFkZ
 
-  - name: "Türkiye-Izmir|✭nginx_360"
+  - name: 'Türkiye-Izmir|✭nginx_360'
     type: ss
     server: 95.164.34.7
     port: 8388
@@ -2469,7 +2469,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: ZTFkZ
 
-  - name: "Ukraine-Kyiv|✭nginx_361"
+  - name: 'Ukraine-Kyiv|✭nginx_361'
     type: vmess
     server: 104.252.127.152
     port: 32288
@@ -2478,7 +2478,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "United Kingdom-London|✭nginx_363"
+  - name: 'United Kingdom-London|✭nginx_363'
     type: vmess
     server: 149.7.16.149
     port: 37101
@@ -2487,7 +2487,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "United Kingdom-London|✭nginx_364"
+  - name: 'United Kingdom-London|✭nginx_364'
     type: vmess
     server: 46.250.253.232
     port: 46617
@@ -2496,7 +2496,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "United States-Atlanta|✭nginx_365"
+  - name: 'United States-Atlanta|✭nginx_365'
     type: vmess
     server: 172.111.36.108
     port: 443
@@ -2513,7 +2513,7 @@ proxies:
     skip-cert-verify: true
     servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
 
-  - name: "United States-Buffalo|✭nginx_366"
+  - name: 'United States-Buffalo|✭nginx_366'
     type: vmess
     server: ny1.bulkcash.top
     port: 41507
@@ -2528,9 +2528,9 @@ proxies:
         Host: ny1.bulkcash.top
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "United States-Los Angeles|✭nginx_367"
+  - name: 'United States-Los Angeles|✭nginx_367'
     type: vmess
     server: 38.54.94.122
     port: 2053
@@ -2543,9 +2543,9 @@ proxies:
       path: /L0229-16
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "United States-Los Angeles|✭nginx_368"
+  - name: 'United States-Los Angeles|✭nginx_368'
     type: vmess
     server: 38.54.94.122
     port: 2053
@@ -2558,9 +2558,9 @@ proxies:
       path: /L0229-16
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "United States-Los Angeles|✭nginx_369"
+  - name: 'United States-Los Angeles|✭nginx_369'
     type: vmess
     server: 2.58.87.221
     port: 12269
@@ -2572,7 +2572,7 @@ proxies:
     ws-opts:
       path: /
 
-  - name: "United States-Miami|✭nginx_370"
+  - name: 'United States-Miami|✭nginx_370'
     type: vmess
     server: 172.233.160.249
     port: 443
@@ -2587,7 +2587,7 @@ proxies:
     skip-cert-verify: true
     servername: jahfkjha.cfd
 
-  - name: "United States-New York|✭nginx_371"
+  - name: 'United States-New York|✭nginx_371'
     type: vmess
     server: 38.99.82.193
     port: 443
@@ -2602,7 +2602,7 @@ proxies:
     skip-cert-verify: true
     servername: tilebani.com
 
-  - name: "United States-San Jose|✭nginx_372"
+  - name: 'United States-San Jose|✭nginx_372'
     type: vmess
     server: 38.174.190.88
     port: 38007
@@ -2615,9 +2615,9 @@ proxies:
       path: /path/023114310920
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "United States-San Jose|✭nginx_373"
+  - name: 'United States-San Jose|✭nginx_373'
     type: vmess
     server: 38.14.107.225
     port: 38003
@@ -2632,7 +2632,7 @@ proxies:
     skip-cert-verify: true
     servername: www.23179753.xyz
 
-  - name: "United States-San Jose|✭nginx_374"
+  - name: 'United States-San Jose|✭nginx_374'
     type: vmess
     server: 38.174.190.80
     port: 38007
@@ -2645,9 +2645,9 @@ proxies:
       path: /path/102206282005
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "United States-San Jose|✭nginx_375"
+  - name: 'United States-San Jose|✭nginx_375'
     type: vmess
     server: 38.14.107.228
     port: 38003
@@ -2662,9 +2662,9 @@ proxies:
         Host: www.23179753.xyz
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "United States-San Jose|✭nginx_376"
+  - name: 'United States-San Jose|✭nginx_376'
     type: vmess
     server: 38.14.107.226
     port: 38003
@@ -2677,9 +2677,9 @@ proxies:
       path: /path/340434130032
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "United States-San Jose|✭nginx_377"
+  - name: 'United States-San Jose|✭nginx_377'
     type: vmess
     server: 38.174.190.75
     port: 38007
@@ -2692,9 +2692,9 @@ proxies:
       path: /path/251724052818
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "United States-San Jose|✭nginx_378"
+  - name: 'United States-San Jose|✭nginx_378'
     type: vmess
     server: 38.174.190.72
     port: 38007
@@ -2707,9 +2707,9 @@ proxies:
       path: /path/100318230503
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "United States-San Jose|✭nginx_379"
+  - name: 'United States-San Jose|✭nginx_379'
     type: vmess
     server: 38.14.107.228
     port: 38003
@@ -2724,7 +2724,7 @@ proxies:
     skip-cert-verify: true
     servername: www.23179753.xyz
 
-  - name: "United States-San Jose|✭nginx_380"
+  - name: 'United States-San Jose|✭nginx_380'
     type: vmess
     server: 38.14.107.233
     port: 38003
@@ -2739,7 +2739,7 @@ proxies:
     skip-cert-verify: true
     servername: www.23179753.xyz
 
-  - name: "United+Arab+Emirates-Dubai|✭nginx_381"
+  - name: 'United+Arab+Emirates-Dubai|✭nginx_381'
     type: ss
     server: 40.172.178.194
     port: 443
@@ -2747,7 +2747,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: u17T3BvpYaaiuW2c
 
-  - name: "United+Kingdom-City+of+London|✭nginx_382"
+  - name: 'United+Kingdom-City+of+London|✭nginx_382'
     type: ss
     server: series-a2.varzesh360.co
     port: 443
@@ -2755,7 +2755,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: mps3FwmDjLrWaOVg
 
-  - name: "United+Kingdom-London|✭nginx_383"
+  - name: 'United+Kingdom-London|✭nginx_383'
     type: ss
     server: 212.102.53.78
     port: 443
@@ -2763,7 +2763,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+Kingdom-London|✭nginx_384"
+  - name: 'United+Kingdom-London|✭nginx_384'
     type: ss
     server: 212.102.53.81
     port: 443
@@ -2771,7 +2771,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+Kingdom-London|✭nginx_385"
+  - name: 'United+Kingdom-London|✭nginx_385'
     type: ss
     server: 212.102.53.198
     port: 443
@@ -2779,7 +2779,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+Kingdom-London|✭nginx_386"
+  - name: 'United+Kingdom-London|✭nginx_386'
     type: ss
     server: 145.239.6.202
     port: 3306
@@ -2787,7 +2787,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+Kingdom-London|✭nginx_387"
+  - name: 'United+Kingdom-London|✭nginx_387'
     type: ss
     server: 145.239.6.202
     port: 8888
@@ -2795,7 +2795,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+Kingdom-London|✭nginx_388"
+  - name: 'United+Kingdom-London|✭nginx_388'
     type: ss
     server: 145.239.6.202
     port: 2376
@@ -2803,7 +2803,7 @@ proxies:
     cipher: aes-256-gcm
     password: faBAoD54k87UJG7
 
-  - name: "United+Kingdom-London|✭nginx_389"
+  - name: 'United+Kingdom-London|✭nginx_389'
     type: ss
     server: 145.239.6.202
     port: 3389
@@ -2811,7 +2811,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+Kingdom-London|✭nginx_390"
+  - name: 'United+Kingdom-London|✭nginx_390'
     type: ss
     server: 145.239.6.202
     port: 5000
@@ -2819,7 +2819,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+Kingdom-London|✭nginx_391"
+  - name: 'United+Kingdom-London|✭nginx_391'
     type: ss
     server: 145.239.6.202
     port: 6679
@@ -2827,7 +2827,7 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
 
-  - name: "United+Kingdom-London|✭nginx_393"
+  - name: 'United+Kingdom-London|✭nginx_393'
     type: ss
     server: 145.239.6.202
     port: 9101
@@ -2835,7 +2835,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "United+Kingdom-London|✭nginx_394"
+  - name: 'United+Kingdom-London|✭nginx_394'
     type: ss
     server: 212.102.53.80
     port: 443
@@ -2843,7 +2843,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+Kingdom-London|✭nginx_395"
+  - name: 'United+Kingdom-London|✭nginx_395'
     type: ss
     server: 212.102.53.197
     port: 443
@@ -2851,7 +2851,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+Kingdom-London|✭nginx_396"
+  - name: 'United+Kingdom-London|✭nginx_396'
     type: ss
     server: 212.102.53.196
     port: 443
@@ -2859,7 +2859,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+Kingdom-London|✭nginx_397"
+  - name: 'United+Kingdom-London|✭nginx_397'
     type: ss
     server: 145.239.6.202
     port: 8118
@@ -2867,7 +2867,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "United+Kingdom-London|✭nginx_398"
+  - name: 'United+Kingdom-London|✭nginx_398'
     type: ss
     server: 145.239.6.202
     port: 8009
@@ -2875,7 +2875,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "United+Kingdom-London|✭nginx_399"
+  - name: 'United+Kingdom-London|✭nginx_399'
     type: ss
     server: 51.68.206.229
     port: 8080
@@ -2883,7 +2883,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "United+Kingdom-London|✭nginx_400"
+  - name: 'United+Kingdom-London|✭nginx_400'
     type: ss
     server: 212.102.53.193
     port: 443
@@ -2891,7 +2891,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+Kingdom-London|✭nginx_401"
+  - name: 'United+Kingdom-London|✭nginx_401'
     type: ss
     server: 145.239.6.202
     port: 8008
@@ -2899,7 +2899,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "United+Kingdom-London|✭nginx_402"
+  - name: 'United+Kingdom-London|✭nginx_402'
     type: ss
     server: 212.102.53.195
     port: 443
@@ -2907,7 +2907,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+Kingdom-London|✭nginx_403"
+  - name: 'United+Kingdom-London|✭nginx_403'
     type: ss
     server: 145.239.6.202
     port: 4444
@@ -2915,7 +2915,7 @@ proxies:
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
 
-  - name: "United+Kingdom-London|✭nginx_404"
+  - name: 'United+Kingdom-London|✭nginx_404'
     type: ss
     server: 145.239.6.202
     port: 7001
@@ -2923,7 +2923,7 @@ proxies:
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
 
-  - name: "United+Kingdom-London|✭nginx_405"
+  - name: 'United+Kingdom-London|✭nginx_405'
     type: ss
     server: 212.102.53.79
     port: 443
@@ -2931,7 +2931,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+Kingdom-London|✭nginx_406"
+  - name: 'United+Kingdom-London|✭nginx_406'
     type: ss
     server: 145.239.6.202
     port: 8119
@@ -2939,7 +2939,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "United+Kingdom-London|✭nginx_407"
+  - name: 'United+Kingdom-London|✭nginx_407'
     type: ss
     server: 212.102.53.194
     port: 443
@@ -2947,7 +2947,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+Kingdom-London|✭nginx_408"
+  - name: 'United+Kingdom-London|✭nginx_408'
     type: ss
     server: uk-dc1.yangon.club
     port: 443
@@ -2955,7 +2955,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+Kingdom-London|✭nginx_409"
+  - name: 'United+Kingdom-London|✭nginx_409'
     type: ss
     server: 51.68.206.229
     port: 8118
@@ -2963,7 +2963,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "United+Kingdom-London|✭nginx_410"
+  - name: 'United+Kingdom-London|✭nginx_410'
     type: ss
     server: 145.239.6.202
     port: 8090
@@ -2971,7 +2971,7 @@ proxies:
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
 
-  - name: "United+Kingdom-London|✭nginx_411"
+  - name: 'United+Kingdom-London|✭nginx_411'
     type: ss
     server: 145.239.6.202
     port: 8080
@@ -2979,7 +2979,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "United+Kingdom-Stretford|✭nginx_412"
+  - name: 'United+Kingdom-Stretford|✭nginx_412'
     type: ss
     server: 141.98.101.182
     port: 443
@@ -2987,7 +2987,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+Kingdom-Stretford|✭nginx_413"
+  - name: 'United+Kingdom-Stretford|✭nginx_413'
     type: ss
     server: 141.98.101.180
     port: 443
@@ -2995,7 +2995,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+Kingdom-Stretford|✭nginx_414"
+  - name: 'United+Kingdom-Stretford|✭nginx_414'
     type: ss
     server: 141.98.101.179
     port: 443
@@ -3003,7 +3003,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+Kingdom-Stretford|✭nginx_415"
+  - name: 'United+Kingdom-Stretford|✭nginx_415'
     type: ss
     server: 141.98.101.178
     port: 443
@@ -3011,7 +3011,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+Kingdom-Swinton|✭nginx_416"
+  - name: 'United+Kingdom-Swinton|✭nginx_416'
     type: ss
     server: 64.176.184.129
     port: 1866
@@ -3019,7 +3019,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oXGp1+ihlfKg826H
 
-  - name: "United+States-Ashburn|✭nginx_418"
+  - name: 'United+States-Ashburn|✭nginx_418'
     type: ss
     server: 142.202.49.122
     port: 7306
@@ -3027,7 +3027,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "United+States-Ashburn|✭nginx_419"
+  - name: 'United+States-Ashburn|✭nginx_419'
     type: ss
     server: 142.202.49.84
     port: 6679
@@ -3035,7 +3035,7 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
 
-  - name: "United+States-Ashburn|✭nginx_420"
+  - name: 'United+States-Ashburn|✭nginx_420'
     type: ss
     server: 142.202.49.122
     port: 9102
@@ -3043,7 +3043,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "United+States-Ashburn|✭nginx_421"
+  - name: 'United+States-Ashburn|✭nginx_421'
     type: ss
     server: 142.202.49.122
     port: 8118
@@ -3051,7 +3051,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "United+States-Ashburn|✭nginx_422"
+  - name: 'United+States-Ashburn|✭nginx_422'
     type: ss
     server: 142.202.49.84
     port: 8090
@@ -3059,7 +3059,7 @@ proxies:
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
 
-  - name: "United+States-Ashburn|✭nginx_423"
+  - name: 'United+States-Ashburn|✭nginx_423'
     type: ss
     server: 142.202.49.84
     port: 5004
@@ -3067,7 +3067,7 @@ proxies:
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
 
-  - name: "United+States-Ashburn|✭nginx_424"
+  - name: 'United+States-Ashburn|✭nginx_424'
     type: ss
     server: 142.202.49.84
     port: 8118
@@ -3075,7 +3075,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "United+States-Ashburn|✭nginx_425"
+  - name: 'United+States-Ashburn|✭nginx_425'
     type: ss
     server: 67.220.95.102
     port: 8009
@@ -3083,7 +3083,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "United+States-Ashburn|✭nginx_426"
+  - name: 'United+States-Ashburn|✭nginx_426'
     type: ss
     server: 67.220.95.102
     port: 6697
@@ -3091,7 +3091,7 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
 
-  - name: "United+States-Ashburn|✭nginx_427"
+  - name: 'United+States-Ashburn|✭nginx_427'
     type: ss
     server: 142.202.49.122
     port: 9101
@@ -3099,7 +3099,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "United+States-Ashburn|✭nginx_428"
+  - name: 'United+States-Ashburn|✭nginx_428'
     type: ss
     server: 67.220.95.102
     port: 8118
@@ -3107,7 +3107,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "United+States-Ashburn|✭nginx_429"
+  - name: 'United+States-Ashburn|✭nginx_429'
     type: ss
     server: 67.220.95.102
     port: 8091
@@ -3115,7 +3115,7 @@ proxies:
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
 
-  - name: "United+States-Ashburn|✭nginx_430"
+  - name: 'United+States-Ashburn|✭nginx_430'
     type: ss
     server: 142.202.49.122
     port: 8008
@@ -3123,7 +3123,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "United+States-Ashburn|✭nginx_431"
+  - name: 'United+States-Ashburn|✭nginx_431'
     type: ss
     server: 67.220.95.102
     port: 9102
@@ -3131,7 +3131,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "United+States-Ashburn|✭nginx_432"
+  - name: 'United+States-Ashburn|✭nginx_432'
     type: ss
     server: 142.202.49.84
     port: 5001
@@ -3139,7 +3139,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+States-Ashburn|✭nginx_433"
+  - name: 'United+States-Ashburn|✭nginx_433'
     type: ss
     server: 67.220.95.102
     port: 5600
@@ -3147,7 +3147,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+States-Ashburn|✭nginx_434"
+  - name: 'United+States-Ashburn|✭nginx_434'
     type: ss
     server: 142.202.49.84
     port: 5003
@@ -3155,7 +3155,7 @@ proxies:
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
 
-  - name: "United+States-Ashburn|✭nginx_435"
+  - name: 'United+States-Ashburn|✭nginx_435'
     type: ss
     server: 67.220.95.102
     port: 7001
@@ -3163,7 +3163,7 @@ proxies:
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
 
-  - name: "United+States-Ashburn|✭nginx_436"
+  - name: 'United+States-Ashburn|✭nginx_436'
     type: ss
     server: 67.220.95.102
     port: 5499
@@ -3171,7 +3171,7 @@ proxies:
     cipher: aes-256-gcm
     password: lGqs95QkFHo2NV
 
-  - name: "United+States-Ashburn|✭nginx_437"
+  - name: 'United+States-Ashburn|✭nginx_437'
     type: ss
     server: 142.202.49.84
     port: 8008
@@ -3179,7 +3179,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "United+States-Ashburn|✭nginx_438"
+  - name: 'United+States-Ashburn|✭nginx_438'
     type: ss
     server: 142.202.49.122
     port: 5500
@@ -3187,7 +3187,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "United+States-Atlanta|✭nginx_439"
+  - name: 'United+States-Atlanta|✭nginx_439'
     type: ss
     server: 38.121.43.71
     port: 2376
@@ -3195,7 +3195,7 @@ proxies:
     cipher: aes-256-gcm
     password: faBAoD54k87UJG7
 
-  - name: "United+States-Atlanta|✭nginx_440"
+  - name: 'United+States-Atlanta|✭nginx_440'
     type: ss
     server: 38.121.43.71
     port: 5004
@@ -3203,7 +3203,7 @@ proxies:
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
 
-  - name: "United+States-Atlanta|✭nginx_441"
+  - name: 'United+States-Atlanta|✭nginx_441'
     type: ss
     server: 38.121.43.71
     port: 5000
@@ -3211,7 +3211,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+States-Atlanta|✭nginx_442"
+  - name: 'United+States-Atlanta|✭nginx_442'
     type: ss
     server: 38.121.43.71
     port: 8000
@@ -3219,7 +3219,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "United+States-Atlanta|✭nginx_443"
+  - name: 'United+States-Atlanta|✭nginx_443'
     type: ss
     server: 38.121.43.71
     port: 9101
@@ -3227,7 +3227,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "United+States-Atlanta|✭nginx_444"
+  - name: 'United+States-Atlanta|✭nginx_444'
     type: ss
     server: 38.121.43.71
     port: 7001
@@ -3235,7 +3235,7 @@ proxies:
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
 
-  - name: "United+States-Atlanta|✭nginx_445"
+  - name: 'United+States-Atlanta|✭nginx_445'
     type: ss
     server: 38.121.43.71
     port: 9102
@@ -3243,7 +3243,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "United+States-Atlanta|✭nginx_446"
+  - name: 'United+States-Atlanta|✭nginx_446'
     type: ss
     server: 38.121.43.71
     port: 4444
@@ -3251,7 +3251,7 @@ proxies:
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
 
-  - name: "United+States-Atlanta|✭nginx_447"
+  - name: 'United+States-Atlanta|✭nginx_447'
     type: ss
     server: 38.121.43.71
     port: 8888
@@ -3259,7 +3259,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+States-Atlanta|✭nginx_448"
+  - name: 'United+States-Atlanta|✭nginx_448'
     type: ss
     server: 38.121.43.71
     port: 8009
@@ -3267,7 +3267,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "United+States-Atlanta|✭nginx_449"
+  - name: 'United+States-Atlanta|✭nginx_449'
     type: ss
     server: 38.121.43.71
     port: 7307
@@ -3275,7 +3275,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "United+States-Atlanta|✭nginx_450"
+  - name: 'United+States-Atlanta|✭nginx_450'
     type: ss
     server: 38.121.43.71
     port: 8090
@@ -3283,7 +3283,7 @@ proxies:
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
 
-  - name: "United+States-Atlanta|✭nginx_451"
+  - name: 'United+States-Atlanta|✭nginx_451'
     type: ss
     server: 38.121.43.71
     port: 6679
@@ -3291,7 +3291,7 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
 
-  - name: "United+States-Atlanta|✭nginx_452"
+  - name: 'United+States-Atlanta|✭nginx_452'
     type: ss
     server: 38.121.43.97
     port: 8881
@@ -3299,7 +3299,7 @@ proxies:
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
 
-  - name: "United+States-Atlanta|✭nginx_453"
+  - name: 'United+States-Atlanta|✭nginx_453'
     type: ss
     server: 38.121.43.71
     port: 3389
@@ -3307,7 +3307,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+States-Atlanta|✭nginx_454"
+  - name: 'United+States-Atlanta|✭nginx_454'
     type: ss
     server: 38.121.43.97
     port: 7306
@@ -3315,7 +3315,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "United+States-Atlanta|✭nginx_455"
+  - name: 'United+States-Atlanta|✭nginx_455'
     type: ss
     server: 38.121.43.71
     port: 443
@@ -3323,7 +3323,7 @@ proxies:
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
 
-  - name: "United+States-Atlanta|✭nginx_456"
+  - name: 'United+States-Atlanta|✭nginx_456'
     type: ss
     server: 38.121.43.71
     port: 8091
@@ -3331,7 +3331,7 @@ proxies:
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
 
-  - name: "United+States-Atlanta|✭nginx_457"
+  - name: 'United+States-Atlanta|✭nginx_457'
     type: ss
     server: 38.121.43.71
     port: 8008
@@ -3339,7 +3339,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "United+States-Atlanta|✭nginx_458"
+  - name: 'United+States-Atlanta|✭nginx_458'
     type: ss
     server: 38.121.43.71
     port: 7002
@@ -3347,7 +3347,7 @@ proxies:
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
 
-  - name: "United+States-Atlanta|✭nginx_459"
+  - name: 'United+States-Atlanta|✭nginx_459'
     type: ss
     server: 38.121.43.71
     port: 5001
@@ -3355,7 +3355,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+States-Atlanta|✭nginx_460"
+  - name: 'United+States-Atlanta|✭nginx_460'
     type: ss
     server: 38.121.43.97
     port: 7306
@@ -3363,7 +3363,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "United+States-Atlanta|✭nginx_461"
+  - name: 'United+States-Atlanta|✭nginx_461'
     type: ss
     server: 38.121.43.97
     port: 5500
@@ -3371,7 +3371,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "United+States-Atlanta|✭nginx_462"
+  - name: 'United+States-Atlanta|✭nginx_462'
     type: ss
     server: 38.121.43.97
     port: 8119
@@ -3379,7 +3379,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "United+States-Atlanta|✭nginx_463"
+  - name: 'United+States-Atlanta|✭nginx_463'
     type: ss
     server: 38.121.43.97
     port: 5000
@@ -3387,7 +3387,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+States-Atlanta|✭nginx_464"
+  - name: 'United+States-Atlanta|✭nginx_464'
     type: ss
     server: 38.121.43.71
     port: 2375
@@ -3395,7 +3395,7 @@ proxies:
     cipher: aes-256-gcm
     password: faBAoD54k87UJG7
 
-  - name: "United+States-Atlanta|✭nginx_465"
+  - name: 'United+States-Atlanta|✭nginx_465'
     type: ss
     server: 92.118.112.111
     port: 18622
@@ -3403,7 +3403,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: gmYDzSG6K35s8b19oY4fGz
 
-  - name: "United+States-Atlanta|✭nginx_466"
+  - name: 'United+States-Atlanta|✭nginx_466'
     type: ss
     server: 38.121.43.97
     port: 2376
@@ -3411,7 +3411,7 @@ proxies:
     cipher: aes-256-gcm
     password: faBAoD54k87UJG7
 
-  - name: "United+States-Atlanta|✭nginx_467"
+  - name: 'United+States-Atlanta|✭nginx_467'
     type: ss
     server: 38.121.43.71
     port: 6697
@@ -3419,7 +3419,7 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
 
-  - name: "United+States-Atlanta|✭nginx_468"
+  - name: 'United+States-Atlanta|✭nginx_468'
     type: ss
     server: 38.121.43.97
     port: 7001
@@ -3427,7 +3427,7 @@ proxies:
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
 
-  - name: "United+States-Atlanta|✭nginx_469"
+  - name: 'United+States-Atlanta|✭nginx_469'
     type: ss
     server: 38.121.43.97
     port: 7307
@@ -3435,7 +3435,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "United+States-Atlanta|✭nginx_470"
+  - name: 'United+States-Atlanta|✭nginx_470'
     type: ss
     server: 38.121.43.97
     port: 6697
@@ -3443,7 +3443,7 @@ proxies:
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
 
-  - name: "United+States-Atlanta|✭nginx_471"
+  - name: 'United+States-Atlanta|✭nginx_471'
     type: ss
     server: 38.121.43.71
     port: 5500
@@ -3451,7 +3451,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "United+States-Atlanta|✭nginx_472"
+  - name: 'United+States-Atlanta|✭nginx_472'
     type: ss
     server: 38.121.43.71
     port: 3306
@@ -3459,7 +3459,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+States-Atlanta|✭nginx_473"
+  - name: 'United+States-Atlanta|✭nginx_473'
     type: ss
     server: 38.121.43.71
     port: 8118
@@ -3467,7 +3467,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "United+States-Atlanta|✭nginx_474"
+  - name: 'United+States-Atlanta|✭nginx_474'
     type: ss
     server: 38.121.43.71
     port: 8119
@@ -3475,7 +3475,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "United+States-Atlanta|✭nginx_475"
+  - name: 'United+States-Atlanta|✭nginx_475'
     type: ss
     server: 38.121.43.97
     port: 8091
@@ -3483,7 +3483,7 @@ proxies:
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
 
-  - name: "United+States-Atlanta|✭nginx_476"
+  - name: 'United+States-Atlanta|✭nginx_476'
     type: ss
     server: 38.121.43.71
     port: 8080
@@ -3491,7 +3491,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "United+States-Atlanta|✭nginx_477"
+  - name: 'United+States-Atlanta|✭nginx_477'
     type: ss
     server: 38.121.43.71
     port: 8882
@@ -3499,7 +3499,7 @@ proxies:
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
 
-  - name: "United+States-Atlanta|✭nginx_478"
+  - name: 'United+States-Atlanta|✭nginx_478'
     type: ss
     server: 38.121.43.71
     port: 5600
@@ -3507,7 +3507,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+States-Atlanta|✭nginx_479"
+  - name: 'United+States-Atlanta|✭nginx_479'
     type: ss
     server: 38.121.43.71
     port: 5003
@@ -3515,7 +3515,7 @@ proxies:
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
 
-  - name: "United+States-Atlanta|✭nginx_480"
+  - name: 'United+States-Atlanta|✭nginx_480'
     type: ss
     server: 38.121.43.71
     port: 6379
@@ -3523,7 +3523,7 @@ proxies:
     cipher: aes-256-gcm
     password: zDNVedRFPQexG9v
 
-  - name: "United+States-Atlanta|✭nginx_481"
+  - name: 'United+States-Atlanta|✭nginx_481'
     type: ss
     server: 38.121.43.71
     port: 5601
@@ -3531,7 +3531,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+States-Atlanta|✭nginx_482"
+  - name: 'United+States-Atlanta|✭nginx_482'
     type: ss
     server: 38.121.43.71
     port: 8881
@@ -3539,7 +3539,7 @@ proxies:
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
 
-  - name: "United+States-Atlanta|✭nginx_483"
+  - name: 'United+States-Atlanta|✭nginx_483'
     type: ss
     server: 38.121.43.97
     port: 8080
@@ -3547,7 +3547,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "United+States-Chicago|✭nginx_484"
+  - name: 'United+States-Chicago|✭nginx_484'
     type: ss
     server: 172.236.122.188
     port: 1866
@@ -3555,7 +3555,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oXGp1+ihlfKg826H
 
-  - name: "United+States-Dallas|✭nginx_485"
+  - name: 'United+States-Dallas|✭nginx_485'
     type: ss
     server: 156.146.38.168
     port: 443
@@ -3563,7 +3563,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+States-Dallas|✭nginx_486"
+  - name: 'United+States-Dallas|✭nginx_486'
     type: ss
     server: 156.146.38.169
     port: 443
@@ -3571,7 +3571,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+States-Dallas|✭nginx_487"
+  - name: 'United+States-Dallas|✭nginx_487'
     type: ss
     server: 156.146.38.167
     port: 443
@@ -3579,7 +3579,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+States-Dallas|✭nginx_488"
+  - name: 'United+States-Dallas|✭nginx_488'
     type: ss
     server: 156.146.38.170
     port: 443
@@ -3587,7 +3587,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+States-Dallas|✭nginx_489"
+  - name: 'United+States-Dallas|✭nginx_489'
     type: ss
     server: 23.134.94.168
     port: 3389
@@ -3595,7 +3595,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+States-Denver|✭nginx_490"
+  - name: 'United+States-Denver|✭nginx_490'
     type: ss
     server: 139.64.165.101
     port: 8119
@@ -3603,7 +3603,7 @@ proxies:
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
 
-  - name: "United+States-Denver|✭nginx_491"
+  - name: 'United+States-Denver|✭nginx_491'
     type: ss
     server: 139.64.165.101
     port: 7306
@@ -3611,7 +3611,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "United+States-Denver|✭nginx_492"
+  - name: 'United+States-Denver|✭nginx_492'
     type: ss
     server: 139.64.165.101
     port: 5498
@@ -3619,7 +3619,7 @@ proxies:
     cipher: aes-256-gcm
     password: lGqs95QkFHo2NV
 
-  - name: "United+States-Denver|✭nginx_493"
+  - name: 'United+States-Denver|✭nginx_493'
     type: ss
     server: 139.64.165.101
     port: 8008
@@ -3627,7 +3627,7 @@ proxies:
     cipher: aes-256-gcm
     password: XKFKl2rULjIp74
 
-  - name: "United+States-Denver|✭nginx_494"
+  - name: 'United+States-Denver|✭nginx_494'
     type: ss
     server: 139.64.165.101
     port: 5601
@@ -3635,7 +3635,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+States-Los+Angeles|✭nginx_495"
+  - name: 'United+States-Los+Angeles|✭nginx_495'
     type: ss
     server: 2.58.87.221
     port: 16899
@@ -3643,7 +3643,7 @@ proxies:
     cipher: aes-128-gcm
     password: Yc2CtrIz8L
 
-  - name: "United+States-Los+Angeles|✭nginx_496"
+  - name: 'United+States-Los+Angeles|✭nginx_496'
     type: ss
     server: 104.207.155.64
     port: 1633
@@ -3651,7 +3651,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: o_A7inN1yqeWtOTL
 
-  - name: "United+States-Los+Angeles|✭nginx_497"
+  - name: 'United+States-Los+Angeles|✭nginx_497'
     type: ss
     server: 154.3.8.151
     port: 30067
@@ -3659,7 +3659,7 @@ proxies:
     cipher: aes-256-gcm
     password: iUB0923RBA
 
-  - name: "United+States-Los+Angeles|✭nginx_498"
+  - name: 'United+States-Los+Angeles|✭nginx_498'
     type: ss
     server: 172.233.128.126
     port: 1866
@@ -3667,7 +3667,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oXGp1+ihlfKg826H
 
-  - name: "United+States-Los+Angeles|✭nginx_499"
+  - name: 'United+States-Los+Angeles|✭nginx_499'
     type: ss
     server: 207.246.101.50
     port: 1633
@@ -3675,7 +3675,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: o_A7inN1yqeWtOTL
 
-  - name: "United+States-Miami|✭nginx_500"
+  - name: 'United+States-Miami|✭nginx_500'
     type: ss
     server: 38.91.107.43
     port: 7307
@@ -3683,7 +3683,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "United+States-Miami|✭nginx_501"
+  - name: 'United+States-Miami|✭nginx_501'
     type: ss
     server: 38.91.107.72
     port: 5500
@@ -3691,7 +3691,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "United+States-New+York|✭nginx_502"
+  - name: 'United+States-New+York|✭nginx_502'
     type: ss
     server: 45.87.175.178
     port: 8080
@@ -3699,7 +3699,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: QCXDxuDlTTMD7jtgHUjIoj
 
-  - name: "United+States-New+York|✭nginx_503"
+  - name: 'United+States-New+York|✭nginx_503'
     type: ss
     server: 45.87.175.166
     port: 8080
@@ -3707,7 +3707,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
 
-  - name: "United+States-New+York|✭nginx_504"
+  - name: 'United+States-New+York|✭nginx_504'
     type: ss
     server: 45.87.175.164
     port: 8080
@@ -3715,7 +3715,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
 
-  - name: "United+States-New+York|✭nginx_505"
+  - name: 'United+States-New+York|✭nginx_505'
     type: ss
     server: 45.87.175.178
     port: 8080
@@ -3723,7 +3723,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: QCXDxuDlTTMD7jtgHUjIoj
 
-  - name: "United+States-New+York|✭nginx_506"
+  - name: 'United+States-New+York|✭nginx_506'
     type: ss
     server: 45.87.175.181
     port: 8080
@@ -3731,7 +3731,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "United+States-New+York|✭nginx_507"
+  - name: 'United+States-New+York|✭nginx_507'
     type: ss
     server: 45.87.175.171
     port: 8080
@@ -3739,7 +3739,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
 
-  - name: "United+States-New+York|✭nginx_508"
+  - name: 'United+States-New+York|✭nginx_508'
     type: ss
     server: 45.87.175.192
     port: 8080
@@ -3747,7 +3747,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "United+States-New+York|✭nginx_509"
+  - name: 'United+States-New+York|✭nginx_509'
     type: ss
     server: 45.87.175.164
     port: 8080
@@ -3755,7 +3755,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 1RWwXhwfAB5gAEozU4G2Pg
 
-  - name: "United+States-New+York|✭nginx_510"
+  - name: 'United+States-New+York|✭nginx_510'
     type: ss
     server: 45.87.175.181
     port: 8080
@@ -3763,7 +3763,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
 
-  - name: "United+States-New+York|✭nginx_511"
+  - name: 'United+States-New+York|✭nginx_511'
     type: ss
     server: 37.19.198.243
     port: 443
@@ -3771,7 +3771,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+States-New+York|✭nginx_512"
+  - name: 'United+States-New+York|✭nginx_512'
     type: ss
     server: 45.87.175.181
     port: 8080
@@ -3779,7 +3779,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
 
-  - name: "United+States-New+York|✭nginx_513"
+  - name: 'United+States-New+York|✭nginx_513'
     type: ss
     server: 45.87.175.164
     port: 8080
@@ -3787,7 +3787,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "United+States-New+York|✭nginx_514"
+  - name: 'United+States-New+York|✭nginx_514'
     type: ss
     server: 45.87.175.171
     port: 8080
@@ -3795,7 +3795,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 1RWwXhwfAB5gAEozU4G2Pg
 
-  - name: "United+States-New+York|✭nginx_515"
+  - name: 'United+States-New+York|✭nginx_515'
     type: ss
     server: 45.87.175.157
     port: 8080
@@ -3803,7 +3803,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 1RWwXhwfAB5gAEozU4G2Pg
 
-  - name: "United+States-New+York|✭nginx_516"
+  - name: 'United+States-New+York|✭nginx_516'
     type: ss
     server: 45.87.175.164
     port: 8080
@@ -3811,7 +3811,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 1RWwXhwfAB5gAEozU4G2Pg
 
-  - name: "United+States-New+York|✭nginx_517"
+  - name: 'United+States-New+York|✭nginx_517'
     type: ss
     server: 45.87.175.192
     port: 8080
@@ -3819,7 +3819,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 1RWwXhwfAB5gAEozU4G2Pg
 
-  - name: "United+States-New+York|✭nginx_518"
+  - name: 'United+States-New+York|✭nginx_518'
     type: ss
     server: 37.19.198.160
     port: 443
@@ -3827,7 +3827,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+States-New+York|✭nginx_519"
+  - name: 'United+States-New+York|✭nginx_519'
     type: ss
     server: 45.87.175.154
     port: 8080
@@ -3835,7 +3835,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "United+States-New+York|✭nginx_520"
+  - name: 'United+States-New+York|✭nginx_520'
     type: ss
     server: 45.87.175.178
     port: 8080
@@ -3843,7 +3843,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 1RWwXhwfAB5gAEozU4G2Pg
 
-  - name: "United+States-New+York|✭nginx_521"
+  - name: 'United+States-New+York|✭nginx_521'
     type: ss
     server: 45.87.175.58
     port: 8080
@@ -3851,7 +3851,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oZIoA69Q8yhcQV8ka3Pa3A
 
-  - name: "United+States-New+York|✭nginx_522"
+  - name: 'United+States-New+York|✭nginx_522'
     type: ss
     server: beesyar.org
     port: 8080
@@ -3859,7 +3859,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "United+States-New+York|✭nginx_523"
+  - name: 'United+States-New+York|✭nginx_523'
     type: ss
     server: 45.87.175.171
     port: 8080
@@ -3867,7 +3867,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: QCXDxuDlTTMD7jtgHUjIoj
 
-  - name: "United+States-New+York|✭nginx_524"
+  - name: 'United+States-New+York|✭nginx_524'
     type: ss
     server: 37.19.198.236
     port: 443
@@ -3875,7 +3875,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+States-New+York|✭nginx_525"
+  - name: 'United+States-New+York|✭nginx_525'
     type: ss
     server: 37.19.198.244
     port: 443
@@ -3883,7 +3883,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+States-New+York|✭nginx_526"
+  - name: 'United+States-New+York|✭nginx_526'
     type: ss
     server: 94.131.123.147
     port: 7383
@@ -3891,7 +3891,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: eSHEdJz96rqNkOCAzd5Csv
 
-  - name: "United+States-New+York|✭nginx_527"
+  - name: 'United+States-New+York|✭nginx_527'
     type: ss
     server: 45.87.175.171
     port: 8080
@@ -3899,7 +3899,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "United+States-Newark|✭nginx_528"
+  - name: 'United+States-Newark|✭nginx_528'
     type: ss
     server: 142.202.48.105
     port: 3389
@@ -3907,7 +3907,7 @@ proxies:
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
 
-  - name: "United+States-Newark|✭nginx_529"
+  - name: 'United+States-Newark|✭nginx_529'
     type: ss
     server: 142.202.48.105
     port: 5004
@@ -3915,7 +3915,7 @@ proxies:
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
 
-  - name: "United+States-Pittsburgh|✭nginx_531"
+  - name: 'United+States-Pittsburgh|✭nginx_531'
     type: ss
     server: 23.185.248.15
     port: 17005
@@ -3923,7 +3923,7 @@ proxies:
     cipher: aes-256-gcm
     password: X1GBLWQ3U4ULO6XV
 
-  - name: "United+States-Pittsburgh|✭nginx_532"
+  - name: 'United+States-Pittsburgh|✭nginx_532'
     type: ss
     server: 23.185.248.11
     port: 17001
@@ -3931,7 +3931,7 @@ proxies:
     cipher: aes-256-gcm
     password: Z7ZSQR3OI9JVRA6N
 
-  - name: "United+States-Pittsburgh|✭nginx_533"
+  - name: 'United+States-Pittsburgh|✭nginx_533'
     type: ss
     server: 23.185.248.14
     port: 17004
@@ -3939,7 +3939,7 @@ proxies:
     cipher: aes-256-gcm
     password: IC4APDY4ATHX890I
 
-  - name: "United+States-Seattle|✭nginx_558"
+  - name: 'United+States-Seattle|✭nginx_558'
     type: ss
     server: 212.102.47.132
     port: 443
@@ -3947,7 +3947,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+States-Seattle|✭nginx_559"
+  - name: 'United+States-Seattle|✭nginx_559'
     type: ss
     server: 212.102.47.130
     port: 443
@@ -3955,7 +3955,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+States-Seattle|✭nginx_560"
+  - name: 'United+States-Seattle|✭nginx_560'
     type: ss
     server: 212.102.47.131
     port: 443
@@ -3963,7 +3963,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+States-Tukwila|✭nginx_561"
+  - name: 'United+States-Tukwila|✭nginx_561'
     type: ss
     server: 172.232.171.192
     port: 1866
@@ -3971,7 +3971,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oXGp1+ihlfKg826H
 
-  - name: "United+States-Tukwila|✭nginx_562"
+  - name: 'United+States-Tukwila|✭nginx_562'
     type: ss
     server: 172.232.171.192
     port: 1866
@@ -3979,7 +3979,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oXGp1+ihlfKg826H
 
-  - name: "United+States-Us-az|✭nginx_563"
+  - name: 'United+States-Us-az|✭nginx_563'
     type: ss
     server: 173.244.56.6
     port: 443
@@ -3987,7 +3987,7 @@ proxies:
     cipher: aes-128-gcm
     password: shadowsocks
 
-  - name: "United+States-Washington|✭nginx_564"
+  - name: 'United+States-Washington|✭nginx_564'
     type: ss
     server: 38.107.226.238
     port: 2376
@@ -3995,7 +3995,7 @@ proxies:
     cipher: aes-256-gcm
     password: faBAoD54k87UJG7
 
-  - name: "United+States-Washington|✭nginx_565"
+  - name: 'United+States-Washington|✭nginx_565'
     type: ss
     server: 38.86.135.169
     port: 9101
@@ -4003,7 +4003,7 @@ proxies:
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
 
-  - name: "United+States-Washington|✭nginx_566"
+  - name: 'United+States-Washington|✭nginx_566'
     type: ss
     server: 38.107.226.238
     port: 2375
@@ -4011,7 +4011,7 @@ proxies:
     cipher: aes-256-gcm
     password: faBAoD54k87UJG7
 
-  - name: "United+States-Washington|✭nginx_567"
+  - name: 'United+States-Washington|✭nginx_567'
     type: ss
     server: 38.86.135.169
     port: 5500
@@ -4019,7 +4019,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "United+States-Washington|✭nginx_568"
+  - name: 'United+States-Washington|✭nginx_568'
     type: ss
     server: 38.86.135.169
     port: 8080
@@ -4027,7 +4027,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "United+States-Washington|✭nginx_569"
+  - name: 'United+States-Washington|✭nginx_569'
     type: ss
     server: 38.107.226.146
     port: 1230
@@ -4035,7 +4035,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: H5S0hvcxRi#YLmgU
 
-  - name: "United+States-Washington|✭nginx_570"
+  - name: 'United+States-Washington|✭nginx_570'
     type: ss
     server: 38.86.135.169
     port: 7307
@@ -4043,7 +4043,7 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
 
-  - name: "United+States-Washington|✭nginx_571"
+  - name: 'United+States-Washington|✭nginx_571'
     type: ss
     server: 38.86.135.169
     port: 8000
@@ -4051,7 +4051,7 @@ proxies:
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
 
-  - name: "Venezuela-Valencia|✭nginx_572"
+  - name: 'Venezuela-Valencia|✭nginx_572'
     type: ss
     server: 45.158.171.136
     port: 8080
@@ -4059,7 +4059,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
 
-  - name: "Venezuela-Valencia|✭nginx_573"
+  - name: 'Venezuela-Valencia|✭nginx_573'
     type: ss
     server: 45.158.171.146
     port: 8080
@@ -4067,7 +4067,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "Venezuela-Valencia|✭nginx_574"
+  - name: 'Venezuela-Valencia|✭nginx_574'
     type: ss
     server: 45.158.171.151
     port: 8080
@@ -4075,7 +4075,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "Venezuela-Valencia|✭nginx_575"
+  - name: 'Venezuela-Valencia|✭nginx_575'
     type: ss
     server: 45.158.171.132
     port: 8080
@@ -4083,7 +4083,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
 
-  - name: "Venezuela-Valencia|✭nginx_576"
+  - name: 'Venezuela-Valencia|✭nginx_576'
     type: ss
     server: 45.158.171.136
     port: 8080
@@ -4091,7 +4091,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "Venezuela-Valencia|✭nginx_577"
+  - name: 'Venezuela-Valencia|✭nginx_577'
     type: ss
     server: beesyar.org
     port: 8080
@@ -4099,7 +4099,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
 
-  - name: "Venezuela-Valencia|✭nginx_578"
+  - name: 'Venezuela-Valencia|✭nginx_578'
     type: ss
     server: 45.158.171.66
     port: 8080
@@ -4107,7 +4107,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oZIoA69Q8yhcQV8ka3Pa3A
 
-  - name: "Venezuela-Valencia|✭nginx_579"
+  - name: 'Venezuela-Valencia|✭nginx_579'
     type: ss
     server: 45.158.171.136
     port: 8080
@@ -4115,7 +4115,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
 
-  - name: "Venezuela-Valencia|✭nginx_580"
+  - name: 'Venezuela-Valencia|✭nginx_580'
     type: ss
     server: 45.158.171.132
     port: 8080
@@ -4123,7 +4123,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: QCXDxuDlTTMD7jtgHUjIoj
 
-  - name: "Venezuela-Valencia|✭nginx_581"
+  - name: 'Venezuela-Valencia|✭nginx_581'
     type: ss
     server: 45.158.171.110
     port: 8080
@@ -4131,7 +4131,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oZIoA69Q8yhcQV8ka3Pa3A
 
-  - name: "Vietnam-Bo|✭nginx_582"
+  - name: 'Vietnam-Bo|✭nginx_582'
     type: ss
     server: arxfw2b78fi2q9hzylhn.freesocks.work
     port: 443
@@ -4139,7 +4139,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: Nk9asglDzHzjktVzTkvhaA
 
-  - name: "Vietnam-Bo|✭nginx_583"
+  - name: 'Vietnam-Bo|✭nginx_583'
     type: ss
     server: 160.19.78.75
     port: 443
@@ -4147,7 +4147,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: Nk9asglDzHzjktVzTkvhaA
 
-  - name: "Vietnam-Ho+Chi+Minh+City|✭nginx_584"
+  - name: 'Vietnam-Ho+Chi+Minh+City|✭nginx_584'
     type: trojan
     server: 36.50.135.142
     port: 443
@@ -4155,9 +4155,9 @@ proxies:
     password: 94d219c9-1afc-4d42-b090-8b3794764380
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
-  - name: "Vietnam-Nha+Trang|✭nginx_585"
+  - name: 'Vietnam-Nha+Trang|✭nginx_585'
     type: trojan
     server: 160.30.21.105
     port: 443
@@ -4165,7 +4165,7 @@ proxies:
     password: 94d219c9-1afc-4d42-b090-8b3794764380
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername:
 
 proxy-groups:
   - name: 🔴 auto
@@ -4173,493 +4173,492 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - "Austria-Vienna|✭nginx_1"
-      - "Austria-Vienna|✭nginx_2"
-      - "Bahrain-Manama|✭nginx_3"
-      - "Bolivia-La+Paz|✭nginx_4"
-      - "Brazil-S?o Paulo|✭nginx_5"
-      - "Brazil-S?o Paulo|✭nginx_6"
-      - "Canada-Beauharnois|✭nginx_8"
-      - "Canada-Beauharnois|✭nginx_9"
-      - "Canada-Pointe-Claire|✭nginx_12"
-      - "Canada-Toronto|✭nginx_17"
-      - "Canada-Toronto|✭nginx_28"
-      - "Canada-Toronto|✭nginx_31"
-      - "Canada-Toronto|✭nginx_33"
-      - "Canada-Toronto|✭nginx_41"
-      - "Canada-Toronto|✭nginx_57"
-      - "Canada-Toronto|✭nginx_62"
-      - "Canada-Toronto|✭nginx_65"
-      - "Canada-Toronto|✭nginx_70"
-      - "Canada-Toronto|✭nginx_72"
-      - "Canada-Vancouver|✭nginx_74"
-      - "Canada-Vancouver|✭nginx_75"
-      - "Canada-Vancouver|✭nginx_76"
-      - "China-Chengdu|✭nginx_77"
-      - "China-Chengdu|✭nginx_78"
-      - "China-Chengdu|✭nginx_79"
-      - "China-Taiyuan|✭nginx_80"
-      - "Colombia-Bogotá|✭nginx_81"
-      - "Cyprus-Limassol|✭nginx_82"
-      - "Cyprus-Limassol|✭nginx_83"
-      - "Czechia-Prague|✭nginx_84"
-      - "Ecuador-Quito|✭nginx_85"
-      - "Ecuador-Quito|✭nginx_86"
-      - "Estonia-Tallinn|✭nginx_87"
-      - "Estonia-Tallinn|✭nginx_88"
-      - "Finland-Helsinki|✭nginx_89"
-      - "France-Gravelines|✭nginx_90"
-      - "France-Lyon|✭nginx_92"
-      - "France-Lyon|✭nginx_93"
-      - "France-Paris|✭nginx_94"
-      - "France-Paris|✭nginx_98"
-      - "France-Paris|✭nginx_100"
-      - "France-Roubaix|✭nginx_101"
-      - "France-Roubaix|✭nginx_102"
-      - "France-Roubaix|✭nginx_103"
-      - "France-Roubaix|✭nginx_104"
-      - "France-Roubaix|✭nginx_105"
-      - "France-Roubaix|✭nginx_106"
-      - "France-Roubaix|✭nginx_107"
-      - "France-Roubaix|✭nginx_108"
-      - "France-Roubaix|✭nginx_109"
-      - "France-Roubaix|✭nginx_110"
-      - "France-Roubaix|✭nginx_111"
-      - "France-Roubaix|✭nginx_112"
-      - "France-Roubaix|✭nginx_113"
-      - "France-Roubaix|✭nginx_114"
-      - "France-Roubaix|✭nginx_115"
-      - "France-Roubaix|✭nginx_116"
-      - "France-Roubaix|✭nginx_117"
-      - "France-Roubaix|✭nginx_118"
-      - "France-Roubaix|✭nginx_119"
-      - "France-Roubaix|✭nginx_120"
-      - "France-Roubaix|✭nginx_121"
-      - "France-Roubaix|✭nginx_122"
-      - "France-Roubaix|✭nginx_123"
-      - "France-Roubaix|✭nginx_124"
-      - "France-Roubaix|✭nginx_125"
-      - "France-Roubaix|✭nginx_126"
-      - "France-Roubaix|✭nginx_127"
-      - "France-Roubaix|✭nginx_128"
-      - "France-Roubaix|✭nginx_129"
-      - "France-Roubaix|✭nginx_130"
-      - "France-Roubaix|✭nginx_131"
-      - "France-Roubaix|✭nginx_132"
-      - "France-Roubaix|✭nginx_133"
-      - "Germany-Frankfurt+am+Main|✭nginx_135"
-      - "Germany-Frankfurt+am+Main|✭nginx_136"
-      - "Germany-Frankfurt|✭nginx_137"
-      - "Germany-Frankfurt|✭nginx_138"
-      - "Germany-Frankfurt|✭nginx_139"
-      - "Germany-Limburg+an+der+Lahn|✭nginx_143"
-      - "Germany-Saarbrücken|✭nginx_146"
-      - "Germany-Saarbrücken|✭nginx_147"
-      - "Germany-Saarbrücken|✭nginx_148"
-      - "Germany-Saarbrücken|✭nginx_149"
-      - "Germany-Saarbrücken|✭nginx_150"
-      - "Germany-Saarbrücken|✭nginx_151"
-      - "Germany-Saarbrücken|✭nginx_152"
-      - "Germany-Saarbrücken|✭nginx_153"
-      - "Germany-Saarbrücken|✭nginx_154"
-      - "Germany-Saarbrücken|✭nginx_155"
-      - "Germany-Saarbrücken|✭nginx_156"
-      - "Germany-Saarbrücken|✭nginx_157"
-      - "Germany-Saarbrücken|✭nginx_158"
-      - "Germany-Saarbrücken|✭nginx_159"
-      - "Germany-Saarbrücken|✭nginx_160"
-      - "Germany-Saarbrücken|✭nginx_161"
-      - "Germany-Saarbrücken|✭nginx_162"
-      - "Germany-Saarbrücken|✭nginx_163"
-      - "Germany-Saarbrücken|✭nginx_164"
-      - "Germany-Saarbrücken|✭nginx_165"
-      - "Germany-Saarbrücken|✭nginx_166"
-      - "Guatemala-Guatemala+City|✭nginx_167"
-      - "Hong Kong-Wan Chai|✭nginx_168"
-      - "Hong Kong-Wan Chai|✭nginx_169"
-      - "Hong Kong-Wan Chai|✭nginx_170"
-      - "Hong+Kong-Hong+Kong|✭nginx_171"
-      - "Hong+Kong-Hong+Kong|✭nginx_172"
-      - "Hong+Kong-Hong+Kong|✭nginx_173"
-      - "Hong+Kong-Hong+Kong|✭nginx_174"
-      - "Hong+Kong-Hong+Kong|✭nginx_175"
-      - "Hong+Kong-Hong+Kong|✭nginx_177"
-      - "Hong+Kong-Hong+Kong|✭nginx_178"
-      - "Hungary-Budapest|✭nginx_179"
-      - "Hungary-Budapest|✭nginx_180"
-      - "Iceland-Keflavík|✭nginx_181"
-      - "Iceland-Keflavík|✭nginx_182"
-      - "India-Bengaluru|✭nginx_183"
-      - "Indonesia-Cileunyi|✭nginx_184"
-      - "Indonesia-Jakarta|✭nginx_185"
-      - "Ireland-Dublin|✭nginx_186"
-      - "Ireland-Dublin|✭nginx_187"
-      - "Italy-Arezzo|✭nginx_188"
-      - "Japan-Tokyo|✭nginx_189"
-      - "Japan-Tokyo|✭nginx_190"
-      - "Japan-Tokyo|✭nginx_191"
-      - "Japan-Tokyo|✭nginx_192"
-      - "Japan-Tokyo|✭nginx_193"
-      - "Lithuania-Vilnius|✭nginx_194"
-      - "Lithuania-Vilnius|✭nginx_195"
-      - "Mexico-Mexico+City|✭nginx_196"
-      - "Mexico-Mexico+City|✭nginx_197"
-      - "Montenegro-Podgorica|✭nginx_198"
-      - "Morocco-Fes|✭nginx_199"
-      - "Netherlands-Amsterdam|✭nginx_200"
-      - "Norway-Oslo|✭nginx_201"
-      - "Norway-Oslo|✭nginx_202"
-      - "Norway-Oslo|✭nginx_203"
-      - "Norway-Oslo|✭nginx_204"
-      - "Norway-Oslo|✭nginx_205"
-      - "Norway-Oslo|✭nginx_206"
-      - "Norway-Oslo|✭nginx_207"
-      - "Norway-Oslo|✭nginx_208"
-      - "Norway-Oslo|✭nginx_209"
-      - "Norway-Oslo|✭nginx_210"
-      - "Norway-Oslo|✭nginx_211"
-      - "Norway-Oslo|✭nginx_212"
-      - "Norway-Oslo|✭nginx_213"
-      - "Norway-Oslo|✭nginx_214"
-      - "Norway-Oslo|✭nginx_215"
-      - "Norway-Oslo|✭nginx_216"
-      - "Norway-Oslo|✭nginx_217"
-      - "Norway-Oslo|✭nginx_218"
-      - "Norway-Oslo|✭nginx_219"
-      - "Norway-Oslo|✭nginx_220"
-      - "Norway-Oslo|✭nginx_221"
-      - "Norway-Oslo|✭nginx_222"
-      - "Norway-Oslo|✭nginx_223"
-      - "Norway-Oslo|✭nginx_224"
-      - "Norway-Oslo|✭nginx_225"
-      - "Philippines-Manila|✭nginx_226"
-      - "Philippines-Manila|✭nginx_227"
-      - "Poland-Warsaw|✭nginx_228"
-      - "Poland-Warsaw|✭nginx_229"
-      - "Poland-Warsaw|✭nginx_230"
-      - "Poland-Warsaw|✭nginx_231"
-      - "Poland-Warsaw|✭nginx_232"
-      - "Poland-Warsaw|✭nginx_233"
-      - "Poland-Warsaw|✭nginx_234"
-      - "Poland-Warsaw|✭nginx_235"
-      - "Poland-Warsaw|✭nginx_236"
-      - "Poland-Warsaw|✭nginx_237"
-      - "Poland-Warsaw|✭nginx_238"
-      - "Poland-Warsaw|✭nginx_239"
-      - "Poland-Warsaw|✭nginx_240"
-      - "Poland-Warsaw|✭nginx_241"
-      - "Poland-Warsaw|✭nginx_242"
-      - "Poland-Warsaw|✭nginx_243"
-      - "Poland-Warsaw|✭nginx_244"
-      - "Poland-Warsaw|✭nginx_245"
-      - "Poland-Warsaw|✭nginx_246"
-      - "Poland-Warsaw|✭nginx_247"
-      - "Poland-Warsaw|✭nginx_248"
-      - "Poland-Warsaw|✭nginx_249"
-      - "Poland-Warsaw|✭nginx_250"
-      - "Poland-Warsaw|✭nginx_251"
-      - "Poland-Warsaw|✭nginx_252"
-      - "Poland-Warsaw|✭nginx_253"
-      - "Poland-Warsaw|✭nginx_254"
-      - "Poland-Warsaw|✭nginx_255"
-      - "Poland-Warsaw|✭nginx_256"
-      - "Poland-Warsaw|✭nginx_257"
-      - "Poland-Warsaw|✭nginx_258"
-      - "Poland-Warsaw|✭nginx_259"
-      - "Poland-Warsaw|✭nginx_260"
-      - "Poland-Warsaw|✭nginx_261"
-      - "Poland-Warsaw|✭nginx_262"
-      - "Poland-Warsaw|✭nginx_263"
-      - "Poland-Warsaw|✭nginx_264"
-      - "Poland-Warsaw|✭nginx_265"
-      - "Poland-Warsaw|✭nginx_266"
-      - "Poland-Warsaw|✭nginx_267"
-      - "Poland-Warsaw|✭nginx_268"
-      - "Poland-Warsaw|✭nginx_269"
-      - "Poland-Warsaw|✭nginx_270"
-      - "Poland-Warsaw|✭nginx_271"
-      - "Poland-Warsaw|✭nginx_272"
-      - "Poland-Wroclaw|✭nginx_273"
-      - "Poland-Wroclaw|✭nginx_274"
-      - "Poland-Wroclaw|✭nginx_275"
-      - "Poland-Wroclaw|✭nginx_276"
-      - "Poland-Wroclaw|✭nginx_277"
-      - "Poland-Wroclaw|✭nginx_278"
-      - "Poland-Wroclaw|✭nginx_279"
-      - "Poland-Wroclaw|✭nginx_280"
-      - "Poland-Wroclaw|✭nginx_281"
-      - "Poland-Wroclaw|✭nginx_282"
-      - "Poland-Wroclaw|✭nginx_283"
-      - "Poland-Wroclaw|✭nginx_284"
-      - "Poland-Wroclaw|✭nginx_285"
-      - "Poland-Wroclaw|✭nginx_286"
-      - "Poland-Wroclaw|✭nginx_287"
-      - "Poland-Wroclaw|✭nginx_288"
-      - "Poland-Wroclaw|✭nginx_289"
-      - "Poland-Wroclaw|✭nginx_290"
-      - "Poland-Wroclaw|✭nginx_291"
-      - "Poland-Wroclaw|✭nginx_292"
-      - "Poland-Wroclaw|✭nginx_293"
-      - "Poland-Wroclaw|✭nginx_294"
-      - "Poland-Wroclaw|✭nginx_295"
-      - "Poland-Wroclaw|✭nginx_296"
-      - "Poland-Wroclaw|✭nginx_297"
-      - "Poland-Wroclaw|✭nginx_298"
-      - "Poland-Wroclaw|✭nginx_299"
-      - "Poland-Wroclaw|✭nginx_300"
-      - "Poland-Wroclaw|✭nginx_301"
-      - "Poland-Wroclaw|✭nginx_302"
-      - "Poland-Wroclaw|✭nginx_303"
-      - "Poland-Wroclaw|✭nginx_304"
-      - "Poland-Wroclaw|✭nginx_305"
-      - "Poland-Wroclaw|✭nginx_306"
-      - "Poland-Wroclaw|✭nginx_307"
-      - "Poland-Wroclaw|✭nginx_308"
-      - "Poland-Wroclaw|✭nginx_309"
-      - "Poland-Wroclaw|✭nginx_310"
-      - "Poland-Wroclaw|✭nginx_311"
-      - "Poland-Wroclaw|✭nginx_312"
-      - "Puerto+Rico-San+Juan|✭nginx_313"
-      - "Puerto+Rico-San+Juan|✭nginx_314"
-      - "Russia-Moscow|✭nginx_315"
-      - "Russia-Moscow|✭nginx_316"
-      - "Singapore-Singapore|✭nginx_318"
-      - "Singapore-Singapore|✭nginx_319"
-      - "Singapore-Singapore|✭nginx_320"
-      - "South Korea-Geumcheon-gu|✭nginx_322"
-      - "South+Africa-Cape+Town|✭nginx_323"
-      - "South+Korea-Seoul|✭nginx_324"
-      - "Spain-Barcelona|✭nginx_325"
-      - "Spain-Madrid|✭nginx_326"
-      - "Sweden-Stockholm|✭nginx_327"
-      - "Switzerland-Zurich|✭nginx_328"
-      - "Switzerland-Zurich|✭nginx_329"
-      - "Switzerland-Zurich|✭nginx_330"
-      - "Switzerland-Zurich|✭nginx_331"
-      - "Switzerland-Zurich|✭nginx_332"
-      - "Thailand-Bang+Rak|✭nginx_333"
-      - "The+Netherlands-Amsterdam|✭nginx_334"
-      - "The+Netherlands-Amsterdam|✭nginx_335"
-      - "The+Netherlands-Amsterdam|✭nginx_336"
-      - "The+Netherlands-Amsterdam|✭nginx_337"
-      - "The+Netherlands-Amsterdam|✭nginx_338"
-      - "The+Netherlands-Amsterdam|✭nginx_339"
-      - "The+Netherlands-Amsterdam|✭nginx_341"
-      - "The+Netherlands-Amsterdam|✭nginx_342"
-      - "The+Netherlands-Amsterdam|✭nginx_343"
-      - "The+Netherlands-Amsterdam|✭nginx_344"
-      - "The+Netherlands-Amsterdam|✭nginx_345"
-      - "The+Netherlands-Amsterdam|✭nginx_346"
-      - "The+Netherlands-Amsterdam|✭nginx_347"
-      - "The+Netherlands-Amsterdam|✭nginx_348"
-      - "The+Netherlands-Amsterdam|✭nginx_349"
-      - "The+Netherlands-Amsterdam|✭nginx_350"
-      - "The+Netherlands-Amsterdam|✭nginx_352"
-      - "The+Netherlands-Amsterdam|✭nginx_353"
-      - "The+Netherlands-Meppel|✭nginx_354"
-      - "Turkey-Ataşehir|✭nginx_355"
-      - "Turkey-Ataşehir|✭nginx_356"
-      - "Türkiye-Istanbul|✭nginx_357"
-      - "Türkiye-Izmir|✭nginx_358"
-      - "Türkiye-Izmir|✭nginx_359"
-      - "Türkiye-Izmir|✭nginx_360"
-      - "Ukraine-Kyiv|✭nginx_361"
-      - "United Kingdom-London|✭nginx_363"
-      - "United Kingdom-London|✭nginx_364"
-      - "United States-Atlanta|✭nginx_365"
-      - "United States-Buffalo|✭nginx_366"
-      - "United States-Los Angeles|✭nginx_367"
-      - "United States-Los Angeles|✭nginx_368"
-      - "United States-Los Angeles|✭nginx_369"
-      - "United States-Miami|✭nginx_370"
-      - "United States-New York|✭nginx_371"
-      - "United States-San Jose|✭nginx_372"
-      - "United States-San Jose|✭nginx_373"
-      - "United States-San Jose|✭nginx_374"
-      - "United States-San Jose|✭nginx_375"
-      - "United States-San Jose|✭nginx_376"
-      - "United States-San Jose|✭nginx_377"
-      - "United States-San Jose|✭nginx_378"
-      - "United States-San Jose|✭nginx_379"
-      - "United States-San Jose|✭nginx_380"
-      - "United+Arab+Emirates-Dubai|✭nginx_381"
-      - "United+Kingdom-City+of+London|✭nginx_382"
-      - "United+Kingdom-London|✭nginx_383"
-      - "United+Kingdom-London|✭nginx_384"
-      - "United+Kingdom-London|✭nginx_385"
-      - "United+Kingdom-London|✭nginx_386"
-      - "United+Kingdom-London|✭nginx_387"
-      - "United+Kingdom-London|✭nginx_388"
-      - "United+Kingdom-London|✭nginx_389"
-      - "United+Kingdom-London|✭nginx_390"
-      - "United+Kingdom-London|✭nginx_391"
-      - "United+Kingdom-London|✭nginx_393"
-      - "United+Kingdom-London|✭nginx_394"
-      - "United+Kingdom-London|✭nginx_395"
-      - "United+Kingdom-London|✭nginx_396"
-      - "United+Kingdom-London|✭nginx_397"
-      - "United+Kingdom-London|✭nginx_398"
-      - "United+Kingdom-London|✭nginx_399"
-      - "United+Kingdom-London|✭nginx_400"
-      - "United+Kingdom-London|✭nginx_401"
-      - "United+Kingdom-London|✭nginx_402"
-      - "United+Kingdom-London|✭nginx_403"
-      - "United+Kingdom-London|✭nginx_404"
-      - "United+Kingdom-London|✭nginx_405"
-      - "United+Kingdom-London|✭nginx_406"
-      - "United+Kingdom-London|✭nginx_407"
-      - "United+Kingdom-London|✭nginx_408"
-      - "United+Kingdom-London|✭nginx_409"
-      - "United+Kingdom-London|✭nginx_410"
-      - "United+Kingdom-London|✭nginx_411"
-      - "United+Kingdom-Stretford|✭nginx_412"
-      - "United+Kingdom-Stretford|✭nginx_413"
-      - "United+Kingdom-Stretford|✭nginx_414"
-      - "United+Kingdom-Stretford|✭nginx_415"
-      - "United+Kingdom-Swinton|✭nginx_416"
-      - "United+States-Ashburn|✭nginx_418"
-      - "United+States-Ashburn|✭nginx_419"
-      - "United+States-Ashburn|✭nginx_420"
-      - "United+States-Ashburn|✭nginx_421"
-      - "United+States-Ashburn|✭nginx_422"
-      - "United+States-Ashburn|✭nginx_423"
-      - "United+States-Ashburn|✭nginx_424"
-      - "United+States-Ashburn|✭nginx_425"
-      - "United+States-Ashburn|✭nginx_426"
-      - "United+States-Ashburn|✭nginx_427"
-      - "United+States-Ashburn|✭nginx_428"
-      - "United+States-Ashburn|✭nginx_429"
-      - "United+States-Ashburn|✭nginx_430"
-      - "United+States-Ashburn|✭nginx_431"
-      - "United+States-Ashburn|✭nginx_432"
-      - "United+States-Ashburn|✭nginx_433"
-      - "United+States-Ashburn|✭nginx_434"
-      - "United+States-Ashburn|✭nginx_435"
-      - "United+States-Ashburn|✭nginx_436"
-      - "United+States-Ashburn|✭nginx_437"
-      - "United+States-Ashburn|✭nginx_438"
-      - "United+States-Atlanta|✭nginx_439"
-      - "United+States-Atlanta|✭nginx_440"
-      - "United+States-Atlanta|✭nginx_441"
-      - "United+States-Atlanta|✭nginx_442"
-      - "United+States-Atlanta|✭nginx_443"
-      - "United+States-Atlanta|✭nginx_444"
-      - "United+States-Atlanta|✭nginx_445"
-      - "United+States-Atlanta|✭nginx_446"
-      - "United+States-Atlanta|✭nginx_447"
-      - "United+States-Atlanta|✭nginx_448"
-      - "United+States-Atlanta|✭nginx_449"
-      - "United+States-Atlanta|✭nginx_450"
-      - "United+States-Atlanta|✭nginx_451"
-      - "United+States-Atlanta|✭nginx_452"
-      - "United+States-Atlanta|✭nginx_453"
-      - "United+States-Atlanta|✭nginx_454"
-      - "United+States-Atlanta|✭nginx_455"
-      - "United+States-Atlanta|✭nginx_456"
-      - "United+States-Atlanta|✭nginx_457"
-      - "United+States-Atlanta|✭nginx_458"
-      - "United+States-Atlanta|✭nginx_459"
-      - "United+States-Atlanta|✭nginx_460"
-      - "United+States-Atlanta|✭nginx_461"
-      - "United+States-Atlanta|✭nginx_462"
-      - "United+States-Atlanta|✭nginx_463"
-      - "United+States-Atlanta|✭nginx_464"
-      - "United+States-Atlanta|✭nginx_465"
-      - "United+States-Atlanta|✭nginx_466"
-      - "United+States-Atlanta|✭nginx_467"
-      - "United+States-Atlanta|✭nginx_468"
-      - "United+States-Atlanta|✭nginx_469"
-      - "United+States-Atlanta|✭nginx_470"
-      - "United+States-Atlanta|✭nginx_471"
-      - "United+States-Atlanta|✭nginx_472"
-      - "United+States-Atlanta|✭nginx_473"
-      - "United+States-Atlanta|✭nginx_474"
-      - "United+States-Atlanta|✭nginx_475"
-      - "United+States-Atlanta|✭nginx_476"
-      - "United+States-Atlanta|✭nginx_477"
-      - "United+States-Atlanta|✭nginx_478"
-      - "United+States-Atlanta|✭nginx_479"
-      - "United+States-Atlanta|✭nginx_480"
-      - "United+States-Atlanta|✭nginx_481"
-      - "United+States-Atlanta|✭nginx_482"
-      - "United+States-Atlanta|✭nginx_483"
-      - "United+States-Chicago|✭nginx_484"
-      - "United+States-Dallas|✭nginx_485"
-      - "United+States-Dallas|✭nginx_486"
-      - "United+States-Dallas|✭nginx_487"
-      - "United+States-Dallas|✭nginx_488"
-      - "United+States-Dallas|✭nginx_489"
-      - "United+States-Denver|✭nginx_490"
-      - "United+States-Denver|✭nginx_491"
-      - "United+States-Denver|✭nginx_492"
-      - "United+States-Denver|✭nginx_493"
-      - "United+States-Denver|✭nginx_494"
-      - "United+States-Los+Angeles|✭nginx_495"
-      - "United+States-Los+Angeles|✭nginx_496"
-      - "United+States-Los+Angeles|✭nginx_497"
-      - "United+States-Los+Angeles|✭nginx_498"
-      - "United+States-Los+Angeles|✭nginx_499"
-      - "United+States-Miami|✭nginx_500"
-      - "United+States-Miami|✭nginx_501"
-      - "United+States-New+York|✭nginx_502"
-      - "United+States-New+York|✭nginx_503"
-      - "United+States-New+York|✭nginx_504"
-      - "United+States-New+York|✭nginx_505"
-      - "United+States-New+York|✭nginx_506"
-      - "United+States-New+York|✭nginx_507"
-      - "United+States-New+York|✭nginx_508"
-      - "United+States-New+York|✭nginx_509"
-      - "United+States-New+York|✭nginx_510"
-      - "United+States-New+York|✭nginx_511"
-      - "United+States-New+York|✭nginx_512"
-      - "United+States-New+York|✭nginx_513"
-      - "United+States-New+York|✭nginx_514"
-      - "United+States-New+York|✭nginx_515"
-      - "United+States-New+York|✭nginx_516"
-      - "United+States-New+York|✭nginx_517"
-      - "United+States-New+York|✭nginx_518"
-      - "United+States-New+York|✭nginx_519"
-      - "United+States-New+York|✭nginx_520"
-      - "United+States-New+York|✭nginx_521"
-      - "United+States-New+York|✭nginx_522"
-      - "United+States-New+York|✭nginx_523"
-      - "United+States-New+York|✭nginx_524"
-      - "United+States-New+York|✭nginx_525"
-      - "United+States-New+York|✭nginx_526"
-      - "United+States-New+York|✭nginx_527"
-      - "United+States-Newark|✭nginx_528"
-      - "United+States-Newark|✭nginx_529"
-      - "United+States-Pittsburgh|✭nginx_531"
-      - "United+States-Pittsburgh|✭nginx_532"
-      - "United+States-Pittsburgh|✭nginx_533"
-      - "United+States-Seattle|✭nginx_558"
-      - "United+States-Seattle|✭nginx_559"
-      - "United+States-Seattle|✭nginx_560"
-      - "United+States-Tukwila|✭nginx_561"
-      - "United+States-Tukwila|✭nginx_562"
-      - "United+States-Us-az|✭nginx_563"
-      - "United+States-Washington|✭nginx_564"
-      - "United+States-Washington|✭nginx_565"
-      - "United+States-Washington|✭nginx_566"
-      - "United+States-Washington|✭nginx_567"
-      - "United+States-Washington|✭nginx_568"
-      - "United+States-Washington|✭nginx_569"
-      - "United+States-Washington|✭nginx_570"
-      - "United+States-Washington|✭nginx_571"
-      - "Venezuela-Valencia|✭nginx_572"
-      - "Venezuela-Valencia|✭nginx_573"
-      - "Venezuela-Valencia|✭nginx_574"
-      - "Venezuela-Valencia|✭nginx_575"
-      - "Venezuela-Valencia|✭nginx_576"
-      - "Venezuela-Valencia|✭nginx_577"
-      - "Venezuela-Valencia|✭nginx_578"
-      - "Venezuela-Valencia|✭nginx_579"
-      - "Venezuela-Valencia|✭nginx_580"
-      - "Venezuela-Valencia|✭nginx_581"
-      - "Vietnam-Bo|✭nginx_582"
-      - "Vietnam-Bo|✭nginx_583"
-      - "Vietnam-Ho+Chi+Minh+City|✭nginx_584"
-      - "Vietnam-Nha+Trang|✭nginx_585"
+      - 'Austria-Vienna|✭nginx_1'
+      - 'Austria-Vienna|✭nginx_2'
+      - 'Bahrain-Manama|✭nginx_3'
+      - 'Bolivia-La+Paz|✭nginx_4'
+      - 'Brazil-S?o Paulo|✭nginx_5'
+      - 'Brazil-S?o Paulo|✭nginx_6'
+      - 'Canada-Beauharnois|✭nginx_8'
+      - 'Canada-Beauharnois|✭nginx_9'
+      - 'Canada-Pointe-Claire|✭nginx_12'
+      - 'Canada-Toronto|✭nginx_17'
+      - 'Canada-Toronto|✭nginx_28'
+      - 'Canada-Toronto|✭nginx_31'
+      - 'Canada-Toronto|✭nginx_33'
+      - 'Canada-Toronto|✭nginx_41'
+      - 'Canada-Toronto|✭nginx_57'
+      - 'Canada-Toronto|✭nginx_62'
+      - 'Canada-Toronto|✭nginx_65'
+      - 'Canada-Toronto|✭nginx_70'
+      - 'Canada-Toronto|✭nginx_72'
+      - 'Canada-Vancouver|✭nginx_74'
+      - 'Canada-Vancouver|✭nginx_75'
+      - 'Canada-Vancouver|✭nginx_76'
+      - 'China-Chengdu|✭nginx_77'
+      - 'China-Chengdu|✭nginx_78'
+      - 'China-Chengdu|✭nginx_79'
+      - 'China-Taiyuan|✭nginx_80'
+      - 'Colombia-Bogotá|✭nginx_81'
+      - 'Cyprus-Limassol|✭nginx_82'
+      - 'Cyprus-Limassol|✭nginx_83'
+      - 'Czechia-Prague|✭nginx_84'
+      - 'Ecuador-Quito|✭nginx_85'
+      - 'Ecuador-Quito|✭nginx_86'
+      - 'Estonia-Tallinn|✭nginx_87'
+      - 'Estonia-Tallinn|✭nginx_88'
+      - 'Finland-Helsinki|✭nginx_89'
+      - 'France-Gravelines|✭nginx_90'
+      - 'France-Lyon|✭nginx_92'
+      - 'France-Lyon|✭nginx_93'
+      - 'France-Paris|✭nginx_94'
+      - 'France-Paris|✭nginx_98'
+      - 'France-Paris|✭nginx_100'
+      - 'France-Roubaix|✭nginx_101'
+      - 'France-Roubaix|✭nginx_102'
+      - 'France-Roubaix|✭nginx_103'
+      - 'France-Roubaix|✭nginx_104'
+      - 'France-Roubaix|✭nginx_105'
+      - 'France-Roubaix|✭nginx_106'
+      - 'France-Roubaix|✭nginx_107'
+      - 'France-Roubaix|✭nginx_108'
+      - 'France-Roubaix|✭nginx_109'
+      - 'France-Roubaix|✭nginx_110'
+      - 'France-Roubaix|✭nginx_111'
+      - 'France-Roubaix|✭nginx_112'
+      - 'France-Roubaix|✭nginx_113'
+      - 'France-Roubaix|✭nginx_114'
+      - 'France-Roubaix|✭nginx_115'
+      - 'France-Roubaix|✭nginx_116'
+      - 'France-Roubaix|✭nginx_117'
+      - 'France-Roubaix|✭nginx_118'
+      - 'France-Roubaix|✭nginx_119'
+      - 'France-Roubaix|✭nginx_120'
+      - 'France-Roubaix|✭nginx_121'
+      - 'France-Roubaix|✭nginx_122'
+      - 'France-Roubaix|✭nginx_123'
+      - 'France-Roubaix|✭nginx_124'
+      - 'France-Roubaix|✭nginx_125'
+      - 'France-Roubaix|✭nginx_126'
+      - 'France-Roubaix|✭nginx_127'
+      - 'France-Roubaix|✭nginx_128'
+      - 'France-Roubaix|✭nginx_129'
+      - 'France-Roubaix|✭nginx_130'
+      - 'France-Roubaix|✭nginx_131'
+      - 'France-Roubaix|✭nginx_132'
+      - 'France-Roubaix|✭nginx_133'
+      - 'Germany-Frankfurt+am+Main|✭nginx_135'
+      - 'Germany-Frankfurt+am+Main|✭nginx_136'
+      - 'Germany-Frankfurt|✭nginx_137'
+      - 'Germany-Frankfurt|✭nginx_138'
+      - 'Germany-Frankfurt|✭nginx_139'
+      - 'Germany-Limburg+an+der+Lahn|✭nginx_143'
+      - 'Germany-Saarbrücken|✭nginx_146'
+      - 'Germany-Saarbrücken|✭nginx_147'
+      - 'Germany-Saarbrücken|✭nginx_148'
+      - 'Germany-Saarbrücken|✭nginx_149'
+      - 'Germany-Saarbrücken|✭nginx_150'
+      - 'Germany-Saarbrücken|✭nginx_151'
+      - 'Germany-Saarbrücken|✭nginx_152'
+      - 'Germany-Saarbrücken|✭nginx_153'
+      - 'Germany-Saarbrücken|✭nginx_154'
+      - 'Germany-Saarbrücken|✭nginx_155'
+      - 'Germany-Saarbrücken|✭nginx_156'
+      - 'Germany-Saarbrücken|✭nginx_157'
+      - 'Germany-Saarbrücken|✭nginx_158'
+      - 'Germany-Saarbrücken|✭nginx_159'
+      - 'Germany-Saarbrücken|✭nginx_160'
+      - 'Germany-Saarbrücken|✭nginx_161'
+      - 'Germany-Saarbrücken|✭nginx_162'
+      - 'Germany-Saarbrücken|✭nginx_163'
+      - 'Germany-Saarbrücken|✭nginx_164'
+      - 'Germany-Saarbrücken|✭nginx_165'
+      - 'Germany-Saarbrücken|✭nginx_166'
+      - 'Guatemala-Guatemala+City|✭nginx_167'
+      - 'Hong Kong-Wan Chai|✭nginx_168'
+      - 'Hong Kong-Wan Chai|✭nginx_169'
+      - 'Hong Kong-Wan Chai|✭nginx_170'
+      - 'Hong+Kong-Hong+Kong|✭nginx_171'
+      - 'Hong+Kong-Hong+Kong|✭nginx_172'
+      - 'Hong+Kong-Hong+Kong|✭nginx_173'
+      - 'Hong+Kong-Hong+Kong|✭nginx_174'
+      - 'Hong+Kong-Hong+Kong|✭nginx_175'
+      - 'Hong+Kong-Hong+Kong|✭nginx_177'
+      - 'Hong+Kong-Hong+Kong|✭nginx_178'
+      - 'Hungary-Budapest|✭nginx_179'
+      - 'Hungary-Budapest|✭nginx_180'
+      - 'Iceland-Keflavík|✭nginx_181'
+      - 'Iceland-Keflavík|✭nginx_182'
+      - 'India-Bengaluru|✭nginx_183'
+      - 'Indonesia-Cileunyi|✭nginx_184'
+      - 'Indonesia-Jakarta|✭nginx_185'
+      - 'Ireland-Dublin|✭nginx_186'
+      - 'Ireland-Dublin|✭nginx_187'
+      - 'Italy-Arezzo|✭nginx_188'
+      - 'Japan-Tokyo|✭nginx_189'
+      - 'Japan-Tokyo|✭nginx_190'
+      - 'Japan-Tokyo|✭nginx_191'
+      - 'Japan-Tokyo|✭nginx_192'
+      - 'Japan-Tokyo|✭nginx_193'
+      - 'Lithuania-Vilnius|✭nginx_194'
+      - 'Lithuania-Vilnius|✭nginx_195'
+      - 'Mexico-Mexico+City|✭nginx_196'
+      - 'Mexico-Mexico+City|✭nginx_197'
+      - 'Montenegro-Podgorica|✭nginx_198'
+      - 'Morocco-Fes|✭nginx_199'
+      - 'Netherlands-Amsterdam|✭nginx_200'
+      - 'Norway-Oslo|✭nginx_201'
+      - 'Norway-Oslo|✭nginx_202'
+      - 'Norway-Oslo|✭nginx_203'
+      - 'Norway-Oslo|✭nginx_204'
+      - 'Norway-Oslo|✭nginx_205'
+      - 'Norway-Oslo|✭nginx_206'
+      - 'Norway-Oslo|✭nginx_207'
+      - 'Norway-Oslo|✭nginx_208'
+      - 'Norway-Oslo|✭nginx_209'
+      - 'Norway-Oslo|✭nginx_210'
+      - 'Norway-Oslo|✭nginx_211'
+      - 'Norway-Oslo|✭nginx_212'
+      - 'Norway-Oslo|✭nginx_213'
+      - 'Norway-Oslo|✭nginx_214'
+      - 'Norway-Oslo|✭nginx_215'
+      - 'Norway-Oslo|✭nginx_216'
+      - 'Norway-Oslo|✭nginx_217'
+      - 'Norway-Oslo|✭nginx_218'
+      - 'Norway-Oslo|✭nginx_219'
+      - 'Norway-Oslo|✭nginx_220'
+      - 'Norway-Oslo|✭nginx_221'
+      - 'Norway-Oslo|✭nginx_222'
+      - 'Norway-Oslo|✭nginx_223'
+      - 'Norway-Oslo|✭nginx_224'
+      - 'Norway-Oslo|✭nginx_225'
+      - 'Philippines-Manila|✭nginx_226'
+      - 'Philippines-Manila|✭nginx_227'
+      - 'Poland-Warsaw|✭nginx_228'
+      - 'Poland-Warsaw|✭nginx_229'
+      - 'Poland-Warsaw|✭nginx_230'
+      - 'Poland-Warsaw|✭nginx_231'
+      - 'Poland-Warsaw|✭nginx_232'
+      - 'Poland-Warsaw|✭nginx_233'
+      - 'Poland-Warsaw|✭nginx_234'
+      - 'Poland-Warsaw|✭nginx_235'
+      - 'Poland-Warsaw|✭nginx_236'
+      - 'Poland-Warsaw|✭nginx_237'
+      - 'Poland-Warsaw|✭nginx_238'
+      - 'Poland-Warsaw|✭nginx_239'
+      - 'Poland-Warsaw|✭nginx_240'
+      - 'Poland-Warsaw|✭nginx_241'
+      - 'Poland-Warsaw|✭nginx_242'
+      - 'Poland-Warsaw|✭nginx_243'
+      - 'Poland-Warsaw|✭nginx_244'
+      - 'Poland-Warsaw|✭nginx_245'
+      - 'Poland-Warsaw|✭nginx_246'
+      - 'Poland-Warsaw|✭nginx_247'
+      - 'Poland-Warsaw|✭nginx_248'
+      - 'Poland-Warsaw|✭nginx_249'
+      - 'Poland-Warsaw|✭nginx_250'
+      - 'Poland-Warsaw|✭nginx_251'
+      - 'Poland-Warsaw|✭nginx_252'
+      - 'Poland-Warsaw|✭nginx_253'
+      - 'Poland-Warsaw|✭nginx_254'
+      - 'Poland-Warsaw|✭nginx_255'
+      - 'Poland-Warsaw|✭nginx_256'
+      - 'Poland-Warsaw|✭nginx_257'
+      - 'Poland-Warsaw|✭nginx_258'
+      - 'Poland-Warsaw|✭nginx_259'
+      - 'Poland-Warsaw|✭nginx_260'
+      - 'Poland-Warsaw|✭nginx_261'
+      - 'Poland-Warsaw|✭nginx_262'
+      - 'Poland-Warsaw|✭nginx_263'
+      - 'Poland-Warsaw|✭nginx_264'
+      - 'Poland-Warsaw|✭nginx_265'
+      - 'Poland-Warsaw|✭nginx_266'
+      - 'Poland-Warsaw|✭nginx_267'
+      - 'Poland-Warsaw|✭nginx_268'
+      - 'Poland-Warsaw|✭nginx_269'
+      - 'Poland-Warsaw|✭nginx_270'
+      - 'Poland-Warsaw|✭nginx_271'
+      - 'Poland-Warsaw|✭nginx_272'
+      - 'Poland-Wroclaw|✭nginx_273'
+      - 'Poland-Wroclaw|✭nginx_274'
+      - 'Poland-Wroclaw|✭nginx_275'
+      - 'Poland-Wroclaw|✭nginx_276'
+      - 'Poland-Wroclaw|✭nginx_277'
+      - 'Poland-Wroclaw|✭nginx_278'
+      - 'Poland-Wroclaw|✭nginx_279'
+      - 'Poland-Wroclaw|✭nginx_280'
+      - 'Poland-Wroclaw|✭nginx_281'
+      - 'Poland-Wroclaw|✭nginx_282'
+      - 'Poland-Wroclaw|✭nginx_283'
+      - 'Poland-Wroclaw|✭nginx_284'
+      - 'Poland-Wroclaw|✭nginx_285'
+      - 'Poland-Wroclaw|✭nginx_286'
+      - 'Poland-Wroclaw|✭nginx_287'
+      - 'Poland-Wroclaw|✭nginx_288'
+      - 'Poland-Wroclaw|✭nginx_289'
+      - 'Poland-Wroclaw|✭nginx_290'
+      - 'Poland-Wroclaw|✭nginx_291'
+      - 'Poland-Wroclaw|✭nginx_292'
+      - 'Poland-Wroclaw|✭nginx_293'
+      - 'Poland-Wroclaw|✭nginx_294'
+      - 'Poland-Wroclaw|✭nginx_295'
+      - 'Poland-Wroclaw|✭nginx_296'
+      - 'Poland-Wroclaw|✭nginx_297'
+      - 'Poland-Wroclaw|✭nginx_298'
+      - 'Poland-Wroclaw|✭nginx_299'
+      - 'Poland-Wroclaw|✭nginx_300'
+      - 'Poland-Wroclaw|✭nginx_301'
+      - 'Poland-Wroclaw|✭nginx_302'
+      - 'Poland-Wroclaw|✭nginx_303'
+      - 'Poland-Wroclaw|✭nginx_304'
+      - 'Poland-Wroclaw|✭nginx_305'
+      - 'Poland-Wroclaw|✭nginx_306'
+      - 'Poland-Wroclaw|✭nginx_307'
+      - 'Poland-Wroclaw|✭nginx_308'
+      - 'Poland-Wroclaw|✭nginx_309'
+      - 'Poland-Wroclaw|✭nginx_310'
+      - 'Poland-Wroclaw|✭nginx_311'
+      - 'Poland-Wroclaw|✭nginx_312'
+      - 'Puerto+Rico-San+Juan|✭nginx_313'
+      - 'Puerto+Rico-San+Juan|✭nginx_314'
+      - 'Russia-Moscow|✭nginx_315'
+      - 'Russia-Moscow|✭nginx_316'
+      - 'Singapore-Singapore|✭nginx_318'
+      - 'Singapore-Singapore|✭nginx_319'
+      - 'Singapore-Singapore|✭nginx_320'
+      - 'South Korea-Geumcheon-gu|✭nginx_322'
+      - 'South+Africa-Cape+Town|✭nginx_323'
+      - 'South+Korea-Seoul|✭nginx_324'
+      - 'Spain-Barcelona|✭nginx_325'
+      - 'Spain-Madrid|✭nginx_326'
+      - 'Sweden-Stockholm|✭nginx_327'
+      - 'Switzerland-Zurich|✭nginx_328'
+      - 'Switzerland-Zurich|✭nginx_329'
+      - 'Switzerland-Zurich|✭nginx_330'
+      - 'Switzerland-Zurich|✭nginx_331'
+      - 'Switzerland-Zurich|✭nginx_332'
+      - 'Thailand-Bang+Rak|✭nginx_333'
+      - 'The+Netherlands-Amsterdam|✭nginx_334'
+      - 'The+Netherlands-Amsterdam|✭nginx_335'
+      - 'The+Netherlands-Amsterdam|✭nginx_336'
+      - 'The+Netherlands-Amsterdam|✭nginx_337'
+      - 'The+Netherlands-Amsterdam|✭nginx_338'
+      - 'The+Netherlands-Amsterdam|✭nginx_339'
+      - 'The+Netherlands-Amsterdam|✭nginx_341'
+      - 'The+Netherlands-Amsterdam|✭nginx_342'
+      - 'The+Netherlands-Amsterdam|✭nginx_343'
+      - 'The+Netherlands-Amsterdam|✭nginx_344'
+      - 'The+Netherlands-Amsterdam|✭nginx_345'
+      - 'The+Netherlands-Amsterdam|✭nginx_346'
+      - 'The+Netherlands-Amsterdam|✭nginx_347'
+      - 'The+Netherlands-Amsterdam|✭nginx_348'
+      - 'The+Netherlands-Amsterdam|✭nginx_349'
+      - 'The+Netherlands-Amsterdam|✭nginx_350'
+      - 'The+Netherlands-Amsterdam|✭nginx_352'
+      - 'The+Netherlands-Amsterdam|✭nginx_353'
+      - 'The+Netherlands-Meppel|✭nginx_354'
+      - 'Turkey-Ataşehir|✭nginx_355'
+      - 'Turkey-Ataşehir|✭nginx_356'
+      - 'Türkiye-Istanbul|✭nginx_357'
+      - 'Türkiye-Izmir|✭nginx_358'
+      - 'Türkiye-Izmir|✭nginx_359'
+      - 'Türkiye-Izmir|✭nginx_360'
+      - 'Ukraine-Kyiv|✭nginx_361'
+      - 'United Kingdom-London|✭nginx_363'
+      - 'United Kingdom-London|✭nginx_364'
+      - 'United States-Atlanta|✭nginx_365'
+      - 'United States-Buffalo|✭nginx_366'
+      - 'United States-Los Angeles|✭nginx_367'
+      - 'United States-Los Angeles|✭nginx_368'
+      - 'United States-Los Angeles|✭nginx_369'
+      - 'United States-Miami|✭nginx_370'
+      - 'United States-New York|✭nginx_371'
+      - 'United States-San Jose|✭nginx_372'
+      - 'United States-San Jose|✭nginx_373'
+      - 'United States-San Jose|✭nginx_374'
+      - 'United States-San Jose|✭nginx_375'
+      - 'United States-San Jose|✭nginx_376'
+      - 'United States-San Jose|✭nginx_377'
+      - 'United States-San Jose|✭nginx_378'
+      - 'United States-San Jose|✭nginx_379'
+      - 'United States-San Jose|✭nginx_380'
+      - 'United+Arab+Emirates-Dubai|✭nginx_381'
+      - 'United+Kingdom-City+of+London|✭nginx_382'
+      - 'United+Kingdom-London|✭nginx_383'
+      - 'United+Kingdom-London|✭nginx_384'
+      - 'United+Kingdom-London|✭nginx_385'
+      - 'United+Kingdom-London|✭nginx_386'
+      - 'United+Kingdom-London|✭nginx_387'
+      - 'United+Kingdom-London|✭nginx_388'
+      - 'United+Kingdom-London|✭nginx_389'
+      - 'United+Kingdom-London|✭nginx_390'
+      - 'United+Kingdom-London|✭nginx_391'
+      - 'United+Kingdom-London|✭nginx_393'
+      - 'United+Kingdom-London|✭nginx_394'
+      - 'United+Kingdom-London|✭nginx_395'
+      - 'United+Kingdom-London|✭nginx_396'
+      - 'United+Kingdom-London|✭nginx_397'
+      - 'United+Kingdom-London|✭nginx_398'
+      - 'United+Kingdom-London|✭nginx_399'
+      - 'United+Kingdom-London|✭nginx_400'
+      - 'United+Kingdom-London|✭nginx_401'
+      - 'United+Kingdom-London|✭nginx_402'
+      - 'United+Kingdom-London|✭nginx_403'
+      - 'United+Kingdom-London|✭nginx_404'
+      - 'United+Kingdom-London|✭nginx_405'
+      - 'United+Kingdom-London|✭nginx_406'
+      - 'United+Kingdom-London|✭nginx_407'
+      - 'United+Kingdom-London|✭nginx_408'
+      - 'United+Kingdom-London|✭nginx_409'
+      - 'United+Kingdom-London|✭nginx_410'
+      - 'United+Kingdom-London|✭nginx_411'
+      - 'United+Kingdom-Stretford|✭nginx_412'
+      - 'United+Kingdom-Stretford|✭nginx_413'
+      - 'United+Kingdom-Stretford|✭nginx_414'
+      - 'United+Kingdom-Stretford|✭nginx_415'
+      - 'United+Kingdom-Swinton|✭nginx_416'
+      - 'United+States-Ashburn|✭nginx_418'
+      - 'United+States-Ashburn|✭nginx_419'
+      - 'United+States-Ashburn|✭nginx_420'
+      - 'United+States-Ashburn|✭nginx_421'
+      - 'United+States-Ashburn|✭nginx_422'
+      - 'United+States-Ashburn|✭nginx_423'
+      - 'United+States-Ashburn|✭nginx_424'
+      - 'United+States-Ashburn|✭nginx_425'
+      - 'United+States-Ashburn|✭nginx_426'
+      - 'United+States-Ashburn|✭nginx_427'
+      - 'United+States-Ashburn|✭nginx_428'
+      - 'United+States-Ashburn|✭nginx_429'
+      - 'United+States-Ashburn|✭nginx_430'
+      - 'United+States-Ashburn|✭nginx_431'
+      - 'United+States-Ashburn|✭nginx_432'
+      - 'United+States-Ashburn|✭nginx_433'
+      - 'United+States-Ashburn|✭nginx_434'
+      - 'United+States-Ashburn|✭nginx_435'
+      - 'United+States-Ashburn|✭nginx_436'
+      - 'United+States-Ashburn|✭nginx_437'
+      - 'United+States-Ashburn|✭nginx_438'
+      - 'United+States-Atlanta|✭nginx_439'
+      - 'United+States-Atlanta|✭nginx_440'
+      - 'United+States-Atlanta|✭nginx_441'
+      - 'United+States-Atlanta|✭nginx_442'
+      - 'United+States-Atlanta|✭nginx_443'
+      - 'United+States-Atlanta|✭nginx_444'
+      - 'United+States-Atlanta|✭nginx_445'
+      - 'United+States-Atlanta|✭nginx_446'
+      - 'United+States-Atlanta|✭nginx_447'
+      - 'United+States-Atlanta|✭nginx_448'
+      - 'United+States-Atlanta|✭nginx_449'
+      - 'United+States-Atlanta|✭nginx_450'
+      - 'United+States-Atlanta|✭nginx_451'
+      - 'United+States-Atlanta|✭nginx_452'
+      - 'United+States-Atlanta|✭nginx_453'
+      - 'United+States-Atlanta|✭nginx_454'
+      - 'United+States-Atlanta|✭nginx_455'
+      - 'United+States-Atlanta|✭nginx_456'
+      - 'United+States-Atlanta|✭nginx_457'
+      - 'United+States-Atlanta|✭nginx_458'
+      - 'United+States-Atlanta|✭nginx_459'
+      - 'United+States-Atlanta|✭nginx_460'
+      - 'United+States-Atlanta|✭nginx_461'
+      - 'United+States-Atlanta|✭nginx_462'
+      - 'United+States-Atlanta|✭nginx_463'
+      - 'United+States-Atlanta|✭nginx_464'
+      - 'United+States-Atlanta|✭nginx_465'
+      - 'United+States-Atlanta|✭nginx_466'
+      - 'United+States-Atlanta|✭nginx_467'
+      - 'United+States-Atlanta|✭nginx_468'
+      - 'United+States-Atlanta|✭nginx_469'
+      - 'United+States-Atlanta|✭nginx_470'
+      - 'United+States-Atlanta|✭nginx_471'
+      - 'United+States-Atlanta|✭nginx_472'
+      - 'United+States-Atlanta|✭nginx_473'
+      - 'United+States-Atlanta|✭nginx_474'
+      - 'United+States-Atlanta|✭nginx_475'
+      - 'United+States-Atlanta|✭nginx_476'
+      - 'United+States-Atlanta|✭nginx_477'
+      - 'United+States-Atlanta|✭nginx_478'
+      - 'United+States-Atlanta|✭nginx_479'
+      - 'United+States-Atlanta|✭nginx_480'
+      - 'United+States-Atlanta|✭nginx_481'
+      - 'United+States-Atlanta|✭nginx_482'
+      - 'United+States-Atlanta|✭nginx_483'
+      - 'United+States-Chicago|✭nginx_484'
+      - 'United+States-Dallas|✭nginx_485'
+      - 'United+States-Dallas|✭nginx_486'
+      - 'United+States-Dallas|✭nginx_487'
+      - 'United+States-Dallas|✭nginx_488'
+      - 'United+States-Dallas|✭nginx_489'
+      - 'United+States-Denver|✭nginx_490'
+      - 'United+States-Denver|✭nginx_491'
+      - 'United+States-Denver|✭nginx_492'
+      - 'United+States-Denver|✭nginx_493'
+      - 'United+States-Denver|✭nginx_494'
+      - 'United+States-Los+Angeles|✭nginx_495'
+      - 'United+States-Los+Angeles|✭nginx_496'
+      - 'United+States-Los+Angeles|✭nginx_497'
+      - 'United+States-Los+Angeles|✭nginx_498'
+      - 'United+States-Los+Angeles|✭nginx_499'
+      - 'United+States-Miami|✭nginx_500'
+      - 'United+States-Miami|✭nginx_501'
+      - 'United+States-New+York|✭nginx_502'
+      - 'United+States-New+York|✭nginx_503'
+      - 'United+States-New+York|✭nginx_504'
+      - 'United+States-New+York|✭nginx_505'
+      - 'United+States-New+York|✭nginx_506'
+      - 'United+States-New+York|✭nginx_507'
+      - 'United+States-New+York|✭nginx_508'
+      - 'United+States-New+York|✭nginx_509'
+      - 'United+States-New+York|✭nginx_510'
+      - 'United+States-New+York|✭nginx_511'
+      - 'United+States-New+York|✭nginx_512'
+      - 'United+States-New+York|✭nginx_513'
+      - 'United+States-New+York|✭nginx_514'
+      - 'United+States-New+York|✭nginx_515'
+      - 'United+States-New+York|✭nginx_516'
+      - 'United+States-New+York|✭nginx_517'
+      - 'United+States-New+York|✭nginx_518'
+      - 'United+States-New+York|✭nginx_519'
+      - 'United+States-New+York|✭nginx_520'
+      - 'United+States-New+York|✭nginx_521'
+      - 'United+States-New+York|✭nginx_522'
+      - 'United+States-New+York|✭nginx_523'
+      - 'United+States-New+York|✭nginx_524'
+      - 'United+States-New+York|✭nginx_525'
+      - 'United+States-New+York|✭nginx_526'
+      - 'United+States-New+York|✭nginx_527'
+      - 'United+States-Newark|✭nginx_528'
+      - 'United+States-Newark|✭nginx_529'
+      - 'United+States-Pittsburgh|✭nginx_531'
+      - 'United+States-Pittsburgh|✭nginx_532'
+      - 'United+States-Pittsburgh|✭nginx_533'
+      - 'United+States-Seattle|✭nginx_558'
+      - 'United+States-Seattle|✭nginx_559'
+      - 'United+States-Seattle|✭nginx_560'
+      - 'United+States-Tukwila|✭nginx_561'
+      - 'United+States-Tukwila|✭nginx_562'
+      - 'United+States-Us-az|✭nginx_563'
+      - 'United+States-Washington|✭nginx_564'
+      - 'United+States-Washington|✭nginx_565'
+      - 'United+States-Washington|✭nginx_566'
+      - 'United+States-Washington|✭nginx_567'
+      - 'United+States-Washington|✭nginx_568'
+      - 'United+States-Washington|✭nginx_569'
+      - 'United+States-Washington|✭nginx_570'
+      - 'United+States-Washington|✭nginx_571'
+      - 'Venezuela-Valencia|✭nginx_572'
+      - 'Venezuela-Valencia|✭nginx_573'
+      - 'Venezuela-Valencia|✭nginx_574'
+      - 'Venezuela-Valencia|✭nginx_575'
+      - 'Venezuela-Valencia|✭nginx_576'
+      - 'Venezuela-Valencia|✭nginx_577'
+      - 'Venezuela-Valencia|✭nginx_578'
+      - 'Venezuela-Valencia|✭nginx_579'
+      - 'Venezuela-Valencia|✭nginx_580'
+      - 'Venezuela-Valencia|✭nginx_581'
+      - 'Vietnam-Bo|✭nginx_582'
+      - 'Vietnam-Bo|✭nginx_583'
+      - 'Vietnam-Ho+Chi+Minh+City|✭nginx_584'
+      - 'Vietnam-Nha+Trang|✭nginx_585'
 rules:
- - MATCH,🔴 auto
-
+  - MATCH,🔴 auto
