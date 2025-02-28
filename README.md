@@ -153,9 +153,6 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 **Warp+ Hysteria ON Singbox**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
 
-**Warp+ Proton on Hiddify**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Poroton%20ON%20WARP%2B
-
 **Warp+ Proton on Hiddify with DNS clean [[∏I?]]**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Proton%20ON%20WARP%2B%20DNS%20Clean
 
@@ -174,8 +171,8 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscri
 **Warp in M1,M2, ... ,h04FA0A mode with random ip:port [[∏I?]]**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/rand-ip
 
-**All Guest ON Hiddify**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/All%20%20Warp%20Windscribe%20Poroton%20Hysteria
+**All HTTPs for Sing-Box [[WE?]]**  
+https://wearestandtelegram.github.io/Wearestand/
 
 **Chaining Warp confs**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/WarpOnWarp.json
@@ -247,6 +244,12 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SIN
 
 **Built-in workflows, warp ON warp [[∏I?]]**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
+
+
+**All HTTPS for SingBox [[WE?]]**  
+https://wearestandtelegram.github.io/Wearestand/  
+https://raw.githubusercontent.com/WearestandTelegram/Wearestand/refs/heads/main/wearestand.json
+
 
 **Meshkintaj [[ME?]]**  
 https://karing-freevpnhomes-subscription.shampoosirsehat.homes
@@ -825,6 +828,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [PR?]: https://t.me/s/ProxyDaemi
 [SW?]: https://github.com/jadolg/shadowmere
 [SR?]: https://github.com/soroushmirzaei/telegram-configs-collector
+[WE?]: https://t.me/IranRamona
 [Arshia]: https://t.me/s/warpscanner
 [The Darkness]: https://t.me/s/ConfigWireguard
 [Nekobox]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
