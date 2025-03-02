@@ -30,9 +30,9 @@ OUTPUT_FILES = {
 
 # Maximum number of configs to keep for each type
 MAX_CONFIGS = {
-    "neko": float("inf"), 
-    "husi": float("inf"), 
-    "exclave": float("inf"), 
+    "neko": float("inf"),
+    "husi": float("inf"),
+    "exclave": float("inf"),
     "v2ray": 80,  # Maximum 80 configs
 }
 
