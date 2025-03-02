@@ -71,19 +71,13 @@
     {
       "type": "selector",
       "tag": "proxy",
-      "outbounds": [
-        "auto",
-        "direct",
-        "vless-out"
-      ],
+      "outbounds": ["auto", "direct", "vless-out"],
       "default": "vless-out"
     },
     {
       "type": "urltest",
       "tag": "auto",
-      "outbounds": [
-        "vless-out"
-      ],
+      "outbounds": ["vless-out"],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "10m0s",
       "tolerance": 50
@@ -103,9 +97,7 @@
       "tls": {
         "enabled": true,
         "server_name": "harmony-427.pages.dev",
-        "alpn": [
-          "h3"
-        ],
+        "alpn": ["h3"],
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
@@ -141,12 +133,7 @@
         "outbound": "proxy"
       },
       {
-        "rule_set": [
-          "geoip-private",
-          "geosite-private",
-          "geosite-ir",
-          "geoip-ir"
-        ],
+        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"],
         "outbound": "direct"
       },
       {
@@ -194,4 +181,4 @@
     "final": "proxy",
     "auto_detect_interface": true
   }
- }
+}
