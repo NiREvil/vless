@@ -5,7 +5,9 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 logger = logging.getLogger(__name__)
 
 CHANNELS = {
@@ -32,7 +34,9 @@ def read_existing_configs(file_path):
 
 def fetch_configs():
     try:
-        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+        }
 
         existing_configs = {
             config_type: read_existing_configs(os.path.join(OUTPUT_DIR, filename))
@@ -75,7 +79,9 @@ def fetch_configs():
                 config = match.group(0)
                 base_config = config.split("#")[0]
                 if base_config not in existing_configs["v2ray"]:
-                    new_configs["v2ray"].add(f"{base_config}#REvil{len(new_configs['v2ray'])+1}")
+                    new_configs["v2ray"].add(
+                        f"{base_config}#REvil{len(new_configs['v2ray'])+1}"
+                    )
 
         os.makedirs(OUTPUT_DIR, exist_ok=True)
 

@@ -96,9 +96,7 @@ formatted_time = datetime.datetime.now().strftime("%A, %d %b %Y, %H:%M")
 
 
 def export_Hiddify(t_ips):
-    config_prefix = (
-        f"warp://{t_ips[0]}?ifp=1-3&ifpm=m4#⚪️Tehran&&detour=warp://{t_ips[1]}?ifp=1-2&ifpm=m5#🟡Berlin"
-    )
+    config_prefix = f"warp://{t_ips[0]}?ifp=1-3&ifpm=m4#⚪️Tehran&&detour=warp://{t_ips[1]}?ifp=1-2&ifpm=m5#🟡Berlin"
     return config_prefix, formatted_time
 
 
