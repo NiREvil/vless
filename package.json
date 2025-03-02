@@ -1,27 +1,25 @@
 {
-  "name": "@vless/vless",
+  "name": "vless",
   "version": "1.0.0",
-  "description": "$$\\color{#a5a5a5} \\Huge \\text{\\R $\\sum{\\vil_t = \\mathbb{N108}\\infty}$}$$",
-  "main": ".prettierrc.js",
+  "description": "Freedom To Dream",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NiREvil/vless.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NiREvil/vless/issues"
-  },
-  "homepage": "https://github.com/NiREvil/vless#readme",
-  "dependencies": {
-    "package-lock.json": "^1.0.0",
-    "prettier": "^3.4.2"
+    "format:js": "prettier --write **/*.{js,json,md,yml,html,css}",
+    "lint:js": "eslint --fix **/*.js",
+    "format:py": "black .",
+    "lint:py": "ruff check --fix .",
+    "format": "npm run format:js && npm run format:py",
+    "lint": "npm run lint:js && npm run lint:py"
   },
   "devDependencies": {
-    "prettier-plugin-toml": "^2.0.1"
+    "@eslint/config-array": "^0.19.2",
+    "@eslint/js": "^9.21.0",
+    "@eslint/object-schema": "^2.1.6",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.5.2"
+  },
+  "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   }
 }
