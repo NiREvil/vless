@@ -81,7 +81,10 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 ### Scan with Hiddify
 
-<img src="edge/assets/QR-Code.svg" alt="QR" width="350px"/>
+<p align="center">
+     <br>
+     <img src="edge/assets/QRCode-Dog.png" alt="QR" width="550px">
+   </p> <br>
 
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
