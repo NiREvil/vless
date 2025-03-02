@@ -1,12 +1,16 @@
 dist/
 build/
+.github/
 warp.json
 backend.py
 hiddify/
 edge/waste/
-**/package.json
+package.json
 eslint.config.js
 node_modules/
-**/node_modules/
-**/package-lock.json
+package-lock.json
+edge/LoadBalance.js
+edge/algein-one.js
+DNS over HTTPS/
+real address generator/
 boringtun-boringtun-cli-0.5.2/
