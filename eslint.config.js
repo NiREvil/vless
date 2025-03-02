@@ -3,7 +3,21 @@ import globals from 'globals';
 
 export default [
   {
-    ignores: ['node_modules/**', 'dist/**', 'build/**', 'warp.json', 'hiddify/**', 'edge/waste/**'],
+    ignores: [
+      'dist/**',
+      'build/**',
+      'warp.json',
+      'hiddify/**',
+      '.github/**',
+      'edge/waste/**',
+      'node_modules/**',
+      'DNS over HTTPS/**',
+      'package-lock.json',
+      'edge/all-in-one.js',
+      'edge/LoadBalance.js',
+      'real address generator/**',
+      'boringtun-boringtun-cli-0.5.2/**',
+    ],
   },
   js.configs.recommended,
   {
