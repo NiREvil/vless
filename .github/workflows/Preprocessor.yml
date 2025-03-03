@@ -4,54 +4,58 @@ on:
   push:
     branches: ['main']
     paths:
-      - '**/preprocessor.*' # 'preprocessor' in any directory and all types
+      - '**/preprocessor.*'
       - 'sub/*.json'
   schedule:
-    - cron: '0 */4 * * *' # Runs every 4 hours
-  workflow_dispatch: # Allow manual triggering of the workflow
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        dummy: ['single'] 
     defaults:
       run:
-        shell: bash -e {0} # Fail the job if any command fails
+        shell: bash -e {0}
     steps:
-      # Step 1: Checkout the repository
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Fetch full history
-          submodules: 'recursive' # Include submodules
+          fetch-depth: 0
+          submodules: 'recursive'
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # Step 2: Set up PHP
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2' # Use PHP 8.2
+          php-version: '8.3' 
 
-      # Step 3: Run the preprocessor.php script
       - name: Run preprocessor.php
         run: php edge/preprocessor.php || exit 1
 
-      # Step 4: Configure Git
       - name: Configure Git
         run: |
-          git config --local user.name "REvil"
-          git config --local user.email "nirevil@proton.me"
+          git config --local user.name "BotFather"
+          git config --local user.email "BotFather.REvil@proton.me"
 
-      # Step 5: Commit changes if there are any
       - name: Commit changes with timestamp
         run: |
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "ⅣⅭ Update $(TZ='Asia/Tehran' date '+%H:%M:%S')" \
-                       -m "The list of Cloudflare IPs has been updated"
+            git commit -m "Cloudflare IPs Refreshed at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" \
+                       -m "The list of Cloudflare IPs has been updated" \
+                       --author="Diana-Cl <135276904+Diana-Cl@users.noreply.github.com>"
           else
             echo "No changes detected. Skipping commit."
           fi
 
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          
       # Step 6: Push changes
       - name: Push changes
         uses: ad-m/github-push-action@master
