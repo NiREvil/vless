@@ -128,6 +128,10 @@ bpb.yousef.isegaro.com
 35.228.36.82
 ```
 
+```POV-Ray SDL
+34.88.63.160
+```
+
 **🇪🇦 Spain, Madrid, Google LLC**
 
 ```POV-Ray SDL
@@ -145,6 +149,14 @@ bpb.yousef.isegaro.com
 ![rainbow]
 
 **🇩🇪 Germany, Frankfurt am Main, Amazon**
+
+```POV-Ray SDL
+3.124.208.189
+```
+
+```POV-Ray SDL
+18.199.213.201
+```
 
 ```POV-Ray SDL
 3.70.219.196
@@ -204,6 +216,10 @@ bpb.yousef.isegaro.com
 </details>
 
 **🇺🇸 USA, random, Amazon Technologies Inc**
+
+```POV-Ray SDL
+18.216.55.100
+```
 
 ```POV-Ray SDL
 34.227.133.207
