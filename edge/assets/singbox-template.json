@@ -73,19 +73,19 @@
     {
       "type": "selector",
       "tag": "proxy",
-      "outbounds": ["auto", "direct"],
+      "outbounds": ["Auto", "Direct"],
       "default": "🟡Berlin"
     },
     {
       "type": "urltest",
-      "tag": "auto",
+      "tag": "Auto",
       "outbounds": [],
-      "url": "http://www.gstatic.com/generate_204",
+      "url": "https://www.gstatic.com/generate_204",
       "tolerance": 50
     },
     {
       "type": "direct",
-      "tag": "direct",
+      "tag": "Direct",
       "domain_strategy": "prefer_ipv4"
     }
   ],
@@ -155,10 +155,7 @@
     ],
     "final": "proxy",
     "auto_detect_interface": true,
-    "default_domain_resolver": {
-      "server": "local-dns",
-      "client_subnet": "1.1.1.1"
-    }
+    "default_domain_resolver": "direct-dns"
   },
   "experimental": {
     "cache_file": {
