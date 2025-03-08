@@ -177,10 +177,7 @@
     ],
     "final": "proxy",
     "auto_detect_interface": true,
-    "default_domain_resolver": {
-      "server": "local-dns",
-      "client_subnet": "1.1.1.1"
-    }
+    "default_domain_resolver": "direct-dns"
   },
   "experimental": {
     "cache_file": {
