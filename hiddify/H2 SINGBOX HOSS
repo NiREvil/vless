@@ -48,7 +48,7 @@
         "server": "direct-dns"
       }
     ],
-    "final": "direct-dns",
+    "final": "proxy-dns",
     "strategy": "prefer_ipv4"
   },
   "inbounds": [
@@ -58,7 +58,7 @@
       "mtu": 9000,
       "address": "172.19.0.1/30",
       "auto_route": true,
-      "stack": "system",
+      "stack": "gvisor",
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -176,6 +176,15 @@
       }
     ],
     "final": "proxy",
-    "auto_detect_interface": true
+    "auto_detect_interface": true,
+    "default_domain_resolver": {
+      "server": "local-dns",
+      "client_subnet": "1.1.1.1"
+    }
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    }
   }
 }
