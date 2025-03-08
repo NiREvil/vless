@@ -58,7 +58,7 @@
         "172.16.0.2/32",
         "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
       ],
-      "private_key": "OEMvQajxxeIluxTmf6XsTkibTOuYL+nbdrGQm3htTHk=",
+      "private_key": "8F4eM/dRFzsQWZjpZEeAVH3XVFgWaz2bMNH4zLItclg=",
       "peers": [
         {
           "address": "188.114.96.214",
@@ -70,9 +70,9 @@
           ],
           "persistent_keepalive_interval": 30,
           "reserved": [
-            139,
-            243,
-            157
+            237,
+            217,
+            187
           ]
         }
       ],
@@ -88,7 +88,7 @@
         "172.16.0.2/32",
         "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
       ],
-      "private_key": "wALzNELDyLkP/MUbgBqNyFHIqXEoIfSokjRxrW/8vmw=",
+      "private_key": "WDsH0x3cSLuJY70i6Gu4BXzIfLKq8prmukC/ZsupyVw=",
       "peers": [
         {
           "address": "188.114.99.22",
@@ -100,9 +100,9 @@
           ],
           "persistent_keepalive_interval": 30,
           "reserved": [
-            156,
-            234,
-            179
+            245,
+            254,
+            211
           ]
         }
       ],
@@ -141,8 +141,8 @@
       "type": "selector",
       "tag": "proxy",
       "outbounds": [
-        "Auto",
-        "Direct",
+        "auto",
+        "direct",
         "\u26aa\ufe0fTehran",
         "\ud83d\udfe1Berlin"
       ],
@@ -150,7 +150,7 @@
     },
     {
       "type": "urltest",
-      "tag": "Auto",
+      "tag": "auto",
       "outbounds": [
         "\u26aa\ufe0fTehran",
         "\ud83d\udfe1Berlin"
