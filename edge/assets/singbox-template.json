@@ -73,12 +73,12 @@
     {
       "type": "selector",
       "tag": "proxy",
-      "outbounds": ["Auto", "Direct"],
+      "outbounds": ["auto", "direct"],
       "default": "🟡Berlin"
     },
     {
       "type": "urltest",
-      "tag": "Auto",
+      "tag": "auto",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
       "tolerance": 50
