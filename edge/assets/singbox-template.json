@@ -43,7 +43,8 @@
       }
     ],
     "final": "proxy-dns",
-    "strategy": "prefer_ipv4"
+    "strategy": "prefer_ipv4",
+    "independent_cache": true
   },
   "endpoints": [],
   "inbounds": [
@@ -53,6 +54,8 @@
       "mtu": 9000,
       "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
       "stack": "mixed",
       "platform": {
         "http_proxy": {
@@ -74,13 +77,14 @@
       "type": "selector",
       "tag": "proxy",
       "outbounds": ["auto", "direct"],
-      "default": "🟡Berlin"
+      "default": "🟡Berlin",
+      "interrupt_exist_connections": true
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [],
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "http://www.gstatic.com/generate_204",
       "tolerance": 50
     },
     {
@@ -154,6 +158,7 @@
       }
     ],
     "final": "proxy",
+    "override_android_vpn": true,
     "auto_detect_interface": true,
     "default_domain_resolver": "direct-dns"
   },
