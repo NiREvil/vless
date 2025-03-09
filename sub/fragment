@@ -1,20 +1,5 @@
-/**
- * اسکی = دیدار سرزده با مادر گرامیتان  
- * مخصوصا ادمین‌های کصکش BugFreeNet
- * این اولین بار هست که از این متن ها مینویسم، کپی برداری هیچوقت 
- * برای ما مهم نبوده ولی اخه لاشی وقتی کپی کردی دیگه با کانفیگ‌های من 
- * این حق رو نداری سر ممبرهای از همه جا بیخبر کانالت منت بذاری  
- * دیگه حق نداری بنویسی کپی رایت و اسکی حرام است 
- * حق نداری بنویسی ادمینکانال تخمیتون خیلی براش زحمت کشیده درحالی که 
- * بیشترین کاری که کرده کپی پست تو گیت‌هاب خودش بوده 
- * متنفرم از اینکه مثل شماها برای دامین برای اسم کانفیگ برای پث 
- * اسم‌های دومتری مثل خودتون بنویسم متنفرم از اینکارا. مجبورم نکنید  
- * دیگه نبینم اسم کانال تخمیتون اومده تو اسم کانفیگ‌های من 
- * صدکا ممبر دارید خیر سرتون اونوقت از من یک کا میزنید؟ خیلی حقیرید :)
- */
-
 {
-  "remarks": "🟡fragment-load balance ",
+  "remarks": "🟡 fragment-load balance ",
   "log": {
       "loglevel": "warning"
   },
@@ -119,7 +104,7 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
@@ -132,7 +117,7 @@
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-1"
@@ -164,20 +149,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-2"
@@ -209,20 +194,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-3"
@@ -254,13 +239,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -299,13 +284,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -344,20 +329,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-6"
@@ -389,20 +374,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-7"
@@ -434,20 +419,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-8"
@@ -479,20 +464,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-9"
@@ -524,20 +509,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-10"
@@ -569,20 +554,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-11"
@@ -614,20 +599,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "hoy.bachebiapain.ir"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
-            "Host": "hoy.bachebiapain.ir",
+            "host": "RRFF.pagES.DEV",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-12"
@@ -659,20 +644,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-13"
@@ -704,20 +689,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "hoy.bachebiapain.ir"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
-            "Host": "hoy.bachebiapain.ir",
+            "host": "RRFF.pagES.DEV",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-14"
@@ -749,20 +734,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-15"
@@ -794,20 +779,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-16"
@@ -839,20 +824,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-17"
@@ -884,20 +869,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-18"
@@ -929,17 +914,17 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "Hoy.BacheBiaPain.IR"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
-            "Host": "hoy.bachebiapain.ir",
+            "host": "RRFF.pagES.DEV",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
           "path": "/api?ed=2560"
@@ -974,20 +959,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "Hoy.BacheBiaPain.IR"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
-            "Host": "hoy.bachebiapain.ir",
+            "host": "RRFF.pagES.DEV",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-20"
@@ -1019,17 +1004,17 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "Hoy.BacheBiaPain.IR"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
-            "Host": "hoy.bachebiapain.ir",
+            "host": "RRFF.pagES.DEV",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
           "path": "/api?ed=2560"
@@ -1064,13 +1049,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1109,13 +1094,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1154,13 +1139,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1199,13 +1184,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1244,13 +1229,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1289,13 +1274,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "randomized",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1334,13 +1319,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1379,13 +1364,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1424,20 +1409,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-30"
@@ -1469,13 +1454,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1514,17 +1499,17 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "Hoy.BacheBiaPain.IR"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
-            "Host": "hoy.bachebiapain.ir",
+            "host": "RRFF.pagES.DEV",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
           "path": "/assets?ed=2560"
@@ -1559,13 +1544,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1604,13 +1589,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1649,13 +1634,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1694,13 +1679,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1739,13 +1724,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1784,13 +1769,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1829,13 +1814,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1874,13 +1859,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1919,13 +1904,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -1964,13 +1949,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2009,13 +1994,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2054,13 +2039,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2099,13 +2084,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2144,13 +2129,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2189,13 +2174,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2234,13 +2219,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2279,13 +2264,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2324,13 +2309,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2369,13 +2354,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2414,13 +2399,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2459,13 +2444,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2504,13 +2489,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2549,13 +2534,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2594,13 +2579,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2639,13 +2624,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2684,13 +2669,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2729,13 +2714,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2774,13 +2759,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2819,13 +2804,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2864,13 +2849,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2909,13 +2894,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2954,13 +2939,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -2999,13 +2984,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3044,13 +3029,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3089,13 +3074,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3134,13 +3119,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3179,13 +3164,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3224,13 +3209,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3269,13 +3254,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3314,13 +3299,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3359,13 +3344,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3404,13 +3389,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3449,13 +3434,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3494,13 +3479,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3539,13 +3524,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3584,13 +3569,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3629,13 +3614,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3674,13 +3659,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3719,13 +3704,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3764,13 +3749,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3809,20 +3794,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "chrome",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-83"
@@ -3854,20 +3839,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-84"
@@ -3899,13 +3884,13 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
@@ -3944,20 +3929,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-86"
@@ -3989,20 +3974,20 @@
           "tcpNoDelay": true
         },
         "tlsSettings": {
-          "allowInsecure": false,
+          "allowInsecure": true,
           "fingerprint": "firefox",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "serverName": "RRFF.pagES.DEV"
+          "serverName": "RRFF.PAGES.Dev"
         },
         "wsSettings": {
           "headers": {
             "Host": "rr-ff.pages.dev",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
           },
-          "path": "/assets/images?ed=2560"
+          "path": "/api/v8?ed=2560"
         }
       },
       "tag": "prox-87"
