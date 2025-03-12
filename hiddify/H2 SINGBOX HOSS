@@ -56,9 +56,11 @@
       "type": "tun",
       "tag": "tun-in",
       "mtu": 9000,
-      "address": "172.19.0.1/30",
+      "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
-      "stack": "gvisor",
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -79,7 +81,8 @@
       "type": "selector",
       "tag": "proxy",
       "outbounds": ["auto", "direct", "hysteria"],
-      "default": "hysteria"
+      "default": "hysteria",
+      "interrupt_exist_connections": true
     },
     {
       "type": "urltest",
@@ -92,7 +95,7 @@
     {
       "type": "direct",
       "tag": "direct",
-      "domain_strategy": "ipv4_only"
+      "domain_strategy": "prefer_ipv4"
     },
     {
       "type": "hysteria2",
@@ -100,7 +103,7 @@
       "server": "keviny.iserver.store",
       "server_port": 8443,
       "domain_resolver": "local-dns",
-      "password": "@KevinZakarian",
+      "password": "@KevinZakarianA",
       "obfs": {
         "type": "salamander",
         "password": "@KevinZakarian"
@@ -176,6 +179,7 @@
       }
     ],
     "final": "proxy",
+    "override_android_vpn": true,
     "auto_detect_interface": true,
     "default_domain_resolver": "direct-dns"
   },
