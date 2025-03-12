@@ -9,13 +9,17 @@
         "type": "tcp",
         "tag": "proxy-dns",
         "detour": "proxy",
-        "server": "8.8.4.4"
+        "domain_resolver": "local-dns",
+        "server": "8.8.8.8",
+        "server_port": 53
       },
       {
         "type": "udp",
         "tag": "local-dns",
         "detour": "direct",
-        "server": "1.1.1.1"
+        "domain_resolver": "",
+        "server": "1.1.1.1",
+        "server_port": 53
       },
       {
         "type": "local",
@@ -25,34 +29,45 @@
     ],
     "rules": [
       {
-        "source_ip_cidr": "172.19.0.0/30",
-        "clash_mode": "Global",
-        "server": "proxy-dns"
-      },
-      {
-        "source_ip_cidr": "172.19.0.0/30",
-        "server": "proxy-dns"
+        "rule_set": "geosite-ir",
+        "server": "direct-dns"
       },
       {
         "clash_mode": "Direct",
         "server": "direct-dns"
       },
       {
-        "rule_set": "geosite-ir",
-        "server": "direct-dns"
+        "source_ip_cidr": [
+          "172.19.0.1/30",
+          "fdfe:dcba:9876::1/126"
+        ],
+        "server": "proxy-dns"
+      },
+      {
+        "clash_mode": "Global",
+        "server": "proxy-dns"
       }
     ],
-    "final": "direct-dns",
-    "strategy": "prefer_ipv4"
+    "final": "local-dns",
+    "strategy": "prefer_ipv4",
+    "independent_cache": true
   },
   "inbounds": [
     {
       "type": "tun",
       "tag": "tun-in",
       "mtu": 9000,
-      "address": "172.19.0.1/30",
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
       "auto_route": true,
-      "stack": "system",
+      "exclude_package": [
+        "ir.mci.ecareapp",
+        "com.myirancell"
+      ],
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -73,20 +88,21 @@
       "type": "selector",
       "tag": "proxy",
       "outbounds": ["auto", "direct", "shadowsocks"],
-      "default": "shadowsocks"
+      "default": "shadowsocks",
+      "interrupt_exist_connections": true
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": ["shadowsocks"],
       "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m",
+      "interval": "10m0s",
       "tolerance": 50
     },
     {
       "type": "direct",
       "tag": "direct",
-      "domain_strategy": "ipv4_only"
+      "domain_strategy": "prefer_ipv4"
     },
     {
       "type": "shadowsocks",
@@ -164,6 +180,20 @@
       }
     ],
     "final": "proxy",
-    "auto_detect_interface": true
+    "override_android_vpn": true,
+    "auto_detect_interface": true,
+    "default_domain_resolver": "direct-dns"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+      "external_ui_download_detour": "direct",
+      "default_mode": "rule"
+    }
   }
 }
