@@ -90,7 +90,6 @@ def toSingBox(tag, clean_ip, detour):
             wg = {
                 "type": "wireguard",
                 "tag": tag,
-                "name": "wg0",
                 "mtu": 1280,
                 "address": [
                     "172.16.0.2/32",
