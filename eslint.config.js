@@ -10,6 +10,7 @@ export default [
       'hiddify/**',
       '.github/**',
       'edge/waste/**',
+      '**/clash-12.**',
       'node_modules/**',
       'DNS over HTTPS/**',
       'package-lock.json',
