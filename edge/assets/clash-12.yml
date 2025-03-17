@@ -1,0 +1,593 @@
+#====Reference from clash-meta official document: wiki.metacubex.one=====
+
+
+
+# (Part 1) ============================== (clash configuration)
+
+# dns can be modified by yourself
+
+port: 7890
+
+socks-port: 7891
+
+allow-lan: true
+
+mode: rule
+
+log-level: warning
+
+unified-delay: true
+
+global-client-fingerprint: chrome  # The global TLS fingerprint has a lower priority than the client-fingerprint in the proxy.
+                                   # Currently supports TCP/grpc/WS/HTTP with TLS transmission, and supports protocols such as VLESS, Vmess and trojan.
+                                   # Optional: chrome, firefox, safari, iOS, android, edge, 360, qq, random, If selected random, a modern browser fingerprint is probabilistically generated based on Cloudflare Radar data.
+dns:
+
+  enable: true
+
+  listen: :53
+
+  ipv6: true
+
+  enhanced-mode: fake-ip
+
+  fake-ip-range: 198.18.0.1/16
+
+# lan-allowed-ips:               # The IP address range allowed to connect only applies to allow-lanThe true default value 0.0.0.0/0is and::/0
+#  - 0.0.0.0/0
+#  - ::/0
+
+# bind-address: "*"              # Bind all IP addresses
+# bind-address:
+#  - aaaa::a8aa:ff:fe09:57d8]    # Bind a single IPV6 address
+#  - 192.168.31.31               # Bind a single IPV4 address
+
+# authentication:                # http(s)// Proxy user socksauthenticationmixed
+#  - "user1:pass1"
+#  - "user2:pass2"
+
+# skip-auth-prefixes:            # Set the IP range that allows to skip verification
+#   - 127.0.0.1/8
+#   - ::1/128
+
+  keep-alive-interval: 15        # TCP Keep Alive packet interval, in seconds
+
+  keep-alive-idle: 15            # Maximum idle time for TCP Keep Alive
+
+  disable-keep-alive: false      # Disable-keep-alive: false
+
+  find-process-mode: strict      # Controls whether Clash should match the process, strictBy default, Clash determines whether to enable it.
+#                    off          Do not match the process. This mode is recommended for routers.
+#                    always       Enable, force matching of all processes
+  
+  
+  default-nameserver: 
+
+    - 223.5.5.5
+
+    - 8.8.4.4
+
+  nameserver:
+
+    - https://dns.alidns.com/dns-query
+
+    - https://1.1.1.1/dns-query
+
+  fallback:
+
+    - https://1.0.0.1/dns-query
+
+    - tls://1.1.1.1
+
+  fallback-filter:
+
+    geoip: true
+
+    geoip-code: IR
+
+    ipcidr:
+
+      - 240.0.0.0/4
+
+    external-controller: 127.0.0.1:9090          
+                       # API listening address, you can change 127.0.0.1 to 0.0.0.0 to listen to all IPs
+
+
+
+
+
+# (Part 2) ================================ (Configs)
+
+ # Currently 12 protocol node configuration templates, modify according to requirements, if a certain protocol node is not used, there is no need to delete it, just make sure that the node name does not exist in (Part 3)
+
+proxies:
+
+#==============1================（vless-reality-vision node）
+
+- name: vless-reality-vision node               #  Customizable Name
+
+  type: vless
+
+  server: for.forcedparadise.space              # The resolved domain name or IP
+
+  port: 101                                     # Custom port
+
+  uuid: bbab7aaf-f77c-480c-be00-276c35eeedd3 # Custom UUID
+
+  network: tcp
+
+  udp: true
+
+  tls: true
+
+  flow: xtls-rprx-vision
+
+  servername: google.com                       # Custom SNI
+
+  reality-opts: 
+
+    public-key: JHvkY6wjxkk6c7CUjVR63QumCQewWrvo2VebduKcqCA  # Custom public-key
+
+    short-id: b4c5fc07                         # Custom short-id
+
+  client-fingerprint: chrome                   # Custom browser fingerprinting
+
+
+
+#==============2================（vless-reality-grpc node）
+
+- name: vless-reality-grpc node               # Customizable Name
+
+  type: vless
+
+  server: for.forcedparadise.space            # The resolved domain name or IP
+
+  port: 102                                   # Custom port
+
+  uuid: 86934f59-255a-47f0-a495-38b4a7dc8a6c  # Custom UUID
+
+  network: grpc
+
+  tls: true
+
+  udp: true
+
+  flow:
+
+  client-fingerprint: chrome                  # Custom browser fingerprinting
+
+  servername: google.com                      # Custom SNI
+
+  grpc-opts:
+
+    grpc-service-name: "NiREvil"               # " "custom characters
+
+  reality-opts:
+
+    public-key: 7V6PMJXFEHWIl5pIOqqWLWnC5UYr48pn4a43rI98oQQ # Custom public-key
+
+    short-id: c76cc99e                        # Custom short-id
+
+
+
+#=============3=================（vless-ws-tls node）
+
+- name: vless-ws-tls node                     # Customizable Name
+
+  type: vless
+
+  server: 104.31.16.60                        # Resolved domain name or preferred domain name IP
+
+  port: 2083                                  # Custom port
+
+  uuid: 94ad16a0-1783-4b76-b04b-ac895c862c3d  # Custom  UUID
+
+  udp: true
+
+  tls: true
+
+  network: ws
+
+  servername: for.forcedparadise.space       # SNI domain name, consistent with the following host
+
+  ws-opts:
+
+    path: "/?ed=2048"                        # " "inner custom path
+
+    headers:
+
+      Host: for.forcedparadise.space         # Host domain name, consistent with the above servername
+
+
+
+#=============4=================（vless-ws node）
+
+- name: vless-ws node                        # Customizable Name
+
+  type: vless
+
+  server: for.forcedparadise.space           # Resolved domain name or preferred domain name IP
+
+  port: 103                                  # Custom port
+
+  uuid: fc05dc52-2be7-4667-92dd-8b536535395c # Costom  UUID
+
+  udp: true
+
+  tls: false
+
+  network: ws
+
+  servername: for.forcedparadise.space       # SNI domain name, consistent with the following host
+
+  ws-opts:
+
+    path: "/?ed=2048"                        # " "inner custom path
+
+    headers:
+
+      Host: for.forcedparadise.space         # Host domain name, consistent with the above servername
+
+
+
+#===============5===============（vmess-ws-tls node）
+
+- name: vmess-ws-tls node                    # Customizable Name
+
+  type: vmess
+
+  server: 104.31.16.60                       # Rsolved domain name or preferred domain name IP
+
+  port: 8443                                 # Custom port
+
+  uuid: 88d8e461-1a60-4707-81bc-18621a250981 # Custom  UUID
+
+  alterId: 0
+
+  cipher: auto
+
+  udp: true
+
+  tls: true
+
+  network: ws
+
+  servername: for.forcedparadise.space       # SNI domain name, consistent with the following host
+
+  ws-opts:
+
+    path: "/?ed=2048"                        # Custom path
+
+    headers:
+
+      Host: for.forcedparadise.space         # Host domain name, consistent with the above servername
+
+
+
+#=============6=================（vmess-ws node）
+
+- name: vmess-ws node                        # Customizable Name
+
+  type: vmess
+
+  server: for.forcedparadise.space           # Rsolved domain name or preferred domain name IP
+
+  port: 104                                  # Custom port
+
+  uuid: f3aa6a3f-dfef-3a92-8a0b-a3229625dc23 # Custom  UUID
+
+  alterId: 0
+
+  cipher: auto
+
+  udp: true
+
+  tls: false
+
+  network: ws
+
+  servername: for.forcedparadise.space       # SNI domain name, consistent with the following host
+
+  ws-opts:
+
+    path: "/?ed=2048"                        # " "inner custom path
+
+    headers:
+
+      Host: for.forcedparadise.space         # Host domain name, consistent with the above servername
+
+
+
+#=============7=================（trojan-tcp-tls node）
+
+- name: trojan-tcp-tls node                  # Customizable Name
+
+  type: trojan
+
+  server: for.forcedparadise.space           # Rsolved domain name
+
+  port: 443                                  # Custom port
+
+  password: x9yz70zXEm                       # Custom password
+
+  client-fingerprint: chrome
+
+  udp: true
+
+  sni: for.forcedparadise.space              # SNI domain name, consistent with the above server address
+
+  alpn:
+
+    - h2
+
+    - http/1.1
+
+  skip-cert-verify: true
+
+    
+
+#==============8================（hysteria certificate node)
+
+- name: hysteria certificate node            # Customizable Name
+
+  type: hysteria
+
+  server: for.forcedparadise.space           # Rsolved domain name
+
+  port: 105                                  # Custom port, change multiple ports to ports: space 1000,2000-3000
+
+  auth-str: 126456                           # Custom password
+
+  alpn:
+
+    - h3
+
+  protocol: udp                              # Custom protocol: udp/wechat-video/faketcp
+
+  up: 50                                     # Custom upload limit
+
+  down: 200                                  # Custom Download Limits
+
+  sni: for.forcedparadise.space              # SNI domain name, consistent with the above server address  
+
+  skip-cert-verify: false
+
+  fast-open: true
+
+    
+
+#=============9=================（hysteria self signed node）
+
+- name: hysteria self signed node            # Customizable Name
+
+  type: hysteria
+
+  server: 91.107.23.17                       # Server local IP
+
+  port: 106                                  # Custom port
+
+  auth-str: 12345                            # Custom password
+
+  alpn:
+
+    - h3
+
+  protocol: udp                              # Custom protocol: udp/wechat-video/faketcp
+
+  up: 40                                     # Custom upload limit
+
+  down: 100                                  # Custom Download Limits
+
+  sni: www.bing.com                                
+
+  skip-cert-verify: true
+
+  fast-open: true
+
+    
+
+#==============10================（tuic-V5 node）
+
+- name: tuic-V5 node                         # Customizable Name
+
+  server: tuic.forcedparadise.space          # The resolved domain name or IP
+
+  port: 107                                  # Custom port
+
+  type: tuic
+
+  uuid: d0c12467-506f-49b2-8481-93afc89cfe0f  # Custom  UUID
+
+  password: 12345                             # Custom password
+
+  alpn: ["h3", "spdy/3.1"]
+
+  disable-sni: true
+
+  reduce-rtt: true
+
+  udp-relay-mode: native
+
+  congestion-controller: bbr
+
+
+
+#==============11================（tuic-V5 node IP V6）
+
+- name: tuic-V5 node V6                       # Customizable Name
+
+  server: 2a01:4f8:1c1b:c14::1                # The resolved domain name or IPV6
+
+  port: 108                                   # Custom port
+
+  type: tuic
+
+  uuid: d0c22467-516f-42b2-8781-93afc89cfe0f  # Custom  UUID
+
+  password: 12345                             # Custom password
+
+  alpn: ["h3", "spdy/3.1"]
+
+  disable-sni: true
+
+  reduce-rtt: true
+
+  udp-relay-mode: native
+
+  congestion-controller: bbr
+
+#===============12===============（warp-wireguard node）  
+
+- name: warp-wireguard node                                    # Customizable Name
+
+  type: wireguard         
+
+  server: 162.159.193.10                                       # You can  Customize the preferred peer IP, which corresponds to the port below
+
+  port: 2408                                                   # You can  Customize the preferred peer IP, which corresponds to the IP of the server above
+
+  ip: 172.16.0.2
+
+  ipv6: 2606:4700:190:814e:7de3:5ddb:9d3e:9359                 # Corresponding to private-key, if you delete this line, it means only IPV4
+
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+
+  private-key: gK3C8ijdVlT7sd5fsdf5ssdfgsdfgsdfgobT2U+rgHo=    # Get private-key
+
+  udp: true
+
+
+
+
+
+
+
+#(part 3) ================================ (Proxy Group Configuration)
+
+ #The diversion group can be created and added by itself. The name node name under the proxies parameter can be increased or decreased according to the needs to ensure that the name node name that appears can be found in the proxy agreement of the (Part 2)
+
+proxy-groups:
+
+- name: ⚪Load balancing
+
+  type: load-balance
+
+  url: http://www.gstatic.com/generate_204
+
+  interval: 300
+
+  proxies:
+
+    - vless-reality-vision node                                    
+
+    - vless-reality-grpc node
+
+    - vless-ws-tls node
+
+    - vless-ws node
+
+    - vmess-ws-tls node
+
+    - vmess-ws node
+
+    - trojan-tcp-tls node
+
+    - hysteria certificate node
+
+    - hysteria self signed node
+
+    - tuic-V5 node
+
+    - tuic-V5 node V6
+
+    - warp-wireguard node
+
+
+
+- name: 🔴Auto
+
+  type: url-test
+
+  url: http://www.gstatic.com/generate_204
+
+  interval: 300
+
+  tolerance: 50
+
+  proxies:
+
+    - vless-reality-vision node                                    
+
+    - vless-reality-grpc node
+
+    - vless-ws-tls node
+
+    - vless-ws node
+
+    - vmess-ws-tls node
+
+    - vmess-ws node
+
+    - trojan-tcp-tls node
+
+    - hysteria certificate node
+
+    - hysteria self signed node
+
+    - tuic-V5 node
+
+    - tuic-V5 node V6
+
+    - warp-wireguard node
+
+    
+
+- name: 🌍All proxy
+
+  type: select
+
+  proxies:
+
+    - ⚪Load balancing                                   # Customize the name field of the added protocol
+
+    - 🔴Auto
+
+    - DIRECT
+
+    - vless-reality-vision node                                    
+
+    - vless-reality-grpc node
+
+    - vless-ws-tls node
+
+    - vless-ws node
+
+    - vmess-ws-tls node
+
+    - vmess-ws node
+
+    - trojan-tcp-tls node
+
+    - hysteria certificate node
+
+    - hysteria self signed node
+
+    - tuic-V5 node
+
+    - tuic-V5 node V6
+
+    - warp-wireguard node
+
+
+
+
+
+#（Part 4) ================================ (Rules)
+
+# Proxy rules can be added by themselves
+
+rules:
+
+  - GEOIP,IR,DIRECT
+
+  - MATCH,🌍All proxy
