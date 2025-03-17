@@ -82,7 +82,6 @@
       "tag": "proxy",
       "outbounds": ["auto", "direct", "hysteria"],
       "default": "hysteria",
-      "interval": "10m",
       "interrupt_exist_connections": true
     },
     {
@@ -90,6 +89,7 @@
       "tag": "auto",
       "outbounds": ["hysteria"],
       "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
       "tolerance": 50
     },
     {
