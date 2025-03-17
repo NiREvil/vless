@@ -58,9 +58,9 @@
       "mtu": 9000,
       "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
-      "strict_route": true,
-      "endpoint_independent_nat": true,
-      "stack": "mixed",
+      "strict_route": false,
+      "endpoint_independent_nat": false,
+      "stack": "system",
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -82,6 +82,7 @@
       "tag": "proxy",
       "outbounds": ["auto", "direct", "hysteria"],
       "default": "hysteria",
+      "interval": "10m",
       "interrupt_exist_connections": true
     },
     {
@@ -89,7 +90,6 @@
       "tag": "auto",
       "outbounds": ["hysteria"],
       "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m",
       "tolerance": 50
     },
     {
@@ -105,8 +105,8 @@
       "domain_resolver": "local-dns",
       "password": "@KevinZakarianA",
       "obfs": {
-        "type": "salamander",
-        "password": "@KevinZakarian"
+        "password": "@KevinZakarian",
+        "type": "salamander"
       },
       "tls": {
         "enabled": true,
