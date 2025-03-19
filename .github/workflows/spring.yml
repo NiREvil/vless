@@ -16,7 +16,7 @@ jobs:
     timeout-minutes: 15
     strategy:
       matrix:
-        python-version: ['3.x']
+        python-version: ['3.12']
 
     steps:
       - name: Checkout repository
@@ -29,16 +29,16 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}  # استفاده از نسخه‌های ماتریکس
+          python-version: ${{ matrix.python-version }} 
           architecture: x64
 
-      - name: Cache pip dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('edge/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-${{ matrix.python-version }}-
+#      - name: Cache pip dependencies
+#        uses: actions/cache@v3
+#        with:
+#          path: ~/.cache/pip
+#          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('edge/requirements.txt') }}
+#          restore-keys: |
+#            ${{ runner.os }}-pip-${{ matrix.python-version }}-
 
       - name: Install dependencies
         run: |
