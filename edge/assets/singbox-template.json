@@ -58,7 +58,7 @@
       "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
       "exclude_package": ["ir.mci.ecareapp", "com.myirancell"],
-      "endpoint_independent_nat": true,
+      "endpoint_independent_nat": false,
       "stack": "mixed",
       "platform": {
         "http_proxy": {
@@ -81,14 +81,13 @@
       "tag": "proxy",
       "outbounds": ["auto", "direct"],
       "default": "🟡Berlin",
-      "interrupt_exist_connections": true
+      "interrupt_exist_connections": false
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [],
       "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m0s",
       "tolerance": 50
     },
     {
