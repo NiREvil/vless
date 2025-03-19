@@ -17,6 +17,7 @@ jobs:
     strategy:
       matrix:
         python-version: ['3.12']
+        dummy: ['single']
 
     steps:
       - name: Checkout repository
@@ -32,13 +33,13 @@ jobs:
           python-version: ${{ matrix.python-version }} 
           architecture: x64
 
-#      - name: Cache pip dependencies
-#        uses: actions/cache@v3
-#        with:
-#          path: ~/.cache/pip
-#          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('edge/requirements.txt') }}
-#          restore-keys: |
-#            ${{ runner.os }}-pip-${{ matrix.python-version }}-
+      - name: Cache pip dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('edge/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-${{ matrix.python-version }}-
 
       - name: Install dependencies
         run: |
@@ -64,3 +65,4 @@ jobs:
                 commit --amend --no-edit
           )
           git push
+          
