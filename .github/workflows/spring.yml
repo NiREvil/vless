@@ -16,12 +16,10 @@ jobs:
     timeout-minutes: 15
     strategy:
       matrix:
-        python-version: ['3.12']
         dummy: ['single']
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           submodules: 'recursive'
@@ -30,7 +28,8 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }} 
+          python-version: '3.12'
+          cache: pip
           architecture: x64
 
       - name: Cache Python packages
@@ -46,9 +45,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r edge/requirements.txt || exit 1
 
-      - name: Run python
+      - name: Install dependencies
         run: |
-          python edge/spring.py >> log.txt 2>&1 || (cat log.txt && exit 1)
+          python -m pip install --upgrade pip
+          pip install -r edge/requirements.txt || exit 1
 
       - name: Commit and push if changed
         run: |
