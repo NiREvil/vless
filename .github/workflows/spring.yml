@@ -33,22 +33,18 @@ jobs:
           python-version: ${{ matrix.python-version }} 
           architecture: x64
 
-      - name: Cache pip dependencies
-        uses: actions/cache@v3
+      - name: Cache Python packages
+        uses: actions/cache@v4
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('edge/requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
-            ${{ runner.os }}-pip-${{ matrix.python-version }}-
+            ${{ runner.os }}-pip-
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f edge/requirements.txt ]; then
-            pip install -r edge/requirements.txt
-          else
-            echo "requirements.txt not found, skipping dependency installation"
-          fi
+          pip install -r edge/requirements.txt || exit 1
 
       - name: Run python
         run: |
