@@ -16,10 +16,11 @@ jobs:
     timeout-minutes: 15
     strategy:
       matrix:
-        dummy: ['single']
+        python-version: ['3.12']
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           submodules: 'recursive'
@@ -28,27 +29,29 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
-          cache: pip
+          python-version: ${{ matrix.python-version }}
           architecture: x64
 
-      - name: Cache Python packages
-        uses: actions/cache@v4
+      - name: Cache pip dependencies
+        uses: actions/cache@v3
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('edge/requirements.txt') }}
           restore-keys: |
-            ${{ runner.os }}-pip-
+            ${{ runner.os }}-pip-${{ matrix.python-version }}-
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r edge/requirements.txt || exit 1
+          if [ -f edge/requirements.txt ]; then
+            pip install -r edge/requirements.txt
+          else
+            echo "requirements.txt not found, skipping dependency installation"
+          fi
 
-      - name: Install dependencies
+      - name: Run python
         run: |
-          python -m pip install --upgrade pip
-          pip install -r edge/requirements.txt || exit 1
+          python edge/spring.py >> log.txt 2>&1 || (cat log.txt && exit 1)
 
       - name: Commit and push if changed
         run: |
@@ -61,4 +64,3 @@ jobs:
                 commit --amend --no-edit
           )
           git push
-          
