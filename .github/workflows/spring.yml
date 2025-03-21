@@ -33,17 +33,11 @@ jobs:
           python-version: ${{ matrix.python-version }}
           architecture: x64
 
-      - name: Remove cache directory (if exists)
-        run: |
-          if [ -d ~/.cache/pip ]; then
-            rm -rf ~/.cache/pip
-          fi
-
       - name: Cache pip dependencies
         uses: actions/cache@v3
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('edge/requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('edge/requirements.txt') }}-${{ github.run_id }}
           restore-keys: |
             ${{ runner.os }}-pip-${{ matrix.python-version }}-
 
@@ -59,6 +53,12 @@ jobs:
       - name: Run python
         run: |
           python edge/spring.py >> log.txt 2>&1 || (cat log.txt && exit 1)
+
+      - name: Upload log file
+        uses: actions/upload-artifact@v3
+        with:
+          name: execution-log
+          path: edge/assets/logs/spring.txt    
 
       - name: Commit and push if changed
         run: |
