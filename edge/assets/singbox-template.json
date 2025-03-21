@@ -10,16 +10,13 @@
         "tag": "proxy-dns",
         "detour": "proxy",
         "domain_resolver": "local-dns",
-        "server": "185.228.168.9",
-        "server_port": 53
+        "server": "185.228.168.9"
       },
       {
         "type": "tcp",
         "tag": "local-dns",
         "detour": "direct",
-        "domain_resolver": "",
-        "server": "8.8.4.4",
-        "server_port": 53
+        "server": "8.8.4.4"
       },
       {
         "type": "local",
@@ -46,8 +43,7 @@
       }
     ],
     "final": "proxy-dns",
-    "strategy": "prefer_ipv4",
-    "independent_cache": true
+    "strategy": "prefer_ipv4"
   },
   "endpoints": [],
   "inbounds": [
@@ -57,8 +53,6 @@
       "mtu": 9000,
       "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
-      "exclude_package": ["ir.mci.ecareapp", "com.myirancell"],
-      "endpoint_independent_nat": false,
       "stack": "mixed",
       "platform": {
         "http_proxy": {
@@ -87,7 +81,6 @@
       "tag": "auto",
       "outbounds": [],
       "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m0s",
       "tolerance": 50
     },
     {
