@@ -55,10 +55,10 @@ jobs:
           python edge/spring.py >> log.txt 2>&1 || (cat log.txt && exit 1)
 
       - name: Upload log file
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: execution-log
-          path: edge/assets/logs/spring.txt    
+          name: spring-execution-log
+          path: edge/assets/logs/log.txt    
 
       - name: Commit and push if changed
         run: |
