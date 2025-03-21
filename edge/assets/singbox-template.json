@@ -6,11 +6,11 @@
   "dns": {
     "servers": [
       {
-        "type": "tls",
+        "type": "tcp",
         "tag": "proxy-dns",
         "detour": "proxy",
         "domain_resolver": "local-dns",
-        "server": "8.8.8.8",
+        "server": "185.228.168.9",
         "server_port": 53
       },
       {
@@ -46,7 +46,8 @@
       }
     ],
     "final": "proxy-dns",
-    "strategy": "prefer_ipv4"
+    "strategy": "prefer_ipv4",
+    "independent_cache": true
   },
   "endpoints": [],
   "inbounds": [
@@ -86,6 +87,7 @@
       "tag": "auto",
       "outbounds": [],
       "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m0s",
       "tolerance": 50
     },
     {
@@ -159,6 +161,7 @@
       }
     ],
     "final": "proxy",
+    "override_android_vpn": true,
     "auto_detect_interface": true,
     "default_domain_resolver": "direct-dns"
   },
