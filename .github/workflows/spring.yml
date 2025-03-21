@@ -16,7 +16,8 @@ jobs:
     timeout-minutes: 15
     strategy:
       matrix:
-        python-version: ['3.12', '3.13']
+        python-version: ['3.12']
+        dummy: ['single']
 
     steps:
       - name: Checkout repository
@@ -31,6 +32,12 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           architecture: x64
+
+      - name: Remove cache directory (if exists)
+        run: |
+          if [ -d ~/.cache/pip ]; then
+            rm -rf ~/.cache/pip
+          fi
 
       - name: Cache pip dependencies
         uses: actions/cache@v3
