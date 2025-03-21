@@ -14,9 +14,6 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
-    strategy:
-      matrix:
-        python-version: ['3.12']
 
     steps:
       - name: Checkout repository
@@ -29,16 +26,16 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: '3.12'
           architecture: x64
 
       - name: Cache pip dependencies
         uses: actions/cache@v3
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('edge/requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('edge/requirements.txt') }}
           restore-keys: |
-            ${{ runner.os }}-pip-${{ matrix.python-version }}-
+            ${{ runner.os }}-pip-
 
       - name: Install dependencies
         run: |
@@ -64,3 +61,4 @@ jobs:
                 commit --amend --no-edit
           )
           git push
+          
