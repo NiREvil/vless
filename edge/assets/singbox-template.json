@@ -10,13 +10,16 @@
         "tag": "proxy-dns",
         "detour": "proxy",
         "domain_resolver": "local-dns",
-        "server": "185.228.168.9"
+        "server": "185.228.168.9",
+        "server_port": 53
       },
       {
         "type": "tcp",
         "tag": "local-dns",
         "detour": "direct",
-        "server": "8.8.4.4"
+        "domain_resolver": "",
+        "server": "8.8.4.4",
+        "server_port": 53
       },
       {
         "type": "local",
@@ -43,7 +46,8 @@
       }
     ],
     "final": "proxy-dns",
-    "strategy": "prefer_ipv4"
+    "strategy": "prefer_ipv4",
+    "independent_cache": true
   },
   "endpoints": [],
   "inbounds": [
@@ -53,6 +57,7 @@
       "mtu": 9000,
       "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
+      "endpoint_independent_nat": false,
       "stack": "mixed",
       "platform": {
         "http_proxy": {
@@ -81,6 +86,7 @@
       "tag": "auto",
       "outbounds": [],
       "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m0s",
       "tolerance": 50
     },
     {
