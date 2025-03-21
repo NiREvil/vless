@@ -6,6 +6,7 @@ import logging
 import os
 import platform
 import subprocess
+import sys
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -17,7 +18,6 @@ GERMANY_SYMBOL = "🟡"
 IR_TAG = f"{IRAN_SYMBOL}Tehran"
 DE_TAG = f"{GERMANY_SYMBOL}Berlin"
 
-warp_cidr = [
     "162.159.192.0/24",
     "162.159.193.0/24",
     "162.159.195.0/24",
@@ -169,6 +169,12 @@ def main():
         warp_executable = os.path.join(edge_directory, "warp")
         subprocess.run(["wget", url, "-O", warp_executable], check=True)
         os.chmod(warp_executable, 0o755)
+        
+        if sys.platform == "win32":
+            subprocess.run(["curl", "-o", warp_executable, url], check=True)
+        else:
+            subprocess.run(["wget", "-O", warp_executable, url], check=True)
+
 
         logging.info("Scanning IPs...")
         subprocess.run(
@@ -222,8 +228,10 @@ def main():
 
     except subprocess.CalledProcessError as e:
         logging.error(f"Error executing command: {e}")
+        sys.exit(1)
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")
+        sys.exit(1)
     finally:
         for temp_file in [edge_bestip_path, warp_executable, edge_result_path]:
             if os.path.exists(temp_file):
@@ -232,3 +240,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
