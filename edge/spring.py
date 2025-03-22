@@ -39,6 +39,7 @@ edge_result_path = os.path.join(edge_directory, "Endpoints.csv")
 main_singbox_path = os.path.join(main_directory, "sing-box.json")
 main_warp_path = os.path.join(main_directory, "warp.json")
 
+
 # Function to create list of IP addresses
 def create_ips():
     logging.info("Creating Bestip.txt file...")
@@ -47,6 +48,7 @@ def create_ips():
             for addr in ipaddress.IPv4Network(cidr):
                 file.write(f"{addr}\n")
     logging.info("Bestip.txt file created successfully!")
+
 
 # Function to determine architecture suffix
 def arch_suffix():
@@ -64,11 +66,13 @@ def arch_suffix():
             "Unsupported CPU architecture. Supported architectures are: i386, i686, x86_64, amd64, armv8, arm64, aarch64, s390x"
         )
 
+
 # Function to generate Hiddify config
 def export_Hiddify(t_ips):
     config_prefix = f"warp://{t_ips[0]}?ifp=1-3&ifpm=m4#{IR_TAG}&&detour=warp://{t_ips[1]}?ifp=1-2&ifpm=m5#{DE_TAG}"
     formatted_time = datetime.datetime.now().strftime("%A, %d %b %Y, %H:%M")
     return config_prefix, formatted_time
+
 
 # Function to generate Sing-box config
 def toSingBox(tag, clean_ip, detour):
@@ -120,6 +124,7 @@ def toSingBox(tag, clean_ip, detour):
         logging.error("Error: Command execution failed or produced no output.")
         return None
 
+
 # Function to export Sing-box config
 def export_SingBox(t_ips):
     template_path = os.path.join(edge_directory, "assets", "singbox-template.json")
@@ -146,6 +151,7 @@ def export_SingBox(t_ips):
     with open(main_singbox_path, "w") as f:
         json.dump(data, f, indent=2)
 
+
 # Main function
 def main():
     try:
@@ -164,7 +170,7 @@ def main():
         warp_executable = os.path.join(edge_directory, "warp")
         subprocess.run(["wget", url, "-O", warp_executable], check=True)
         os.chmod(warp_executable, 0o755)
-        
+
         if sys.platform == "win32":
             subprocess.run(["curl", "-o", warp_executable, url], check=True)
         else:
@@ -230,6 +236,7 @@ def main():
         for temp_file in [edge_bestip_path, warp_executable, edge_result_path]:
             if os.path.exists(temp_file):
                 os.remove(temp_file)
+
 
 if __name__ == "__main__":
     main()
