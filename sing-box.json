@@ -37,7 +37,10 @@
         "server": "direct-dns"
       },
       {
-        "source_ip_cidr": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
+        "source_ip_cidr": [
+          "172.19.0.1/30",
+          "fdfe:dcba:9876::1/126"
+        ],
         "server": "proxy-dns"
       },
       {
@@ -53,17 +56,28 @@
     {
       "type": "wireguard",
       "tag": "\u26aa\ufe0fTehran",
+      "name": "wg0",
       "mtu": 1280,
-      "address": ["172.16.0.2/32", "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"],
-      "private_key": "CH7wlLEfREV1gITf7vMWsvhKxRPcfdY5c4CsMJKdjlo=",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
+      ],
+      "private_key": "mM3VzFdF2nngTagA+KuW4c+6XKwFmw7nxggaF9hbXWs=",
       "peers": [
         {
           "address": "188.114.96.214",
           "port": 8854,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "allowed_ips": ["0.0.0.0/0", "::/0"],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
           "persistent_keepalive_interval": 30,
-          "reserved": [222, 102, 89]
+          "reserved": [
+            13,
+            125,
+            59
+          ]
         }
       ],
       "detour": "direct",
@@ -72,17 +86,28 @@
     {
       "type": "wireguard",
       "tag": "\ud83d\udfe1Berlin",
+      "name": "wg0",
       "mtu": 1280,
-      "address": ["172.16.0.2/32", "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"],
-      "private_key": "UIRzR3RdliiHKeu/YT9SCilUv/0jOV5YUFl5mQVK1mA=",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
+      ],
+      "private_key": "CGs3PgesLSFlTjsB1g8FxE9RHgnycsiDa3M95ShxzmY=",
       "peers": [
         {
           "address": "188.114.99.22",
           "port": 4233,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "allowed_ips": ["0.0.0.0/0", "::/0"],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
           "persistent_keepalive_interval": 30,
-          "reserved": [70, 189, 82]
+          "reserved": [
+            234,
+            175,
+            121
+          ]
         }
       ],
       "detour": "\u26aa\ufe0fTehran",
@@ -94,10 +119,12 @@
       "type": "tun",
       "tag": "tun-in",
       "mtu": 9000,
-      "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
       "auto_route": true,
-      "exclude_package": ["ir.mci.ecareapp", "com.myirancell"],
-      "endpoint_independent_nat": true,
+      "endpoint_independent_nat": false,
       "stack": "mixed",
       "platform": {
         "http_proxy": {
@@ -118,14 +145,21 @@
     {
       "type": "selector",
       "tag": "proxy",
-      "outbounds": ["auto", "direct", "\u26aa\ufe0fTehran", "\ud83d\udfe1Berlin"],
-      "default": "\ud83d\udfe1Berlin",
-      "interrupt_exist_connections": true
+      "outbounds": [
+        "auto",
+        "direct",
+        "\u26aa\ufe0fTehran",
+        "\ud83d\udfe1Berlin"
+      ],
+      "default": "\ud83d\udfe1Berlin"
     },
     {
       "type": "urltest",
       "tag": "auto",
-      "outbounds": ["\u26aa\ufe0fTehran", "\ud83d\udfe1Berlin"],
+      "outbounds": [
+        "\u26aa\ufe0fTehran",
+        "\ud83d\udfe1Berlin"
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m0s",
       "tolerance": 50
@@ -155,7 +189,12 @@
         "outbound": "proxy"
       },
       {
-        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"],
+        "rule_set": [
+          "geoip-private",
+          "geosite-private",
+          "geosite-ir",
+          "geoip-ir"
+        ],
         "outbound": "direct"
       },
       {
