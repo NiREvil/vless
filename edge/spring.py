@@ -151,7 +151,6 @@ def export_SingBox(t_ips):
     with open(main_singbox_path, "w") as f:
         json.dump(data, f, indent=2)
 
-
 # Main function
 def main():
     try:
@@ -177,13 +176,14 @@ def main():
             subprocess.run(["wget", "-O", warp_executable, url], check=True)
 
         logging.info("Scanning IPs...")
-        subprocess.run(
+        result = subprocess.run(
             [warp_executable],
             check=True,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
+            capture_output=True,
+            text=True
         )
         logging.info("Warp executed successfully.")
+        logging.info(f"Warp output: {result.stdout}")
 
         if not os.path.exists(edge_result_path):
             raise FileNotFoundError(
@@ -192,7 +192,7 @@ def main():
 
         Bestip = []
         with open(edge_result_path, "r") as csv_file:
-            next(csv_file)  # Skip header
+            next(csv_file) 
             for line in csv_file:
                 Bestip.append(line.split(",")[0])
                 if len(Bestip) == 2:
@@ -236,7 +236,6 @@ def main():
         for temp_file in [edge_bestip_path, warp_executable, edge_result_path]:
             if os.path.exists(temp_file):
                 os.remove(temp_file)
-
 
 if __name__ == "__main__":
     main()
