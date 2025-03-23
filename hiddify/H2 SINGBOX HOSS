@@ -2,7 +2,7 @@
 //profile-update-interval: 4
 //subscription-userinfo: upload=64424500944; download=45097156608; total=1073741824000; expire=1762646400
 //support-url: https://t.me/F_NiREvil
-//profile-web-page-url: https://github.com/NiREvil
+//profile-web-page-url: https://github.com/NiREvil/vless
 
 {
   "log": {
@@ -58,7 +58,7 @@
       "mtu": 9000,
       "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
-      "strict_route": false,
+      "strict_route": true,
       "endpoint_independent_nat": false,
       "stack": "system",
       "platform": {
@@ -82,7 +82,7 @@
       "tag": "proxy",
       "outbounds": ["auto", "direct", "hysteria"],
       "default": "hysteria",
-      "interrupt_exist_connections": true
+      "interrupt_exist_connections": false
     },
     {
       "type": "urltest",
@@ -103,7 +103,7 @@
       "server": "keviny.iserver.store",
       "server_port": 8443,
       "domain_resolver": "local-dns",
-      "password": "@KevinZakarianA",
+      "password": "@KevinZakarian1",
       "obfs": {
         "password": "@KevinZakarian",
         "type": "salamander"
