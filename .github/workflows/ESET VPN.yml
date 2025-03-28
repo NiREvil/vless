@@ -1,0 +1,156 @@
+name: ESET Key Generator
+
+on:
+  workflow_dispatch:
+    inputs:
+      account:
+        description: 'Number of Accounts to be generated (default = 0)'
+        required: false
+        default: '0'
+      key:
+        description: 'Number of Keys to be generated (default = 1)'
+        required: false
+        default: '1'
+      mail:
+        description: 'Choose the mail provider to generate license'
+        required: true
+        type: choice
+        options:
+        - 1secmail
+        - guerrillamail
+        - developermail
+        - mailticking
+        - fakemail
+        - inboxes
+        - incognitomail
+        default: fakemail
+      key_type:
+        description: 'Modes of operation'
+        required: true
+        type: choice
+        options:
+        - --key
+        - --small-business-key
+        - --vpn-codes
+        default: --key
+      os:
+        description: 'Operating System of runner'
+        required: true
+        type: choice
+        options:
+        - macOS
+        - Linux
+        - Windows
+        default: Linux
+jobs:
+  Linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate key
+        if: github.event.inputs.os == 'Linux'
+        run: |
+          ACCOUNT=${{ github.event.inputs.account }}
+          KEY=${{ github.event.inputs.key }}
+          MAIL=${{ github.event.inputs.mail }}
+          KEY_TYPE=${{ github.event.inputs.key_type }}
+          BRANCH=${{ github.event.inputs.branch }}
+
+          git clone -b ${BRANCH} https://github.com/Diana-Cl/Key-Gen.git
+          cd Key-Gen
+          
+          # Setup env
+          sudo apt update
+          sudo apt install -y python3-pip python3-venv
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+          
+          
+          if [[ ${ACCOUNT} -ne 0 && ${KEY} -ne 0 ]]; then
+            python3 main.py --auto-detect-browser --account --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${ACCOUNT}
+            python3 main.py --auto-detect-browser ${KEY_TYPE} --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${KEY}
+            echo "Account:" >> $GITHUB_STEP_SUMMARY
+            cat ./*ACCOUNTS.txt >> $GITHUB_STEP_SUMMARY
+            echo -e "\nKey:" >> $GITHUB_STEP_SUMMARY
+            cat ./*KEYS.txt >> $GITHUB_STEP_SUMMARY
+          elif [[ ${ACCOUNT} -ne 0 ]]; then
+            python3 main.py --auto-detect-browser --account --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${ACCOUNT}
+            echo -e "\nAccount:" >> $GITHUB_STEP_SUMMARY
+            cat ./*ACCOUNTS.txt >> $GITHUB_STEP_SUMMARY
+          elif [[ ${KEY} -ne 0 ]]; then
+            python3 main.py --auto-detect-browser ${KEY_TYPE} --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${KEY}
+            echo -e "\nKey:" >> $GITHUB_STEP_SUMMARY
+            cat ./*KEYS.txt >> $GITHUB_STEP_SUMMARY
+          fi
+  macOS:
+    runs-on: macos-latest
+    steps:
+      - name: Generate key
+        if: github.event.inputs.os == 'macOS'
+        run: |
+          ACCOUNT=${{ github.event.inputs.account }}
+          KEY=${{ github.event.inputs.key }}
+          MAIL=${{ github.event.inputs.mail }}
+          KEY_TYPE=${{ github.event.inputs.key_type }}
+
+          git clone https://github.com/Diana-Cl/Key-Gen.git
+          cd Key-Gen
+          
+          # Setup env
+          brew install python
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+
+          if [[ ${ACCOUNT} -ne 0 && ${KEY} -ne 0 ]]; then
+            python3 main.py --auto-detect-browser --account --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${ACCOUNT}
+            python3 main.py --auto-detect-browser ${KEY_TYPE} --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${KEY}
+            echo "Account:" >> $GITHUB_STEP_SUMMARY
+            cat ./*ACCOUNTS.txt >> $GITHUB_STEP_SUMMARY
+            echo -e "\nKey:" >> $GITHUB_STEP_SUMMARY
+            cat ./*KEYS.txt >> $GITHUB_STEP_SUMMARY
+          elif [[ ${ACCOUNT} -ne 0 ]]; then
+            python3 main.py --auto-detect-browser --account --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${ACCOUNT}
+            echo -e "\nAccount:" >> $GITHUB_STEP_SUMMARY
+            cat ./*ACCOUNTS.txt >> $GITHUB_STEP_SUMMARY
+          elif [[ ${KEY} -ne 0 ]]; then
+            python3 main.py --auto-detect-browser ${KEY_TYPE} --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${KEY}
+            echo -e "\nKey:" >> $GITHUB_STEP_SUMMARY
+            cat ./*KEYS.txt >> $GITHUB_STEP_SUMMARY
+          fi
+  Windows:
+    runs-on: windows-latest
+    steps:
+      - name: Generate key
+        if: github.event.inputs.os == 'Windows'
+        run: |
+          $ACCOUNT="${{ github.event.inputs.account }}"
+          $KEY="${{ github.event.inputs.key }}"
+          $MAIL="${{ github.event.inputs.mail }}"
+          $KEY_TYPE="${{ github.event.inputs.key_type }}"
+
+          git clone https://github.com/Diana-Cl/Key-Gen.git
+          cd Key-Gen
+
+          # Setup dependencies
+          pip install -r requirements.txt
+
+          if ($ACCOUNT -ne 0 -and $KEY -ne 0) {
+              python3 main.py --auto-detect-browser --account --email-api $MAIL --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat $ACCOUNT
+              python3 main.py --auto-detect-browser $KEY_TYPE --email-api $MAIL --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat $KEY
+              echo "Account:" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+              Get-Content -Path ./*ACCOUNTS.txt | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+              echo "`nKey:" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+              Get-Content -Path ./*KEYS.txt | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+          }
+          elseif ($ACCOUNT -ne 0) {
+              python3 main.py --auto-detect-browser --account --email-api $MAIL --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat $ACCOUNT
+              echo "`nAccount:" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+              Get-Content -Path ./*ACCOUNTS.txt | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+          }
+          elseif ($KEY -ne 0) {
+              python3 main.py --auto-detect-browser $KEY_TYPE --email-api $MAIL --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat $KEY
+              echo "`nKey:" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+              Get-Content -Path ./*KEYS.txt | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+          }
+          
