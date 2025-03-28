@@ -64,9 +64,9 @@ $$\color{gray}\Huge \mathfrak{R}\color{red}{\sum}\color{gray}{\nu\iota\mathcal{l
 
 ##
 
-### ESET Codes (VPN, antivirus)
+### ESET CODES [[VPN, Antivirus]]
 
-[Get it Now](./ESET-CODES)
+[Get it Now](./ESET-CODES.md)
 
 ##
 
@@ -874,6 +874,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [CW?]: https://github.com/coldwater-10/Vpnclashfa
 [DN?]: https://t.me/s/DeamNet
 [Di4Diana]: https://t.me/Di4Diana
+[VPN, Antivirus]: https://t.me/F_NiREvil/2113
 [EP?]: https://github.com/Epodonios/v2ray-configs
 [FR?]: https://t.me/s/FREE2CONFIG
 [GE?]: https://t.me/s/gheychiamoozesh
