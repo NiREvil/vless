@@ -32,7 +32,7 @@ on:
         - --key
         - --small-business-key
         - --vpn-codes
-        default: --key
+        default: --vpn-codes
       os:
         description: 'Operating System of runner'
         required: true
