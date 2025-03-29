@@ -1,0 +1,143 @@
+name: ESET Key Generator
+
+permissions:
+  contents: write 
+
+on:
+  workflow_dispatch:
+    inputs:
+      account:
+        description: 'Number of Accounts to be generated (default = 0)'
+        required: false
+        default: '0'
+      key:
+        description: 'Number of Keys to be generated (default = 1)'
+        required: false
+        default: '1'
+      mail:
+        description: 'Choose the mail provider to generate license'
+        required: true
+        type: choice
+        options:
+        - 1secmail
+        - guerrillamail
+        - developermail
+        - mailticking
+        - fakemail
+        - inboxes
+        - incognitomail
+        default: fakemail
+      key_type:
+        description: 'Operation'
+        required: true
+        type: choice
+        options:
+        - --key
+        - --small-business-key
+        - --vpn-codes
+        default: --vpn-codes
+      branch:
+        description: "Good Night"
+        required: false
+        default: 'main'
+  schedule:
+    # Runs every 4 hours (at 00:00, 04:00, 08:00, 12:00, 16:00, 20:00 UTC)
+    - cron: '0 */4 * * *'
+
+jobs:
+  generate-and-commit:
+    runs-on: ubuntu-latest
+    env:
+      DEFAULT_ACCOUNT: '0'
+      DEFAULT_KEY: '1' 
+      DEFAULT_MAIL: 'fakemail' 
+      DEFAULT_KEY_TYPE: '--vpn-codes' 
+      DEFAULT_BRANCH: 'main' 
+      OUTPUT_FILENAME: 'ESET-CODES.md' 
+
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      - name: Generate Keys
+        run: |
+          # Determine parameters: Use workflow_dispatch inputs if available, otherwise use env defaults
+          ACCOUNT=${{ github.event.inputs.account || env.DEFAULT_ACCOUNT }}
+          KEY=${{ github.event.inputs.key || env.DEFAULT_KEY }}
+          MAIL=${{ github.event.inputs.mail || env.DEFAULT_MAIL }}
+          KEY_TYPE=${{ github.event.inputs.key_type || env.DEFAULT_KEY_TYPE }}
+          BRANCH=${{ github.event.inputs.branch || env.DEFAULT_BRANCH }}
+          OUTPUT_FILE="../${OUTPUT_FILENAME}" # Path relative to the key-gen-repo dir
+
+          echo "--- Configuration ---"
+          echo "Triggered by: ${{ github.event_name }}"
+          echo "Account Count: $ACCOUNT"
+          echo "Key Count: $KEY"
+          echo "Mail Provider: $MAIL"
+          echo "Key Type: $KEY_TYPE"
+          echo "Key-Gen Branch: $BRANCH"
+          echo "Output File: $OUTPUT_FILE"
+          echo "---------------------"
+
+          # Clone the Key-Gen repository into a subdirectory
+          git clone -b ${BRANCH} https://github.com/Diana-Cl/Key-Gen.git key-gen-repo
+          cd key-gen-repo
+
+          # Setup Python environment
+          echo "Setting up Python environment..."
+          sudo apt-get update -y
+          sudo apt-get install -y python3-pip python3-venv
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+          echo "Python environment setup complete."
+
+          # Generate Accounts and/or Keys
+          echo "Generating accounts/keys..."
+          if [[ ${ACCOUNT} -ne 0 ]]; then
+            echo "Generating $ACCOUNT accounts..."
+            python3 main.py --auto-detect-browser --account --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${ACCOUNT}
+          fi
+          if [[ ${KEY} -ne 0 ]]; then
+            echo "Generating $KEY keys (type: $KEY_TYPE)..."
+            python3 main.py --auto-detect-browser ${KEY_TYPE} --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${KEY}
+          fi
+          echo "Generation commands executed."
+
+          # Prepare the output file in the main repository directory (one level up)
+          echo "Preparing output file: ${OUTPUT_FILE}"
+          # Add timestamp and trigger info to the file
+          echo "Generated on: $(date) UTC" > "${OUTPUT_FILE}"
+          echo "Triggered by: ${{ github.event_name }}" >> "${OUTPUT_FILE}"
+          echo "---------------------" >> "${OUTPUT_FILE}"
+
+          # Append account data if generated and file exists
+          if [[ -f ./*ACCOUNTS.txt ]]; then
+              echo -e "\nAccounts:" >> "${OUTPUT_FILE}"
+              cat ./*ACCOUNTS.txt >> "${OUTPUT_FILE}"
+              echo "Appended Accounts."
+          else
+              echo "No ACCOUNTS.txt file found or account generation skipped."
+          fi
+
+          # Append key data if generated and file exists
+          if [[ -f ./*KEYS.txt ]]; then
+              echo -e "\nKeys:" >> "${OUTPUT_FILE}"
+              cat ./*KEYS.txt >> "${OUTPUT_FILE}"
+              echo "Appended Keys."
+          else
+              echo "No KEYS.txt file found or key generation skipped."
+          fi
+
+          echo "Output file preparation complete."
+          cd .. # Go back to the main repository root
+
+      - name: Commit and Push Generated Keys
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "feat: Update ESET generated keys/accounts (${{ github.event_name }})" # Commit message indicating update reason
+          file_pattern: ${{ env.OUTPUT_FILENAME }} 
+          commit_user_name: "ESET Licence Bot" 
+          commit_user_email: "pr@eset.com" 
+          commit_options: '--signoff' 
+          push_options: '--force' 
