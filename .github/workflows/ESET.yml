@@ -1,7 +1,7 @@
 name: ESET Key Generator
 
 permissions:
-  contents: write 
+  contents: write
 
 on:
   workflow_dispatch:
@@ -41,19 +41,19 @@ on:
         required: false
         default: 'main'
   schedule:
-    # Runs every 4 hours (at 00:00, 04:00, 08:00, 12:00, 16:00, 20:00 UTC)
-    - cron: '0 */4 * * *'
+    - cron: '0 */4 * * *' 
 
 jobs:
   generate-and-commit:
     runs-on: ubuntu-latest
     env:
       DEFAULT_ACCOUNT: '0'
-      DEFAULT_KEY: '1' 
-      DEFAULT_MAIL: 'fakemail' 
-      DEFAULT_KEY_TYPE: '--vpn-codes' 
-      DEFAULT_BRANCH: 'main' 
-      OUTPUT_FILENAME: 'ESET-CODES.md' 
+      DEFAULT_KEY: '1'
+      DEFAULT_MAIL: 'fakemail'
+      DEFAULT_KEY_TYPE: '--vpn-codes'
+      DEFAULT_BRANCH: 'main'
+      OUTPUT_FILENAME: 'ESET-CODES.md'
+      TEMP_OUTPUT_FILE: 'key_gen_output.log'
 
     steps:
       - name: Checkout Repository Code
@@ -61,13 +61,14 @@ jobs:
 
       - name: Generate Keys
         run: |
-          # Determine parameters: Use workflow_dispatch inputs if available, otherwise use env defaults
+          # Determine parameters
           ACCOUNT=${{ github.event.inputs.account || env.DEFAULT_ACCOUNT }}
           KEY=${{ github.event.inputs.key || env.DEFAULT_KEY }}
           MAIL=${{ github.event.inputs.mail || env.DEFAULT_MAIL }}
           KEY_TYPE=${{ github.event.inputs.key_type || env.DEFAULT_KEY_TYPE }}
           BRANCH=${{ github.event.inputs.branch || env.DEFAULT_BRANCH }}
-          OUTPUT_FILE="../${OUTPUT_FILENAME}" # Path relative to the key-gen-repo dir
+          OUTPUT_FILE="${{ env.OUTPUT_FILENAME }}"
+          TEMP_OUTPUT="${{ env.TEMP_OUTPUT_FILE }}"
 
           echo "--- Configuration ---"
           echo "Triggered by: ${{ github.event_name }}"
@@ -77,67 +78,141 @@ jobs:
           echo "Key Type: $KEY_TYPE"
           echo "Key-Gen Branch: $BRANCH"
           echo "Output File: $OUTPUT_FILE"
+          echo "Temp Output File: $TEMP_OUTPUT"
           echo "---------------------"
 
-          # Clone the Key-Gen repository into a subdirectory
+          # Delete old temp file if exists
+          rm -f "$TEMP_OUTPUT"
+
+          # Clone the Key-Gen repository
+          echo "Cloning Key-Gen repository..."
           git clone -b ${BRANCH} https://github.com/Diana-Cl/Key-Gen.git key-gen-repo
           cd key-gen-repo
 
           # Setup Python environment
           echo "Setting up Python environment..."
-          sudo apt-get update -y
-          sudo apt-get install -y python3-pip python3-venv
+          # (apt commands and pip install...) # No changes needed here
+          sudo apt-get update -y > /dev/null # Suppress apt output
+          sudo apt-get install -y python3-pip python3-venv > /dev/null # Suppress apt output
           python3 -m venv venv
           source venv/bin/activate
-          pip install -r requirements.txt
+          pip install -r requirements.txt > /dev/null # Suppress pip output
           echo "Python environment setup complete."
 
-          # Generate Accounts and/or Keys
-          echo "Generating accounts/keys..."
+          # Generate Accounts and/or Keys and capture output to temp file
+          echo "Generating accounts/keys and capturing output..."
+          # (python3 main.py commands with tee...) # No changes needed here
           if [[ ${ACCOUNT} -ne 0 ]]; then
             echo "Generating $ACCOUNT accounts..."
-            python3 main.py --auto-detect-browser --account --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${ACCOUNT}
+            python3 main.py --auto-detect-browser --account --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${ACCOUNT} | tee "../$TEMP_OUTPUT"
           fi
           if [[ ${KEY} -ne 0 ]]; then
             echo "Generating $KEY keys (type: $KEY_TYPE)..."
-            python3 main.py --auto-detect-browser ${KEY_TYPE} --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${KEY}
+            APPEND_FLAG=""
+            if [[ -f "../$TEMP_OUTPUT" ]]; then
+              APPEND_FLAG="-a"
+            fi
+            python3 main.py --auto-detect-browser ${KEY_TYPE} --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${KEY} | tee $APPEND_FLAG "../$TEMP_OUTPUT"
           fi
-          echo "Generation commands executed."
+          echo "Generation commands executed. Output captured in ../$TEMP_OUTPUT"
 
-          # Prepare the output file in the main repository directory (one level up)
-          echo "Preparing output file: ${OUTPUT_FILE}"
-          # Add timestamp and trigger info to the file
-          echo "Generated on: $(date) UTC" > "${OUTPUT_FILE}"
-          echo "Triggered by: ${{ github.event_name }}" >> "${OUTPUT_FILE}"
-          echo "---------------------" >> "${OUTPUT_FILE}"
+          # Go back to the main repository root
+          cd ..
 
-          # Append account data if generated and file exists
-          if [[ -f ./*ACCOUNTS.txt ]]; then
-              echo -e "\nAccounts:" >> "${OUTPUT_FILE}"
-              cat ./*ACCOUNTS.txt >> "${OUTPUT_FILE}"
-              echo "Appended Accounts."
+          # --- Extract values and format Markdown for NEW entry ---
+          echo "Extracting data and formatting Markdown for the new entry..."
+
+          # Extract individual values from the temporary file
+          VPN_CODES_LIST=$(grep '^VPN Codes:' "$TEMP_OUTPUT" | sed 's/^VPN Codes: //')
+          LICENSE_NAME=$(grep '^License Name:' "$TEMP_OUTPUT" | sed 's/^License Name: //')
+          LICENSE_KEY=$(grep '^License Key:' "$TEMP_OUTPUT" | sed 's/^License Key: //')
+          LICENSE_OUT_DATE=$(grep '^License Out Date:' "$TEMP_OUTPUT" | sed 's/^License Out Date: //')
+          ACCOUNT_EMAIL=$(grep '^Account Email:' "$TEMP_OUTPUT" | sed 's/^Account Email: //')
+          ACCOUNT_PASSWORD=$(grep '^Account Password:' "$TEMP_OUTPUT" | sed 's/^Account Password: //')
+
+          # Prepare the content for THIS run in a temporary file
+          NEW_ENTRY_FILE="new_entry.md.tmp"
+          echo "Generated on: $(date) UTC" > "$NEW_ENTRY_FILE"
+          echo "Triggered by: ${{ github.event_name }}" >> "$NEW_ENTRY_FILE"
+          echo "" >> "$NEW_ENTRY_FILE"
+
+          # 1. Add VPN Codes (if found)
+          if [[ -n "$VPN_CODES_LIST" ]]; then
+            echo "## VPN Codes" >> "$NEW_ENTRY_FILE"
+            echo "" >> "$NEW_ENTRY_FILE"
+            echo '```' >> "$NEW_ENTRY_FILE"
+            echo "$VPN_CODES_LIST" | sed 's/, /\n/g' >> "$NEW_ENTRY_FILE"
+            echo '```' >> "$NEW_ENTRY_FILE"
+            echo "" >> "$NEW_ENTRY_FILE"
+          fi
+
+          # 2. Add License Details (if found)
+          if [[ -n "$LICENSE_KEY" ]]; then
+            echo "### ESET Security License" >> "$NEW_ENTRY_FILE"
+            echo "- **Name:** ${LICENSE_NAME:-N/A}" >> "$NEW_ENTRY_FILE"
+            echo "- **License Key:** \`$LICENSE_KEY\`" >> "$NEW_ENTRY_FILE"
+            echo "- **Expiry Date:** ${LICENSE_OUT_DATE:-N/A}" >> "$NEW_ENTRY_FILE"
+            echo "" >> "$NEW_ENTRY_FILE"
+          fi
+
+          # 3. Add Account Details (if found)
+          if [[ -n "$ACCOUNT_EMAIL" ]]; then
+            echo "### ESET Account" >> "$NEW_ENTRY_FILE"
+            echo "- **Email:** \`$ACCOUNT_EMAIL\`" >> "$NEW_ENTRY_FILE"
+            if [[ -n "$ACCOUNT_PASSWORD" ]]; then
+              echo "- **Password:** \`$ACCOUNT_PASSWORD\`" >> "$NEW_ENTRY_FILE"
+            else
+              echo "- **Password:** N/A" >> "$NEW_ENTRY_FILE"
+            fi
+            echo "" >> "$NEW_ENTRY_FILE" # Add an empty line after
+          fi
+
+          # Add a separator before potentially appending old content
+          echo "---" >> "$NEW_ENTRY_FILE"
+          echo "" >> "$NEW_ENTRY_FILE"
+
+          # --- Combine with previous content or Reset ---
+          echo "Determining whether to prepend or overwrite..."
+          CURRENT_HOUR_UTC=$(date -u +'%H')
+          SHOULD_RESET=false
+
+          # Reset (overwrite) at 00:00 and 12:00 UTC for scheduled runs
+          if [[ "${{ github.event_name }}" == "schedule" ]] && ([[ "$CURRENT_HOUR_UTC" == "00" ]] || [[ "$CURRENT_HOUR_UTC" == "12" ]]); then
+              echo "Scheduled run at UTC hour $CURRENT_HOUR_UTC. Resetting ${OUTPUT_FILE}."
+              SHOULD_RESET=true
+          fi
+
+          if [[ "$SHOULD_RESET" == "true" ]] || [[ ! -f "$OUTPUT_FILE" ]]; then
+              # Overwrite if resetting or if the main file doesn't exist
+              echo "Overwriting ${OUTPUT_FILE} with the new entry."
+              mv "$NEW_ENTRY_FILE" "$OUTPUT_FILE"
           else
-              echo "No ACCOUNTS.txt file found or account generation skipped."
+              # Prepend: Combine new entry + old content
+              echo "Prepending the new entry to ${OUTPUT_FILE}."
+              TEMP_COMBINED_FILE="combined.md.tmp"
+              # Write new entry first, then append old file content
+              cat "$NEW_ENTRY_FILE" "$OUTPUT_FILE" > "$TEMP_COMBINED_FILE"
+              # Replace the old file with the combined content
+              mv "$TEMP_COMBINED_FILE" "$OUTPUT_FILE"
+              # Clean up the separate new entry file as it's now part of the combined file
+              rm "$NEW_ENTRY_FILE"
           fi
 
-          # Append key data if generated and file exists
-          if [[ -f ./*KEYS.txt ]]; then
-              echo -e "\nKeys:" >> "${OUTPUT_FILE}"
-              cat ./*KEYS.txt >> "${OUTPUT_FILE}"
-              echo "Appended Keys."
-          else
-              echo "No KEYS.txt file found or key generation skipped."
-          fi
+          # Optional: Clean up the raw output temporary file from the script execution
+          # rm "$TEMP_OUTPUT"
 
-          echo "Output file preparation complete."
-          cd .. # Go back to the main repository root
+          echo "File update complete for ${OUTPUT_FILE}."
+          echo "Final content of ${OUTPUT_FILE}:"
+          cat "${OUTPUT_FILE}"
+
 
       - name: Commit and Push Generated Keys
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "feat: Update ESET generated keys/accounts (${{ github.event_name }})"
-          file_pattern: ${{ env.OUTPUT_FILENAME }} 
-          commit_user_name: "ESET Licence Bot" 
+          file_pattern: ${{ env.OUTPUT_FILENAME }}
+          commit_user_name: "ESET Security Bot" 
           commit_user_email: "pr@eset.com" 
-          commit_options: '--signoff' 
-          push_options: '--force' 
+          commit_options: '--signoff'
+          # Consider removing --force unless absolutely necessary
+          # push_options: '--force'
