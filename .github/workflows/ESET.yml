@@ -37,7 +37,7 @@ on:
         - --vpn-codes
         default: --vpn-codes
       branch:
-        description: "Good Night"
+        description: "Key-Gen Repository branch (e.g., main, test)"
         required: false
         default: 'main'
   schedule:
@@ -135,7 +135,7 @@ jobs:
       - name: Commit and Push Generated Keys
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "feat: Update ESET generated keys/accounts (${{ github.event_name }})" # Commit message indicating update reason
+          commit_message: "feat: Update ESET generated keys/accounts (${{ github.event_name }})"
           file_pattern: ${{ env.OUTPUT_FILENAME }} 
           commit_user_name: "ESET Licence Bot" 
           commit_user_email: "pr@eset.com" 
