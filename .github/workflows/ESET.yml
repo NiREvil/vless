@@ -37,11 +37,11 @@ on:
         - --vpn-codes
         default: --vpn-codes
       branch:
-        description: "Key-Gen Repository branch (e.g., main, test)"
+        description: "Key-Gen Repository branch (default = main)"
         required: false
         default: 'main'
   schedule:
-    - cron: '0 */4 * * *' 
+    - cron: '0 */6 * * *' 
 
 jobs:
   generate-and-commit:
@@ -91,7 +91,6 @@ jobs:
 
           # Setup Python environment
           echo "Setting up Python environment..."
-          # (apt commands and pip install...) # No changes needed here
           sudo apt-get update -y > /dev/null # Suppress apt output
           sudo apt-get install -y python3-pip python3-venv > /dev/null # Suppress apt output
           python3 -m venv venv
@@ -101,7 +100,6 @@ jobs:
 
           # Generate Accounts and/or Keys and capture output to temp file
           echo "Generating accounts/keys and capturing output..."
-          # (python3 main.py commands with tee...) # No changes needed here
           if [[ ${ACCOUNT} -ne 0 ]]; then
             echo "Generating $ACCOUNT accounts..."
             python3 main.py --auto-detect-browser --account --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${ACCOUNT} | tee "../$TEMP_OUTPUT"
@@ -110,7 +108,7 @@ jobs:
             echo "Generating $KEY keys (type: $KEY_TYPE)..."
             APPEND_FLAG=""
             if [[ -f "../$TEMP_OUTPUT" ]]; then
-              APPEND_FLAG="-a"
+              APPEND_FLAG="-a" # Use append if account generation already wrote to the file
             fi
             python3 main.py --auto-detect-browser ${KEY_TYPE} --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${KEY} | tee $APPEND_FLAG "../$TEMP_OUTPUT"
           fi
@@ -123,62 +121,118 @@ jobs:
           echo "Extracting data and formatting Markdown for the new entry..."
 
           # Extract individual values from the temporary file
-          VPN_CODES_LIST=$(grep '^VPN Codes:' "$TEMP_OUTPUT" | sed 's/^VPN Codes: //')
-          LICENSE_NAME=$(grep '^License Name:' "$TEMP_OUTPUT" | sed 's/^License Name: //')
-          LICENSE_KEY=$(grep '^License Key:' "$TEMP_OUTPUT" | sed 's/^License Key: //')
-          LICENSE_OUT_DATE=$(grep '^License Out Date:' "$TEMP_OUTPUT" | sed 's/^License Out Date: //')
-          ACCOUNT_EMAIL=$(grep '^Account Email:' "$TEMP_OUTPUT" | sed 's/^Account Email: //')
-          ACCOUNT_PASSWORD=$(grep '^Account Password:' "$TEMP_OUTPUT" | sed 's/^Account Password: //')
+          # Ensure grep returns empty string if pattern not found, not an error
+          VPN_CODES_LIST=$(grep '^VPN Codes:' "$TEMP_OUTPUT" | sed 's/^VPN Codes: //' || true)
+          LICENSE_NAME=$(grep '^License Name:' "$TEMP_OUTPUT" | sed 's/^License Name: //' || true)
+          LICENSE_KEY=$(grep '^License Key:' "$TEMP_OUTPUT" | sed 's/^License Key: //' || true)
+          LICENSE_OUT_DATE=$(grep '^License Out Date:' "$TEMP_OUTPUT" | sed 's/^License Out Date: //' || true)
+          ACCOUNT_EMAIL=$(grep '^Account Email:' "$TEMP_OUTPUT" | sed 's/^Account Email: //' || true)
+          ACCOUNT_PASSWORD=$(grep '^Account Password:' "$TEMP_OUTPUT" | sed 's/^Account Password: //' || true)
 
           # Prepare the content for THIS run in a temporary file
           NEW_ENTRY_FILE="new_entry.md.tmp"
-          echo "Generated on: $(date) UTC" > "$NEW_ENTRY_FILE"
-          echo "Triggered by: ${{ github.event_name }}" >> "$NEW_ENTRY_FILE"
-          echo "" >> "$NEW_ENTRY_FILE"
+          # Use the desired date format
+          CURRENT_DATETIME_UTC=$(date -u '+%A, %d %B %Y, %H:%M:%S UTC')
 
-          # 1. Add VPN Codes (if found)
+          # Start building the new entry
+          {
+            echo "## Generated ON: ${CURRENT_DATETIME_UTC}"
+            echo "" # Blank line
+            echo "> [!CAUTION]"
+            echo "> Triggered by: ${{ github.event_name }}"
+            echo "" # Blank line
+            echo "<br><br>" # Extra spacing like the example
+            echo "" # Blank line
+          } > "$NEW_ENTRY_FILE" # Overwrite or create the temp file
+
+          # 1. Add VPN Codes Section (if VPN codes exist)
           if [[ -n "$VPN_CODES_LIST" ]]; then
-            echo "## VPN Codes" >> "$NEW_ENTRY_FILE"
-            echo "" >> "$NEW_ENTRY_FILE"
-            echo '```' >> "$NEW_ENTRY_FILE"
-            echo "$VPN_CODES_LIST" | sed 's/, /\n/g' >> "$NEW_ENTRY_FILE"
-            echo '```' >> "$NEW_ENTRY_FILE"
-            echo "" >> "$NEW_ENTRY_FILE"
+            {
+              echo "### ESET VPN ACCESS CODES"
+              echo ""
+              # Update Note: Changed expiration mention based on user feedback (although the 12hr mention was in the original *example*)
+              # Kept the original note for consistency with the desired output format, user can adjust if needed.
+              echo "> [!NOTE]"
+              echo "> The access codes for ESET VPN will expire eventually." # Changed from 12 hours
+              echo "> Each code is valid for login on only one device."
+              echo ""
+              echo '```ruby'
+              # Convert comma-space separated list to one code per line
+              echo "$VPN_CODES_LIST" | sed 's/, /\n/g'
+              echo '```'
+              echo ""
+              echo "<br>" # Extra spacing
+              echo ""
+            } >> "$NEW_ENTRY_FILE" # Append to the temp file
           fi
 
-          # 2. Add License Details (if found)
+          # 2. Add ESET Security License Section (if License Key exists)
           if [[ -n "$LICENSE_KEY" ]]; then
-            echo "### ESET Security License" >> "$NEW_ENTRY_FILE"
-            echo "- **Name:** ${LICENSE_NAME:-N/A}" >> "$NEW_ENTRY_FILE"
-            echo "- **License Key:** \`$LICENSE_KEY\`" >> "$NEW_ENTRY_FILE"
-            echo "- **Expiry Date:** ${LICENSE_OUT_DATE:-N/A}" >> "$NEW_ENTRY_FILE"
-            echo "" >> "$NEW_ENTRY_FILE"
+            {
+              echo "### ESET SECURITY LICENSE"
+              echo ""
+              echo "**Name:** ${LICENSE_NAME:-N/A}" # Use N/A if name is missing
+              echo "**Expiry:** ${LICENSE_OUT_DATE:-N/A}" # Use N/A if date is missing
+              echo "**License Key:**"
+              echo ""
+              echo '```POV-Ray SDL'
+              echo "$LICENSE_KEY"
+              echo '```'
+              echo ""
+              echo "<br>" # Extra spacing
+              echo ""
+            } >> "$NEW_ENTRY_FILE"
           fi
 
-          # 3. Add Account Details (if found)
+          # 3. Add ESET Account Section (if Account Email exists)
           if [[ -n "$ACCOUNT_EMAIL" ]]; then
-            echo "### ESET Account" >> "$NEW_ENTRY_FILE"
-            echo "- **Email:** \`$ACCOUNT_EMAIL\`" >> "$NEW_ENTRY_FILE"
-            if [[ -n "$ACCOUNT_PASSWORD" ]]; then
-              echo "- **Password:** \`$ACCOUNT_PASSWORD\`" >> "$NEW_ENTRY_FILE"
-            else
-              echo "- **Password:** N/A" >> "$NEW_ENTRY_FILE"
-            fi
-            echo "" >> "$NEW_ENTRY_FILE" # Add an empty line after
+            {
+              echo "### ESET ACCOUNT"
+              echo ""
+              echo "**Email:**"
+              echo ""
+              echo '```CSS'
+              echo "$ACCOUNT_EMAIL"
+              echo '```'
+              echo ""
+              echo "**Password:**"
+              echo ""
+              echo '```POV-Ray SDL'
+              if [[ -n "$ACCOUNT_PASSWORD" ]]; then
+                echo "$ACCOUNT_PASSWORD"
+              else
+                echo "N/A" # Handle missing password
+              fi
+              echo '```'
+              echo ""
+              echo "<br>" # Extra spacing
+              echo ""
+            } >> "$NEW_ENTRY_FILE"
           fi
 
-          # Add a separator before potentially appending old content
-          echo "---" >> "$NEW_ENTRY_FILE"
-          echo "" >> "$NEW_ENTRY_FILE"
+          # 4. Add Static Footer Link Section
+          {
+            echo "### All about ESET VPN"
+            echo ""
+            echo "[READ HERE](https://t.me/F_NiREvil/2113)"
+            echo ""
+            echo "---" # Separator for the end of this entry
+            echo ""
+            echo "<br><br>" # Final spacing before potential next entry
+            echo ""
+          } >> "$NEW_ENTRY_FILE"
 
-          # --- Combine with previous content or Reset ---
+          echo "Markdown formatting complete for the new entry in $NEW_ENTRY_FILE."
+
+          # --- Combine with previous content or Reset (Every 24 Hours at 00:00 UTC) ---
           echo "Determining whether to prepend or overwrite..."
           CURRENT_HOUR_UTC=$(date -u +'%H')
           SHOULD_RESET=false
 
-          # Reset (overwrite) at 00:00 and 12:00 UTC for scheduled runs
-          if [[ "${{ github.event_name }}" == "schedule" ]] && ([[ "$CURRENT_HOUR_UTC" == "00" ]] || [[ "$CURRENT_HOUR_UTC" == "12" ]]); then
-              echo "Scheduled run at UTC hour $CURRENT_HOUR_UTC. Resetting ${OUTPUT_FILE}."
+          # Reset (overwrite) only at 00:00 UTC for scheduled runs
+          # This implements the 24-hour reset cycle.
+          if [[ "${{ github.event_name }}" == "schedule" ]] && [[ "$CURRENT_HOUR_UTC" == "00" ]]; then
+              echo "Scheduled run at UTC hour 00. Resetting ${OUTPUT_FILE} (24-hour cycle)."
               SHOULD_RESET=true
           fi
 
@@ -199,11 +253,12 @@ jobs:
           fi
 
           # Optional: Clean up the raw output temporary file from the script execution
-          # rm "$TEMP_OUTPUT"
+          # rm -f "$TEMP_OUTPUT" # Uncomment if you want to remove the log file
 
           echo "File update complete for ${OUTPUT_FILE}."
           echo "Final content of ${OUTPUT_FILE}:"
-          cat "${OUTPUT_FILE}"
+          # Use head to avoid printing potentially very large files to the logs
+          head -n 100 "${OUTPUT_FILE}"
 
 
       - name: Commit and Push Generated Keys
@@ -214,5 +269,4 @@ jobs:
           commit_user_name: "ESET Security Bot" 
           commit_user_email: "pr@eset.com" 
           commit_options: '--signoff'
-          # Consider removing --force unless absolutely necessary
-          # push_options: '--force'
+          # push_options: '--force' # Avoid using --force unless absolutely necessar
