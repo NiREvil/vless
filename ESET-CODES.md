@@ -1,3 +1,32 @@
+Generated on: Sun Mar 30 04:29:45 UTC 2025 UTC
+Triggered by: schedule
+
+## VPN Codes
+
+```
+DGNOADQWN7
+FABLSUS1KL
+P7NWW5L5Q0
+AY21TS2AYH
+26TYFMMJYI
+KJOQMIKMGG
+Y5WZ0AJVQP
+6NEHR3WYRV
+WFW1XK4BIG
+VBS3BEFA85
+```
+
+### ESET Security License
+- **Name:** ESET Small Business Security
+- **License Key:** `J5E4-XVCH-8TPN-XGXC-GD9D`
+- **Expiry Date:** 29.04.2025
+
+### ESET Account
+- **Email:** `jonesy.praneel@thefluent.org`
+- **Password:** `7<D@mo/'+lD42oCB_)Fr{`
+
+---
+
 Generated on: Sun Mar 30 02:04:31 UTC 2025 UTC
 Triggered by: schedule
 
