@@ -1,4 +1,4 @@
-## Generated ON: Wednesday, 02 April 2025, 12:39:47 UTC
+# Generated ON: Wednesday, 02 April 2025, 12:39:47 UTC
 
 > [!CAUTION]
 > Triggered by: schedule
@@ -62,7 +62,7 @@ JY1f3MC]d(l.ZwAcoGx
 
 <br><br>
 
-## Generated ON: Wednesday, 02 April 2025, 01:28:44 UTC
+# Generated ON: Wednesday, 02 April 2025, 01:28:44 UTC
 
 > [!CAUTION]
 > Triggered by: schedule
@@ -126,7 +126,7 @@ o&!k%!|A3&K$K/\;A6d{:
 
 <br><br>
 
-## Generated ON: Tuesday, 01 April 2025, 18:26:25 UTC
+# Generated ON: Tuesday, 01 April 2025, 18:26:25 UTC
 
 > [!CAUTION]
 > Triggered by: schedule
@@ -185,7 +185,3 @@ Zs5=Gxmr`AG*v9/jYz
 ### All about ESET VPN
 
 [READ HERE](https://t.me/F_NiREvil/2113)
-
----
-
-<br><br>
