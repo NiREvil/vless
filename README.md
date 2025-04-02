@@ -56,20 +56,17 @@ $$\color{gray}\Huge \mathfrak{R}\color{red}{\sum}\color{gray}{\nu\iota\mathcal{l
 
 <br><br>
 
-##
-
+##  
 > 📦 This configuration is dynamically generated and continuously updated via GitHub Actions workflows every 2 hours to ensure consistency and best practices.
 
 <br>
 
-##
-
-### ESET CODES [[VPN, Antivirus]]
-
+##  
+### [ESET CODES - VPN, ANTIVIRUS?]
+> Licences are dynamically generated every 4 hours via GitHub Actions workflows.  
 [Get it Now](./ESET-CODES.md)
 
-##
-
+##  
 ### Hiddify URL <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>
 
 ```POV-Ray SDL
@@ -90,7 +87,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 <p align="center">
      <br>
-     <img src="edge/assets/QRCode-Dog.png" alt="QR" width="550px">
+     <img src="edge/assets/QRCode-Dog.png" alt="QR" width="640px">
    </p> <br>
 
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
@@ -528,7 +525,7 @@ https://raw.githubusercontent.com/FRDYAK/teryak-configs/refs/heads/main/FRDYAK-p
 
 https://raw.githubusercontent.com/ndsphonemy/proxy-sub/refs/heads/main/speed.txt
 
-[https://join_to_channel_join.json](https://t.me/KevinZakarian/304) [[KV?]]
+https://iserver.store/KevinVPN.json [[KV?]]
 
 https://shadowmere.xyz/api/b64sub [[SW?]]  
 https://shadowmere.xyz/api/sub
@@ -542,6 +539,8 @@ https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eterni
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity
 
 https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Vless [[FR?]]
+
+https://raw.githubusercontent.com/tkamirparsa/Javid-shah/refs/heads/main/Sub.text [[XS?]]
 
 https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality
 
@@ -790,13 +789,14 @@ https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.
 
 > Some others
 
-🇺🇸 https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/United%20States/config.txt
+🇺🇸  
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/United%20States/config.txt
 
 🇬🇧  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/United%20Kingdom/config.txt
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/United%20Kingdom/config.txt
 
 🇩🇪  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/Germany/config.txt
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Germany/config.txt
 
 🇮🇷  
 https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/raw/main/sub/Iran/config.txt
@@ -805,52 +805,49 @@ https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/raw/main/su
 https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/raw/main/sub/Finland/config.txt
 
 🇸🇪  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/Sweden/config.txt
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Swedden/config.txt
 
-🇳🇴  
-https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/raw/main/sub/Norway/config.txt
+🇨🇭   
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Switzerland/config.txt
 
 🇫🇷  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/France/config.txt
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/France/config.txt
+
+🇧🇭  
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Bahrain/config.txt
 
 🇮🇪  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/Ireland/config.txt
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Ireland/config.txt
 
 🇨🇦  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/Canada/config.txt
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Canada/config.txt
+
+🇮🇹  
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Italy/config.txt
 
 🇹🇷  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/Turkey/config.txt
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Turkey/config.txt
 
-🇦🇱  
-https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/raw/main/sub/Albania/config.txt
-
-🇨🇷  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/Costa%20Rica/config.txt
-
-🇱🇹  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/Republic%20of%20Lithuania/config.txt
+🇵🇱  
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Poland/config.txt
 
 🇳🇱  
-https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/raw/main/sub/Netherlands/config.txt
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Netherlands/config.txt
 
-🇮🇩  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/Indonesia/config.txt
+🇷🇸  
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Serbia/config.txt
+
+🇸🇬    
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Singapore/config.txt
 
 🇦🇹  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/Austria/config.txt
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Austria/config.txt
 
-🇷🇺  
-https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/raw/main/sub/Russia/config.txt
-
-🇨🇼  
-https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/raw/main/sub/Cura%C3%A7ao/config.txt
-
-🇿🇦  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/South%20Africa/config.txt
+🇨🇿  
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Czech%20Republic/config.txt
 
 🇦🇪  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/main/sub/United%20Arab%20Emirates/config.txt
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/United%20Arab%20Emirates/config.txt
 
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
 
@@ -874,12 +871,12 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [CW?]: https://github.com/coldwater-10/Vpnclashfa
 [DN?]: https://t.me/s/DeamNet
 [Di4Diana]: https://t.me/Di4Diana
-[VPN, Antivirus]: https://t.me/F_NiREvil/2113
+[ESET CODES - VPN, ANTIVIRUS?]: https://t.me/F_NiREvil/2113
 [EP?]: https://github.com/Epodonios/v2ray-configs
 [FR?]: https://t.me/s/FREE2CONFIG
 [GE?]: https://t.me/s/gheychiamoozesh
 [GFW]: https://github.com/GFW-knocker/gfw_resist_HTTPS_proxy/tree/main
-[GZ]: https://github.com/valid7996/
+[GZ?]: https://github.com/valid7996/
 [KV?]: https://t.me/s/KevinZakarian
 [∏I?]: https://t.me/s/F_NiREvil
 [MB?]: https://github.com/mahdibland/ShadowsocksAggregator
@@ -887,7 +884,8 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [PR?]: https://t.me/s/ProxyDaemi
 [SW?]: https://github.com/jadolg/shadowmere
 [SR?]: https://github.com/soroushmirzaei/telegram-configs-collector
-[WE?]: https://t.me/IranRamona
+[WE?]: https://t.me/s/IranRamona
+[XS?]: https://t.me/s/xs_filternet
 [Arshia]: https://t.me/s/warpscanner
 [The Darkness]: https://t.me/s/ConfigWireguard
 [Nekobox]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
