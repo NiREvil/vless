@@ -136,7 +136,7 @@ jobs:
 
           # Start building the new entry
           {
-            echo "## Generated ON: ${CURRENT_DATETIME_UTC}"
+            echo "# Generated ON: ${CURRENT_DATETIME_UTC}"
             echo "" # Blank line
             echo "> [!CAUTION]"
             echo "> Triggered by: ${{ github.event_name }}"
