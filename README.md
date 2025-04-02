@@ -56,17 +56,21 @@ $$\color{gray}\Huge \mathfrak{R}\color{red}{\sum}\color{gray}{\nu\iota\mathcal{l
 
 <br><br>
 
-##  
+##
+
 > 📦 This configuration is dynamically generated and continuously updated via GitHub Actions workflows every 2 hours to ensure consistency and best practices.
 
 <br>
 
-##  
-### [ESET CODES - VPN, ANTIVIRUS?]
-> Licences are dynamically generated every 4 hours via GitHub Actions workflows.  
-[Get it Now](./ESET-CODES.md)
+##
 
-##  
+### [ESET CODES - VPN, ANTIVIRUS?]
+
+> Licences are dynamically generated every 4 hours via GitHub Actions workflows.  
+> [Get it Now](./ESET-CODES.md)
+
+##
+
 ### Hiddify URL <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>
 
 ```POV-Ray SDL
@@ -807,7 +811,7 @@ https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/raw/main/su
 🇸🇪  
 https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Swedden/config.txt
 
-🇨🇭   
+🇨🇭  
 https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Switzerland/config.txt
 
 🇫🇷  
@@ -837,7 +841,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 🇷🇸  
 https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Serbia/config.txt
 
-🇸🇬    
+🇸🇬  
 https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Singapore/config.txt
 
 🇦🇹  
