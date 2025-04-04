@@ -162,10 +162,10 @@ async function streamOverWSHandler(request) {
           );
         },
         close() {
-          log(`readableWebSocketStream is close`);
+          log('readableWebSocketStream is close');
         },
         abort(reason) {
-          log(`readableWebSocketStream is abort`, JSON.stringify(reason));
+          log('readableWebSocketStream is abort', JSON.stringify(reason));
         },
       }),
     )
@@ -342,7 +342,7 @@ function processStreamHeader(chunk, userCode) {
   if (!addressValue) {
     return {
       hasError: true,
-      message: `addressValue is empty`,
+      message: 'addressValue is empty',
     };
   }
 
@@ -419,7 +419,7 @@ async function remoteSocketToWS(remoteSocket, webSocket, streamResponseHeader, r
   await remoteSocket.readable
     .pipeTo(
       new WritableStream({
-        start() { },
+        start() {},
         async write(chunk, controller) {
           hasIncomingData = true;
           if (webSocket.readyState !== WS_READY_STATE_OPEN) {
@@ -433,20 +433,20 @@ async function remoteSocketToWS(remoteSocket, webSocket, streamResponseHeader, r
           }
         },
         close() {
-          log(`remoteConnection readable close`);
+          log('remoteConnection readable close');
         },
         abort(reason) {
-          console.error(`remoteConnection readable abort`, reason);
+          console.error('remoteConnection readable abort', reason);
         },
       }),
     )
     .catch(error => {
-      console.error(`remoteSocketToWS has error`, error.stack || error);
+      console.error('remoteSocketToWS has error', error.stack || error);
       safeCloseWebSocket(webSocket);
     });
 
   if (hasIncomingData === false && retry) {
-    log(`retry connection`);
+    log('retry connection');
     retry();
   }
 }
@@ -461,11 +461,11 @@ async function handleUDPOutBound(webSocket, streamResponseHeader, log) {
   let isHeaderSent = false;
 
   const transformStream = new TransformStream({
-    start(controller) { },
+    start(controller) {},
     transform(chunk, controller) {
       // udp message 2 byte is the the length of udp data
       // TODO: this should have bug, beacsue maybe udp chunk can be in two websocket message
-      for (let index = 0; index < chunk.byteLength;) {
+      for (let index = 0; index < chunk.byteLength; ) {
         const lengthBuffer = chunk.slice(index, index + 2);
         const udpPakcetLength = new DataView(lengthBuffer).getUint16(0);
         const udpData = new Uint8Array(chunk.slice(index + 2, index + 2 + udpPakcetLength));
@@ -473,7 +473,7 @@ async function handleUDPOutBound(webSocket, streamResponseHeader, log) {
         controller.enqueue(udpData);
       }
     },
-    flush(controller) { },
+    flush(controller) {},
   });
 
   // only handle dns udp for now
@@ -544,7 +544,8 @@ function getDianaConfig(userCode, hostName) {
     `&ed=2560&${commonParams}&fp=chrome&alpn=h3#${hostName}`;
 
   const dreamConfig =
-    `${baseUrl}?path=%2Fapi%2Fv8%3Fed%3D2048&${commonParams}` + `&fp=firefox&alpn=h2%2Chttp%2F1.1#${hostName}`;
+    `${baseUrl}?path=%2Fapi%2Fv8%3Fed%3D2048&${commonParams}` +
+    `&fp=firefox&alpn=h2%2Chttp%2F1.1#${hostName}`;
 
   return `
   <!DOCTYPE html>
