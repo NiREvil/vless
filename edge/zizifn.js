@@ -547,7 +547,7 @@ function getDianaConfig(userCode, hostName) {
     `${baseUrl}?path=%2Fapi%2Fv8%3Fed%3D2048&${commonParams}` +
     `&fp=firefox&alpn=h2%2Chttp%2F1.1#${hostName}`;
 
-return `
+  return `
 <!doctype html>
 <html lang="en">
   <head>
