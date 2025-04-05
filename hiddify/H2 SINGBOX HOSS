@@ -15,7 +15,8 @@
         "type": "tcp",
         "tag": "proxy-dns",
         "detour": "proxy",
-        "server": "185.228.168.9"
+        "domain_resolver": "local-dns",
+        "server": "8.8.8.8"
       },
       {
         "type": "tcp",
@@ -28,28 +29,28 @@
         "tag": "direct-dns",
         "detour": "direct"
       }
-    ],
+    ], 
     "rules": [
       {
-        "source_ip_cidr": "172.19.0.0/30",
-        "clash_mode": "Global",
-        "server": "proxy-dns"
-      },
-      {
-        "source_ip_cidr": "172.19.0.0/30",
-        "server": "proxy-dns"
+        "rule_set": "geosite-ir",
+        "server": "direct-dns"
       },
       {
         "clash_mode": "Direct",
         "server": "direct-dns"
       },
       {
-        "rule_set": "geosite-ir",
-        "server": "direct-dns"
+        "source_ip_cidr": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
+        "server": "proxy-dns"
+      },
+      {
+        "clash_mode": "Global",
+        "server": "proxy-dns"
       }
     ],
     "final": "proxy-dns",
-    "strategy": "prefer_ipv4"
+    "strategy": "prefer_ipv4",
+    "independent_cache": true
   },
   "inbounds": [
     {
@@ -58,7 +59,7 @@
       "mtu": 9000,
       "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
-      "strict_route": true,
+      "strict_route": false,
       "endpoint_independent_nat": false,
       "stack": "system",
       "platform": {
@@ -102,10 +103,9 @@
       "tag": "hysteria",
       "server": "keviny.iserver.store",
       "server_port": 8443,
-      "domain_resolver": "local-dns",
-      "password": "@KevinZakarian1",
+      "password": "KevinZakarian",
       "obfs": {
-        "password": "@KevinZakarian",
+        "password": "KevinZakarian",
         "type": "salamander"
       },
       "tls": {
