@@ -34,10 +34,7 @@
         "server": "direct-dns"
       },
       {
-        "source_ip_cidr": [
-          "172.19.0.1/30",
-          "fdfe:dcba:9876::1/126"
-        ],
+        "source_ip_cidr": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
         "server": "proxy-dns"
       },
       {
@@ -54,15 +51,9 @@
       "type": "tun",
       "tag": "tun-in",
       "mtu": 9000,
-      "address": [
-        "172.19.0.1/30",
-        "fdfe:dcba:9876::1/126"
-      ],
+      "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
-      "exclude_package": [
-        "ir.mci.ecareapp",
-        "com.myirancell"
-      ],
+      "exclude_package": ["ir.mci.ecareapp", "com.myirancell"],
       "stack": "mixed",
       "platform": {
         "http_proxy": {
@@ -84,20 +75,14 @@
     {
       "type": "selector",
       "tag": "proxy",
-      "outbounds": [
-        "auto",
-        "direct",
-        "shadowsocks"
-      ],
+      "outbounds": ["auto", "direct", "shadowsocks"],
       "default": "shadowsocks",
       "interrupt_exist_connections": true
     },
     {
       "type": "urltest",
       "tag": "auto",
-      "outbounds": [
-        "shadowsocks"
-      ],
+      "outbounds": ["shadowsocks"],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m0s",
       "tolerance": 50
@@ -137,12 +122,7 @@
         "outbound": "proxy"
       },
       {
-        "rule_set": [
-          "geoip-private",
-          "geosite-private",
-          "geosite-ir",
-          "geoip-ir"
-        ],
+        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"],
         "outbound": "direct"
       },
       {
