@@ -546,14 +546,14 @@ function getDianaConfig(userCode, hostName) {
   const dreamConfig =
     `${baseUrl}?path=%2Fapi%2Fv8%3Fed%3D2048&${commonParams}` +
     `&fp=firefox&alpn=h2%2Chttp%2F1.1#${hostName}`;
-    
-  // New Clash Meta import URL format
-  const clashMetaImportUrl = 
-    `https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(dreamConfig)}` +
-    `&remote_config=https://raw.githubusercontent.com/sahar-km/EdgeSub/refs/heads/main/public/minimal_remote_rules.ini` +
-    `&udp=false&ss_uot=false&show_host=false&forced_ws0rtt=false`;
 
-return `
+  // New Clash Meta import URL format
+  const clashMetaImportUrl =
+    `https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(dreamConfig)}` +
+    '&remote_config=https://raw.githubusercontent.com/sahar-km/EdgeSub/refs/heads/main/public/minimal_remote_rules.ini' +
+    '&udp=false&ss_uot=false&show_host=false&forced_ws0rtt=false';
+
+  return `
 <!doctype html>
 <html lang="en">
   <head>
