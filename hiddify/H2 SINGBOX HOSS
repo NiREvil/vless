@@ -16,7 +16,7 @@
         "tag": "proxy-dns",
         "detour": "proxy",
         "domain_resolver": "local-dns",
-        "server": "8.8.8.8"
+        "server": "185.228.168.9"
       },
       {
         "type": "tcp",
@@ -52,8 +52,7 @@
       }
     ],
     "final": "proxy-dns",
-    "strategy": "prefer_ipv4",
-    "independent_cache": true
+    "strategy": "prefer_ipv4"
   },
   "inbounds": [
     {
@@ -65,7 +64,7 @@
         "fdfe:dcba:9876::1/126"
       ],
       "auto_route": true,
-      "stack": "system",
+      "stack": "mixed",
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -195,7 +194,7 @@
     "final": "proxy",
     "auto_detect_interface": true,
     "override_android_vpn": true,
-    "default_domain_resolver": "direct-dns"
+    "default_domain_resolver": "local-dns"
   },
   "experimental": {
     "cache_file": {
