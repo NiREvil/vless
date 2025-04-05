@@ -10,16 +10,13 @@
         "tag": "proxy-dns",
         "detour": "proxy",
         "domain_resolver": "local-dns",
-        "server": "8.8.8.8",
-        "server_port": 53
+        "server": "8.8.8.8"
       },
       {
-        "type": "udp",
+        "type": "tcp",
         "tag": "local-dns",
         "detour": "direct",
-        "domain_resolver": "",
-        "server": "1.1.1.1",
-        "server_port": 53
+        "server": "8.8.4.4"
       },
       {
         "type": "local",
@@ -37,7 +34,10 @@
         "server": "direct-dns"
       },
       {
-        "source_ip_cidr": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
+        "source_ip_cidr": [
+          "172.19.0.1/30",
+          "fdfe:dcba:9876::1/126"
+        ],
         "server": "proxy-dns"
       },
       {
@@ -45,7 +45,7 @@
         "server": "proxy-dns"
       }
     ],
-    "final": "local-dns",
+    "final": "proxy-dns",
     "strategy": "prefer_ipv4",
     "independent_cache": true
   },
@@ -54,11 +54,12 @@
       "type": "tun",
       "tag": "tun-in",
       "mtu": 9000,
-      "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
       "auto_route": true,
-      "exclude_package": ["ir.mci.ecareapp", "com.myirancell"],
-      "endpoint_independent_nat": true,
-      "stack": "mixed",
+      "stack": "system",
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -78,14 +79,19 @@
     {
       "type": "selector",
       "tag": "proxy",
-      "outbounds": ["auto", "direct", "hysteria"],
-      "default": "hysteria",
-      "interrupt_exist_connections": true
+      "outbounds": [
+        "auto",
+        "direct",
+        "hysteria"
+      ],
+      "default": "hysteria"
     },
     {
       "type": "urltest",
       "tag": "auto",
-      "outbounds": ["hysteria"],
+      "outbounds": [
+        "hysteria"
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m0s",
       "tolerance": 50
@@ -100,12 +106,11 @@
       "tag": "hysteria",
       "server": "keviny.iserver.store",
       "server_port": 8443,
-      "domain_resolver": "local-dns",
-      "password": "@KevinZakarianA",
       "obfs": {
         "type": "salamander",
-        "password": "@KevinZakarian"
+        "password": "KevinZakarian"
       },
+      "password": "KevinZakarian",
       "tls": {
         "enabled": true,
         "insecure": true
@@ -131,7 +136,12 @@
         "outbound": "proxy"
       },
       {
-        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"],
+        "rule_set": [
+          "geoip-private",
+          "geosite-private",
+          "geosite-ir",
+          "geoip-ir"
+        ],
         "outbound": "direct"
       },
       {
@@ -177,20 +187,13 @@
       }
     ],
     "final": "proxy",
-    "override_android_vpn": true,
     "auto_detect_interface": true,
+    "override_android_vpn": true,
     "default_domain_resolver": "direct-dns"
   },
   "experimental": {
     "cache_file": {
       "enabled": true
-    },
-    "clash_api": {
-      "external_controller": "127.0.0.1:9090",
-      "external_ui": "ui",
-      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
-      "external_ui_download_detour": "direct",
-      "default_mode": "rule"
     }
   }
 }
