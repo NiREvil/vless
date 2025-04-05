@@ -10,16 +10,13 @@
         "tag": "proxy-dns",
         "detour": "proxy",
         "domain_resolver": "local-dns",
-        "server": "8.8.8.8",
-        "server_port": 53
+        "server": "8.8.8.8"
       },
       {
         "type": "udp",
         "tag": "local-dns",
         "detour": "direct",
-        "domain_resolver": "",
-        "server": "1.1.1.1",
-        "server_port": 53
+        "server": "1.1.1.1"
       },
       {
         "type": "local",
@@ -37,7 +34,10 @@
         "server": "direct-dns"
       },
       {
-        "source_ip_cidr": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
+        "source_ip_cidr": [
+          "172.19.0.1/30",
+          "fdfe:dcba:9876::1/126"
+        ],
         "server": "proxy-dns"
       },
       {
@@ -54,10 +54,15 @@
       "type": "tun",
       "tag": "tun-in",
       "mtu": 9000,
-      "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
       "auto_route": true,
-      "exclude_package": ["ir.mci.ecareapp", "com.myirancell"],
-      "endpoint_independent_nat": true,
+      "exclude_package": [
+        "ir.mci.ecareapp",
+        "com.myirancell"
+      ],
       "stack": "mixed",
       "platform": {
         "http_proxy": {
@@ -65,7 +70,8 @@
           "server": "127.0.0.1",
           "server_port": 2080
         }
-      }
+      },
+      "endpoint_independent_nat": true
     },
     {
       "type": "mixed",
@@ -78,14 +84,20 @@
     {
       "type": "selector",
       "tag": "proxy",
-      "outbounds": ["auto", "direct", "shadowsocks"],
+      "outbounds": [
+        "auto",
+        "direct",
+        "shadowsocks"
+      ],
       "default": "shadowsocks",
       "interrupt_exist_connections": true
     },
     {
       "type": "urltest",
       "tag": "auto",
-      "outbounds": ["shadowsocks"],
+      "outbounds": [
+        "shadowsocks"
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m0s",
       "tolerance": 50
@@ -125,7 +137,12 @@
         "outbound": "proxy"
       },
       {
-        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"],
+        "rule_set": [
+          "geoip-private",
+          "geosite-private",
+          "geosite-ir",
+          "geoip-ir"
+        ],
         "outbound": "direct"
       },
       {
@@ -171,8 +188,8 @@
       }
     ],
     "final": "proxy",
-    "override_android_vpn": true,
     "auto_detect_interface": true,
+    "override_android_vpn": true,
     "default_domain_resolver": "direct-dns"
   },
   "experimental": {
