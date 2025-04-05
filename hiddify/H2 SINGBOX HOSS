@@ -29,7 +29,7 @@
         "tag": "direct-dns",
         "detour": "direct"
       }
-    ], 
+    ],
     "rules": [
       {
         "rule_set": "geosite-ir",
@@ -40,7 +40,10 @@
         "server": "direct-dns"
       },
       {
-        "source_ip_cidr": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
+        "source_ip_cidr": [
+          "172.19.0.1/30",
+          "fdfe:dcba:9876::1/126"
+        ],
         "server": "proxy-dns"
       },
       {
@@ -57,10 +60,11 @@
       "type": "tun",
       "tag": "tun-in",
       "mtu": 9000,
-      "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
       "auto_route": true,
-      "strict_route": false,
-      "endpoint_independent_nat": false,
       "stack": "system",
       "platform": {
         "http_proxy": {
@@ -81,16 +85,21 @@
     {
       "type": "selector",
       "tag": "proxy",
-      "outbounds": ["auto", "direct", "hysteria"],
-      "default": "hysteria",
-      "interrupt_exist_connections": false
+      "outbounds": [
+        "auto",
+        "direct",
+        "hysteria"
+      ],
+      "default": "hysteria"
     },
     {
       "type": "urltest",
       "tag": "auto",
-      "outbounds": ["hysteria"],
+      "outbounds": [
+        "hysteria"
+      ],
       "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m",
+      "interval": "10m0s",
       "tolerance": 50
     },
     {
@@ -103,11 +112,11 @@
       "tag": "hysteria",
       "server": "keviny.iserver.store",
       "server_port": 8443,
-      "password": "KevinZakarian",
       "obfs": {
-        "password": "KevinZakarian",
-        "type": "salamander"
+        "type": "salamander",
+        "password": "KevinZakarian"
       },
+      "password": "KevinZakarian",
       "tls": {
         "enabled": true,
         "insecure": true
@@ -133,7 +142,12 @@
         "outbound": "proxy"
       },
       {
-        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"],
+        "rule_set": [
+          "geoip-private",
+          "geosite-private",
+          "geosite-ir",
+          "geoip-ir"
+        ],
         "outbound": "direct"
       },
       {
@@ -179,8 +193,8 @@
       }
     ],
     "final": "proxy",
-    "override_android_vpn": true,
     "auto_detect_interface": true,
+    "override_android_vpn": true,
     "default_domain_resolver": "direct-dns"
   },
   "experimental": {
