@@ -71,10 +71,6 @@ haddox.jaxxen@thefluent.org
 
 ### ESET VPN ACCESS CODES
 
-> [!NOTE]
-> The access codes for ESET VPN will expire eventually.
-> Each code is valid for login on only one device.
-
 ```ruby
 OM21MAERIN
 D029SREPCG
@@ -116,12 +112,6 @@ yoshiyah.rahil@thefluent.org
 t0!bN~=V3E9C
 ```
 
-<br>
-
-### All about ESET VPN
-
-[READ HERE](https://t.me/F_NiREvil/2113)
-
 ---
 
 <br><br>
@@ -134,10 +124,6 @@ t0!bN~=V3E9C
 <br><br>
 
 ### ESET VPN ACCESS CODES
-
-> [!NOTE]
-> The access codes for ESET VPN will expire eventually.
-> Each code is valid for login on only one device.
 
 ```ruby
 G1XVAQOTFG
@@ -180,12 +166,6 @@ nussen.siddarth@thefluent.org
 Mbw1_1HY@]2@k
 ```
 
-<br>
-
-### All about ESET VPN
-
-[READ HERE](https://t.me/F_NiREvil/2113)
-
 ---
 
 <br><br>
@@ -198,10 +178,6 @@ Mbw1_1HY@]2@k
 <br><br>
 
 ### ESET VPN ACCESS CODES
-
-> [!NOTE]
-> The access codes for ESET VPN will expire eventually.
-> Each code is valid for login on only one device.
 
 ```ruby
 J8NA1AIG0M
@@ -243,125 +219,3 @@ kadarius.bryant@thefluent.org
 ```POV-Ray SDL
 Yx%>X1AP-Iu-Xos$RpyT
 ```
-
-<br>
-
-### All about ESET VPN
-
-[READ HERE](https://t.me/F_NiREvil/2113)
-
----
-
-<br><br>
-
-# Generated ON: Friday, 04 April 2025, 12:38:59 UTC
-
-> [!CAUTION]
-> Triggered by: schedule
-
-<br><br>
-
-### ESET VPN ACCESS CODES
-
-```ruby
-D40UAIAD2X
-HREJ2AELCS
-CRU4MGB08H
-0NCSZR1DKN
-DC0WPFAZ13
-9PS9K5JJI3
-F1L0Y7UGS1
-5D3AHH60SN
-M95W0540GH
-J655LKOCOT
-```
-
-<br>
-
-### ESET SECURITY LICENSE
-
-**Name:** ESET Small Business Security
-**Expiry:** 04.05.2025
-**License Key:**
-
-```POV-Ray SDL
-F7XM-XBBM-7S67-5FUD-SVBV
-```
-
-<br>
-
-### ESET ACCOUNT
-
-**Email:**
-
-```CSS
-benjerman.markeith@thefluent.org
-```
-
-**Password:**
-
-```POV-Ray SDL
-]4ODplbQQ{jzg,
-```
-
----
-
-<br><br>
-
-# Generated ON: Friday, 04 April 2025, 06:28:14 UTC
-
-> [!CAUTION]
-> Triggered by: schedule
-
-<br><br>
-
-### ESET VPN ACCESS CODES
-
-```ruby
-7IGU0DYE55
-BLXNI5YP9Y
-1Z9EEL4HBI
-5IOCVKFTHP
-62TTEXHEOF
-EEHHZ2EQJO
-NA9SSEXFZ9
-LGDNZSE333
-5JU8UX26JQ
-7GS9MX5Q9N
-```
-
-<br>
-
-### ESET SECURITY LICENSE
-
-**Name:** ESET Small Business Security
-**Expiry:** 04.05.2025
-**License Key:**
-
-```POV-Ray SDL
-XDKM-XSK5-DJD3-76UD-DV7K
-```
-
-<br>
-
-### ESET ACCOUNT
-
-**Email:**
-
-```CSS
-lochlan.travaris@thefluent.org
-```
-
-**Password:**
-
-```POV-Ray SDL
-o!LbX7sJQlPw;b
-```
-
-<br>
-
-### All about ESET VPN
-
-[READ HERE](https://t.me/F_NiREvil/2113)
-
----
