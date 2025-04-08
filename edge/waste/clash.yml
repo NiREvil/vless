@@ -1,0 +1,356 @@
+mixed-port: 7890
+allow-lan: false
+log-level: debug
+secret: 
+external-controller: 127.0.0.1:9090
+ipv6: false
+mode: rule
+global-client-fingerprint: chrome
+dns:
+  enable: true
+  use-hosts: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  listen: 127.0.0.1:6868
+  default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+    - 9.9.9.9
+    - 208.67.222.222
+  nameserver:
+    - 1.1.1.1#PROXY
+    - 8.8.8.8#PROXY
+    - 9.9.9.9#PROXY
+    - 208.67.222.222#PROXY
+proxy-providers:
+rules:
+  - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+  - GEOIP,private,REJECT,no-resolve
+# BLOCK DNS DOH/DOH3/DOT/DOQ
+  - GEOSITE,rule-doh,REJECT
+  - AND,((GEOIP,doh),(NOT,((DST-PORT,53)))),REJECT
+  - AND,((NETWORK,TCP),(DST-PORT,853)),REJECT
+# BLOCK MALWARE SITES
+  - GEOSITE,rule-malicious,REJECT
+# ADS & NSFW
+  - GEOSITE,oisd-full,ADs
+  - GEOSITE,rule-ads,ADs
+  - GEOSITE,oisd-nsfw,NSFW
+# BLOCK QUIC TRANSMISSION
+  - AND,((NETWORK,UDP),(DST-PORT,443)),REJECT
+# COUNTRY ID
+  - GEOSITE,rule-indo,Country ID
+  - GEOIP,netflix,Country ID
+  ##  SPOTIFY PORT
+  - DST-PORT,4070,Country ID
+  ## STREAMING LOCK REGION INDO
+  - GEOSITE,rule-streaming,Country ID
+  ##  FILTER BY GEOIP COUNTRY ID
+  - GEOIP,ID,Country ID
+# GLOBAL PROXY
+  - MATCH,PROXY
+
+# PROXY GROUPS
+proxy-groups:
+  - name: PROXY
+    proxies:
+      - BGN
+      - IKD
+      - LSB
+      - DIRECT
+    type: select
+
+  - name: Country ID
+    proxies:
+      - BGN
+      - IKD
+      - DIRECT
+    type: select
+
+  - name: ADs
+    proxies:
+      - REJECT
+      - PROXY
+    type: select
+
+  - name: NSFW
+    proxies:
+      - REJECT
+      - PROXY
+    type: select
+
+  - name: BGN
+    proxies:
+      - BGN_trojan_gfw_vvip_iptunnels
+      - BGN_trojan_ws_vvip_iptunnels
+      - BGN_trojan_grpc_vvip_iptunnels
+      - BGN_vmess_ws_vvip_iptunnels
+      - BGN_vmess_grpc_vvip_iptunnels
+    type: fallback
+    lazy: false
+    url: https://www.gstatic.com/generate_204
+    interval: 120
+
+  - name: IKD
+    proxies:
+      - IKD_trojan_gfw_vvip_iptunnels
+      - IKD_trojan_ws_vvip_iptunnels
+      - IKD_trojan_grpc_vvip_iptunnels
+      - IKD_vmess_ws_vvip_iptunnels
+      - IKD_vmess_grpc_vvip_iptunnels
+    type: fallback
+    lazy: false
+    url: https://cp.cloudflare.com/generate_204
+    interval: 120
+
+  - name: LSB
+    proxies:
+      - SG_trojan_gfw_vvip_iptunnels
+      - SG_trojan_ws_vvip_iptunnels
+      - SG_trojan_grpc_vvip_iptunnels
+      - SG_vmess_ws_vvip_iptunnels
+      - SG_vmess_grpc_vvip_iptunnels
+    type: fallback
+    lazy: false
+    url: https://detectportal.firefox.com/success.txt?ipv4
+    interval: 120
+
+# PROXIES
+proxies:
+##ID BGN
+  - name: BGN_trojan_gfw_vvip_iptunnels
+    type: trojan
+    server: SERVER
+    port: 443
+    password: PASSWORD
+    udp: true
+    sni: SNI
+    skip-cert-verify: true
+    alpn:
+      - h2
+      - http/1.1
+
+  - name: BGN_trojan_ws_vvip_iptunnels
+    type: trojan
+    server: SERVER
+    port: 443
+    password: PASSWORD
+    udp: true
+    sni: SNI
+    skip-cert-verify: true
+    alpn:
+      - http/1.1
+    network: ws
+    ws-opts:
+      path: /buy-trojan-ws-pm-telegram-at-synricha
+      headers:
+        Host: SNI
+
+  - name: BGN_trojan_grpc_vvip_iptunnels
+    type: trojan
+    server: SERVER
+    port: 443
+    password: PASSWORD
+    udp: true
+    sni: SNI
+    skip-cert-verify: true
+    alpn:
+      - h2
+    network: grpc
+    grpc-opts:
+      grpc-service-name: buy-trojan-grpc-pm-telegram-at-synricha
+
+  - name: BGN_vmess_ws_vvip_iptunnels
+    type: vmess
+    server: SERVER
+    port: 443
+    uuid: UUID
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: SNI
+    alpn:
+      - http/1.1
+    network: ws
+    ws-opts:
+      path: /buy-vmess-ws-pm-telegram-at-synricha
+      headers:
+        Host: SNI
+
+  - name: BGN_vmess_grpc_vvip_iptunnels
+    type: vmess
+    server: SERVER
+    port: 443
+    uuid: UUID
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: SNI
+    alpn:
+      - h2
+    network: grpc
+    grpc-opts:
+      grpc-service-name: buy-vmess-grpc-pm-telegram-at-synricha
+
+##ID IKD
+  - name: IKD_trojan_gfw_vvip_iptunnels
+    type: trojan
+    server: SERVER
+    port: 443
+    password: PASSWORD
+    udp: true
+    sni: SNI
+    skip-cert-verify: true
+    alpn:
+      - h2
+      - http/1.1
+
+  - name: IKD_trojan_ws_vvip_iptunnels
+    type: trojan
+    server: SERVER
+    port: 443
+    password: PASSWORD
+    udp: true
+    sni: SNI
+    skip-cert-verify: true
+    alpn:
+      - http/1.1
+    network: ws
+    ws-opts:
+      path: /buy-trojan-ws-pm-telegram-at-synricha
+      headers:
+        Host: SNI
+
+  - name: IKD_trojan_grpc_vvip_iptunnels
+    type: trojan
+    server: SERVER
+    port: 443
+    password: PASSWORD
+    udp: true
+    sni: SNI
+    skip-cert-verify: true
+    alpn:
+      - h2
+    network: grpc
+    grpc-opts:
+      grpc-service-name: buy-trojan-grpc-pm-telegram-at-synricha
+
+  - name: IKD_vmess_ws_vvip_iptunnels
+    type: vmess
+    server: SERVER
+    port: 443
+    uuid: UUID
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: SNI
+    alpn:
+      - http/1.1
+    network: ws
+    ws-opts:
+      path: /buy-vmess-ws-pm-telegram-at-synricha
+      headers:
+        Host: SNI
+
+  - name: IKD_vmess_grpc_vvip_iptunnels
+    type: vmess
+    server: SERVER
+    port: 443
+    uuid: UUID
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: SNI
+    alpn:
+      - h2
+    network: grpc
+    grpc-opts:
+      grpc-service-name: buy-vmess-grpc-pm-telegram-at-synricha
+
+##SG LSB
+  - name: SG_trojan_gfw_vvip_iptunnels
+    type: trojan
+    server: SERVER
+    port: 443
+    password: PASSWORD
+    udp: true
+    sni: SNI
+    skip-cert-verify: true
+    alpn:
+      - h2
+      - http/1.1
+
+  - name: SG_trojan_ws_vvip_iptunnels
+    type: trojan
+    server: SERVER
+    port: 443
+    password: PASSWORD
+    udp: true
+    sni: SNI
+    skip-cert-verify: true
+    alpn:
+      - http/1.1
+    network: ws
+    ws-opts:
+      path: /buy-trojan-ws-pm-telegram-at-synricha
+      headers:
+        Host: SNI
+
+  - name: SG_trojan_grpc_vvip_iptunnels
+    type: trojan
+    server: SERVER
+    port: 443
+    password: PASSWORD
+    udp: true
+    sni: SNI
+    skip-cert-verify: true
+    alpn:
+      - h2
+    network: grpc
+    grpc-opts:
+      grpc-service-name: buy-trojan-grpc-pm-telegram-at-synricha
+
+  - name: SG_vmess_ws_vvip_iptunnels
+    type: vmess
+    server: SERVER
+    port: 443
+    uuid: UUID
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: SNI
+    alpn:
+      - http/1.1
+    network: ws
+    ws-opts:
+      path: /buy-vmess-ws-pm-telegram-at-synricha
+      headers:
+        Host: SNI
+
+  - name: SG_vmess_grpc_vvip_iptunnels
+    type: vmess
+    server: SERVER
+    port: 443
+    uuid: UUID
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: SNI
+    alpn:
+      - h2
+    network: grpc
+    grpc-opts:
+      grpc-service-name: buy-vmess-grpc-pm-telegram-at-synricha
