@@ -1,15 +1,13 @@
 /**
- * Last update: 2024-07-27 (Performance and UI improvements)
+ * Last update: 2025-04-10 (Performance and UI improvements)
  * - Real fake address generator.
  * - Fetches address and user data in parallel.
  * - Reduced Nominatim attempts and improved error handling.
- * - UI improvements: Better copy buttons, dynamic copyright year.
- * - Instructions: Copy and paste into Cloudflare worker and deploy.
  */
 
 // --- Configuration ---
 const MAX_NOMINATIM_ATTEMPTS = 10; // Max attempts to find an address via Nominatim
-const NOMINATIM_USER_AGENT = 'RealAddressGenWorker/1.1 (Cloudflare Worker; contact=nirevil@proton.me)';
+const NOMINATIM_USER_AGENT = 'imDiana/1.1 (Cloudflare Worker; contact=nirevil@proton.me)';
 
 // --- Data Definitions ---
 const COUNTRY_DATA = {
