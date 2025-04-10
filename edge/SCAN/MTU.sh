@@ -33,8 +33,8 @@ fi
 host="8.8.8.8"
 min=1300
 max=1500
-step=5
-attempts=10
+step=10
+attempts=5
 declare -A results
 
 # Function to draw MTU chart
