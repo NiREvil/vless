@@ -48,7 +48,7 @@ if ! command -v ping >/dev/null 2>&1; then
     echo -e "${B_YELLOW}Installing required package: inetutils...${RESET}"
     pkg update -y && pkg install inetutils -y
     if [ $? -ne 0 ]; then
-        echo -e "${B_RED}Failed to install inetutils. Check your internet or Termux setup.${RESET}"
+        echo -e "${B_RED}Failed to install inetutils. Check your internet or VPN setup.${RESET}"
         exit 1
     fi
 fi
@@ -73,7 +73,7 @@ echo -e "${B_GREEN}Prerequisites met.${RESET}"
 # --- MTU Section ---
 echo -e "\n${B_CYAN}--- MTU Scan ---${RESET}"
 
-# Configuration (Consider making these command-line args later)
+# Configuration 
 host="8.8.8.8"      # Target host for MTU test (Google DNS is reliable)
 min_payload=1300    # Minimum payload size to test
 max_payload=1500    # Maximum payload size to test
@@ -81,7 +81,7 @@ step=10             # Increment step for payload size
 attempts=5          # Number of pings per payload size
 declare -A mtu_results # Associative array to store results (payload_size -> success_count)
 
-# Function to draw MTU chart (remains mostly the same, uses color vars)
+# Function to draw MTU chart
 draw_mtu_chart() {
     local width=50 # Width of the success rate bar
     echo -e "\n${B_BLUE}MTU Success Rate Chart:${RESET}"
@@ -180,7 +180,7 @@ else
     best_success_rate=$((max_success_found * 100 / attempts))
     best_success_display="${max_success_found}/${attempts} (${best_success_rate}%)"
     echo -e "${B_MAGENTA}│ ${B_WHITE}Highest Success Rate: ${B_YELLOW}${best_success_display}${B_MAGENTA}                           │${RESET}"
-    echo -e "${B_MAGENTA}│ ${B_WHITE}Largest Payload Size: ${B_YELLOW}${best_payload_display}${B_MAGENTA}                                   │${RESET}" # Clarified label
+    echo -e "${B_MAGENTA}│ ${B_WHITE}Largest Payload Size: ${B_YELLOW}${best_payload_display}${B_MAGENTA}                                   │${RESET}" 
     echo -e "${B_MAGENTA}│ ${B_WHITE}Recommended MTU:     ${B_YELLOW}${recommended_mtu} ${B_WHITE}(Payload + 28)${B_MAGENTA}                      │${RESET}"
 fi
 echo -e "${B_MAGENTA}└───────────────────────────────────────────────────────────────┘${RESET}"
@@ -196,7 +196,7 @@ fi
 #--- DNS Section ---
 echo -e "\n${B_CYAN}--- DNS Benchmark ---${RESET}"
 
-# DNS list (Consider moving to a config file or command-line arg)
+# DNS list
 dns_list=(
     "8.8.8.8"       # Google DNS
     "8.8.4.4"       # Google DNS
@@ -219,7 +219,7 @@ declare -A dns_timeouts   # Store servers that timed out (DNS -> 1)
 best_dns=""
 best_time=99999 # Initialize with a very high value
 
-# Function to draw DNS table (remains mostly the same, uses color vars)
+# Function to draw DNS table
 draw_dns_table() {
     echo -e "\n${B_BLUE}DNS Response Time Table:${RESET}"
     echo -e "${B_GREEN}┌──────────────────┬────────────────────────────┐${RESET}"
@@ -312,4 +312,4 @@ fi
 
 # --- Final Message ---
 echo -e "\n${B_GREEN}>> Script finished.${RESET}"
-echo -e "${B_WHITE}We are all${RESET} ${B_RED}REvil${RESET}
+echo -e "${B_WHITE}We are all${RESET} ${B_RED}REvil${RESET}"
