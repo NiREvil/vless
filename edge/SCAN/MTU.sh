@@ -128,14 +128,18 @@ draw_dns_table() {
         time="${dns_results[$dns]}"
         if [[ "$time" == "Timeout" ]]; then
             color="\033[1;31m"
-        elif ((time < 50)); then
-            color="\033[1;32m"
-        elif ((time < 100)); then
-            color="\033[1;33m"
+            display_time="Timeout"
         else
-            color="\033[1;31m"
+            if ((time < 50)); then
+                color="\033[1;32m"
+            elif ((time < 100)); then
+                color="\033[1;33m"
+            else
+                color="\033[1;31m"
+            fi
+            display_time="${time} ms"
         fi
-        printf "\033[1;37m│ %-16s │ ${color}%-25s\033[1;37m│\n" "$dns" "$time"
+        printf "\033[1;37m│ %-16s │ ${color}%-25s\033[1;37m│\n" "$dns" "$display_time"
     done
     echo -e "\033[1;32m└──────────────────┴────────────────────────────┘\033[0m"
 }
@@ -151,8 +155,81 @@ for dns in "${dns_list[@]}"; do
     if [[ -z "$result" ]]; then
         dns_results[$dns]="Timeout"
     else
-        dns_results[$dns]="${result} ms"
-        # Track the best DNS
+        dns_results[$dns]="$result"  # Store only the number
+        if ((result < best_time)); then
+            best_time=$result
+            best_dns=$dns
+        fi
+    fi
+done
+echo -e "\n\033[1;32mDNS Benchmark completed!\033[0m"
+
+# Draw DNS table
+draw_dns_table
+
+# Display best DNS recommend# --- DNS Section ---
+
+echo -e "\n\033[1;36m==========[ DNS Benchmark - Termux Edition ]==========\033[0m"
+
+# DNS list with some additions (popular and reliable servers)
+dns_list=(
+    "8.8.8.8"       # Google DNS
+    "8.8.4.4"       # Google DNS
+    "1.1.1.1"       # Cloudflare DNS
+    "1.0.0.1"       # Cloudflare DNS
+    "9.9.9.9"       # Quad9
+    "149.112.112.112" # Quad9 (additional)
+    "94.140.14.14"  # AdGuard DNS
+    "94.140.15.15"  # AdGuard DNS
+    "76.76.2.2"     # Control D
+    "76.76.10.2"    # Control D
+    "185.228.168.9" # CleanBrowsing
+    "208.67.222.222" # OpenDNS
+    "208.67.220.220" # OpenDNS (additional)
+)
+domain="google.com"
+declare -A dns_results
+best_dns=""
+best_time=9999
+
+# Function to draw DNS table
+draw_dns_table() {
+    echo -e "\n\033[1;34mDNS Response Time Table:\033[0m"
+    echo -e "\033[1;32m┌──────────────────┬────────────────────────────┐\033[0m"
+    echo -e "\033[1;32m│ DNS Server       │ Response Time             │\033[0m"
+    echo -e "\033[1;32m├──────────────────┼────────────────────────────┤\033[0m"
+    for dns in "${!dns_results[@]}"; do
+        time="${dns_results[$dns]}"
+        if [[ "$time" == "Timeout" ]]; then
+            color="\033[1;31m"
+            display_time="Timeout"
+        else
+            if ((time < 50)); then
+                color="\033[1;32m"
+            elif ((time < 100)); then
+                color="\033[1;33m"
+            else
+                color="\033[1;31m"
+            fi
+            display_time="${time} ms"
+        fi
+        printf "\033[1;37m│ %-16s │ ${color}%-25s\033[1;37m│\n" "$dns" "$display_time"
+    done
+    echo -e "\033[1;32m└──────────────────┴────────────────────────────┘\033[0m"
+}
+
+# DNS Benchmark
+total_dns=${#dns_list[@]}
+current_dns=0
+for dns in "${dns_list[@]}"; do
+    ((current_dns++))
+    percent=$((current_dns * 100 / total_dns))
+    echo -ne "\rTesting DNS $dns [$percent%]"
+    result=$(dig @"$dns" "$domain" +stats +time=1 +tries=1 2>/dev/null | grep "Query time" | awk '{print $4}')
+    if [[ -z "$result" ]]; then
+        dns_results[$dns]="Timeout"
+    else
+        dns_results[$dns]="$result"  # Store only the number
         if ((result < best_time)); then
             best_time=$result
             best_dns=$dns
@@ -174,4 +251,15 @@ echo -e "\033[1;37mAdd this to your DNS settings for faster and secure browsing!
 
 # Final message
 echo -e "\n\033[1;32m>> Script done. Stay private, stay smart.\033[0m"
-echo -e "\033[1;37mWe are all\033[1;31m \033[0mREvil
+echo -e "\033[1;37mWe are all\033[0m \033[1;31mREvil\033[0m"
+ation
+echo -e "\n\033[1;36m==========[ Best DNS Recommendation ]==========\033[0m"
+echo -e "\033[1;35m├───────────────────────────────────────────────────────────────┤"
+echo -e "│ \033[1;37mFastest DNS Server:  \033[1;33m$best_dns\033[1;35m                                 │"
+echo -e "│ \033[1;37mResponse Time:       \033[1;33m$best_time ms\033[1;35m                              │"
+echo -e "└───────────────────────────────────────────────────────────────┘\033[0m"
+echo -e "\033[1;37mAdd this to your DNS settings for faster and secure browsing!\033[0m"
+
+# Final message
+echo -e "\n\033[1;32m>> Script done. Stay private, stay smart.\033[0m"
+echo -e "\033[1;37mWe are all\033[0m \033[1;31mREvil\033[0m"
