@@ -9,10 +9,10 @@ jobs:
   build:
 
     runs-on: ubuntu-24.04
-    
+
     permissions:
       contents: write
-      
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -27,7 +27,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-     - name: Lets run script
+      - name: Run script
         run: |
           python script.py
 
@@ -44,8 +44,7 @@ jobs:
           git config --global user.email "171773043+darknessm427@users.noreply.github.com"
           git config --global user.name "darknessm427"
 
-          git clone https://x-access-token:${{ secrets.PUSH_TOKEN_PUBLIC }}@github.com/darknessm427/PUBLIC_REPO_NAME.git public-repo
-
+          git clone https://x-access-token:${{ secrets.PUSH_TOKEN_PUBLIC }}@github.com/darknessm427/IP_Generator.git public-repo
           cp ips.txt README.md public-repo/
 
           cd public-repo
