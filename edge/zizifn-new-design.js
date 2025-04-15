@@ -1,89 +1,73 @@
-<!doctype html>
+/* - New design for zizifn
+ * - Mocha mousse color style
+ * - https://github.com/NiREvil/zizifn
+ * - Replace in line 535
+ */
 
+function getDianaConfig(userCode, hostName) {
+  const protocol = decodeSecure(ENCODED.PROTOCOL);
+  const networkType = decodeSecure(ENCODED.NETWORK);
+  const baseUrl = `${protocol}://${userCode}@${hostName}:443`;
+  const commonParams =
+    `encryption=none&host=${hostName}&type=${networkType}` + `&security=tls&sni=${hostName}`;
+
+  const freedomConfig =
+    `${baseUrl}?path=/api/v4&eh=Sec-WebSocket-Protocol` +
+    `&ed=2560&${commonParams}&fp=chrome&alpn=h3#${hostName}`;
+
+  const dreamConfig =
+    `${baseUrl}?path=/api/v2?ed=2048&${commonParams}` +
+    `&fp=randomized&alpn=h2,http/1.1#${hostName}`;
+
+    const clashMetaFullUrl = `clash://install-config?url=${encodeURIComponent(
+        `https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(freedomConfig)}&remote_config=&udp=true&ss_uot=false&show_host=false&forced_ws0rtt=false`
+        )}`;
+
+return `
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Proxy Configuration</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <style>
       * {
         margin: 0;
-
         padding: 0;
-
         box-sizing: border-box;
       }
 
       :root {
         /* Mocha Mousse Palette - Lighter Version */
-
         --mocha-50: #f9f6f3;
-
         --mocha-100: #f2ebe5;
-
         --mocha-200: #e8dfd8;
-
         --mocha-300: #d6c7bc;
-
         --mocha-400: #c1a58b; /* Mocha Mousse */
-
         --mocha-500: #9a826c;
-
         --mocha-600: #7d6a58;
-
         --mocha-700: #5d4a40;
-
         --mocha-800: #3d332c;
-
         --mocha-900: #2a2420;
-
         --background-primary: var(--mocha-100);
-
         --background-secondary: var(--mocha-50);
-
         --background-tertiary: white;
-
         --border-color: var(--mocha-300);
-
         --border-color-hover: var(--mocha-400);
-
         --text-primary: var(--mocha-800);
-
         --text-secondary: var(--mocha-600);
-
         --text-accent: var(--mocha-900);
-
         --accent-primary: var(--mocha-400);
-
         --accent-primary-darker: var(--mocha-500);
-
         --button-text-primary: white;
-
         --button-text-secondary: var(--mocha-700);
-
         --shadow-color: rgba(0, 0, 0, 0.08);
-
         --shadow-color-accent: rgba(193, 165, 139, 0.2);
-
         --border-radius: 12px;
-
         --transition-speed: 0.2s;
       }
 
@@ -510,7 +494,7 @@
       }
     </style>
   </head>
-
+  
   <body>
     <div class="container">
       <div class="header">
@@ -528,7 +512,7 @@
           <div class="attribute">
             <span>Proxy IP / Host:</span>
 
-            <strong id="proxyIP">192.168.1.1</strong>
+            <strong id="proxyIP">${proxyIP}</strong>
           </div>
 
           <div class="attribute">
@@ -547,19 +531,15 @@
 
       <div class="config-card">
         <div class="config-title">Xray Core Clients (V2rayNG, Hiddify)</div>
-
         <div class="config-content">
-          <button class="button copy-btn" onclick="copyToClipboard(this, dreamConfig)">Copy</button>
-
-          <pre id="dreamConfigPre">
-vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chrome&type=ws&host=example.com&path=%2Fws#Example</pre
-          >
+          <button class="button copy-btn" onclick="copyToClipboard(this, '${dreamConfig}')">Copy</button>
+            <pre>${dreamConfig}</pre>
         </div>
-
+        
         <div class="client-buttons">
           <!-- Hiddify -->
-
-          <a href="#" id="hiddifyLink" class="button client-btn">
+          
+          <a href="hiddify://install-config?url=${encodeURIComponent(freedomConfig)}" class="button client-btn">
             <div class="client-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
@@ -571,7 +551,7 @@ vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chr
 
           <!-- V2rayNG -->
 
-          <a href="#" id="v2rayNGLink" class="button client-btn">
+          <a href="v2rayng://install-config?url=${encodeURIComponent(dreamConfig)}" class="button client-btn">
             <div class="client-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M12 2L4 5v6c0 5.5 3.5 10.7 8 12.3 4.5-1.6 8-6.8 8-12.3V5l-8-3z" />
@@ -589,19 +569,14 @@ vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chr
         <div class="config-title">Sing-Box Core Clients (Clash Meta, NekoBox)</div>
 
         <div class="config-content">
-          <button class="button copy-btn" onclick="copyToClipboard(this, freedomConfig)">
-            Copy
-          </button>
-
-          <pre id="freedomConfigPre">
-vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chrome&type=ws&host=example.com&path=%2Fws#Example</pre
-          >
+          <button class="button copy-btn" onclick="copyToClipboard(this, '${freedomConfig}')">Copy</button>
+          <pre>${freedomConfig}</pre>
         </div>
 
         <div class="client-buttons">
           <!-- Clash Meta -->
 
-          <a href="#" id="clashMetaLink" class="button client-btn">
+          <a href="${clashMetaFullUrl}" class="button client-btn">
             <div class="client-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M4 4h16v16H4z" />
@@ -619,8 +594,7 @@ vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chr
 
           <!-- NekoBox -->
 
-          <a href="#" id="nekoBoxLink" class="button client-btn">
-            <div class="client-icon">
+          <a href="${clashMetaFullUrl}" class="button client-btn">            <div class="client-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
                   d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
@@ -634,49 +608,13 @@ vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chr
       </div>
 
       <div class="footer">
-        <p>© REvil <span id="currentYear"></span> All rights reserved.</p>
-
+        <p>${new Date().getFullYear()} © REvil. All Right Reserved.</p>
         <p>Secure. Private. Fast.</p>
+        
       </div>
     </div>
-
     <script>
-
-      // Sample data - replace with your actual data
-
-      const proxyIP = "192.168.1.1";
-
-      const dreamConfig = "vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chrome&type=ws&host=example.com&path=%2Fws#Example";
-
-      const freedomConfig = "vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chrome&type=ws&host=example.com&path=%2Fws#Example";
-
-      const clashMetaFullUrl = "https://example.com/config";
-
-
-
-      // Set current year
-
-      document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-      // Set config values
-
-      document.getElementById('proxyIP').textContent = proxyIP;
-
-      document.getElementById('dreamConfigPre').textContent = dreamConfig;
-
-      document.getElementById('freedomConfigPre').textContent = freedomConfig;
-
-      // Set links
-
-      document.getElementById('hiddifyLink').href = `hiddify://install-config?url=${encodeURIComponent(freedomConfig)}`;
-
-      document.getElementById('v2rayNGLink').href = `v2rayng://install-config?url=${encodeURIComponent(dreamConfig)}`;
-
-      document.getElementById('clashMetaLink').href = clashMetaFullUrl;
-
-      document.getElementById('nekoBoxLink').href = `clash://install-config?url=${encodeURIComponent(freedomConfig)}`;
-
-
+      
 
       function copyToClipboard(button, text) {
 
@@ -691,8 +629,6 @@ vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chr
       button.textContent = 'Copied!';
 
       button.disabled = true; // Disable briefly
-
-
 
       setTimeout(() => {
 
@@ -735,9 +671,21 @@ vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chr
       button.disabled = false;
 
       }, 1500);
+     });
+     }
 
+      document.addEventListener('DOMContentLoaded', function () {
+      
+      const proxyIPElement = document.getElementById('proxyIP');
+      
+      if (proxyIPElement && proxyIPElement.innerText === '${proxyIP}') {
+      
+      proxyIPElement.innerText = '192.168.1.1'; // Default placeholder
       }
-      });
+     });
     </script>
-  </body>
-</html>
+   </body>
+  </html>
+ `;
+}
+
