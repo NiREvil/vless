@@ -10,8 +10,7 @@ function getDianaConfig(userCode, hostName) {
 
   const baseUrl = `${protocol}://${userCode}@${hostName}:443`;
   const commonParams =
-    `encryption=none&host=${hostName}&type=${networkType}` +
-    `&security=tls&sni=${hostName}`;
+    `encryption=none&host=${hostName}&type=${networkType}` + `&security=tls&sni=${hostName}`;
 
   // Configuration for Sing-Box core clients
   const freedomConfig =
@@ -25,7 +24,7 @@ function getDianaConfig(userCode, hostName) {
 
   // URL for Clash Meta subscription import
   const clashMetaFullUrl = `clash://install-config?url=${encodeURIComponent(
-    `https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(freedomConfig)}&remote_config=&udp=true&ss_uot=false&show_host=false&forced_ws0rtt=false`
+    `https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(freedomConfig)}&remote_config=&udp=true&ss_uot=false&show_host=false&forced_ws0rtt=false`,
   )}`; // for using v2ray to clash-meta converter visit here: https://sub.victoriacross.ir/
 
   // HTML content
