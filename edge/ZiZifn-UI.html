@@ -1,29 +1,3 @@
-/* New UI Design for zizifn 
- * https://github.com/NiREvil/zizifn
- * Replace in line 535
- */
-
-function getDianaConfig(userCode, hostName) {
-  const protocol = decodeSecure(ENCODED.PROTOCOL);
-  const networkType = decodeSecure(ENCODED.NETWORK);
-  const baseUrl = `${protocol}://${userCode}@${hostName}:443`;
-  const commonParams =
-    `encryption=none&host=${hostName}&type=${networkType}` + `&security=tls&sni=${hostName}`;
-
-  const freedomConfig =
-    `${baseUrl}?path=/api/v4&eh=Sec-WebSocket-Protocol` +
-    `&ed=2560&${commonParams}&fp=chrome&alpn=h3#${hostName}`;
-
-  const dreamConfig =
-    `${baseUrl}?path=/api/v2?ed=2048&${commonParams}` +
-    `&fp=firefox&alpn=h2,http/1.1#${hostName}`;
-
-    const clashMetaFullUrl = `clash://install-config?url=${encodeURIComponent(
-        `https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(freedomConfig)}&remote_config=&udp=truee&ss_uot=false&show_host=false&forced_ws0rtt=false`
-        )}`;
-
-  
-return `
 <!DOCTYPE html>
 
 <html lang="en">
@@ -911,9 +885,7 @@ button.disabled = false;
 }, 1500);
 
 }
-      });
-    </script>
-  </body>
+});
+</script>
+</body>
 </html>
-`;
-}
