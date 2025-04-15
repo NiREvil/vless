@@ -19,11 +19,11 @@ function getDianaConfig(userCode, hostName) {
     `${baseUrl}?path=/api/v2?ed=2048&${commonParams}` +
     `&fp=randomized&alpn=h2,http/1.1#${hostName}`;
 
-    const clashMetaFullUrl = `clash://install-config?url=${encodeURIComponent(
-        `https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(freedomConfig)}&remote_config=&udp=true&ss_uot=false&show_host=false&forced_ws0rtt=false`
-        )}`;
+  const clashMetaFullUrl = `clash://install-config?url=${encodeURIComponent(
+    `https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(freedomConfig)}&remote_config=&udp=true&ss_uot=false&show_host=false&forced_ws0rtt=false`,
+  )}`;
 
-return `
+  return `
 <!doctype html>
 <html lang="en">
   <head>
@@ -688,4 +688,3 @@ return `
   </html>
  `;
 }
-
