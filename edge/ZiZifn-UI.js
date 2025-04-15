@@ -22,7 +22,8 @@ function getDianaConfig(userCode, hostName) {
         `https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(freedomConfig)}&remote_config=&udp=truee&ss_uot=false&show_host=false&forced_ws0rtt=false`
         )}`;
 
-  return `
+  
+return `
 <!DOCTYPE html>
 
 <html lang="en">
@@ -33,7 +34,7 @@ function getDianaConfig(userCode, hostName) {
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>VLESS Proxy Configuration</title>
+<title>Proxy Configuration</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -909,12 +910,10 @@ button.disabled = false;
 
 }, 1500);
 
-});
-
 }
-
-</script>
-
-</body>
-
+      });
+    </script>
+  </body>
 </html>
+`;
+}
