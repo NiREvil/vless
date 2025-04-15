@@ -1,891 +1,743 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8" />
+    <title>Proxy Configuration</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-<title>Proxy Configuration</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
 
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+        padding: 0;
 
-<style>
+        box-sizing: border-box;
+      }
 
-* {
+      :root {
+        /* Mocha Mousse Palette - Lighter Version */
 
-margin: 0;
+        --mocha-50: #f9f6f3;
 
-padding: 0;
+        --mocha-100: #f2ebe5;
 
-box-sizing: border-box;
+        --mocha-200: #e8dfd8;
 
-}
+        --mocha-300: #d6c7bc;
 
-  
+        --mocha-400: #c1a58b; /* Mocha Mousse */
 
-:root {
+        --mocha-500: #9a826c;
 
-/* Mocha Mousse Palette - Lighter Version */
+        --mocha-600: #7d6a58;
 
---mocha-50: #F9F6F3;
+        --mocha-700: #5d4a40;
 
---mocha-100: #F2EBE5;
+        --mocha-800: #3d332c;
 
---mocha-200: #E8DFD8;
+        --mocha-900: #2a2420;
 
---mocha-300: #D6C7BC;
+        --background-primary: var(--mocha-100);
 
---mocha-400: #C1A58B; /* Mocha Mousse */
+        --background-secondary: var(--mocha-50);
 
---mocha-500: #9A826C;
+        --background-tertiary: white;
 
---mocha-600: #7D6A58;
+        --border-color: var(--mocha-300);
 
---mocha-700: #5D4A40;
+        --border-color-hover: var(--mocha-400);
 
---mocha-800: #3D332C;
+        --text-primary: var(--mocha-800);
 
---mocha-900: #2A2420;
+        --text-secondary: var(--mocha-600);
 
---background-primary: var(--mocha-100);
+        --text-accent: var(--mocha-900);
 
---background-secondary: var(--mocha-50);
+        --accent-primary: var(--mocha-400);
 
---background-tertiary: white;
+        --accent-primary-darker: var(--mocha-500);
 
---border-color: var(--mocha-300);
+        --button-text-primary: white;
 
---border-color-hover: var(--mocha-400);
+        --button-text-secondary: var(--mocha-700);
 
---text-primary: var(--mocha-800);
+        --shadow-color: rgba(0, 0, 0, 0.08);
 
---text-secondary: var(--mocha-600);
+        --shadow-color-accent: rgba(193, 165, 139, 0.2);
 
---text-accent: var(--mocha-900);
+        --border-radius: 12px;
 
---accent-primary: var(--mocha-400);
+        --transition-speed: 0.2s;
+      }
 
---accent-primary-darker: var(--mocha-500);
+      body {
+        font-family:
+          'Inter',
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
 
---button-text-primary: white;
+        font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 
---button-text-secondary: var(--mocha-700);
+        -webkit-font-smoothing: antialiased;
 
---shadow-color: rgba(0, 0, 0, 0.08);
+        -moz-osx-font-smoothing: grayscale;
 
---shadow-color-accent: rgba(193, 165, 139, 0.2);
+        background-color: var(--background-primary);
 
---border-radius: 12px;
+        color: var(--text-primary);
 
---transition-speed: 0.2s;
+        line-height: 1.5;
+      }
 
-}
+      .container {
+        max-width: 800px;
 
-  
+        margin: 0 auto;
 
-body {
+        padding: 24px 16px;
+      }
 
-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      .header {
+        text-align: center;
 
-font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+        margin-bottom: 40px;
+      }
 
--webkit-font-smoothing: antialiased;
+      .header h1 {
+        font-weight: 700;
 
--moz-osx-font-smoothing: grayscale;
+        color: var(--text-accent);
 
-background-color: var(--background-primary);
+        font-size: 28px;
 
-color: var(--text-primary);
+        margin-bottom: 8px;
+      }
 
-line-height: 1.5;
+      .header p {
+        color: var(--text-secondary);
 
-}
+        font-size: 14px;
+      }
 
-  
+      .config-card {
+        background: var(--background-secondary);
 
-.container {
+        border-radius: var(--border-radius);
 
-max-width: 800px;
+        padding: 24px;
 
-margin: 0 auto;
+        margin-bottom: 24px;
 
-padding: 24px 16px;
+        border: 1px solid var(--border-color);
 
-}
+        transition: all var(--transition-speed) ease;
 
-  
+        box-shadow: 0 2px 8px var(--shadow-color);
+      }
 
-.header {
+      .config-card:hover {
+        border-color: var(--border-color-hover);
 
-text-align: center;
+        box-shadow: 0 4px 12px var(--shadow-color-accent);
+      }
 
-margin-bottom: 40px;
+      .config-title {
+        font-size: 18px;
 
-}
+        font-weight: 600;
 
-  
+        color: var(--text-accent);
 
-.header h1 {
+        margin-bottom: 16px;
 
-font-weight: 700;
+        padding-bottom: 12px;
 
-color: var(--text-accent);
+        border-bottom: 1px solid var(--border-color);
+      }
 
-font-size: 28px;
+      .config-content {
+        position: relative;
 
-margin-bottom: 8px;
+        background: var(--background-tertiary);
 
-}
+        border-radius: var(--border-radius);
 
-  
+        padding: 16px;
 
-.header p {
+        margin-bottom: 20px;
 
-color: var(--text-secondary);
+        border: 1px solid var(--border-color);
 
-font-size: 14px;
+        overflow: hidden;
+      }
 
-}
+      .config-content pre {
+        overflow-x: auto;
 
-  
+        font-family: 'IBM Plex Mono', Consolas, monospace;
 
-.config-card {
+        font-size: 13px;
 
-background: var(--background-secondary);
+        font-weight: 400;
 
-border-radius: var(--border-radius);
+        line-height: 1.6;
 
-padding: 24px;
+        color: var(--text-primary);
 
-margin-bottom: 24px;
+        margin: 0;
 
-border: 1px solid var(--border-color);
+        white-space: pre-wrap;
 
-transition: all var(--transition-speed) ease;
+        word-break: break-all;
+      }
 
-box-shadow: 0 2px 8px var(--shadow-color);
+      .attributes {
+        display: grid;
 
-}
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 
-  
+        gap: 20px;
 
-.config-card:hover {
+        margin-bottom: 16px;
+      }
 
-border-color: var(--border-color-hover);
+      .attribute {
+        display: flex;
 
-box-shadow: 0 4px 12px var(--shadow-color-accent);
+        flex-direction: column;
 
-}
+        gap: 4px;
+      }
 
-  
+      .attribute span {
+        font-size: 13px;
 
-.config-title {
+        color: var(--text-secondary);
+      }
 
-font-size: 18px;
+      .attribute strong {
+        font-size: 14px;
 
-font-weight: 600;
+        font-weight: 500;
 
-color: var(--text-accent);
+        color: var(--text-accent);
 
-margin-bottom: 16px;
+        word-break: break-all;
+      }
 
-padding-bottom: 12px;
+      .status-indicator {
+        display: inline-flex;
 
-border-bottom: 1px solid var(--border-color);
+        align-items: center;
+      }
 
-}
+      .status-dot {
+        width: 8px;
 
-  
+        height: 8px;
 
-.config-content {
+        border-radius: 50%;
 
-position: relative;
+        background-color: var(--accent-primary);
 
-background: var(--background-tertiary);
+        margin-right: 8px;
+      }
 
-border-radius: var(--border-radius);
+      .button {
+        display: inline-flex;
 
-padding: 16px;
+        align-items: center;
 
-margin-bottom: 20px;
+        justify-content: center;
 
-border: 1px solid var(--border-color);
+        gap: 8px;
 
-overflow: hidden;
+        padding: 8px 16px;
 
-}
+        border-radius: var(--border-radius);
 
-  
+        font-family: 'Inter', sans-serif;
 
-.config-content pre {
+        font-size: 14px;
 
-overflow-x: auto;
+        font-weight: 500;
 
-font-family: 'IBM Plex Mono', Consolas, monospace;
+        text-decoration: none;
 
-font-size: 13px;
+        cursor: pointer;
 
-font-weight: 400;
+        border: 1px solid var(--border-color);
 
-line-height: 1.6;
+        background-color: var(--background-tertiary);
 
-color: var(--text-primary);
+        color: var(--button-text-secondary);
 
-margin: 0;
+        transition: all var(--transition-speed) ease;
 
-white-space: pre-wrap;
+        -webkit-tap-highlight-color: transparent;
 
-word-break: break-all;
+        touch-action: manipulation;
 
-}
+        user-select: none;
 
-  
+        -webkit-user-select: none;
 
-.attributes {
+        position: relative;
 
-display: grid;
+        overflow: hidden;
+      }
 
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      .button:hover {
+        background-color: var(--mocha-200);
 
-gap: 20px;
+        border-color: var(--border-color-hover);
 
-margin-bottom: 16px;
+        transform: translateY(-1px);
 
-}
+        box-shadow: 0 4px 8px var(--shadow-color);
+      }
 
-  
+      .button:active {
+        transform: translateY(0px) scale(0.98);
 
-.attribute {
+        box-shadow: none;
+      }
 
-display: flex;
+      .button:focus-visible {
+        outline: 2px solid var(--accent-primary);
 
-flex-direction: column;
+        outline-offset: 2px;
+      }
 
-gap: 4px;
+      .copy-btn {
+        position: absolute;
 
-}
+        top: 12px;
 
-  
+        right: 12px;
 
-.attribute span {
+        padding: 6px 12px;
 
-font-size: 13px;
+        font-size: 12px;
 
-color: var(--text-secondary);
+        font-family: 'IBM Plex Mono', monospace;
 
-}
+        font-weight: 500;
+      }
 
-  
+      .copy-btn.copied {
+        background-color: var(--accent-primary);
 
-.attribute strong {
+        color: white;
 
-font-size: 14px;
+        border-color: var(--accent-primary-darker);
+      }
 
-font-weight: 500;
+      .client-buttons {
+        display: grid;
 
-color: var(--text-accent);
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 
-word-break: break-all;
+        gap: 12px;
 
-}
+        margin-top: 16px;
+      }
 
-  
+      .client-btn {
+        width: 100%;
+      }
 
-.status-indicator {
+      .client-icon {
+        width: 20px;
 
-display: inline-flex;
+        height: 20px;
 
-align-items: center;
+        border-radius: 4px;
 
-}
+        background-color: var(--mocha-300);
 
-  
+        display: flex;
 
-.status-dot {
+        align-items: center;
 
-width: 8px;
+        justify-content: center;
 
-height: 8px;
+        flex-shrink: 0;
+      }
 
-border-radius: 50%;
+      .client-icon svg {
+        width: 14px;
 
-background-color: var(--accent-primary);
+        height: 14px;
 
-margin-right: 8px;
+        fill: white;
+      }
 
-}
+      .footer {
+        text-align: center;
 
-  
+        margin-top: 40px;
 
-.button {
+        padding-bottom: 20px;
 
-display: inline-flex;
+        color: var(--text-secondary);
 
-align-items: center;
+        font-size: 13px;
 
-justify-content: center;
+        font-weight: 400;
+      }
 
-gap: 8px;
+      .footer p {
+        margin-bottom: 4px;
+      }
 
-padding: 8px 16px;
+      /* Custom scrollbar styling */
 
-border-radius: var(--border-radius);
+      ::-webkit-scrollbar {
+        width: 8px;
 
-font-family: 'Inter', sans-serif;
+        height: 8px;
+      }
 
-font-size: 14px;
+      ::-webkit-scrollbar-track {
+        background: var(--background-secondary);
 
-font-weight: 500;
+        border-radius: 4px;
+      }
 
-text-decoration: none;
+      ::-webkit-scrollbar-thumb {
+        background: var(--mocha-300);
 
-cursor: pointer;
+        border-radius: 4px;
 
-border: 1px solid var(--border-color);
+        border: 2px solid var(--background-secondary);
+      }
 
-background-color: var(--background-tertiary);
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--mocha-400);
+      }
 
-color: var(--button-text-secondary);
+      * {
+        scrollbar-width: thin;
 
-transition: all var(--transition-speed) ease;
+        scrollbar-color: var(--mocha-300) var(--background-secondary);
+      }
 
--webkit-tap-highlight-color: transparent;
+      @media (max-width: 768px) {
+        body {
+          padding: 16px 0;
+        }
 
-touch-action: manipulation;
+        .container {
+          padding: 0 16px;
+        }
 
-user-select: none;
+        .header h1 {
+          font-size: 24px;
+        }
 
--webkit-user-select: none;
+        .header p {
+          font-size: 13px;
+        }
 
-position: relative;
+        .config-card {
+          padding: 16px;
+        }
 
-overflow: hidden;
+        .config-title {
+          font-size: 16px;
+        }
 
-}
+        .config-content pre {
+          font-size: 12px;
+        }
 
-  
+        .attributes {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
 
-.button:hover {
+        .client-buttons {
+          grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        }
 
-background-color: var(--mocha-200);
+        .button {
+          padding: 8px 12px;
+          font-size: 13px;
+        }
 
-border-color: var(--border-color-hover);
+        .copy-btn {
+          top: 10px;
+          right: 10px;
+        }
 
-transform: translateY(-1px);
+        ::-webkit-scrollbar {
+          width: 6px;
+          height: 6px;
+        }
 
-box-shadow: 0 4px 8px var(--shadow-color);
+        ::-webkit-scrollbar-thumb {
+          border-width: 1px;
+        }
+      }
 
-}
+      @media (max-width: 480px) {
+        .client-buttons {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
 
-  
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>VLESS Proxy Configuration</h1>
 
-.button:active {
+        <p>Copy the configuration or import directly into your client</p>
+      </div>
 
-transform: translateY(0px) scale(0.98);
+      <!-- Proxy Info Card -->
 
-box-shadow: none;
+      <div class="config-card">
+        <div class="config-title">Proxy Information</div>
 
-}
+        <div class="attributes">
+          <div class="attribute">
+            <span>Proxy IP / Host:</span>
 
-  
+            <strong id="proxyIP">192.168.1.1</strong>
+          </div>
 
-.button:focus-visible {
+          <div class="attribute">
+            <span>Status:</span>
 
-outline: 2px solid var(--accent-primary);
+            <strong class="status-indicator">
+              <span class="status-dot"></span>
 
-outline-offset: 2px;
+              Active
+            </strong>
+          </div>
+        </div>
+      </div>
 
-}
+      <!-- Xray Core Clients -->
 
-  
+      <div class="config-card">
+        <div class="config-title">Xray Core Clients (V2rayNG, Hiddify)</div>
 
-.copy-btn {
+        <div class="config-content">
+          <button class="button copy-btn" onclick="copyToClipboard(this, dreamConfig)">Copy</button>
 
-position: absolute;
+          <pre id="dreamConfigPre">
+vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chrome&type=ws&host=example.com&path=%2Fws#Example</pre
+          >
+        </div>
 
-top: 12px;
+        <div class="client-buttons">
+          <!-- Hiddify -->
 
-right: 12px;
+          <a href="#" id="hiddifyLink" class="button client-btn">
+            <div class="client-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+            </div>
 
-padding: 6px 12px;
+            Import to Hiddify
+          </a>
 
-font-size: 12px;
+          <!-- V2rayNG -->
 
-font-family: 'IBM Plex Mono', monospace;
+          <a href="#" id="v2rayNGLink" class="button client-btn">
+            <div class="client-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2L4 5v6c0 5.5 3.5 10.7 8 12.3 4.5-1.6 8-6.8 8-12.3V5l-8-3z" />
+              </svg>
+            </div>
 
-font-weight: 500;
+            Import to V2rayNG
+          </a>
+        </div>
+      </div>
 
-}
+      <!-- Sing-Box Core Clients -->
 
-  
+      <div class="config-card">
+        <div class="config-title">Sing-Box Core Clients (Clash Meta, NekoBox)</div>
 
-.copy-btn.copied {
+        <div class="config-content">
+          <button class="button copy-btn" onclick="copyToClipboard(this, freedomConfig)">
+            Copy
+          </button>
 
-background-color: var(--accent-primary);
+          <pre id="freedomConfigPre">
+vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chrome&type=ws&host=example.com&path=%2Fws#Example</pre
+          >
+        </div>
 
-color: white;
+        <div class="client-buttons">
+          <!-- Clash Meta -->
 
-border-color: var(--accent-primary-darker);
+          <a href="#" id="clashMetaLink" class="button client-btn">
+            <div class="client-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M4 4h16v16H4z" />
 
-}
+                <path d="M10 10h4v4H10z" fill="white" />
 
-  
+                <path d="M14 8H10V4h4z" fill="white" />
 
-.client-buttons {
+                <path d="M4 14h4v4H4z" fill="white" />
+              </svg>
+            </div>
 
-display: grid;
+            Import to Clash Meta
+          </a>
 
-grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+          <!-- NekoBox -->
 
-gap: 12px;
+          <a href="#" id="nekoBoxLink" class="button client-btn">
+            <div class="client-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                />
+              </svg>
+            </div>
 
-margin-top: 16px;
+            Import to NekoBox
+          </a>
+        </div>
+      </div>
 
-}
+      <div class="footer">
+        <p>© REvil <span id="currentYear"></span> All rights reserved.</p>
 
-  
+        <p>Secure. Private. Fast.</p>
+      </div>
+    </div>
 
-.client-btn {
+    <script>
 
-width: 100%;
+      // Sample data - replace with your actual data
 
-}
+      const proxyIP = "192.168.1.1";
 
-  
+      const dreamConfig = "vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chrome&type=ws&host=example.com&path=%2Fws#Example";
 
-.client-icon {
+      const freedomConfig = "vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chrome&type=ws&host=example.com&path=%2Fws#Example";
 
-width: 20px;
+      const clashMetaFullUrl = "https://example.com/config";
 
-height: 20px;
 
-border-radius: 4px;
 
-background-color: var(--mocha-300);
+      // Set current year
 
-display: flex;
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-align-items: center;
+      // Set config values
 
-justify-content: center;
+      document.getElementById('proxyIP').textContent = proxyIP;
 
-flex-shrink: 0;
+      document.getElementById('dreamConfigPre').textContent = dreamConfig;
 
-}
+      document.getElementById('freedomConfigPre').textContent = freedomConfig;
 
-  
+      // Set links
 
-.client-icon svg {
+      document.getElementById('hiddifyLink').href = `hiddify://install-config?url=${encodeURIComponent(freedomConfig)}`;
 
-width: 14px;
+      document.getElementById('v2rayNGLink').href = `v2rayng://install-config?url=${encodeURIComponent(dreamConfig)}`;
 
-height: 14px;
+      document.getElementById('clashMetaLink').href = clashMetaFullUrl;
 
-fill: white;
+      document.getElementById('nekoBoxLink').href = `clash://install-config?url=${encodeURIComponent(freedomConfig)}`;
 
-}
 
-  
 
-.footer {
+      function copyToClipboard(button, text) {
 
-text-align: center;
+      navigator.clipboard.writeText(text).then(() => {
 
-margin-top: 40px;
+      const originalText = button.textContent;
 
-padding-bottom: 20px;
+      // Add copied class for styling
 
-color: var(--text-secondary);
+      button.classList.add('copied');
 
-font-size: 13px;
+      button.textContent = 'Copied!';
 
-font-weight: 400;
+      button.disabled = true; // Disable briefly
 
-}
 
-  
 
-.footer p {
+      setTimeout(() => {
 
-margin-bottom: 4px;
+      button.textContent = originalText;
 
-}
+      button.classList.remove('copied');
 
-  
+      button.disabled = false;
 
-/* Custom scrollbar styling */
+      }, 1500);
 
-::-webkit-scrollbar {
+      }).catch(err => {
 
-width: 8px;
+      console.error('Failed to copy text: ', err);
 
-height: 8px;
+      // Optional: Provide visual feedback for error
 
-}
+      const originalText = button.textContent;
 
-::-webkit-scrollbar-track {
+      button.textContent = 'Error';
 
-background: var(--background-secondary);
+      button.style.backgroundColor = '#D32F2F';
 
-border-radius: 4px;
+      button.style.color = '#FFFFFF';
 
-}
+      button.style.borderColor = '#B71C1C';
 
-::-webkit-scrollbar-thumb {
+      button.disabled = true;
 
-background: var(--mocha-300);
+      setTimeout(() => {
 
-border-radius: 4px;
+      button.textContent = originalText;
 
-border: 2px solid var(--background-secondary);
+      button.style.backgroundColor = '';
 
-}
+      button.style.color = '';
 
-::-webkit-scrollbar-thumb:hover {
+      button.style.borderColor = '';
 
-background: var(--mocha-400);
+      button.disabled = false;
 
-}
+      }, 1500);
 
-* {
-
-scrollbar-width: thin;
-
-scrollbar-color: var(--mocha-300) var(--background-secondary);
-
-}
-
-  
-
-@media (max-width: 768px) {
-
-body { padding: 16px 0; }
-
-.container { padding: 0 16px; }
-
-.header h1 { font-size: 24px; }
-
-.header p { font-size: 13px; }
-
-.config-card { padding: 16px; }
-
-.config-title { font-size: 16px; }
-
-.config-content pre { font-size: 12px; }
-
-.attributes { grid-template-columns: 1fr; gap: 16px; }
-
-.client-buttons { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
-
-.button { padding: 8px 12px; font-size: 13px; }
-
-.copy-btn { top: 10px; right: 10px; }
-
-::-webkit-scrollbar { width: 6px; height: 6px; }
-
-::-webkit-scrollbar-thumb { border-width: 1px; }
-
-}
-
-  
-
-@media (max-width: 480px) {
-
-.client-buttons { grid-template-columns: 1fr; }
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="container">
-
-<div class="header">
-
-<h1>VLESS Proxy Configuration</h1>
-
-<p>Copy the configuration or import directly into your client</p>
-
-</div>
-
-  
-
-<!-- Proxy Info Card -->
-
-<div class="config-card">
-
-<div class="config-title">Proxy Information</div>
-
-<div class="attributes">
-
-<div class="attribute">
-
-<span>Proxy IP / Host:</span>
-
-<strong id="proxyIP">192.168.1.1</strong>
-
-</div>
-
-<div class="attribute">
-
-<span>Status:</span>
-
-<strong class="status-indicator">
-
-<span class="status-dot"></span>
-
-Active
-
-</strong>
-
-</div>
-
-</div>
-
-</div>
-
-  
-
-<!-- Xray Core Clients -->
-
-<div class="config-card">
-
-<div class="config-title">Xray Core Clients (V2rayNG, Hiddify)</div>
-
-<div class="config-content">
-
-<button class="button copy-btn" onclick="copyToClipboard(this, dreamConfig)">Copy</button>
-
-<pre id="dreamConfigPre">vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chrome&type=ws&host=example.com&path=%2Fws#Example</pre>
-
-</div>
-
-<div class="client-buttons">
-
-<!-- Hiddify -->
-
-<a href="#" id="hiddifyLink" class="button client-btn">
-
-<div class="client-icon">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-
-<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-
-</svg>
-
-</div>
-
-Import to Hiddify
-
-</a>
-
-<!-- V2rayNG -->
-
-<a href="#" id="v2rayNGLink" class="button client-btn">
-
-<div class="client-icon">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-
-<path d="M12 2L4 5v6c0 5.5 3.5 10.7 8 12.3 4.5-1.6 8-6.8 8-12.3V5l-8-3z" />
-
-</svg>
-
-</div>
-
-Import to V2rayNG
-
-</a>
-
-</div>
-
-</div>
-
-  
-
-<!-- Sing-Box Core Clients -->
-
-<div class="config-card">
-
-<div class="config-title">Sing-Box Core Clients (Clash Meta, NekoBox)</div>
-
-<div class="config-content">
-
-<button class="button copy-btn" onclick="copyToClipboard(this, freedomConfig)">Copy</button>
-
-<pre id="freedomConfigPre">vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chrome&type=ws&host=example.com&path=%2Fws#Example</pre>
-
-</div>
-
-<div class="client-buttons">
-
-<!-- Clash Meta -->
-
-<a href="#" id="clashMetaLink" class="button client-btn">
-
-<div class="client-icon">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-
-<path d="M4 4h16v16H4z" />
-
-<path d="M10 10h4v4H10z" fill="white" />
-
-<path d="M14 8H10V4h4z" fill="white" />
-
-<path d="M4 14h4v4H4z" fill="white" />
-
-</svg>
-
-</div>
-
-Import to Clash Meta
-
-</a>
-
-<!-- NekoBox -->
-
-<a href="#" id="nekoBoxLink" class="button client-btn">
-
-<div class="client-icon">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-
-<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-
-</svg>
-
-</div>
-
-Import to NekoBox
-
-</a>
-
-</div>
-
-</div>
-
-<div class="footer">
-
-<p>© REvil <span id="currentYear"></span> All rights reserved.</p>
-
-<p>Secure. Private. Fast.</p>
-
-</div>
-
-</div>
-
-<script>
-
-// Sample data - replace with your actual data
-
-const proxyIP = "192.168.1.1";
-
-const dreamConfig = "vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chrome&type=ws&host=example.com&path=%2Fws#Example";
-
-const freedomConfig = "vless://uuid@example.com:443?encryption=none&security=tls&sni=example.com&fp=chrome&type=ws&host=example.com&path=%2Fws#Example";
-
-const clashMetaFullUrl = "https://example.com/config";
-
-  
-
-// Set current year
-
-document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-// Set config values
-
-document.getElementById('proxyIP').textContent = proxyIP;
-
-document.getElementById('dreamConfigPre').textContent = dreamConfig;
-
-document.getElementById('freedomConfigPre').textContent = freedomConfig;
-
-// Set links
-
-document.getElementById('hiddifyLink').href = `hiddify://install-config?url=${encodeURIComponent(freedomConfig)}`;
-
-document.getElementById('v2rayNGLink').href = `v2rayng://install-config?url=${encodeURIComponent(dreamConfig)}`;
-
-document.getElementById('clashMetaLink').href = clashMetaFullUrl;
-
-document.getElementById('nekoBoxLink').href = `clash://install-config?url=${encodeURIComponent(freedomConfig)}`;
-
-  
-
-function copyToClipboard(button, text) {
-
-navigator.clipboard.writeText(text).then(() => {
-
-const originalText = button.textContent;
-
-// Add copied class for styling
-
-button.classList.add('copied');
-
-button.textContent = 'Copied!';
-
-button.disabled = true; // Disable briefly
-
-  
-
-setTimeout(() => {
-
-button.textContent = originalText;
-
-button.classList.remove('copied');
-
-button.disabled = false;
-
-}, 1500);
-
-}).catch(err => {
-
-console.error('Failed to copy text: ', err);
-
-// Optional: Provide visual feedback for error
-
-const originalText = button.textContent;
-
-button.textContent = 'Error';
-
-button.style.backgroundColor = '#D32F2F';
-
-button.style.color = '#FFFFFF';
-
-button.style.borderColor = '#B71C1C';
-
-button.disabled = true;
-
-setTimeout(() => {
-
-button.textContent = originalText;
-
-button.style.backgroundColor = '';
-
-button.style.color = '';
-
-button.style.borderColor = '';
-
-button.disabled = false;
-
-}, 1500);
-
-}
-});
-</script>
-</body>
+      }
+      });
+    </script>
+  </body>
 </html>
