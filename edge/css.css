@@ -1,5 +1,4 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
@@ -45,13 +44,7 @@ body {
         font-size: 16px;
         }
 
-html {
-        background: linear-gradient(to top, #171515, #242323) no-repeat center center / cover;
-        height: 100dvh;
-        overflow-x: hidden;
-        }
-
-bbutton {
+        button {
         cursor: pointer;
         border-radius: 8px;
         font-size: 15px;
@@ -107,7 +100,7 @@ bbutton {
         }
         }
 
-main {
+        main {
         display: flex;
         flex-direction: column;
         max-width: calc(100% - 2rem);
@@ -174,7 +167,7 @@ main {
         }
 
 
-.bolt {
+  .bolt {
   position: absolute;
   top: 0;
   width: 1px;
@@ -276,7 +269,7 @@ main {
         color: var(--bg-dark);
         }
       
-      #copy-button {
+        #copy-button {
         margin-top: 1rem;
         }
       
