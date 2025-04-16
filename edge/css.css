@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
@@ -6,7 +6,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Ibarra Real Nova", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   scroll-behavior: smooth;
   transition: all 0.3s ease;
 }
@@ -40,19 +43,21 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
 }
 
 button {
   cursor: pointer;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: bold;
   border: none;
   background: var(--main);
   color: var(--button-text);
   padding: 1.1rem 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
   transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 4px 12px var(--shadow);
   position: relative;
@@ -136,14 +141,13 @@ main {
   padding: 1.5em;
   outline: none;
   color: var(--highlight);
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 12px;
   background: var(--bg-dark);
   border: 2px solid var(--border);
   backdrop-filter: blur(20px);
   width: 100%;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
   transition: all 300ms ease;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -298,10 +302,9 @@ p {
   border-radius: 8px;
   padding: 1rem 1.2rem;
   outline: none;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
   line-height: 1.6;
   color: var(--highlight);
   background: var(--bg-dark);
@@ -351,7 +354,7 @@ footer {
 footer a {
   color: var(--accent);
   text-decoration-color: var(--bg-dark);
-  font-weight: 400;
+  font-weight: 500;
   transition: all 250ms ease;
 }
 
