@@ -74,8 +74,8 @@ echo -e "${B_GREEN}Prerequisites met.${RESET}"
 echo -e "\n${B_CYAN}--- MTU Scan ---${RESET}"
 
 # Configuration 
-host="8.8.8.8"      # Target host for MTU test (Google DNS is reliable)
-min_payload=1300    # Minimum payload size to test
+host="1.1.1.1"      # Target host for MTU test (Google DNS is reliable)
+min_payload=1260    # Minimum payload size to test
 max_payload=1500    # Maximum payload size to test
 step=10             # Increment step for payload size
 attempts=5          # Number of pings per payload size
@@ -86,7 +86,7 @@ draw_mtu_chart() {
     local width=50 # Width of the success rate bar
     echo -e "\n${B_BLUE}MTU Success Rate Chart:${RESET}"
     echo -e "${B_GREEN}┌──────────────────────┬───────────────────────────────────────────────────────────┐${RESET}"
-    echo -e "${B_GREEN}│   Payload Size (bytes) │ Success Rate (out of $attempts)                                  │${RESET}"
+    echo -e "${B_GREEN}│   Payload Size (bytes) │ Success Rate (out of $attempts)                                 │${RESET}"
     echo -e "${B_GREEN}├──────────────────────┼───────────────────────────────────────────────────────────┤${RESET}"
     # Sort keys numerically for display (requires process substitution)
     for size in $(echo "${!mtu_results[@]}" | tr ' ' '\n' | sort -n); do
@@ -179,8 +179,8 @@ else
     best_payload_display="$best_payload_final"
     best_success_rate=$((max_success_found * 100 / attempts))
     best_success_display="${max_success_found}/${attempts} (${best_success_rate}%)"
-    echo -e "${B_MAGENTA}│ ${B_WHITE}Highest Success Rate: ${B_YELLOW}${best_success_display}${B_MAGENTA}                           │${RESET}"
-    echo -e "${B_MAGENTA}│ ${B_WHITE}Largest Payload Size: ${B_YELLOW}${best_payload_display}${B_MAGENTA}                                   │${RESET}" 
+    echo -e "${B_MAGENTA}│ ${B_WHITE}Highest Success Rate: ${B_YELLOW}${best_success_display}${B_MAGENTA}                              │${RESET}"
+    echo -e "${B_MAGENTA}│ ${B_WHITE}Largest Payload Size: ${B_YELLOW}${best_payload_display}${B_MAGENTA}                                    │${RESET}" 
     echo -e "${B_MAGENTA}│ ${B_WHITE}Recommended MTU:     ${B_YELLOW}${recommended_mtu} ${B_WHITE}(Payload + 28)${B_MAGENTA}                      │${RESET}"
 fi
 echo -e "${B_MAGENTA}└───────────────────────────────────────────────────────────────┘${RESET}"
@@ -199,18 +199,57 @@ echo -e "\n${B_CYAN}--- DNS Benchmark ---${RESET}"
 # DNS list
 dns_list=(
     "8.8.8.8"       # Google DNS
-    "8.8.4.4"       # Google DNS
+    "8.8.4.4"
     "1.1.1.1"       # Cloudflare DNS
-    "1.0.0.1"       # Cloudflare DNS
+    "1.0.0.1"
     "9.9.9.9"       # Quad9 (Security/Privacy focused)
-    "149.112.112.112" # Quad9 (Security/Privacy focused)
+    "149.112.112.112"
+    "9.9.9.10"      # Quad9 (No Malware blocking (for experts only!))
+    "149.112.112.10"
+    "9.9.9.11"      # Quad9 (ECS Enable)
+    "149.112.112.11"
     "94.140.14.14"  # AdGuard DNS (Ad-blocking)
-    "94.140.15.15"  # AdGuard DNS (Ad-blocking)
+    "94.140.15.15"
     "76.76.2.2"     # Control D (Customizable)
-    "76.76.10.2"    # Control D (Customizable)
+    "76.76.10.2"
     "185.228.168.9" # CleanBrowsing (Family Filter)
-    "208.67.222.222" # OpenDNS
-    "208.67.220.220" # OpenDNS
+    "185.228.169.9"
+    "208.67.222.222" # OpenDNS Cisco
+    "208.67.220.220"
+    "76.76.19.19"    # Alternate DNS
+    "76.223.122.150"
+    "78.157.42.100"  # Shekan
+    "78.157.42.101"
+    "45.90.28.0"     # Next DNS
+    "45.90.30.0"
+    "8.26.56.26"     # Comodo secureDNS
+    "8.20.247.20"
+    "84.200.69.80"   # DNS Watch 
+    "84.200.70.40"
+    "64.6.64.6"      # Verisign
+    "64.6.65.6"
+    "46.151.208.154" # OpenNIC 
+    "128.199.248.105"
+    "80.80.80.80"    # Freenom
+    "80.80.81.81"
+    "156.154.70.1"   # Advantage DNS
+    "156.154.71.1"
+    "129.250.35.250" # NTT DNS
+    "129.250.35.251"
+    "216.146.35.35"  # DNY DNS
+    "216.146.36.36"
+    "216.146.36.36"  # Turkish
+    "81.214.55.192"
+    "204.106.240.53" # USA
+    "108.179.34.214" 
+    "203.141.131.66" # Japan
+    "220.110.210.114"
+    "94.206.42.74"   # Dubai
+    "94.206.47.14"
+    "168.119.27.54" # Frankfurt
+    "168.119.61.220"
+    "46.166.189.67" # Amsterdam
+    "80.113.19.90"
     # Add your ISP's DNS here if known, or router address (e.g., 192.168.1.1)
 )
 domain="google.com" # Domain to query for benchmark
@@ -246,7 +285,7 @@ draw_dns_table() {
              color="${B_RED}"
              display_time="Error/Untested"
         fi
-         printf "${B_WHITE}│ %-16s │ ${color}%-25s${B_WHITE}│${RESET}\n" "$dns" "$display_time"
+         printf "${B_WHITE}│ %-16s │ ${color}%-25s${B_WHITE} │${RESET}\n" "$dns" "$display_time"
     done
     echo -e "${B_GREEN}└──────────────────┴────────────────────────────┘${RESET}"
 }
@@ -299,7 +338,7 @@ if [[ -z "$best_dns" ]]; then
     echo -e "${B_MAGENTA}│ ${B_RED}No responsive DNS server found in the list.${B_MAGENTA}                  │${RESET}"
     echo -e "${B_MAGENTA}│ ${B_YELLOW}Check network connection or try different DNS servers.${B_MAGENTA}       │${RESET}"
 else
-    echo -e "${B_MAGENTA}│ ${B_WHITE}Fastest Responsive DNS: ${B_YELLOW}${best_dns}${B_MAGENTA}                             │${RESET}" # Clarified label
+    echo -e "${B_MAGENTA}│ ${B_WHITE}Fastest Responsive DNS: ${B_YELLOW}${best_dns}${B_MAGENTA}                               │${RESET}"
     echo -e "${B_MAGENTA}│ ${B_WHITE}Response Time:          ${B_YELLOW}${best_time} ms${B_MAGENTA}                                 │${RESET}"
 fi
 echo -e "${B_MAGENTA}└───────────────────────────────────────────────────────────────┘${RESET}"
