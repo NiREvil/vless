@@ -13,5 +13,5 @@ pkg install curl -y && curl -sL https://raw.githubusercontent.com/NiREvil/vless/
 From next time, run it without installing curl
 
 ```bash
-pkg install curl -y && curl -sL https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/edge/SCAN/MTU.sh | bash
+curl -sL https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/edge/SCAN/MTU.sh | bash
 ```
