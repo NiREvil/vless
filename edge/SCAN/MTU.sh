@@ -75,10 +75,10 @@ echo -e "\n${B_CYAN}--- MTU Scan ---${RESET}"
 
 # Configuration 
 host="1.1.1.1"      # Target host for MTU test (Google DNS is reliable)
-min_payload=1260    # Minimum payload size to test
+min_payload=1280    # Minimum payload size to test
 max_payload=1500    # Maximum payload size to test
 step=10             # Increment step for payload size
-attempts=5          # Number of pings per payload size
+attempts=10          # Number of pings per payload size
 declare -A mtu_results # Associative array to store results (payload_size -> success_count)
 
 # Function to draw MTU chart
@@ -180,7 +180,7 @@ else
     best_success_rate=$((max_success_found * 100 / attempts))
     best_success_display="${max_success_found}/${attempts} (${best_success_rate}%)"
     echo -e "${B_MAGENTA}│ ${B_WHITE}Highest Success Rate: ${B_YELLOW}${best_success_display}${B_MAGENTA}                              │${RESET}"
-    echo -e "${B_MAGENTA}│ ${B_WHITE}Largest Payload Size: ${B_YELLOW}${best_payload_display}${B_MAGENTA}                                    │${RESET}" 
+    echo -e "${B_MAGENTA}│ ${B_WHITE}Largest Payload Size: ${B_YELLOW}${best_payload_display}${RESET}" 
     echo -e "${B_MAGENTA}│ ${B_WHITE}Recommended MTU:     ${B_YELLOW}${recommended_mtu} ${B_WHITE}(Payload + 28)${B_MAGENTA}                      │${RESET}"
 fi
 echo -e "${B_MAGENTA}└───────────────────────────────────────────────────────────────┘${RESET}"
