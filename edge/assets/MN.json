@@ -7,71 +7,43 @@
   "keep-alive-interval": 30,
   "unified-delay": false,
   "dns": {
-      "enable": true,
-      "listen": "0.0.0.0:1053",
-      "ipv6": true,
-      "respect-rules": true,
-      "use-hosts": true,
-      "use-system-hosts": false,
-      "nameserver": [
-          "1.1.1.1",
-          "1.0.0.1",
-          "[2606:4700:4700::1111]",
-          "[2606:4700:4700::1001]"
-      ],
-      "proxy-server-nameserver": [
-          "8.8.8.8"
-      ],
-      "nameserver-policy": {
-          "geosite:category-ir": [
-              "8.8.8.8"
-          ],
-          "www.gstatic.com": [
-              "8.8.8.8"
-          ]
-      }
+    "enable": true,
+    "listen": "0.0.0.0:1053",
+    "ipv6": true,
+    "respect-rules": true,
+    "use-hosts": true,
+    "use-system-hosts": false,
+    "nameserver": ["1.1.1.1", "1.0.0.1", "[2606:4700:4700::1111]", "[2606:4700:4700::1001]"],
+    "proxy-server-nameserver": ["8.8.8.8"],
+    "nameserver-policy": {
+      "geosite:category-ir": ["8.8.8.8"],
+      "www.gstatic.com": ["8.8.8.8"]
+    }
   },
   "tun": {
-      "enable": true,
-      "stack": "mixed",
-      "auto-route": true,
-      "strict-route": true,
-      "auto-redirect": true,
-      "auto-detect-interface": true,
-      "dns-hijack": [
-          "any:53"
-      ],
-      "mtu": 9000
+    "enable": true,
+    "stack": "mixed",
+    "auto-route": true,
+    "strict-route": true,
+    "auto-redirect": true,
+    "auto-detect-interface": true,
+    "dns-hijack": ["any:53"],
+    "mtu": 9000
   },
   "sniffer": {
-      "enable": true,
-      "force-dns-mapping": true,
-      "parse-pure-ip": true,
-      "sniff": {
-          "HTTP": {
-              "ports": [
-                  80,
-                  8080,
-                  8880,
-                  2052,
-                  2082,
-                  2086,
-                  2095
-              ],
-              "override-destination": false
-          },
-          "TLS": {
-              "ports": [
-                  443,
-                  8443,
-                  2053,
-                  2083,
-                  2087,
-                  2096
-              ],
-              "override-destination": false
-          }
+    "enable": true,
+    "force-dns-mapping": true,
+    "parse-pure-ip": true,
+    "sniff": {
+      "HTTP": {
+        "ports": [80, 8080, 8880, 2052, 2082, 2086, 2095],
+        "override-destination": false
+      },
+      "TLS": {
+        "ports": [443, 8443, 2053, 2083, 2087, 2096],
+        "override-destination": false
       }
+    }
   },
   "proxies": [
     {
@@ -189,11 +161,7 @@
       "interval": 86400
     }
   },
-  "rules": [
-    "RULE-SET,malware,REJECT",
-    "RULE-SET,phishing,REJECT",
-    "RULE-SET,cryptominers,REJECT"
-  ],
+  "rules": ["RULE-SET,malware,REJECT", "RULE-SET,phishing,REJECT", "RULE-SET,cryptominers,REJECT"],
   "ntp": {
     "enable": true,
     "server": "time.apple.com",
