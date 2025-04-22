@@ -103,29 +103,29 @@ config_template = {
     "port": 7890,
     "socks-port": 7891,
     "mixed-port": 7892,
-    "ipv6": true,
-    "allow-lan": true,
+    "ipv6": True,
+    "allow-lan": True,
     "mode": "rule",
     "log-level": "info",
-    "disable-keep-alive": false,
+    "disable-keep-alive": False,
     "keep-alive-idle": 30,
     "keep-alive-interval": 30,
-    "unified-delay": false,
+    "unified-delay": False,
     "external-controller": "127.0.0.1:9090",
     "external-ui-url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
     "external-ui": "ui",
-    "external-controller-cors": { "allow-origins": ["*"], "allow-private-network": true },
-    "profile": { "store-selected": true, "store-fake-ip": true },
+    "external-controller-cors": { "allow-origins": ["*"], "allow-private-network": True },
+    "profile": { "store-selected": True, "store-fake-ip": True },
     "dns": {
-        "enable": true, "listen": "0.0.0.0:1053", "ipv6": false, "respect-rules": true, "use-system-hosts": false,
+        "enable": True, "listen": "0.0.0.0:1053", "ipv6": False, "respect-rules": True, "use-system-hosts": False,
         "nameserver": ["https://8.8.8.8/dns-query#⚪ REvil", "https://94.140.14.14/dns-query", "https://208.67.222.222/dns-query", "https://dns.alidns.com/dns-query"],
         "fallback": ["https://revil-nginx.deno.dev/1:-J8-HwADAAgDECIBLKDAAFQzIABAywBI", "tls://dns.quad9.net", "tls://1.1.1.1", "tls://dns.google"],
         "proxy-server-nameserver": ["8.8.4.4#DIRECT"],
         "nameserver-policy": { "raw.githubusercontent.com": "8.8.4.4#DIRECT", "time.apple.com": "8.8.8.8#DIRECT", "www.gstatic.com": "system", "rule-set:ir": ["8.8.4.4#DIRECT"] }
     },
-    "tun": { "enable": true, "stack": "mixed", "auto-route": true, "strict-route": true, "auto-detect-interface": true, "dns-hijack": ["any:53"], "mtu": 9000 },
+    "tun": { "enable": True, "stack": "mixed", "auto-route": True, "strict-route": True, "auto-detect-interface": True, "dns-hijack": ["any:53"], "mtu": 9000 },
     "sniffer": {
-        "enable": true, "force-dns-mapping": true, "parse-pure-ip": true, "override-destination": false,
+        "enable": True, "force-dns-mapping": True, "parse-pure-ip": True, "override-destination": False,
         "sniff": { "HTTP": { "ports": [80, 8080, 8880, 2052, 2082, 2086, 2095] }, "TLS": { "ports": [443, 8443, 2053, 2083, 2087, 2096] } }
     },
     "proxies": [],
@@ -254,7 +254,7 @@ proxies_list.append({
     }
 })
 
-# If you want a true IPv6 endpoint here, change generate_ipv4_endpoint() to generate_ipv6_endpoint() below.
+# If you want a True IPv6 endpoint here, change generate_ipv4_endpoint() to generate_ipv6_endpoint() below.
 server1_ipv6, port1_ipv6 = generate_ipv6_endpoint()
 proxies_list.append({
     "name": "🇸🇪 Warp - IPv6",
