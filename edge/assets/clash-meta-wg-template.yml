@@ -1,14 +1,14 @@
-port: 7890
-socks-port: 7891
-mixed-port: 7892
+mixed-port: 7890
 ipv6: true
 allow-lan: true
 mode: rule
-log-level: info
+log-level: warning
 disable-keep-alive: false
-keep-alive-idle: 30
-keep-alive-interval: 30
+keep-alive-idle: 10
+keep-alive-interval: 15
 unified-delay: false
+geo-auto-update: true
+geo-update-interval: 168
 external-controller: 127.0.0.1:9090
 external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
 external-ui: ui
@@ -22,34 +22,28 @@ profile:
 dns:
   enable: true
   listen: 0.0.0.0:1053
-  ipv6: false
+  ipv6: true
   respect-rules: true
   use-system-hosts: false
   nameserver:
-    - tcp://185.228.168.9#⚪ SELECT
-    - https://8.8.8.8/dns-query
-    - https://208.67.222.222/dns-query
-    - https://dns.alidns.com/dns-query
-  fallback:
-    - tls://dns.quad9.net
-    - tls://dns.google
-    - tls://1.1.1.1
+    - 1.1.1.1#⚪ SELECT
   proxy-server-nameserver:
-    - 8.8.4.4#DIRECT
+    - 8.8.8.8#DIRECT
   nameserver-policy:
-    raw.githubusercontent.com: 8.8.4.4#DIRECT
-    time.apple.com: 8.8.4.4#DIRECT
-    www.gstatic.com: system
+    raw.githubusercontent.com: 8.8.8.8#DIRECT
+    time.apple.com: 8.8.8.8#DIRECT
     rule-set:ir:
-      - 8.8.4.4#DIRECT
+      - 8.8.8.8#DIRECT
+    rule-set:openai: 178.22.122.100#DIRECT
 tun:
   enable: true
-  stack: system
+  stack: mixed
   auto-route: true
   strict-route: true
   auto-detect-interface: true
   dns-hijack:
     - any:53
+    - tcp://any:53
   mtu: 9000
 sniffer:
   enable: true
@@ -79,23 +73,51 @@ proxy-groups:
   - name: ⚪ SELECT
     type: select
     proxies:
-      - ⚪ AUTO
-      - DIRECT
-      - 🇮🇷 ReGuard-v4
-      - 🇩🇪 ReGuard-v6
-      - 🇮🇷 EviLink-v4
-      - 🇩🇪 EviLink-v6
-  - name: ⚪ AUTO
+      - 🇮🇷 Best Ping
+      - 🇩🇪 Best Ping
+      - 1 - 🇮🇷 ReGuard
+      - 2 - 🇮🇷 ReGuard
+      - 3 - 🇮🇷 ReGuard
+      - 4 - 🇮🇷 ReGuard
+      - 1 - 🇩🇪 ReGuard
+      - 2 - 🇩🇪 ReGuard
+      - 3 - 🇩🇪 ReGuard
+      - 4 - 🇩🇪 ReGuard
+  - name: 🇮🇷 Best Ping
     type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
+    url: https://www.gstatic.com/generate_204
+    interval: 30
     tolerance: 50
     proxies:
-      - 🇮🇷 ReGuard-v4
-      - 🇩🇪 ReGuard-v6
-      - 🇮🇷 EviLink-v4
-      - 🇩🇪 EviLink-v6
+      - 1 - 🇮🇷 ReGuard
+      - 2 - 🇮🇷 ReGuard
+      - 3 - 🇮🇷 ReGuard
+      - 4 - 🇮🇷 ReGuard
+  - name: 🇩🇪 Best Ping
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 30
+    tolerance: 50
+    proxies:
+      - 1 - 🇩🇪 ReGuard
+      - 2 - 🇩🇪 ReGuard
+      - 3 - 🇩🇪 ReGuard
+      - 4 - 🇩🇪 ReGuard
 rule-providers:
+  private:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml
+    path: ./ruleset/private.yaml
+    interval: 86400
+  private-cidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.yaml
+    path: ./ruleset/private-cidr.yaml
+    interval: 86400
   ir:
     type: http
     format: text
@@ -109,6 +131,13 @@ rule-providers:
     behavior: ipcidr
     url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ircidr.txt
     path: ./ruleset/ir-cidr.txt
+    interval: 86400
+  openai:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.yaml
+    path: ./ruleset/openai.yaml
     interval: 86400
   malware:
     type: http
@@ -131,20 +160,23 @@ rule-providers:
     url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.txt
     path: ./ruleset/cryptominers.txt
     interval: 86400
-  ads:
+  category-ads-all:
     type: http
     format: text
     behavior: domain
-    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ads.txt
-    path: ./ruleset/ads.txt
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.txt
+    path: ./ruleset/category-ads-all.txt
     interval: 86400
 rules:
-  - RULE-SET,ir,DIRECT
-  - RULE-SET,ir-cidr,DIRECT
-  - RULE-SET,ads,REJECT
   - RULE-SET,malware,REJECT
   - RULE-SET,phishing,REJECT
   - RULE-SET,cryptominers,REJECT
+  - RULE-SET,category-ads-all,REJECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,ir,DIRECT
+  - RULE-SET,openai,DIRECT
+  - RULE-SET,private-cidr,DIRECT,no-resolve
+  - RULE-SET,ir-cidr,DIRECT
   - MATCH,⚪ SELECT
 ntp:
   enable: true
