@@ -91,10 +91,11 @@ def bind_keys():
         try:
             z = json.loads(result.content)
             client_id = z["config"]["client_id"]
-            logger.info(
-                f"Successfully registered with client_id: {client_id[:20]}..."
-            )
-            return priv_string, client_id  # Return client_id directly as a base64 string
+            logger.info(f"Successfully registered with client_id: {client_id[:20]}...")
+            return (
+                priv_string,
+                client_id,
+            )  # Return client_id directly as a base64 string
         except Exception as e:
             logger.error(f"Error parsing API response: {e}")
             sys.exit(1)
@@ -128,13 +129,14 @@ available_ports = [int(p) for p in ports_str.split()]
 # Function to generate a random IPv4 endpoint
 def generate_ipv4_endpoint():
     prefix = random.choice(ipv4_prefixes)
-    base_ip = prefix.split('/')[0]
-    ip_parts = base_ip.split('.')[:3]
+    base_ip = prefix.split("/")[0]
+    ip_parts = base_ip.split(".")[:3]
     last_octet = random.randint(1, 254)
     server = f"{ip_parts[0]}.{ip_parts[1]}.{ip_parts[2]}.{last_octet}"
     port = random.choice(available_ports)
     logger.info(f"Generated IPv4 endpoint: {server}:{port}")
     return server, port
+
 
 # Function to generate a random IPv6 endpoint
 def generate_ipv6_endpoint():
@@ -144,6 +146,7 @@ def generate_ipv6_endpoint():
     server = f"[{prefix}::{random_part}]"
     logger.info(f"Generated IPv6 endpoint: {server}:{port}")
     return server, port
+
 
 # Main script logic wrapped in try-except for catching unexpected errors
 try:
