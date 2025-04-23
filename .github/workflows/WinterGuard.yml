@@ -13,7 +13,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04 # Using the stable version
+    runs-on: ubuntu-24.04
     timeout-minutes: 15 # To prevent freezing
 
     steps:
@@ -24,6 +24,10 @@ jobs:
           submodules: 'recursive'
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: List directory contents
+        run: |
+          ls -R
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -31,7 +35,7 @@ jobs:
           cache: pip
           architecture: x64
 
-        # Creating a cache for increased speed and performance, also saving resources
+      # Creating a cache for increased speed and performance, also saving resources
       - name: Cache Python packages
         uses: actions/cache@v4
         with:
@@ -45,21 +49,21 @@ jobs:
           python -m pip install --upgrade pip || exit 1
           pip install -r edge/requirements.txt || exit 1
        
-        # Run ;⁠)
+      # Run ;⁠)
       - name: Run config generation script
-        run: python edge/winterguard.py
+        run: |
+          python edge/winterguard.py 2>&1 || { echo "Script failed with exit code $?"; exit 1; }
 
       - name: Commit and push config files
         run: |
           git config --local user.name "Github Actions"
           git config --local user.email "actions@github.com"
                     
-          if git status --porcelain | grep -q "clash-meta-wg.yml" || git status --porcelain"; then
+          if git status --porcelain | grep -q "clash-meta-wg.yml" || git status --porcelain; then
             echo "Changes detected. Committing and pushing."
             git add sub/clash-meta-wg.yml
             git commit -m "Auto: Update clash-wg configurations at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" -m "Wireguard private key, addresses, reserved, and all IPs have been renewed"
-             git -c committer.name="NiREvil" -c committer.email="126243832+NiREvil@users.noreply.github.com" \
-            git push
+            git -c committer.name="NiREvil" -c committer.email="126243832+NiREvil@users.noreply.github.com" push
           else
             echo "No changes detected in config files."
           fi
