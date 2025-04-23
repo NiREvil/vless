@@ -374,7 +374,7 @@ proxies_list.append(
 config_template["proxies"] = proxies_list
 
 # json
-output_json_filename = "sub/clash_wg.json"
+output_json_filename = "sub/clash-meta-wg.json"
 try:
     with open(output_json_filename, "w", encoding="utf-8") as f:
         json.dump(config_template, f, indent=2, ensure_ascii=False)
