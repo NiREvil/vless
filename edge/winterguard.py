@@ -14,14 +14,14 @@ from cryptography.hazmat.primitives.asymmetric.x25519 import X25519PrivateKey
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        logging.StreamHandler(sys.stdout)
-    ]
+    handlers=[logging.StreamHandler(sys.stdout)],
 )
 logger = logging.getLogger(__name__)
 
+
 def byte_to_base64(myb):
     return base64.b64encode(myb).decode("utf-8")
+
 
 def generate_public_key(key_bytes):
     private_key = X25519PrivateKey.from_private_bytes(key_bytes)
@@ -31,6 +31,7 @@ def generate_public_key(key_bytes):
     )
     return public_key_bytes
 
+
 def generate_private_key():
     logger.info("Generating new private key...")
     key = os.urandom(32)
@@ -39,6 +40,7 @@ def generate_private_key():
     key[31] &= 127
     key[31] |= 64
     return bytes(key)
+
 
 def register_key_on_CF(pub_key):
     logger.info(f"Registering public key: {pub_key[:20]}... with Cloudflare API")
@@ -66,6 +68,7 @@ def register_key_on_CF(pub_key):
     logger.info(f"Cloudflare API response status: {r.status_code}")
     return r
 
+
 def bind_keys():
     priv_bytes = generate_private_key()
     priv_string = byte_to_base64(priv_bytes)
@@ -80,14 +83,19 @@ def bind_keys():
             client_id = z["config"]["client_id"]
             cid_byte = base64.b64decode(client_id)
             reserved = [int(j) for j in cid_byte]
-            logger.info(f"Successfully registered with client_id: {client_id[:20]}... and reserved: {reserved}")
+            logger.info(
+                f"Successfully registered with client_id: {client_id[:20]}... and reserved: {reserved}"
+            )
             return priv_string, reserved
         except Exception as e:
             logger.error(f"Error parsing API response: {e}")
             sys.exit(1)
     else:
-        logger.error(f"API request failed with status {result.status_code}: {result.text}")
+        logger.error(
+            f"API request failed with status {result.status_code}: {result.text}"
+        )
         sys.exit(1)
+
 
 # IPv6
 ipv6_prefixes = ["2606:4700:d1", "2606:4700:d0"]
@@ -107,6 +115,7 @@ ipv4_prefixes = [
 ports_str = "500 854 859 864 878 880 890 891 894 903 908 928 934 939 942 943 945 946 955 968 987 988 1002 1010 1014 1018 1070 1074 1180 1387 1701 1843 2371 2408 2506 3138 3476 3581 3854 4177 4198 4233 4500 5279 5956 7103 7152 7156 7281 7559 8319 8742 8854 8886"
 available_ports = [int(p) for p in ports_str.split()]
 
+
 def generate_ipv4_endpoint():
     prefix = random.choice(ipv4_prefixes)
     last_octet = random.randint(1, 254)
@@ -115,6 +124,7 @@ def generate_ipv4_endpoint():
     logger.info(f"Generated IPv4 endpoint: {server}:{port}")
     return server, port
 
+
 def generate_ipv6_endpoint():
     prefix = random.choice(ipv6_prefixes)
     random_part = ":".join(f"{random.randint(0, 65535):04x}" for _ in range(4))
@@ -122,6 +132,7 @@ def generate_ipv6_endpoint():
     server = f"[{prefix}::{random_part}]"
     logger.info(f"Generated IPv6 endpoint: {server}:{port}")
     return server, port
+
 
 # Reading the template yml file
 config_file_path = "assets/clash-meta-wg-template.yml"
@@ -249,7 +260,9 @@ output_yaml_filename = "sub/clash-meta-wg.yml"
 logger.info(f"Writing output to {output_yaml_filename}")
 try:
     with open(output_yaml_filename, "w", encoding="utf-8") as f:
-        f.write("# Generated config for clash-meta with Warp/WireGuard proxies that have amnezia values.\n")
+        f.write(
+            "# Generated config for clash-meta with Warp/WireGuard proxies that have amnezia values.\n"
+        )
         f.write(f"# Generated on: {datetime.datetime.now().isoformat()}\n\n")
         yaml.safe_dump(config_template, f, allow_unicode=True, sort_keys=False)
     logger.info(f"Successfully generated '{output_yaml_filename}'")
