@@ -1,0 +1,153 @@
+port: 7890
+socks-port: 7891
+mixed-port: 7892
+ipv6: true
+allow-lan: true
+mode: rule
+log-level: info
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+unified-delay: false
+external-controller: 127.0.0.1:9090
+external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
+external-ui: ui
+external-controller-cors:
+  allow-origins:
+  - "*"
+  allow-private-network: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: false
+  respect-rules: true
+  use-system-hosts: false
+  nameserver:
+  - tcp://185.228.168.9#⚪ SELECT
+  - https://8.8.8.8/dns-query
+  - https://208.67.222.222/dns-query
+  - https://dns.alidns.com/dns-query
+  fallback:
+  - tls://dns.quad9.net
+  - tls://dns.google
+  - tls://1.1.1.1
+  proxy-server-nameserver:
+  - 8.8.4.4#DIRECT
+  nameserver-policy:
+    raw.githubusercontent.com: 8.8.4.4#DIRECT
+    time.apple.com: 8.8.4.4#DIRECT
+    www.gstatic.com: system
+    rule-set:ir:
+    - 8.8.4.4#DIRECT
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  strict-route: true
+  auto-detect-interface: true
+  dns-hijack:
+  - any:53
+  mtu: 9000
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports:
+      - 80
+      - 8080
+      - 8880
+      - 2052
+      - 2082
+      - 2086
+      - 2095
+    TLS:
+      ports:
+      - 443
+      - 8443
+      - 2053
+      - 2083
+      - 2087
+      - 2096
+proxies: []
+proxy-groups:
+- name: ⚪ SELECT
+  type: select
+  proxies:
+  - ⚪ AUTO
+  - DIRECT
+  - 🇮🇷 ReGuard-v4
+  - 🇩🇪 ReGuard-v6
+  - 🇮🇷 EviLink-v4
+  - 🇩🇪 EviLink-v6
+- name: ⚪ AUTO
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - 🇮🇷 ReGuard-v4
+  - 🇩🇪 ReGuard-v6
+  - 🇮🇷 EviLink-v4
+  - 🇩🇪 EviLink-v6
+rule-providers:
+  ir:
+    type: http
+    format: text
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ir.txt
+    path: ./ruleset/ir.txt
+    interval: 86400
+  ir-cidr:
+    type: http
+    format: text
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ircidr.txt
+    path: ./ruleset/ir-cidr.txt
+    interval: 86400
+  malware:
+    type: http
+    format: text
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.txt
+    path: ./ruleset/malware.txt
+    interval: 86400
+  phishing:
+    type: http
+    format: text
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.txt
+    path: ./ruleset/phishing.txt
+    interval: 86400
+  cryptominers:
+    type: http
+    format: text
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.txt
+    path: ./ruleset/cryptominers.txt
+    interval: 86400
+  ads:
+    type: http
+    format: text
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ads.txt
+    path: ./ruleset/ads.txt
+    interval: 86400
+rules:
+- RULE-SET,ir,DIRECT
+- RULE-SET,ir-cidr,DIRECT
+- RULE-SET,ads,REJECT
+- RULE-SET,malware,REJECT
+- RULE-SET,phishing,REJECT
+- RULE-SET,cryptominers,REJECT
+- MATCH,⚪ SELECT
+ntp:
+  enable: true
+  server: time.apple.com
+  port: 123
+  interval: 30
