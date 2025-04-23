@@ -13,8 +13,8 @@
   "external-controller": "127.0.0.1:9090",
   "external-ui-url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
   "external-ui": "ui",
-  "external-controller-cors": {"allow-origins": ["*"], "allow-private-network": true},
-  "profile": {"store-selected": true, "store-fake-ip": true},
+  "external-controller-cors": { "allow-origins": ["*"], "allow-private-network": true },
+  "profile": { "store-selected": true, "store-fake-ip": true },
   "dns": {
     "enable": true,
     "listen": "0.0.0.0:1053",
@@ -27,11 +27,7 @@
       "https://208.67.222.222/dns-query",
       "https://dns.alidns.com/dns-query"
     ],
-    "fallback": [
-      "tls://dns.quad9.net",
-      "tls://dns.google",
-      "tls://1.1.1.1"
-    ],
+    "fallback": ["tls://dns.quad9.net", "tls://dns.google", "tls://1.1.1.1"],
     "proxy-server-nameserver": ["8.8.4.4#DIRECT"],
     "nameserver-policy": {
       "raw.githubusercontent.com": "8.8.4.4#DIRECT",
@@ -55,8 +51,8 @@
     "parse-pure-ip": true,
     "override-destination": false,
     "sniff": {
-      "HTTP": {"ports": [80, 8080, 8880, 2052, 2082, 2086, 2095]},
-      "TLS": {"ports": [443, 8443, 2053, 2083, 2087, 2096]}
+      "HTTP": { "ports": [80, 8080, 8880, 2052, 2082, 2086, 2095] },
+      "TLS": { "ports": [443, 8443, 2053, 2083, 2087, 2096] }
     }
   },
   "proxies": [],
@@ -79,12 +75,7 @@
       "url": "http://www.gstatic.com/generate_204",
       "interval": 300,
       "tolerance": 50,
-      "proxies": [
-        "🇮🇷 ReGuard-v4",
-        "🇩🇪 ReGuard-v6",
-        "🇮🇷 EviLink-v4",
-        "🇩🇪 EviLink-v6"
-      ]
+      "proxies": ["🇮🇷 ReGuard-v4", "🇩🇪 ReGuard-v6", "🇮🇷 EviLink-v4", "🇩🇪 EviLink-v6"]
     }
   ],
   "rule-providers": {
@@ -146,5 +137,5 @@
     "RULE-SET,cryptominers,REJECT",
     "MATCH,⚪ SELECT"
   ],
-  "ntp": {"enable": true, "server": "time.apple.com", "port": 123, "interval": 30}
+  "ntp": { "enable": true, "server": "time.apple.com", "port": 123, "interval": 30 }
 }
