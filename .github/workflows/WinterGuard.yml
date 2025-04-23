@@ -3,13 +3,17 @@ name: Gen clash-wg conf
 on:
   push:
     branches: ['main']
+    paths: # Will be executed workflow if there’s any change in any of these files
+      - '**/winterguard.*'
+      - 'sub/*.yml'
+      - 'edge/assets/*.yml'
   schedule:
     - cron: '0 */12 * * *' # Execution every 12 hours
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-24.04 # Using the stable version
     timeout-minutes: 15 # To prevent freezing
 
     steps:
@@ -27,7 +31,7 @@ jobs:
           cache: pip
           architecture: x64
 
-        # Creating a cache for increased speed, performance, efficiency, and saving resources
+        # Creating a cache for increased speed and performance, also saving resources
       - name: Cache Python packages
         uses: actions/cache@v4
         with:
@@ -43,7 +47,7 @@ jobs:
        
         # Run ;⁠)
       - name: Run config generation script
-        run: python winterguard.py
+        run: python edge/winterguard.py
 
       - name: Commit and push config files
         run: |
