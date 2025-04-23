@@ -3,12 +3,12 @@ name: Gen clash-wg conf
 on:
   push:
     branches: ['main']
-    paths: # Will be executed workflow if there’s any change in any of these files
+    paths:
       - '**/winterguard.*'
       - 'sub/*.yml'
       - 'edge/assets/*.yml'
   schedule:
-    - cron: '0 */12 * * *' # Execution every 12 hours
+    - cron: '0 */12 * * *'
   workflow_dispatch:
 
 jobs:
@@ -26,12 +26,13 @@ jobs:
 
       - name: List directory contents
         run: |
-          ls -R
+          ls -R edge
+          cat edge/requirements.txt
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12' # Using the stable version
+          python-version: '3.12'
           cache: pip
           architecture: x64
 
