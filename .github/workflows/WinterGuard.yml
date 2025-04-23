@@ -2,10 +2,9 @@ name: Gen clash-wg conf
 
 on:
   push:
-    branches:
+    branches: ['main']
   schedule:
     - cron: '0 */12 * * *' # Execution every 12 hours
-      - main
   workflow_dispatch:
 
 jobs:
