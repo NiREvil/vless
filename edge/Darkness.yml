@@ -1,52 +1,63 @@
-name: IP Generator
+name: Generate Clash WG 
 
 on:
+  push:
+    branches:
   schedule:
     - cron: '0 */12 * * *'
+      - main
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-24.04
-
-    permissions:
-      contents: write
+    timeout-minutes: 15
 
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: 'recursive'
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+          cache: pip
+          architecture: x64
+
+      - name: Cache Python packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install requests
+          python -m pip install --upgrade pip || exit 1
+          pip install -r edge/requirements.txt || exit 1
 
-      - name: Run script
+      - name: Run config generation script
+        run: python winterguard.py
+
+      - name: Commit and push config files
         run: |
-          python script.py
+          git config --local user.name "Github Actions"
+          git config --local user.email "actions@github.com"
+                    
+          if git status --porcelain | grep -q "clash-meta-wg.json" || git status --porcelain"; then
+            echo "Changes detected. Committing and pushing."
+            git add sub/clash-meta-wg.json
+            git commit -m "Auto: Update Clash config files at $(TZ='Asia/Tehran' date '+%H:%M:%S')"
+            git push
+          else
+            echo "No changes detected in config files."
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit changes to private repo
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add ips.txt README.md
-          git commit -m "Update files" || echo "No changes to commit"
-          git push origin main
 
-      - name: Sync output files to public repo
-        run: |
-          git config --global user.email "171773043+darknessm427@users.noreply.github.com"
-          git config --global user.name "darknessm427"
-
-          git clone https://x-access-token:${{ secrets.PUSH_TOKEN_PUBLIC }}@github.com/darknessm427/IP_Generator.git public-repo
-          cp ips.txt README.md public-repo/
-
-          cd public-repo
-          git add ips.txt README.md
-          git commit -m "SYNCED $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
-          git push origin main
