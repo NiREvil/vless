@@ -18,9 +18,11 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+
 # Function to encode bytes to base64
 def byte_to_base64(myb):
     return base64.b64encode(myb).decode("utf-8")
+
 
 # Function to generate a public key from private key bytes
 def generate_public_key(key_bytes):
@@ -31,6 +33,7 @@ def generate_public_key(key_bytes):
     )
     return public_key_bytes
 
+
 # Function to generate a new private key with specific bit manipulations
 def generate_private_key():
     logger.info("Generating new private key...")
@@ -40,6 +43,7 @@ def generate_private_key():
     key[31] &= 127
     key[31] |= 64
     return bytes(key)
+
 
 # Function to register a public key with Cloudflare API
 def register_key_on_CF(pub_key):
@@ -72,6 +76,7 @@ def register_key_on_CF(pub_key):
         logger.error(f"Failed to connect to Cloudflare API: {e}")
         raise
 
+
 # Function to generate and register private/public key pair
 def bind_keys():
     priv_bytes = generate_private_key()
@@ -96,6 +101,7 @@ def bind_keys():
         )
         sys.exit(1)
 
+
 # IPv6 prefixes for generating endpoints
 ipv6_prefixes = ["2606:4700:d1", "2606:4700:d0"]
 
@@ -115,6 +121,7 @@ ipv4_prefixes = [
 ports_str = "500 854 859 864 878 880 890 891 894 903 908 928 934 939 942 943 945 946 955 968 987 988 1002 1010 1014 1018 1070 1074 1180 1387 1701 1843 2371 2408 2506 3138 3476 3581 3854 4177 4198 4233 4500 5279 5956 7103 7152 7156 7281 7559 8319 8742 8854 8886"
 available_ports = [int(p) for p in ports_str.split()]
 
+
 # Function to generate a random IPv4 endpoint
 def generate_ipv4_endpoint():
     prefix = random.choice(ipv4_prefixes)
@@ -126,6 +133,7 @@ def generate_ipv4_endpoint():
     logger.info(f"Generated IPv4 endpoint: {server}:{port}")
     return server, port
 
+
 # Function to generate a random IPv6 endpoint
 def generate_ipv6_endpoint():
     prefix = random.choice(ipv6_prefixes)
@@ -134,6 +142,7 @@ def generate_ipv6_endpoint():
     server = f"[{prefix}::{random_part}]"
     logger.info(f"Generated IPv6 endpoint: {server}:{port}")
     return server, port
+
 
 # Main script logic
 try:
@@ -210,9 +219,7 @@ try:
     logger.info(f"Writing output to {output_yaml_filename}")
     try:
         with open(output_yaml_filename, "w", encoding="utf-8") as f:
-            f.write(
-                "# Generated config for clash-meta with Warp/WireGuard proxies.\n"
-            )
+            f.write("# Generated config for clash-meta with Warp/WireGuard proxies.\n")
             f.write(f"# Generated on: {datetime.datetime.now().isoformat()}\n\n")
             yaml.safe_dump(config_template, f, allow_unicode=True, sort_keys=False)
         logger.info(f"Successfully generated '{output_yaml_filename}'")
