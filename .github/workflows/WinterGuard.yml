@@ -62,7 +62,7 @@ jobs:
                     
           if git status --porcelain | grep -q "clash-meta-wg.yml" || git status --porcelain; then
             echo "Changes detected. Committing and pushing."
-            git add sub/clash-meta-wg.yml
+            git add .
             git commit -m "Auto: Update clash-wg configurations at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" -m "Wireguard private key, addresses, reserved, and all IPs have been renewed"
             git -c committer.name="NiREvil" -c committer.email="126243832+NiREvil@users.noreply.github.com" push
           else
