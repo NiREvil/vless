@@ -32,7 +32,7 @@ dns:
   proxy-server-nameserver:
     - 8.8.8.8#DIRECT
   nameserver-policy:
-    # Use 8.8.8.8#DIRECT for these common domains، Especially GitHub ⁦;⁠)⁩
+    # Use 8.8.8.8#DIRECT for these common domains، Especially GitHub
     'raw.githubusercontent.com': 8.8.8.8#DIRECT
     'time.apple.com': 8.8.8.8#DIRECT
     'rule-set:ir': # Route Iranian domains via DIRECT DNS
