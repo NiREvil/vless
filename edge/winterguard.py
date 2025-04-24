@@ -224,7 +224,7 @@ try:
 
     for i in range(1, num_proxies + 1):
         # Generate unique IPv6 endpoint
-        server_ipv4, port_ipv6 = generate_ipv6_endpoint()
+        server_ipv6, port_ipv6 = generate_ipv6_endpoint()
         proxies_list.append(
             {
                 "name": f"{i}- ReGuard - Dialer 🇩🇪",
@@ -244,7 +244,7 @@ try:
         )
 
         # Generate unique IPv4 endpoint
-        server_ipv6, port_ipv4 = generate_ipv4_endpoint()
+        server_ipv4, port_ipv4 = generate_ipv4_endpoint()
         proxies_list.append(
             {
                 "name": f"{i}- ReGuard - Entry 🇮🇷",
