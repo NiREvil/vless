@@ -81,7 +81,6 @@ inaki.gianlucca@fabricoak.com
 
 ### ESET VPN ACCESS CODES
 
-
 ```ruby
 I2L01CEOPF
 NH7TAFR9K4
