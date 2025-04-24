@@ -1,0 +1,473 @@
+# Generated Clash Meta WireGuard config using WG script
+# Generated on: 2025-04-24T20:44:05.125353
+
+mixed-port: 7890
+ipv6: true
+allow-lan: true
+mode: rule
+log-level: warning
+disable-keep-alive: false
+keep-alive-idle: 10
+keep-alive-interval: 15
+unified-delay: false
+geo-auto-update: true
+geo-update-interval: 168
+external-controller: 127.0.0.1:9090
+external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
+external-ui: ui
+external-controller-cors:
+  allow-origins:
+  - '*'
+  allow-private-network: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  respect-rules: true
+  use-system-hosts: false
+  nameserver:
+  - 1.1.1.1#🔰 Proxies
+  proxy-server-nameserver:
+  - 8.8.8.8#DIRECT
+  nameserver-policy:
+    raw.githubusercontent.com: 8.8.8.8#DIRECT
+    time.apple.com: 8.8.8.8#DIRECT
+    rule-set:ir:
+    - 8.8.8.8#DIRECT
+    rule-set:openai: 178.22.122.100#DIRECT
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - geosite:private
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  strict-route: true
+  auto-detect-interface: true
+  dns-hijack:
+  - any:53
+  - tcp://any:53
+  mtu: 9000
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports:
+      - 80
+      - 8080
+      - 8880
+      - 2052
+      - 2082
+      - 2086
+      - 2095
+    TLS:
+      ports:
+      - 443
+      - 8443
+      - 2053
+      - 2083
+      - 2087
+      - 2096
+proxies:
+- name: WG-Dialer-01 🔗
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
+  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
+  server: 162.159.195.207
+  port: 7156
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: T5PB
+  udp: true
+  mtu: 1280
+  dialer-proxy: WG-Entry-01 ⚡
+- name: WG-Entry-01 ⚡
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
+  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
+  server: 2606:4700:d0::3f24:ce15:6a0a:8dff
+  port: 955
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: XFaE
+  udp: true
+  mtu: 1280
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
+- name: WG-Dialer-02 🔗
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
+  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
+  server: 188.114.96.161
+  port: 854
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: T5PB
+  udp: true
+  mtu: 1280
+  dialer-proxy: WG-Entry-02 ⚡
+- name: WG-Entry-02 ⚡
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
+  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
+  server: 2606:4700:d0::c62d:0ebb:d353:8a7a
+  port: 987
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: XFaE
+  udp: true
+  mtu: 1280
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
+- name: WG-Dialer-03 🔗
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
+  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
+  server: 188.114.97.116
+  port: 1070
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: T5PB
+  udp: true
+  mtu: 1280
+  dialer-proxy: WG-Entry-03 ⚡
+- name: WG-Entry-03 ⚡
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
+  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
+  server: 162.159.195.17
+  port: 955
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: XFaE
+  udp: true
+  mtu: 1280
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
+- name: WG-Dialer-04 🔗
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
+  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
+  server: 162.159.195.102
+  port: 2408
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: T5PB
+  udp: true
+  mtu: 1280
+  dialer-proxy: WG-Entry-04 ⚡
+- name: WG-Entry-04 ⚡
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
+  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
+  server: 162.159.192.90
+  port: 942
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: XFaE
+  udp: true
+  mtu: 1280
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
+- name: WG-Dialer-05 🔗
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
+  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
+  server: 162.159.193.252
+  port: 1387
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: T5PB
+  udp: true
+  mtu: 1280
+  dialer-proxy: WG-Entry-05 ⚡
+- name: WG-Entry-05 ⚡
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
+  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
+  server: 188.114.97.161
+  port: 934
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: XFaE
+  udp: true
+  mtu: 1280
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
+- name: WG-Dialer-06 🔗
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
+  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
+  server: 188.114.98.72
+  port: 942
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: T5PB
+  udp: true
+  mtu: 1280
+  dialer-proxy: WG-Entry-06 ⚡
+- name: WG-Entry-06 ⚡
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
+  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
+  server: 162.159.195.217
+  port: 908
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: XFaE
+  udp: true
+  mtu: 1280
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
+- name: WG-Dialer-07 🔗
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
+  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
+  server: 188.114.97.100
+  port: 894
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: T5PB
+  udp: true
+  mtu: 1280
+  dialer-proxy: WG-Entry-07 ⚡
+- name: WG-Entry-07 ⚡
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
+  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
+  server: 162.159.195.158
+  port: 859
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: XFaE
+  udp: true
+  mtu: 1280
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
+- name: WG-Dialer-08 🔗
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
+  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
+  server: 188.114.99.142
+  port: 1843
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: T5PB
+  udp: true
+  mtu: 1280
+  dialer-proxy: WG-Entry-08 ⚡
+- name: WG-Entry-08 ⚡
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
+  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
+  server: 188.114.96.8
+  port: 1387
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: XFaE
+  udp: true
+  mtu: 1280
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
+proxy-groups:
+- name: 🔰 Proxies
+  type: select
+  proxies:
+  - WG-Entry - Ping
+  - WG-Dialer - Ping
+  - DIRECT
+  - WG-Dialer-01 🔗
+  - WG-Dialer-02 🔗
+  - WG-Dialer-03 🔗
+  - WG-Dialer-04 🔗
+  - WG-Dialer-05 🔗
+  - WG-Dialer-06 🔗
+  - WG-Dialer-07 🔗
+  - WG-Dialer-08 🔗
+  - WG-Entry-01 ⚡
+  - WG-Entry-02 ⚡
+  - WG-Entry-03 ⚡
+  - WG-Entry-04 ⚡
+  - WG-Entry-05 ⚡
+  - WG-Entry-06 ⚡
+  - WG-Entry-07 ⚡
+  - WG-Entry-08 ⚡
+- name: WG-Entry - Ping
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  tolerance: 100
+  proxies:
+  - WG-Entry-01 ⚡
+  - WG-Entry-02 ⚡
+  - WG-Entry-03 ⚡
+  - WG-Entry-04 ⚡
+  - WG-Entry-05 ⚡
+  - WG-Entry-06 ⚡
+  - WG-Entry-07 ⚡
+  - WG-Entry-08 ⚡
+- name: WG-Dialer - Ping
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  tolerance: 100
+  proxies:
+  - WG-Dialer-01 🔗
+  - WG-Dialer-02 🔗
+  - WG-Dialer-03 🔗
+  - WG-Dialer-04 🔗
+  - WG-Dialer-05 🔗
+  - WG-Dialer-06 🔗
+  - WG-Dialer-07 🔗
+  - WG-Dialer-08 🔗
+rule-providers:
+  private:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml
+    path: ./ruleset/private.yaml
+    interval: 86400
+  private-cidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.yaml
+    path: ./ruleset/private-cidr.yaml
+    interval: 86400
+  openai:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.yaml
+    path: ./ruleset/openai.yaml
+    interval: 86400
+  ir:
+    type: http
+    format: text
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ir.txt
+    path: ./ruleset/ir.txt
+    interval: 86400
+  ir-cidr:
+    type: http
+    format: text
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ircidr.txt
+    path: ./ruleset/ir-cidr.txt
+    interval: 86400
+  malware:
+    type: http
+    format: text
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.txt
+    path: ./ruleset/malware.txt
+    interval: 86400
+  phishing:
+    type: http
+    format: text
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.txt
+    path: ./ruleset/phishing.txt
+    interval: 86400
+  cryptominers:
+    type: http
+    format: text
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.txt
+    path: ./ruleset/cryptominers.txt
+    interval: 86400
+  category-ads-all:
+    type: http
+    format: text
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.txt
+    path: ./ruleset/category-ads-all.txt
+    interval: 86400
+rules:
+- RULE-SET,malware,REJECT
+- RULE-SET,phishing,REJECT
+- RULE-SET,cryptominers,REJECT
+- RULE-SET,category-ads-all,REJECT
+- RULE-SET,private,DIRECT
+- RULE-SET,ir,DIRECT
+- RULE-SET,openai,DIRECT
+- RULE-SET,private-cidr,DIRECT,no-resolve
+- RULE-SET,ir-cidr,DIRECT
+- MATCH,🔰 Proxies
+ntp:
+  enable: true
+  server: time.apple.com
+  port: 123
+  interval: 30
