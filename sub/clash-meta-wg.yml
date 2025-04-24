@@ -1,5 +1,5 @@
 # Generated config for clash-meta with Warp/WireGuard proxies.
-# Generated on: 2025-04-24T10:58:41.675167
+# Generated on: 2025-04-24T11:19:48.201912
 
 mixed-port: 7890
 ipv6: true
@@ -76,138 +76,138 @@ sniffer:
       - 2087
       - 2096
 proxies:
-- name: 1 - 🇮🇷 ReGuard
+- name: 1- ReGuard - Dialer 🇩🇪
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:da85:5853:bfb9:9a9d:594a/128
-  private-key: yC4J9T7KE55A0xM3z8pA+Kkj64BU96ymJgV+PNL5v3Y=
-  server: 162.159.195.163
-  port: 1014
+  ipv6: 2606:4700:110:cb90:84fb:e6e4:dd39:b48f/128
+  private-key: CPCNHd9P/1KWsoNJVp+WOUf8+wyGPiIOBy9VWEHBUmI=
+  server: '[2606:4700:d1::1efa:4fce:fccd:4b55]'
+  port: 859
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: ouYL
+  reserved: C+kH
+  udp: true
+  mtu: 1280
+  dialer-proxy: 1- ReGuard - Entry 🇮🇷
+- name: 1- ReGuard - Entry 🇮🇷
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:a683:15d9:8020:6a60:b198/128
+  private-key: 0LRQMi/lHhiwTx1kYxAlTIF6vTCxdh4+Bsra2CNtu1M=
+  server: 188.114.97.83
+  port: 1010
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: hdjl
   udp: true
   mtu: 1280
   amnezia-wg-option:
     jc: 4
     jmin: 40
     jmax: 100
-- name: 1 - 🇩🇪 ReGuard
+- name: 2- ReGuard - Dialer 🇩🇪
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:1a62:2c4d:af12:72f7:c252/128
-  private-key: eIzM9EKAw4nOxWiNiFI/fE5kyCIUpGBuI1HRvMGklH4=
-  server: '[2606:4700:d0::ccd0:e9f6:9702:7cb3]'
-  port: 864
+  ipv6: 2606:4700:110:3505:02b1:1ab0:7a46:5da8/128
+  private-key: CPCNHd9P/1KWsoNJVp+WOUf8+wyGPiIOBy9VWEHBUmI=
+  server: '[2606:4700:d1::7e4a:42c2:7a76:82d6]'
+  port: 1002
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: X4Lh
+  reserved: C+kH
   udp: true
   mtu: 1280
-  dialer-proxy: 1 - 🇮🇷 ReGuard
-- name: 2 - 🇮🇷 ReGuard
+  dialer-proxy: 2- ReGuard - Entry 🇮🇷
+- name: 2- ReGuard - Entry 🇮🇷
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:69ca:17f2:c4ea:46f6:5775/128
-  private-key: yC4J9T7KE55A0xM3z8pA+Kkj64BU96ymJgV+PNL5v3Y=
-  server: 188.114.99.209
-  port: 3581
+  ipv6: 2606:4700:110:e807:2ff6:c477:39d1:932a/128
+  private-key: 0LRQMi/lHhiwTx1kYxAlTIF6vTCxdh4+Bsra2CNtu1M=
+  server: 162.159.193.122
+  port: 939
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: ouYL
-  udp: true
-  mtu: 1280
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 100
-- name: 2 - 🇩🇪 ReGuard
-  type: wireguard
-  ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:3546:f2a2:751a:bc21:c3c7/128
-  private-key: eIzM9EKAw4nOxWiNiFI/fE5kyCIUpGBuI1HRvMGklH4=
-  server: '[2606:4700:d1::0b4c:17ea:f288:8446]'
-  port: 928
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  - ::/0
-  reserved: X4Lh
-  udp: true
-  mtu: 1280
-  dialer-proxy: 2 - 🇮🇷 ReGuard
-- name: 3 - 🇮🇷 ReGuard
-  type: wireguard
-  ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:a83a:8fb8:705c:18d0:c4f1/128
-  private-key: yC4J9T7KE55A0xM3z8pA+Kkj64BU96ymJgV+PNL5v3Y=
-  server: 162.159.204.150
-  port: 928
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  - ::/0
-  reserved: ouYL
+  reserved: hdjl
   udp: true
   mtu: 1280
   amnezia-wg-option:
     jc: 4
     jmin: 40
     jmax: 100
-- name: 3 - 🇩🇪 ReGuard
+- name: 3- ReGuard - Dialer 🇩🇪
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8367:d77b:3b5c:53d2:d6d9/128
-  private-key: eIzM9EKAw4nOxWiNiFI/fE5kyCIUpGBuI1HRvMGklH4=
-  server: '[2606:4700:d0::9261:60b4:27bb:2ab0]'
-  port: 1180
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  - ::/0
-  reserved: X4Lh
-  udp: true
-  mtu: 1280
-  dialer-proxy: 3 - 🇮🇷 ReGuard
-- name: 4 - 🇮🇷 ReGuard
-  type: wireguard
-  ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:95c4:7aa1:09b1:ee71:80fe/128
-  private-key: yC4J9T7KE55A0xM3z8pA+Kkj64BU96ymJgV+PNL5v3Y=
-  server: 162.159.195.228
-  port: 2408
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  - ::/0
-  reserved: ouYL
-  udp: true
-  mtu: 1280
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 100
-- name: 4 - 🇩🇪 ReGuard
-  type: wireguard
-  ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8f10:f0b9:654d:ab57:e4f4/128
-  private-key: eIzM9EKAw4nOxWiNiFI/fE5kyCIUpGBuI1HRvMGklH4=
-  server: '[2606:4700:d0::4844:3dd4:6dea:49f6]'
+  ipv6: 2606:4700:110:4984:1470:b854:eb7e:9a5b/128
+  private-key: CPCNHd9P/1KWsoNJVp+WOUf8+wyGPiIOBy9VWEHBUmI=
+  server: '[2606:4700:d0::bdd1:20a7:ff9b:f0bf]'
   port: 2371
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: X4Lh
+  reserved: C+kH
   udp: true
   mtu: 1280
-  dialer-proxy: 4 - 🇮🇷 ReGuard
+  dialer-proxy: 3- ReGuard - Entry 🇮🇷
+- name: 3- ReGuard - Entry 🇮🇷
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:c208:1cb0:fa91:64cc:f704/128
+  private-key: 0LRQMi/lHhiwTx1kYxAlTIF6vTCxdh4+Bsra2CNtu1M=
+  server: 188.114.98.99
+  port: 3138
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: hdjl
+  udp: true
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 100
+- name: 4- ReGuard - Dialer 🇩🇪
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:7a44:99df:d574:911c:6582/128
+  private-key: CPCNHd9P/1KWsoNJVp+WOUf8+wyGPiIOBy9VWEHBUmI=
+  server: '[2606:4700:d0::5226:f770:f6df:23ae]'
+  port: 854
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: C+kH
+  udp: true
+  mtu: 1280
+  dialer-proxy: 4- ReGuard - Entry 🇮🇷
+- name: 4- ReGuard - Entry 🇮🇷
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:031e:f0cc:466e:2c1e:48f4/128
+  private-key: 0LRQMi/lHhiwTx1kYxAlTIF6vTCxdh4+Bsra2CNtu1M=
+  server: 188.114.97.111
+  port: 859
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: hdjl
+  udp: true
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 100
 proxy-groups: []
 rrule-providers:
   private:
