@@ -214,20 +214,40 @@ try:
     proxies_list = []
     num_proxies = 4  # Generate 4 pairs of proxies (IPv4 and IPv6)
 
+    # Generate one set of keys for all IPv6 proxies
+    logger.info("Generating keys for all ReGuard - Dialer 🇩🇪 (IPv6) proxies")
+    private_key_ipv6, reserved_ipv6 = bind_keys("ipv6")
+    
     # Generate one set of keys for all IPv4 proxies
-    logger.info("Generating keys for all 🇮🇷 ReGuard (IPv4) proxies")
+    logger.info("Generating keys for all ReGuard - Entry 🇮🇷 (IPv4) proxies")
     private_key_ipv4, reserved_ipv4 = bind_keys("ipv4")
 
-    # Generate one set of keys for all IPv6 proxies
-    logger.info("Generating keys for all 🇩🇪 ReGuard (IPv6) proxies")
-    private_key_ipv6, reserved_ipv6 = bind_keys("ipv6")
-
     for i in range(1, num_proxies + 1):
-        # Generate unique IPv4 endpoint
-        server_ipv4, port_ipv4 = generate_ipv4_endpoint()
+        # Generate unique IPv6 endpoint
+        server_ipv4, port_ipv6 = generate_ipv6_endpoint()
         proxies_list.append(
             {
-                "name": f"{i} - 🇮🇷 ReGuard",
+                "name": f"{i}- ReGuard - Dialer 🇩🇪",
+                "type": "wireguard",
+                "ip": "172.16.0.2/32",
+                "ipv6": f"2606:4700:110:{':'.join(f'{random.randint(0, 65535):04x}' for _ in range(5))}/128",
+                "private-key": private_key_ipv6,
+                "server": server_ipv6,
+                "port": port_ipv6,
+                "public-key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+                "allowed-ips": ["0.0.0.0/0", "::/0"],
+                "reserved": reserved_ipv6,
+                "udp": True,
+                "mtu": 1280,
+                "dialer-proxy": f"{i}- ReGuard - Entry 🇮🇷",
+            }
+        )
+
+        # Generate unique IPv4 endpoint
+        server_ipv6, port_ipv4 = generate_ipv4_endpoint()
+        proxies_list.append(
+            {
+                "name": f"{i}- ReGuard - Entry 🇮🇷",
                 "type": "wireguard",
                 "ip": "172.16.0.2/32",
                 "ipv6": f"2606:4700:110:{':'.join(f'{random.randint(0, 65535):04x}' for _ in range(5))}/128",
@@ -244,26 +264,6 @@ try:
                     "jmin": 40,
                     "jmax": 100,
                 },
-            }
-        )
-
-        # Generate unique IPv6 endpoint
-        server_ipv6, port_ipv6 = generate_ipv6_endpoint()
-        proxies_list.append(
-            {
-                "name": f"{i} - 🇩🇪 ReGuard",
-                "type": "wireguard",
-                "ip": "172.16.0.2/32",
-                "ipv6": f"2606:4700:110:{':'.join(f'{random.randint(0, 65535):04x}' for _ in range(5))}/128",
-                "private-key": private_key_ipv6,
-                "server": server_ipv6,
-                "port": port_ipv6,
-                "public-key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-                "allowed-ips": ["0.0.0.0/0", "::/0"],
-                "reserved": reserved_ipv6,
-                "udp": True,
-                "mtu": 1280,
-                "dialer-proxy": f"{i} - 🇮🇷 ReGuard",
             }
         )
 
