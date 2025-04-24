@@ -1,5 +1,5 @@
 # Generated config for clash-meta with Warp/WireGuard proxies.
-# Generated on: 2025-04-24T00:52:22.422924
+# Generated on: 2025-04-24T10:58:41.675167
 
 mixed-port: 7890
 ipv6: true
@@ -12,12 +12,12 @@ keep-alive-interval: 15
 unified-delay: false
 geo-auto-update: true
 geo-update-interval: 168
-external-controller: 127.0.0.1:9090
+xternal-controller: 127.0.0.1:9090
 external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
 external-ui: ui
 external-controller-cors:
   allow-origins:
-    - '*'
+  - '*'
   allow-private-network: true
 profile:
   store-selected: true
@@ -29,15 +29,19 @@ dns:
   respect-rules: true
   use-system-hosts: false
   nameserver:
-    - 1.1.1.1#⚪ SELECT
+  - 1.1.1.1#🔴 SELECT
   proxy-server-nameserver:
-    - 8.8.8.8#DIRECT
+  - 8.8.8.8#DIRECT
   nameserver-policy:
     raw.githubusercontent.com: 8.8.8.8#DIRECT
     time.apple.com: 8.8.8.8#DIRECT
     rule-set:ir:
-      - 8.8.8.8#DIRECT
+    - 8.8.8.8#DIRECT
     rule-set:openai: 178.22.122.100#DIRECT
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - geosite:private
 tun:
   enable: true
   stack: mixed
@@ -45,8 +49,8 @@ tun:
   strict-route: true
   auto-detect-interface: true
   dns-hijack:
-    - any:53
-    - tcp://any:53
+  - any:53
+  - tcp://any:53
   mtu: 9000
 sniffer:
   enable: true
@@ -56,189 +60,156 @@ sniffer:
   sniff:
     HTTP:
       ports:
-        - 80
-        - 8080
-        - 8880
-        - 2052
-        - 2082
-        - 2086
-        - 2095
+      - 80
+      - 8080
+      - 8880
+      - 2052
+      - 2082
+      - 2086
+      - 2095
     TLS:
       ports:
-        - 443
-        - 8443
-        - 2053
-        - 2083
-        - 2087
-        - 2096
+      - 443
+      - 8443
+      - 2053
+      - 2083
+      - 2087
+      - 2096
 proxies:
-  - name: 1 - 🇮🇷 ReGuard
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:9c7e:2f75:ec1c:4522:390f/128
-    private-key: cAWtOgC31oYk8WmGNigLVt/O5WNWSVj+WgtSk6uI6mE=
-    server: 188.114.98.50
-    port: 955
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: iDZg
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 4
-      jmin: 40
-      jmax: 100
-  - name: 1 - 🇩🇪 ReGuard
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:1768:cc32:a0eb:c5b5:af30/128
-    private-key: 8D1+h1abEsItmo8w9XySND9bxqqha8zYIkAV7C+TrG8=
-    server: '[2606:4700:d0::a41b:c089:3b37:95ee]'
-    port: 5956
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: UWMV
-    udp: true
-    mtu: 1280
-    dialer-proxy: 1 - 🇮🇷 ReGuard
-  - name: 2 - 🇮🇷 ReGuard
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:0701:b151:714e:b2f2:7f02/128
-    private-key: cAWtOgC31oYk8WmGNigLVt/O5WNWSVj+WgtSk6uI6mE=
-    server: 188.114.96.106
-    port: 7281
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: iDZg
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 4
-      jmin: 40
-      jmax: 100
-  - name: 2 - 🇩🇪 ReGuard
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:cfd9:f8c1:3757:f637:0ac6/128
-    private-key: 8D1+h1abEsItmo8w9XySND9bxqqha8zYIkAV7C+TrG8=
-    server: '[2606:4700:d1::7bab:2073:4c32:28e5]'
-    port: 1002
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: UWMV
-    udp: true
-    mtu: 1280
-    dialer-proxy: 2 - 🇮🇷 ReGuard
-  - name: 3 - 🇮🇷 ReGuard
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:36c0:08a7:b811:acb8:274a/128
-    private-key: cAWtOgC31oYk8WmGNigLVt/O5WNWSVj+WgtSk6uI6mE=
-    server: 188.114.99.82
-    port: 1843
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: iDZg
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 4
-      jmin: 40
-      jmax: 100
-  - name: 3 - 🇩🇪 ReGuard
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:7ab4:235d:82d3:3b66:4eda/128
-    private-key: 8D1+h1abEsItmo8w9XySND9bxqqha8zYIkAV7C+TrG8=
-    server: '[2606:4700:d0::21fc:7fd9:81dc:bd52]'
-    port: 988
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: UWMV
-    udp: true
-    mtu: 1280
-    dialer-proxy: 3 - 🇮🇷 ReGuard
-  - name: 4 - 🇮🇷 ReGuard
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:ce46:9e87:3d6c:18a2:2e58/128
-    private-key: cAWtOgC31oYk8WmGNigLVt/O5WNWSVj+WgtSk6uI6mE=
-    server: 162.159.204.155
-    port: 880
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: iDZg
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: 4
-      jmin: 40
-      jmax: 100
-  - name: 4 - 🇩🇪 ReGuard
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:b6b0:5649:5a13:b223:fc95/128
-    private-key: 8D1+h1abEsItmo8w9XySND9bxqqha8zYIkAV7C+TrG8=
-    server: '[2606:4700:d1::6600:fff2:63d4:4f46]'
-    port: 4233
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: UWMV
-    udp: true
-    mtu: 1280
-    dialer-proxy: 4 - 🇮🇷 ReGuard
-proxy-groups:
-  - name: ⚪ SELECT
-    type: select
-    proxies:
-      - 🇮🇷 Best Ping
-      - 🇩🇪 Best Ping
-      - 1 - 🇮🇷 ReGuard
-      - 2 - 🇮🇷 ReGuard
-      - 3 - 🇮🇷 ReGuard
-      - 4 - 🇮🇷 ReGuard
-      - 1 - 🇩🇪 ReGuard
-      - 2 - 🇩🇪 ReGuard
-      - 3 - 🇩🇪 ReGuard
-      - 4 - 🇩🇪 ReGuard
-  - name: 🇮🇷 Best Ping
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 30
-    tolerance: 50
-    proxies:
-      - 1 - 🇮🇷 ReGuard
-      - 2 - 🇮🇷 ReGuard
-      - 3 - 🇮🇷 ReGuard
-      - 4 - 🇮🇷 ReGuard
-  - name: 🇩🇪 Best Ping
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 30
-    tolerance: 50
-    proxies:
-      - 1 - 🇩🇪 ReGuard
-      - 2 - 🇩🇪 ReGuard
-      - 3 - 🇩🇪 ReGuard
-      - 4 - 🇩🇪 ReGuard
-rule-providers:
+- name: 1 - 🇮🇷 ReGuard
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:da85:5853:bfb9:9a9d:594a/128
+  private-key: yC4J9T7KE55A0xM3z8pA+Kkj64BU96ymJgV+PNL5v3Y=
+  server: 162.159.195.163
+  port: 1014
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: ouYL
+  udp: true
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 100
+- name: 1 - 🇩🇪 ReGuard
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:1a62:2c4d:af12:72f7:c252/128
+  private-key: eIzM9EKAw4nOxWiNiFI/fE5kyCIUpGBuI1HRvMGklH4=
+  server: '[2606:4700:d0::ccd0:e9f6:9702:7cb3]'
+  port: 864
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: X4Lh
+  udp: true
+  mtu: 1280
+  dialer-proxy: 1 - 🇮🇷 ReGuard
+- name: 2 - 🇮🇷 ReGuard
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:69ca:17f2:c4ea:46f6:5775/128
+  private-key: yC4J9T7KE55A0xM3z8pA+Kkj64BU96ymJgV+PNL5v3Y=
+  server: 188.114.99.209
+  port: 3581
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: ouYL
+  udp: true
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 100
+- name: 2 - 🇩🇪 ReGuard
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:3546:f2a2:751a:bc21:c3c7/128
+  private-key: eIzM9EKAw4nOxWiNiFI/fE5kyCIUpGBuI1HRvMGklH4=
+  server: '[2606:4700:d1::0b4c:17ea:f288:8446]'
+  port: 928
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: X4Lh
+  udp: true
+  mtu: 1280
+  dialer-proxy: 2 - 🇮🇷 ReGuard
+- name: 3 - 🇮🇷 ReGuard
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:a83a:8fb8:705c:18d0:c4f1/128
+  private-key: yC4J9T7KE55A0xM3z8pA+Kkj64BU96ymJgV+PNL5v3Y=
+  server: 162.159.204.150
+  port: 928
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: ouYL
+  udp: true
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 100
+- name: 3 - 🇩🇪 ReGuard
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8367:d77b:3b5c:53d2:d6d9/128
+  private-key: eIzM9EKAw4nOxWiNiFI/fE5kyCIUpGBuI1HRvMGklH4=
+  server: '[2606:4700:d0::9261:60b4:27bb:2ab0]'
+  port: 1180
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: X4Lh
+  udp: true
+  mtu: 1280
+  dialer-proxy: 3 - 🇮🇷 ReGuard
+- name: 4 - 🇮🇷 ReGuard
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:95c4:7aa1:09b1:ee71:80fe/128
+  private-key: yC4J9T7KE55A0xM3z8pA+Kkj64BU96ymJgV+PNL5v3Y=
+  server: 162.159.195.228
+  port: 2408
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: ouYL
+  udp: true
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 100
+- name: 4 - 🇩🇪 ReGuard
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8f10:f0b9:654d:ab57:e4f4/128
+  private-key: eIzM9EKAw4nOxWiNiFI/fE5kyCIUpGBuI1HRvMGklH4=
+  server: '[2606:4700:d0::4844:3dd4:6dea:49f6]'
+  port: 2371
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: X4Lh
+  udp: true
+  mtu: 1280
+  dialer-proxy: 4 - 🇮🇷 ReGuard
+proxy-groups: []
+rrule-providers:
   private:
     type: http
     format: yaml
@@ -253,6 +224,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.yaml
     path: ./ruleset/private-cidr.yaml
     interval: 86400
+  openai:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.yaml
+    path: ./ruleset/openai.yaml
+    interval: 86400
   ir:
     type: http
     format: text
@@ -266,13 +244,6 @@ rule-providers:
     behavior: ipcidr
     url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ircidr.txt
     path: ./ruleset/ir-cidr.txt
-    interval: 86400
-  openai:
-    type: http
-    format: yaml
-    behavior: domain
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.yaml
-    path: ./ruleset/openai.yaml
     interval: 86400
   malware:
     type: http
@@ -303,16 +274,16 @@ rule-providers:
     path: ./ruleset/category-ads-all.txt
     interval: 86400
 rules:
-  - RULE-SET,malware,REJECT
-  - RULE-SET,phishing,REJECT
-  - RULE-SET,cryptominers,REJECT
-  - RULE-SET,category-ads-all,REJECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,ir,DIRECT
-  - RULE-SET,openai,DIRECT
-  - RULE-SET,private-cidr,DIRECT,no-resolve
-  - RULE-SET,ir-cidr,DIRECT
-  - MATCH,⚪ SELECT
+- RULE-SET,malware,REJECT
+- RULE-SET,phishing,REJECT
+- RULE-SET,cryptominers,REJECT
+- RULE-SET,category-ads-all,REJECT
+- RULE-SET,private,DIRECT
+- RULE-SET,ir,DIRECT
+- RULE-SET,openai,DIRECT
+- RULE-SET,private-cidr,DIRECT,no-resolve
+- RULE-SET,ir-cidr,DIRECT
+- MATCH,🔴 SELECT
 ntp:
   enable: true
   server: time.apple.com
