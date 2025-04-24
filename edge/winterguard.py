@@ -217,7 +217,7 @@ try:
     # Generate one set of keys for all IPv6 proxies
     logger.info("Generating keys for all ReGuard - Dialer 🇩🇪 (IPv6) proxies")
     private_key_ipv6, reserved_ipv6 = bind_keys("ipv6")
-    
+
     # Generate one set of keys for all IPv4 proxies
     logger.info("Generating keys for all ReGuard - Entry 🇮🇷 (IPv4) proxies")
     private_key_ipv4, reserved_ipv4 = bind_keys("ipv4")
