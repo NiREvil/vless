@@ -14,7 +14,7 @@ from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_excep
 
 # --- Configuration ---
 NUM_PROXY_PAIRS = 8 # Number of proxy pairs to generate
-OUTPUT_JSON_FILENAME = "sub/clash-meta-wg.yml" # Output JSON filename
+OUTPUT_YAML_FILENAME = "sub/clash-meta-wg.yml" # Output JSON filename
 CONFIG_TEMPLATE_PATH = "edge/assets/clash-meta-wg-template.yml" # Path to the template file
 CACHE_FILE_PATH = "sub/key_cache.json" # Path for caching generated keys
 
