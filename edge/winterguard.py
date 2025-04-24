@@ -10,13 +10,20 @@ import logging
 import time
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric.x25519 import X25519PrivateKey
-from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+from tenacity import (
+    retry,
+    stop_after_attempt,
+    wait_exponential,
+    retry_if_exception_type,
+)
 
 # --- Configuration ---
-NUM_PROXY_PAIRS = 8 # Number of proxy pairs to generate
-OUTPUT_YAML_FILENAME = "sub/clash-meta-wg.yml" # Output JSON filename
-CONFIG_TEMPLATE_PATH = "edge/assets/clash-meta-wg-template.yml" # Path to the template file
-CACHE_FILE_PATH = "sub/key_cache.json" # Path for caching generated keys
+NUM_PROXY_PAIRS = 8  # Number of proxy pairs to generate
+OUTPUT_YAML_FILENAME = "sub/clash-meta-wg.yml"  # Output JSON filename
+CONFIG_TEMPLATE_PATH = (
+    "edge/assets/clash-meta-wg-template.yml"  # Path to the template file
+)
+CACHE_FILE_PATH = "sub/key_cache.json"  # Path for caching generated keys
 
 # Proxy Naming Configuration
 DIALER_PROXY_BASE_NAME = "ReGuard-Dialer 🇩🇪"
@@ -76,7 +83,9 @@ def load_cached_keys():
                     return []
                 return json.loads(content)
         except json.JSONDecodeError:
-            logger.warning(f"Cache file {CACHE_FILE_PATH} is corrupted. Starting fresh.")
+            logger.warning(
+                f"Cache file {CACHE_FILE_PATH} is corrupted. Starting fresh."
+            )
             return []
         except IOError as e:
             logger.error(f"Error reading cache file {CACHE_FILE_PATH}: {e}")
@@ -97,10 +106,10 @@ def save_cached_keys(keys):
 
 # Function to register a public key with Cloudflare API using tenacity for retries
 @retry(
-    stop=stop_after_attempt(3), # Retry up to 3 times
-    wait=wait_exponential(multiplier=1, min=4, max=10), # Exponential backoff
-    retry=retry_if_exception_type(RateLimitError), # Only retry on RateLimitError
-    reraise=True # Reraise the exception if all retries fail
+    stop=stop_after_attempt(3),  # Retry up to 3 times
+    wait=wait_exponential(multiplier=1, min=4, max=10),  # Exponential backoff
+    retry=retry_if_exception_type(RateLimitError),  # Only retry on RateLimitError
+    reraise=True,  # Reraise the exception if all retries fail
 )
 def register_key_on_CF(pub_key):
     logger.info(f"Registering public key: {pub_key[:20]}... with Cloudflare API")
@@ -108,15 +117,19 @@ def register_key_on_CF(pub_key):
         # Using the API endpoint and headers
         url = "https://api.cloudflareclient.com/v0a4005/reg"
         # Generate random install_id and fcm_token for each registration attempt
-        install_id = base64.b64encode(os.urandom(12)).decode('utf-8')
-        fcm_token = f"{install_id}:APA91b{base64.b64encode(os.urandom(138)).decode('utf-8')}"
+        install_id = base64.b64encode(os.urandom(12)).decode("utf-8")
+        fcm_token = (
+            f"{install_id}:APA91b{base64.b64encode(os.urandom(138)).decode('utf-8')}"
+        )
 
         body = {
             "key": pub_key,
-            "install_id": install_id, # Use generated install_id
-            "fcm_token": fcm_token,   # Use generated fcm_token
-            "warp_enabled": True, # Set to True as per user's code
-            "tos": datetime.datetime.now(datetime.timezone.utc).isoformat().replace("+00:00", "Z"), # Use UTC time
+            "install_id": install_id,  # Use generated install_id
+            "fcm_token": fcm_token,  # Use generated fcm_token
+            "warp_enabled": True,  # Set to True as per user's code
+            "tos": datetime.datetime.now(datetime.timezone.utc)
+            .isoformat()
+            .replace("+00:00", "Z"),  # Use UTC time
             "type": "Android",
             "model": "PC",
             "locale": "en_US",
@@ -132,19 +145,23 @@ def register_key_on_CF(pub_key):
         }
         # Add a small random delay before the request
         time.sleep(random.uniform(1, 2))
-        r = requests.post(url, data=bodyString, headers=headers, timeout=20) # Increased timeout
+        r = requests.post(
+            url, data=bodyString, headers=headers, timeout=20
+        )  # Increased timeout
 
         if r.status_code == 429:
             logger.warning(f"Rate limit hit (429). Headers: {r.headers}")
             # Extract retry-after header if available
             retry_after = r.headers.get("Retry-After")
-            wait_time = int(retry_after) if retry_after else 10 # Default wait if header missing
+            wait_time = (
+                int(retry_after) if retry_after else 10
+            )  # Default wait if header missing
             logger.warning(f"Waiting for {wait_time} seconds due to rate limit.")
-            time.sleep(wait_time) # Wait before raising the error for retry
+            time.sleep(wait_time)  # Wait before raising the error for retry
             raise RateLimitError("Rate limit exceeded")
 
         logger.info(f"Cloudflare API response status: {r.status_code}")
-        r.raise_for_status() # Raise HTTPError for other bad responses (4xx or 5xx)
+        r.raise_for_status()  # Raise HTTPError for other bad responses (4xx or 5xx)
         return r
 
     except requests.exceptions.Timeout:
@@ -154,7 +171,7 @@ def register_key_on_CF(pub_key):
         raise requests.exceptions.RequestException("API request timed out")
     except requests.exceptions.RequestException as e:
         logger.error(f"Failed to connect to Cloudflare API: {e}")
-        raise # Reraise the exception for tenacity or final failure
+        raise  # Reraise the exception for tenacity or final failure
 
 
 # Function to generate and register private/public key pair, using cache
@@ -179,14 +196,20 @@ def bind_keys(key_type):
         private_key = key_data.get("private_key")
         reserved_value = key_data.get("reserved")
         if private_key and reserved_value:
-             logger.warning(f"Using cached {key_type} key starting with: {private_key[:10]}...")
-             return private_key, reserved_value
+            logger.warning(
+                f"Using cached {key_type} key starting with: {private_key[:10]}..."
+            )
+            return private_key, reserved_value
         else:
-            logger.warning(f"Found incomplete cached key data for {key_type}. Generating new key.")
+            logger.warning(
+                f"Found incomplete cached key data for {key_type}. Generating new key."
+            )
             # Remove invalid entry? For now, just generate a new one.
 
     # If no valid cached key found, generate a new one
-    logger.info(f"No valid cached key found for type '{key_type}'. Generating and registering a new key.")
+    logger.info(
+        f"No valid cached key found for type '{key_type}'. Generating and registering a new key."
+    )
     priv_bytes = generate_private_key()
     priv_string = byte_to_base64(priv_bytes)
     logger.info(f"Generated private key for {key_type}: {priv_string[:10]}...")
@@ -195,7 +218,7 @@ def bind_keys(key_type):
     logger.info(f"Generated public key for {key_type}: {pub_string[:10]}...")
 
     try:
-        result = register_key_on_CF(pub_string) # This call now includes retry logic
+        result = register_key_on_CF(pub_string)  # This call now includes retry logic
 
         if result and result.status_code == 200:
             try:
@@ -203,8 +226,18 @@ def bind_keys(key_type):
                 # Extract client_id from the response config section
                 client_id = response_data.get("config", {}).get("client_id")
                 # Extract interface IPs (optional, for logging or potential future use)
-                interface_v4 = response_data.get("config", {}).get("interface", {}).get("addresses", {}).get("v4")
-                interface_v6 = response_data.get("config", {}).get("interface", {}).get("addresses", {}).get("v6")
+                interface_v4 = (
+                    response_data.get("config", {})
+                    .get("interface", {})
+                    .get("addresses", {})
+                    .get("v4")
+                )
+                interface_v6 = (
+                    response_data.get("config", {})
+                    .get("interface", {})
+                    .get("addresses", {})
+                    .get("v6")
+                )
 
                 if not client_id:
                     logger.error("Could not find 'client_id' in API response.")
@@ -214,19 +247,23 @@ def bind_keys(key_type):
                 logger.info(
                     f"Successfully registered {key_type} with client_id: ...{client_id[-10:]}"
                 )
-                logger.info(f"Interface IPs received: v4={interface_v4}, v6={interface_v6}")
+                logger.info(
+                    f"Interface IPs received: v4={interface_v4}, v6={interface_v6}"
+                )
 
                 # Add the new key to the cache list
                 new_key_data = {
                     "type": key_type,
                     "private_key": priv_string,
-                    "reserved": client_id, # Use client_id as reserved value
-                    "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat() # Add timestamp
+                    "reserved": client_id,  # Use client_id as reserved value
+                    "timestamp": datetime.datetime.now(
+                        datetime.timezone.utc
+                    ).isoformat(),  # Add timestamp
                 }
                 cached_keys.append(new_key_data)
-                save_cached_keys(cached_keys) # Save updated cache
+                save_cached_keys(cached_keys)  # Save updated cache
 
-                return priv_string, client_id # Return private key and client_id
+                return priv_string, client_id  # Return private key and client_id
 
             except (json.JSONDecodeError, KeyError, TypeError) as e:
                 logger.error(f"Error parsing Cloudflare API response: {e}")
@@ -241,8 +278,12 @@ def bind_keys(key_type):
             )
             sys.exit(1)
 
-    except Exception as e: # Catch potential exceptions from register_key_on_CF (like tenacity reraising)
-        logger.error(f"Cloudflare API registration failed for {key_type}: {e}", exc_info=True)
+    except (
+        Exception
+    ) as e:  # Catch potential exceptions from register_key_on_CF (like tenacity reraising)
+        logger.error(
+            f"Cloudflare API registration failed for {key_type}: {e}", exc_info=True
+        )
         sys.exit(1)
 
 
@@ -251,8 +292,14 @@ ipv6_prefixes = ["2606:4700:d1", "2606:4700:d0"]
 
 # IPv4 prefixes for generating endpoints
 ipv4_prefixes = [
-    "162.159.192.", "162.159.193.", "162.159.195.", "162.159.204.",
-    "188.114.96.", "188.114.97.", "188.114.98.", "188.114.99."
+    "162.159.192.",
+    "162.159.193.",
+    "162.159.195.",
+    "162.159.204.",
+    "188.114.96.",
+    "188.114.97.",
+    "188.114.98.",
+    "188.114.99.",
 ]
 
 # Available ports for endpoint generation
@@ -262,6 +309,7 @@ available_ports = [int(p) for p in ports_str.split()]
 # Cloudflare's fixed public key for WireGuard
 CLOUDFLARE_PUBLIC_KEY = "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
 
+
 # Function to generate a random IPv4 endpoint
 def generate_ipv4_endpoint():
     prefix = random.choice(ipv4_prefixes)
@@ -270,6 +318,7 @@ def generate_ipv4_endpoint():
     port = random.choice(available_ports)
     logger.info(f"Generated IPv4 endpoint: {server}:{port}")
     return server, port
+
 
 # Function to generate a random IPv6 endpoint - CORRECTED
 def generate_ipv6_endpoint():
@@ -282,6 +331,7 @@ def generate_ipv6_endpoint():
     logger.info(f"Generated IPv6 endpoint: {server}:{port}")
     return server, port
 
+
 # --- Main Script Logic ---
 try:
     # Load the base configuration template (YAML format)
@@ -291,7 +341,9 @@ try:
             config_template_dict = yaml.safe_load(f)
         logger.info("Config template loaded successfully")
     except IOError as e:
-        logger.error(f"Error reading config template file '{CONFIG_TEMPLATE_PATH}': {e}")
+        logger.error(
+            f"Error reading config template file '{CONFIG_TEMPLATE_PATH}': {e}"
+        )
         sys.exit(1)
     except yaml.YAMLError as e:
         logger.error(f"Invalid YML syntax in config file '{CONFIG_TEMPLATE_PATH}': {e}")
@@ -300,15 +352,15 @@ try:
     # Generate/retrieve keys for dialer and entry proxies using the cache mechanism
     logger.warning("Binding keys for Entry proxies...")
     # Use 'entry' as key_type for caching
-    priv_key_entry, reserved_entry = bind_keys('entry')
-    
+    priv_key_entry, reserved_entry = bind_keys("entry")
+
     logger.warning("Binding keys for Dialer proxies...")
     # Use 'dialer' as key_type for caching
-    priv_key_dialer, reserved_dialer = bind_keys('dialer')
+    priv_key_dialer, reserved_dialer = bind_keys("dialer")
 
     # Default IPs (Consider extracting from bind_keys response if needed, but not strictly necessary for config)
     default_ip_v4 = "172.16.0.2/32"
-    default_ip_v6 = "2606:4700:110:8867:3f4a:906:1933:43c5/128" # Example fallback
+    default_ip_v6 = "2606:4700:110:8867:3f4a:906:1933:43c5/128"  # Example fallback
 
     proxies_list = []
     dialer_proxy_names = []
@@ -340,15 +392,14 @@ try:
             "port": port_dialer,
             "public-key": CLOUDFLARE_PUBLIC_KEY,
             "allowed-ips": ["0.0.0.0/0", "::/0"],
-            "reserved": reserved_dialer, # Use client_id from bind_keys
+            "reserved": reserved_dialer,  # Use client_id from bind_keys
             "udp": True,
             "mtu": 1280,
-            "dialer-proxy": entry_proxy_name # Link to the corresponding Entry proxy
+            "dialer-proxy": entry_proxy_name,  # Link to the corresponding Entry proxy
             # No amnezia options for the dialer proxy
         }
         # Add Dialer proxy to the list
         proxies_list.append(dialer_proxy)
-
 
         # --- Create Entry Proxy SECOND ---
         entry_proxy_names.append(entry_proxy_name)
@@ -373,15 +424,14 @@ try:
             "reserved": reserved_entry,
             "udp": True,
             "mtu": 1280,
-            "amnezia-wg-option": { # Amnezia options (as strings)
+            "amnezia-wg-option": {  # Amnezia options (as strings)
                 "jc": "5",
                 "jmin": "50",
-                "jmax": "100"
-            }
+                "jmax": "100",
+            },
         }
         # Add Entry proxy to the list
         proxies_list.append(entry_proxy)
-
 
     # Add the generated proxies to the template dictionary
     config_template_dict["proxies"] = proxies_list
@@ -391,34 +441,34 @@ try:
     logger.warning("Creating proxy groups...")
     proxy_groups = [
         {
-            "name": MAIN_SELECTOR_GROUP_NAME, # Main selector group with new name
+            "name": MAIN_SELECTOR_GROUP_NAME,  # Main selector group with new name
             "type": "select",
             "proxies": [
-                ENTRY_URL_TEST_GROUP_NAME, # Include url-test groups first
+                ENTRY_URL_TEST_GROUP_NAME,  # Include url-test groups first
                 DIALER_URL_TEST_GROUP_NAME,
-                "DIRECT", # Add DIRECT option
+                "DIRECT",  # Add DIRECT option
                 # Add individual proxies after url-test groups
                 # The order here reflects the new generation order (Dialer then Entry)
                 *dialer_proxy_names,
                 *entry_proxy_names,
-            ]
+            ],
         },
         {
-            "name": ENTRY_URL_TEST_GROUP_NAME, # url-test for Entry proxies
+            "name": ENTRY_URL_TEST_GROUP_NAME,  # url-test for Entry proxies
             "type": "url-test",
             "url": "https://www.gstatic.com/generate_204",
             "interval": 30,
             "tolerance": 50,
-            "proxies": entry_proxy_names # Use new list name
+            "proxies": entry_proxy_names,  # Use new list name
         },
         {
-            "name": DIALER_URL_TEST_GROUP_NAME, # url-test for Dialer proxies
+            "name": DIALER_URL_TEST_GROUP_NAME,  # url-test for Dialer proxies
             "type": "url-test",
             "url": "https://www.gstatic.com/generate_204",
             "interval": 30,
             "tolerance": 50,
-            "proxies": dialer_proxy_names # Use new list name
-        }
+            "proxies": dialer_proxy_names,  # Use new list name
+        },
     ]
     # Add the generated proxy groups to the template dictionary
     config_template_dict["proxy-groups"] = proxy_groups
@@ -429,32 +479,41 @@ try:
         match_rule_found = False
         for rule in config_template_dict["rules"]:
             if isinstance(rule, str) and rule.startswith("MATCH,"):
-                 updated_rules.append(f"MATCH,{MAIN_SELECTOR_GROUP_NAME}")
-                 logger.info(f"Updated MATCH rule to use '{MAIN_SELECTOR_GROUP_NAME}' group.")
-                 match_rule_found = True
+                updated_rules.append(f"MATCH,{MAIN_SELECTOR_GROUP_NAME}")
+                logger.info(
+                    f"Updated MATCH rule to use '{MAIN_SELECTOR_GROUP_NAME}' group."
+                )
+                match_rule_found = True
             else:
-                 updated_rules.append(rule)
+                updated_rules.append(rule)
         if not match_rule_found:
-             logger.warning("MATCH rule not found in template. Appending default.")
-             updated_rules.append(f"MATCH,{MAIN_SELECTOR_GROUP_NAME}")
+            logger.warning("MATCH rule not found in template. Appending default.")
+            updated_rules.append(f"MATCH,{MAIN_SELECTOR_GROUP_NAME}")
         config_template_dict["rules"] = updated_rules
-
 
     # Ensure the primary DNS nameserver uses the correct selector group name tag
     if "dns" in config_template_dict and "nameserver" in config_template_dict["dns"]:
-         if config_template_dict["dns"]["nameserver"]:
-             # Assuming the first nameserver is the one tagged with the selector
-             parts = config_template_dict["dns"]["nameserver"][0].split('#')
-             if len(parts) == 2:
-                 config_template_dict["dns"]["nameserver"][0] = f"{parts[0]}#{MAIN_SELECTOR_GROUP_NAME}"
-                 logger.info(f"Updated primary DNS nameserver to use '{MAIN_SELECTOR_GROUP_NAME}' group tag.")
-             else:
-                 logger.warning("Primary DNS nameserver format unexpected. Could not update tag.")
-         else:
-             logger.warning("DNS nameserver list is empty in template.")
+        if config_template_dict["dns"]["nameserver"]:
+            # Assuming the first nameserver is the one tagged with the selector
+            parts = config_template_dict["dns"]["nameserver"][0].split("#")
+            if len(parts) == 2:
+                config_template_dict["dns"]["nameserver"][
+                    0
+                ] = f"{parts[0]}#{MAIN_SELECTOR_GROUP_NAME}"
+                logger.info(
+                    f"Updated primary DNS nameserver to use '{MAIN_SELECTOR_GROUP_NAME}' group tag."
+                )
+            else:
+                logger.warning(
+                    "Primary DNS nameserver format unexpected. Could not update tag."
+                )
+        else:
+            logger.warning("DNS nameserver list is empty in template.")
 
     # --- Write Output JSON File ---
-    logger.warning(f"Writing output to {OUTPUT_YAML_FILENAME}") # Use new filename variable
+    logger.warning(
+        f"Writing output to {OUTPUT_YAML_FILENAME}"
+    )  # Use new filename variable
     try:
         # Ensure the output directory exists
         os.makedirs(os.path.dirname(OUTPUT_YAML_FILENAME), exist_ok=True)
@@ -467,13 +526,17 @@ try:
             yaml.safe_dump(
                 config_template_dict,
                 f,
-                allow_unicode=True,    # Preserve emojis and other unicode characters
-                sort_keys=False,       # Keep the original order of keys
-                default_flow_style=False # Use block style for better readability
+                allow_unicode=True,  # Preserve emojis and other unicode characters
+                sort_keys=False,  # Keep the original order of keys
+                default_flow_style=False,  # Use block style for better readability
             )
-        logger.warning(f"Successfully generated '{OUTPUT_YAML_FILENAME}'") # Use new filename variable
+        logger.warning(
+            f"Successfully generated '{OUTPUT_YAML_FILENAME}'"
+        )  # Use new filename variable
     except IOError as e:
-        logger.error(f"Error writing to file '{OUTPUT_YAML_FILENAME}': {e}") # Use new filename variable
+        logger.error(
+            f"Error writing to file '{OUTPUT_YAML_FILENAME}': {e}"
+        )  # Use new filename variable
         sys.exit(1)
     except Exception as e:
         logger.error(
@@ -484,4 +547,3 @@ try:
 except Exception as e:
     logger.error(f"Unexpected error occurred in script execution: {e}", exc_info=True)
     sys.exit(1)
-    
