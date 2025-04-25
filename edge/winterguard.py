@@ -144,9 +144,7 @@ def register_key_on_CF(pub_key):
             "User-Agent": "okhttp/3.12.1",
         }
         time.sleep(random.uniform(1.5, 2.5))
-        r = requests.post(
-            url, data=bodyString, headers=headers, timeout=25
-        )
+        r = requests.post(url, data=bodyString, headers=headers, timeout=25)
 
         if r.status_code == 429:
             logger.warning(f"Rate limit hit (429). Headers: {r.headers}")
