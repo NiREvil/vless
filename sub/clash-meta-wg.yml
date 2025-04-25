@@ -1,5 +1,5 @@
-# Generated Clash Meta WireGuard config using GuardLink script
-# Generated on: 2025-04-24T20:09:26.514166
+# Generated configs for clash-meta with WireGuard proxies that have amnesia values.
+# Generated on: 2025-04-25T03:01:59.203860
 
 mixed-port: 7890
 ipv6: true
@@ -17,7 +17,7 @@ external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-p
 external-ui: ui
 external-controller-cors:
   allow-origins:
-    - '*'
+  - '*'
   allow-private-network: true
 profile:
   store-selected: true
@@ -29,19 +29,19 @@ dns:
   respect-rules: true
   use-system-hosts: false
   nameserver:
-    - 1.1.1.1#SELECT 🛡️
+  - 1.1.1.1#🔰 PROXIES
   proxy-server-nameserver:
-    - 8.8.8.8#DIRECT
+  - 8.8.8.8#DIRECT
   nameserver-policy:
     raw.githubusercontent.com: 8.8.8.8#DIRECT
     time.apple.com: 8.8.8.8#DIRECT
     rule-set:ir:
-      - 8.8.8.8#DIRECT
+    - 8.8.8.8#DIRECT
     rule-set:openai: 178.22.122.100#DIRECT
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
-    - geosite:private
+  - geosite:private
 tun:
   enable: true
   stack: mixed
@@ -49,8 +49,8 @@ tun:
   strict-route: true
   auto-detect-interface: true
   dns-hijack:
-    - any:53
-    - tcp://any:53
+  - any:53
+  - tcp://any:53
   mtu: 9000
 sniffer:
   enable: true
@@ -60,337 +60,337 @@ sniffer:
   sniff:
     HTTP:
       ports:
-        - 80
-        - 8080
-        - 8880
-        - 2052
-        - 2082
-        - 2086
-        - 2095
+      - 80
+      - 8080
+      - 8880
+      - 2052
+      - 2082
+      - 2086
+      - 2095
     TLS:
       ports:
-        - 443
-        - 8443
-        - 2053
-        - 2083
-        - 2087
-        - 2096
+      - 443
+      - 8443
+      - 2053
+      - 2083
+      - 2087
+      - 2096
 proxies:
-  - name: ReGuard-Dialer 🇩🇪-01 ✨
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: mLC7kIV4jTcRtpbWDVwQus/03xsWvpQ9uwwib1bmqnc=
-    server: 188.114.98.200
-    port: 880
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cRr/
-    udp: true
-    mtu: 1280
-    dialer-proxy: EviLink-Entry 🇮🇷-01 ⚡
-  - name: EviLink-Entry 🇮🇷-01 ⚡
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: IHH77q907BONGXLJNMjCchfeUbwUS3gN75dIEmiV00A=
-    server: 162.159.204.241
-    port: 878
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cxWi
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: '5'
-      jmin: '50'
-      jmax: '100'
-  - name: ReGuard-Dialer 🇩🇪-02 ✨
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: mLC7kIV4jTcRtpbWDVwQus/03xsWvpQ9uwwib1bmqnc=
-    server: 188.114.99.80
-    port: 955
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cRr/
-    udp: true
-    mtu: 1280
-    dialer-proxy: EviLink-Entry 🇮🇷-02 ⚡
-  - name: EviLink-Entry 🇮🇷-02 ⚡
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: IHH77q907BONGXLJNMjCchfeUbwUS3gN75dIEmiV00A=
-    server: 2606:4700:d0::1128:2fef:cfda:752a
-    port: 903
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cxWi
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: '5'
-      jmin: '50'
-      jmax: '100'
-  - name: ReGuard-Dialer 🇩🇪-03 ✨
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: mLC7kIV4jTcRtpbWDVwQus/03xsWvpQ9uwwib1bmqnc=
-    server: 188.114.96.118
-    port: 968
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cRr/
-    udp: true
-    mtu: 1280
-    dialer-proxy: EviLink-Entry 🇮🇷-03 ⚡
-  - name: EviLink-Entry 🇮🇷-03 ⚡
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: IHH77q907BONGXLJNMjCchfeUbwUS3gN75dIEmiV00A=
-    server: 188.114.98.188
-    port: 903
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cxWi
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: '5'
-      jmin: '50'
-      jmax: '100'
-  - name: ReGuard-Dialer 🇩🇪-04 ✨
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: mLC7kIV4jTcRtpbWDVwQus/03xsWvpQ9uwwib1bmqnc=
-    server: 188.114.96.127
-    port: 8742
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cRr/
-    udp: true
-    mtu: 1280
-    dialer-proxy: EviLink-Entry 🇮🇷-04 ⚡
-  - name: EviLink-Entry 🇮🇷-04 ⚡
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: IHH77q907BONGXLJNMjCchfeUbwUS3gN75dIEmiV00A=
-    server: 2606:4700:d1::2c03:1728:e4b2:da50
-    port: 1701
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cxWi
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: '5'
-      jmin: '50'
-      jmax: '100'
-  - name: ReGuard-Dialer 🇩🇪-05 ✨
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: mLC7kIV4jTcRtpbWDVwQus/03xsWvpQ9uwwib1bmqnc=
-    server: 188.114.99.157
-    port: 7281
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cRr/
-    udp: true
-    mtu: 1280
-    dialer-proxy: EviLink-Entry 🇮🇷-05 ⚡
-  - name: EviLink-Entry 🇮🇷-05 ⚡
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: IHH77q907BONGXLJNMjCchfeUbwUS3gN75dIEmiV00A=
-    server: 162.159.192.100
-    port: 7559
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cxWi
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: '5'
-      jmin: '50'
-      jmax: '100'
-  - name: ReGuard-Dialer 🇩🇪-06 ✨
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: mLC7kIV4jTcRtpbWDVwQus/03xsWvpQ9uwwib1bmqnc=
-    server: 162.159.192.129
-    port: 864
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cRr/
-    udp: true
-    mtu: 1280
-    dialer-proxy: EviLink-Entry 🇮🇷-06 ⚡
-  - name: EviLink-Entry 🇮🇷-06 ⚡
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: IHH77q907BONGXLJNMjCchfeUbwUS3gN75dIEmiV00A=
-    server: 2606:4700:d0::3084:7156:829e:e91a
-    port: 7103
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cxWi
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: '5'
-      jmin: '50'
-      jmax: '100'
-  - name: ReGuard-Dialer 🇩🇪-07 ✨
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: mLC7kIV4jTcRtpbWDVwQus/03xsWvpQ9uwwib1bmqnc=
-    server: 162.159.204.107
-    port: 864
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cRr/
-    udp: true
-    mtu: 1280
-    dialer-proxy: EviLink-Entry 🇮🇷-07 ⚡
-  - name: EviLink-Entry 🇮🇷-07 ⚡
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: IHH77q907BONGXLJNMjCchfeUbwUS3gN75dIEmiV00A=
-    server: 188.114.97.127
-    port: 1018
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cxWi
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: '5'
-      jmin: '50'
-      jmax: '100'
-  - name: ReGuard-Dialer 🇩🇪-08 ✨
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: mLC7kIV4jTcRtpbWDVwQus/03xsWvpQ9uwwib1bmqnc=
-    server: 188.114.99.128
-    port: 1014
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cRr/
-    udp: true
-    mtu: 1280
-    dialer-proxy: EviLink-Entry 🇮🇷-08 ⚡
-  - name: EviLink-Entry 🇮🇷-08 ⚡
-    type: wireguard
-    ip: 172.16.0.2/32
-    ipv6: 2606:4700:110:8867:3f4a:906:1933:43c5/128
-    private-key: IHH77q907BONGXLJNMjCchfeUbwUS3gN75dIEmiV00A=
-    server: 2606:4700:d1::bd7b:b7aa:f04d:e673
-    port: 7156
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    allowed-ips:
-      - 0.0.0.0/0
-      - ::/0
-    reserved: cxWi
-    udp: true
-    mtu: 1280
-    amnezia-wg-option:
-      jc: '5'
-      jmin: '50'
-      jmax: '100'
+- name: GER-01🇩🇪
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8bb8:7830:74fa:d87a:1eb/128
+  private-key: +OAXQ2KATBasuEljP8QjVMoyJDp/jTDPmeyeNOzOL1M=
+  server: 162.159.192.49
+  port: 1180
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: kUFS
+  udp: true
+  mtu: 1280
+  dialer-proxy: IRN-01🇮🇷
+- name: IRN-01🇮🇷
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8971:fd19:9b27:798d:8ac0/128
+  private-key: SNymxXS6rhk70k5EEmPty9Sxer7ANxGSeU4gw6E9xG8=
+  server: 2606:4700:d0::1803:dda7:a56f:c8c1
+  port: 7103
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: SsZm
+  udp: true
+  mtu: 1380
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
+- name: GER-02🇩🇪
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8bb8:7830:74fa:d87a:1eb/128
+  private-key: +OAXQ2KATBasuEljP8QjVMoyJDp/jTDPmeyeNOzOL1M=
+  server: 162.159.193.47
+  port: 968
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: kUFS
+  udp: true
+  mtu: 1280
+  dialer-proxy: IRN-02🇮🇷
+- name: IRN-02🇮🇷
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8971:fd19:9b27:798d:8ac0/128
+  private-key: SNymxXS6rhk70k5EEmPty9Sxer7ANxGSeU4gw6E9xG8=
+  server: 2606:4700:d0::185d:de81:f17b:6020
+  port: 3854
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: SsZm
+  udp: true
+  mtu: 1380
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
+- name: GER-03🇩🇪
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8bb8:7830:74fa:d87a:1eb/128
+  private-key: +OAXQ2KATBasuEljP8QjVMoyJDp/jTDPmeyeNOzOL1M=
+  server: 162.159.195.211
+  port: 880
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: kUFS
+  udp: true
+  mtu: 1280
+  dialer-proxy: IRN-03🇮🇷
+- name: IRN-03🇮🇷
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8971:fd19:9b27:798d:8ac0/128
+  private-key: SNymxXS6rhk70k5EEmPty9Sxer7ANxGSeU4gw6E9xG8=
+  server: 162.159.204.25
+  port: 4198
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: SsZm
+  udp: true
+  mtu: 1380
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
+- name: GER-04🇩🇪
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8bb8:7830:74fa:d87a:1eb/128
+  private-key: +OAXQ2KATBasuEljP8QjVMoyJDp/jTDPmeyeNOzOL1M=
+  server: 188.114.96.232
+  port: 8742
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: kUFS
+  udp: true
+  mtu: 1280
+  dialer-proxy: IRN-04🇮🇷
+- name: IRN-04🇮🇷
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8971:fd19:9b27:798d:8ac0/128
+  private-key: SNymxXS6rhk70k5EEmPty9Sxer7ANxGSeU4gw6E9xG8=
+  server: 162.159.195.252
+  port: 3138
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: SsZm
+  udp: true
+  mtu: 1380
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
+- name: GER-05🇩🇪
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8bb8:7830:74fa:d87a:1eb/128
+  private-key: +OAXQ2KATBasuEljP8QjVMoyJDp/jTDPmeyeNOzOL1M=
+  server: 188.114.97.209
+  port: 7281
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: kUFS
+  udp: true
+  mtu: 1280
+  dialer-proxy: IRN-05🇮🇷
+- name: IRN-05🇮🇷
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8971:fd19:9b27:798d:8ac0/128
+  private-key: SNymxXS6rhk70k5EEmPty9Sxer7ANxGSeU4gw6E9xG8=
+  server: 188.114.98.228
+  port: 7152
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: SsZm
+  udp: true
+  mtu: 1380
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
+- name: GER-06🇩🇪
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8bb8:7830:74fa:d87a:1eb/128
+  private-key: +OAXQ2KATBasuEljP8QjVMoyJDp/jTDPmeyeNOzOL1M=
+  server: 162.159.192.133
+  port: 894
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: kUFS
+  udp: true
+  mtu: 1280
+  dialer-proxy: IRN-06🇮🇷
+- name: IRN-06🇮🇷
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8971:fd19:9b27:798d:8ac0/128
+  private-key: SNymxXS6rhk70k5EEmPty9Sxer7ANxGSeU4gw6E9xG8=
+  server: 162.159.192.28
+  port: 943
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: SsZm
+  udp: true
+  mtu: 1380
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
+- name: GER-07🇩🇪
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8bb8:7830:74fa:d87a:1eb/128
+  private-key: +OAXQ2KATBasuEljP8QjVMoyJDp/jTDPmeyeNOzOL1M=
+  server: 188.114.96.18
+  port: 4177
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: kUFS
+  udp: true
+  mtu: 1280
+  dialer-proxy: IRN-07🇮🇷
+- name: IRN-07🇮🇷
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8971:fd19:9b27:798d:8ac0/128
+  private-key: SNymxXS6rhk70k5EEmPty9Sxer7ANxGSeU4gw6E9xG8=
+  server: 162.159.195.224
+  port: 988
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: SsZm
+  udp: true
+  mtu: 1380
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
+- name: GER-08🇩🇪
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8bb8:7830:74fa:d87a:1eb/128
+  private-key: +OAXQ2KATBasuEljP8QjVMoyJDp/jTDPmeyeNOzOL1M=
+  server: 188.114.97.127
+  port: 880
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: kUFS
+  udp: true
+  mtu: 1280
+  dialer-proxy: IRN-08🇮🇷
+- name: IRN-08🇮🇷
+  type: wireguard
+  ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8971:fd19:9b27:798d:8ac0/128
+  private-key: SNymxXS6rhk70k5EEmPty9Sxer7ANxGSeU4gw6E9xG8=
+  server: 188.114.97.148
+  port: 5279
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+  reserved: SsZm
+  udp: true
+  mtu: 1380
+  amnezia-wg-option:
+    jc: '5'
+    jmin: '50'
+    jmax: '100'
 proxy-groups:
-  - name: SELECT 🛡️
-    type: select
-    proxies:
-      - BP-EviLink-Entry 🇮🇷
-      - BP-ReGuard-Dialer 🇩🇪
-      - DIRECT
-      - ReGuard-Dialer 🇩🇪-01 ✨
-      - ReGuard-Dialer 🇩🇪-02 ✨
-      - ReGuard-Dialer 🇩🇪-03 ✨
-      - ReGuard-Dialer 🇩🇪-04 ✨
-      - ReGuard-Dialer 🇩🇪-05 ✨
-      - ReGuard-Dialer 🇩🇪-06 ✨
-      - ReGuard-Dialer 🇩🇪-07 ✨
-      - ReGuard-Dialer 🇩🇪-08 ✨
-      - EviLink-Entry 🇮🇷-01 ⚡
-      - EviLink-Entry 🇮🇷-02 ⚡
-      - EviLink-Entry 🇮🇷-03 ⚡
-      - EviLink-Entry 🇮🇷-04 ⚡
-      - EviLink-Entry 🇮🇷-05 ⚡
-      - EviLink-Entry 🇮🇷-06 ⚡
-      - EviLink-Entry 🇮🇷-07 ⚡
-      - EviLink-Entry 🇮🇷-08 ⚡
-  - name: BP-EviLink-Entry 🇮🇷
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 30
-    tolerance: 50
-    proxies:
-      - EviLink-Entry 🇮🇷-01 ⚡
-      - EviLink-Entry 🇮🇷-02 ⚡
-      - EviLink-Entry 🇮🇷-03 ⚡
-      - EviLink-Entry 🇮🇷-04 ⚡
-      - EviLink-Entry 🇮🇷-05 ⚡
-      - EviLink-Entry 🇮🇷-06 ⚡
-      - EviLink-Entry 🇮🇷-07 ⚡
-      - EviLink-Entry 🇮🇷-08 ⚡
-  - name: BP-ReGuard-Dialer 🇩🇪
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 30
-    tolerance: 50
-    proxies:
-      - ReGuard-Dialer 🇩🇪-01 ✨
-      - ReGuard-Dialer 🇩🇪-02 ✨
-      - ReGuard-Dialer 🇩🇪-03 ✨
-      - ReGuard-Dialer 🇩🇪-04 ✨
-      - ReGuard-Dialer 🇩🇪-05 ✨
-      - ReGuard-Dialer 🇩🇪-06 ✨
-      - ReGuard-Dialer 🇩🇪-07 ✨
-      - ReGuard-Dialer 🇩🇪-08 ✨
+- name: 🔰 PROXIES
+  type: select
+  proxies:
+  - Auto-IRN
+  - Auto-GER
+  - DIRECT
+  - GER-01🇩🇪
+  - GER-02🇩🇪
+  - GER-03🇩🇪
+  - GER-04🇩🇪
+  - GER-05🇩🇪
+  - GER-06🇩🇪
+  - GER-07🇩🇪
+  - GER-08🇩🇪
+  - IRN-01🇮🇷
+  - IRN-02🇮🇷
+  - IRN-03🇮🇷
+  - IRN-04🇮🇷
+  - IRN-05🇮🇷
+  - IRN-06🇮🇷
+  - IRN-07🇮🇷
+  - IRN-08🇮🇷
+- name: Auto-IRN
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 30
+  tolerance: 50
+  proxies:
+  - IRN-01🇮🇷
+  - IRN-02🇮🇷
+  - IRN-03🇮🇷
+  - IRN-04🇮🇷
+  - IRN-05🇮🇷
+  - IRN-06🇮🇷
+  - IRN-07🇮🇷
+  - IRN-08🇮🇷
+- name: Auto-GER
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 30
+  tolerance: 50
+  proxies:
+  - GER-01🇩🇪
+  - GER-02🇩🇪
+  - GER-03🇩🇪
+  - GER-04🇩🇪
+  - GER-05🇩🇪
+  - GER-06🇩🇪
+  - GER-07🇩🇪
+  - GER-08🇩🇪
 rule-providers:
   private:
     type: http
@@ -456,16 +456,16 @@ rule-providers:
     path: ./ruleset/category-ads-all.txt
     interval: 86400
 rules:
-  - RULE-SET,malware,REJECT
-  - RULE-SET,phishing,REJECT
-  - RULE-SET,cryptominers,REJECT
-  - RULE-SET,category-ads-all,REJECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,ir,DIRECT
-  - RULE-SET,openai,DIRECT
-  - RULE-SET,private-cidr,DIRECT,no-resolve
-  - RULE-SET,ir-cidr,DIRECT
-  - MATCH,SELECT 🛡️
+- RULE-SET,malware,REJECT
+- RULE-SET,phishing,REJECT
+- RULE-SET,cryptominers,REJECT
+- RULE-SET,category-ads-all,REJECT
+- RULE-SET,private,DIRECT
+- RULE-SET,ir,DIRECT
+- RULE-SET,openai,DIRECT
+- RULE-SET,private-cidr,DIRECT,no-resolve
+- RULE-SET,ir-cidr,DIRECT
+- MATCH,🔰 PROXIES
 ntp:
   enable: true
   server: time.apple.com
