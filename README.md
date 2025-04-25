@@ -266,8 +266,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 **All HTTPS for SingBox [[WE?]]**  
 https://wearestandtelegram.github.io/IranRamona  
-https://wearestandtelegram.github.io/Javidnaman/  
-
+https://wearestandtelegram.github.io/Javidnaman/
 
 **Meshkintaj [[ME?]]**  
 https://karing-freevpnhomes-subscription.shampoosirsehat.homes
@@ -287,18 +286,15 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscri
 
 ## Outline
 
-> [!NOTE]
-> [[Outline]] configratiions, Thanks to [[Anita?]]
+> [!NOTE] > [[Outline]] configratiions, Thanks to [[Anita?]]
 
 ```POV-Ray SDL
 ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-1.csv
 ```
 
-
 ```POV-Ray SDL
 ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-2.csv
 ```
-
 
 ```POV-Ray SDL
 ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-3.csv
