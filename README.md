@@ -2,11 +2,11 @@ $$\color{gray}\Huge \mathfrak{R}\color{red}{\sum}\color{gray}{\nu\iota\mathcal{l
 
 <div dir="rtl">
 
-- تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، هیدیفای، نکوباکس، کلش‌متا، آمنزیا، نیکا، مهسا، ویتوری‌، نکوری و ...
+- تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، هیدیفای، نکوباکس، کلش‌متا، آمنزیا، آوتلاین، نیکا، مهسا، ویتوری‌، نکوری و ...
 
 </div>
 
-- Some subscription links are available for [v2rayNG], [Sing-Box], [Hiddify], [NikaNG], [MahsaNG], [NekoBox], [Husi], [Exclave], [Amnezia], [Clash-Meta] and other Clients.
+- Some subscription links are available for [v2rayNG], [Sing-Box], [Hiddify], [NikaNG], [MahsaNG], [NekoBox], [Husi], [Exclave], [Amnezia], [Outline] [Clash-Meta] and other Clients.
 
 - Несколько ссылок для подписки на: v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Clash-Meta и ... Вернуть результат только
 
@@ -91,7 +91,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 <p align="center">
      <br>
-     <img src="edge/assets/QRCode-Dog.png" alt="QR" width="640px">
+     <img src="edge/assets/QRCode-Dog.png" alt="QR" width="680px">
    </p> <br>
 
 ![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
@@ -113,10 +113,11 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
   - [Warp for v2rayNG](#Warp-for-v2rayNG)
   - [Warp for NikaNG](Warp-for-v2rayNG)
   - [Warp SFA and SFI](#Warp-SFA-and-SFI)
-- [ServerLess](#ServerLess)
-- [Amnezia](#Amnezia)
 - [Xray](#Xray)
 - [Clash](#Clash)
+- [Outline](#Outline)
+- [ServerLess](#ServerLess)
+- [Amnezia](#Amnezia)
 - [Countries](#Countries)
 
 <br><br>
@@ -129,9 +130,11 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 > I use the same IPs for the **[Harmony]** script.  
 > Additionally, you can utilize the **[Strawberry.js]**  
 > script to modify the arrangement of the IPs or to combine them with other repositories.  
-> for ex: https://strawberry.victoriacross.ir
+> e.g: https://strawberry.victoriacross.ir
 
-[![Here](https://img.shields.io/badge/DEMO_FOR_LATEST_REAL_ADDRESS_GENERATOR-blue?logo=opencollective)](https://real-address1.victoriacross.ir/) <br><br>
+[![Here](https://img.shields.io/badge/DEMO_FOR_LATEST_REAL_ADDRESS_GENERATOR-blue?logo=opencollective)](https://real-address1.victoriacross.ir/)  
+
+<br><br>
 
 #### All IPs
 
@@ -157,15 +160,18 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 
 ## WIREGUARDS
 
-### Warp for [Hiddify] <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>
+### Warp for [Sing-Box] and [Hiddify]  
 
-**Warp+ Hysteria ON Singbox**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
+**Warp for Clash-Meta that have *Amnezia options*, Suitable for ChatGPT [wtf?]**  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml  
 
 **Meshkintaj [[ME?]]**  
-https://karing-freevpnhomes-subscription.shampoosirsehat.homes
+https://karing-freevpnhomes-subscription.shampoosirsehat.homes  
 
-**Warp+ Proton on Hiddify with DNS clean [[∏I?]]**  
+**Warp+ Hysteria ON Singbox**  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS  
+
+**Warp+ Proton on Hiddify with DNS clean [[Ni?]]**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Proton%20ON%20WARP%2B%20DNS%20Clean
 
 **All Hysteria [[FR?]]**  
@@ -177,7 +183,7 @@ https://t.me/azadi_az_inja_migzare/3860
 **Warp +Windscribe + Hysteria - Hiddify**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscribe%20on%20H2
 
-**Warp in M1,M2, ... ,h04FA0A mode with random ip:port [[∏I?]]**  
+**Warp in M1,M2, ... ,h04FA0A mode with random ip:port [[Ni?]]**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/rand-ip
 
 **All HTTPs for Sing-Box [[WE?]]**  
@@ -227,15 +233,19 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/v2rayng-wg.t
 <br>
 
 ```CSS
-wireguard://aFGqJfF1Xq2W3GkdrIeOxWM5KkszQmjIcso1F1UtA08%3D@162.159.195.86:8742?address=172.16.0.2/32, 2606:4700:110:846c:e510:bfa1:ea9f:5247/128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=161%2C193%2C233#Tel= @arshiacomplus wire
+wireguard://WHlr4sChnKkiY7EXb5vyx0vcujTxLGFqAWltTO4w3Xs%3D@162.159.195.141:968?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=49%2C243%2C136#Tel= @darkness_427 wire 
 ```
 
 ```CSS
-wireguard://aFGqJfF1Xq2W3GkdrIeOxWM5KkszQmjIcso1F1UtA08%3D@162.159.195.86:8742?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=161%2C193%2C233#Tel= @arshiacomplus wire
+wireguard://EKlBOUZhH7fxdjmZktsX%2BRappNwTYnI3MSzRmALSy2A%3D@188.114.99.0:5279?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=158%2C76%2C232#Tel= @darkness_427 wire 
 ```
 
 ```CSS
-wireguard://EKcnAgEpqzsDEgugHoT6NMz3Z8CmDequ%2BNDJRAASd3I%3D@188.114.97.157:1014?address=172.16.0.2/32, 2606:4700:110:846c:e510:bfa1:ea9f:5247/128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=176%2C110%2C65#Tel= @arshiacomplus wire
+wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:8886?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=117%2C134%2C208#Tel= @arshiacomplus wire 
+```
+
+```CSS
+wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:8886?address=172.16.0.2/32, 2606:4700:110:846c:e510:bfa1:ea9f:5247/128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=117%2C134%2C208#Tel= @arshiacomplus wire 
 ```
 
 ---
@@ -251,7 +261,7 @@ wireguard://EKcnAgEpqzsDEgugHoT6NMz3Z8CmDequ%2BNDJRAASd3I%3D@188.114.97.157:1014
 **Warp + Hysteria ON singbox**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
 
-**Built-in workflows, warp ON warp [[∏I?]]**  
+**Built-in workflows, warp ON warp [[Ni?]]**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 **All HTTPS for SingBox [[WE?]]**  
@@ -267,15 +277,34 @@ https://raw.githubusercontent.com/valid7996/Gozargah/refs/heads/main/Gozargah_si
 **Cypherpunks [[CY?]]**  
 https://raw.githubusercontent.com/IranianCypherpunks/SingBox/refs/heads/main/Sub
 
-**DeamNet [[DN?]]**  
-https://raw.githubusercontent.com/HenryPorternew/sbs/refs/heads/main/ssb/sg
-
 **Warp+ Windscribe on sing-box**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscribe%20on%20H2
 
 ---
 
 <br>
+
+## Outline  
+> [!NOTE]
+> [[Outline]] configratiions, tnx to [[Anita?]]
+
+```POV-Ray SDL
+ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-1.csv
+```  
+
+```POV-Ray SDL
+ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-2.csv
+```  
+
+```POV-Ray SDL
+ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-3.csv
+```  
+
+```POV-Ray SDL
+ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-4.csv
+```  
+
+<br>  
 
 ## ServerLess
 
@@ -300,7 +329,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_1
 > [!NOTE]
 > What do we [know about] the amnezia
 
-**A** [[∏I?]]
+**A** [[Ni?]]
 
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWEgRnJlZSBJUiIsICJkZXNjcmlwdGlvbiI6ICJBbW5lemlhIEZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJYbWtoWjhTay5UaTY0NENQTnBnTnQydW12ektUSGJRY1NSY2hpRXhlWSJ9
@@ -519,7 +548,7 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
 
-https://robin.nscl.ir [[∏I?]]
+https://robin.nscl.ir [[Ni?]]
 
 https://v2.alicivil.workers.dev/?list=4&locations=all&count=250 [[GE?]]
 
@@ -557,8 +586,6 @@ https://raw.githubusercontent.com/4n0nymou3/ss-config-updater/refs/heads/main/co
 https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/vmess_iran.txt
 
 https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/trojan_iran.txt
-
-https://raw.githubusercontent.com/FRDYAK/teryak-configs/refs/heads/main/sub1-configs
 
 https://raw.githubusercontent.com/4n0nymou3/ss-config-updater/refs/heads/main/configs.txt
 
@@ -686,7 +713,11 @@ https://trojanvmess.pages.dev/cmcm?b64#cmcm?b64
 
 > its better to use [Clash-Meta]
 
-https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml [[MB?]]
+https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml [[MB?]]  
+
+https://raw.githubusercontent.com/hamedp-71/Clash_New/refs/heads/main/hp.yaml
+
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml [[Ni?]
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.yml
 
@@ -694,7 +725,7 @@ https://raw.githubusercontent.com/NiREvil/vless/main/sub/clash-meta.yml
 
 https://git.io/emzclash
 
-https://raw.githubusercontent.com/HenryPorternew/sbs/main/ssb/cl [[DN?]]
+~~https://raw.githubusercontent.com/HenryPorternew/sbs/main/ssb/cl [[DN?]]~~
 
 https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet.yml [[AZ?]]
 
@@ -715,8 +746,6 @@ https://raw.githubusercontent.com/coldwater-10/Vpnclashfa/refs/heads/main/FreeVP
 https://raw.githubusercontent.com/go4sharing/sub/main/sub.yaml
 
 https://raw.githubusercontent.com/coldwater-10/Vpnclashfa/main/meta/ermaozi.yaml
-
-https://raw.githubusercontent.com/coldwater-10/Vpnclashfa/main/meta/clashnode.yaml
 
 https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml
 
@@ -882,15 +911,17 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [GFW]: https://github.com/GFW-knocker/gfw_resist_HTTPS_proxy/tree/main
 [GZ?]: https://github.com/valid7996/
 [KV?]: https://t.me/s/KevinZakarian
-[∏I?]: https://t.me/s/F_NiREvil
+[Ni?]: https://t.me/s/F_NiREvil
 [MB?]: https://github.com/mahdibland/ShadowsocksAggregator
 [ME?]: https://t.me/s/FreeVPNHomes/532
 [PR?]: https://t.me/s/ProxyDaemi
 [SW?]: https://github.com/jadolg/shadowmere
 [SR?]: https://github.com/soroushmirzaei/telegram-configs-collector
 [WE?]: https://t.me/s/IranRamona
+[wtf?]: https://github.com/NiREvil/vless/blob/main/sub/clash-meta-wg.yml#L40
 [XS?]: https://t.me/s/xs_filternet
 [Arshia]: https://t.me/s/warpscanner
+[Anita?]: https://ainita.net/vpn.html
 [The Darkness]: https://t.me/s/ConfigWireguard
 [Nekobox]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
 [Husi]: https://github.com/xchacha20-poly1305/husi/releases
@@ -898,6 +929,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [v2rayNG]: https://github.com/2dust/v2rayng/releases
 [MahsaNG]: https://github.com/mahsanet/MahsaaNG/releases
 [NikaNG]: https://github.com/mahsanet/NikaNG/releases
+[Outline]: https://getoutline.org/get-started/#step-3
 [Sing-Box]: https://github.com/SagerNet/sing-box/releases
 [SFA]: https://github.com/SagerNet/sing-box/releases
 [SFI]: https://apps.apple.com/us/app/sing-box/id6451272673
