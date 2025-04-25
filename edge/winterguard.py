@@ -18,20 +18,18 @@ from tenacity import (
 )
 
 # --- Configuration ---
-NUM_PROXY_PAIRS = 8  # Number of proxy pairs to generate
-NUM_IPV6_ENTRY_ENDPOINTS = (
-    2  # How many Entry proxies should use an IPv6 server endpoint
-)
-OUTPUT_YAML_FILENAME = "sub/clash-meta-wg.yml"  # Output YML filename
-CONFIG_TEMPLATE_PATH = (
-    "edge/assets/clash-meta-wg-template.yml"  # Path to the template file
-)
-CACHE_FILE_PATH = "sub/key_cache.json"  # Path for caching generated keys
+NUM_PROXY_PAIRS = int(os.environ.get("NUM_PROXY_PAIRS", 8))  # Number of proxy pairs to generate
+NUM_IPV6_ENTRY_ENDPOINTS = int(os.environ.get("NUM_IPV6_ENTRY_ENDPOINTS", 2))  # How many Entry proxies should use an IPv6 server endpoint
 
-# Proxy Naming Configuration
-DIALER_PROXY_BASE_NAME = "GER"
-ENTRY_PROXY_BASE_NAME = "IRN"
-MAIN_SELECTOR_GROUP_NAME = "🔰 PROXIES"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_YAML_FILENAME = os.path.join(SCRIPT_DIR, "sub", "clash-meta-wg.yml")  # Output YML filename
+CONFIG_TEMPLATE_PATH = os.path.join(SCRIPT_DIR, "edge", "assets", "clash-meta-wg-template.yml")  # Path to the template file
+CACHE_FILE_PATH = os.path.join(SCRIPT_DIR, "sub", "key_cache.json")  # Path for caching generated keys
+
+# --- Proxy Naming Configuration ---
+DIALER_PROXY_BASE_NAME = os.environ.get("DIALER_PROXY_BASE_NAME", "GER")
+ENTRY_PROXY_BASE_NAME = os.environ.get("ENTRY_PROXY_BASE_NAME", "IRN")
+MAIN_SELECTOR_GROUP_NAME = os.environ.get("MAIN_SELECTOR_GROUP_NAME", "🔰 PROXIES")
 DIALER_URL_TEST_GROUP_NAME = f"Auto-{DIALER_PROXY_BASE_NAME}"
 ENTRY_URL_TEST_GROUP_NAME = f"Auto-{ENTRY_PROXY_BASE_NAME}"
 # --- End Configuration ---
@@ -68,8 +66,14 @@ def generate_public_key(key_bytes):
 # Function to generate a new private key with specific bit manipulations
 def generate_private_key():
     logger.info("Generating new private key...")
-    key = os.urandom(32)
-    key = list(key)
+    private_key = X25519PrivateKey.generate()
+    private_bytes = private_key.private_bytes(
+        encoding=serialization.Encoding.Raw,
+        format=serialization.PrivateFormat.Raw,
+        encryption_algorithm=serialization.NoEncryption()
+    )
+    
+    key = list(private_bytes)
     key[0] &= 248
     key[31] &= 127
     key[31] |= 64
@@ -143,22 +147,22 @@ def register_key_on_CF(pub_key):
             "Accept-Encoding": "gzip",
             "User-Agent": "okhttp/3.12.1",
         }
+        
         time.sleep(random.uniform(1.5, 2.5))
-        r = requests.post(url, data=bodyString, headers=headers, timeout=25)
+        with requests.post(url, data=bodyString, headers=headers, timeout=25) as r:
+            if r.status_code == 429:
+                logger.warning(f"Rate limit hit (429). Headers: {r.headers}")
+                retry_after = r.headers.get("Retry-After")
+                wait_time = (
+                    int(retry_after) if retry_after else 15
+                )  # Default wait if header missing
+                logger.warning(f"Waiting for {wait_time} seconds due to rate limit.")
+                time.sleep(wait_time)
+                raise RateLimitError("Rate limit exceeded")
 
-        if r.status_code == 429:
-            logger.warning(f"Rate limit hit (429). Headers: {r.headers}")
-            retry_after = r.headers.get("Retry-After")
-            wait_time = (
-                int(retry_after) if retry_after else 15
-            )  # Default wait if header missing
-            logger.warning(f"Waiting for {wait_time} seconds due to rate limit.")
-            time.sleep(wait_time)
-            raise RateLimitError("Rate limit exceeded")
-
-        logger.info(f"Cloudflare API response status: {r.status_code}")
-        r.raise_for_status()  # Raise HTTPError for other bad responses (4xx or 5xx)
-        return r
+            logger.info(f"Cloudflare API response status: {r.status_code}")
+            r.raise_for_status()  # Raise HTTPError for other bad responses (4xx or 5xx)
+            return r
 
     except requests.exceptions.Timeout:
         logger.error("Cloudflare API request timed out.")
@@ -296,7 +300,7 @@ ipv4_prefixes = [
 ]
 
 # Available ports for endpoint generation
-ports_str = "500 854 859 864 878 880 890 891 894 903 908 928 934 939 942 943 945 946 955 968 987 988 1002 1010 1014 1018 1070 1074 1180 1387 1701 1843 2371 2408 2506 3138 3476 3581 3854 4177 4198 4233 4500 5279 5956 7103 7152 7156 7281 7559 8319 8742 8854 8886"
+ports_str = os.environ.get("AVAILABLE_PORTS", "500 854 859 864 878 880 890 891 894 903 908 928 934 939 942 943 945 946 955 968 987 988 1002 1010 1014 1018 1070 1074 1180 1387 1701 1843 2371 2408 2506 3138 3476 3581 3854 4177 4198 4233 4500 5279 5956 7103 7152 7156 7281 7559 8319 8742 8854 8886")
 available_ports = [int(p) for p in ports_str.split()]
 
 # Cloudflare's fixed public key for WireGuard
@@ -313,249 +317,257 @@ def generate_ipv4_endpoint():
     return server, port
 
 
-# Function to generate a random IPv6 endpoint
+# Function to generate a random IPv6 endpoint 
 def generate_ipv6_endpoint():
     prefix = random.choice(ipv6_prefixes)
-    random_part = ":".join(f"{random.randint(0, 65535):04x}" for _ in range(4))
+    suffix = ''.join(random.choice('0123456789abcdef') for _ in range(16))
+    formatted_suffix = ':'.join(suffix[i:i+4] for i in range(0, 16, 4))
+    server = f"{prefix}::{formatted_suffix}"
     port = random.choice(available_ports)
-    server = f"{prefix}::{random_part}"
     logger.debug(f"Generated IPv6 endpoint: {server}:{port}")
     return server, port
 
 
 # --- Main Script Logic ---
-try:
-    if os.path.exists(CACHE_FILE_PATH):
-        logger.warning(f"Cache file exists: {CACHE_FILE_PATH}")
+def main():
+    try:
+        if os.path.exists(CACHE_FILE_PATH):
+            logger.warning(f"Cache file exists: {CACHE_FILE_PATH}")
+            try:
+                if os.environ.get("FORCE_CLEAR_CACHE", "0") == "1":
+                    logger.warning(f"Deleting existing cache file: {CACHE_FILE_PATH}")
+                    os.remove(CACHE_FILE_PATH)
+                    logger.info("Cache file deleted successfully.")
+            except OSError as e:
+                logger.error(f"Error deleting cache file: {e}")
+                logger.warning("Continuing with existing cache file.")
+
+        # Load the base configuration template (YAML format)
+        logger.info(f"Loading config template from {CONFIG_TEMPLATE_PATH}")
         try:
-            if os.environ.get("FORCE_CLEAR_CACHE", "0") == "1":
-                logger.warning(f"Deleting existing cache file: {CACHE_FILE_PATH}")
-                os.remove(CACHE_FILE_PATH)
-                logger.info("Cache file deleted successfully.")
-        except OSError as e:
-            logger.error(f"Error deleting cache file: {e}")
+            with open(CONFIG_TEMPLATE_PATH, "r", encoding="utf-8") as f:
+                config_template_dict = yaml.safe_load(f)
+            logger.info("Config template loaded successfully")
+        except IOError as e:
+            logger.error(
+                f"Error reading config template file '{CONFIG_TEMPLATE_PATH}': {e}"
+            )
+            sys.exit(1)
+        except yaml.YAMLError as e:
+            logger.error(f"Invalid YML syntax in config file '{CONFIG_TEMPLATE_PATH}': {e}")
+            sys.exit(1)
 
-            logger.warning("Continuing with existing cache file.")
+        # Generate/retrieve keys for dialer and entry proxies
+        logger.info("Binding keys for Dialer proxies...")
+        priv_key_dialer, reserved_dialer, ip_v4_dialer, ip_v6_dialer = bind_keys("dialer")
 
-    # Load the base configuration template (YAML format)
-    logger.info(f"Loading config template from {CONFIG_TEMPLATE_PATH}")
-    try:
-        with open(CONFIG_TEMPLATE_PATH, "r", encoding="utf-8") as f:
-            config_template_dict = yaml.safe_load(f)
-        logger.info("Config template loaded successfully")
-    except IOError as e:
-        logger.error(
-            f"Error reading config template file '{CONFIG_TEMPLATE_PATH}': {e}"
+        logger.info("Binding keys for Entry proxies...")
+        priv_key_entry, reserved_entry, ip_v4_entry, ip_v6_entry = bind_keys("entry")
+
+        # Prepare unique interface IPs, adding CIDR notation
+        ip_dialer = f"{ip_v4_dialer}/32" if ip_v4_dialer else "172.16.0.2/32"
+        ipv6_dialer = (
+            f"{ip_v6_dialer}/128"
+            if ip_v6_dialer
+            else "2606:4700:110:8867:3f4a:906:1933:43c5/128"
         )
-        sys.exit(1)
-    except yaml.YAMLError as e:
-        logger.error(f"Invalid YML syntax in config file '{CONFIG_TEMPLATE_PATH}': {e}")
-        sys.exit(1)
+        ip_entry = (
+            f"{ip_v4_entry}/32" if ip_v4_entry else "172.16.0.3/32"
+        )  # Use a fallback
+        ipv6_entry = (
+            f"{ip_v6_entry}/128"
+            if ip_v6_entry
+            else "2606:4700:110:8c7d:2a45:f480:216b:b484/128"
+        )  # Different fallback
 
-    # Generate/retrieve keys for dialer and entry proxies
-    logger.info("Binding keys for Dialer proxies...")
-    priv_key_dialer, reserved_dialer, ip_v4_dialer, ip_v6_dialer = bind_keys("dialer")
+        logger.info(f"Using Dialer IPs: {ip_dialer}, {ipv6_dialer}")
+        logger.info(f"Using Entry IPs: {ip_entry}, {ipv6_entry}")
 
-    logger.info("Binding keys for Entry proxies...")
-    priv_key_entry, reserved_entry, ip_v4_entry, ip_v6_entry = bind_keys("entry")
+        proxies_list = []
+        dialer_proxy_names = []
+        entry_proxy_names = []
+        ipv6_endpoint_count = 0  # Counter for limiting IPv6 endpoints
 
-    # Prepare unique interface IPs, adding CIDR notation
-    ip_dialer = f"{ip_v4_dialer}/32" if ip_v4_dialer else "172.16.0.2/32"
-    ipv6_dialer = (
-        f"{ip_v6_dialer}/128"
-        if ip_v6_dialer
-        else "2606:4700:110:8867:3f4a:906:1933:43c5/128"
-    )
-    ip_entry = (
-        f"{ip_v4_entry}/32" if ip_v4_entry else "172.16.0.3/32"
-    )  # Use a different fallback
-    ipv6_entry = (
-        f"{ip_v6_entry}/128"
-        if ip_v6_entry
-        else "2606:4700:110:8c7d:2a45:f480:216b:b484/128"
-    )  # Different fallback
+        logger.info(f"Generating {NUM_PROXY_PAIRS} proxy pairs...")
+        for i in range(NUM_PROXY_PAIRS):
+            pair_num = i + 1
+            logger.debug(f"Generating pair {pair_num}/{NUM_PROXY_PAIRS}...")
 
-    logger.info(f"Using Dialer IPs: {ip_dialer}, {ipv6_dialer}")
-    logger.info(f"Using Entry IPs: {ip_entry}, {ipv6_entry}")
+            # --- Create Dialer Proxy ---
+            dialer_proxy_name = f"{DIALER_PROXY_BASE_NAME}-{pair_num:02d}"
+            dialer_proxy_names.append(dialer_proxy_name)
 
-    proxies_list = []
-    dialer_proxy_names = []
-    entry_proxy_names = []
-    ipv6_endpoint_count = 0  # Counter for limiting IPv6 endpoints
+            # --- Choose Dialer endpoint based on pair number ---
+            if pair_num <= 4:
+                logger.debug(
+                    f"Using IPv4 endpoint for Dialer proxy {pair_num} (WiFi compatibility)"
+                )
+                server_dialer, port_dialer = generate_ipv4_endpoint()
+            else:
+                logger.debug(f"Using IPv6 endpoint for Dialer proxy {pair_num}")
+                server_dialer, port_dialer = generate_ipv6_endpoint()
 
-    logger.info(f"Generating {NUM_PROXY_PAIRS} proxy pairs...")
-    for i in range(NUM_PROXY_PAIRS):
-        pair_num = i + 1
-        logger.debug(f"Generating pair {pair_num}/{NUM_PROXY_PAIRS}...")
+            entry_proxy_name = f"{ENTRY_PROXY_BASE_NAME}-{pair_num:02d}"
 
-        # --- Create Dialer Proxy FIRST ---
-        dialer_proxy_name = f"{DIALER_PROXY_BASE_NAME}-{pair_num:02d}🇩🇪"
-        dialer_proxy_names.append(dialer_proxy_name)
+            dialer_proxy = {
+                "name": dialer_proxy_name,
+                "type": "wireguard",
+                "ip": ip_dialer,
+                "ipv6": ipv6_dialer,
+                "private-key": priv_key_dialer,
+                "server": server_dialer,
+                "port": port_dialer,
+                "public-key": CLOUDFLARE_PUBLIC_KEY,
+                "allowed-ips": ["0.0.0.0/0", "::/0"],
+                "reserved": reserved_dialer,
+                "udp": True,
+                "mtu": 1280,
+                "dialer-proxy": entry_proxy_name,
+            }
+            proxies_list.append(dialer_proxy)
+            
+            # --- Create Entry Proxy SECOND ---
+            entry_proxy_names.append(entry_proxy_name)
+            
+            # --- Choose Entry endpoint based on pair number (same logic as Dialer for WiFi compatibility) ---
+            if pair_num <= 4:
+                logger.debug(
+                    f"Using IPv4 endpoint for Entry proxy {pair_num} (WiFi compatibility)"
+                )
+                server_entry, port_entry = generate_ipv4_endpoint()
+            else:
+                # For pairs > 4, we can revert to the original logic if needed,
+                # or simply use IPv6 like the dialer. Here we mirror the dialer logic.
+                logger.debug(f"Using IPv6 endpoint for Entry proxy {pair_num}")
+                server_entry, port_entry = generate_ipv6_endpoint()
+            
+            # Note: The previous logic using ipv6_endpoint_count and NUM_IPV6_ENTRY_ENDPOINTS
+            # for entry proxy endpoint selection has been replaced by the logic above.
+            
+            entry_proxy = {
+                "name": entry_proxy_name,
+                "type": "wireguard",
+                "ip": ip_entry,
+                "ipv6": ipv6_entry,
+                "private-key": priv_key_entry,
+                "server": server_entry,
+                "port": port_entry,
+                "public-key": CLOUDFLARE_PUBLIC_KEY,
+                "allowed-ips": ["0.0.0.0/0", "::/0"],
+                "reserved": reserved_entry,
+                "udp": True,
+                "mtu": 1280,
+                "amnezia-wg-option": {"jc": "5", "jmin": "50", "jmax": "100"},
+            }
+            proxies_list.append(entry_proxy)
 
-        # --- Choose Dialer endpoint based on pair number ---
-        if pair_num <= 4:
-            logger.debug(
-                f"Using IPv4 endpoint for Dialer proxy {pair_num} (WiFi compatibility)"
-            )
-            server_dialer, port_dialer = generate_ipv4_endpoint()
-        else:
-            logger.debug(f"Using IPv6 endpoint for Dialer proxy {pair_num}")
-            server_dialer, port_dialer = generate_ipv6_endpoint()
+        # Add the generated proxies to the template dictionary
+        config_template_dict["proxies"] = proxies_list
 
-        entry_proxy_name = f"{ENTRY_PROXY_BASE_NAME}-{pair_num:02d}🇮🇷"
+        # --- Create Proxy Groups Dynamically ---
+        logger.info("Creating proxy groups...")
+        proxy_groups = [
+            {
+                "name": MAIN_SELECTOR_GROUP_NAME,
+                "type": "select",
+                "proxies": [
+                    ENTRY_URL_TEST_GROUP_NAME,
+                    DIALER_URL_TEST_GROUP_NAME,
+                    "DIRECT",
+                    *dialer_proxy_names,  # Dialer proxies first in list
+                    *entry_proxy_names,  # Entry proxies second
+                ],
+            },
+            {
+                "name": ENTRY_URL_TEST_GROUP_NAME,
+                "type": "url-test",
+                "url": "https://www.gstatic.com/generate_204",
+                "interval": 30,
+                "tolerance": 50,
+                "proxies": entry_proxy_names,
+            },
+            {
+                "name": DIALER_URL_TEST_GROUP_NAME,
+                "type": "url-test",
+                "url": "https://www.gstatic.com/generate_204",
+                "interval": 30,
+                "tolerance": 50,
+                "proxies": dialer_proxy_names,
+            },
+        ]
+        config_template_dict["proxy-groups"] = proxy_groups
 
-        dialer_proxy = {
-            "name": dialer_proxy_name,
-            "type": "wireguard",
-            "ip": ip_dialer,
-            "ipv6": ipv6_dialer,
-            "private-key": priv_key_dialer,
-            "server": server_dialer,
-            "port": port_dialer,
-            "public-key": CLOUDFLARE_PUBLIC_KEY,
-            "allowed-ips": ["0.0.0.0/0", "::/0"],
-            "reserved": reserved_dialer,
-            "udp": True,
-            "mtu": 1280,
-            "dialer-proxy": entry_proxy_name,
-        }
-        proxies_list.append(dialer_proxy)
-
-        # --- Create Entry Proxy SECOND ---
-        entry_proxy_names.append(entry_proxy_name)
-
-        # --- Choose Entry endpoint based on pair number (same logic as Dialer for WiFi compatibility) ---
-        if pair_num <= 4:
-            logger.debug(
-                f"Using IPv4 endpoint for Entry proxy {pair_num} (WiFi compatibility)"
-            )
-            server_entry, port_entry = generate_ipv4_endpoint()
-        else:
-            # For pairs > 4, we can revert to the original logic if needed,
-            # or simply use IPv6 like the dialer. Here we mirror the dialer logic.
-            logger.debug(f"Using IPv6 endpoint for Entry proxy {pair_num}")
-            server_entry, port_entry = generate_ipv6_endpoint()
-
-        entry_proxy = {
-            "name": entry_proxy_name,
-            "type": "wireguard",
-            "ip": ip_entry,
-            "ipv6": ipv6_entry,
-            "private-key": priv_key_entry,
-            "server": server_entry,
-            "port": port_entry,
-            "public-key": CLOUDFLARE_PUBLIC_KEY,
-            "allowed-ips": ["0.0.0.0/0", "::/0"],
-            "reserved": reserved_entry,
-            "udp": True,
-            "mtu": 1280,
-            "amnezia-wg-option": {"jc": "5", "jmin": "50", "jmax": "100"},
-        }
-        proxies_list.append(entry_proxy)
-
-    # Add the generated proxies to the template dictionary
-    config_template_dict["proxies"] = proxies_list
-
-    # --- Create Proxy Groups Dynamically ---
-    logger.info("Creating proxy groups...")
-    proxy_groups = [
-        {
-            "name": MAIN_SELECTOR_GROUP_NAME,
-            "type": "select",
-            "proxies": [
-                ENTRY_URL_TEST_GROUP_NAME,
-                DIALER_URL_TEST_GROUP_NAME,
-                "DIRECT",
-                *dialer_proxy_names,
-                *entry_proxy_names,
-            ],
-        },
-        {
-            "name": ENTRY_URL_TEST_GROUP_NAME,
-            "type": "url-test",
-            "url": "https://www.gstatic.com/generate_204",
-            "interval": 30,
-            "tolerance": 50,
-            "proxies": entry_proxy_names,
-        },
-        {
-            "name": DIALER_URL_TEST_GROUP_NAME,
-            "type": "url-test",
-            "url": "https://www.gstatic.com/generate_204",
-            "interval": 30,
-            "tolerance": 50,
-            "proxies": dialer_proxy_names,
-        },
-    ]
-    config_template_dict["proxy-groups"] = proxy_groups
-
-    # Ensure the final MATCH rule uses the correct selector group name
-    if "rules" in config_template_dict:
-        updated_rules = []
-        match_rule_found = False
-        for rule in config_template_dict["rules"]:
-            if isinstance(rule, str) and rule.startswith("MATCH,"):
+        # Ensure the final MATCH rule uses the correct selector group name
+        if "rules" in config_template_dict:
+            updated_rules = []
+            match_rule_found = False
+            for rule in config_template_dict["rules"]:
+                if isinstance(rule, str) and rule.startswith("MATCH,"):
+                    updated_rules.append(f"MATCH,{MAIN_SELECTOR_GROUP_NAME}")
+                    logger.info(
+                        f"Updated MATCH rule to use '{MAIN_SELECTOR_GROUP_NAME}' group."
+                    )
+                    match_rule_found = True
+                else:
+                    updated_rules.append(rule)
+            if not match_rule_found:
+                logger.warning("MATCH rule not found in template. Appending default.")
                 updated_rules.append(f"MATCH,{MAIN_SELECTOR_GROUP_NAME}")
-                logger.info(
-                    f"Updated MATCH rule to use '{MAIN_SELECTOR_GROUP_NAME}' group."
-                )
-                match_rule_found = True
+            config_template_dict["rules"] = updated_rules
+
+        # Ensure the primary DNS nameserver uses the correct selector group name tag
+        if "dns" in config_template_dict and "nameserver" in config_template_dict["dns"]:
+            if config_template_dict["dns"]["nameserver"]:
+                parts = config_template_dict["dns"]["nameserver"][0].split("#")
+                if len(parts) >= 1:  # Check if there is at least a server part
+                    # Rebuild tag using the main selector group name
+                    config_template_dict["dns"]["nameserver"][
+                        0
+                    ] = f"{parts[0]}#{MAIN_SELECTOR_GROUP_NAME}"
+                    logger.info(
+                        f"Updated primary DNS nameserver to use '{MAIN_SELECTOR_GROUP_NAME}' group tag."
+                    )
+                else:
+                    logger.warning(
+                        "Primary DNS nameserver format unexpected. Could not update tag."
+                    )
             else:
-                updated_rules.append(rule)
-        if not match_rule_found:
-            logger.warning("MATCH rule not found in template. Appending default.")
-            updated_rules.append(f"MATCH,{MAIN_SELECTOR_GROUP_NAME}")
-        config_template_dict["rules"] = updated_rules
+                logger.warning("DNS nameserver list is empty in template.")
 
-    # Ensure the primary DNS nameserver uses the correct selector group name tag
-    if "dns" in config_template_dict and "nameserver" in config_template_dict["dns"]:
-        if config_template_dict["dns"]["nameserver"]:
-            parts = config_template_dict["dns"]["nameserver"][0].split("#")
-            if len(parts) >= 1:  # Check if there is at least a server part
-                # Rebuild tag using the main selector group name
-                config_template_dict["dns"]["nameserver"][
-                    0
-                ] = f"{parts[0]}#{MAIN_SELECTOR_GROUP_NAME}"
-                logger.info(
-                    f"Updated primary DNS nameserver to use '{MAIN_SELECTOR_GROUP_NAME}' group tag."
+        # --- Write Output YAML File ---
+        logger.info(f"Writing output to {OUTPUT_YAML_FILENAME}")
+        try:
+            os.makedirs(os.path.dirname(OUTPUT_YAML_FILENAME), exist_ok=True)
+            # Add comments to the beginning of the file
+            generation_time = datetime.datetime.now().isoformat()
+            header_comment = "# Generated configs for clash-meta with WireGuard proxies that have amnesia values.\n"
+            header_comment += f"# Generated on: {generation_time}\n\n"
+
+            with open(OUTPUT_YAML_FILENAME, "w", encoding="utf-8") as f:
+                f.write(header_comment)
+                # Dump the dictionary as YAML
+                yaml.dump(
+                    config_template_dict,
+                    f,
+                    allow_unicode=True,
+                    sort_keys=False,
+                    default_flow_style=False,
+                    indent=2,
                 )
-            else:
-                logger.warning(
-                    "Primary DNS nameserver format unexpected. Could not update tag."
-                )
-        else:
-            logger.warning("DNS nameserver list is empty in template.")
-
-    # --- Write Output YAML File ---
-    logger.info(f"Writing output to {OUTPUT_YAML_FILENAME}")
-    try:
-        os.makedirs(os.path.dirname(OUTPUT_YAML_FILENAME), exist_ok=True)
-        # Add comments to the beginning of the file
-        generation_time = datetime.datetime.now().isoformat()
-        header_comment = "# Generated configs for clash-meta with WireGuard proxies that have amnesia values.\n"
-        header_comment += f"# Generated on: {generation_time}\n\n"
-
-        with open(OUTPUT_YAML_FILENAME, "w", encoding="utf-8") as f:
-            f.write(header_comment)
-            # Dump the dictionary as YAML
-            yaml.dump(
-                config_template_dict,
-                f,
-                allow_unicode=True,
-                sort_keys=False,
-                default_flow_style=False,
-                indent=2,
+            logger.info(f"Successfully generated '{OUTPUT_YAML_FILENAME}'")
+        except IOError as e:
+            logger.error(f"Error writing to file '{OUTPUT_YAML_FILENAME}': {e}")
+            sys.exit(1)
+        except Exception as e:
+            logger.error(
+                f"An unexpected error occurred while writing YAML: {e}", exc_info=True
             )
-        logger.info(f"Successfully generated '{OUTPUT_YAML_FILENAME}'")
-    except IOError as e:
-        logger.error(f"Error writing to file '{OUTPUT_YAML_FILENAME}': {e}")
-        sys.exit(1)
+            sys.exit(1)
+
     except Exception as e:
-        logger.error(
-            f"An unexpected error occurred while writing YAML: {e}", exc_info=True
-        )
+        logger.error(f"Unexpected error occurred in script execution: {e}", exc_info=True)
         sys.exit(1)
 
-except Exception as e:
-    logger.error(f"Unexpected error occurred in script execution: {e}", exc_info=True)
-    sys.exit(1)
+
+if __name__ == "__main__":
+    main()
