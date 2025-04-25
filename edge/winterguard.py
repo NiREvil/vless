@@ -391,7 +391,15 @@ try:
         # --- Create Dialer Proxy FIRST ---
         dialer_proxy_name = f"{DIALER_PROXY_BASE_NAME}-{pair_num:02d}🇩🇪"
         dialer_proxy_names.append(dialer_proxy_name)
-        server_dialer, port_dialer = generate_ipv4_endpoint()
+
+        # --- Choose Dialer endpoint based on pair number ---
+        if pair_num <= 4:
+            logger.debug(f"Using IPv4 endpoint for Dialer proxy {pair_num} (WiFi compatibility)")
+            server_dialer, port_dialer = generate_ipv4_endpoint()
+        else:
+            logger.debug(f"Using IPv6 endpoint for Dialer proxy {pair_num}")
+            server_dialer, port_dialer = generate_ipv6_endpoint()
+            
         entry_proxy_name = f"{ENTRY_PROXY_BASE_NAME}-{pair_num:02d}🇮🇷"
 
         dialer_proxy = {
@@ -435,7 +443,7 @@ try:
             "allowed-ips": ["0.0.0.0/0", "::/0"],
             "reserved": reserved_entry,
             "udp": True,
-            "mtu": 1380,
+            "mtu": 1280,
             "amnezia-wg-option": {"jc": "5", "jmin": "50", "jmax": "100"},
         }
         proxies_list.append(entry_proxy)
