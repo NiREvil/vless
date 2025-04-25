@@ -28,7 +28,7 @@ dns:
   respect-rules: true
   use-system-hosts: false
   nameserver:
-    - 1.1.1.1#SELECT 🛡️
+    - 1.1.1.1#🔰 PROXIES
   proxy-server-nameserver:
     - 8.8.8.8#DIRECT
   nameserver-policy:
@@ -160,7 +160,7 @@ rules:
   # Direct IP rules (Private CIDR, Iran CIDR)
   - RULE-SET,private-cidr,DIRECT,no-resolve # Add no-resolve for private IPs
   - RULE-SET,ir-cidr,DIRECT
-  - MATCH,SELECT 🛡️ # Placeholder, Script will update it
+  - MATCH,🔰 PROXIES # Placeholder, Script will update it
 
 ntp:
   enable: true
