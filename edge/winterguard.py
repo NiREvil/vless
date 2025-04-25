@@ -326,7 +326,7 @@ def generate_ipv6_endpoint():
 # --- Main Script Logic ---
 try:
     if os.path.exists(CACHE_FILE_PATH):
-       logger.warning(f"Cache file exists: {CACHE_FILE_PATH}")
+        logger.warning(f"Cache file exists: {CACHE_FILE_PATH}")
         try:
             if os.environ.get("FORCE_CLEAR_CACHE", "0") == "1":
                 logger.warning(f"Deleting existing cache file: {CACHE_FILE_PATH}")
