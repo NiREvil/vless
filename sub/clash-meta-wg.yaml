@@ -1,5 +1,5 @@
 # Generated Clash Meta WireGuard config using WG script
-# Generated on: 2025-04-24T20:44:05.125353
+# Generated on: 2025-04-25T00:52:26.612503
 
 mixed-port: 7890
 ipv6: true
@@ -79,30 +79,30 @@ proxies:
 - name: WG-Dialer-01 🔗
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
-  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
-  server: 162.159.195.207
-  port: 7156
+  ipv6: 2606:4700:110:81b0:83e5:3b14:bff3:b0fd/128
+  private-key: mHovV7+j6rGEuIFFOs7pJ/iw8ExKVmnnxruzjKYhtGg=
+  server: 162.159.193.58
+  port: 1010
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: T5PB
+  reserved: NF4l
   udp: true
   mtu: 1280
   dialer-proxy: WG-Entry-01 ⚡
 - name: WG-Entry-01 ⚡
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
-  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
-  server: 2606:4700:d0::3f24:ce15:6a0a:8dff
-  port: 955
+  ipv6: 2606:4700:110:8cfb:d7ec:4b4:b72e:99c6/128
+  private-key: WF8F0b2FfXzgszB1VY00Sd1f0SgRkXwiWAsiJk3DdGs=
+  server: 2606:4700:d1::2d23:6355:9f73:2905
+  port: 1010
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: XFaE
+  reserved: 5Epr
   udp: true
   mtu: 1280
   amnezia-wg-option:
@@ -112,30 +112,30 @@ proxies:
 - name: WG-Dialer-02 🔗
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
-  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
-  server: 188.114.96.161
-  port: 854
+  ipv6: 2606:4700:110:81b0:83e5:3b14:bff3:b0fd/128
+  private-key: mHovV7+j6rGEuIFFOs7pJ/iw8ExKVmnnxruzjKYhtGg=
+  server: 188.114.97.185
+  port: 7281
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: T5PB
+  reserved: NF4l
   udp: true
   mtu: 1280
   dialer-proxy: WG-Entry-02 ⚡
 - name: WG-Entry-02 ⚡
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
-  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
-  server: 2606:4700:d0::c62d:0ebb:d353:8a7a
-  port: 987
+  ipv6: 2606:4700:110:8cfb:d7ec:4b4:b72e:99c6/128
+  private-key: WF8F0b2FfXzgszB1VY00Sd1f0SgRkXwiWAsiJk3DdGs=
+  server: 2606:4700:d0::e719:40e2:83d1:ed4d
+  port: 859
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: XFaE
+  reserved: 5Epr
   udp: true
   mtu: 1280
   amnezia-wg-option:
@@ -145,30 +145,30 @@ proxies:
 - name: WG-Dialer-03 🔗
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
-  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
-  server: 188.114.97.116
-  port: 1070
+  ipv6: 2606:4700:110:81b0:83e5:3b14:bff3:b0fd/128
+  private-key: mHovV7+j6rGEuIFFOs7pJ/iw8ExKVmnnxruzjKYhtGg=
+  server: 188.114.98.239
+  port: 928
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: T5PB
+  reserved: NF4l
   udp: true
   mtu: 1280
   dialer-proxy: WG-Entry-03 ⚡
 - name: WG-Entry-03 ⚡
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
-  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
-  server: 162.159.195.17
-  port: 955
+  ipv6: 2606:4700:110:8cfb:d7ec:4b4:b72e:99c6/128
+  private-key: WF8F0b2FfXzgszB1VY00Sd1f0SgRkXwiWAsiJk3DdGs=
+  server: 188.114.96.194
+  port: 3138
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: XFaE
+  reserved: 5Epr
   udp: true
   mtu: 1280
   amnezia-wg-option:
@@ -178,30 +178,30 @@ proxies:
 - name: WG-Dialer-04 🔗
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
-  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
-  server: 162.159.195.102
-  port: 2408
+  ipv6: 2606:4700:110:81b0:83e5:3b14:bff3:b0fd/128
+  private-key: mHovV7+j6rGEuIFFOs7pJ/iw8ExKVmnnxruzjKYhtGg=
+  server: 162.159.195.86
+  port: 4233
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: T5PB
+  reserved: NF4l
   udp: true
   mtu: 1280
   dialer-proxy: WG-Entry-04 ⚡
 - name: WG-Entry-04 ⚡
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
-  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
-  server: 162.159.192.90
-  port: 942
+  ipv6: 2606:4700:110:8cfb:d7ec:4b4:b72e:99c6/128
+  private-key: WF8F0b2FfXzgszB1VY00Sd1f0SgRkXwiWAsiJk3DdGs=
+  server: 188.114.97.75
+  port: 1002
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: XFaE
+  reserved: 5Epr
   udp: true
   mtu: 1280
   amnezia-wg-option:
@@ -211,30 +211,30 @@ proxies:
 - name: WG-Dialer-05 🔗
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
-  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
-  server: 162.159.193.252
-  port: 1387
+  ipv6: 2606:4700:110:81b0:83e5:3b14:bff3:b0fd/128
+  private-key: mHovV7+j6rGEuIFFOs7pJ/iw8ExKVmnnxruzjKYhtGg=
+  server: 162.159.195.245
+  port: 3138
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: T5PB
+  reserved: NF4l
   udp: true
   mtu: 1280
   dialer-proxy: WG-Entry-05 ⚡
 - name: WG-Entry-05 ⚡
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
-  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
-  server: 188.114.97.161
-  port: 934
+  ipv6: 2606:4700:110:8cfb:d7ec:4b4:b72e:99c6/128
+  private-key: WF8F0b2FfXzgszB1VY00Sd1f0SgRkXwiWAsiJk3DdGs=
+  server: 188.114.98.114
+  port: 864
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: XFaE
+  reserved: 5Epr
   udp: true
   mtu: 1280
   amnezia-wg-option:
@@ -244,30 +244,30 @@ proxies:
 - name: WG-Dialer-06 🔗
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
-  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
-  server: 188.114.98.72
-  port: 942
+  ipv6: 2606:4700:110:81b0:83e5:3b14:bff3:b0fd/128
+  private-key: mHovV7+j6rGEuIFFOs7pJ/iw8ExKVmnnxruzjKYhtGg=
+  server: 162.159.192.128
+  port: 878
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: T5PB
+  reserved: NF4l
   udp: true
   mtu: 1280
   dialer-proxy: WG-Entry-06 ⚡
 - name: WG-Entry-06 ⚡
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
-  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
-  server: 162.159.195.217
-  port: 908
+  ipv6: 2606:4700:110:8cfb:d7ec:4b4:b72e:99c6/128
+  private-key: WF8F0b2FfXzgszB1VY00Sd1f0SgRkXwiWAsiJk3DdGs=
+  server: 188.114.98.164
+  port: 988
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: XFaE
+  reserved: 5Epr
   udp: true
   mtu: 1280
   amnezia-wg-option:
@@ -277,30 +277,30 @@ proxies:
 - name: WG-Dialer-07 🔗
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
-  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
-  server: 188.114.97.100
-  port: 894
+  ipv6: 2606:4700:110:81b0:83e5:3b14:bff3:b0fd/128
+  private-key: mHovV7+j6rGEuIFFOs7pJ/iw8ExKVmnnxruzjKYhtGg=
+  server: 162.159.192.162
+  port: 945
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: T5PB
+  reserved: NF4l
   udp: true
   mtu: 1280
   dialer-proxy: WG-Entry-07 ⚡
 - name: WG-Entry-07 ⚡
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
-  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
-  server: 162.159.195.158
-  port: 859
+  ipv6: 2606:4700:110:8cfb:d7ec:4b4:b72e:99c6/128
+  private-key: WF8F0b2FfXzgszB1VY00Sd1f0SgRkXwiWAsiJk3DdGs=
+  server: 162.159.204.174
+  port: 4177
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: XFaE
+  reserved: 5Epr
   udp: true
   mtu: 1280
   amnezia-wg-option:
@@ -310,30 +310,30 @@ proxies:
 - name: WG-Dialer-08 🔗
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:865f:ab83:cb78:5063:1919/128
-  private-key: IPqpkIKNPfuXIge0Zap1H5/uuWpqzTZ0513ztRk8cng=
-  server: 188.114.99.142
-  port: 1843
+  ipv6: 2606:4700:110:81b0:83e5:3b14:bff3:b0fd/128
+  private-key: mHovV7+j6rGEuIFFOs7pJ/iw8ExKVmnnxruzjKYhtGg=
+  server: 162.159.193.254
+  port: 4233
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: T5PB
+  reserved: NF4l
   udp: true
   mtu: 1280
   dialer-proxy: WG-Entry-08 ⚡
 - name: WG-Entry-08 ⚡
   type: wireguard
   ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8713:6fe2:5fea:e9c4:aa4f/128
-  private-key: uOXZ1NeaePQaBope5C1xDdNQULCM0X66lwdz3yjDrnM=
-  server: 188.114.96.8
-  port: 1387
+  ipv6: 2606:4700:110:8cfb:d7ec:4b4:b72e:99c6/128
+  private-key: WF8F0b2FfXzgszB1VY00Sd1f0SgRkXwiWAsiJk3DdGs=
+  server: 188.114.96.81
+  port: 2506
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   allowed-ips:
   - 0.0.0.0/0
   - ::/0
-  reserved: XFaE
+  reserved: 5Epr
   udp: true
   mtu: 1280
   amnezia-wg-option:
