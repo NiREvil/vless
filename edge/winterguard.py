@@ -22,23 +22,23 @@ NUM_PROXY_PAIRS = 8  # Number of proxy pairs to generate
 NUM_IPV6_ENTRY_ENDPOINTS = (
     2  # How many Entry proxies should use an IPv6 server endpoint
 )
-OUTPUT_YAML_FILENAME = "sub/clash-meta-wg.yaml"  # Output YAML filename
+OUTPUT_YAML_FILENAME = "sub/clash-meta-wg.yml"  # Output YML filename
 CONFIG_TEMPLATE_PATH = (
     "edge/assets/clash-meta-wg-template.yml"  # Path to the template file
 )
 CACHE_FILE_PATH = "sub/key_cache.json"  # Path for caching generated keys
 
 # Proxy Naming Configuration
-DIALER_PROXY_BASE_NAME = "WG-Dialer"
-ENTRY_PROXY_BASE_NAME = "WG-Entry"
-MAIN_SELECTOR_GROUP_NAME = "🔰 Proxies"  # Changed selector name
-DIALER_URL_TEST_GROUP_NAME = f"{DIALER_PROXY_BASE_NAME} - Ping"
-ENTRY_URL_TEST_GROUP_NAME = f"{ENTRY_PROXY_BASE_NAME} - Ping"
+DIALER_PROXY_BASE_NAME = "GER"
+ENTRY_PROXY_BASE_NAME = "IRN"
+MAIN_SELECTOR_GROUP_NAME = "🔰 PROXIES"
+DIALER_URL_TEST_GROUP_NAME = f"Auto-{DIALER_PROXY_BASE_NAME}"
+ENTRY_URL_TEST_GROUP_NAME = f"Auto-{ENTRY_PROXY_BASE_NAME}"
 # --- End Configuration ---
 
 # Log settings
 logging.basicConfig(
-    level=logging.INFO,  # Set back to INFO for more detailed logs during generation
+    level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[logging.StreamHandler(sys.stdout)],
 )
@@ -82,7 +82,7 @@ def load_cached_keys():
         try:
             with open(CACHE_FILE_PATH, "r", encoding="utf-8") as f:
                 content = f.read()
-                if not content:  # Handle empty file case
+                if not content:
                     return []
                 return json.loads(content)
         except json.JSONDecodeError:
@@ -92,7 +92,7 @@ def load_cached_keys():
             return []
         except IOError as e:
             logger.error(f"Error reading cache file {CACHE_FILE_PATH}: {e}")
-            return []  # Treat as no cache on read error
+            return []
     return []
 
 
@@ -146,7 +146,7 @@ def register_key_on_CF(pub_key):
         time.sleep(random.uniform(1.5, 2.5))
         r = requests.post(
             url, data=bodyString, headers=headers, timeout=25
-        )  # Increased timeout
+        )
 
         if r.status_code == 429:
             logger.warning(f"Rate limit hit (429). Headers: {r.headers}")
@@ -391,10 +391,10 @@ try:
         logger.debug(f"Generating pair {pair_num}/{NUM_PROXY_PAIRS}...")
 
         # --- Create Dialer Proxy FIRST ---
-        dialer_proxy_name = f"{DIALER_PROXY_BASE_NAME}-{pair_num:02d} 🔗"
+        dialer_proxy_name = f"{DIALER_PROXY_BASE_NAME}-{pair_num:02d}🇩🇪"
         dialer_proxy_names.append(dialer_proxy_name)
         server_dialer, port_dialer = generate_ipv4_endpoint()
-        entry_proxy_name = f"{ENTRY_PROXY_BASE_NAME}-{pair_num:02d} ⚡"
+        entry_proxy_name = f"{ENTRY_PROXY_BASE_NAME}-{pair_num:02d}🇮🇷"
 
         dialer_proxy = {
             "name": dialer_proxy_name,
@@ -437,7 +437,7 @@ try:
             "allowed-ips": ["0.0.0.0/0", "::/0"],
             "reserved": reserved_entry,
             "udp": True,
-            "mtu": 1280,
+            "mtu": 1380,
             "amnezia-wg-option": {"jc": "5", "jmin": "50", "jmax": "100"},
         }
         proxies_list.append(entry_proxy)
@@ -463,16 +463,16 @@ try:
             "name": ENTRY_URL_TEST_GROUP_NAME,
             "type": "url-test",
             "url": "https://www.gstatic.com/generate_204",
-            "interval": 60,  # Increased interval slightly
-            "tolerance": 100,  # Increased tolerance slightly
+            "interval": 30,
+            "tolerance": 50,
             "proxies": entry_proxy_names,
         },
         {
             "name": DIALER_URL_TEST_GROUP_NAME,
             "type": "url-test",
             "url": "https://www.gstatic.com/generate_204",
-            "interval": 60,
-            "tolerance": 100,
+            "interval": 30,
+            "tolerance": 50,
             "proxies": dialer_proxy_names,
         },
     ]
@@ -521,7 +521,7 @@ try:
         os.makedirs(os.path.dirname(OUTPUT_YAML_FILENAME), exist_ok=True)
         # Add comments to the beginning of the file
         generation_time = datetime.datetime.now().isoformat()
-        header_comment = "# Generated Clash Meta WireGuard config using WG script\n"
+        header_comment = "# Generated configs for clash-meta with WireGuard proxies that have amnesia values.\n"
         header_comment += f"# Generated on: {generation_time}\n\n"
 
         with open(OUTPUT_YAML_FILENAME, "w", encoding="utf-8") as f:
