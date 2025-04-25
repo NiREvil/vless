@@ -394,12 +394,14 @@ try:
 
         # --- Choose Dialer endpoint based on pair number ---
         if pair_num <= 4:
-            logger.debug(f"Using IPv4 endpoint for Dialer proxy {pair_num} (WiFi compatibility)")
+            logger.debug(
+                f"Using IPv4 endpoint for Dialer proxy {pair_num} (WiFi compatibility)"
+            )
             server_dialer, port_dialer = generate_ipv4_endpoint()
         else:
             logger.debug(f"Using IPv6 endpoint for Dialer proxy {pair_num}")
             server_dialer, port_dialer = generate_ipv6_endpoint()
-            
+
         entry_proxy_name = f"{ENTRY_PROXY_BASE_NAME}-{pair_num:02d}🇮🇷"
 
         dialer_proxy = {
