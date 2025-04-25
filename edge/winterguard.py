@@ -22,11 +22,11 @@ NUM_PROXY_PAIRS = 8  # Number of proxy pairs to generate
 NUM_IPV6_ENTRY_ENDPOINTS = (
     2  # How many Entry proxies should use an IPv6 server endpoint
 )
-OUTPUT_YAML_FILENAME = "sub/clash-meta-wg.yml" # Output YML filename
+OUTPUT_YAML_FILENAME = "sub/clash-meta-wg.yml"  # Output YML filename
 CONFIG_TEMPLATE_PATH = (
-    "edge/assets/clash-meta-wg-template.yml" # Path to the template file
+    "edge/assets/clash-meta-wg-template.yml"  # Path to the template file
 )
-CACHE_FILE_PATH = "sub/key_cache.json" # Path for caching generated keys
+CACHE_FILE_PATH = "sub/key_cache.json"  # Path for caching generated keys
 
 # Proxy Naming Configuration
 DIALER_PROXY_BASE_NAME = "GER"
@@ -391,7 +391,7 @@ try:
         # --- Create Dialer Proxy FIRST ---
         dialer_proxy_name = f"{DIALER_PROXY_BASE_NAME}-{pair_num:02d}🇩🇪"
         dialer_proxy_names.append(dialer_proxy_name)
-        
+
         # --- Choose Dialer endpoint based on pair number ---
         if pair_num <= 4:
             logger.debug(
@@ -401,9 +401,9 @@ try:
         else:
             logger.debug(f"Using IPv6 endpoint for Dialer proxy {pair_num}")
             server_dialer, port_dialer = generate_ipv6_endpoint()
-        
+
         entry_proxy_name = f"{ENTRY_PROXY_BASE_NAME}-{pair_num:02d}🇮🇷"
-        
+
         dialer_proxy = {
             "name": dialer_proxy_name,
             "type": "wireguard",
@@ -420,10 +420,10 @@ try:
             "dialer-proxy": entry_proxy_name,
         }
         proxies_list.append(dialer_proxy)
-        
+
         # --- Create Entry Proxy SECOND ---
         entry_proxy_names.append(entry_proxy_name)
-        
+
         # --- Choose Entry endpoint based on pair number (same logic as Dialer for WiFi compatibility) ---
         if pair_num <= 4:
             logger.debug(
@@ -435,8 +435,7 @@ try:
             # or simply use IPv6 like the dialer. Here we mirror the dialer logic.
             logger.debug(f"Using IPv6 endpoint for Entry proxy {pair_num}")
             server_entry, port_entry = generate_ipv6_endpoint()
-        
-         
+
         entry_proxy = {
             "name": entry_proxy_name,
             "type": "wireguard",
@@ -454,7 +453,6 @@ try:
         }
         proxies_list.append(entry_proxy)
 
-
     # Add the generated proxies to the template dictionary
     config_template_dict["proxies"] = proxies_list
 
@@ -469,7 +467,7 @@ try:
                 DIALER_URL_TEST_GROUP_NAME,
                 "DIRECT",
                 *dialer_proxy_names,
-                *entry_proxy_names, 
+                *entry_proxy_names,
             ],
         },
         {
