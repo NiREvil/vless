@@ -22,11 +22,11 @@ NUM_PROXY_PAIRS = 8  # Number of proxy pairs to generate
 NUM_IPV6_ENTRY_ENDPOINTS = (
     2  # How many Entry proxies should use an IPv6 server endpoint
 )
-OUTPUT_YAML_FILENAME = "sub/clash-meta-wg.yml"  # Output YML filename
+OUTPUT_YAML_FILENAME = "sub/clash-meta-wg.yml" # Output YML filename
 CONFIG_TEMPLATE_PATH = (
-    "edge/assets/clash-meta-wg-template.yml"  # Path to the template file
+    "edge/assets/clash-meta-wg-template.yml" # Path to the template file
 )
-CACHE_FILE_PATH = "sub/key_cache.json"  # Path for caching generated keys
+CACHE_FILE_PATH = "sub/key_cache.json" # Path for caching generated keys
 
 # Proxy Naming Configuration
 DIALER_PROXY_BASE_NAME = "GER"
@@ -325,17 +325,17 @@ def generate_ipv6_endpoint():
 
 # --- Main Script Logic ---
 try:
-    # --- Delete existing cache file ---
     if os.path.exists(CACHE_FILE_PATH):
-        logger.warning(f"Deleting existing cache file: {CACHE_FILE_PATH}")
+       logger.warning(f"Cache file exists: {CACHE_FILE_PATH}")
         try:
-            os.remove(CACHE_FILE_PATH)
-            logger.info("Cache file deleted successfully.")
+            if os.environ.get("FORCE_CLEAR_CACHE", "0") == "1":
+                logger.warning(f"Deleting existing cache file: {CACHE_FILE_PATH}")
+                os.remove(CACHE_FILE_PATH)
+                logger.info("Cache file deleted successfully.")
         except OSError as e:
-            logger.error(
-                f"Error deleting cache file: {e}. Please delete it manually and restart."
-            )
-            sys.exit(1)  # Exit if cache cannot be deleted
+            logger.error(f"Error deleting cache file: {e}")
+
+            logger.warning("Continuing with existing cache file.")
 
     # Load the base configuration template (YAML format)
     logger.info(f"Loading config template from {CONFIG_TEMPLATE_PATH}")
@@ -372,7 +372,7 @@ try:
     ipv6_entry = (
         f"{ip_v6_entry}/128"
         if ip_v6_entry
-        else "2606:4700:110:8867:3f4a:906:1933:43c5/128"
+        else "2606:4700:110:8c7d:2a45:f480:216b:b484/128"
     )  # Different fallback
 
     logger.info(f"Using Dialer IPs: {ip_dialer}, {ipv6_dialer}")
@@ -391,7 +391,7 @@ try:
         # --- Create Dialer Proxy FIRST ---
         dialer_proxy_name = f"{DIALER_PROXY_BASE_NAME}-{pair_num:02d}🇩🇪"
         dialer_proxy_names.append(dialer_proxy_name)
-
+        
         # --- Choose Dialer endpoint based on pair number ---
         if pair_num <= 4:
             logger.debug(
@@ -401,9 +401,9 @@ try:
         else:
             logger.debug(f"Using IPv6 endpoint for Dialer proxy {pair_num}")
             server_dialer, port_dialer = generate_ipv6_endpoint()
-
+        
         entry_proxy_name = f"{ENTRY_PROXY_BASE_NAME}-{pair_num:02d}🇮🇷"
-
+        
         dialer_proxy = {
             "name": dialer_proxy_name,
             "type": "wireguard",
@@ -420,19 +420,23 @@ try:
             "dialer-proxy": entry_proxy_name,
         }
         proxies_list.append(dialer_proxy)
-
+        
         # --- Create Entry Proxy SECOND ---
         entry_proxy_names.append(entry_proxy_name)
-
-        # Decide whether to use IPv6 or IPv4 endpoint for Entry proxy
-        if ipv6_endpoint_count < NUM_IPV6_ENTRY_ENDPOINTS:
-            server_entry, port_entry = generate_ipv6_endpoint()
-            ipv6_endpoint_count += 1
-            logger.debug(f"Using IPv6 endpoint for Entry proxy {pair_num}")
-        else:
+        
+        # --- Choose Entry endpoint based on pair number (same logic as Dialer for WiFi compatibility) ---
+        if pair_num <= 4:
+            logger.debug(
+                f"Using IPv4 endpoint for Entry proxy {pair_num} (WiFi compatibility)"
+            )
             server_entry, port_entry = generate_ipv4_endpoint()
-            logger.debug(f"Using IPv4 endpoint for Entry proxy {pair_num}")
-
+        else:
+            # For pairs > 4, we can revert to the original logic if needed,
+            # or simply use IPv6 like the dialer. Here we mirror the dialer logic.
+            logger.debug(f"Using IPv6 endpoint for Entry proxy {pair_num}")
+            server_entry, port_entry = generate_ipv6_endpoint()
+        
+         
         entry_proxy = {
             "name": entry_proxy_name,
             "type": "wireguard",
@@ -450,6 +454,7 @@ try:
         }
         proxies_list.append(entry_proxy)
 
+
     # Add the generated proxies to the template dictionary
     config_template_dict["proxies"] = proxies_list
 
@@ -463,8 +468,8 @@ try:
                 ENTRY_URL_TEST_GROUP_NAME,
                 DIALER_URL_TEST_GROUP_NAME,
                 "DIRECT",
-                *dialer_proxy_names,  # Dialer proxies first in list
-                *entry_proxy_names,  # Entry proxies second
+                *dialer_proxy_names,
+                *entry_proxy_names, 
             ],
         },
         {
