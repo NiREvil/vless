@@ -132,7 +132,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 > script to modify the arrangement of the IPs or to combine them with other repositories.  
 > e.g: https://strawberry.victoriacross.ir
 
-[![Here](https://img.shields.io/badge/DEMO_FOR_LATEST_REAL_ADDRESS_GENERATOR-blue?logo=opencollective)](https://real-address1.victoriacross.ir/)  
+[![Here](https://img.shields.io/badge/DEMO_FOR_LATEST_REAL_ADDRESS_GENERATOR-blue?logo=opencollective)](https://real-address1.victoriacross.ir/)
 
 <br><br>
 
@@ -160,16 +160,16 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 
 ## WIREGUARDS
 
-### Warp for [Sing-Box] and [Hiddify]  
+### Warp for [Sing-Box] and [Hiddify]
 
-**Warp for Clash-Meta that have *Amnezia options*, Suitable for ChatGPT [wtf?]**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml  
+**Warp for Clash-Meta that have _Amnezia options_, Suitable for ChatGPT [wtf?]**  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml
 
 **Meshkintaj [[ME?]]**  
-https://karing-freevpnhomes-subscription.shampoosirsehat.homes  
+https://karing-freevpnhomes-subscription.shampoosirsehat.homes
 
 **Warp+ Hysteria ON Singbox**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
 
 **Warp+ Proton on Hiddify with DNS clean [[Ni?]]**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Proton%20ON%20WARP%2B%20DNS%20Clean
@@ -233,19 +233,19 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/v2rayng-wg.t
 <br>
 
 ```CSS
-wireguard://WHlr4sChnKkiY7EXb5vyx0vcujTxLGFqAWltTO4w3Xs%3D@162.159.195.141:968?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=49%2C243%2C136#Tel= @darkness_427 wire 
+wireguard://WHlr4sChnKkiY7EXb5vyx0vcujTxLGFqAWltTO4w3Xs%3D@162.159.195.141:968?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=49%2C243%2C136#Tel= @darkness_427 wire
 ```
 
 ```CSS
-wireguard://EKlBOUZhH7fxdjmZktsX%2BRappNwTYnI3MSzRmALSy2A%3D@188.114.99.0:5279?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=158%2C76%2C232#Tel= @darkness_427 wire 
+wireguard://EKlBOUZhH7fxdjmZktsX%2BRappNwTYnI3MSzRmALSy2A%3D@188.114.99.0:5279?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=158%2C76%2C232#Tel= @darkness_427 wire
 ```
 
 ```CSS
-wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:8886?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=117%2C134%2C208#Tel= @arshiacomplus wire 
+wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:8886?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=117%2C134%2C208#Tel= @arshiacomplus wire
 ```
 
 ```CSS
-wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:8886?address=172.16.0.2/32, 2606:4700:110:846c:e510:bfa1:ea9f:5247/128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=117%2C134%2C208#Tel= @arshiacomplus wire 
+wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:8886?address=172.16.0.2/32, 2606:4700:110:846c:e510:bfa1:ea9f:5247/128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=117%2C134%2C208#Tel= @arshiacomplus wire
 ```
 
 ---
@@ -284,27 +284,27 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscri
 
 <br>
 
-## Outline  
-> [!NOTE]
-> [[Outline]] configratiions, tnx to [[Anita?]]
+## Outline
+
+> [!NOTE] > [[Outline]] configratiions, tnx to [[Anita?]]
 
 ```POV-Ray SDL
 ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-1.csv
-```  
+```
 
 ```POV-Ray SDL
 ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-2.csv
-```  
+```
 
 ```POV-Ray SDL
 ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-3.csv
-```  
+```
 
 ```POV-Ray SDL
 ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-4.csv
-```  
+```
 
-<br>  
+<br>
 
 ## ServerLess
 
@@ -713,7 +713,7 @@ https://trojanvmess.pages.dev/cmcm?b64#cmcm?b64
 
 > its better to use [Clash-Meta]
 
-https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml [[MB?]]  
+https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml [[MB?]]
 
 https://raw.githubusercontent.com/hamedp-71/Clash_New/refs/heads/main/hp.yaml
 
