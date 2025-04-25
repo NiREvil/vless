@@ -1,4 +1,4 @@
-name: Gen clash-wg conf
+name: ClashMeta + Amnezia
 
 on:
   push:
@@ -8,13 +8,13 @@ on:
       - 'sub/*.yml'
       - 'edge/assets/*.yml'
   schedule:
-    - cron: '0 */12 * * *'
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15 # To prevent freezing
+    timeout-minutes: 15
 
     steps:
       - name: Checkout Repository
@@ -60,9 +60,9 @@ jobs:
           git config --local user.name "Github Actions"
           git config --local user.email "actions@github.com"
                     
-          if git status --porcelain | grep -q "clash-meta-wg.yml" || git status --porcelain; then
+          if git status --porcelain | grep -q "sub/clash-meta-wg.yml" || git status --porcelain; then
             echo "Changes detected. Committing and pushing."
-            git add .
+            git add sub/clash-meta-wg.yml
             git commit -m "Auto: Update clash-wg configurations at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" -m "Wireguard private key, addresses, reserved, and all IPs have been renewed"
             git -c committer.name="NiREvil" -c committer.email="126243832+NiREvil@users.noreply.github.com" push
           else
