@@ -162,7 +162,7 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 
 ### Warp for [Sing-Box] and [Hiddify]
 
-**Warp for Clash-Meta that have _Amnezia options_, Suitable for ChatGPT [wtf?]**  
+**Warp for Clash-Meta that have _Amnezia options_, Suitable for ChatGPT [[wtf?]]**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml
 
 **Meshkintaj [[ME?]]**  
@@ -266,7 +266,8 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 **All HTTPS for SingBox [[WE?]]**  
 https://wearestandtelegram.github.io/IranRamona  
-https://wearestandtelegram.github.io/Javidnaman/
+https://wearestandtelegram.github.io/Javidnaman/  
+
 
 **Meshkintaj [[ME?]]**  
 https://karing-freevpnhomes-subscription.shampoosirsehat.homes
@@ -286,15 +287,18 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscri
 
 ## Outline
 
-> [!NOTE] > [[Outline]] configratiions, tnx to [[Anita?]]
+> [!NOTE]
+> [[Outline]] configratiions, Thanks to [[Anita?]]
 
 ```POV-Ray SDL
 ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-1.csv
 ```
 
+
 ```POV-Ray SDL
 ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-2.csv
 ```
+
 
 ```POV-Ray SDL
 ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-3.csv
@@ -316,7 +320,7 @@ ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-4.csv
 > YouTube videos will load super fast, but keep in mind that since there’s no server involved,  
 > they won’t change your IP.
 
-**tlshello [GFW]**  
+**tlshello [[GFW]]**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_TLS_Fragment_xray_config.json
 
 **1-1**  
@@ -327,7 +331,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_1
 ## [Amnezia]
 
 > [!NOTE]
-> What do we [know about] the amnezia
+> What do we [[know about]] the amnezia
 
 **A** [[Ni?]]
 
