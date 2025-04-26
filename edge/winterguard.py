@@ -21,12 +21,12 @@ from tenacity import (
 NUM_PROXY_PAIRS = int(os.environ.get("NUM_PROXY_PAIRS", 8))  # Number of proxy pairs to generate
 NUM_IPV6_ENTRY_ENDPOINTS = int(os.environ.get("NUM_IPV6_ENTRY_ENDPOINTS", 2))  # How many Entry proxies should use an IPv6 server endpoint
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # the (SCRIPT_DIR) = where the script is running, in this case: path:vless/edge 
+PARENT_DIR = os.path.dirname(SCRIPT_DIR)  # Get the parent directory (repository root)
 
-# Get parent directory of the script directory
-PARENT_DIR = os.path.dirname(SCRIPT_DIR)
-OUTPUT_YAML_FILENAME = os.path.join(PARENT_DIR, "sub", "clash-meta-wg.yml")  # Output YML filename
+CONFIG_TEMPLATE_PATH = os.path.join(SCRIPT_DIR, "assets", "clash-meta-wg-template.yml")  # Path to the template file
 CACHE_FILE_PATH = os.path.join(PARENT_DIR, "sub", "key_cache.json")  # Path for caching generated keys
-CONFIG_TEMPLATE_PATH = os.path.join(PARENT_DIR, "edge", "assets", "clash-meta-wg-template.yml")  # Path to the template file
+OUTPUT_YAML_FILENAME = os.path.join(PARENT_DIR, "sub", "clash-meta-wg.yml")  # Output YML filename
 
 
 # --- Proxy Naming Configuration ---
