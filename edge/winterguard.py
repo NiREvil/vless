@@ -295,7 +295,7 @@ ipv4_prefixes = [
     "162.159.192.",
     "162.159.193.",
     "162.159.195.",
-    "162.159.204.",
+#   "162.159.204.",
     "188.114.96.",
     "188.114.97.",
     "188.114.98.",
@@ -426,7 +426,6 @@ def main():
                 "udp": True,
                 "mtu": 1280,
                 "dialer-proxy": entry_proxy_name,
-                "amnezia-wg-option": {"jc": "4", "jmin": "40", "jmax": "70", "s1": 0, "s2": 0, "h1": 1, "h2": 2, "h4": 3, "h3": 4},
             }
             proxies_list.append(dialer_proxy)
             
@@ -461,7 +460,7 @@ def main():
                 "reserved": reserved_entry,
                 "udp": True,
                 "mtu": 1280,
-                "amnezia-wg-option": {"jc": "4", "jmin": "40", "jmax": "70", "s1": 0, "s2": 0, "h1": 1, "h2": 2, "h4": 3, "h3": 4},
+                "amnezia-wg-option": {"jc": "4", "jmin": "40", "jmax": "70", "h1": 1, "h2": 2, "h4": 3, "h3": 4},
             }
             proxies_list.append(entry_proxy)
 
