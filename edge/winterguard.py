@@ -401,7 +401,7 @@ def main():
             dialer_proxy_names.append(dialer_proxy_name)
 
             # --- Choose Dialer endpoint based on pair number ---
-            if pair_num <= 4:
+            if pair_num <= 6:
                 logger.debug(
                     f"Using IPv4 endpoint for Dialer proxy {pair_num} (WiFi compatibility)"
                 )
@@ -433,7 +433,7 @@ def main():
             entry_proxy_names.append(entry_proxy_name)
             
             # --- Choose Entry endpoint based on pair number (same logic as Dialer for WiFi compatibility) ---
-            if pair_num <= 4:
+            if pair_num <= 6:
                 logger.debug(
                     f"Using IPv4 endpoint for Entry proxy {pair_num} (WiFi compatibility)"
                 )
@@ -484,7 +484,7 @@ def main():
             {
                 "name": ENTRY_URL_TEST_GROUP_NAME,
                 "type": "url-test",
-                "url": "https://www.gstatic.com/generate_204",
+                "url": "http://www.gstatic.com/generate_204",
                 "interval": 30,
                 "tolerance": 50,
                 "proxies": entry_proxy_names,
@@ -492,7 +492,7 @@ def main():
             {
                 "name": DIALER_URL_TEST_GROUP_NAME,
                 "type": "url-test",
-                "url": "https://www.gstatic.com/generate_204",
+                "url": "http://www.gstatic.com/generate_204",
                 "interval": 30,
                 "tolerance": 50,
                 "proxies": dialer_proxy_names,
