@@ -460,7 +460,7 @@ def main():
                 "reserved": reserved_entry,
                 "udp": True,
                 "mtu": 1280,
-                "amnezia-wg-option": {"jc": "4", "jmin": "40", "jmax": "70", "h1": 1, "h2": 2, "h4": 3, "h3": 4},
+                "amnezia-wg-option": {"jc": "4", "jmin": "40", "jmax": "70"},
             }
             proxies_list.append(entry_proxy)
 
