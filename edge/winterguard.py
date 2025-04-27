@@ -426,6 +426,7 @@ def main():
                 "udp": True,
                 "mtu": 1280,
                 "dialer-proxy": entry_proxy_name,
+                "amnezia-wg-option": {"jc": "4", "jmin": "40", "jmax": "70", "s1": 0, "s2": 0, "h1": 1, "h2": 2, "h4": 3, "h3": 4},
             }
             proxies_list.append(dialer_proxy)
             
@@ -460,7 +461,7 @@ def main():
                 "reserved": reserved_entry,
                 "udp": True,
                 "mtu": 1280,
-                "amnezia-wg-option": {"jc": "5", "jmin": "50", "jmax": "100"},
+                "amnezia-wg-option": {"jc": "4", "jmin": "40", "jmax": "70", "s1": 0, "s2": 0, "h1": 1, "h2": 2, "h4": 3, "h3": 4},
             }
             proxies_list.append(entry_proxy)
 
@@ -484,7 +485,7 @@ def main():
             {
                 "name": ENTRY_URL_TEST_GROUP_NAME,
                 "type": "url-test",
-                "url": "http://www.gstatic.com/generate_204",
+                "url": "https://www.gstatic.com/generate_204",
                 "interval": 30,
                 "tolerance": 50,
                 "proxies": entry_proxy_names,
@@ -492,7 +493,7 @@ def main():
             {
                 "name": DIALER_URL_TEST_GROUP_NAME,
                 "type": "url-test",
-                "url": "http://www.gstatic.com/generate_204",
+                "url": "https://www.gstatic.com/generate_204",
                 "interval": 30,
                 "tolerance": 50,
                 "proxies": dialer_proxy_names,
