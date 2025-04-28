@@ -6,7 +6,7 @@
 
 {
   "log": {
-    "level": "error",
+    "level": "warning",
     "timestamp": true
   },
   "dns": {
@@ -22,7 +22,7 @@
         "type": "tcp",
         "tag": "local-dns",
         "detour": "direct",
-        "server": "8.8.4.4"
+        "server": "8.8.8.8"
       },
       {
         "type": "local",
@@ -97,9 +97,9 @@
       "outbounds": [
         "hysteria"
       ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m0s",
-      "tolerance": 50
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "50",
+      "tolerance": 80
     },
     {
       "type": "direct",
@@ -109,11 +109,11 @@
     {
       "type": "hysteria2",
       "tag": "hysteria",
-      "server": "keviny.iserver.store",
+      "server": "kevin.iserver.store",
       "server_port": 8443,
       "obfs": {
         "type": "salamander",
-        "password": "KevinZakarian"
+        "password": "KevinZakarian1"
       },
       "password": "KevinZakarian",
       "tls": {
