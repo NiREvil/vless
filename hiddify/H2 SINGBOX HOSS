@@ -98,8 +98,8 @@
         "hysteria"
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "50",
-      "tolerance": 80
+      "interval": "30s",
+      "tolerance": 50
     },
     {
       "type": "direct",
