@@ -32,16 +32,6 @@
 nima.nscl.ir
 ```
 
-```POV-Ray SDL
-bpb.radically.pro
-```
-
-**🇩🇪 Germany, Frankfurt, Amazon & Hetzner online**
-
-```POV-Ray SDL
-de.radically.pro
-```
-
 **🇹🇷 Turkey, Istanbul, Stark Industries Solutions LTD**
 
 ```POV-Ray SDL
@@ -138,12 +128,6 @@ bpb.yousef.isegaro.com
 34.175.202.195
 ```
 
-**🇮🇳 India, Mumbai-Maharashtra, Google LLC**
-
-```POV-Ray SDL
-35.200.202.118
-```
-
 ## Amazon Technologies Inc
 
 ![rainbow]
@@ -155,14 +139,6 @@ bpb.yousef.isegaro.com
 ```
 
 ```POV-Ray SDL
-18.199.213.201
-```
-
-```POV-Ray SDL
-3.70.219.196
-```
-
-```POV-Ray SDL
 3.126.159.12
 ```
 
@@ -170,15 +146,15 @@ bpb.yousef.isegaro.com
 <summary> |   And the list goes on ... </summary>
 
 ```POV-Ray SDL
+3.75.170.179
+```
+
+```POV-Ray SDL
 3.123.255.167
 ```
 
 ```POV-Ray SDL
 3.64.205.189
-```
-
-```POV-Ray SDL
-3.75.170.179
 ```
 
 ```POV-Ray SDL
@@ -249,23 +225,11 @@ bpb.yousef.isegaro.com
 ```
 
 ```POV-Ray SDL
-18.221.188.241
-```
-
-```POV-Ray SDL
 213.170.157.1
 ```
 
 ```POV-Ray SDL
-3.135.194.214
-```
-
-```POV-Ray SDL
 3.15.3.38
-```
-
-```POV-Ray SDL
-52.4.8.214
 ```
 
 ```POV-Ray SDL
@@ -306,10 +270,6 @@ bpb.yousef.isegaro.com
 
 ```POV-Ray SDL
 18.220.206.47
-```
-
-```POV-Ray SDL
-35.155.38.149
 ```
 
 ```POV-Ray SDL
@@ -492,14 +452,10 @@ bpb.yousef.isegaro.com
 51.20.207.0
 ```
 
-**🇨🇦 Canada, Montréal Quebec, Amazon tech**
+~~**🇨🇦 Canada, Montréal Quebec, Amazon tech**~~
 
 ```POV-Ray SDL
-3.99.140.50
-```
-
-```POV-Ray SDL
-3.99.192.219
+~~3.99.140.50~~
 ```
 
 **🇬🇧 England, London, Amazon tech**
@@ -528,12 +484,6 @@ bpb.yousef.isegaro.com
 13.39.213.36
 ```
 
-**🇦🇪 United Arab Emirates, Dubai, Amazon tech**
-
-```POV-Ray SDL
-3.29.102.89
-```
-
 **🇯🇵 Japan, Tokyo, Amazon tech**
 
 ```POV-Ray SDL
@@ -555,6 +505,11 @@ bpb.yousef.isegaro.com
 ![rainbow]
 
 **🇩🇪 Germany, Frankfurt am Main, Hetzner online**
+
+```POV-Ray SDL
+37.27.40.190
+```
+
 
 ```POV-Ray SDL
 37.27.80.227
