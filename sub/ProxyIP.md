@@ -158,10 +158,6 @@ bpb.yousef.isegaro.com
 ```
 
 ```POV-Ray SDL
-3.75.149.151
-```
-
-```POV-Ray SDL
 3.123.242.99
 ```
 
