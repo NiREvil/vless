@@ -130,7 +130,7 @@ jobs:
           ACCOUNT_PASSWORD=$(grep '^Account Password:' "$TEMP_OUTPUT" | sed 's/^Account Password: //' || true)
 
           NEW_ENTRY_FILE="new_entry.md.tmp"
-          CURRENT_DATETIME_IRAN=$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M IRST/Tehran.')
+          CURRENT_DATETIME_IRAN=$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M Tehran (UTC+3:30).')
 
           # Start building the new entry
           {
