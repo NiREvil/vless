@@ -558,377 +558,379 @@ function getDianaConfig(userCode, hostName) {
   // create a URL for NekoBox
   const nekoBoxImportUrl = `https://sahar-km.github.io/arcane/${btoa(freedomConfig)}`;
 
-
   return `
 <!doctype html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Cardo:ital,wght@0,400;0,700;1,400&family=EB+Garamond:wght@400..800&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Inter:opsz,wght@14..32,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <title>REvil VLESS-Proxy</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Cardo:ital,wght@0,400;0,700;1,400&family=EB+Garamond:wght@400..800&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Inter:opsz,wght@14..32,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>REvil VLESS-Proxy</title>
     <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --background-primary: #0c0c0c;
-      --background-secondary: #1a1a1a;
-      --background-tertiary: #262626;
-      --border-color: #262626;
-      --text-primary: #e5e5e5;
-      --text-secondary: #a3a3a3;
-      --text-accent: #ffffff;
-      --accent-color: #ff7a3d;
-      --button-text: #000000;
-      --shadow-color: rgba(0, 0, 0, 0.4);
-      --border-radius: 8px;
-      --transition-speed: 0.2s;
-      --sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      --serif: "Ibarra Real Nova", serif;
-      --monospace: 'Courier New', Courier, monospace;
-    }
-
-    body {
-      font-family: var(--sans-serif);
-      font-size: 16px;
-      font-weight: 400;
-      background-color: var(--background-primary);
-      color: var(--text-primary);
-      padding: 24px;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 40px;;
-      padding: 0 16px;
-    }
-
-    .header h1 {
-      font-weight: 600;
-      color: var(--text-accent);
-      font-size: 28px;
-      margin-bottom: 4px;
-    }
-
-    .header p {
-      color: var(--text-secondary);
-      font-size: 14px;
-    }
-
-    .config-card {
-      background: var(--background-secondary);
-      border-radius: 6px;
-      padding: 15px;
-      margin-bottom: 15px;
-      border: 1px solid var(--border-color);
-      transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-    }
-
-    .config-title {
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--text-accent);
-      margin-bottom: 15px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .config-content {
-      position: relative;
-      background: var(--background-tertiary);
-      border-radius: 6px;
-      padding: 15px;
-      margin-bottom: 20px;
-    }
-
-    .config-content pre {
-      overflow-x: auto;
-      font-family: var(--monospace);
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 1.6;
-      color: var(--text-primary);
-      margin: 0;
-      white-space: pre-wrap;
-      word-break: break-all;
-    }
-
-    .attributes {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin-bottom: 15px;
-      padding: 10px;
-      background: var(--background-tertiary);
-      border-radius: 6px;
-      max-width: 768px;
-      margin: 0 auto;
-    }
-
-    .attribute {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .attribute span {
-      font-size: 12px;
-      color: var(--text-secondary);
-    }
-
-    .attribute strong {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-accent);
-      word-break: break-all;
-    }
-
-    .copy-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background-color: var(--background-tertiary);
-      color: var(--accent-color);
-      border: 1px solid #404040;
-      padding: 5px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 600;
-      overflow: hidden;
-      box-shadow: 0 1px 3px rgba(255, 122, 61, 0.3);
-      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-      z-index: 1;
-    }
-      .copy-btn {
-        -webkit-tap-highlight-color: transparent;
-        touch-action: manipulation;
-        user-select: none;
-        -webkit-user-select: none;
-      }
-      
-      .copy-btn:active {
-          transform-origin: center;
-          transform: scale(0.98);
-          transition: transform 0.1s ease-in-out;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      .copy-btn:focus {
-          animation: pulse 1.5s infinite;
+      :root {
+        --background-primary: #0c0c0c;
+        --background-secondary: #1a1a1a;
+        --background-tertiary: #262626;
+        --border-color: #262626;
+        --text-primary: #e5e5e5;
+        --text-secondary: #a3a3a3;
+        --text-accent: #ffffff;
+        --accent-color: #ff7a3d;
+        --button-text: #000000;
+        --shadow-color: rgba(0, 0, 0, 0.4);
+        --border-radius: 8px;
+        --transition-speed: 0.2s;
+        --sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        --serif: "Ibarra Real Nova", serif;
+        --monospace: 'Courier New', Courier, monospace;
       }
 
-      .copy-btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-        transform: translateX(-100%);
-        transition: 0.6s;
-        z-index: -1;
-      }
-
-      .copy-btn:hover::before {
-        transform: translateX(100%);
-      }
-
-      .copy-btn:hover {
-        border-color: var(--accent-color);
-        transform: translateY(-2px);
-        box-shadow: 0 12px 16px rgba(255, 122, 61, 0.4);
-      }
-
-      .copy-btn:disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
-          transform: none;
-          box-shadow: none;
-      }
-      .client-buttons {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 12px;
-        margin-top: 15px;
-        background: #262626;
-        border-radius: 6px;
-        color: var(--accent-color);
-      }
-
-      .client-btn {
-        display: flex;
-        gap: 8px;
-        background: var(--background-tertiary);
-        padding: 8px;
-        margin-top: 8px;
-        border-radius: 6px;
-        font-size: 14px;
+      body {
+        font-family: var(--sans-serif);
+        font-size: 16px;
         font-weight: 400;
-        position: relative;
-        overflow: hidden;
+        background-color: var(--background-primary);
         color: var(--text-primary);
+        padding: 24px;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 40px;;
+        padding: 0 16px;
+      }
+
+      .header h1 {
+        font-weight: 600;
+        color: var(--text-accent);
+        font-size: 28px;
+        margin-bottom: 4px;
+      }
+
+      .header p {
+        color: var(--text-secondary);
+        font-size: 14px;
+      }
+
+      .config-card {
+        background: var(--background-secondary);
+        border-radius: 6px;
+        padding: 15px;
+        margin-bottom: 15px;
+        border: 1px solid var(--border-color);
+        transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+      }
+
+      .config-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--text-accent);
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .config-content {
+        position: relative;
+        background: var(--background-tertiary);
+        border-radius: 6px;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+
+      .config-content pre {
+        overflow-x: auto;
+        font-family: var(--monospace);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.6;
+        color: var(--text-primary);
+        margin: 0;
+        white-space: pre-wrap;
+        word-break: break-all;
+      }
+
+      .attributes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-bottom: 15px;
+        padding: 10px;
+        background: var(--background-tertiary);
+        border-radius: 6px;
+        max-width: 768px;
+        margin: 0 auto;
+      }
+
+      .attribute {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .attribute span {
+        font-size: 12px;
+        color: var(--text-secondary);
+      }
+
+      .attribute strong {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-accent);
+        word-break: break-all;
+      }
+
+      .copy-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: var(--background-tertiary);
+        color: var(--accent-color);
         border: 1px solid #404040;
-        text-decoration: none;
-        -webkit-tap-highlight-color: transparent;
-        touch-action: manipulation;
-        user-select: none;
-        -webkit-user-select: none;
-        position: relative; 
+        padding: 5px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 600;
         overflow: hidden;
+        box-shadow: 0 1px 3px rgba(255, 122, 61, 0.3);
         transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
         z-index: 1;
       }
-
-      .client-icon {
-        width: 18px;
-        height: 18px;
-        border-radius: 4px;
-        background-color: #333;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .client-btn {
-        box-shadow: 0 1px 3px rgba(255, 122, 61, 0.3);
-      }
-
-      .client-btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-        transform: translateX(-100%);
-        transition: 0.6s;
-        z-index: -1;
-      }
-
-      .client-btn:hover::before {
-        transform: translateX(100%);
-      }
-
-      .client-btn:hover {
-        border-color: var(--accent-color);
-        transform: translateY(-2px);
-        box-shadow: 0 12px 16px rgba(255, 122, 61, 0.4);
-      }
-
-      .client-btn:active {
-        transform: translateY(0);
-      }
-
-      .client-btn:focus {
-        animation: pulse 1.5s infinite;
-      }
-
-      .footer {
-        text-align: center;
-        margin-top: 20px;
-        color: var( --text-secondary);
-        font-size: 12px;
-      }
-      
-      .mt-1 {
-        margin-top: 0.25rem;
-      }
-
-      @keyframes pulse {
-        0% {
-          box-shadow: 0 0 0 0 rgba(255, 122, 61, 0.4);
-        }
-        70% {
-          box-shadow: 0 0 0 10px rgba(255, 122, 61, 0);
-        }
-        100% {
-          box-shadow: 0 0 0 0 rgba(255, 122, 61, 0);
-        }
-      }
-
-      @media (max-width: 600px) {
-        .container {
-          padding: 10px;
-        }
-        .config-card {
-          padding: 10px;
-        }
-        .config-content pre {
-          white-space: pre-wrap;
-          word-break: break-all;
-        }
         .copy-btn {
-          top: 10px;
-          right: 10px;
+          -webkit-tap-highlight-color: transparent;
+          touch-action: manipulation;
+          user-select: none;
+          -webkit-user-select: none;
         }
-        .attributes {
-          grid-template-columns: 1fr;
-          gap: 10px;
-          padding: 9px;
+
+        .copy-btn:active {
+            transform-origin: center;
+            transform: scale(0.98);
+            transition: transform 0.1s ease-in-out;
+        }
+
+        .copy-btn:focus {
+            animation: pulse 1.5s infinite;
+        }
+
+        .copy-btn::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+          transform: translateX(-100%);
+          transition: 0.6s;
+          z-index: -1;
+        }
+
+        .copy-btn:hover::before {
+          transform: translateX(100%);
+        }
+
+        .copy-btn:hover {
+          border-color: var(--accent-color);
+          transform: translateY(-2px);
+          box-shadow: 0 12px 16px rgba(255, 122, 61, 0.4);
+        }
+
+        .copy-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
         }
         .client-buttons {
-          grid-template-columns: repeat(auto-fill, minmax(139px, 1fr));
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+          gap: 12px;
+          margin-top: 15px;
+          background: #262626;
+          border-radius: 6px;
+          color: var(--accent-color);
         }
 
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: var(--background-primary);
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: var(--border-color);
-        border-radius: 4px;
-        border: 2px solid var(--background-primary);
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: var(--border-color-hover);
-      }
-      * {
-        scrollbar-width: thin;
-        scrollbar-color: var(--border-color) var(--background-primary);
-      }
+        .client-btn {
+          display: flex;
+          gap: 8px;
+          background: var(--background-tertiary);
+          padding: 8px;
+          margin-top: 8px;
+          border-radius: 6px;
+          font-size: 14px;
+          font-weight: 400;
+          position: relative;
+          overflow: hidden;
+          color: var(--text-primary);
+          border: 1px solid #404040;
+          text-decoration: none;
+          -webkit-tap-highlight-color: transparent;
+          touch-action: manipulation;
+          user-select: none;
+          -webkit-user-select: none;
+          position: relative;
+          overflow: hidden;
+          transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+          z-index: 1;
+        }
 
-      @media (max-width: 768px) {
-        body { padding: 16px; }
-        .container { padding: 0 8px; }
-        .header h1 { font-size: 22px; }
-        .header p { font-size: 11px; }
-        .config-card { padding: 16px; }
-        .config-title { font-size: 18px; }
-        .config-content pre { font-size: 12px; }
-        .attributes { grid-template-columns: 1fr; gap: 16px; }
-        .client-buttons { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
-        .button { padding: 8px 12px; font-size: 13px; }
-        .copy-btn { top: 10px; right: 10px; }
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-thumb { border-width: 1px; }
-      }
+        .client-icon {
+          width: 18px;
+          height: 18px;
+          border-radius: 4px;
+          background-color: #333;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
 
-      @media (max-width: 480px) {
-        .client-buttons { grid-template-columns: 1fr; }
-        .attributes { grid-template-columns: 1fr; }
-        .attribute strong { font-size: 13px; }
-        .button { padding: 8px 12px; margin-top: 0px; font-size: 12px; }
-      }
-  </style>
-</head>
-<body>
+        .client-btn {
+          box-shadow: 0 1px 3px rgba(255, 122, 61, 0.3);
+        }
+
+        .client-btn::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+          transform: translateX(-100%);
+          transition: 0.6s;
+          z-index: -1;
+        }
+
+        .client-btn:hover::before {
+          transform: translateX(100%);
+        }
+
+        .client-btn:hover {
+          border-color: var(--accent-color);
+          transform: translateY(-2px);
+          box-shadow: 0 12px 16px rgba(255, 122, 61, 0.4);
+        }
+
+        .client-btn:active {
+          transform: translateY(0);
+        }
+
+        .client-btn:focus {
+          animation: pulse 1.5s infinite;
+        }
+
+        .footer {
+          text-align: center;
+          margin-top: 20px;
+          color: var( --text-secondary);
+          font-size: 12px;
+        }
+
+        .mt-1 {
+          margin-top: 0.25rem;
+        }
+
+        @keyframes pulse {
+          0% {
+            box-shadow: 0 0 0 0 rgba(255, 122, 61, 0.4);
+          }
+          70% {
+            box-shadow: 0 0 0 10px rgba(255, 122, 61, 0);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(255, 122, 61, 0);
+          }
+        }
+
+        @media (max-width: 600px) {
+          .container {
+            padding: 10px;
+          }
+          .config-card {
+            padding: 10px;
+          }
+          .config-content pre {
+            white-space: pre-wrap;
+            word-break: break-all;
+          }
+          .copy-btn {
+            top: 10px;
+            right: 10px;
+          }
+          .attributes {
+            grid-template-columns: 1fr;
+            gap: 10px;
+            padding: 9px;
+          }
+          .client-buttons {
+            grid-template-columns: repeat(auto-fill, minmax(139px, 1fr));
+          }
+
+        ::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: var(--background-primary);
+          border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: var(--border-color);
+          border-radius: 4px;
+          border: 2px solid var(--background-primary);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: var(--border-color-hover);
+        }
+        * {
+          scrollbar-width: thin;
+          scrollbar-color: var(--border-color) var(--background-primary);
+        }
+
+        @media (max-width: 768px) {
+          body { padding: 16px; }
+          .container { padding: 0 8px; }
+          .header h1 { font-size: 22px; }
+          .header p { font-size: 11px; }
+          .config-card { padding: 16px; }
+          .config-title { font-size: 18px; }
+          .config-content pre { font-size: 12px; }
+          .attributes { grid-template-columns: 1fr; gap: 16px; }
+          .client-buttons { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+          .button { padding: 8px 12px; font-size: 13px; }
+          .copy-btn { top: 10px; right: 10px; }
+          ::-webkit-scrollbar { width: 6px; height: 6px; }
+          ::-webkit-scrollbar-thumb { border-width: 1px; }
+        }
+
+        @media (max-width: 480px) {
+          .client-buttons { grid-template-columns: 1fr; }
+          .attributes { grid-template-columns: 1fr; }
+          .attribute strong { font-size: 13px; }
+          .button { padding: 8px 12px; margin-top: 0px; font-size: 12px; }
+        }
+    </style>
+  </head>
+  <body>
     <div class="container">
       <div class="header">
         <h1>VLESS Proxy Configuration</h1>
@@ -947,31 +949,51 @@ function getDianaConfig(userCode, hostName) {
             <span>Status:</span>
             <strong>Active</strong>
           </div>
-          </div>
+        </div>
       </div>
 
       <!-- Xray Core Clients -->
       <div class="config-card">
         <div class="config-title">Xray Core Clients</div>
         <div class="config-content">
-          <button class="button copy-btn" onclick="copyToClipboard(this, '${dreamConfig}')">Copy</button>
+          <button class="button copy-btn" onclick="copyToClipboard(this, '${dreamConfig}')">
+            Copy
+          </button>
           <pre>${dreamConfig}</pre>
         </div>
         <div class="client-buttons">
           <!-- Hiddify -->
-          <a href="hiddify://install-config?url=${encodeURIComponent(freedomConfig)}" class="button client-btn">
+          <a
+            href="hiddify://install-config?url=${encodeURIComponent(freedomConfig)}"
+            class="button client-btn"
+          >
             <div class="client-icon">
-               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#FF7A3D" >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="#FF7A3D"
+              >
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
               </svg>
             </div>
             Import to Hiddify
           </a>
           <!-- V2rayNG -->
-          <a href="v2rayng://install-config?url=${encodeURIComponent(dreamConfig)}" class="button client-btn">
+          <a
+            href="v2rayng://install-config?url=${encodeURIComponent(dreamConfig)}"
+            class="button client-btn"
+          >
             <div class="client-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#FF7A3D" >
-                 <path d="M12 2L4 5v6c0 5.5 3.5 10.7 8 12.3 4.5-1.6 8-6.8 8-12.3V5l-8-3z" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="#FF7A3D"
+              >
+                <path d="M12 2L4 5v6c0 5.5 3.5 10.7 8 12.3 4.5-1.6 8-6.8 8-12.3V5l-8-3z" />
               </svg>
             </div>
             Import to V2rayNG
@@ -983,14 +1005,22 @@ function getDianaConfig(userCode, hostName) {
       <div class="config-card">
         <div class="config-title">Sing-Box Core Clients</div>
         <div class="config-content">
-          <button class="button copy-btn" onclick="copyToClipboard(this, '${freedomConfig}')">Copy</button>
+          <button class="button copy-btn" onclick="copyToClipboard(this, '${freedomConfig}')">
+            Copy
+          </button>
           <pre>${freedomConfig}</pre>
         </div>
         <div class="client-buttons">
           <!-- Clash Meta -->
           <a href="${clashMetaFullUrl}" class="button client-btn">
             <div class="client-icon">
-               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#FF7A3D">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="#FF7A3D"
+              >
                 <path d="M4 4h16v16H4z" />
                 <path d="M10 10h4v4H10z" />
                 <path d="M14 8H10V4h4z" />
@@ -1000,43 +1030,51 @@ function getDianaConfig(userCode, hostName) {
             Import to Clash Meta
           </a>
           <!-- NekoBox -->
-          <a href="${nekoBoxImportUrl}" class="button client-btn"> 
+          <a href="${nekoBoxImportUrl}" class="button client-btn">
             <div class="client-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#FF7A3D">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-          </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="#FF7A3D"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                />
+              </svg>
+            </div>
+            Import to NekoBox
+          </a>
         </div>
-        Import to NekoBox
-      </a>
+      </div>
+      <div class="footer">
+        <p>© 2025 REvil, All Rights Reserved</p>
+        <p className="mt-1 text-xs">Secure. Private. Fast.</p>
+      </div>
     </div>
-  </div>
-  <div class="footer">
-    <p>© 2025 REvil, All Rights Reserved</p>
-    <p className="mt-1 text-xs">Secure. Private. Fast.</p>
-  </div>
-</div>
-<script>
-  function copyToClipboard(button, text) {
-    navigator.clipboard.writeText(text).then(() => {
-      const originalText = button.textContent;
-      button.textContent = 'Copied!';
-      button.style.background = '#FF7A3D';
-      button.style.color = '#262626';
-      setTimeout(() => {
-        button.textContent = originalText;
-        button.style.background = '#262626';
-        button.style.color = '#FF7A3D';
-      }, 1000);
-    });
-  }
-  document.addEventListener('DOMContentLoaded', function () {
-    const proxyIPElement = document.getElementById('proxyIP');
-    if (proxyIPElement && proxyIPElement.innerText === '${proxyIP}') {
-      proxyIPElement.innerText = '192.168.1.1'; // Default placeholder
-    }
-  });
-</script>
-</body>
+    <script>
+      function copyToClipboard(button, text) {
+        navigator.clipboard.writeText(text).then(() => {
+          const originalText = button.textContent;
+          button.textContent = 'Copied!';
+          button.style.background = '#FF7A3D';
+          button.style.color = '#262626';
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.style.background = '#262626';
+            button.style.color = '#FF7A3D';
+          }, 1000);
+        });
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        const proxyIPElement = document.getElementById('proxyIP');
+        if (proxyIPElement && proxyIPElement.innerText === '${proxyIP}') {
+          proxyIPElement.innerText = '192.168.1.1'; // Default placeholder
+        }
+      });
+    </script>
+  </body>
 </html>
 `;
 }
