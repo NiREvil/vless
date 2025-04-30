@@ -130,11 +130,11 @@ jobs:
           ACCOUNT_PASSWORD=$(grep '^Account Password:' "$TEMP_OUTPUT" | sed 's/^Account Password: //' || true)
 
           NEW_ENTRY_FILE="new_entry.md.tmp"
-          CURRENT_DATETIME_IRAN=$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M:%S IRST/+03:30')
+          CURRENT_DATETIME_IRAN=$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M IRST/Tehran.')
 
           # Start building the new entry
           {
-            echo "# Generated ON: ${CURRENT_DATETIME_IRAN}" # استفاده از زمان تهران
+            echo "# Generated On: ${CURRENT_DATETIME_IRAN}"
             echo ""
             echo "> [!CAUTION]"
             echo "> Triggered by: ${{ github.event_name }}"
@@ -149,7 +149,7 @@ jobs:
               echo "### ESET VPN ACCESS CODES"
               echo ""
               echo "> [!NOTE]"
-              echo "> The access codes for ESET VPN will expire eventually."
+              echo "> The access codes for ESET VPN will expire in 24 hours."
               echo "> Each code is valid for login on only one device."
               echo ""
               echo '```ruby'
