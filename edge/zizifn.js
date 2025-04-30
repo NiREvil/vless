@@ -1,4 +1,4 @@
-// <!--GAMFC-->Last update: 2025-04-04 23:59:59 UTC - we are all REvil - version base on commit e89d971ccfcf0fea389d1caf66f11ae4cf9a54c9<!--GAMFC-END-->.
+// <!--GAMFC-->Last update: 2025-04-30 23:59:59 UTC - REvil - version base on commit e89d971ccfcf0fea389d1caf66f11ae4cf9a54c9<!--GAMFC-END-->.
 // @ts-nocheck
 import { connect } from 'cloudflare:sockets';
 
@@ -535,172 +535,228 @@ async function handleUDPOutBound(webSocket, streamResponseHeader, log) {
 function getDianaConfig(userCode, hostName) {
   const protocol = decodeSecure(ENCODED.PROTOCOL);
   const networkType = decodeSecure(ENCODED.NETWORK);
+
   const baseUrl = `${protocol}://${userCode}@${hostName}:443`;
   const commonParams =
     `encryption=none&host=${hostName}&type=${networkType}` + `&security=tls&sni=${hostName}`;
 
+  // Configuration for Sing-Box core clients
   const freedomConfig =
-    `${baseUrl}?path=%2Fapi%2Fv1&eh=Sec-WebSocket-Protocol` +
+    `${baseUrl}?path=/api/v4&eh=Sec-WebSocket-Protocol` +
     `&ed=2560&${commonParams}&fp=chrome&alpn=h3#${hostName}`;
 
+  // Configuration for Xray core clients
   const dreamConfig =
-    `${baseUrl}?path=%2Fapi%2Fv8%3Fed%3D2048&${commonParams}` +
-    `&fp=firefox&alpn=h2%2Chttp%2F1.1#${hostName}`;
+    `${baseUrl}?path=/api/v2?ed=2048&${commonParams}` +
+    `&fp=randomized&alpn=h2,http/1.1#${hostName}`;
 
-  // New Clash Meta import URL format
-  const clashMetaImportUrl =
-    `https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(dreamConfig)}` +
-    '&remote_config=https://raw.githubusercontent.com/sahar-km/EdgeSub/refs/heads/main/public/minimal_remote_rules.ini' +
-    '&udp=false&ss_uot=false&show_host=false&forced_ws0rtt=false';
+  // URL for Clash Meta subscription import
+  const clashMetaFullUrl = `clash://install-config?url=${encodeURIComponent(
+    `https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(freedomConfig)}&remote_config=&udp=true&ss_uot=false&show_host=false&forced_ws0rtt=false`,
+  )}`; // for using v2ray to clash-meta converter visit here: https://sub.victoriacross.ir/
+
+  // create a URL for NekoBox
+  const nekoBoxImportUrl = `https://sahar-km.github.io/arcane/${btoa(freedomConfig)}`;
+
 
   return `
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <title>REvil VLESS-Proxy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Cardo:ital,wght@0,400;0,700;1,400&family=EB+Garamond:wght@400..800&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Inter:opsz,wght@14..32,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>REvil VLESS-Proxy</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      :root {
-        --background-primary: #0c0c0c;
-        --background-secondary: #1a1a1a;
-        --background-tertiary: #262626;
-        --border-color: #262626;
-        --text-primary: #e5e5e5;
-        --text-secondary: #a3a3a3;
-        --text-accent: #ffffff;
-        --accent-color: #ff7a3d;
-        --button-text: #000000;
-        --shadow-color: rgba(0, 0, 0, 0.4);
-      }
+    :root {
+      --background-primary: #0c0c0c;
+      --background-secondary: #1a1a1a;
+      --background-tertiary: #262626;
+      --border-color: #262626;
+      --text-primary: #e5e5e5;
+      --text-secondary: #a3a3a3;
+      --text-accent: #ffffff;
+      --accent-color: #ff7a3d;
+      --button-text: #000000;
+      --shadow-color: rgba(0, 0, 0, 0.4);
+      --border-radius: 8px;
+      --transition-speed: 0.2s;
+      --sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --serif: "Ibarra Real Nova", serif;
+      --monospace: 'Courier New', Courier, monospace;
+    }
 
-      body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        background-color: var(--background-primary);
-        color: var(--text-primary);
-        padding: 20px;
-        line-height: 1.4;
-      }
-      .container {
-        max-width: 768px;
-        margin: 0 auto;
-      }
+    body {
+      font-family: var(--sans-serif);
+      font-size: 16px;
+      font-weight: 400;
+      background-color: var(--background-primary);
+      color: var(--text-primary);
+      padding: 24px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-      .header {
-        text-align: center;
-        margin-bottom: 30px;
-      }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;;
+      padding: 0 16px;
+    }
 
-      .header h1 {
-        font-weight: 600;
-        color: var(--text-accent);
-        font-size: 24px;
-        margin-bottom: 8px;
-      }
+    .header h1 {
+      font-weight: 600;
+      color: var(--text-accent);
+      font-size: 28px;
+      margin-bottom: 4px;
+    }
 
-      .header p {
-        color: var(--text-secondary);
-        font-size: 14px;
-      }
+    .header p {
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
 
-      .config-card {
-        background: var(--background-secondary);
-        border-radius: 6px;
-        padding: 15px;
-        margin-bottom: 15px;
-        border: 1px solid var(--border-color);
-      }
+    .config-card {
+      background: var(--background-secondary);
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid var(--border-color);
+      transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    }
 
-      .config-title {
-        font-size: 15px;
-        font-weight: 600;
-        color: var(--text-accent);
-        margin-bottom: 15px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid var(--border-color);
-      }
+    .config-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-accent);
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-color);
+    }
 
-      .config-content {
-        position: relative;
-        background: var(--background-tertiary);
-        border-radius: 6px;
-        padding: 15px;
-        margin-bottom: 20px;
-      }
+    .config-content {
+      position: relative;
+      background: var(--background-tertiary);
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
 
-      .config-content pre {
-        overflow-x: auto;
-        font-family: 'IBM Plex Mono', monospace;
-        font-size: 12px;
-        line-height: 1.4;
-        color: var(--text-primary);
-        margin: 0;
-        white-space: pre-wrap;
-        word-break: break-all;
-      }
+    .config-content pre {
+      overflow-x: auto;
+      font-family: var(--monospace);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--text-primary);
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
 
-      .attributes {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
-        margin-bottom: 15px;
-        padding: 10px;
-        background: var(--background-tertiary);
-        border-radius: 6px;
-        max-width: 768px;
-        margin: 0 auto;
-      }
+    .attributes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-bottom: 15px;
+      padding: 10px;
+      background: var(--background-tertiary);
+      border-radius: 6px;
+      max-width: 768px;
+      margin: 0 auto;
+    }
 
-      .attribute {
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-      }
+    .attribute {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
 
-      .attribute span {
-        font-size: 13px;
-        color: var(--text-secondary);
-      }
+    .attribute span {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
 
-      .attribute strong {
-        font-size: 14px;
-        color: var(--text-accent);
-        word-break: break-all;
-      }
+    .attribute strong {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-accent);
+      word-break: break-all;
+    }
 
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: var(--background-tertiary);
+      color: var(--accent-color);
+      border: 1px solid #404040;
+      padding: 5px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(255, 122, 61, 0.3);
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+      z-index: 1;
+    }
       .copy-btn {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      
+      .copy-btn:active {
+          transform-origin: center;
+          transform: scale(0.98);
+          transition: transform 0.1s ease-in-out;
+      }
+
+      .copy-btn:focus {
+          animation: pulse 1.5s infinite;
+      }
+
+      .copy-btn::before {
+        content: '';
         position: absolute;
-        top: 10px;
-        right: 10px;
-        background-color: var(--accent-color);
-        color: var(--button-text);
-        border: 1px solid #404040;
-        padding: 5px 12px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-family: 'Inter', sans-serif;
-        font-size: 13px;
-        font-weight: 600;
-        overflow: hidden;
-        box-shadow: 0 2px 5px rgba(255, 122, 61, 0.3);
-        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transform: translateX(-100%);
+        transition: 0.6s;
+        z-index: -1;
+      }
+
+      .copy-btn:hover::before {
+        transform: translateX(100%);
       }
 
       .copy-btn:hover {
         border-color: var(--accent-color);
         transform: translateY(-2px);
-        box-shadow: 0 8px 12px rgba(255, 122, 61, 0.4);
+        box-shadow: 0 12px 16px rgba(255, 122, 61, 0.4);
       }
 
+      .copy-btn:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+          transform: none;
+          box-shadow: none;
+      }
       .client-buttons {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -708,7 +764,7 @@ function getDianaConfig(userCode, hostName) {
         margin-top: 15px;
         background: #262626;
         border-radius: 6px;
-        color: #e5e5e5;
+        color: var(--accent-color);
       }
 
       .client-btn {
@@ -718,12 +774,19 @@ function getDianaConfig(userCode, hostName) {
         padding: 8px;
         margin-top: 8px;
         border-radius: 6px;
-        font-size: 13px;
-        font-weight: 500;
+        font-size: 14px;
+        font-weight: 400;
         position: relative;
         overflow: hidden;
         color: var(--text-primary);
         border: 1px solid #404040;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        user-select: none;
+        -webkit-user-select: none;
+        position: relative; 
+        overflow: hidden;
         transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
         z-index: 1;
       }
@@ -775,15 +838,15 @@ function getDianaConfig(userCode, hostName) {
 
       .footer {
         text-align: center;
-        margin-top: 30px;
-        color: #737373;
-        font-size: 13px;
+        margin-top: 20px;
+        color: var( --text-secondary);
+        font-size: 12px;
       }
+      
       .mt-1 {
         margin-top: 0.25rem;
       }
 
-      /* Pulse effect for primary button */
       @keyframes pulse {
         0% {
           box-shadow: 0 0 0 0 rgba(255, 122, 61, 0.4);
@@ -820,205 +883,160 @@ function getDianaConfig(userCode, hostName) {
           grid-template-columns: repeat(auto-fill, minmax(139px, 1fr));
         }
 
-        ::-webkit-scrollbar {
-          width: 8px;
-          height: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-          background: var(--background-primary);
-          border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-          background: var(--border-color);
-          border-radius: 4px;
-          border: 2px solid var(--background-primary);
-          transition: all 0.3s ease;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-          background: var(--accent-color);
-          border-radius: 6px;
-        }
-
-        * {
-          scrollbar-width: thin;
-          scrollbar-color: var(--border-color) var(--background-primary);
-        }
-
-        @media (max-width: 768px) {
-          ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-          }
-
-          ::-webkit-scrollbar-thumb {
-            border-width: 1px;
-          }
-        }
-
-        @media (max-width: 576px) {
-          ::-webkit-scrollbar {
-            width: 4px;
-            height: 4px;
-          }
-
-          ::-webkit-scrollbar-thumb {
-            border-width: 1px;
-            border-radius: 2px;
-          }
-
-          ::-webkit-scrollbar-track {
-            border-radius: 2px;
-          }
-        }
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
       }
-    </style>
-  </head>
-  <body>
+      ::-webkit-scrollbar-track {
+        background: var(--background-primary);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--border-color);
+        border-radius: 4px;
+        border: 2px solid var(--background-primary);
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--border-color-hover);
+      }
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--border-color) var(--background-primary);
+      }
+
+      @media (max-width: 768px) {
+        body { padding: 16px; }
+        .container { padding: 0 8px; }
+        .header h1 { font-size: 22px; }
+        .header p { font-size: 11px; }
+        .config-card { padding: 16px; }
+        .config-title { font-size: 18px; }
+        .config-content pre { font-size: 12px; }
+        .attributes { grid-template-columns: 1fr; gap: 16px; }
+        .client-buttons { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+        .button { padding: 8px 12px; font-size: 13px; }
+        .copy-btn { top: 10px; right: 10px; }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-thumb { border-width: 1px; }
+      }
+
+      @media (max-width: 480px) {
+        .client-buttons { grid-template-columns: 1fr; }
+        .attributes { grid-template-columns: 1fr; }
+        .attribute strong { font-size: 13px; }
+        .button { padding: 8px 12px; margin-top: 0px; font-size: 12px; }
+      }
+  </style>
+</head>
+<body>
     <div class="container">
       <div class="header">
-        <h1>VLESS Proxy Configurations</h1>
-        <p>Copy the configuration to import into your preferred client</p>
+        <h1>VLESS Proxy Configuration</h1>
+        <p>Copy the configuration or import directly into your client</p>
       </div>
+
       <!-- Proxy Info Card -->
       <div class="config-card">
         <div class="config-title">Proxy Information</div>
         <div class="attributes">
           <div class="attribute">
-            <span>Proxy IP:</span>
+            <span>Proxy IP / Host:</span>
             <strong>${proxyIP}</strong>
           </div>
           <div class="attribute">
             <span>Status:</span>
             <strong>Active</strong>
           </div>
-        </div>
+          </div>
       </div>
+
       <!-- Xray Core Clients -->
       <div class="config-card">
         <div class="config-title">Xray Core Clients</div>
         <div class="config-content">
-          <button class="copy-btn" onclick="copyToClipboard(this, '${dreamConfig}')">Copy</button>
+          <button class="button copy-btn" onclick="copyToClipboard(this, '${dreamConfig}')">Copy</button>
           <pre>${dreamConfig}</pre>
         </div>
-        <div class="client-config-card">
+        <div class="client-buttons">
           <!-- Hiddify -->
-          <a
-            href="hiddify://install-config?url=${encodeURIComponent(freedomConfig)}"
-            class="client-btn"
-          >
+          <a href="hiddify://install-config?url=${encodeURIComponent(freedomConfig)}" class="button client-btn">
             <div class="client-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="16"
-                height="16"
-                fill="#FF7A3D"
-              >
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#FF7A3D" >
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
               </svg>
             </div>
             Import to Hiddify
           </a>
           <!-- V2rayNG -->
-          <a
-            href="v2rayng://install-config?url=${encodeURIComponent(dreamConfig)}"
-            class="client-btn"
-          >
+          <a href="v2rayng://install-config?url=${encodeURIComponent(dreamConfig)}" class="button client-btn">
             <div class="client-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="16"
-                height="16"
-                fill="#FF7A3D"
-              >
-                <path d="M12 2L4 5v6c0 5.5 3.5 10.7 8 12.3 4.5-1.6 8-6.8 8-12.3V5l-8-3z" />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#FF7A3D" >
+                 <path d="M12 2L4 5v6c0 5.5 3.5 10.7 8 12.3 4.5-1.6 8-6.8 8-12.3V5l-8-3z" />
               </svg>
             </div>
             Import to V2rayNG
           </a>
         </div>
       </div>
-      <!-- Xray Core Clients -->
+
+      <!-- Sing-Box Core Clients -->
       <div class="config-card">
         <div class="config-title">Sing-Box Core Clients</div>
         <div class="config-content">
-          <button class="copy-btn" onclick="copyToClipboard(this, '${freedomConfig}')">Copy</button>
+          <button class="button copy-btn" onclick="copyToClipboard(this, '${freedomConfig}')">Copy</button>
           <pre>${freedomConfig}</pre>
         </div>
-        <div class="client-config-card">
-          <!-- Clash Meta - Updated with new URL format -->
-          <a
-          href="clash://install-config?url=${clashMetaImportUrl}"
-            class="client-btn"
-          >
+        <div class="client-buttons">
+          <!-- Clash Meta -->
+          <a href="${clashMetaFullUrl}" class="button client-btn">
             <div class="client-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="16"
-                height="16"
-                fill="#FF7A3D"
-              >
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#FF7A3D">
                 <path d="M4 4h16v16H4z" />
                 <path d="M10 10h4v4H10z" />
                 <path d="M14 8H10V4h4z" />
                 <path d="M4 14h4v4H4z" />
               </svg>
             </div>
-            Import to Clash-Meta
+            Import to Clash Meta
           </a>
           <!-- NekoBox -->
-          <a
-            href="clash://install-config?url=${encodeURIComponent(freedomConfig)}"
-            class="client-btn"
-          >
+          <a href="${nekoBoxImportUrl}" class="button client-btn"> 
             <div class="client-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="16"
-                height="16"
-                fill="#FF7A3D"
-              >
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
-                />
-              </svg>
-            </div>
-            Import to NekoBox
-          </a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#FF7A3D">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+          </svg>
         </div>
-      </div>
-      <div class="footer">
-        <p>© 2025 REvil, All Rights Reserved</p>
-        <p className="mt-1 text-xs">Secure. Private. Fast.</p>
-      </div>
+        Import to NekoBox
+      </a>
     </div>
-    <script>
-      function copyToClipboard(button, text) {
-        navigator.clipboard.writeText(text).then(() => {
-          const originalText = button.textContent;
-          button.textContent = 'Copied!';
-          button.style.background = '#FF7A3D';
-          button.style.color = '#A3512B';
-          setTimeout(() => {
-            button.textContent = originalText;
-            button.style.background = '#FF7A3D';
-          }, 1000);
-        });
-      }
-      document.addEventListener('DOMContentLoaded', function () {
-        const proxyIPElement = document.getElementById('proxyIP');
-        if (proxyIPElement && proxyIPElement.innerText === '${proxyIP}') {
-          proxyIPElement.innerText = '192.168.1.1'; // Default placeholder
-        }
-      });
-    </script>
-  </body>
+  </div>
+  <div class="footer">
+    <p>© 2025 REvil, All Rights Reserved</p>
+    <p className="mt-1 text-xs">Secure. Private. Fast.</p>
+  </div>
+</div>
+<script>
+  function copyToClipboard(button, text) {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = button.textContent;
+      button.textContent = 'Copied!';
+      button.style.background = '#FF7A3D';
+      button.style.color = '#262626';
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.style.background = '#262626';
+        button.style.color = '#FF7A3D';
+      }, 1000);
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    const proxyIPElement = document.getElementById('proxyIP');
+    if (proxyIPElement && proxyIPElement.innerText === '${proxyIP}') {
+      proxyIPElement.innerText = '192.168.1.1'; // Default placeholder
+    }
+  });
+</script>
+</body>
 </html>
 `;
 }
