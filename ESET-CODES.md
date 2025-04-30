@@ -1,7 +1,7 @@
-# Generated ON: Wednesday, 30 April 2025, 09:59:46 Tehran
+# Generated ON: Wednesday, 30 April 2025, 17:11:46 IRST/+03:30
 
 > [!CAUTION]
-> Triggered by: schedule
+> Triggered by: workflow_dispatch
 
 <br><br>
 
@@ -12,26 +12,16 @@
 > Each code is valid for login on only one device.
 
 ```ruby
-X01OI236VD
-LN0KYQ63IS
-BDSHFC875W
-IQD888JY7O
-5NRDRE9U3U
-GAHY9IP7G4
-F55CPVKQEG
-FPF4R1WT8H
-BFH5G3IK7R
-GGRUWRM4EM
-FVUVVA72CR
-6DFXG6CN1U
-AYUTJVMDLG
-QSNTL5LJNO
-55O2H2SCT7
-MZXBJD4SO9
-O1SOLO8DPM
-TR6NG1NLQ5
-QX0L8MD1YU
-XH01OFMERC
+HHX21BTD9U
+MSKMM7LCR2
+W4EAKXQL21
+OQUL0CP6VC
+Q74K17I2YB
+7NB6IXIO6M
+VZSHHRH6TN
+MUUXIGNYUQ
+K9Q0I707WC
+HW7DXBLD5F
 ```
 
 <br>
@@ -39,11 +29,11 @@ XH01OFMERC
 ### ESET SECURITY LICENSE
 
 **Name:** ESET Small Business Security
-**Expiry:** 30.05.2025
+**Expiry:** 30/05/2025
 **License Key:**
 
 ```POV-Ray SDL
-RP85-XVN6-B8DW-D3M9-EJAE
+BUWA-XM92-5PVA-BBGE-STXV
 ```
 
 <br>
@@ -53,15 +43,22 @@ RP85-XVN6-B8DW-D3M9-EJAE
 **Email:**
 
 ```CSS
-evelyn.wynston@fabricoak.com
+edris.vernell@fabricoak.com
 ```
 
 **Password:**
 
 ```POV-Ray SDL
-:u+xePKH5kb@7p:DP^
+A~ihBhTX9X&7
 ```
 
 <br>
 
 ### All about ESET VPN
+
+[READ HERE](https://t.me/F_NiREvil/2113)
+
+---
+
+<br><br>
+
