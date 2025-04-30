@@ -1,4 +1,4 @@
-# Generated ON: Wednesday, 30 April 2025, 17:11:46 IRST/+03:30
+# Generated ON: Wednesday, 30 April 2025, 17:11:46 IRST/Tehran.
 
 > [!CAUTION]
 > Triggered by: workflow_dispatch
@@ -8,7 +8,7 @@
 ### ESET VPN ACCESS CODES
 
 > [!NOTE]
-> The access codes for ESET VPN will expire eventually.
+> The access codes for ESET VPN will expire in 24 hours.
 > Each code is valid for login on only one device.
 
 ```ruby
@@ -22,6 +22,16 @@ VZSHHRH6TN
 MUUXIGNYUQ
 K9Q0I707WC
 HW7DXBLD5F
+X01OI236VD
+LN0KYQ63IS
+BDSHFC875W
+IQD888JY7O
+5NRDRE9U3U
+GAHY9IP7G4
+F55CPVKQEG
+FPF4R1WT8H
+BFH5G3IK7R
+GGRUWRM4EM
 ```
 
 <br>
