@@ -546,8 +546,8 @@ function getDianaConfig(userCode, hostName) {
 
   // Configuration for Xray core clients
   const dreamConfig =
-    `${baseUrl}?path=/api/v2?ed=2048&${commonParams}` +
-    `&fp=randomized&alpn=h2,http/1.1#${hostName}`;
+    `${baseUrl}?path=/api/?ed=2048&${commonParams}` +
+    `&fp=randomized&alpn=http/1.1#${hostName}`;
 
   // URL for Clash Meta subscription import
   const clashMetaFullUrl = `clash://install-config?url=${encodeURIComponent(
@@ -557,6 +557,7 @@ function getDianaConfig(userCode, hostName) {
   // create a URL for NekoBox
   const nekoBoxImportUrl = `https://sahar-km.github.io/arcane/${btoa(freedomConfig)}`;
 
+  
   // HTML content
   return `
 <!doctype html>
@@ -607,7 +608,6 @@ function getDianaConfig(userCode, hostName) {
         --border-radius: 8px;
         --transition-speed: 0.2s;
         --sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        --serif: 'Ibarra Real Nova', Georgia, serif;
         --aldine-serif: 'Aldine401', Ibarra Real Nova, Georgia, serif;
         --code-serif: 'Open Sans', sans-serif;
       }
@@ -781,12 +781,14 @@ function getDianaConfig(userCode, hostName) {
         font-family: var(--aldine-serif);
         font-size: 12px;
         font-weight: 600;
-        background-color: var(--accent-tertiary);
-        color: var(--text-accent);
+        background-color: var(--background-tertiary);
+        color: var(--accent-secondary);
       }
 
       .copy-btn:hover {
-        background-color: var(--accent-primary);
+        background-color: var(--background-tertiary);
+        color: var(--accent-primary);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
       }
 
       .client-buttons {
@@ -871,7 +873,7 @@ function getDianaConfig(userCode, hostName) {
         scrollbar-color: var(--border-color) var(--background-primary);
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 800px) {
         body { padding: 16px; }
         .container { padding: 0 8px; }
         .header h1 { font-size: 28px; }
@@ -1021,8 +1023,8 @@ function getDianaConfig(userCode, hostName) {
 
             setTimeout(() => {
               button.textContent = originalText;
-              button.style.backgroundColor = 'var(--accent-tertiary)';
-              button.style.color = 'var(--text-accent)';
+              button.style.backgroundColor = 'var(--background-tertiary)';
+              button.style.color = 'var(--accent-secondary)';
               button.style.borderColor = 'var(--border-color)';
               button.disabled = false;
             }, 1200);
@@ -1038,13 +1040,13 @@ function getDianaConfig(userCode, hostName) {
             setTimeout(() => {
               button.textContent = originalText;
               button.style.backgroundColor = 'var(--accent-tertiary)';
-              button.style.color = 'var(--text-accent)';
+              button.style.color = 'var(--accent-secondary)';
               button.style.borderColor = 'var(--border-color)';
               button.disabled = false;
             }, 1500);
           });
       }
-
+      
       document.addEventListener('DOMContentLoaded', function () {
         const proxyIPElement = document.getElementById('proxyIP');
         if (proxyIPElement && proxyIPElement.innerText === '${proxyIP}') {
