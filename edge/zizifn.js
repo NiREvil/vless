@@ -557,7 +557,6 @@ function getDianaConfig(userCode, hostName) {
   // create a URL for NekoBox
   const nekoBoxImportUrl = `https://sahar-km.github.io/arcane/${btoa(freedomConfig)}`;
 
-
   // HTML content
   return `
 <!doctype html>
