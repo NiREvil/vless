@@ -546,8 +546,7 @@ function getDianaConfig(userCode, hostName) {
 
   // Configuration for Xray core clients
   const dreamConfig =
-    `${baseUrl}?path=/api/?ed=2048&${commonParams}` +
-    `&fp=randomized&alpn=http/1.1#${hostName}`;
+    `${baseUrl}?path=/api/?ed=2048&${commonParams}` + `&fp=randomized&alpn=http/1.1#${hostName}`;
 
   // URL for Clash Meta subscription import
   const clashMetaFullUrl = `clash://install-config?url=${encodeURIComponent(
@@ -557,7 +556,6 @@ function getDianaConfig(userCode, hostName) {
   // create a URL for NekoBox
   const nekoBoxImportUrl = `https://sahar-km.github.io/arcane/${btoa(freedomConfig)}`;
 
-  
   // HTML content
   return `
 <!doctype html>
