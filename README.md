@@ -186,7 +186,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/rand-ip
 https://wearestandtelegram.github.io/IranRamona
 
 **Chaining Warp confs**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/WarpOnWarp.json  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/WarpOnWarp.json
 
 https://raw.githubusercontent.com/4n0nymou3/ss-config-updater/refs/heads/main/configs.txt
 
@@ -246,17 +246,17 @@ wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:888
 wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:8886?address=172.16.0.2/32, 2606:4700:110:846c:e510:bfa1:ea9f:5247/128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=117%2C134%2C208#Tel= @arshiacomplus wire
 ```
 
----  
+---
 
 #### Warp for [Clash-Meta]
+
 > [!NOTE]
 > warp Configurations are auto generated every six hours,
 > Interconnected in the form of a proxy chain, and utilize amnezia options.
->   
+>
 > Suitable for ChatGPT [[wtf?]]
-  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml  
 
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml
 
 <br>
 
@@ -575,7 +575,7 @@ https://raw.githubusercontent.com/Mahdi0024/ProxyCollector/master/sub/proxies.tx
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt [[MB?]]
 
-https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity  
+https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity
 
 https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/mix/sub.html [[AR?]]
 
@@ -583,7 +583,7 @@ https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2r
 
 https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Vless [[FR?]]
 
-https://raw.githubusercontent.com/tkamirparsa/Javid-shah/refs/heads/main/Sub.text [[XS?]]  
+https://raw.githubusercontent.com/tkamirparsa/Javid-shah/refs/heads/main/Sub.text [[XS?]]
 
 https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/mixed_iran.txt [[HK?]]
 
@@ -597,7 +597,7 @@ https://raw.githubusercontent.com/4n0nymou3/ss-config-updater/refs/heads/main/co
 
 https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/vmess_iran.txt
 
-https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/trojan_iran.txt  
+https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/trojan_iran.txt
 
 https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt
 
@@ -613,7 +613,7 @@ https://raw.githubusercontent.com/bamdad23/JavidnamanIran/refs/heads/main/latest
 
 https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/refs/heads/main/channels/protocols/shadowsocks [[SR?]]
 
-https://raw.githubusercontent.com/barry-far/V2ray-Configs/refs/heads/main/Sub1.txt [[BR?]]  
+https://raw.githubusercontent.com/barry-far/V2ray-Configs/refs/heads/main/Sub1.txt [[BR?]]
 
 https://trojanvmess.pages.dev/cmcm?b64#cmcm?b64
 
@@ -711,7 +711,7 @@ https://elena.com.co/ELiV2-RAY-Sublink.txt
 
 https://raw.githubusercontent.com/AB-84-AB/Free-Shadowsocks/refs/heads/main/Telegram-id-AB_841
 
-https://raw.githubusercontent.com/TelAB841Conf/AB_841-config-Free-X-ray/refs/heads/main/X-ray_Server-Free#AB-841  
+https://raw.githubusercontent.com/TelAB841Conf/AB_841-config-Free-X-ray/refs/heads/main/X-ray_Server-Free#AB-841
 
 https://raw.githubusercontent.com/Created-By/Telegram-Eag1e_YT/main/%40Eag1e_YT
 
