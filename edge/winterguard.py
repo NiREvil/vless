@@ -389,7 +389,9 @@ def main():
         proxies_list = []
         dialer_proxy_names = []
         entry_proxy_names = []
-        ipv6_endpoint_count = 0  # Counter for limiting IPv6 endpoints
+      # ipv6_endpoint_count = 0  # Counter for limiting IPv6 endpoints
+
+        logger.info(f"IPv6 endpoint count: {ipv6_endpoint_count}")
 
         logger.info(f"Generating {NUM_PROXY_PAIRS} proxy pairs...")
         for i in range(NUM_PROXY_PAIRS):
