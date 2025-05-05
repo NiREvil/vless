@@ -18,15 +18,27 @@ from tenacity import (
 )
 
 # --- Configuration ---
-NUM_PROXY_PAIRS = int(os.environ.get("NUM_PROXY_PAIRS", 8))  # Number of proxy pairs to generate
-NUM_IPV6_ENTRY_ENDPOINTS = int(os.environ.get("NUM_IPV6_ENTRY_ENDPOINTS", 2))  # How many Entry proxies should use an IPv6 server endpoint
+NUM_PROXY_PAIRS = int(
+    os.environ.get("NUM_PROXY_PAIRS", 8)
+)  # Number of proxy pairs to generate
+NUM_IPV6_ENTRY_ENDPOINTS = int(
+    os.environ.get("NUM_IPV6_ENTRY_ENDPOINTS", 2)
+)  # How many Entry proxies should use an IPv6 server endpoint
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # the (SCRIPT_DIR) = where the script is running, in this case: path:vless/edge 
+SCRIPT_DIR = os.path.dirname(
+    os.path.abspath(__file__)
+)  # the (SCRIPT_DIR) = where the script is running, in this case: path:vless/edge
 PARENT_DIR = os.path.dirname(SCRIPT_DIR)  # Get the parent directory (repository root)
 
-CONFIG_TEMPLATE_PATH = os.path.join(SCRIPT_DIR, "assets", "clash-meta-wg-template.yml")  # Path to the template file
-CACHE_FILE_PATH = os.path.join(PARENT_DIR, "sub", "key_cache.json")  # Path for caching generated keys
-OUTPUT_YAML_FILENAME = os.path.join(PARENT_DIR, "sub", "clash-meta-wg.yml")  # Output YML filename
+CONFIG_TEMPLATE_PATH = os.path.join(
+    SCRIPT_DIR, "assets", "clash-meta-wg-template.yml"
+)  # Path to the template file
+CACHE_FILE_PATH = os.path.join(
+    PARENT_DIR, "sub", "key_cache.json"
+)  # Path for caching generated keys
+OUTPUT_YAML_FILENAME = os.path.join(
+    PARENT_DIR, "sub", "clash-meta-wg.yml"
+)  # Output YML filename
 
 
 # --- Proxy Naming Configuration ---
@@ -73,9 +85,9 @@ def generate_private_key():
     private_bytes = private_key.private_bytes(
         encoding=serialization.Encoding.Raw,
         format=serialization.PrivateFormat.Raw,
-        encryption_algorithm=serialization.NoEncryption()
+        encryption_algorithm=serialization.NoEncryption(),
     )
-    
+
     key = list(private_bytes)
     key[0] &= 248
     key[31] &= 127
@@ -150,7 +162,7 @@ def register_key_on_CF(pub_key):
             "Accept-Encoding": "gzip",
             "User-Agent": "okhttp/3.12.1",
         }
-        
+
         time.sleep(random.uniform(1.5, 2.5))
         with requests.post(url, data=bodyString, headers=headers, timeout=25) as r:
             if r.status_code == 429:
@@ -295,7 +307,7 @@ ipv4_prefixes = [
     "162.159.192.",
     "162.159.193.",
     "162.159.195.",
-#   "162.159.204.",
+    #   "162.159.204.",
     "188.114.96.",
     "188.114.97.",
     "188.114.98.",
@@ -303,7 +315,10 @@ ipv4_prefixes = [
 ]
 
 # Available ports for endpoint generation
-ports_str = os.environ.get("AVAILABLE_PORTS", "500 854 859 864 878 880 890 891 894 903 908 928 934 939 942 943 945 946 955 968 987 988 1002 1010 1014 1018 1070 1074 1180 1387 1701 1843 2371 2408 2506 3138 3476 3581 3854 4177 4198 4233 4500 5279 5956 7103 7152 7156 7281 7559 8319 8742 8854 8886")
+ports_str = os.environ.get(
+    "AVAILABLE_PORTS",
+    "500 854 859 864 878 880 890 891 894 903 908 928 934 939 942 943 945 946 955 968 987 988 1002 1010 1014 1018 1070 1074 1180 1387 1701 1843 2371 2408 2506 3138 3476 3581 3854 4177 4198 4233 4500 5279 5956 7103 7152 7156 7281 7559 8319 8742 8854 8886",
+)
 available_ports = [int(p) for p in ports_str.split()]
 
 # Cloudflare's fixed public key for WireGuard
@@ -320,11 +335,11 @@ def generate_ipv4_endpoint():
     return server, port
 
 
-# Function to generate a random IPv6 endpoint 
+# Function to generate a random IPv6 endpoint
 def generate_ipv6_endpoint():
     prefix = random.choice(ipv6_prefixes)
-    suffix = ''.join(random.choice('0123456789abcdef') for _ in range(16))
-    formatted_suffix = ':'.join(suffix[i:i+4] for i in range(0, 16, 4))
+    suffix = "".join(random.choice("0123456789abcdef") for _ in range(16))
+    formatted_suffix = ":".join(suffix[i : i + 4] for i in range(0, 16, 4))
     server = f"{prefix}::{formatted_suffix}"
     port = random.choice(available_ports)
     logger.debug(f"Generated IPv6 endpoint: {server}:{port}")
@@ -357,12 +372,16 @@ def main():
             )
             sys.exit(1)
         except yaml.YAMLError as e:
-            logger.error(f"Invalid YML syntax in config file '{CONFIG_TEMPLATE_PATH}': {e}")
+            logger.error(
+                f"Invalid YML syntax in config file '{CONFIG_TEMPLATE_PATH}': {e}"
+            )
             sys.exit(1)
 
         # Generate/retrieve keys for dialer and entry proxies
         logger.info("Binding keys for Dialer proxies...")
-        priv_key_dialer, reserved_dialer, ip_v4_dialer, ip_v6_dialer = bind_keys("dialer")
+        priv_key_dialer, reserved_dialer, ip_v4_dialer, ip_v6_dialer = bind_keys(
+            "dialer"
+        )
 
         logger.info("Binding keys for Entry proxies...")
         priv_key_entry, reserved_entry, ip_v4_entry, ip_v6_entry = bind_keys("entry")
@@ -429,10 +448,10 @@ def main():
                 "dialer-proxy": entry_proxy_name,
             }
             proxies_list.append(dialer_proxy)
-            
+
             # --- Create Entry Proxy SECOND ---
             entry_proxy_names.append(entry_proxy_name)
-            
+
             # --- Choose Entry endpoint based on pair number (same logic as Dialer for WiFi compatibility) ---
             if pair_num <= 6:
                 logger.debug(
@@ -444,10 +463,10 @@ def main():
                 # or simply use IPv6 like the dialer. Here we mirror the dialer logic.
                 logger.debug(f"Using IPv6 endpoint for Entry proxy {pair_num}")
                 server_entry, port_entry = generate_ipv6_endpoint()
-            
+
             # Note: The previous logic using ipv6_endpoint_count and NUM_IPV6_ENTRY_ENDPOINTS
             # for entry proxy endpoint selection has been replaced by the logic above.
-            
+
             entry_proxy = {
                 "name": entry_proxy_name,
                 "type": "wireguard",
@@ -520,7 +539,10 @@ def main():
             config_template_dict["rules"] = updated_rules
 
         # Ensure the primary DNS nameserver uses the correct selector group name tag
-        if "dns" in config_template_dict and "nameserver" in config_template_dict["dns"]:
+        if (
+            "dns" in config_template_dict
+            and "nameserver" in config_template_dict["dns"]
+        ):
             if config_template_dict["dns"]["nameserver"]:
                 parts = config_template_dict["dns"]["nameserver"][0].split("#")
                 if len(parts) >= 1:  # Check if there is at least a server part
@@ -569,7 +591,9 @@ def main():
             sys.exit(1)
 
     except Exception as e:
-        logger.error(f"Unexpected error occurred in script execution: {e}", exc_info=True)
+        logger.error(
+            f"Unexpected error occurred in script execution: {e}", exc_info=True
+        )
         sys.exit(1)
 
 
