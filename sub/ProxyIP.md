@@ -62,16 +62,16 @@ bpb.yousef.isegaro.com
 72.13.122.137
 ```
 
-**🇹🇷 Turkey, Istanbul, Poyraz Hosting Bilisim Hizmetleri**
-
-```POV-Ray SDL
-2.59.117.217
-```
-
 **🇹🇷 Turkey, izmir, Stark Industries Solutions LTD**
 
 ```POV-Ray SDL
 62.3.12.185
+```
+
+**🇹🇷 Turkey, Istanbul, Poyraz Hosting Bilisim Hizmetleri**
+
+```POV-Ray SDL
+2.59.117.217
 ```
 
 ## Google LLC
@@ -85,10 +85,6 @@ bpb.yousef.isegaro.com
 ```
 
 ```POV-Ray SDL
-34.66.72.229
-```
-
-```POV-Ray SDL
 34.105.49.234
 ```
 
@@ -96,27 +92,7 @@ bpb.yousef.isegaro.com
 35.247.124.181
 ```
 
-**🇺🇸 USA, lowa Council Bluffs, Google LLC**
-
-```POV-Ray SDL
-35.202.158.120
-```
-
-```POV-Ray SDL
-34.72.146.82
-```
-
-**🇳🇱 Netherlands, Groningen, Google LLC**
-
-```POV-Ray SDL
-35.204.231.100
-```
-
 **🇫🇮 Finland, Lappeenranta, Google LLC**
-
-```POV-Ray SDL
-35.228.36.82
-```
 
 ```POV-Ray SDL
 34.88.63.160
@@ -142,50 +118,9 @@ bpb.yousef.isegaro.com
 3.126.159.12
 ```
 
-<details>
-<summary> |   And the list goes on ... </summary>
-
 ```POV-Ray SDL
 3.75.170.179
 ```
-
-```POV-Ray SDL
-3.123.255.167
-```
-
-```POV-Ray SDL
-3.64.205.189
-```
-
-```POV-Ray SDL
-3.123.242.99
-```
-
-```POV-Ray SDL
-35.159.168.72
-```
-
-```POV-Ray SDL
-52.29.224.33
-```
-
-```POV-Ray SDL
-18.153.244.138
-```
-
-```POV-Ray SDL
-3.79.117.14
-```
-
-```POV-Ray SDL
-18.192.135.183
-```
-
-```POV-Ray SDL
-18.198.168.3
-```
-
-</details>
 
 **🇺🇸 USA, random, Amazon Technologies Inc**
 
@@ -194,15 +129,8 @@ bpb.yousef.isegaro.com
 ```
 
 ```POV-Ray SDL
-34.227.133.207
-```
-
-```POV-Ray SDL
 184.169.181.217
 ```
-
-<details>
-<summary> |   And the list goes on ... </summary>
 
 ```POV-Ray SDL
 52.4.8.214
@@ -216,6 +144,9 @@ bpb.yousef.isegaro.com
 52.42.71.111
 ```
 
+<details>
+<summary> |   And the list goes on ... </summary>
+
 ```POV-Ray SDL
 3.137.160.207
 ```
@@ -226,10 +157,6 @@ bpb.yousef.isegaro.com
 
 ```POV-Ray SDL
 3.15.3.38
-```
-
-```POV-Ray SDL
-44.200.195.84
 ```
 
 ```POV-Ray SDL
@@ -441,10 +368,6 @@ bpb.yousef.isegaro.com
 ```
 
 ```POV-Ray SDL
-13.60.209.207
-```
-
-```POV-Ray SDL
 51.20.207.0
 ```
 
@@ -464,7 +387,7 @@ bpb.yousef.isegaro.com
 18.170.77.148
 ```
 
-**🇮🇪 Ireland, Dublin Leinster, Amazon tech**
+~~**🇮🇪 Ireland, Dublin Leinster, Amazon tech**~~
 
 ```POV-Ray SDL
 54.74.167.219
