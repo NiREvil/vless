@@ -1,23 +1,28 @@
 {
   "name": "vless",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Freedom to Dream",
   "type": "module",
   "scripts": {
-    "format:js": "prettier --write **/*.{js,json,md,yml,html,css}",
-    "lint:js": "eslint --unsafe-fixes **/*.js",
-    "format:py": "black .",
-    "lint:py": "ruff check --unsafe-fixes .",
-    "format": "npm run format:js && npm run format:py",
-    "lint": "npm run lint:js && npm run lint:py"
+    "format:js-family": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml,yaml,html,css,scss,vue}\"",
+    "lint:js": "eslint --fix .",
+    "format:py": "ruff format .",
+    "lint:py": "ruff check --fix .",
+    "format": "npm run format:js-family && npm run format:py",
+    "lint": "npm run lint:js && npm run lint:py",
+    "lint-format": "npm run format && npm run lint"
   },
   "devDependencies": {
-    "@eslint/config-array": "^0.19.2",
     "@eslint/js": "^9.21.0",
-    "@eslint/object-schema": "^2.1.6",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.5.2"
+    "eslint-plugin-html": "^8.1.1",
+    "eslint-plugin-jsonc": "^2.16.0",
+    "eslint-plugin-yml": "^1.14.0",
+    "globals": "^15.8.0",
+    "jsonc-eslint-parser": "^2.4.0",
+    "prettier": "^3.5.2",
+    "yaml-eslint-parser": "^1.2.3"
   },
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
