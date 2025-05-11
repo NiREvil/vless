@@ -2032,20 +2032,15 @@ def mainactivity():
                         else:
                             tcpSetting.header.type = "none"
                             sni = host or ""
-                        tcpSettings = (
-                            tcpSetting  # Assuming tcpSettings is a global variable
-                        )
                     elif network == "kcp":
                         kcpsetting = V2rayConfig.OutboundBean.KcpSettingsBean()
                         kcpsetting.header.type = headerType or "none"
                         kcpsetting.seed = seed
-                        kcpSettings = kcpsetting
                     elif network == "ws":
                         wssetting = V2rayConfig.OutboundBean.WsSettingsBean()
                         wssetting.headers.Host_single = host or ""
                         sni = wssetting.headers.Host_single
                         wssetting.path = path or "/"
-                        wsSettings = wssetting
                     elif network == "httpupgrade":
                         httpupgradeSetting = (
                             V2rayConfig.OutboundBean.HttpupgradeSettingsBean()
@@ -2053,13 +2048,11 @@ def mainactivity():
                         httpupgradeSetting.host = host or ""
                         sni = httpupgradeSetting.host
                         httpupgradeSetting.path = path or "/"
-                        httpupgradeSettings = httpupgradeSetting
                     elif network == "xhttp":
                         xhttpSetting = V2rayConfig.OutboundBean.XhttpSettingsBean()
                         xhttpSetting.host = host or ""
                         sni = xhttpSetting.host
                         xhttpSetting.path = path if path else "/"
-                        xhttpSettings = xhttpSetting
                     elif network == "splithttp":
                         splithttpSetting = (
                             V2rayConfig.OutboundBean.SplithttpSettingsBean()
@@ -2067,7 +2060,6 @@ def mainactivity():
                         splithttpSetting.host = host or ""
                         sni = splithttpSetting.host
                         splithttpSetting.path = path or "/"
-                        splithttpSettings = splithttpSetting  # Assuming splithttpSettings is a global variable
                     elif network in ["h2", "http"]:
                         network = "h2"
                         h2Setting = V2rayConfig.OutboundBean.HttpSettingsBean()
@@ -2076,28 +2068,19 @@ def mainactivity():
                         )
                         sni = h2Setting.host[0] if h2Setting.host else sni
                         h2Setting.path = path or "/"
-                        httpSettings = (
-                            h2Setting  # Assuming httpSettings is a global variable
-                        )
                     elif network == "quic":
                         quicsetting = V2rayConfig.OutboundBean.QuicSettingBean()
                         quicsetting.security = quicSecurity or "none"
                         quicsetting.key = key or ""
                         quicsetting.header.type = headerType or "none"
-                        quicSettings = (
-                            quicsetting  # Assuming quicSettings is a global variable
-                        )
                     elif network == "grpc":
                         grpcSetting = V2rayConfig.OutboundBean.GrpcSettingsBean()
-                        grpcSetting.multiMode = mode == False
+                        grpcSetting.multiMode = not mode
                         grpcSetting.serviceName = serviceName or ""
                         grpcSetting.authority = authority or ""
                         grpcSetting.idle_timeout = 60
                         grpcSetting.health_check_timeout = 20
                         sni = authority or ""
-                        grpcSettings = (
-                            grpcSetting  # Assuming grpcSettings is a global variable
-                        )
                     return sni
 
                 def populate_tls_settings(
@@ -2111,7 +2094,7 @@ def mainactivity():
                     spiderX: Optional[str],
                 ):
                     security = streamSecurity
-                    tlsSetting = V2rayConfig.OutboundBean.TlsSettingsBean(
+                    V2rayConfig.OutboundBean.TlsSettingsBean(
                         allowInsecure=allowInsecure,
                         serverName=sni,
                         fingerprint=fingerprint,
@@ -2125,11 +2108,9 @@ def mainactivity():
                         spiderX=spiderX,
                     )
                     if security == TLS:
-                        tlsSettings = tlsSetting
-                        realitySettings = None
+                        pass
                     elif security == REALITY:
-                        tlsSettings = None
-                        realitySettings = tlsSetting
+                        pass
 
             class DnsBean:
                 def __init__(
@@ -2474,7 +2455,7 @@ def mainactivity():
         #################                    eding configs if                 ############################
         if is_editing:
             try:
-                if HEADER_TYPE == None:
+                if HEADER_TYPE is None:
                     HEADER_TYPE = "none"
             except Exception:
                 pass
@@ -2483,15 +2464,15 @@ def mainactivity():
                 or conifg.startswith("vmess://")
                 or conifg.startswith("trojan://")
             ):
-                if ALPN == None:
+                if ALPN is None:
                     ALPN = ""
                 if TYPE == "grpc":
-                    if MODE == False:
+                    if not MODE:
                         MODE = "gun"
                     else:
                         MODE = "multi"
             try:
-                if R_HOST == None:
+                if R_HOST is None:
                     R_HOST = ""
             except Exception:
                 pass
@@ -4510,7 +4491,7 @@ def mainactivity():
             sockopt = V2rayConfig.OutboundBean.SockoptBean(
                 dialerProxy="fragment", tcpKeepAliveIdle=100, mark=255
             )
-            if FRAGMENT == False:
+            if not FRAGMENT:
                 if PASS == "" and USER == "":
                     outboundBean = V2rayConfig.OutboundBean(
                         tag="proxy",
@@ -4706,7 +4687,7 @@ def mainactivity():
                     routing=routingBean,
                 )
         else:
-            if is_warp == False:
+            if not is_warp:
                 if IS_WARP_ON_WARP:
                     if ENABLELOCALDNS:
                         config = V2rayConfig(
@@ -4871,7 +4852,7 @@ def mainactivity():
         with open("xray/config.json", "r") as f:
             temp3 = json.load(f)
         port = temp3["inbounds"][1]["port"]
-        if conn == False:
+        if not conn:
             set_proxy("127.0.0.1", port)
         response = ""
         try:
@@ -4945,7 +4926,7 @@ def mainactivity():
                     )
                 except Exception:
                     ip_loc = False
-        if ip_loc != False:
+        if ip_loc:
             ipp_la.configure(image=ip_loc, text=" ")
         return result
 
@@ -5011,7 +4992,7 @@ def mainactivity():
                 if conf_simple[wch_sel].startswith("hy2://") or conf_simple[
                     wch_sel
                 ].startswith("hysteria2://"):
-                    hy = subprocess.Popen(
+                    subprocess.Popen(
                         ["hy2/hysteria.exe", "client", "-c", "hy2/config.yaml"],
                         stdin=subprocess.DEVNULL,
                         stdout=subprocess.DEVNULL,
@@ -5020,7 +5001,7 @@ def mainactivity():
                     )
                     is_hy2 = True
             with open("xray/xrayErr.log", "w") as errFile:
-                xa = subprocess.Popen(
+                subprocess.Popen(
                     [xray_abs, "run", "-c", config_abs],
                     stdin=subprocess.DEVNULL,
                     stdout=errFile,
@@ -5297,7 +5278,7 @@ def mainactivity():
                 all_key2 = free_cloudflare_account()
             except Exception as E:
                 print(" Try again Error =", E)
-            if is_sub == False and is_v2ray == False:
+            if not is_sub and not is_v2ray:
                 with open("warp_setting", "r") as f:
                     num = f.readlines()
                     if num[8] == "2\n":
@@ -5332,7 +5313,7 @@ def mainactivity():
                 tabview.tab("main").clipboard_append(f"{conf}")
                 labelmain1.configure(text="\n\n\n\nClick to scan ip")
                 return
-            if is_sub and is_v2ray == False:
+            if is_sub and not is_v2ray:
                 with open("warp_setting", "r") as f:
                     num = f.readlines()
                     if num[8] == "2\n":
@@ -5384,7 +5365,7 @@ def mainactivity():
             global wire_config_temp
             global header
             global wire_p
-            if wire_p == 0 and i_ip_scan == False:
+            if wire_p == 0 and not i_ip_scan:
                 ip, port, ping, loss_rate, jitter, combined_score = best_result
                 best_result = [1] * 2
                 best_result[0] = ip
@@ -5400,7 +5381,7 @@ def mainactivity():
                 all_key2 = free_cloudflare_account()
             except Exception:
                 all_key2 = free_cloudflare_account()
-            if is_sub == False and is_v2ray == False:
+            if not is_sub and not is_v2ray:
                 best_result[1] = int(best_result[1])
                 with open("warp_setting", "r") as f:
                     num = f.readlines()
@@ -5790,8 +5771,6 @@ def mainactivity():
     def main():
         global save_result
         global max_workers_number
-        WH_ipVersion = ""
-        sorted_results = []
 
         def main_menu():
             global WH_ipVersion
@@ -6142,7 +6121,7 @@ def mainactivity():
                     executor = ThreadPoolExecutor(max_workers=max_workers_number)
                     try:
                         for ip in ip_range:
-                            futures = executor.submit(
+                            executor.submit(
                                 scan_ip_port, ip, ports[random.randint(0, 3)]
                             )
                     except Exception as e:
@@ -7031,7 +7010,7 @@ def mainactivity():
 
         def on_go():
             ret = Check_for_update()
-            if ret[0] == True:
+            if ret[0]:
                 label_up = ctk.CTkLabel(
                     rootupdate,
                     font=("Helvetica", 12, "bold"),
@@ -7181,7 +7160,7 @@ def mainactivity():
                 how_menypp.pack_info()
                 ty = True
             except tk.TclError:
-                t2 = False
+                pass
             if ty:
                 how_menypp.pack_forget()
             optionmenu.pack_forget()
@@ -7521,18 +7500,6 @@ def mainactivity():
         command=is_frag_or_wire,
     )
     is_warp_or_not.pack(fill=tk.X, pady=3)
-    set = [
-        "tlshello\n",
-        "10-30\n",
-        "1-5\n",
-        "false\n",
-        "cloudflare.com\n",
-        "false\n",
-        "8\n",
-        "true\n",
-        "false\n",
-        " ",
-    ]
     core_fragment_settings = app_config.get("core", {}).get(
         "fragment", DEFAULT_CONFIG["core"]["fragment"]
     )
@@ -7939,7 +7906,7 @@ def mainactivity():
                 check_confs(confss, is_sub=True)
                 return
             boolor, confss, cout_add = check_confs(confss)
-            if boolor == False:
+            if not boolor:
                 print("rturn")
                 return
             if not os.path.exists("xray/" + tag):
@@ -8194,11 +8161,11 @@ def mainactivity():
             labe.pack(anchor=tk.NE, side=tk.TOP, ipady=10, ipadx=10)
             labe.bind("<Button-1>", close)
             # buttonctk_b=ctk.CTkButton(on_copy_root,text="",image=back_arrow).pack(anchor=tk.NE)
-            button_normal = ctk.CTkButton(
+            ctk.CTkButton(
                 on_copy_root, command=normal, text="Normal"
             ).pack(pady=(5, 5), padx=5)
             if not isinstance(config, dict):
-                button_norma2 = ctk.CTkButton(
+                ctk.CTkButton(
                     on_copy_root, command=full, text="Full"
                 ).pack(pady=(5, 10), padx=5)
             on_copy_root.lift()
@@ -8281,7 +8248,7 @@ def mainactivity():
                     if not is_new:
                         is_on = create_textbox(frame_confs, count == wch_sel)
                     else:
-                        is_on = create_textbox(frame_confs, count == None)
+                        is_on = create_textbox(frame_confs, count is None)
                     label = ctk.CTkTextbox(frame_confs, width=100, height=48)
                     label.pack(padx=(5, 5), side=tk.LEFT)
                     label.insert(1.0, i_p)
@@ -8289,7 +8256,7 @@ def mainactivity():
                     if not is_new:
                         frams_in_show.append(label)
                         frams_in_ping.append(create_ping_label(frame_confs, i))
-                        if LOC_user != None:
+                        if LOC_user is not None:
                             fram_in_flag.append(create_loc_label(frame_confs, LOC_user))
                         else:
                             fram_in_flag.append(create_loc_label(frame_confs))
@@ -8300,7 +8267,7 @@ def mainactivity():
                         frams_in_ping = [
                             create_ping_label(frame_confs, i)
                         ] + frams_in_ping[:]
-                        if LOC_user != None:
+                        if LOC_user is not None:
                             fram_in_flag = (
                                 fram_in_flag[:count]
                                 + [create_loc_label(frame_confs, LOC_user)]
@@ -8444,7 +8411,7 @@ def mainactivity():
                         after_vemss = i.split("vmess://")[1]
                         parts = after_vemss.split("#", 1)
                         encoded_part = parts[0]
-                        vmess_tag_in_link = parts[1] if len(parts) > 1 else ""
+                        parts[1] if len(parts) > 1 else ""
                         missing_padding = len(encoded_part) % 4
                         if missing_padding:
                             encoded_part += "=" * (4 - missing_padding)
@@ -8624,7 +8591,7 @@ def mainactivity():
         confgis = str(confgis)
         if confgis[-1] == "\n":
             confgis = confgis[0 : len(confgis) - 1]
-        if boolor == False:
+        if not boolor:
             print("rturn")
             return
         with open("xray/user_confs", "r", encoding="utf-8") as f:
@@ -8683,7 +8650,7 @@ def mainactivity():
         global is_close_ping, count, is_less, frams_in_ping
         save = frams_in_ping
         print("num: ", nume)
-        if is_all == False or is_all == True:
+        if not is_all or is_all:
             if not is_new and not is_all:
                 nume -= (is_less[nume + count]) * -1
                 nume += count
@@ -8860,7 +8827,7 @@ def mainactivity():
                     t -= 100
                 path_test_file = f"xray/config_test_ping{'' if t == 0 else str(t)}.json"
                 hy2_path_test_file = f"hy2/config{'' if t == 0 else str(t)}.yaml"
-                ADDRESS = (
+                (
                     parse_address(i)
                     if not isinstance(i, dict)
                     else get_address_from_dict(i)
@@ -9006,7 +8973,7 @@ def mainactivity():
             if sus != "":
                 sun_nms = [sus] if is_dict else remove_empty_strings([sus])
             with ThreadPoolExecutor(max_workers=5) as executor:
-                futures = [
+                [
                     executor.submit(process_ping, i, t)
                     for t, i in enumerate(sun_nms, start=nume)
                 ]
