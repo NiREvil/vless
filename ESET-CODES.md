@@ -1,4 +1,4 @@
-# Generated On: Sunday, 11 May 2025, 16:06 Tehran (UTC+3:30).
+## Generated On: Sunday, 11 May 2025, 16:06 Tehran (UTC+3:30).
 
 > [!CAUTION]
 > Triggered by: schedule
@@ -9,7 +9,7 @@
 
 > [!NOTE]
 > The access codes for ESET VPN will expire in 24 hours.
-> Each code is valid for login on only one device.
+> Each code is valid for login on only one device. 
 
 ```ruby
 9TLAPT7WMW
@@ -62,7 +62,7 @@ kennith.lunden@fabricoak.com
 
 <br><br>
 
-# Generated On: Sunday, 11 May 2025, 09:57 Tehran (UTC+3:30).
+## Generated On: Sunday, 11 May 2025, 09:57 Tehran (UTC+3:30).
 
 > [!CAUTION]
 > Triggered by: schedule
@@ -70,10 +70,6 @@ kennith.lunden@fabricoak.com
 <br><br>
 
 ### ESET VPN ACCESS CODES
-
-> [!NOTE]
-> The access codes for ESET VPN will expire in 24 hours.
-> Each code is valid for login on only one device.
 
 ```ruby
 QYYG3XE2OK
@@ -116,17 +112,9 @@ broc.zakariya@fabricoak.com
 79vTi-*RN{Nj-UXl|X!aa
 ```
 
-<br>
-
-### All about ESET VPN
-
-[READ HERE](https://t.me/F_NiREvil/2113)
-
----
-
 <br><br>
 
-# Generated On: Sunday, 11 May 2025, 05:16 Tehran (UTC+3:30).
+## Generated On: Sunday, 11 May 2025, 05:16 Tehran (UTC+3:30).
 
 > [!CAUTION]
 > Triggered by: schedule
@@ -134,10 +122,6 @@ broc.zakariya@fabricoak.com
 <br><br>
 
 ### ESET VPN ACCESS CODES
-
-> [!NOTE]
-> The access codes for ESET VPN will expire in 24 hours.
-> Each code is valid for login on only one device.
 
 ```ruby
 BNE3KQ4UPD
@@ -164,7 +148,7 @@ Z8XQT4NXZU
 DBRS-XGBG-VME4-JFHM-9T2H
 ```
 
-<br>
+<br>  
 
 ### ESET ACCOUNT
 
@@ -180,12 +164,4 @@ thorn.eeyan@fabricoak.com
 n#urLC-yH&{Z1Hj
 ```
 
-<br>
-
-### All about ESET VPN
-
-[READ HERE](https://t.me/F_NiREvil/2113)
-
----
-
-<br><br>
+<br>  
