@@ -209,7 +209,6 @@ def main(script_dir):
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
     finally:
-
         if os.path.exists("warp"):
             os.remove("warp")
 

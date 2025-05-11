@@ -7,6 +7,7 @@
 """
 Pluggable Back-ends for Container Server
 """
+
 import errno
 
 import os
@@ -1025,8 +1026,7 @@ class ContainerBroker(DatabaseBroker):
                     trailing_pol = "0 AS storage_policy_index"
                 elif "no such column: x_container_sync_point" in err_msg:
                     trailing_sync = (
-                        "-1 AS x_container_sync_point1, "
-                        "-1 AS x_container_sync_point2"
+                        "-1 AS x_container_sync_point1, -1 AS x_container_sync_point2"
                     )
                 else:
                     raise
@@ -1351,9 +1351,7 @@ class ContainerBroker(DatabaseBroker):
                         query += "WHERE " + " AND ".join(conditions)
                     tail_query = """
                         ORDER BY name %s LIMIT ?
-                    """ % (
-                        "DESC" if reverse else ""
-                    )
+                    """ % ("DESC" if reverse else "")
                     return query + tail_query, args + [limit - len(results)]
 
                 # storage policy filter
@@ -2252,14 +2250,14 @@ class ContainerBroker(DatabaseBroker):
         epoch = self.get_own_shard_range().epoch
         if not epoch:
             self.logger.warning(
-                "Container '%s' cannot be set to sharding " "state: missing epoch",
+                "Container '%s' cannot be set to sharding state: missing epoch",
                 self.path,
             )
             return False
         state = self.get_db_state()
         if not state == UNSHARDED:
             self.logger.warning(
-                "Container '%s' cannot be set to sharding " "state while in %s state",
+                "Container '%s' cannot be set to sharding state while in %s state",
                 self.path,
                 state,
             )
@@ -2343,7 +2341,7 @@ class ContainerBroker(DatabaseBroker):
         state = self.get_db_state()
         if not state == SHARDING:
             self.logger.warning(
-                "Container %r cannot be set to sharded " "state while in %s state",
+                "Container %r cannot be set to sharded state while in %s state",
                 self.path,
                 state,
             )
@@ -2352,7 +2350,7 @@ class ContainerBroker(DatabaseBroker):
         self.reload_db_files()
         if len(self.db_files) < 2:
             self.logger.warning(
-                "Refusing to delete db file for %r: no fresher db file found " "in %r.",
+                "Refusing to delete db file for %r: no fresher db file found in %r.",
                 self.path,
                 self.db_files,
             )

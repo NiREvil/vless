@@ -82,7 +82,7 @@ def fetch_telegram_page(channel_url, max_pages=5, max_retries=3):
             if last_message_id is None
             else f"{channel_url}?before={last_message_id}"
         )
-        logger.info(f"Fetching page {page+1}: {url}")
+        logger.info(f"Fetching page {page + 1}: {url}")
         try:
             response = requests.get(url, headers=headers, timeout=30)
             response.raise_for_status()
@@ -165,7 +165,7 @@ def extract_configs_from_freewireguard(html_content):
         for match in re.finditer(r"wireguard://[^\s]+", message.text):
             config = match.group(0)
             base_config = config.split("#")[0]
-            configs.append(f"{base_config}#REvil{len(configs)+1}")
+            configs.append(f"{base_config}#REvil{len(configs) + 1}")
 
     logger.info(f"Extracted {len(configs)} configs from freewireguard")
     return configs

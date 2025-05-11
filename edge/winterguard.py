@@ -547,9 +547,9 @@ def main():
                 parts = config_template_dict["dns"]["nameserver"][0].split("#")
                 if len(parts) >= 1:  # Check if there is at least a server part
                     # Rebuild tag using the main selector group name
-                    config_template_dict["dns"]["nameserver"][
-                        0
-                    ] = f"{parts[0]}#{MAIN_SELECTOR_GROUP_NAME}"
+                    config_template_dict["dns"]["nameserver"][0] = (
+                        f"{parts[0]}#{MAIN_SELECTOR_GROUP_NAME}"
+                    )
                     logger.info(
                         f"Updated primary DNS nameserver to use '{MAIN_SELECTOR_GROUP_NAME}' group tag."
                     )

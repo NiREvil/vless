@@ -113,7 +113,7 @@ def fetch_wireguard_configs():
 
         # Save WireGuard configs
         final_wg_configs = [
-            f"{config}#NiREvil{i+1}" for i, config in enumerate(wg_configs)
+            f"{config}#NiREvil{i + 1}" for i, config in enumerate(wg_configs)
         ]
 
         os.makedirs(os.path.dirname(OUTPUT_FILE_WG), exist_ok=True)
@@ -122,7 +122,7 @@ def fetch_wireguard_configs():
 
         # Save Nekobox configs
         final_neko_configs = [
-            f"{config}#NiREvil{i+1}" for i, config in enumerate(neko_configs)
+            f"{config}#NiREvil{i + 1}" for i, config in enumerate(neko_configs)
         ]
 
         os.makedirs(os.path.dirname(OUTPUT_FILE_NEKO), exist_ok=True)

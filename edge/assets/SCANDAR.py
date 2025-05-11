@@ -1,4 +1,3 @@
-
 # ---- Only for using formatter/Linter ----
 # ---- WarpScanner source: https://github.com/arshiacomplus ----
 
@@ -57,56 +56,38 @@ def log_exception(exc_type, exc_value, exc_traceback):
 
 
 sys.excepthook = log_exception
-CONF_PATH="settings.json"
+CONF_PATH = "settings.json"
 DEFAULT_CONFIG = {
     "core": {
-      "test_url": "https://www.gstatic.com/generate_204",
-      "log_level": "warning",
-      "domain_strategy": "IPIFNonMatch",
-      "allow_insecure_tls": False,
-      "sniffing_enabled": True,
-      "inbound_ports": {
-        "socks": 10808,
-        "http": 10809
-      },
-      "dns": {
-        "enabled": True,
-        "fake_dns_enabled": True,
-        "local_port": 10853,
-        "remote_server": "https://8.8.8.8/dns-query",
-        "domestic_server": "1.1.1.2"
-      },
-      "routing_rules": {
-        "proxy": "",
-        "direct": "",
-        "block": ""
-      },
-      "fragment": {
-        "enabled": True,
-        "packets": "tlshello",
-        "length": "10-30",
-        "interval": "1-5"
-      },
-      "fake_host": {
-        "enabled": False,
-        "domain": "cloudflare.com"
-      },
-      "mux": {
-        "enabled": False,
-        "concurrency": 8
-      }
+        "test_url": "https://www.gstatic.com/generate_204",
+        "log_level": "warning",
+        "domain_strategy": "IPIFNonMatch",
+        "allow_insecure_tls": False,
+        "sniffing_enabled": True,
+        "inbound_ports": {"socks": 10808, "http": 10809},
+        "dns": {
+            "enabled": True,
+            "fake_dns_enabled": True,
+            "local_port": 10853,
+            "remote_server": "https://8.8.8.8/dns-query",
+            "domestic_server": "1.1.1.2",
+        },
+        "routing_rules": {"proxy": "", "direct": "", "block": ""},
+        "fragment": {
+            "enabled": True,
+            "packets": "tlshello",
+            "length": "10-30",
+            "interval": "1-5",
+        },
+        "fake_host": {"enabled": False, "domain": "cloudflare.com"},
+        "mux": {"enabled": False, "concurrency": 8},
     },
-    "warp_on_warp": {
-      "enabled": False,
-      "config_url": ""
-    },
-    "internal_settings": {
-        "per_app_proxy_enabled": False
-    },
-    "theme":{
-        "type":"system"
-    }
+    "warp_on_warp": {"enabled": False, "config_url": ""},
+    "internal_settings": {"per_app_proxy_enabled": False},
+    "theme": {"type": "system"},
 }
+
+
 def load_app_config():
     if not os.path.exists(CONF_PATH):
         with open(CONF_PATH, "w") as f:
@@ -119,8 +100,12 @@ def load_app_config():
     except (json.JSONDecodeError, IOError):
         print(f"Error loading {CONF_PATH}, using default.")
         return DEFAULT_CONFIG
+
+
 app_config = load_app_config()
-test_link_=app_config.get("core", {}).get("test_url","https://www.gstatic.com/generate_204")
+test_link_ = app_config.get("core", {}).get(
+    "test_url", "https://www.gstatic.com/generate_204"
+)
 if not os.path.exists("warp_setting"):
     lio = []
     with open("warp_setting", "w") as f:
@@ -147,7 +132,7 @@ if not os.path.exists("warp_setting"):
 if not os.path.exists("xray/sub_files_name"):
     with open("xray/sub_files_name", "w") as f:
         f.write("user_confs\nuser_custom_confs\n")
-them=app_config.get("ui_preferences",{}).get("theme","system")
+them = app_config.get("ui_preferences", {}).get("theme", "system")
 ctk.set_appearance_mode(them)
 gc.enable()
 is_close_ping = False
@@ -343,8 +328,9 @@ def fetch_ip(url):
 
 
 def what_ip():
-    ipv4, ipv6 = fetch_ip("http://v4.ipv6-test.com/api/myip.php"), fetch_ip(
-        "http://v6.ipv6-test.com/api/myip.php"
+    ipv4, ipv6 = (
+        fetch_ip("http://v4.ipv6-test.com/api/myip.php"),
+        fetch_ip("http://v6.ipv6-test.com/api/myip.php"),
     )
     c_ipv4, c_ipv6 = (
         get_ip_details(ip) if ip != "Unavailable" else "Unavailable"
@@ -564,7 +550,7 @@ def bind_keys():
                 reserved,
                 "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
             )
-        except Exception as e:
+        except Exception:
             print("Something went wronge with api")
 
 
@@ -1280,27 +1266,27 @@ def mainactivity():
         REALITY = "reality"
         HTTP = "http"
         try:
-            with open(CONF_PATH,"r") as f:
-                file=json.load(f)
-            core=file['core']
-            warp_sets = file['warp_on_warp']
-            fragment_sets=core["fragment"]
-            fake_host_sets =core["fake_host"]
-            mux_sets= core["mux"]
+            with open(CONF_PATH, "r") as f:
+                file = json.load(f)
+            core = file["core"]
+            warp_sets = file["warp_on_warp"]
+            fragment_sets = core["fragment"]
+            fake_host_sets = core["fake_host"]
+            mux_sets = core["mux"]
             dns_sets = core["dns"]
             routing_sets = core["routing_rules"]
             inbound_ports = core["inbound_ports"]
-            PACKETS=fragment_sets["packets"]
-            LENGTH=fragment_sets["length"]
-            INTERVAL=fragment_sets["interval"]
-            FAKEHOST_ENABLE= fake_host_sets["enabled"]
-            HOST1_DOMAIN=fake_host_sets["domain"]
-            HOST2_DOMAIN=HOST1_DOMAIN
-            MUX_ENABLE= mux_sets["enabled"]
-            CONCURRENCY=mux_sets["concurrency"]
-            FRAGMENT= fragment_sets["enabled"]
-            IS_WARP_ON_WARP= warp_sets["enabled"]
-            WARPONWARP=urllib.parse.unquote(warp_sets["config_url"])
+            PACKETS = fragment_sets["packets"]
+            LENGTH = fragment_sets["length"]
+            INTERVAL = fragment_sets["interval"]
+            FAKEHOST_ENABLE = fake_host_sets["enabled"]
+            HOST1_DOMAIN = fake_host_sets["domain"]
+            HOST2_DOMAIN = HOST1_DOMAIN
+            MUX_ENABLE = mux_sets["enabled"]
+            CONCURRENCY = mux_sets["concurrency"]
+            FRAGMENT = fragment_sets["enabled"]
+            IS_WARP_ON_WARP = warp_sets["enabled"]
+            WARPONWARP = urllib.parse.unquote(warp_sets["config_url"])
             ENABLELOCALDNS = dns_sets["enabled"]
             ENABLEFAKEDNS = dns_sets["fake_dns_enabled"]
             LOCALDNSPORT = dns_sets["local_port"]
@@ -2713,7 +2699,13 @@ def mainactivity():
                 parse_configs(conifg, num)
 
             def save_normal_conf_form(conifg: str, num: int, remarks: ctk.CTkEntry):
-                global is_editing, count, wch_sel, frams_in_show, frams_in_ping, fram_in_flag
+                global \
+                    is_editing, \
+                    count, \
+                    wch_sel, \
+                    frams_in_show, \
+                    frams_in_ping, \
+                    fram_in_flag
                 data = {
                     "protocol": protocol_c,
                     "address": ip_address.get().strip() if ip_address else "",
@@ -3617,7 +3609,7 @@ def mainactivity():
             with open(hy2_path, "w") as f:
                 yaml.dump(parse_yaml_hy2(), f)
             return parse_configs(
-                conifg=f"socks://Og==@{LOCAL_HOST}:{str(SOCKS5+2)}#hy2", cv=cv
+                conifg=f"socks://Og==@{LOCAL_HOST}:{str(SOCKS5 + 2)}#hy2", cv=cv
             )
         try:
             ALPN = ALPN.split(",")
@@ -3728,7 +3720,7 @@ def mainactivity():
         if CUSTOMRULES_PROXY[0] != "":
             for i in CUSTOMRULES_PROXY:
                 found_num = any(ch.isdigit() for ch in i)
-                if not found_num and not "geoip" in i:
+                if not found_num and "geoip" not in i:
                     domainrule.append(i)
                 else:
                     iprule.append(i)
@@ -3752,7 +3744,7 @@ def mainactivity():
         if CUSTOMRULES_DIRECT[0] != "":
             for i in CUSTOMRULES_DIRECT:
                 found_num = any(ch.isdigit() for ch in i)
-                if not found_num and not "geoip" in i:
+                if not found_num and "geoip" not in i:
                     domainrule.append(i)
                 else:
                     iprule.append(i)
@@ -3777,7 +3769,7 @@ def mainactivity():
         if CUSTOMRULES_BLOCKED[0] != "":
             for i in CUSTOMRULES_BLOCKED:
                 found_num = any(ch.isdigit() for ch in i)
-                if not found_num and not "geoip" in i:
+                if not found_num and "geoip" not in i:
                     domainrule.append(i)
                 else:
                     iprule.append(i)
@@ -5123,7 +5115,7 @@ def mainactivity():
                         if "?" in config:
                             ipchanged += f"?{config.split('?')[1]}"
                         else:
-                            ipchanged += f"#none"
+                            ipchanged += "#none"
                         with open(f"xray/config{i}.json", "w") as f:
                             json.dump(
                                 json.loads(parse_configs(ipchanged, cv=i)), f, indent=4
@@ -5282,7 +5274,7 @@ def mainactivity():
             global wire_p
             global header
             best_result[0] = best_ip_mix[0]
-            if not "[" in best_ip_mix[0]:
+            if "[" not in best_ip_mix[0]:
                 best_result[0] = "[" + best_ip_mix[0] + "]"
             best_result[1] = best_ip_mix[1]
             if is_v2ray:
@@ -5402,11 +5394,11 @@ def mainactivity():
             all_key = ["NONe", "none", "none", "ghjgj"]
             try:
                 all_key = free_cloudflare_account()
-            except Exception as E:
+            except Exception:
                 all_key = free_cloudflare_account()
             try:
                 all_key2 = free_cloudflare_account()
-            except Exception as E:
+            except Exception:
                 all_key2 = free_cloudflare_account()
             if is_sub == False and is_v2ray == False:
                 best_result[1] = int(best_result[1])
@@ -6344,9 +6336,10 @@ def mainactivity():
                 if ip_part:
                     clean_result.append(f"{ip_part}{separator}")
                     ip_count += 1
-            with open("clean_result.txt", "w") as txt_file, open(
-                "clean_result.csv", "w"
-            ) as csv_file:
+            with (
+                open("clean_result.txt", "w") as txt_file,
+                open("clean_result.csv", "w") as csv_file,
+            ):
                 txt_file.writelines(clean_result)
                 csv_file.writelines(clean_result)
             labelmain1.configure(text="\n\n\n\nFinished")
@@ -7131,8 +7124,8 @@ def mainactivity():
         def check_ip6_again():
             global check
             time.sleep(3)
-            label_ipv4.configure(text=f"ipv4 : Checking ", corner_radius=8)
-            label_ipv6.configure(text=f"ipv6 : Checking ", corner_radius=8)
+            label_ipv4.configure(text="ipv4 : Checking ", corner_radius=8)
+            label_ipv6.configure(text="ipv6 : Checking ", corner_radius=8)
             tabview.tab("main").update()
             time.sleep(2.5)
             check = "none"
@@ -7218,11 +7211,11 @@ def mainactivity():
             how_menypp.pack_forget()
 
     label_ipv4 = ctk.CTkLabel(
-        tabview.tab("main"), text=f"ipv4 : checking ", compound="right", corner_radius=8
+        tabview.tab("main"), text="ipv4 : checking ", compound="right", corner_radius=8
     )
     label_ipv4.pack(side="top", anchor="nw", pady=2)
     label_ipv6 = ctk.CTkLabel(
-        tabview.tab("main"), text=f"ipv6 : checking ", compound="right", corner_radius=8
+        tabview.tab("main"), text="ipv6 : checking ", compound="right", corner_radius=8
     )
     label_ipv6.pack(side="top", anchor="nw")
     ch_ag = ctk.CTkLabel(
@@ -7301,14 +7294,18 @@ def mainactivity():
     def is_frag_or_wire(nn):
         op = is_warp_or_not.get()
         if op == "wiregaurd config setting":
-            forget_widgets(button_frame), forget_widgets(button_frame2), forget_widgets(
-                button_frame3
+            (
+                forget_widgets(button_frame),
+                forget_widgets(button_frame2),
+                forget_widgets(button_frame3),
             )
             wireguard_la.pack(fill=tk.X, pady=5, padx=5, side=tk.LEFT)
             wireguard.pack(fill=tk.X)
         elif op == "fragment setting":
-            forget_widgets(button_frame), forget_widgets(button_frame2), forget_widgets(
-                button_frame3
+            (
+                forget_widgets(button_frame),
+                forget_widgets(button_frame2),
+                forget_widgets(button_frame3),
             )
             pack_widgets(
                 [
@@ -7329,8 +7326,10 @@ def mainactivity():
                 side=tk.LEFT,
             )
         elif op == "vpn setting":
-            forget_widgets(button_frame), forget_widgets(button_frame2), forget_widgets(
-                button_frame3
+            (
+                forget_widgets(button_frame),
+                forget_widgets(button_frame2),
+                forget_widgets(button_frame3),
             )
             pack_widgets(
                 [
@@ -7348,8 +7347,10 @@ def mainactivity():
                 side=tk.LEFT,
             )
         elif op == "routing setting":
-            forget_widgets(button_frame), forget_widgets(button_frame2), forget_widgets(
-                button_frame3
+            (
+                forget_widgets(button_frame),
+                forget_widgets(button_frame2),
+                forget_widgets(button_frame3),
             )
             pack_widgets(
                 [
@@ -7368,8 +7369,10 @@ def mainactivity():
                 side=tk.LEFT,
             )
         elif op == "advanced setting":
-            forget_widgets(button_frame), forget_widgets(button_frame2), forget_widgets(
-                button_frame3
+            (
+                forget_widgets(button_frame),
+                forget_widgets(button_frame2),
+                forget_widgets(button_frame3),
             )
             pack_widgets(
                 [
@@ -7396,30 +7399,48 @@ def mainactivity():
         global app_config
 
         def _save_to_json():
-            app_config["core"]["fragment"]["packets"] = packets.get().strip() or DEFAULT_CONFIG["core"]["fragment"]["packets"]
-            app_config["core"]["fragment"]["length"] = length.get().strip() or DEFAULT_CONFIG["core"]["fragment"]["length"]
-            app_config["core"]["fragment"]["interval"] = interval.get().strip() or DEFAULT_CONFIG["core"]["fragment"]["interval"]
+            app_config["core"]["fragment"]["packets"] = (
+                packets.get().strip() or DEFAULT_CONFIG["core"]["fragment"]["packets"]
+            )
+            app_config["core"]["fragment"]["length"] = (
+                length.get().strip() or DEFAULT_CONFIG["core"]["fragment"]["length"]
+            )
+            app_config["core"]["fragment"]["interval"] = (
+                interval.get().strip() or DEFAULT_CONFIG["core"]["fragment"]["interval"]
+            )
 
-            app_config["core"]["fake_host"]["enabled"] = True if fakehost_var.get() == 1 else False
-            app_config["core"]["fake_host"]["domain"] = fakehost.get().strip() or DEFAULT_CONFIG["core"]["fake_host"]["domain"]
+            app_config["core"]["fake_host"]["enabled"] = (
+                True if fakehost_var.get() == 1 else False
+            )
+            app_config["core"]["fake_host"]["domain"] = (
+                fakehost.get().strip() or DEFAULT_CONFIG["core"]["fake_host"]["domain"]
+            )
 
             app_config["core"]["mux"]["enabled"] = True if mux_var.get() == 1 else False
             try:
                 app_config["core"]["mux"]["concurrency"] = int(mux.get().strip())
             except ValueError:
-                app_config["core"]["mux"]["concurrency"] = DEFAULT_CONFIG["core"]["mux"]["concurrency"]
+                app_config["core"]["mux"]["concurrency"] = DEFAULT_CONFIG["core"][
+                    "mux"
+                ]["concurrency"]
             selected_mode = frag_or_var.get()
-            fragment_is_enabled = (selected_mode == 1)
-            warp_on_warp_is_enabled = (selected_mode == 2)
+            fragment_is_enabled = selected_mode == 1
+            warp_on_warp_is_enabled = selected_mode == 2
 
             app_config["core"]["fragment"]["enabled"] = fragment_is_enabled
             app_config["warp_on_warp"]["enabled"] = warp_on_warp_is_enabled
-            app_config["warp_on_warp"]["config_url"] = wireguard.get("1.0", tk.END).strip()
+            app_config["warp_on_warp"]["config_url"] = wireguard.get(
+                "1.0", tk.END
+            ).strip()
             save_app_config(app_config)
-            if  is_use_freg_la:
-                is_use_freg_la.configure(fg_color="#0DFE12" if fragment_is_enabled else "red")
-            if  is_use_warp_la:
-                is_use_warp_la.configure(fg_color="#0DFE12" if warp_on_warp_is_enabled else "red")
+            if is_use_freg_la:
+                is_use_freg_la.configure(
+                    fg_color="#0DFE12" if fragment_is_enabled else "red"
+                )
+            if is_use_warp_la:
+                is_use_warp_la.configure(
+                    fg_color="#0DFE12" if warp_on_warp_is_enabled else "red"
+                )
             if fragment_is_enabled:
                 frag_or_var.set(1)
             elif warp_on_warp_is_enabled:
@@ -7512,17 +7533,27 @@ def mainactivity():
         "false\n",
         " ",
     ]
-    core_fragment_settings = app_config.get("core", {}).get("fragment", DEFAULT_CONFIG["core"]["fragment"])
-    core_fake_host_settings = app_config.get("core", {}).get("fake_host", DEFAULT_CONFIG["core"]["fake_host"])
-    core_mux_settings = app_config.get("core", {}).get("mux", DEFAULT_CONFIG["core"]["mux"])
-    warp_on_warp_settings = app_config.get("warp_on_warp", DEFAULT_CONFIG["warp_on_warp"])
+    core_fragment_settings = app_config.get("core", {}).get(
+        "fragment", DEFAULT_CONFIG["core"]["fragment"]
+    )
+    core_fake_host_settings = app_config.get("core", {}).get(
+        "fake_host", DEFAULT_CONFIG["core"]["fake_host"]
+    )
+    core_mux_settings = app_config.get("core", {}).get(
+        "mux", DEFAULT_CONFIG["core"]["mux"]
+    )
+    warp_on_warp_settings = app_config.get(
+        "warp_on_warp", DEFAULT_CONFIG["warp_on_warp"]
+    )
     packets_var = ctk.StringVar(value=core_fragment_settings.get("packets", ""))
     length_var = ctk.StringVar(value=core_fragment_settings.get("length", ""))
     interval_var = ctk.StringVar(value=core_fragment_settings.get("interval", ""))
     fakehost_var_str = ctk.StringVar(value=core_fake_host_settings.get("domain", ""))
     mux_var_str = ctk.StringVar(value=str(core_mux_settings.get("concurrency", 8)))
 
-    fakehost_var = ctk.IntVar(value=1 if core_fake_host_settings.get("enabled", False) else 0)
+    fakehost_var = ctk.IntVar(
+        value=1 if core_fake_host_settings.get("enabled", False) else 0
+    )
     mux_var = ctk.IntVar(value=1 if core_mux_settings.get("enabled", False) else 0)
 
     fragment_enabled_from_json = core_fragment_settings.get("enabled", False)
@@ -7536,23 +7567,38 @@ def mainactivity():
         frag_or_var = ctk.IntVar(value=0)
     warpOnconf = warp_on_warp_settings.get("config_url", "")
 
-    #client
+    # client
     core_settings = app_config.get("core", DEFAULT_CONFIG["core"])
     dns_settings = core_settings.get("dns", DEFAULT_CONFIG["core"]["dns"])
-    inbound_ports_settings = core_settings.get("inbound_ports", DEFAULT_CONFIG["core"]["inbound_ports"])
-    routing_rules_settings = core_settings.get("routing_rules", DEFAULT_CONFIG["core"]["routing_rules"])
-    internal_settings_data = app_config.get("internal_settings", DEFAULT_CONFIG["internal_settings"])
-    perapp_var = ctk.IntVar(value=1 if internal_settings_data.get("per_app_proxy_enabled", False) else 0)
-    enablelocaldns_var = ctk.IntVar(value=1 if dns_settings.get("enabled", False) else 0)
-    enablefakedns_var = ctk.IntVar(value=1 if dns_settings.get("fake_dns_enabled", False) else 0)
+    inbound_ports_settings = core_settings.get(
+        "inbound_ports", DEFAULT_CONFIG["core"]["inbound_ports"]
+    )
+    routing_rules_settings = core_settings.get(
+        "routing_rules", DEFAULT_CONFIG["core"]["routing_rules"]
+    )
+    internal_settings_data = app_config.get(
+        "internal_settings", DEFAULT_CONFIG["internal_settings"]
+    )
+    perapp_var = ctk.IntVar(
+        value=1 if internal_settings_data.get("per_app_proxy_enabled", False) else 0
+    )
+    enablelocaldns_var = ctk.IntVar(
+        value=1 if dns_settings.get("enabled", False) else 0
+    )
+    enablefakedns_var = ctk.IntVar(
+        value=1 if dns_settings.get("fake_dns_enabled", False) else 0
+    )
     local_var = ctk.StringVar(value=str(dns_settings.get("local_port", 10853)))
-    allowincrease_var = ctk.IntVar(value=1 if core_settings.get("allow_insecure_tls", False) else 0)
-    sniffing_var = ctk.IntVar(value=1 if core_settings.get("sniffing_enabled", True) else 0)
+    allowincrease_var = ctk.IntVar(
+        value=1 if core_settings.get("allow_insecure_tls", False) else 0
+    )
+    sniffing_var = ctk.IntVar(
+        value=1 if core_settings.get("sniffing_enabled", True) else 0
+    )
     domain_strategy_options = ["AsIs", "IPIFNonMatch", "IPOnDemand"]
     current_domain_strategy = core_settings.get("domain_strategy", "IPIFNonMatch")
     domainStrategy_var = change_list_f(
-        list(domain_strategy_options),
-        current_domain_strategy
+        list(domain_strategy_options), current_domain_strategy
     )
     customRules_proxy_var = routing_rules_settings.get("proxy", "")
     customRules_direct_var = routing_rules_settings.get("direct", "")
@@ -7563,10 +7609,7 @@ def mainactivity():
     domestic_dns_var = ctk.StringVar(value=dns_settings.get("domestic_server", ""))
     log_level_options = ["debug", "info", "warning", "error", "none"]
     current_log_level = core_settings.get("log_level", "warning")
-    log_level_var = change_list_f(
-        list(log_level_options),
-        current_log_level
-    )
+    log_level_var = change_list_f(list(log_level_options), current_log_level)
     test_link_var = ctk.StringVar(value=core_settings.get("test_url", ""))
     scrollable_vpn = ctk.CTkScrollableFrame(tabview.tab("vpn"))
     scrollable_vpn.pack(padx=10, pady=(10, 0), fill="both")
@@ -7645,40 +7688,71 @@ def mainactivity():
     wireguard = ctk.CTkTextbox(button_frame2)
     wireguard.insert(1.0, warpOnconf)
     wireguard.bind("<KeyRelease>", save_frag_setting, add="+")
+
     def save_app_config(config_data):
         try:
             with open(CONF_PATH, "w") as f:
                 json.dump(config_data, f, indent=2)
         except IOError as e:
             print(f"Error saving config file {CONF_PATH}: {e}")
+
     def save_client_setting(*args):
         global app_config, test_link_
-        app_config["internal_settings"]["per_app_proxy_enabled"] = True if perapp_var.get() == 1 else False
-        app_config["core"]["dns"]["enabled"] = True if enablelocaldns_var.get() == 1 else False
-        app_config["core"]["dns"]["fake_dns_enabled"] = True if enablefakedns_var.get() == 1 else False
+        app_config["internal_settings"]["per_app_proxy_enabled"] = (
+            True if perapp_var.get() == 1 else False
+        )
+        app_config["core"]["dns"]["enabled"] = (
+            True if enablelocaldns_var.get() == 1 else False
+        )
+        app_config["core"]["dns"]["fake_dns_enabled"] = (
+            True if enablefakedns_var.get() == 1 else False
+        )
         try:
             app_config["core"]["dns"]["local_port"] = int(local.get().strip())
         except ValueError:
-            app_config["core"]["dns"]["local_port"] = DEFAULT_CONFIG["core"]["dns"]["local_port"]
-        app_config["core"]["dns"]["remote_server"] = remotedns.get().strip() or DEFAULT_CONFIG["core"]["dns"]["remote_server"]
-        app_config["core"]["dns"]["domestic_server"] = domesticdns.get().strip() or DEFAULT_CONFIG["core"]["dns"]["domestic_server"]
+            app_config["core"]["dns"]["local_port"] = DEFAULT_CONFIG["core"]["dns"][
+                "local_port"
+            ]
+        app_config["core"]["dns"]["remote_server"] = (
+            remotedns.get().strip() or DEFAULT_CONFIG["core"]["dns"]["remote_server"]
+        )
+        app_config["core"]["dns"]["domestic_server"] = (
+            domesticdns.get().strip()
+            or DEFAULT_CONFIG["core"]["dns"]["domestic_server"]
+        )
         app_config["core"]["domain_strategy"] = domainStrategy.get().strip()
-        app_config["core"]["allow_insecure_tls"] = True if allowincrease_var.get() == 1 else False
-        app_config["core"]["sniffing_enabled"] = True if sniffing_var.get() == 1 else False
+        app_config["core"]["allow_insecure_tls"] = (
+            True if allowincrease_var.get() == 1 else False
+        )
+        app_config["core"]["sniffing_enabled"] = (
+            True if sniffing_var.get() == 1 else False
+        )
         app_config["core"]["log_level"] = loglevel.get().strip()
-        app_config["core"]["test_url"] = test_link.get().strip() or DEFAULT_CONFIG["core"]["test_url"]
+        app_config["core"]["test_url"] = (
+            test_link.get().strip() or DEFAULT_CONFIG["core"]["test_url"]
+        )
         test_link_ = app_config["core"]["test_url"]
         try:
             app_config["core"]["inbound_ports"]["socks"] = int(socks5.get().strip())
         except ValueError:
-            app_config["core"]["inbound_ports"]["socks"] = DEFAULT_CONFIG["core"]["inbound_ports"]["socks"]
+            app_config["core"]["inbound_ports"]["socks"] = DEFAULT_CONFIG["core"][
+                "inbound_ports"
+            ]["socks"]
         try:
             app_config["core"]["inbound_ports"]["http"] = int(http.get().strip())
         except ValueError:
-            app_config["core"]["inbound_ports"]["http"] = DEFAULT_CONFIG["core"]["inbound_ports"]["http"]
-        app_config["core"]["routing_rules"]["proxy"] = customRules_proxy.get("1.0", tk.END).strip()
-        app_config["core"]["routing_rules"]["direct"] = customRules_direct.get("1.0", tk.END).strip()
-        app_config["core"]["routing_rules"]["block"] = customRules_blocked.get("1.0", tk.END).strip()
+            app_config["core"]["inbound_ports"]["http"] = DEFAULT_CONFIG["core"][
+                "inbound_ports"
+            ]["http"]
+        app_config["core"]["routing_rules"]["proxy"] = customRules_proxy.get(
+            "1.0", tk.END
+        ).strip()
+        app_config["core"]["routing_rules"]["direct"] = customRules_direct.get(
+            "1.0", tk.END
+        ).strip()
+        app_config["core"]["routing_rules"]["block"] = customRules_blocked.get(
+            "1.0", tk.END
+        ).strip()
         save_app_config(app_config)
         if enablefakedns_la:
             enablefakedns_la.configure(
@@ -8130,7 +8204,17 @@ def mainactivity():
             on_copy_root.lift()
 
         def show_confs_therd():
-            global temp_green_txtb, stoped_loop, wch_sel, count, on_is_green, frams_in_show, frams_in_ping, t_f_count, is_less, fram_in_flag
+            global \
+                temp_green_txtb, \
+                stoped_loop, \
+                wch_sel, \
+                count, \
+                on_is_green, \
+                frams_in_show, \
+                frams_in_ping, \
+                t_f_count, \
+                is_less, \
+                fram_in_flag
             if not is_new:
                 frams_in_show = []
                 frams_in_ping = []
@@ -8255,9 +8339,11 @@ def mainactivity():
                         image=remove_icon,
                         text="",
                         width=25,
-                        command=lambda i=i, count=count, frame_confs=frame_confs, is_new_c=is_new, is_on=is_on: remove_config(
-                            frame_confs, count, is_new_c, is_on
-                        ),
+                        command=lambda i=i,
+                        count=count,
+                        frame_confs=frame_confs,
+                        is_new_c=is_new,
+                        is_on=is_on: remove_config(frame_confs, count, is_new_c, is_on),
                         hover_color="#DF9C27",
                         fg_color="#2b2b2b",
                     )
@@ -8283,9 +8369,11 @@ def mainactivity():
                         )
                         frame_confs.bind(
                             "<Double-Button-1>",
-                            lambda e, i=i, is_on=is_on, count=count, is_new_c=is_new: th_ping_all(
-                                i, count, is_new_c
-                            ),
+                            lambda e,
+                            i=i,
+                            is_on=is_on,
+                            count=count,
+                            is_new_c=is_new: th_ping_all(i, count, is_new_c),
                         )
                         break
                     frame_confs.bind(
@@ -8296,9 +8384,11 @@ def mainactivity():
                     )
                     frame_confs.bind(
                         "<Double-Button-1>",
-                        lambda e, i=i, is_on=is_on, count=count, is_new_c=is_new: th_ping_all(
-                            i, count, is_new_c
-                        ),
+                        lambda e,
+                        i=i,
+                        is_on=is_on,
+                        count=count,
+                        is_new_c=is_new: th_ping_all(i, count, is_new_c),
                     )
                     if is_new:
                         if selec_sub.get() != "user_custom_confs":
@@ -8360,33 +8450,38 @@ def mainactivity():
                             encoded_part += "=" * (4 - missing_padding)
                         decoded = base64.b64decode(encoded_part).decode("utf-8")
                         vmess_data = json.loads(decoded)
-                        remarks = vmess_data.get("ps","")
+                        remarks = vmess_data.get("ps", "")
                     elif "#" in i:
                         remarks = i.strip().split("#", 1)[-1]
                     else:
                         remarks = ""
-                except Exception as e:
+                except Exception:
                     remarks = ""
             else:
                 remarks = i.get("remarks", "")
             remarks = remarks.strip()
-            txt_color="white"
+            txt_color = "white"
             if ":" in remarks:
                 ping_text = remarks.split(":")[-1].strip()
-                if int(ping_text)>=1000:
+                if int(ping_text) >= 1000:
                     ping_fg_color = "#FFBF00"
-                    txt_color="#000000"
-                elif int(ping_text)==-1:
-                    ping_fg_color="red"
-                    txt_color="white"
-                elif int(ping_text)<1000:
-                    ping_fg_color="green"
-                    txt_color="white"
+                    txt_color = "#000000"
+                elif int(ping_text) == -1:
+                    ping_fg_color = "red"
+                    txt_color = "white"
+                elif int(ping_text) < 1000:
+                    ping_fg_color = "green"
+                    txt_color = "white"
             else:
                 ping_text = ""
                 ping_fg_color = None
             ping_label = ctk.CTkLabel(
-                frame, text=ping_text,text_color=txt_color, width=50, corner_radius=5, fg_color=ping_fg_color
+                frame,
+                text=ping_text,
+                text_color=txt_color,
+                width=50,
+                corner_radius=5,
+                fg_color=ping_fg_color,
             )
             ping_label.pack(side=tk.LEFT, pady=(0, 25))
             return ping_label
@@ -8671,7 +8766,10 @@ def mainactivity():
                             temp = file[:count][::-1]
                             file = temp + file[count:]
                             return file, True
-            def update_vmess_config_name_with_ping(vmess_link: str, ping_result: str) -> str:
+
+            def update_vmess_config_name_with_ping(
+                vmess_link: str, ping_result: str
+            ) -> str:
                 if not vmess_link or not vmess_link.startswith("vmess://"):
                     return vmess_link
 
@@ -8684,7 +8782,7 @@ def mainactivity():
 
                     missing_padding = len(encoded_json_str) % 4
                     if missing_padding:
-                        encoded_json_str += '=' * (4 - missing_padding)
+                        encoded_json_str += "=" * (4 - missing_padding)
 
                     decoded_json_bytes = base64.b64decode(encoded_json_str)
                     decoded_json_str = decoded_json_bytes.decode("utf-8")
@@ -8693,22 +8791,32 @@ def mainactivity():
 
                     current_ps = config_dict.get("ps", "")
 
-                    base_ps = ':'.join(current_ps.split(':')[:-1]) if ':' in current_ps and current_ps.split(':')[-1].isdigit() or current_ps.split(':')[-1] == "-1" else current_ps
+                    base_ps = (
+                        ":".join(current_ps.split(":")[:-1])
+                        if ":" in current_ps
+                        and current_ps.split(":")[-1].isdigit()
+                        or current_ps.split(":")[-1] == "-1"
+                        else current_ps
+                    )
 
                     updated_ps = f"{base_ps}:{ping_result}"
-                    config_dict["ps"] = updated_ps.strip(':')
+                    config_dict["ps"] = updated_ps.strip(":")
 
-                    updated_json_str = json.dumps(config_dict, separators=(',', ':'))
-                  
-                    updated_encoded_json_bytes = base64.b64encode(updated_json_str.encode("utf-8"))
-                    updated_encoded_json_str = updated_encoded_json_bytes.decode("utf-8")
+                    updated_json_str = json.dumps(config_dict, separators=(",", ":"))
+
+                    updated_encoded_json_bytes = base64.b64encode(
+                        updated_json_str.encode("utf-8")
+                    )
+                    updated_encoded_json_str = updated_encoded_json_bytes.decode(
+                        "utf-8"
+                    )
 
                     final_link = f"vmess://{updated_encoded_json_str}{external_tag}"
                     return final_link
 
                 except Exception as e:
                     print(f"Error updating vmess link '{vmess_link}': {e}")
-                    return vmess_link 
+                    return vmess_link
 
             def parse_address(i):
                 try:
@@ -8749,9 +8857,9 @@ def mainactivity():
             def process_ping(i: str, t, counter=2):
                 global frams_in_ping, is_close_ping, pidproc, hyproc
                 while t > 100:
-                    t-=100
-                path_test_file = f"xray/config_test_ping{'' if t==0 else str(t)}.json"
-                hy2_path_test_file = f"hy2/config{'' if t==0 else str(t)}.yaml"
+                    t -= 100
+                path_test_file = f"xray/config_test_ping{'' if t == 0 else str(t)}.json"
+                hy2_path_test_file = f"hy2/config{'' if t == 0 else str(t)}.yaml"
                 ADDRESS = (
                     parse_address(i)
                     if not isinstance(i, dict)
@@ -8822,8 +8930,8 @@ def mainactivity():
                     def pingg():
                         try:
                             proxies = {
-                                "http": f"http://127.0.0.{2 if sus!='' else t+2}:{port}",
-                                "https": f"http://127.0.0.{2 if sus!='' else t+2}:{port}",
+                                "http": f"http://127.0.0.{2 if sus != '' else t + 2}:{port}",
+                                "https": f"http://127.0.0.{2 if sus != '' else t + 2}:{port}",
                             }
                             url = test_link_
                             headers = {"Connection": "close"}
@@ -8831,9 +8939,7 @@ def mainactivity():
                             response = requests.get(
                                 url, proxies=proxies, timeout=10, headers=headers
                             )
-                            elapsed = (
-                                time.time() - start
-                            ) * 1000 
+                            elapsed = (time.time() - start) * 1000
                             if response.status_code == 204 or (
                                 response.status_code == 200
                                 and len(response.content) == 0
@@ -8859,15 +8965,15 @@ def mainactivity():
                         result = pingg()
                     except Exception:
                         result = "-1"
-                    if int(result)>=1000:
+                    if int(result) >= 1000:
                         ping_fg_color = "#FFBF00"
-                        txt_color="#000000"
-                    elif int(result)==-1:
-                        ping_fg_color="red"
-                        txt_color="white"
-                    elif int(result)<1000:
-                        ping_fg_color="green"
-                        txt_color="white"
+                        txt_color = "#000000"
+                    elif int(result) == -1:
+                        ping_fg_color = "red"
+                        txt_color = "white"
+                    elif int(result) < 1000:
+                        ping_fg_color = "green"
+                        txt_color = "white"
                     frams_in_ping[t].configure(
                         text=result, fg_color=ping_fg_color, text_color=txt_color
                     )
@@ -8881,13 +8987,15 @@ def mainactivity():
                 if is_dict:
                     with threading.Lock():
                         if t < len(copy_in_sus_nms):
-                            copy_in_sus_nms[t][
-                                "remarks"
-                            ] += f"{':'.join(copy_in_sus_nms[t]['remarks'].split(':')[:-1])}:{result}"
+                            copy_in_sus_nms[t]["remarks"] += (
+                                f"{':'.join(copy_in_sus_nms[t]['remarks'].split(':')[:-1])}:{result}"
+                            )
                 else:
                     with threading.Lock():
                         if copy_in_sus_nms[t].startswith("vmess://"):
-                            copy_in_sus_nms[t] = update_vmess_config_name_with_ping(copy_in_sus_nms[t] ,result)
+                            copy_in_sus_nms[t] = update_vmess_config_name_with_ping(
+                                copy_in_sus_nms[t], result
+                            )
                         else:
                             copy_in_sus_nms[t] = (
                                 f"{':'.join(copy_in_sus_nms[t].strip().split(':')[:-1]) if ':' in copy_in_sus_nms[t].strip().split('#')[-1] else copy_in_sus_nms[t].strip()}:{result}"
