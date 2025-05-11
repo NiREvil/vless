@@ -7,7 +7,7 @@
     "format:js-family": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml,yaml,html,css,scss,vue}\"",
     "lint:js": "eslint --fix .",
     "format:py": "ruff format .",
-    "lint:py": "ruff check --fix .",
+    "lint:py": "ruff check --fix --unsafe-fixes .",
     "format": "npm run format:js-family && npm run format:py",
     "lint": "npm run lint:js && npm run lint:py",
     "lint-format": "npm run format && npm run lint"
