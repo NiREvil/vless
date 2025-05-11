@@ -1,13 +1,13 @@
 {
   "name": "vless",
-  "version": "1.0.0",
-  "description": "Freedom To Dream",
+  "version": "1.0.1",
+  "description": "Freedom to Dream",
   "type": "module",
   "scripts": {
     "format:js": "prettier --write **/*.{js,json,md,yml,html,css}",
-    "lint:js": "eslint --fix **/*.js",
+    "lint:js": "eslint --unsafe-fixes **/*.js",
     "format:py": "black .",
-    "lint:py": "ruff check --fix .",
+    "lint:py": "ruff check --unsafe-fixes .",
     "format": "npm run format:js && npm run format:py",
     "lint": "npm run lint:js && npm run lint:py"
   },
