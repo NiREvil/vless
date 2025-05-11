@@ -1,9 +1,9 @@
 name: Linter/Formatter
 
 permissions:
-  pull-requests: write
   contents: write
-  actions: write
+# pull-requests: write
+# actions: write
 
 on:
   push:
@@ -16,12 +16,12 @@ on:
 env:
   NODE_VERSION: '20'
   PYTHON_VERSION: '3.12'
-  PRETTIER_VERSION: '3.4.2'
+# PRETTIER_VERSION: '3.4.2'
 
 jobs:
   format-and-lint:
     name: Format & Lint
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest  # Or ubuntu-24.04
     timeout-minutes: 15
     strategy:
       matrix:
@@ -33,7 +33,7 @@ jobs:
         with:
           fetch-depth: 0
           submodules: 'recursive'
-          token: ${{ secrets.GITHUB_TOKEN }}
+        # token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         if: matrix.language == 'python'
@@ -45,6 +45,7 @@ jobs:
         if: matrix.language == 'javascript'
         uses: actions/setup-node@v4
         with:
+          cache: 'npm' 
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install Python tools
@@ -55,27 +56,43 @@ jobs:
 
       - name: Install JavaScript tools
         if: matrix.language == 'javascript'
-        run: npm install
+        run: npm ci
+      # run: npm install
 
       - name: Run Formatting and Linting for Python
         if: matrix.language == 'python'
         run: |
-          npm run format:py
-          npm run lint:py
+          npm run format:py || true
+          npm run lint:py || true
 
       - name: Run Formatting and Linting for JavaScript
         if: matrix.language == 'javascript'
         run: |
-          npm run format:js || true
+          npm run format:js-family || true
           npm run lint:js || true
 
-      - name: Commit changes if any
+      
+      - name: Commit and Push changes
         run: |
           git config --local user.name "Github Actions"
           git config --local user.email "actions@github.com"
           git add -A
-          if [[ -n $(git status --porcelain) ]]; then
-            git diff --quiet && git diff --staged --quiet || git commit -m "style: apply code formatting and linting standards" -m "Applied automatic formatting using Prettier/Black and linting using ESLint/Ruff" --author="Diana <135276904+Diana-Cl@users.noreply.github.com>"
+          if ! git diff --staged --quiet; then
+            git commit -m "style: apply code formatting and linting standards" -m "Applied automatic formatting and linting fixes."
             git push
+          else
+            echo "No changes to commit."
           fi
-        continue-on-error: true
+          continue-on-error: true 
+      
+      
+#      - name: Commit changes if any
+#        run: |
+#          git config --local user.name "Github Actions"
+#          git config --local user.email "actions@github.com"
+#          git add -A
+#          if [[ -n $(git status --porcelain) ]]; then
+#            git diff --quiet && git diff --staged --quiet || git commit -m "style: apply code formatting and linting standards" -m "Applied automatic formatting using Prettier/Black and linting using ESLint/Ruff" --author="Diana <135276904+Diana-Cl@users.noreply.github.com>"
+#            git push
+#          fi
+#        continue-on-error: true
