@@ -8161,13 +8161,13 @@ def mainactivity():
             labe.pack(anchor=tk.NE, side=tk.TOP, ipady=10, ipadx=10)
             labe.bind("<Button-1>", close)
             # buttonctk_b=ctk.CTkButton(on_copy_root,text="",image=back_arrow).pack(anchor=tk.NE)
-            ctk.CTkButton(
-                on_copy_root, command=normal, text="Normal"
-            ).pack(pady=(5, 5), padx=5)
+            ctk.CTkButton(on_copy_root, command=normal, text="Normal").pack(
+                pady=(5, 5), padx=5
+            )
             if not isinstance(config, dict):
-                ctk.CTkButton(
-                    on_copy_root, command=full, text="Full"
-                ).pack(pady=(5, 10), padx=5)
+                ctk.CTkButton(on_copy_root, command=full, text="Full").pack(
+                    pady=(5, 10), padx=5
+                )
             on_copy_root.lift()
 
         def show_confs_therd():
