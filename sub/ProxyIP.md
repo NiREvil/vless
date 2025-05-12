@@ -74,6 +74,12 @@ bpb.yousef.isegaro.com
 2.59.117.217
 ```
 
+**🇳🇱 Netherlands, Amsterdam, Servers Tech Fzco**  
+
+```POV-Ray SDL
+212.34.142.238
+```
+
 ## Google LLC
 
 ![rainbow]
@@ -119,10 +125,26 @@ bpb.yousef.isegaro.com
 ```
 
 ```POV-Ray SDL
+3.124.208.189
+```
+
+```POV-Ray SDL
 3.75.170.179
 ```
 
 **🇺🇸 USA, random, Amazon Technologies Inc**
+
+```POV-Ray SDL
+34.225.195.136
+```
+
+```POV-Ray SDL
+54.200.244.93
+```
+
+```POV-Ray SDL
+213.170.157.1
+```
 
 ```POV-Ray SDL
 18.216.55.100
@@ -144,12 +166,12 @@ bpb.yousef.isegaro.com
 52.42.71.111
 ```
 
+```POV-Ray SDL
+44.227.209.152
+```
+
 <details>
 <summary> |   And the list goes on ... </summary>
-
-```POV-Ray SDL
-3.137.160.207
-```
 
 ```POV-Ray SDL
 213.170.157.1
@@ -207,169 +229,9 @@ bpb.yousef.isegaro.com
 3.133.156.22
 ```
 
-```POV-Ray SDL
-54.81.103.76
-```
-
-```POV-Ray SDL
-3.145.78.39
-```
-
-```POV-Ray SDL
-34.225.195.136
-```
-
-```POV-Ray SDL
-34.219.53.148
-```
-
-```POV-Ray SDL
-3.135.217.81
-```
-
-```POV-Ray SDL
-3.146.145.210
-```
-
-```POV-Ray SDL
-18.220.123.178
-```
-
-```POV-Ray SDL
-3.135.247.207
-```
-
-```POV-Ray SDL
-3.144.39.47
-```
-
-```POV-Ray SDL
-18.224.59.163
-```
-
-```POV-Ray SDL
-18.226.172.11
-```
-
-```POV-Ray SDL
-3.139.107.127
-```
-
-```POV-Ray SDL
-3.145.32.60
-```
-
-```POV-Ray SDL
-3.145.75.190
-```
-
-```POV-Ray SDL
-3.136.20.191
-```
-
-```POV-Ray SDL
-3.136.26.28
-```
-
-```POV-Ray SDL
-54.200.244.93
-```
-
-```POV-Ray SDL
-18.219.92.34
-```
-
-```POV-Ray SDL
-3.142.195.147
-```
-
-```POV-Ray SDL
-3.146.105.69
-```
-
-```POV-Ray SDL
-3.18.196.26
-```
-
-```POV-Ray SDL
-3.15.225.242
-```
-
-```POV-Ray SDL
-54.89.91.89
-```
-
-```POV-Ray SDL
-3.139.79.30
-```
-
-```POV-Ray SDL
-3.149.244.197
-```
-
-```POV-Ray SDL
-52.20.152.104
-```
-
-```POV-Ray SDL
-3.145.89.211
-```
-
-```POV-Ray SDL
-18.119.115.240
-```
-
-```POV-Ray SDL
-3.17.156.243
-```
-
-```POV-Ray SDL
-54.191.65.60
-```
-
-```POV-Ray SDL
-18.223.159.4
-```
-
-```POV-Ray SDL
-34.227.133.207
-```
-
-```POV-Ray SDL
-18.222.145.58
-```
-
-```POV-Ray SDL
-54.193.48.13
-```
-
-```POV-Ray SDL
-3.139.83.4
-```
 
 </details>
 
-**🇸🇪 Sweden, Stockholm, Amazon tech**
-
-```POV-Ray SDL
-51.20.215.255
-```
-
-```POV-Ray SDL
-13.49.80.142
-```
-
-```POV-Ray SDL
-51.21.48.77
-```
-
-```POV-Ray SDL
-51.20.161.26
-```
-
-```POV-Ray SDL
-51.20.207.0
-```
 
 ~~**🇨🇦 Canada, Montréal Quebec, Amazon tech**~~
 
@@ -378,10 +240,6 @@ bpb.yousef.isegaro.com
 ```
 
 **🇬🇧 England, London, Amazon tech**
-
-```POV-Ray SDL
-35.178.235.225
-```
 
 ```POV-Ray SDL
 18.170.77.148
@@ -399,24 +257,10 @@ bpb.yousef.isegaro.com
 35.180.229.1
 ```
 
-```POV-Ray SDL
-13.39.213.36
-```
-
 **🇯🇵 Japan, Tokyo, Amazon tech**
 
 ```POV-Ray SDL
 13.230.34.30
-```
-
-**🇸🇬 Singapore, Amazon tech**
-
-```POV-Ray SDL
-13.250.38.94
-```
-
-```POV-Ray SDL
-18.141.204.88
 ```
 
 ## Hetzner Online tech
@@ -424,6 +268,22 @@ bpb.yousef.isegaro.com
 ![rainbow]
 
 **🇩🇪 Germany, Frankfurt am Main, Hetzner online**
+
+```POV-Ray SDL
+91.107.135.104
+```
+
+```POV-Ray SDL
+167.235.242.114
+```
+
+```POV-Ray SDL
+95.216.143.166
+```
+
+```POV-Ray SDL
+138.201.244.245
+```
 
 ```POV-Ray SDL
 37.27.40.190
@@ -448,13 +308,11 @@ bpb.yousef.isegaro.com
 **🇺🇸 USA, Hetzner Online GmbH, Hetzner**
 
 ```CSS
-5.161.225.35
+5.78.49.81
 ```
 
-**🇸🇬 Singapore, Hetzner online**
-
-```POV-Ray SDL
-5.223.41.42
+```CSS
+5.161.225.35
 ```
 
 ## Oracle cloud corporations
@@ -464,32 +322,26 @@ bpb.yousef.isegaro.com
 **🇦🇪 United arab emirates, Abu Dhabi, Oracle**
 
 ```POV-Ray SDL
-193.123.69.77
+193.123.81.105
 ```
 
+**🇰🇵 Korea, , Oracle cloud llc**
+
 ```POV-Ray SDL
-193.123.81.105
+144.24.73.232
 ```
 
 **🇮🇳 India, Airoli, Maharashtra, Oracle**
 
 ```POV-Ray SDL
-141.148.220.141
+168.138.46.67
 ```
 
 ```POV-Ray SDL
 141.148.203.6
 ```
 
-```POV-Ray SDL
-129.159.22.4
-```
-
-```POV-Ray SDL
-129.154.46.115
-```
-
-**🇫🇷 France, Marseille & Île-de-France, Oracle Svenska AB**
+~~**🇫🇷 France, Marseille & Île-de-France, Oracle Svenska AB**~~
 
 ```POV-Ray SDL
 141.145.217.226
@@ -497,18 +349,6 @@ bpb.yousef.isegaro.com
 
 ```POV-Ray SDL
 144.24.200.164
-```
-
-```POV-Ray SDL
-89.168.43.28
-```
-
-```POV-Ray SDL
-129.151.254.48
-```
-
-```POV-Ray SDL
-141.145.199.188
 ```
 
 **🇨🇭 Switzerland, Zurich Oberengstringen, Oracle**
@@ -521,6 +361,10 @@ bpb.yousef.isegaro.com
 
 ```POV-Ray SDL
 129.151.204.91
+```
+
+```POV-Ray SDL
+168.138.46.67
 ```
 
 **🇳🇱 Netherlands, Amsterdam, Oracle**
