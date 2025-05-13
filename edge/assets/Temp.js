@@ -1,17 +1,31 @@
-function getDianaConfig(userCode, hostName) { const protocol = decodeSecure(ENCODED.PROTOCOL); const
-networkType = decodeSecure(ENCODED.NETWORK); const baseUrl =
-`${protocol}://${userCode}@${hostName}:443`; const commonParams =
-`encryption=none&host=${hostName}&type=${networkType}` + `&security=tls&sni=${hostName}`; //
-Configuration for Sing-Box core clients const freedomConfig =
-`${baseUrl}?path=/api/v4&eh=Sec-WebSocket-Protocol` +
-`&ed=2560&${commonParams}&fp=chrome&alpn=h3#${hostName}`; // Configuration for Xray core clients
-const dreamConfig = `${baseUrl}?path=/api/v2?ed=2048&${commonParams}` +
-`&fp=randomized&alpn=h2,http/1.1#${hostName}`; // URL for Clash Meta subscription import const
-clashMetaFullUrl = `clash://install-config?url=${encodeURIComponent(
-`https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(freedomConfig)}&remote_config=&udp=true&ss_uot=false&show_host=false&forced_ws0rtt=false`,
-)}`; // for using v2ray to clash-meta converter visit here: https://sub.victoriacross.ir/ // create
-a URL for NekoBox const nekoBoxImportUrl =
-`https://sahar-km.github.io/arcane/${btoa(freedomConfig)}`; // HTML content return `
+function getDianaConfig(userCode, hostName) {
+  const protocol = decodeSecure(ENCODED.PROTOCOL);
+  const networkType = decodeSecure(ENCODED.NETWORK);
+
+  const baseUrl = `${protocol}://${userCode}@${hostName}:443`;
+  const commonParams =
+    `encryption=none&host=${hostName}&type=${networkType}` + `&security=tls&sni=${hostName}`;
+
+  // Configuration for Sing-Box core clients
+  const freedomConfig =
+    `${baseUrl}?path=/api/v4&eh=Sec-WebSocket-Protocol` +
+    `&ed=2560&${commonParams}&fp=chrome&alpn=h3#${hostName}`;
+
+  // Configuration for Xray core clients
+  const dreamConfig =
+    `${baseUrl}?path=/api/v2?ed=2048&${commonParams}` +
+    `&fp=randomized&alpn=h2,http/1.1#${hostName}`;
+
+  // URL for Clash Meta subscription import
+  const clashMetaFullUrl = `clash://install-config?url=${encodeURIComponent(
+    `https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(freedomConfig)}&remote_config=&udp=true&ss_uot=false&show_host=false&forced_ws0rtt=false`,
+  )}`; // for using v2ray to clash-meta converter visit here: https://sub.victoriacross.ir/
+
+  // create a URL for NekoBox
+  const nekoBoxImportUrl = `https://sahar-km.github.io/arcane/${btoa(freedomConfig)}`;
+
+  // HTML content
+  return `
 <!doctype html>
 <html lang="en">
   <head>
@@ -884,4 +898,6 @@ a URL for NekoBox const nekoBoxImportUrl =
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
   </body>
-</html>
+</html>  
+`;
+}
