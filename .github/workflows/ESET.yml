@@ -41,7 +41,7 @@ on:
         required: false
         default: 'main'
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 */4 * * *'
 
 jobs:
   generate-and-commit:
@@ -60,7 +60,6 @@ jobs:
       - name: Checkout Repository Code
         uses: actions/checkout@v4
         # Fetch depth 0 needed if we were reading commit history, but not needed for our marker file approach.
-        # fetch-depth: 0 # Keep this commented unless needed for other reasons
 
       - name: Generate Keys
         run: |
@@ -74,7 +73,7 @@ jobs:
           TEMP_OUTPUT="${{ env.TEMP_OUTPUT_FILE }}"
           LAST_RUN_FILE="${{ env.LAST_RUN_DATE_FILE }}" # Get marker file name
 
-          echo "--- Configuration ---"
+          echo "⚙️ Configuration ⚙️"
           echo "Triggered by: ${{ github.event_name }}"
           echo "Account Count: $ACCOUNT"
           echo "Key Count: $KEY"
@@ -121,7 +120,7 @@ jobs:
           cd .. # Go back to the main repository root
 
           # --- Extract values and format Markdown for NEW entry ---
-          echo "Extracting data and formatting Markdown for the new entry..."
+          echo "✨ Extracting data and formatting Markdown for the new entry..."
           VPN_CODES_LIST=$(grep '^VPN Codes:' "$TEMP_OUTPUT" | sed 's/^VPN Codes: //' || true)
           LICENSE_NAME=$(grep '^License Name:' "$TEMP_OUTPUT" | sed 's/^License Name: //' || true)
           LICENSE_KEY=$(grep '^License Key:' "$TEMP_OUTPUT" | sed 's/^License Key: //' || true)
@@ -134,7 +133,7 @@ jobs:
 
           # Start building the new entry
           {
-            echo "# Generated On: ${CURRENT_DATETIME_IRAN}"
+            echo "## Generated On: ${CURRENT_DATETIME_IRAN}"
             echo ""
             echo "> [!CAUTION]"
             echo "> Triggered by: ${{ github.event_name }}"
@@ -207,13 +206,19 @@ jobs:
 
           # 4. Add Static Footer Link Section
           {
-            echo "### All about ESET VPN"
+            echo "### 📚 Everything you need to know about ESET VPN"
             echo ""
             echo "[READ HERE](https://t.me/F_NiREvil/2113)"
             echo ""
-            echo "---"
+            echo "<br>"
+            echo ""
+            echo "### 🪄 If you need more VPN codes"
+            echo ""
+            echo "[Check out the Darkness TG channel](https://t.me/Eset_key_trial)"
             echo ""
             echo "<br><br>"
+            echo ""
+            echo "---"
             echo ""
           } >> "$NEW_ENTRY_FILE"
 
