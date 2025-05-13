@@ -44,10 +44,8 @@ $$\color{gray}\Huge \mathfrak{R}\color{red}{\sum}\color{gray}{\nu\iota\mathcal{l
 > github/workflow/_  
 > boringtun/_  
 > edge/_  
-> sub/_  
 > root/\*  
 > _/.js  
-> _/.json  
 > _/.py  
 > _/.html  
 > \*/.yml
@@ -66,7 +64,7 @@ $$\color{gray}\Huge \mathfrak{R}\color{red}{\sum}\color{gray}{\nu\iota\mathcal{l
 
 ### [ESET CODES - VPN, ANTIVIRUS?]
 
-> Licences are dynamically generated every 4 hours via GitHub Actions workflows.  
+> Licences are dynamically generated every 4 hours via GitHub workflows.  
 > [Get it Now](./ESET-CODES.md)
 
 ##
@@ -306,10 +304,18 @@ ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-2.csv
 
 ```POV-Ray SDL
 ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-3.csv
-```
+```  
 
 ```POV-Ray SDL
 ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-4.csv
+```  
+
+```POV-Ray SDL
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo5cXVnakpwaDdxUnhLVGpnVFUwMFg2@176.124.207.105:37322/?outline=1
+```  
+
+```POV-Ray SDL
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp5MUZCa3lhRWM5R3Z4ZVRqUzFIMFZv@176.124.207.105:37322/?outline=1
 ```
 
 <br>
@@ -336,6 +342,106 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_1
 
 > [!NOTE]
 > What do we [[know about]] the amnezia
+
+**A0 Nl**
+
+```POV-Ray SDL
+[Interface]
+PrivateKey = 8Iwyhy5UhUvq2UHwUqHRZDVUa3sGGWOgCrE7fMPk+XQ=
+Address = 10.201.37.147/32
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 9.9.9.9, 2606:4700:4700::1111, 2606:4700:4700::1001
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+[Peer]
+PublicKey = OUbQ+tuIUHkqnGSI2I9Ik8HxiXjEd3xYXudHQE+peik=
+PresharedKey = t2FBwEt5yfYJ/P4T+esGo5jrp3gK021wTSOfRnN8pdk=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = nl01a.yedzddhoxc.top:62931
+```
+
+**A1 Nl**
+
+```POV-Ray SDL
+[Interface]
+PrivateKey = YG6g9h3O01g7ihW5UiCslY+6VhMa9f3R5aru7s6Dl3I=
+Address = 10.201.61.2/32
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 9.9.9.9, 2606:4700:4700::1111, 2606:4700:4700::1001
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+[Peer]
+PublicKey = OUbQ+tuIUHkqnGSI2I9Ik8HxiXjEd3xYXudHQE+peik=
+PresharedKey = Ze41IHfQ+52Hm6Ej6Dx09VNDj51epk/w+pZ2ZISCBaU=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 25
+Endpoint = nl01a.yedzddhoxc.top:62931
+```
+
+**A2 Fn**  
+
+```POV-Ray SDL
+[Interface]
+PrivateKey = GPz9f8wTdQiUW9X/Q5PlVJTdkzY6atlfxwMHA5MHI0Y=
+Address = 10.136.0.125/32
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 9.9.9.9, 2606:4700:4700::1111, 2606:4700:4700::1001
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+[Peer]
+PublicKey = PPDg/i5ffiDtGFgJclTY8HJBvD9J2kYmKqJmeF/+NSY=
+PresharedKey = vL5VoIB7IXBYYtknmPocKd0wUlhUFg/IpP+9qpYOpUM=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = fin01awg.yedzddhoxc.top:60136
+```
+
+**A3 TT**  
+
+```POV-Ray SDL
+[Interface]
+PrivateKey = mIAMFe0MLiMPpq4EfMER8RnXl3sOopBlxKfNE9xczVk=
+Address = 10.201.0.179/32
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 9.9.9.9, 2606:4700:4700::1111, 2606:4700:4700::1001
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+[Peer]
+PublicKey = 6T9PkVHfTvMfDtKANISJqnW1Ulmd5kYyh8IsVkQYemU=
+PresharedKey = AODL4uuvHXaLud5WK9Qp1Id10gZmImoykPFjZmBm1vE=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = tr01a.yedzddhoxc.top:62931
+```
 
 **A** [[Ni?]]
 
@@ -577,7 +683,9 @@ https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eterni
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity
 
-https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/mix/sub.html [[AR?]]
+https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/mix/sub.html  [[AR?]]
+
+https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/vless.html    
 
 https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt
 
