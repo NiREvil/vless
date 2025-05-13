@@ -25,15 +25,12 @@
         "detour": "proxy",
         "domain_resolver": "local-dns",
         "server": "185.228.168.9",
-        "server_port": 53,
         "tag": "proxy-dns",
         "type": "tcp"
       },
       {
         "detour": "direct",
-        "domain_resolver": "",
         "server": "8.8.4.4",
-        "server_port": 53,
         "tag": "local-dns",
         "type": "tcp"
       },
@@ -87,12 +84,12 @@
       "type": "selector"
     },
     {
-      "interval": "10m0s",
+      "interval": "100s",
       "outbounds": [],
       "tag": "auto",
       "tolerance": 50,
       "type": "urltest",
-      "url": "http://www.gstatic.com/generate_204"
+      "url": "https://www.gstatic.com/generate_204"
     },
     {
       "domain_strategy": "prefer_ipv4",
