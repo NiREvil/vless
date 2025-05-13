@@ -97,8 +97,8 @@
       "outbounds": [
         "hysteria"
       ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "30s",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "60s",
       "tolerance": 50
     },
     {
@@ -110,7 +110,7 @@
       "type": "hysteria2",
       "tag": "hysteria",
       "server": "kevin.iserver.store",
-      "server_port": 443,
+      "server_port": 8443,
       "obfs": {
         "type": "salamander",
         "password": "KevinZakarian"
