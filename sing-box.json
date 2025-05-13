@@ -47,63 +47,61 @@
   },
   "endpoints": [
     {
-      "type": "wireguard",
-      "tag": "\u26aa\ufe0fTehran",
-      "name": "wg0",
-      "mtu": 1280,
       "address": [
         "172.16.0.2/32",
-        "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
+        "2606:4700:110:8836:f1c9:4393:9b37:3814/128"
       ],
-      "private_key": "+MK4unVnGIfGSJ55EYIYBZkuFogkA60K/vtt9Oewuk0=",
+      "detour": "direct",
+      "mtu": 1280,
       "peers": [
         {
           "address": "188.114.96.214",
-          "port": 8854,
-          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
           "allowed_ips": [
             "0.0.0.0/0",
             "::/0"
           ],
-          "persistent_keepalive_interval": 30,
+          "persistent_keepalive_interval": 25,
+          "port": 8854,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
           "reserved": [
-            92,
-            17,
-            203
+            26,
+            45,
+            229
           ]
         }
       ],
-      "detour": "direct",
+      "private_key": "6EE5MVm1kxkf2qeWoz6OeQUazr0QsvU9gXrQ89aoNUE=",
+      "tag": "\u26aa\ufe0fTehran",
+      "type": "wireguard",
       "workers": 2
     },
     {
-      "type": "wireguard",
-      "tag": "\ud83d\udfe1Berlin",
-      "name": "wg0",
-      "mtu": 1280,
       "address": [
         "172.16.0.2/32",
-        "2606:4700:110:8735:bb29:91bc:1c82:aa73/128"
+        "2606:4700:110:8836:f1c9:4393:9b37:3814/128"
       ],
-      "private_key": "QJCn8qw7Qj3zfZWs/XjFsNhe4LSGujjseR4CyQDUr0U=",
+      "detour": "\u26aa\ufe0fTehran",
+      "mtu": 1280,
       "peers": [
         {
           "address": "188.114.99.22",
-          "port": 4233,
-          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
           "allowed_ips": [
             "0.0.0.0/0",
             "::/0"
           ],
-          "persistent_keepalive_interval": 30,
+          "persistent_keepalive_interval": 25,
+          "port": 4233,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
           "reserved": [
-            255,
+            63,
             17,
-            209
+            44
           ]
         }
       ],
-      "detour": "\u26aa\ufe0fTehran",
+      "private_key": "GLOaS7wTlgoz2aN+oGWvN2t9cd12DXJsHzunettCO00=",
+      "tag": "\ud83d\udfe1Berlin",
+      "type": "wireguard",
       "workers": 2
     }
   ],
