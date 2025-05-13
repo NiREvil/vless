@@ -33,7 +33,8 @@ export default [
   },
 
   js.configs.recommended,
-  { // ⚙️ JavaScript 
+  {
+    // ⚙️ JavaScript
     files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
     languageOptions: {
       ecmaVersion: 2022,
@@ -47,12 +48,13 @@ export default [
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'off',
-      'semi': ['error', 'always'], 
-      'quotes': ['error', 'single'],
+      semi: ['error', 'always'],
+      quotes: ['error', 'single'],
     },
   },
 
-  {// ⚙️ JSON, JSONC, JSON5
+  {
+    // ⚙️ JSON, JSONC, JSON5
     files: ['**/*.json', '**/*.jsonc', '**/*.json5'],
     plugins: {
       jsonc: eslintPluginJsonc,
@@ -66,7 +68,8 @@ export default [
     },
   },
 
-  { // ⚙️ YAML
+  {
+    // ⚙️ YAML
     files: ['**/*.yaml', '**/*.yml'],
     plugins: {
       yml: eslintPluginYml,
@@ -80,15 +83,15 @@ export default [
     },
   },
 
-  {  // ⚙️ HTML (For linting inside <script>)
+  {
+    // ⚙️ HTML (For linting inside <script>)
     files: ['**/*.html'],
     plugins: {
       html: eslintPluginHtml,
     },
-    languageOptions: { 
-      globals: { ...globals.browser }
+    languageOptions: {
+      globals: { ...globals.browser },
     },
-    rules: {
-    },
+    rules: {},
   },
 ];

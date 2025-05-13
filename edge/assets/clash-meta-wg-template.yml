@@ -33,8 +33,8 @@ dns:
     - 8.8.8.8#DIRECT
   nameserver-policy:
     # Use 8.8.8.8#DIRECT for these common domains، Especially GitHub
-    'raw.githubusercontent.com': 8.8.8.8#DIRECT
-    'time.apple.com': 8.8.8.8#DIRECT
+    raw.githubusercontent.com: 8.8.8.8#DIRECT
+    time.apple.com: 8.8.8.8#DIRECT
     'rule-set:ir': # Route Iranian domains via DIRECT DNS
       - 8.8.8.8#DIRECT
     'rule-set:openai': 178.22.122.100#DIRECT # Specific DNS for OpenAI (Sekan DNS)

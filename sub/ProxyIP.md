@@ -74,7 +74,7 @@ bpb.yousef.isegaro.com
 2.59.117.217
 ```
 
-**🇳🇱 Netherlands, Amsterdam, Servers Tech Fzco**  
+**🇳🇱 Netherlands, Amsterdam, Servers Tech Fzco**
 
 ```POV-Ray SDL
 212.34.142.238
@@ -229,9 +229,7 @@ bpb.yousef.isegaro.com
 3.133.156.22
 ```
 
-
 </details>
-
 
 ~~**🇨🇦 Canada, Montréal Quebec, Amazon tech**~~
 

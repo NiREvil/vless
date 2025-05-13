@@ -1,17 +1,5 @@
 {
-  "name": "vless",
-  "version": "1.0.2",
   "description": "Freedom to Dream",
-  "type": "module",
-  "scripts": {
-    "format:js-family": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml,yaml,html,css,scss,vue}\"",
-    "lint:js": "eslint --fix .",
-    "format:py": "ruff format .",
-    "lint:py": "ruff check --fix --unsafe-fixes .",
-    "format": "npm run format:js-family && npm run format:py",
-    "lint": "npm run lint:js && npm run lint:py",
-    "lint-format": "npm run format && npm run lint"
-  },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
     "eslint": "^9.21.0",
@@ -26,5 +14,17 @@
   },
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
-  }
+  },
+  "name": "vless",
+  "scripts": {
+    "format": "npm run format:js-family && npm run format:py",
+    "format:js-family": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml,yaml,html,css,scss,vue}\"",
+    "format:py": "ruff format .",
+    "lint": "npm run lint:js && npm run lint:py",
+    "lint-format": "npm run format && npm run lint",
+    "lint:js": "eslint --fix .",
+    "lint:py": "ruff check --fix --unsafe-fixes ."
+  },
+  "type": "module",
+  "version": "1.0.2"
 }
