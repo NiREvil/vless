@@ -2,8 +2,8 @@ name: Linter/Formatter
 
 permissions:
   contents: write
+  actions: write
 # pull-requests: write
-# actions: write
 
 on:
   push:
@@ -77,13 +77,11 @@ jobs:
           git config --local user.name "Github Actions"
           git config --local user.email "actions@github.com"
           git add -A
-          if ! git diff --staged --quiet; then
-            git commit -m "style: apply code formatting and linting standards" -m "Applied automatic formatting and linting fixes."
+          if [[ -n $(git status --porcelain) ]]; then
+            git diff --quiet && git diff --staged --quiet || git commit -m "style: apply code formatting and linting standards" -m "Applied automatic formatting using Prettier/Black and linting using ESLint/Ruff" --author="Diana <135276904+Diana-Cl@users.noreply.github.com>"
             git push
-          else
-            echo "No changes to commit."
           fi
-          continue-on-error: true 
+#        continue-on-error: true
       
       
 #      - name: Commit changes if any
@@ -91,8 +89,9 @@ jobs:
 #          git config --local user.name "Github Actions"
 #          git config --local user.email "actions@github.com"
 #          git add -A
-#          if [[ -n $(git status --porcelain) ]]; then
-#            git diff --quiet && git diff --staged --quiet || git commit -m "style: apply code formatting and linting standards" -m "Applied automatic formatting using Prettier/Black and linting using ESLint/Ruff" --author="Diana <135276904+Diana-Cl@users.noreply.github.com>"
+#          if ! git diff --staged --quiet; then
+#            git commit -m "style: apply code formatting and linting standards" -m "Applied automatic formatting and linting fixes."
 #            git push
-#          fi
-#        continue-on-error: true
+#          else
+#            echo "No changes to commit."
+#          fi 
