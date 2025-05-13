@@ -1,31 +1,17 @@
-function getDianaConfig(userCode, hostName) {
-  const protocol = decodeSecure(ENCODED.PROTOCOL);
-  const networkType = decodeSecure(ENCODED.NETWORK);
-
-  const baseUrl = `${protocol}://${userCode}@${hostName}:443`;
-  const commonParams =
-    `encryption=none&host=${hostName}&type=${networkType}` + `&security=tls&sni=${hostName}`;
-
-  // Configuration for Sing-Box core clients
-  const freedomConfig =
-    `${baseUrl}?path=/api/v4&eh=Sec-WebSocket-Protocol` +
-    `&ed=2560&${commonParams}&fp=chrome&alpn=h3#${hostName}`;
-
-  // Configuration for Xray core clients
-  const dreamConfig =
-    `${baseUrl}?path=/api/v2?ed=2048&${commonParams}` +
-    `&fp=randomized&alpn=h2,http/1.1#${hostName}`;
-
-  // URL for Clash Meta subscription import
-  const clashMetaFullUrl = `clash://install-config?url=${encodeURIComponent(
-    `https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(freedomConfig)}&remote_config=&udp=true&ss_uot=false&show_host=false&forced_ws0rtt=false`,
-  )}`; // for using v2ray to clash-meta converter visit here: https://sub.victoriacross.ir/
-
-  // create a URL for NekoBox
-  const nekoBoxImportUrl = `https://sahar-km.github.io/arcane/${btoa(freedomConfig)}`;
-
-  // HTML content
-  return `
+function getDianaConfig(userCode, hostName) { const protocol = decodeSecure(ENCODED.PROTOCOL); const
+networkType = decodeSecure(ENCODED.NETWORK); const baseUrl =
+`${protocol}://${userCode}@${hostName}:443`; const commonParams =
+`encryption=none&host=${hostName}&type=${networkType}` + `&security=tls&sni=${hostName}`; //
+Configuration for Sing-Box core clients const freedomConfig =
+`${baseUrl}?path=/api/v4&eh=Sec-WebSocket-Protocol` +
+`&ed=2560&${commonParams}&fp=chrome&alpn=h3#${hostName}`; // Configuration for Xray core clients
+const dreamConfig = `${baseUrl}?path=/api/v2?ed=2048&${commonParams}` +
+`&fp=randomized&alpn=h2,http/1.1#${hostName}`; // URL for Clash Meta subscription import const
+clashMetaFullUrl = `clash://install-config?url=${encodeURIComponent(
+`https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(freedomConfig)}&remote_config=&udp=true&ss_uot=false&show_host=false&forced_ws0rtt=false`,
+)}`; // for using v2ray to clash-meta converter visit here: https://sub.victoriacross.ir/ // create
+a URL for NekoBox const nekoBoxImportUrl =
+`https://sahar-km.github.io/arcane/${btoa(freedomConfig)}`; // HTML content return `
 <!doctype html>
 <html lang="en">
   <head>
@@ -754,148 +740,148 @@ function getDianaConfig(userCode, hostName) {
       </div>
     </div>
     <script>
-      initializeProxyData(proxyConfig);
+        initializeProxyData(proxyConfig);
 
-      // Set up copy button event listeners
-      document.getElementById('copy-xray-btn').addEventListener('click', function() {
-        const xrayConfig = document.getElementById('xray-config').textContent;
-        copyToClipboard(this, xrayConfig);
+        // Set up copy button event listeners
+        document.getElementById('copy-xray-btn').addEventListener('click', function() {
+          const xrayConfig = document.getElementById('xray-config').textContent;
+          copyToClipboard(this, xrayConfig);
+        });
+
+        document.getElementById('copy-singbox-btn').addEventListener('click', function() {
+          const singboxConfig = document.getElementById('singbox-config').textContent;
+          copyToClipboard(this, singboxConfig);
+        });
+
+        // Set up import links
+        setupImportLinks(proxyConfig);
+
+        // Check proxy status periodically
+        checkProxyStatus();
+        setInterval(checkProxyStatus, 60000); // Check every minute
       });
-    
-      document.getElementById('copy-singbox-btn').addEventListener('click', function() {
-        const singboxConfig = document.getElementById('singbox-config').textContent;
-        copyToClipboard(this, singboxConfig);
-      });
-    
-      // Set up import links
-      setupImportLinks(proxyConfig);
-      
-      // Check proxy status periodically
-      checkProxyStatus();
-      setInterval(checkProxyStatus, 60000); // Check every minute
-    });
-    
-    // Function to initialize the page with proxy configuration data
-    function initializeProxyData(config) {
-      // Display proxy IP
-      document.getElementById('proxy-ip-display').textContent = config.xray.server;
-      
-      // Format and display the last updated time
-      const now = new Date();
-      document.getElementById('last-updated').textContent = formatDateTime(now);
-      
-      // Format the Xray configuration
-      const xrayFormatted = formatXrayConfig(config.xray);
-      document.getElementById('xray-config').textContent = xrayFormatted;
-      
-      // Format the Sing-Box configuration
-      const singboxFormatted = JSON.stringify(config.singbox, null, 2);
-      document.getElementById('singbox-config').textContent = singboxFormatted;
-    }
-    
-    // Function to check proxy status
-    function checkProxyStatus() {
-      // In a real implementation, this would make an API call to check the status
-      // For demo purposes, we'll simulate a status check with a random result
-      const isActive = Math.random() > 0.1; // 90% chance of being active
-      
-      const statusIndicator = document.querySelector('.status-indicator');
-      const statusText = document.getElementById('proxy-status');
-      
-      if (isActive) {
-        statusIndicator.classList.remove('status-inactive');
-        statusIndicator.classList.add('status-active');
-        statusText.textContent = 'Active';
-      } else {
-        statusIndicator.classList.remove('status-active');
-        statusIndicator.classList.add('status-inactive');
-        statusText.textContent = 'Inactive';
-      }
-      
-      // Update the last checked time
-      document.getElementById('last-updated').textContent = formatDateTime(new Date());
-    }
-      function copyToClipboard(button, text) {
-        const originalText = button.textContent;
-        const isClientBtn = button.classList.contains('client-btn');
-        const originalIconHTML = isClientBtn
-          ? button.querySelector('.client-icon')?.innerHTML
-          : null;
 
-        button.disabled = true;
-        button.classList.remove('copied', 'error');
+      // Function to initialize the page with proxy configuration data
+      function initializeProxyData(config) {
+        // Display proxy IP
+        document.getElementById('proxy-ip-display').textContent = config.xray.server;
 
-        if (isClientBtn && button.querySelector('.client-icon')) {
-          button.querySelector('.client-icon').style.display = 'none';
-        }
-        if (isClientBtn && button.querySelector('.button-text')) {
-          button.querySelector('.button-text').style.fontWeight = '500';
-        }
+        // Format and display the last updated time
+        const now = new Date();
+        document.getElementById('last-updated').textContent = formatDateTime(now);
 
-        navigator.clipboard
-          .writeText(text)
-          .then(() => {
-            button.textContent = 'Copied!';
-            button.classList.add('copied');
+        // Format the Xray configuration
+        const xrayFormatted = formatXrayConfig(config.xray);
+        document.getElementById('xray-config').textContent = xrayFormatted;
 
-            setTimeout(() => {
-              if (isClientBtn && originalIconHTML) {
-                const textSpan =
-                  button.querySelector('.button-text') || document.createElement('span');
-                textSpan.className = 'button-text';
-                textSpan.textContent = originalText;
-
-                const iconSpan = document.createElement('span');
-                iconSpan.className = 'client-icon';
-                iconSpan.innerHTML = originalIconHTML;
-                iconSpan.style.display = '';
-
-                button.innerHTML = '';
-                button.appendChild(iconSpan);
-                button.appendChild(textSpan);
-              } else {
-                button.textContent = originalText;
-              }
-              button.classList.remove('copied');
-              button.disabled = false;
-              if (isClientBtn && button.querySelector('.button-text')) {
-                button.querySelector('.button-text').style.fontWeight = '';
-              }
-            }, 1200);
-          })
-          .catch(err => {
-            console.error('Failed to copy text: ', err);
-            button.textContent = 'Error';
-            button.classList.add('error');
-
-            setTimeout(() => {
-              if (isClientBtn && originalIconHTML) {
-                const textSpan =
-                  button.querySelector('.button-text') || document.createElement('span');
-                textSpan.className = 'button-text';
-                textSpan.textContent = originalText;
-
-                const iconSpan = document.createElement('span');
-                iconSpan.className = 'client-icon';
-                iconSpan.innerHTML = originalIconHTML;
-                iconSpan.style.display = '';
-
-                button.innerHTML = '';
-                button.appendChild(iconSpan);
-                button.appendChild(textSpan);
-              } else {
-                button.textContent = originalText;
-              }
-              button.classList.remove('error');
-              button.disabled = false;
-              if (isClientBtn && button.querySelector('.button-text')) {
-                button.querySelector('.button-text').style.fontWeight = '';
-              }
-            }, 1500);
-          });
+        // Format the Sing-Box configuration
+        const singboxFormatted = JSON.stringify(config.singbox, null, 2);
+        document.getElementById('singbox-config').textContent = singboxFormatted;
       }
 
-      document.getElementById('current-year').textContent = new Date().getFullYear();
+      // Function to check proxy status
+      function checkProxyStatus() {
+        // In a real implementation, this would make an API call to check the status
+        // For demo purposes, we'll simulate a status check with a random result
+        const isActive = Math.random() > 0.1; // 90% chance of being active
+
+        const statusIndicator = document.querySelector('.status-indicator');
+        const statusText = document.getElementById('proxy-status');
+
+        if (isActive) {
+          statusIndicator.classList.remove('status-inactive');
+          statusIndicator.classList.add('status-active');
+          statusText.textContent = 'Active';
+        } else {
+          statusIndicator.classList.remove('status-active');
+          statusIndicator.classList.add('status-inactive');
+          statusText.textContent = 'Inactive';
+        }
+
+        // Update the last checked time
+        document.getElementById('last-updated').textContent = formatDateTime(new Date());
+      }
+        function copyToClipboard(button, text) {
+          const originalText = button.textContent;
+          const isClientBtn = button.classList.contains('client-btn');
+          const originalIconHTML = isClientBtn
+            ? button.querySelector('.client-icon')?.innerHTML
+            : null;
+
+          button.disabled = true;
+          button.classList.remove('copied', 'error');
+
+          if (isClientBtn && button.querySelector('.client-icon')) {
+            button.querySelector('.client-icon').style.display = 'none';
+          }
+          if (isClientBtn && button.querySelector('.button-text')) {
+            button.querySelector('.button-text').style.fontWeight = '500';
+          }
+
+          navigator.clipboard
+            .writeText(text)
+            .then(() => {
+              button.textContent = 'Copied!';
+              button.classList.add('copied');
+
+              setTimeout(() => {
+                if (isClientBtn && originalIconHTML) {
+                  const textSpan =
+                    button.querySelector('.button-text') || document.createElement('span');
+                  textSpan.className = 'button-text';
+                  textSpan.textContent = originalText;
+
+                  const iconSpan = document.createElement('span');
+                  iconSpan.className = 'client-icon';
+                  iconSpan.innerHTML = originalIconHTML;
+                  iconSpan.style.display = '';
+
+                  button.innerHTML = '';
+                  button.appendChild(iconSpan);
+                  button.appendChild(textSpan);
+                } else {
+                  button.textContent = originalText;
+                }
+                button.classList.remove('copied');
+                button.disabled = false;
+                if (isClientBtn && button.querySelector('.button-text')) {
+                  button.querySelector('.button-text').style.fontWeight = '';
+                }
+              }, 1200);
+            })
+            .catch(err => {
+              console.error('Failed to copy text: ', err);
+              button.textContent = 'Error';
+              button.classList.add('error');
+
+              setTimeout(() => {
+                if (isClientBtn && originalIconHTML) {
+                  const textSpan =
+                    button.querySelector('.button-text') || document.createElement('span');
+                  textSpan.className = 'button-text';
+                  textSpan.textContent = originalText;
+
+                  const iconSpan = document.createElement('span');
+                  iconSpan.className = 'client-icon';
+                  iconSpan.innerHTML = originalIconHTML;
+                  iconSpan.style.display = '';
+
+                  button.innerHTML = '';
+                  button.appendChild(iconSpan);
+                  button.appendChild(textSpan);
+                } else {
+                  button.textContent = originalText;
+                }
+                button.classList.remove('error');
+                button.disabled = false;
+                if (isClientBtn && button.querySelector('.button-text')) {
+                  button.querySelector('.button-text').style.fontWeight = '';
+                }
+              }, 1500);
+            });
+        }
+
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
