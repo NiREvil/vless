@@ -30,7 +30,7 @@
       },
       {
         "detour": "direct",
-        "server": "8.8.4.4",
+        "server": "8.8.8.8",
         "tag": "local-dns",
         "type": "tcp"
       },
@@ -84,7 +84,7 @@
       "type": "selector"
     },
     {
-      "interval": "100s",
+      "interval": "90s",
       "outbounds": [],
       "tag": "auto",
       "tolerance": 50,
@@ -92,7 +92,10 @@
       "url": "https://www.gstatic.com/generate_204"
     },
     {
-      "domain_strategy": "prefer_ipv4",
+      "domain_resolver": {
+        "server": "local-dns",
+        "strategy": "prefer_ipv4"
+      },
       "tag": "direct",
       "type": "direct"
     }
