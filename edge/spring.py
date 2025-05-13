@@ -108,7 +108,6 @@ def toSingBox(tag, clean_ip, detour):
                 "private_key": f"{data['private_key']}",
                 "tag": tag,
                 "type": "wireguard",
-                "detour": f"{detour}",
                 "workers": 2,
             }
 
