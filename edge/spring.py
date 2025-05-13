@@ -89,25 +89,25 @@ def toSingBox(tag, clean_ip, detour):
         try:
             data = json.loads(output)
             wg = {
-                "type": "wireguard",
-                "tag": tag,
-                "name": "wg0",
-                "mtu": 1280,
                 "address": [
                     "172.16.0.2/32",
-                    "2606:4700:110:8735:bb29:91bc:1c82:aa73/128",
+                    "2606:4700:110:8836:f1c9:4393:9b37:3814/128",
                 ],
-                "private_key": f"{data['private_key']}",
+                "detour": f"{detour}",
+                "mtu": 1280,
                 "peers": [
                     {
                         "address": f"{clean_ip.split(':')[0]}",
+                        "allowed_ips": ["0.0.0.0/0", "::/0"],
+                        "persistent_keepalive_interval": 25,
                         "port": int(clean_ip.split(":")[1]),
                         "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-                        "allowed_ips": ["0.0.0.0/0", "::/0"],
-                        "persistent_keepalive_interval": 30,
                         "reserved": data["config"]["reserved"],
                     }
                 ],
+                "private_key": f"{data['private_key']}",
+                "tag": tag,
+                "type": "wireguard",
                 "detour": f"{detour}",
                 "workers": 2,
             }
@@ -207,9 +207,9 @@ def main():
             + base64.b64encode("Freedom to Dream 🤍".encode("utf-8")).decode("utf-8")
             + "\n"
         )
-        update_interval = "//profile-update-interval: 4\n"
+        update_interval = "//profile-update-interval: 6\n"
         sub_info = "//subscription-userinfo: upload = 800306368000; download = 2576980377600; total = 6012954214400; expire = 1794182399\n"
-        profile_web = "//profile-web-page-url: https://github.com/NiREvil\n"
+        profile_web = "//profile-web-page-url: https://github.com/NiREvil/vless\n"
         last_modified = "//last update on: " + formatted_time + "\n"
 
         with open(main_warp_path, "w") as op:
@@ -231,7 +231,7 @@ def main():
         logging.error(f"An unexpected error occurred: {e}")
         sys.exit(1)
     finally:
-        for temp_file in [edge_bestip_path, warp_executable, edge_result_path]:
+        for temp_file in [edge_bestip_path, warp_executable]:
             if os.path.exists(temp_file):
                 os.remove(temp_file)
 
