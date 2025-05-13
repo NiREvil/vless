@@ -104,7 +104,10 @@
     {
       "type": "direct",
       "tag": "direct",
-      "domain_strategy": "prefer_ipv4"
+      "domain_resolver": {
+        "server": "local-dns",
+        "strategy": "prefer_ipv4"
+      }
     },
     {
       "type": "hysteria2",
