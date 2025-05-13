@@ -1,3 +1,31 @@
+function getDianaConfig(userCode, hostName) {
+  const protocol = decodeSecure(ENCODED.PROTOCOL);
+  const networkType = decodeSecure(ENCODED.NETWORK);
+
+  const baseUrl = `${protocol}://${userCode}@${hostName}:443`;
+  const commonParams =
+    `encryption=none&host=${hostName}&type=${networkType}` + `&security=tls&sni=${hostName}`;
+
+  // Configuration for Sing-Box core clients
+  const freedomConfig =
+    `${baseUrl}?path=/api/v4&eh=Sec-WebSocket-Protocol` +
+    `&ed=2560&${commonParams}&fp=chrome&alpn=h3#${hostName}`;
+
+  // Configuration for Xray core clients
+  const dreamConfig =
+    `${baseUrl}?path=/api/v2?ed=2048&${commonParams}` +
+    `&fp=randomized&alpn=h2,http/1.1#${hostName}`;
+
+  // URL for Clash Meta subscription import
+  const clashMetaFullUrl = `clash://install-config?url=${encodeURIComponent(
+    `https://sub.victoriacross.ir/sub/clash-meta?url=${encodeURIComponent(freedomConfig)}&remote_config=&udp=true&ss_uot=false&show_host=false&forced_ws0rtt=false`,
+  )}`; // for using v2ray to clash-meta converter visit here: https://sub.victoriacross.ir/
+
+  // create a URL for NekoBox
+  const nekoBoxImportUrl = `https://sahar-km.github.io/arcane/${btoa(freedomConfig)}`;
+
+  // HTML content
+  return `
 <!doctype html>
 <html lang="en">
   <head>
@@ -489,7 +517,6 @@
               scrollbar-color: var(--border-color) var(--background-primary);
             }
 
-            /* Added: Status indicator dot for proxy status */
             .status-indicator {
               display: inline-block;
               width: 10px;
@@ -508,7 +535,6 @@
               box-shadow: 0 0 5px #F44336;
             }
 
-            /* Added: Animation for configuration loading */
             @keyframes pulse {
               0% { opacity: 0.6; }
               50% { opacity: 1; }
@@ -574,7 +600,6 @@
             @media (min-width: 640px) { .container { max-width: 600px; } }
             @media (min-width: 768px) { .container { max-width: 720px; } }
             @media (min-width: 1024px) { .container { max-width: 800px; } }
-            /* Added: Focus styles for keyboard navigation */
 
             a:focus, button:focus {
               outline: 2px solid var(--accent-primary);
@@ -594,7 +619,7 @@
         <div class="attributes">
           <div class="attribute">
             <span>Proxy IP / Host:</span>
-            <strong id="proxy-ip-display">Loading...</strong>
+            <strong id="proxy-ip-display">${proxyIP}</strong>
           </div>
           <div class="attribute">
             <span>Status:</span>
@@ -605,7 +630,7 @@
           </div>
           <div class="attribute">
             <span>Last Updated:</span>
-            <strong id="last-updated">Loading...</strong>
+            <strong id="last-updated">13 May 2025</strong>
           </div>
         </div>
       </div>
@@ -729,6 +754,67 @@
       </div>
     </div>
     <script>
+      initializeProxyData(proxyConfig);
+
+      // Set up copy button event listeners
+      document.getElementById('copy-xray-btn').addEventListener('click', function() {
+        const xrayConfig = document.getElementById('xray-config').textContent;
+        copyToClipboard(this, xrayConfig);
+      });
+    
+      document.getElementById('copy-singbox-btn').addEventListener('click', function() {
+        const singboxConfig = document.getElementById('singbox-config').textContent;
+        copyToClipboard(this, singboxConfig);
+      });
+    
+      // Set up import links
+      setupImportLinks(proxyConfig);
+      
+      // Check proxy status periodically
+      checkProxyStatus();
+      setInterval(checkProxyStatus, 60000); // Check every minute
+    });
+    
+    // Function to initialize the page with proxy configuration data
+    function initializeProxyData(config) {
+      // Display proxy IP
+      document.getElementById('proxy-ip-display').textContent = config.xray.server;
+      
+      // Format and display the last updated time
+      const now = new Date();
+      document.getElementById('last-updated').textContent = formatDateTime(now);
+      
+      // Format the Xray configuration
+      const xrayFormatted = formatXrayConfig(config.xray);
+      document.getElementById('xray-config').textContent = xrayFormatted;
+      
+      // Format the Sing-Box configuration
+      const singboxFormatted = JSON.stringify(config.singbox, null, 2);
+      document.getElementById('singbox-config').textContent = singboxFormatted;
+    }
+    
+    // Function to check proxy status
+    function checkProxyStatus() {
+      // In a real implementation, this would make an API call to check the status
+      // For demo purposes, we'll simulate a status check with a random result
+      const isActive = Math.random() > 0.1; // 90% chance of being active
+      
+      const statusIndicator = document.querySelector('.status-indicator');
+      const statusText = document.getElementById('proxy-status');
+      
+      if (isActive) {
+        statusIndicator.classList.remove('status-inactive');
+        statusIndicator.classList.add('status-active');
+        statusText.textContent = 'Active';
+      } else {
+        statusIndicator.classList.remove('status-active');
+        statusIndicator.classList.add('status-inactive');
+        statusText.textContent = 'Inactive';
+      }
+      
+      // Update the last checked time
+      document.getElementById('last-updated').textContent = formatDateTime(new Date());
+    }
       function copyToClipboard(button, text) {
         const originalText = button.textContent;
         const isClientBtn = button.classList.contains('client-btn');
