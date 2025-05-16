@@ -21,7 +21,6 @@ export default [
       'edge/waste/**',
       'edge/unite.js',
       '**/clash-12.**',
-      'edge/zizifn.js',
       'node_modules/**',
       'DNS over HTTPS/**',
       'package-lock.json',
@@ -34,7 +33,7 @@ export default [
 
   js.configs.recommended,
   {
-    // ⚙️ JavaScript
+    // ⚙️ JavaScript 
     files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
     languageOptions: {
       ecmaVersion: 2022,
@@ -42,7 +41,6 @@ export default [
       globals: {
         ...globals.node,
         ...globals.browser,
-        // Another global if your project need it.
       },
     },
     rules: {
@@ -50,8 +48,13 @@ export default [
       'no-console': 'off',
       semi: ['error', 'always'],
       quotes: ['error', 'single'],
+      'no-irregular-whitespace': ['error', {
+        skipStrings: true,
+        skipComments: false,
+        skipRegExps: true,
+        skipTemplates: true,
+      }],
     },
-  },
 
   {
     // ⚙️ JSON, JSONC, JSON5
