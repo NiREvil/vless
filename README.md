@@ -164,7 +164,7 @@ https://channel-freevpnhomes-subscription.shampoosirsehat.homes
 
 **Single H2 conf [[KV?]]**  
 https://iserver.store/Kevin.json  
-https://iserver.store/KevinVPN.json  
+https://iserver.store/KevinVPN.json
 
 **RefralSheets [[MK?]**  
 https://panel.maviks.eu/sub/NjA2NDY2MjQ2MiwxNzQ1NjgyMjY1vLYjANeN9l
@@ -176,7 +176,7 @@ https://igdux.top/~FREE2CONFIG,T,H
 https://t.me/azadi_az_inja_migzare/3860
 
 **Warp+ Hysteria ON Singbox**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
 
 **Warp+ Proton on Hiddify with DNS clean [[Ni?]]**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Proton%20ON%20WARP%2B%20DNS%20Clean
@@ -1042,7 +1042,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Ni?]: https://t.me/s/F_NiREvil
 [MB?]: https://github.com/mahdibland/ShadowsocksAggregator/
 [ME?]: https://t.me/s/FreeVPNHomes/532
-[MK?]: https://t.me/maviks_bot?start=680cff2cb34f9a1f3951470a  
+[MK?]: https://t.me/maviks_bot?start=680cff2cb34f9a1f3951470a
 [PR?]: https://t.me/s/ProxyDaemi
 [SW?]: https://github.com/jadolg/shadowmere
 [SR?]: https://github.com/soroushmirzaei/telegram-configs-collector
