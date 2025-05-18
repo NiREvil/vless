@@ -95,10 +95,7 @@
       "url": "https://www.gstatic.com/generate_204"
     },
     {
-      "domain_resolver": {
-        "server": "local-dns",
-        "strategy": "prefer_ipv4"
-      },
+      "strategy": "prefer_ipv4",
       "tag": "direct",
       "type": "direct"
     },
@@ -108,7 +105,7 @@
         "type": "salamander"
       },
       "password": "KevinZakarian",
-      "server": "kevin.iserver.store",
+      "server": "kevinz.iserver.store",
       "server_port": 8443,
       "tag": "hysteria",
       "tls": {
