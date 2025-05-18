@@ -95,9 +95,9 @@
       "url": "https://www.gstatic.com/generate_204"
     },
     {
-      "strategy": "prefer_ipv4",
       "tag": "direct",
-      "type": "direct"
+      "type": "direct",
+      "domain_strategy": "prefer_ipv4"
     },
     {
       "obfs": {
