@@ -172,7 +172,7 @@ https://panel.maviks.eu/sub/NjA2NDY2MjQ2MiwxNzQ1NjgyMjY1vLYjANeN9l
 https://igdux.top/~FREE2CONFIG,T,H
 
 **Azadi az inja migzare [[A?]]**  
-http://azadiazinjamigzare.github.io/SingBox  
+http://azadiazinjamigzare.github.io/SingBox
 
 **Warp+ Hysteria ON Singbox**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
@@ -1082,14 +1082,11 @@ https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.
 | <img src="https://flagcdn.com/w20/ua.png" width="20" alt="Ukraine flag"> Ukraine                               | 15               | [`Ukraine.txt`](https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Ukraine.txt)                               |
 | <img src="https://flagcdn.com/w20/vn.png" width="20" alt="Vietnam flag"> Vietnam                               | 43               | [`Vietnam.txt`](https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Vietnam.txt)                               |
 
-
-  
 > [!NOTE]
 >
-> **Credits: Dear [[EP?]]**  
+> **Credits: Dear [[EP?]]**
 >
 > And next up ...
-> 
 
 **🇺🇸**  
 https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/United%20States/config.txt
