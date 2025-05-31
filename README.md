@@ -163,8 +163,7 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 https://channel-freevpnhomes-subscription.shampoosirsehat.homes
 
 **Single H2 conf [[KV?]]**  
-https://iserver.store/Kevin.json  
-https://iserver.store/KevinVPN.json
+https://iserver.store/Kevin.json
 
 **RefralSheets [[MK?]**  
 https://panel.maviks.eu/sub/NjA2NDY2MjQ2MiwxNzQ1NjgyMjY1vLYjANeN9l
@@ -173,7 +172,7 @@ https://panel.maviks.eu/sub/NjA2NDY2MjQ2MiwxNzQ1NjgyMjY1vLYjANeN9l
 https://igdux.top/~FREE2CONFIG,T,H
 
 **Azadi az inja migzare [[A?]]**  
-https://t.me/azadi_az_inja_migzare/3860
+http://azadiazinjamigzare.github.io/SingBox  
 
 **Warp+ Hysteria ON Singbox**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
@@ -295,7 +294,7 @@ https://wearestandtelegram.github.io/IranRamona
 https://wearestandtelegram.github.io/Javidnaman/
 
 **Meshkintaj [[ME?]]**  
-https://karing-freevpnhomes-subscription.shampoosirsehat.homes
+https://channel-freevpnhomes-subscription.shampoosirsehat.homes
 
 https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/sing-box.json
 
@@ -367,7 +366,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_1
 
 **A0 NL**
 
-```POV-Ray SDL
+```CSS
 [Interface]
 PrivateKey = sCrICobPbEukaBKKYE1CO4a/vh08a5fl54ps5a9rl2w=
 Address = 10.201.12.164/32
@@ -392,7 +391,7 @@ Endpoint = nl01a.kcufwfgnkr.net:62931
 
 **A1 UK**
 
-```POV-Ray SDL
+```CSS
 [Interface]
 PrivateKey = KCjVjySbNGSviVYG0MwmleRz0QhXOqcwHbiHRjGxn0A=
 Address = 10.221.0.78/32
@@ -417,7 +416,7 @@ Endpoint = gb01a.kcufwfgnkr.net:62931
 
 **A2 FR**
 
-```POV-Ray SDL
+```CSS
 [Interface]
 PrivateKey = +EkO5G9s8wtavwusVRx693iUU44u/cA4KaiXFraTvVU=
 Address = 10.201.5.49/32
@@ -442,7 +441,7 @@ Endpoint = fr01a.kcufwfgnkr.net:62931
 
 **A3 TR**
 
-```POV-Ray SDL
+```CSS
 [Interface]
 PrivateKey = gCQsj/7vZrBCjLuKtNvCrwhEa0CqSXRWRHvoddNin38=
 Address = 10.201.2.124/32
@@ -1083,9 +1082,14 @@ https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.
 | <img src="https://flagcdn.com/w20/ua.png" width="20" alt="Ukraine flag"> Ukraine                               | 15               | [`Ukraine.txt`](https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Ukraine.txt)                               |
 | <img src="https://flagcdn.com/w20/vn.png" width="20" alt="Vietnam flag"> Vietnam                               | 43               | [`Vietnam.txt`](https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Vietnam.txt)                               |
 
-> [!NOTE] > **Credits: Dear [[EP?]]**
+
+  
+> [!NOTE]
+>
+> **Credits: Dear [[EP?]]**  
 >
 > And next up ...
+> 
 
 **🇺🇸**  
 https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/United%20States/config.txt
