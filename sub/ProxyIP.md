@@ -1,12 +1,17 @@
-# $\color{ghostwhite} \large \text{CF ProxyIP's}$
 
-> [!NOTE] > ~~proxyIP = 127.0.0.1~~  
+<p align="left">
+ <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{Golden}\mathrm{PR{\color{black}\O}XY\;IP}" width=200px" </p></b>  
+
+> [!WARNING]
+> 
+> ~~proxyIP = 127.0.0.1~~  
 > means the proxy is no longer working.
 
 <br><br><br>
 
-## $\color{ghostwhite} \large \text{We have}$
-
+<p align="left">
+ <img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{{\color{Golden}\sqsubseteq&space;We\;have}}" width=160px" </p></br>  
+ 
 - [Best proxies](#Best-proxies)
   - [Google LLC](#Google-LLC)
   - [Amazon Technologies Inc](#Amazon-Technologies-Inc)
@@ -22,9 +27,8 @@
 
 <br><br>
 
-## Best proxies
-
-![rainbow]
+<p align="left">
+ <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{Golden}\mathrm{\not\equiv&space;BEST\;PROXIES}" width=180px" </p></b>
 
 **🇺🇸 USA, Google LLC, Tencent & Amazon Technologies**
 
@@ -56,6 +60,10 @@ bpb.yousef.isegaro.com
 156.146.53.83
 ```
 
+```POV-Ray SDL
+156.146.53.82
+```
+
 **🇺🇸 USA, Virginia, Ashburn, Total Uptime Technologies**
 
 ```POV-Ray SDL
@@ -65,19 +73,49 @@ bpb.yousef.isegaro.com
 **🇹🇷 Turkey, izmir, Stark Industries Solutions LTD**
 
 ```POV-Ray SDL
+62.3.12.76
+```
+
+```POV-Ray SDL
+62.3.12.190
+```
+
+```POV-Ray SDL
 62.3.12.185
 ```
 
-**🇹🇷 Turkey, Istanbul, Poyraz Hosting Bilisim Hizmetleri**
+**🇹🇷 Turkey, Istanbul, Cogent Communications**
 
 ```POV-Ray SDL
-2.59.117.217
+62.3.12.14
 ```
 
 **🇳🇱 Netherlands, Amsterdam, Servers Tech Fzco**
 
 ```POV-Ray SDL
 212.34.142.238
+```
+
+```POV-Ray SDL
+212.34.142.40
+```
+
+```POV-Ray SDL
+212.34.142.54
+```
+
+```POV-Ray SDL
+212.34.142.70
+```
+
+**🇳🇱 Netherlands, Amsterdam, RAN Networks S.L**
+
+```POV-Ray SDL
+212.34.142.189
+```
+
+```POV-Ray SDL
+212.34.142.100
 ```
 
 ## Google LLC
@@ -135,11 +173,15 @@ bpb.yousef.isegaro.com
 **🇺🇸 USA, random, Amazon Technologies Inc**
 
 ```POV-Ray SDL
-34.225.195.136
+50.112.33.254
 ```
 
 ```POV-Ray SDL
 54.200.244.93
+```
+
+```POV-Ray SDL
+34.225.195.136
 ```
 
 ```POV-Ray SDL
@@ -265,7 +307,11 @@ bpb.yousef.isegaro.com
 
 ![rainbow]
 
-**🇩🇪 Germany, Frankfurt am Main, Hetzner online**
+**🇩🇪 Germany, Frankfurt am Main, Hetzner online**  
+
+```POV-Ray SDL
+78.46.56.42
+```
 
 ```POV-Ray SDL
 91.107.135.104
