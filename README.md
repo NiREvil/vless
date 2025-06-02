@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="140x" </p><br><br><br  >  
+<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="140x" </p><br><br><br  >
 
 <div dir="rtl">  
      
@@ -11,7 +11,7 @@
 
 - **Несколько ссылок для подписки на** v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Outline, Clash-Meta и ... Вернуть результат только
 
-- 为以下软件提供一些共享链接：v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, Nekobox, Husi, Exclave, Amnezia, Outline, Clash-Meta 等。<br><br>  
+- 为以下软件提供一些共享链接：v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, Nekobox, Husi, Exclave, Amnezia, Outline, Clash-Meta 等。<br><br>
 
 > [!IMPORTANT]
 >
@@ -268,8 +268,7 @@ wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:888
 >
 > Suitable for ChatGPT [[wtf?]]
 
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml  
-
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml
 
 https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/clash-wg.yml [[DS?]]
 
@@ -312,7 +311,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscri
 ## Outline
 
 > [!NOTE]
-> 
+>
 > Some configratiion for [[Outline]], Thanks to [[Anita?]]
 
 ```POV-Ray SDL
@@ -344,13 +343,13 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp5MUZCa3lhRWM5R3Z4ZVRqUzFIMFZv@176.124.207.10
 ## ServerLess
 
 > [!NOTE]  
-> For Xray Core  
->  
-> These configs are completely **Serverless** and are designed to work seamlessly with just a few DNS servers.   
-> You can enjoy lightning-fast loading speeds for YouTube videos, Twitter, and web browsing.  
-> 
-> Just remember, because there's no server, **your IP address won't be changed.**    
-> Happy streaming! <br><br  > 
+> For Xray Core
+>
+> These configs are completely **Serverless** and are designed to work seamlessly with just a few DNS servers.  
+> You can enjoy lightning-fast loading speeds for YouTube videos, Twitter, and web browsing.
+>
+> Just remember, because there's no server, **your IP address won't be changed.**  
+> Happy streaming! <br><br  >
 
 **tlshello [[GFW]]**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_TLS_Fragment_xray_config.json
@@ -363,7 +362,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_1
 ## [Amnezia]
 
 > [!NOTE]
-> Do you have [[any information]] on amnezia ? <br>  
+> Do you have [[any information]] on amnezia ? <br>
 
 **A0 NL**
 
@@ -877,7 +876,7 @@ https://raw.githubusercontent.com/Created-By/Telegram-Eag1e_YT/main/%40Eag1e_YT
 ## CLASH
 
 > [!NOTE]
->  I recommend using [Clash-Meta] for better results.
+> I recommend using [Clash-Meta] for better results.
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml [[MB?]]
 
