@@ -1,9 +1,8 @@
-
 <p align="left">
- <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{Golden}\mathrm{PR{\color{black}\O}XY\;IP}" width=200px" </p></b>  
+ <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{Golden}\mathrm{PR{\color{black}\O}XY\;IP}" width=200px" </p></b>
 
 > [!WARNING]
-> 
+>
 > ~~proxyIP = 127.0.0.1~~  
 > means the proxy is no longer working.
 
@@ -307,7 +306,7 @@ bpb.yousef.isegaro.com
 
 ![rainbow]
 
-**🇩🇪 Germany, Frankfurt am Main, Hetzner online**  
+**🇩🇪 Germany, Frankfurt am Main, Hetzner online**
 
 ```POV-Ray SDL
 78.46.56.42
