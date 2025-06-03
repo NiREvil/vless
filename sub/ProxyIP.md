@@ -69,17 +69,17 @@ bpb.yousef.isegaro.com
 72.13.122.137
 ```
 
-🇦🇹 **Austria, Vienna, Aeza international Ltd**  
+🇦🇹 **Austria, Vienna, Aeza international Ltd**
 
 ```POV-Ray SDL
 147.45.41.209
-```   
+```
 
 ```POV-Ray SDL
 185.106.94.67
-```  
+```
 
-🇧🇬 **Bulgaria, Sofia, EDIS GmbH**  
+🇧🇬 **Bulgaria, Sofia, EDIS GmbH**
 
 ```POV-Ray SDL
 45.153.125.245
@@ -98,37 +98,38 @@ bpb.yousef.isegaro.com
 ```POV-Ray SDL
 62.3.12.185
 ```
-🇹🇷 **Turkey, Istanbul, UltaHost Inc.**  
+
+🇹🇷 **Turkey, Istanbul, UltaHost Inc.**
 
 ```POV-Ray SDL
 188.132.183.166
-```  
+```
 
-🇹🇷 **Turkey, Izmir, Alastyr A.S**  
+🇹🇷 **Turkey, Izmir, Alastyr A.S**
 
 ```POV-Ray SDL
 185.8.129.187
-```  
+```
 
-🇹🇷 **Turkey, Izmir, PQ Hosting plus**  
+🇹🇷 **Turkey, Izmir, PQ Hosting plus**
 
 ```POV-Ray SDL
 45.89.52.247
-```  
+```
 
 ```POV-Ray SDL
 95.164.11.116
-```  
+```
 
 ```POV-Ray SDL
 94.131.123.74
-```  
+```
 
-🇹🇷 **Turkey, Istanbul, Scalaxy B.V**  
+🇹🇷 **Turkey, Istanbul, Scalaxy B.V**
 
 ```POV-Ray SDL
 38.180.105.164
-```  
+```
 
 🇹🇷 **Turkey, Istanbul, Cogent Communications**
 
@@ -168,7 +169,6 @@ bpb.yousef.isegaro.com
 185.155.220.64
 ```
 
-
 🇦🇪 **United Arab Emirates, Ras al, G-Core labs S.A**
 
 ```POV-Ray SDL
@@ -179,13 +179,13 @@ bpb.yousef.isegaro.com
 
 ```POV-Ray SDL
 176.97.66.175
-```  
+```
 
 ```POV-Ray SDL
 176.97.67.38
 ```
 
-🇨🇦 **Canada, Toronto, Advanced Knowledge Networks**  
+🇨🇦 **Canada, Toronto, Advanced Knowledge Networks**
 
 ```POV-Ray SDL
 172.98.207.58
@@ -195,29 +195,29 @@ bpb.yousef.isegaro.com
 209.200.246.130
 ```
 
-🇨🇦 Canada, Kingston, Server Cloud Inc**   
+🇨🇦 Canada, Kingston, Server Cloud Inc\*\*
+
 ```POV-Ray SDL
 199.48.102.83
-```  
+```
 
-🇨🇦 **Canada, Torento, kamatera .inc**  
+🇨🇦 **Canada, Torento, kamatera .inc**
 
 ```POV-Ray SDL
 213.255.209.207
 ```
 
-🇦🇺 **Australia, Sydney, Macquarie telecom**  
+🇦🇺 **Australia, Sydney, Macquarie telecom**
 
 ```POV-Ray SDL
 125.7.24.251
 ```
 
-🇦🇺 **Australia, Sydney, Digital Ocean**  
+🇦🇺 **Australia, Sydney, Digital Ocean**
 
 ```POV-Ray SDL
 170.64.240.100
-```  
-
+```
 
 ## Google LLC
 
@@ -628,7 +628,7 @@ bpb.yousef.isegaro.com
 
 ## Others
 
-![rainbow]  
+![rainbow]
 
 🇮🇳 India Mumbai, Pdrsolutionsfzc
 
@@ -788,25 +788,26 @@ ircpipproxy.duckdns.org
 
 ### 1. تست از طریق وب‌سایت
 
-اولین روش آسون اینه که وب‌سایت [![Here](https://img.shields.io/badge/Dì_proxyIP_Test-blue?logo=opencollective)](https://proxyip.victoriacross.ir) رو باز کنیم، تو کادر اول آی‌پی یا دامنه پروکسی دلخواهمون رو قرار بدیم و با کلیک روی گزینه Check نتایج برامون به نمایش درمیان، امکان اسکن رنج‌آی‌پی برای کاربران حرفه‌ای هم در سایت تستمون هستش.  
+اولین روش آسون اینه که وب‌سایت [![Here](https://img.shields.io/badge/Dì_proxyIP_Test-blue?logo=opencollective)](https://proxyip.victoriacross.ir) رو باز کنیم، تو کادر اول آی‌پی یا دامنه پروکسی دلخواهمون رو قرار بدیم و با کلیک روی گزینه Check نتایج برامون به نمایش درمیان، امکان اسکن رنج‌آی‌پی برای کاربران حرفه‌ای هم در سایت تستمون هستش.
 
 ممکنه بعضی وقتا isp رو نشون نده و فقط بگه که این آی‌پی سالمه، اونوقت از این وب‌سایت
-[![Here](https://img.shields.io/badge/Check_Host-yellow?logo=opencollective)](https://check-host.net/ip-info) کمک بگیرید برای فهمیدن اطلاعات بیشتر (سایت پشت کلادفلر نیست).   
+[![Here](https://img.shields.io/badge/Check_Host-yellow?logo=opencollective)](https://check-host.net/ip-info) کمک بگیرید برای فهمیدن اطلاعات بیشتر (سایت پشت کلادفلر نیست).
 
-دومین سایت یکم سختتره ولی بازم آسون به حساب میاد، اینطوریه که باید وب‌سایت [![Here](https://img.shields.io/badge/EDtunnel-blue?logo=opencollective)](https://proxyip.edtunnel.best) رو باز کنیم پروکسی دلخواهمون رو تو کادر IP قرار بدیم (اگه از پورت آی‌پی مد نظرت خبر نداری ترجیحا `443:` بذار بمونه)، در سطر بعدی گزبنه tls و هاست پیشفرض باقی بمونن و درنهایت submit رو می‌زنیم و چند ثانیه بعد نتایج به نمایش درمیاد، گزینه proxyip برابر با True باشه حله می‌تونیم ازش استفاده کنیم.   
+دومین سایت یکم سختتره ولی بازم آسون به حساب میاد، اینطوریه که باید وب‌سایت [![Here](https://img.shields.io/badge/EDtunnel-blue?logo=opencollective)](https://proxyip.edtunnel.best) رو باز کنیم پروکسی دلخواهمون رو تو کادر IP قرار بدیم (اگه از پورت آی‌پی مد نظرت خبر نداری ترجیحا `443:` بذار بمونه)، در سطر بعدی گزبنه tls و هاست پیشفرض باقی بمونن و درنهایت submit رو می‌زنیم و چند ثانیه بعد نتایج به نمایش درمیاد، گزینه proxyip برابر با True باشه حله می‌تونیم ازش استفاده کنیم.
 
 <p align="center">
   <br><img src="https://github.com/user-attachments/assets/559d7334-c8b7-402c-b5e3-85c70afae972" width="680px">
-</p><br>   
+</p><br>
 
-<br>   
+<br>
 
 <p align="center">
   <br><img src="https://github.com/user-attachments/assets/dfa8fc22-f5ed-44c2-843c-5a8cb55cce71" width="680px">
-</p><br>   
+</p><br>
 
 ---
-<br><br>  
+
+<br><br>
 
 ### 2. تست از طریق پنل BPB
 
@@ -815,18 +816,18 @@ ircpipproxy.duckdns.org
 بعد باید به یکی از کانفیگ‌ها وصل شد و رفت سراغ یکی از سایت‌هایی که از CDN کلادفلر استفاده میکنن یا به اصطلاح پشت کلادفلر هستند، مثل لینک وورکر یا پیج خودمون، یا سایت‌های عمومی مثل [![Here](https://img.shields.io/badge/WHOER-blue?logo=opencollective)](https://whoer.net) و یا [![Here](https://img.shields.io/badge/SPEEDTEST-gray?logo=opencollective)](https://www.speedtest.net) و غیره تا ببینیم سایت برامون بالا میاد یانه.  
 اگه عادی بالا میان که اوکی پس پروکسی که انتخاب کردیم درست کار می‌کنه می‌تونیم ازش استفاده کنیم. اگه بالا نیومد سایت یا هر خطای دیگه‌ای داد یا هردفعه مرورگرمون کپچا نشون داد (تو پروکسی‌آی‌پی‌های مسخره‌ی oracle این خیلی پیش میاد) یا تو ربات های تلگرامی کپچا نشون داده میشه یا بالا نمیان اونوقت باید یکی دیگه انتخاب کنیم چون این منتخبمون داغونه.
 
-<br>  
+<br>
 
 ### 3. قراردادن پروکسی داخل کد یا ازطریق متغیرها
 
 روش کلاسیک واسه تست اینه که پروکسی‌آی‌پی رو داخل کد وورکر یا پیج قرار بدیم یا یکم حرفه‌ای تر بخوایم عمل کنیم برای پیج یا وورکر خودمون از داخل کلادفلر داخل وورکر یا پیجمون از تو ستینگ یه متغییر جدید `(Environment variable)` تعیین میکنیم به اسم `PROXYIP` و مقدار اون رو برابر با پروکسی دلخواه قرار میدیم.  
 بعد از انجام `Retry deployment` مجدد به کانفیگمون وصل میشیم و میریم سراغ یکی از سایت‌هایی که از CDN کلادفلر استفاده میکنن که تو روش دوم کامل توضیح دادم.
 
-<br><br>  
+<br><br>
 
 <p align="center">
   <br><img src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" width="600px">
-</p><br>   
+</p><br>
 
 <br><br>
 
@@ -846,10 +847,10 @@ ircpipproxy.duckdns.org
 روی هر کدوم از لینک‌های زیر کلیک کنی کلی پروکسی‌آی‌پی هست که با کلیک روی هرکدوم کادر مشخصات مربوط ب اون‌ها باز میشه.  
 روش های تست پروکسی‌آی‌پی‌ها در بخش قبلی نوشته شده.
 
-<br> 
+<br>
 
 <p align="left">
- <img src="https://latex.codecogs.com/svg.image?\mathrm{{\color{Golden}Let's\;go\;sweetie}}" width=160px" </p></br>  
+ <img src="https://latex.codecogs.com/svg.image?\mathrm{{\color{Golden}Let's\;go\;sweetie}}" width=160px" </p></br>
 
 > https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
 >
@@ -857,9 +858,8 @@ ircpipproxy.duckdns.org
 >
 > https://www.nslookup.io/domains/nima.nscl.ir/dns-records/
 >
-> 
 > https://www.nslookup.io/domains/turk.radicalization.ir/dns-records/
-> 
+>
 > https://www.nslookup.io/domains/bestproxy.onecf.eu.org/dns-records/
 >
 > https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
@@ -888,7 +888,7 @@ ircpipproxy.duckdns.org
 
 How to find ProxyIPs for VLESS/VMESS/TROJAN CF Workers & Pages using Cyberspace Search Engine [Telegra.ph]
 
-<br><br>  
+<br><br>
 
 and more more more IP's - [Rentry.co/CF-proxyIP]
 
