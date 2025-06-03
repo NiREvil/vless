@@ -63,10 +63,26 @@ bpb.yousef.isegaro.com
 156.146.53.82
 ```
 
-**🇺🇸 USA, Virginia, Ashburn, Total Uptime Technologies**
+**🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies**
 
 ```POV-Ray SDL
 72.13.122.137
+```
+
+🇦🇹 **Austria, Vienna, Aeza international Ltd**  
+
+```POV-Ray SDL
+147.45.41.209
+```   
+
+```POV-Ray SDL
+185.106.94.67
+```  
+
+🇧🇬 **Bulgaria, Sofia, EDIS GmbH**  
+
+```POV-Ray SDL
+45.153.125.245
 ```
 
 **🇹🇷 Turkey, izmir, Stark Industries Solutions LTD**
@@ -82,8 +98,39 @@ bpb.yousef.isegaro.com
 ```POV-Ray SDL
 62.3.12.185
 ```
+🇹🇷 **Turkey, Istanbul, UltaHost Inc.**  
 
-**🇹🇷 Turkey, Istanbul, Cogent Communications**
+```POV-Ray SDL
+188.132.183.166
+```  
+
+🇹🇷 **Turkey, Izmir, Alastyr A.S**  
+
+```POV-Ray SDL
+185.8.129.187
+```  
+
+🇹🇷 **Turkey, Izmir, PQ Hosting plus**  
+
+```POV-Ray SDL
+45.89.52.247
+```  
+
+```POV-Ray SDL
+95.164.11.116
+```  
+
+```POV-Ray SDL
+94.131.123.74
+```  
+
+🇹🇷 **Turkey, Istanbul, Scalaxy B.V**  
+
+```POV-Ray SDL
+38.180.105.164
+```  
+
+🇹🇷 **Turkey, Istanbul, Cogent Communications**
 
 ```POV-Ray SDL
 62.3.12.14
@@ -116,6 +163,61 @@ bpb.yousef.isegaro.com
 ```POV-Ray SDL
 212.34.142.100
 ```
+
+```POV-Ray SDL
+185.155.220.64
+```
+
+
+🇦🇪 **United Arab Emirates, Ras al, G-Core labs S.A**
+
+```POV-Ray SDL
+217.195.200.138
+```
+
+🇦🇪 **United Arab Emirates, M247 Europe**
+
+```POV-Ray SDL
+176.97.66.175
+```  
+
+```POV-Ray SDL
+176.97.67.38
+```
+
+🇨🇦 **Canada, Toronto, Advanced Knowledge Networks**  
+
+```POV-Ray SDL
+172.98.207.58
+```
+
+```POV-Ray SDL
+209.200.246.130
+```
+
+🇨🇦 Canada, Kingston, Server Cloud Inc**   
+```POV-Ray SDL
+199.48.102.83
+```  
+
+🇨🇦 **Canada, Torento, kamatera .inc**  
+
+```POV-Ray SDL
+213.255.209.207
+```
+
+🇦🇺 **Australia, Sydney, Macquarie telecom**  
+
+```POV-Ray SDL
+125.7.24.251
+```
+
+🇦🇺 **Australia, Sydney, Digital Ocean**  
+
+```POV-Ray SDL
+170.64.240.100
+```  
+
 
 ## Google LLC
 
@@ -526,7 +628,13 @@ bpb.yousef.isegaro.com
 
 ## Others
 
-![rainbow]
+![rainbow]  
+
+🇮🇳 India Mumbai, Pdrsolutionsfzc
+
+```POV-Ray SDL
+216.10.243.159
+```
 
 **🇺🇸 USA, California, santa clara, Tencent cloud**
 
@@ -680,52 +788,68 @@ ircpipproxy.duckdns.org
 
 ### 1. تست از طریق وب‌سایت
 
-اولین روش آسون اینه که وب‌سایت [![Here](https://img.shields.io/badge/EDtunnelProxyTester-blue?logo=opencollective)](https://proxyip.edtunnel.best) رو باز کنیم پروکسی دلخواهمون رو تو کادر IP قرار بدیم (`443:` بذار بمونه آخرش)، در سطر بعدی گزبنه tls و هاست هم پیشفرض باقی بمونن و submit رو می‌زنیم و چند ثانیه بعد انتهای صفحه نتایج به نمایش درمیاد، گزینه proxyip برابر با True باشه حله میتونیم استفاده کنیم.
+اولین روش آسون اینه که وب‌سایت [![Here](https://img.shields.io/badge/Dì_proxyIP_Test-blue?logo=opencollective)](https://proxyip.victoriacross.ir) رو باز کنیم، تو کادر اول آی‌پی یا دامنه پروکسی دلخواهمون رو قرار بدیم و با کلیک روی گزینه Check نتایج برامون به نمایش درمیان، امکان اسکن رنج‌آی‌پی برای کاربران حرفه‌ای هم در سایت تستمون هستش.  
 
-![1000048541](https://github.com/user-attachments/assets/dfa8fc22-f5ed-44c2-843c-5a8cb55cce71)
-![1000048540](https://github.com/user-attachments/assets/7c902603-9f58-43d4-9e0c-8aa4ac81c059)
+ممکنه بعضی وقتا isp رو نشون نده و فقط بگه که این آی‌پی سالمه، اونوقت از این وب‌سایت
+[![Here](https://img.shields.io/badge/Check_Host-yellow?logo=opencollective)](https://check-host.net/ip-info) کمک بگیرید برای فهمیدن اطلاعات بیشتر (سایت پشت کلادفلر نیست).   
 
-<br>
+دومین سایت یکم سختتره ولی بازم آسون به حساب میاد، اینطوریه که باید وب‌سایت [![Here](https://img.shields.io/badge/EDtunnel-blue?logo=opencollective)](https://proxyip.edtunnel.best) رو باز کنیم پروکسی دلخواهمون رو تو کادر IP قرار بدیم (اگه از پورت آی‌پی مد نظرت خبر نداری ترجیحا `443:` بذار بمونه)، در سطر بعدی گزبنه tls و هاست پیشفرض باقی بمونن و درنهایت submit رو می‌زنیم و چند ثانیه بعد نتایج به نمایش درمیاد، گزینه proxyip برابر با True باشه حله می‌تونیم ازش استفاده کنیم.   
+
+<p align="center">
+  <br><img src="https://github.com/user-attachments/assets/559d7334-c8b7-402c-b5e3-85c70afae972" width="680px">
+</p><br>   
+
+<br>   
+
+<p align="center">
+  <br><img src="https://github.com/user-attachments/assets/dfa8fc22-f5ed-44c2-843c-5a8cb55cce71" width="680px">
+</p><br>   
+
+---
+<br><br>  
 
 ### 2. تست از طریق پنل BPB
 
-همه می‌دونید که تو پنل [![Here](https://img.shields.io/badge/BPB-blue?logo=opencollective)](https://github.com/NiREvil/bia-pain-bache) یه قسمت هست برای وارد کردن پروکسی‌ آی‌پی و مارو خیلی راحت می‌کنه از ادیت کد و ساخت متغیر و غیره.  
+همه می‌دونید که تو پنل [![Here](https://img.shields.io/badge/BPB-blue?logo=opencollective)](https://github.com/bia-pain-bache) یه قسمت هست برای وارد کردن پروکسی‌ آی‌پی و مارو خیلی راحت می‌کنه از ادیت کد و ساخت متغیر و غیره.  
 نحوه انجام کار به این شکل هستش که ما پروکسی‌آی‌پی یا دامین دلخواه رو تو پنل قرار داده و دکمه `Apply Settings` رو می‌زنیم، حالا واسه اینکه این پروکسی جدید رو کانفیگ‌های‌ما اعمال بشه باید یکبار لینک اشتراک یا همون لینک ساب رو آپدیت بزنیم داخل کلاینت، تا قبل از آپدیت پروکسی آی‌پی‌ما قبلا هرچی بود همونه، بعد از آپدیت این جدیده میاد روی‌کار.  
-بعد باید به یکی از کانفیگ‌ها وصل شد و رفت سراغ یکی از سایت‌هایی که از CDN کلادفلر استفاده میکنن یا به اصطلاح پشت کلادفلر هستند، مثل لینک وورکر یا پیج خودمون، یا سایت‌های عمومی مثل [![Here](https://img.shields.io/badge/WHOER-blue?logo=opencollective)](https://whoer.net) و یا [![Here](https://img.shields.io/badge/SPEEDTEST-blue?logo=opencollective)](https://www.speedtest.net) و غیره تا ببینیم سایت برامون بالا میاد یانه.  
+بعد باید به یکی از کانفیگ‌ها وصل شد و رفت سراغ یکی از سایت‌هایی که از CDN کلادفلر استفاده میکنن یا به اصطلاح پشت کلادفلر هستند، مثل لینک وورکر یا پیج خودمون، یا سایت‌های عمومی مثل [![Here](https://img.shields.io/badge/WHOER-blue?logo=opencollective)](https://whoer.net) و یا [![Here](https://img.shields.io/badge/SPEEDTEST-gray?logo=opencollective)](https://www.speedtest.net) و غیره تا ببینیم سایت برامون بالا میاد یانه.  
 اگه عادی بالا میان که اوکی پس پروکسی که انتخاب کردیم درست کار می‌کنه می‌تونیم ازش استفاده کنیم. اگه بالا نیومد سایت یا هر خطای دیگه‌ای داد یا هردفعه مرورگرمون کپچا نشون داد (تو پروکسی‌آی‌پی‌های مسخره‌ی oracle این خیلی پیش میاد) یا تو ربات های تلگرامی کپچا نشون داده میشه یا بالا نمیان اونوقت باید یکی دیگه انتخاب کنیم چون این منتخبمون داغونه.
 
-<br>
+<br>  
 
 ### 3. قراردادن پروکسی داخل کد یا ازطریق متغیرها
 
 روش کلاسیک واسه تست اینه که پروکسی‌آی‌پی رو داخل کد وورکر یا پیج قرار بدیم یا یکم حرفه‌ای تر بخوایم عمل کنیم برای پیج یا وورکر خودمون از داخل کلادفلر داخل وورکر یا پیجمون از تو ستینگ یه متغییر جدید `(Environment variable)` تعیین میکنیم به اسم `PROXYIP` و مقدار اون رو برابر با پروکسی دلخواه قرار میدیم.  
 بعد از انجام `Retry deployment` مجدد به کانفیگمون وصل میشیم و میریم سراغ یکی از سایت‌هایی که از CDN کلادفلر استفاده میکنن که تو روش دوم کامل توضیح دادم.
 
-<br><br>
+<br><br>  
 
 <p align="center">
-  <br><img src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png">
-</p>
+  <br><img src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" width="600px">
+</p><br>   
 
 <br><br>
 
 ## Latest worker & pages
 
-- The latest script for creating a VLESS configuration on Cloudflare is here: [![Here](https://img.shields.io/badge/zizifn-blue?logo=opencollective)](https://github.com/NiREvil/zizifn)
+- The latest script for creating a VLESS configuration on Cloudflare is here: [![Here](https://img.shields.io/badge/ZIZIFN-gold?logo=opencollective)](https://github.com/NiREvil/zizifn)
 
-- VLESS node subscription content generator built with Cloudflare Workers to automatically generate the preferred route: [![Here](https://img.shields.io/badge/Harmony-blue?logo=opencollective)](https://github.com/NiREvil/Harmony)
+- VLESS node subscription content generator built with Cloudflare Workers to automatically generate the preferred route [![Here](https://img.shields.io/badge/HARMONY-green?logo=opencollective)](https://github.com/NiREvil/Harmony)
 
-- And also A GUI Panel providing Worker subscriptions and Fragment settings and Warp configurations and ... [![Here](https://img.shields.io/badge/BPB-blue?logo=opencollective)](https://github.com/NiREvil/bia-pain-bache)
+- And also A GUI Panel providing Worker subscriptions and Fragment settings and Warp configurations and many others [![Here](https://img.shields.io/badge/BPB-blue?logo=opencollective)](https://github.com/NiREvil/bia-pain-bache)
 
 <br><br><br><br>
 
 ## Find proxyIPs
 
-**فکر کنم این آسونترین روش برای بدست آوردن پروکسی آی‌پی باشه.**  
+**فکر کنم این آسونترین روش برای پیدا کردن پروکسی آی‌پی باشه.**  
 روی هر کدوم از لینک‌های زیر کلیک کنی کلی پروکسی‌آی‌پی هست که با کلیک روی هرکدوم کادر مشخصات مربوط ب اون‌ها باز میشه.  
 روش های تست پروکسی‌آی‌پی‌ها در بخش قبلی نوشته شده.
 
-### $\color{gray} \Large \text{Let's go sweetheart}$
+<br> 
+
+<p align="left">
+ <img src="https://latex.codecogs.com/svg.image?\mathrm{{\color{Golden}Let's\;go\;sweetie}}" width=160px" </p></br>  
 
 > https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
 >
@@ -733,6 +857,9 @@ ircpipproxy.duckdns.org
 >
 > https://www.nslookup.io/domains/nima.nscl.ir/dns-records/
 >
+> 
+> https://www.nslookup.io/domains/turk.radicalization.ir/dns-records/
+> 
 > https://www.nslookup.io/domains/bestproxy.onecf.eu.org/dns-records/
 >
 > https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
@@ -761,134 +888,9 @@ ircpipproxy.duckdns.org
 
 How to find ProxyIPs for VLESS/VMESS/TROJAN CF Workers & Pages using Cyberspace Search Engine [Telegra.ph]
 
-<br><br>
+<br><br>  
 
-## Trash
-
-![rainbow]
-
-~~UK, London, Hostaris LLC~~
-
-    176.97.77.32
-
----
-
-~~Sweden, Stockholm , M247 Europe SRL~~
-
-    176.97.77.32
-
-~~🇺🇸 USA, New Jersey Clifton, DigitalOcean, LLC~~
-
-    88.119.175.79
-    159.65.228.185
-    45.55.71.106
-    167.71.176.15
-    129.146.186.4
-
----
-
-~~United Kingdom of Great Britain, Oracle co~~
-
-    143.47.228.52
-
----
-
-~~United Arab Emirates, Oracle co~~
-
-    129.151.152.254
-
----
-
-~~IP's: Luxembourg, UK~~
-
--     const proxyIPs = ['workers.bestip.one'];
-  ~~United Kingdom of Great Britain - Mythic Beasts Ltd~~
--     const proxyIPs = ["[2a00:1098:2b::1:ac40:6d0a]"];
--     const proxyIPs = ["[2a00:1098:2b::1:ac40:6c0a]"];
--     const proxyIPs = ["[2a00:1098:2c::5:ac40:6c0a]"];
--     const proxyIPs = ["[2a00:1098:2c::5:ac40:6d0a]"];
-
----
-
-~~Germany, Tencent Computer Systems Company Limited~~
-
--     const proxyIPs = ['43.157.17.4'];
-
----
-
-~~Germany, Hetzner Online GmbH~~
-
--     const proxyIPs = ["[2a01:4f8:c2c:123f:64:5:ac40:6c0a]"];
--     const proxyIPs = ["[2a01:4f8:c2c:123f:64:5:ac40:6d0a]"];
-
----
-
-~~Istanbul, Turkey Hosting Dunyam~~
-
--     const proxyIPs = ['2.59.119.35'];
-
----
-
-~~Finland Helsinki - Hetzner~~
-
--     const proxyIPs = ['104.28.224.14'];
--     const proxyIPs = ['65.21.241.202'];
-
----
-
-~~Austria, vienna-AWYZone~~
-
--     const proxyIPs = ['94.177.8.51'];
-
----
-
-~~Nuremberg, Germany Hetzner~~
-
--     const proxyIPs = ['3.28.118.156'];
--     const proxyIPs = ['5.9.106.85'];
-
----
-
-~~Stockholm, Sweden 3NT Solutions L.L.C~~
-
--     const proxyIPs = ['176.97.77.32'];
-
----
-
-~~London, England Hostaris~~
-
--     const proxyIPs = ['23.162.136.169'];
-
----
-
-~~Virginia, USA Amazon Technologies Inc.~~
-
--     const proxyIPs = ['3.216.234.194'];
--     const proxyIPs = ['4.4.234.181'];
-
----
-
-~~Tokyo, Japan Amazon Tech Inc.~~
-
--     const proxyIPs = ['3.112.21.102'];
-
----
-
-~~Australia, Sydney Amazon Tech Inc.~~
-
--     const proxyIPs = ['3.105.5.84'];
-
----
-
-~~Amsterdam, The Infrastructure Gp~~
-
--     const proxyIPs = ['5.2.77.100'];
-
-~~Tallinn, Estonia PAGM network~~
-
--     const proxyIPs = ['5.101.180.145'];
-
-and more shit's - [Rentry.co/CF-proxyIP]
+and more more more IP's - [Rentry.co/CF-proxyIP]
 
 [Rentry.co/CF-proxyIP]: https://rentry.co/CF-proxyIP
 [Telegra.ph]: https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06
