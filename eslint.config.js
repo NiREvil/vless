@@ -21,6 +21,7 @@ export default [
       'edge/waste/**',
       'edge/unite.js',
       '**/clash-12.**',
+      'sub/ProxyIP.md',
       'node_modules/**',
       'DNS over HTTPS/**',
       'package-lock.json',
@@ -56,7 +57,6 @@ export default [
       }],
     },
 
-  {
     // ⚙️ JSON, JSONC, JSON5
     files: ['**/*.json', '**/*.jsonc', '**/*.json5'],
     plugins: {
