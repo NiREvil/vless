@@ -4,8 +4,7 @@ let temporaryTOKEN, permanentTOKEN;
 export default {
   async fetch(request, env, ctx) {
     const websiteIcon =
-      env.ICO ||
-      'https://github.com/user-attachments/assets/31a6ced0-62b8-429f-a98e-082ea5ac1990';
+      env.ICO || 'https://github.com/user-attachments/assets/31a6ced0-62b8-429f-a98e-082ea5ac1990';
     const url = new URL(request.url);
     const UA = request.headers.get('User-Agent') || 'null';
     const path = url.pathname;
@@ -54,7 +53,8 @@ export default {
     } else if (path.toLowerCase() === '/resolve') {
       if (
         !url.searchParams.has('token') ||
-        (url.searchParams.get('token') !== temporaryTOKEN && url.searchParams.get('token') !== permanentTOKEN)
+        (url.searchParams.get('token') !== temporaryTOKEN &&
+          url.searchParams.get('token') !== permanentTOKEN)
       ) {
         return new Response(
           JSON.stringify(
@@ -99,7 +99,8 @@ export default {
     } else if (path.toLowerCase() === '/ip-info') {
       if (
         !url.searchParams.has('token') ||
-        (url.searchParams.get('token') !== temporaryTOKEN && url.searchParams.get('token') !== permanentTOKEN)
+        (url.searchParams.get('token') !== temporaryTOKEN &&
+          url.searchParams.get('token') !== permanentTOKEN)
       ) {
         return new Response(
           JSON.stringify(
@@ -189,8 +190,7 @@ export default {
         );
       }
     } else {
-      const envKey = env.URL302 ?
-        'URL302' : env.URL ? 'URL' : null;
+      const envKey = env.URL302 ? 'URL302' : env.URL ? 'URL' : null;
       if (envKey) {
         const URLs = await sanitizeURLs(env[envKey]);
         const URL = URLs[Math.floor(Math.random() * URLs.length)];
@@ -307,8 +307,7 @@ async function CheckProxyIP(proxyIP) {
       const statusCode = statusMatch ? parseInt(statusMatch[1]) : null;
       const looksLikeCloudflare = responseText.includes('cloudflare');
       const isExpectedError =
-        responseText.includes('plain HTTP request') ||
-        responseText.includes('400 Bad Request');
+        responseText.includes('plain HTTP request') || responseText.includes('400 Bad Request');
       const hasBody = responseData.length > 100;
       return statusCode !== null && looksLikeCloudflare && isExpectedError && hasBody;
     }
