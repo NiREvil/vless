@@ -324,32 +324,33 @@ async function 双重哈希(文本) {
   return 第二次十六进制.toLowerCase(); 
 }
 
-async function nginx() { 
-const text = \`<!DOCTYPE html>
-<html>
-<head>
-<title>Welcome to nginx!</title>
-<style>
-body {
-             width: 35em;
-             margin: 0 auto;
-             font-family: Tahoma, Verdana, Arial, sans-serif;
+async function nginxWelcomePage() {
+  const text = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Welcome to nginx!</title>
+    <style>
+        body {
+            width: 35em;
+            margin: 0 auto;
+            font-family: Tahoma, Verdana, Arial, sans-serif;
         }
-     </style>
+    </style>
     </head>
-   <body>
+    <body>
     <h1>Welcome to nginx!</h1>
-     <p>If you see this page, the nginx web server is successfully installed and
-     working. Further configuration is required.</p>
+    <p>If you see this page, the nginx web server is successfully installed and
+    working. Further configuration is required.</p>
     <p>For online documentation and support please refer to
-   <a href="http://nginx.org/">nginx.org</a>.<br/>
-   Commercial support is available at
-     <a href="http://nginx.com/">nginx.com</a>.</p>
-     <p><em>Thank you for using nginx.</em></p>
-     </body>
-     </html>
-     \`; 
-   return text; 
+    <a href="http://nginx.org/">nginx.org</a>.<br/>
+    Commercial support is available at
+    <a href="http://nginx.com/">nginx.com</a>.</p>
+    <p><em>Thank you for using nginx.</em></p>
+    </body>
+    </html>
+    `;
+  return text;
 }
 
 async function HTML(hostname, 网站图标, token) {
@@ -545,8 +546,11 @@ async function HTML(hostname, 网站图标, token) {
        <p><code>GET /ip-info?ip=TARGET_IP&token=YOUR_TOKEN_IF_SET</code></p>
     </div>
 
-
-  <p>© 2025 Proxy IP Checker - By <strong>mehdi-hexing</strong> | Modified by mehdi-hexing</p>
+   const footer = `
+  <footer class="footer">
+    <p>© ${new Date().getFullYear()} Proxy IP Checker - By <strong>mehdi-hexing</strong> | Modified by mehdi-hexing</p>
+  </footer>
+`;
 
   <div id="toast" class="toast"></div>
 
