@@ -798,10 +798,12 @@ async function generateHTMLPage(hostname, websiteIcon, token) {
        <p><code>GET /resolve?domain=YOUR_DOMAIN&token=YOUR_TOKEN_IF_SET</code></p>
        <p><code>GET /ip-info?ip=TARGET_IP&token=YOUR_TOKEN_IF_SET</code></p>
     </div>
+     <footer class="footer">
+       <p>© ${new Date().getFullYear()} <strong>REvil - All Rights Reserved</strong> - <strong><a href="https://github.com/Diana-Cl" target="_blank">Dìana</a></strong></p>
+     </footer>
+   </div>
 
-  <p>© 2025 Proxy IP Checker - By <strong>mehdi-hexing</strong> | Modified by mehdi-hexing</p>
-
-  <div id="toast" class="toast"></div>
+   <div id="toast" class="toast"></div>
 
   <script>
     let isChecking = false;
