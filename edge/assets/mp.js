@@ -545,10 +545,11 @@ async function HTML(hostname, 网站图标, token) {
        <p><code>GET /ip-info?ip=TARGET_IP&token=YOUR_TOKEN_IF_SET</code></p>
     </div>
 
-    <footer class="footer">
-      <p>© ${new Date().getFullYear()} Proxy IP Checker - By <strong>mehdi-hexing</strong> | Modified by mehdi-hexing</p>
-    </footer>
-  </div>
+   const footer = `
+  <footer class="footer">
+    <p>© ${new Date().getFullYear()} Proxy IP Checker - By <strong>mehdi-hexing</strong> | Modified by mehdi-hexing</p>
+  </footer>
+`;
 
   <div id="toast" class="toast"></div>
 
