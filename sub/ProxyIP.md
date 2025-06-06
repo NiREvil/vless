@@ -237,12 +237,6 @@ bpb.yousef.isegaro.com
 35.247.124.181
 ```
 
-**🇫🇮 Finland, Lappeenranta, Google LLC**
-
-```POV-Ray SDL
-34.88.63.160
-```
-
 **🇪🇦 Spain, Madrid, Google LLC**
 
 ```POV-Ray SDL
@@ -374,22 +368,10 @@ bpb.yousef.isegaro.com
 
 </details>
 
-~~**🇨🇦 Canada, Montréal Quebec, Amazon tech**~~
-
-```POV-Ray SDL
-~~3.99.140.50~~
-```
-
 **🇬🇧 England, London, Amazon tech**
 
 ```POV-Ray SDL
 18.170.77.148
-```
-
-~~**🇮🇪 Ireland, Dublin Leinster, Amazon tech**~~
-
-```POV-Ray SDL
-54.74.167.219
 ```
 
 **🇫🇷 France, Paris, Amazon tech**
@@ -423,19 +405,7 @@ bpb.yousef.isegaro.com
 ```
 
 ```POV-Ray SDL
-95.216.143.166
-```
-
-```POV-Ray SDL
 138.201.244.245
-```
-
-```POV-Ray SDL
-37.27.40.190
-```
-
-```POV-Ray SDL
-37.27.80.227
 ```
 
 ```POV-Ray SDL
@@ -448,16 +418,6 @@ bpb.yousef.isegaro.com
 
 ```POV-Ray SDL
 65.109.167.39
-```
-
-**🇺🇸 USA, Hetzner Online GmbH, Hetzner**
-
-```CSS
-5.78.49.81
-```
-
-```CSS
-5.161.225.35
 ```
 
 ## Oracle cloud corporations
