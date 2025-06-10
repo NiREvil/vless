@@ -54,12 +54,18 @@ jobs:
       DEFAULT_BRANCH: 'main'
       OUTPUT_FILENAME: 'ESET-CODES.md'
       TEMP_OUTPUT_FILE: 'key_gen_output.log'
-      LAST_RUN_DATE_FILE: '.last_run_date'
+      LOG_DIR: 'repo/edge/assets/logs'
+      LAST_RUN_DATE_FILE: 'repo/edge/assets/logs/.last_run_date'
 
     steps:
       - name: Checkout Repository Code
         uses: actions/checkout@v4
-        # Fetch depth 0 needed if we were reading commit history, but not needed for our marker file approach.
+
+      - name: Create Log Directory
+        run: |
+          # Create the log directory if it doesn't exist
+          mkdir -p "${{ env.LOG_DIR }}"
+          echo "Created directory: ${{ env.LOG_DIR }}"
 
       - name: Generate Keys
         run: |
@@ -71,7 +77,7 @@ jobs:
           BRANCH=${{ github.event.inputs.branch || env.DEFAULT_BRANCH }}
           OUTPUT_FILE="${{ env.OUTPUT_FILENAME }}"
           TEMP_OUTPUT="${{ env.TEMP_OUTPUT_FILE }}"
-          LAST_RUN_FILE="${{ env.LAST_RUN_DATE_FILE }}" # Get marker file name
+          LAST_RUN_FILE="${{ env.LAST_RUN_DATE_FILE }}" 
 
           echo "⚙️ Configuration ⚙️"
           echo "Triggered by: ${{ github.event_name }}"
@@ -83,6 +89,7 @@ jobs:
           echo "Output File: $OUTPUT_FILE"
           echo "Temp Output File: $TEMP_OUTPUT"
           echo "Last Run Date File: $LAST_RUN_FILE"
+          echo "Log Directory: ${{ env.LOG_DIR }}"
           echo "---------------------"
 
           # Delete old temp file if exists
@@ -110,14 +117,14 @@ jobs:
             APPEND_FLAG=""
             # Check if temp file already exists from account generation
             if [[ -f "../$TEMP_OUTPUT" ]]; then
-              APPEND_FLAG="-a" # Append if file exists
+              APPEND_FLAG="-a"
             fi
-            # Use tee with append flag if needed, writing to the file in the parent directory
+            
             python3 main.py --auto-detect-browser ${KEY_TYPE} --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${KEY} | tee $APPEND_FLAG "../$TEMP_OUTPUT"
           fi
           echo "Generation commands executed. Output captured in ../$TEMP_OUTPUT"
 
-          cd .. # Go back to the main repository root
+          cd ..
 
           # --- Extract values and format Markdown for NEW entry ---
           echo "✨ Extracting data and formatting Markdown for the new entry..."
@@ -129,7 +136,7 @@ jobs:
           ACCOUNT_PASSWORD=$(grep '^Account Password:' "$TEMP_OUTPUT" | sed 's/^Account Password: //' || true)
 
           NEW_ENTRY_FILE="new_entry.md.tmp"
-          CURRENT_DATETIME_IRAN=$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M Tehran (UTC+3:30).')
+          CURRENT_DATETIME_IRAN=$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M IRN.')
 
           # Start building the new entry
           {
@@ -138,7 +145,7 @@ jobs:
             echo "> [!CAUTION]"
             echo "> Triggered by: ${{ github.event_name }}"
             echo ""
-            echo "<br><br>"
+            echo "<br></br>"
             echo ""
           } > "$NEW_ENTRY_FILE"
 
@@ -155,7 +162,7 @@ jobs:
               echo "$VPN_CODES_LIST" | sed 's/, /\n/g'
               echo '```'
               echo ""
-              echo "<br>"
+              echo "</br>"
               echo ""
             } >> "$NEW_ENTRY_FILE"
           fi
@@ -173,7 +180,7 @@ jobs:
               echo "$LICENSE_KEY"
               echo '```'
               echo ""
-              echo "<br>"
+              echo "</br>"
               echo ""
             } >> "$NEW_ENTRY_FILE"
           fi
@@ -199,7 +206,7 @@ jobs:
               fi
               echo '```'
               echo ""
-              echo "<br>"
+              echo "</br>"
               echo ""
             } >> "$NEW_ENTRY_FILE"
           fi
@@ -216,7 +223,7 @@ jobs:
             echo ""
             echo "---"
             echo ""
-            echo "<br><br>"
+            echo "<br></br>"
             echo ""
           } >> "$NEW_ENTRY_FILE"
 
