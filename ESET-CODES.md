@@ -169,4 +169,3 @@ davaughn.jamair@fsitip.com
 ```POV-Ray SDL
 4,hy}q+n(^UN>Sk8O
 ```
-
