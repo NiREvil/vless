@@ -1,17 +1,17 @@
 <p align="center">
-<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="140x" </p><br><br><br  >
+<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="140x" </p><br></br>  
 
 <div dir="rtl">  
      
-- **تعدادی لینک اشتراک برای کلاینت‌های** سینگ‌باکس، هیدیفای، نکوباکس، کلش‌متا، آمنزیا، آوت‌لاین، نیکا، مهسا، ویتوری‌ ان‌جی، نکوری و ...
+- تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، هیدیفای، نکوباکس، کلش‌متا، آمنزیا، آوت‌لاین، نیکا، مهسا، ویتوری‌ ان‌جی، نکوری و ...
 
 </div>
 
-- **Some subscription links are available for** [v2rayNG], [Sing-Box], [Hiddify], [NikaNG], [MahsaNG], [NekoBox], [Husi], [Exclave], [Amnezia], [Outline] [Clash-Meta] and other clients.
+- Some subscription links are available for [v2rayNG], [Sing-Box], [Hiddify], [NikaNG], [MahsaNG], [NekoBox], [Husi], [Exclave], [Amnezia], [Outline] [Clash-Meta] and other clients.
 
 - **Несколько ссылок для подписки на** v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Outline, Clash-Meta и ... Вернуть результат только
 
-- 为以下软件提供一些共享链接：v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, Nekobox, Husi, Exclave, Amnezia, Outline, Clash-Meta 等。<br><br>
+- 为以下软件提供一些共享链接：v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, Nekobox, Husi, Exclave, Amnezia, Outline, Clash-Meta 等。<br></br>
 
 > [!IMPORTANT]
 >
@@ -26,7 +26,7 @@
 > - اگر سورس هرکدوم رو سراغ داشتید لطفا اطلاع بدید اضافه کنم جلوی لینک.
 > - اگر لینک عمومی سراغ داشتید که براتون خوب کار کرده می‌تونید بفرستید اضافه کنم و مردممون استفاده کنن.
 > - متاسفانه از مرداد ماه نیما دیگه بینمون نیست و من و چند دوست دیگه اکانت گیت رو در حد توان اداره می‌کنیم. به امید آزادی 🤍
-> - تلگرام من: [[Di4Diana]].
+> - اکانت تلگرام من: [[Di4Diana]].
 > </details>
 
 > [!IMPORTANT]
@@ -51,11 +51,11 @@
 >
 > </details>
 
-<br><br>
+<br></br>
 
 ##
 
-> 📦 This configuration is dynamically generated and continuously updated via GitHub Actions workflows every 2 hours to ensure consistency and best practices.<br>
+> 📦 This configuration is dynamically generated and continuously updated via GitHub Actions workflows every 2 hours to ensure consistency and best practices.</br>  
 
 ##
 
@@ -72,7 +72,7 @@
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
 ```
 
-<br>
+</br>  
 
 ### Sing-Box URL <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="20"/>
 
@@ -80,18 +80,17 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 ```
 
-<br>
+</br>  
 
 ### Scan with Hiddify
 
 <p align="center">
-     <br>
      <img src="edge/assets/QRCode-Dog.png" alt="QR" width="680px">
-   </p> <br>
+   </p></br>  
 
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow]  
 
-<br>
+</br>  
 
 ## Table of Contents
 
@@ -116,7 +115,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 - [Amnezia](#Amnezia)
 - [Countries](#Countries)
 
-<br><br>
+<br></br>
 
 ## Cloudflare IPs
 
@@ -128,9 +127,9 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 > script to modify the arrangement of the IPs or to combine them with other repositories.  
 > e.g: https://strawberry.victoriacross.ir
 
-[![Here](https://img.shields.io/badge/DEMO_FOR_LATEST_REAL_ADDRESS_GENERATOR-blue?logo=opencollective)](https://real-address1.victoriacross.ir/)
+[![Here](https://img.shields.io/badge/DEMO_REAL_ADDRESS_GENERATOR-blue?logo=opencollective)](https://real-address1.victoriacross.ir/)
 
-<br><br>
+<br></br>
 
 #### All IPs
 
@@ -150,9 +149,11 @@ https://ircfspace.github.io/endpoint/
 
 #### ProxyIP
 
-https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
+https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md  
 
-<br><br>
+[![Here](https://img.shields.io/badge/PROXY_IP_CHECKER-silver?logo=opencollective)](https://proxyip.victoriacross.ir/)
+
+<br></br>
 
 ## WIREGUARDS
 
@@ -193,16 +194,13 @@ https://raw.githubusercontent.com/4n0nymou3/ss-config-updater/refs/heads/main/co
 
 **Auto generate in workflows - warp ON warp**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
-
-**Just Warp [[FR?]]**  
-https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Warp  
-https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Warp2  
+  
 **Warp On Warp [[DS?]]**  
 https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/subwarp/warp
 
----
+---  
 
-<br>
+</br>
 
 #### Warp for [NekoBox]
 
@@ -219,7 +217,7 @@ https://raw.githubusercontent.com/ndsphonemy/proxy-sub/refs/heads/main/mobile.tx
 
 ---
 
-<br>    
+</br>      
  
 ### Warp for [v2rayNG]    
 > [!NOTE]
@@ -231,7 +229,7 @@ https://raw.githubusercontent.com/ndsphonemy/proxy-sub/refs/heads/main/wg.txt
 
 https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/WireGuard.txt [[10i?]]
 
-<br>
+</br>  
 
 **Warp for [MahsaNG] & [NikaNG]**
 
@@ -240,7 +238,7 @@ https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/outp
 
 https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/Xray-WoW.json
 
-<br>
+</br>  
 
 ```CSS
 wireguard://WHlr4sChnKkiY7EXb5vyx0vcujTxLGFqAWltTO4w3Xs%3D@162.159.195.141:968?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=49%2C243%2C136#Tel= @darkness_427 wire
@@ -268,11 +266,13 @@ wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:888
 >
 > Suitable for ChatGPT [[wtf?]]
 
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml  
+
+https://raw.githubusercontent.com/hamedp-71/Clash_New/refs/heads/main/hp.yaml  [[hp?]]  
 
 https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/clash-wg.yml [[DS?]]
 
-<br>
+</br>  
 
 ### Warp [SFA] and [SFI]
 
@@ -306,7 +306,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscri
 
 ---
 
-<br>
+</br>  
 
 ## Outline
 
@@ -331,14 +331,14 @@ ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-4.csv
 ```
 
 ```POV-Ray SDL
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo5cXVnakpwaDdxUnhLVGpnVFUwMFg2@176.124.207.105:37322/?outline=1
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTowNEpqeHZhOWlUN2RjS2VuUkV6M3hn@176.124.207.105:37322/?outline=1
 ```
 
 ```POV-Ray SDL
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp5MUZCa3lhRWM5R3Z4ZVRqUzFIMFZv@176.124.207.105:37322/?outline=1
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpZRHpOeVJ0M3BjMFR3SHRJb2huQm9M@176.124.207.105:37322/?outline=1
 ```
 
-<br>
+</br>  
 
 ## ServerLess
 
@@ -349,7 +349,7 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp5MUZCa3lhRWM5R3Z4ZVRqUzFIMFZv@176.124.207.10
 > You can enjoy lightning-fast loading speeds for YouTube videos, Twitter, and web browsing.
 >
 > Just remember, because there's no server, **your IP address won't be changed.**  
-> Happy streaming! <br><br  >
+> Happy streaming! <br></br>
 
 **tlshello [[GFW]]**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_TLS_Fragment_xray_config.json
@@ -357,12 +357,12 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_T
 **1-1**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_1-1_Fragment_xray_config.json
 
-<br><br>
+<br></br>  
 
 ## [Amnezia]
 
 > [!NOTE]
-> Do you have [[any information]] on amnezia ? <br>
+> Do you have [[any information]] on amnezia ? </br>  
 
 **A0 NL**
 
@@ -494,7 +494,7 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJRNE9YYkdaei4wUTJDN1NoMEM1UXBGcURyenBtcktaYmZtMU00ZE1SSyJ9
 ```
 
-<br>
+</br>  
 
 <details>
 <summary>|    • MORE CONTEXT </summary>
@@ -675,17 +675,15 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 
 </details>
 
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow]  
 
-<br><br>
+<br></br>  
 
 ## XRAY
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
 
 https://robin.nscl.ir [[Ni?]]
-
-https://v2.alicivil.workers.dev/?list=4&locations=all&count=250 [[GE?]]
 
 https://iserver.store/Kevin.json  
 https://iserver.store/KevinVPN.json [[KV?]]
@@ -703,6 +701,8 @@ https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eterni
 
 https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/mix/sub.html [[AR?]]
 
+https://v2.alicivil.workers.dev/?list=4&locations=all&count=250 [[GE?]]
+
 https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/vless.html
 
 https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/HighSpeed.txt
@@ -713,8 +713,13 @@ https://raw.githubusercontent.com/lagzian/IranConfigCollector/main/Base64.txt
 
 https://raw.githubusercontent.com/darknessm427/V2ray-Sub-Collector/refs/heads/main/Darkness%20Sub1.txt
 
-https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Hysteria2.txt [[10i?]]
+https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Hysteria2.txt [[10i?]]  
 
+https://raw.githubusercontent.com/10ium/V2ray-Config/main/Splitted-By-Protocol/hysteria2.txt
+
+https://raw.githubusercontent.com/10ium/V2Hub3/main/merged_base64
+
+https://raw.githubusercontent.com/10ium/base64-encoder/main/encoded/10ium_mixed_iran.txt  
 https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Vmess.txt
 
 https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Vless.txt
@@ -723,19 +728,15 @@ https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/outp
 
 https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Trojan.txt
 
-https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Tuic.txt
-
 https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt
 
-https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Vless [[FR?]]
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality  [[FR?]]  
+
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Vless  
 
 https://raw.githubusercontent.com/tkamirparsa/Javid-shah/refs/heads/main/Sub.text [[XS?]]
 
-https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/mixed_iran.txt [[HK?]]
-
-https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality
-
-https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/SS
+https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/mixed_iran.txt [[HK?]]  
 
 https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/vless_iran.txt
 
@@ -747,15 +748,13 @@ https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/trojan_ira
 
 https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt
 
-https://raw.githubusercontent.com/coldwater-10/Vpnclashfa/main/raw/mkb.txt
-
 https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt
 
 https://github.com/ALIILAPRO/v2rayNG-Config/blob/main/server.txt [[ALP?]]
 
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/refs/heads/main/splitted/hysteria2
 
-https://raw.githubusercontent.com/bamdad23/JavidnamanIran/refs/heads/main/WS%2BHysteria2 [[JN?]]
+https://raw.githubusercontent.com/bamdad23/JavidnamanIran/refs/heads/main/WS%2BHysteria2 [[JN?]]  
 
 https://raw.githubusercontent.com/bamdad23/JavidnamanIran/refs/heads/main/multi
 
@@ -869,9 +868,9 @@ https://raw.githubusercontent.com/TelAB841Conf/AB_841-config-Free-X-ray/refs/hea
 
 https://raw.githubusercontent.com/Created-By/Telegram-Eag1e_YT/main/%40Eag1e_YT
 
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow]  
 
-<br><br>
+<br></br>
 
 ## CLASH
 
@@ -880,19 +879,25 @@ https://raw.githubusercontent.com/Created-By/Telegram-Eag1e_YT/main/%40Eag1e_YT
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml [[MB?]]
 
-https://raw.githubusercontent.com/hamedp-71/Clash_New/refs/heads/main/hp.yaml
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml [[Ni?]  
 
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml [[Ni?]
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/NiREvil_SSTime.yaml
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.yml
 
-https://raw.githubusercontent.com/NiREvil/vless/main/sub/clash-meta.yml
+https://raw.githubusercontent.com/NiREvil/vless/main/sub/clash-meta.yml  
+
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Reality  [[FR?]]  
+
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_T%2CH  
 
 https://git.io/emzclash
 
-https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/free-mihomo-sub/HighSpeed.yaml
+https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/free-mihomo-sub/HighSpeed.yaml  [[10i?]]  
 
-~~https://raw.githubusercontent.com/HenryPorternew/sbs/main/ssb/cl [[DN?]]~~
+https://raw.githubusercontent.com/coldwater-10/Vpnclashfa/refs/heads/main/free-mihomo-sub/MahsaFreeConfig-mtn.yaml  
+
+https://raw.githubusercontent.com/coldwater-10/Vpnclashfa/refs/heads/main/free-mihomo-sub/MahsaFreeConfig-mci.yaml  
 
 https://raw.githubusercontent.com/coldwater-10/Vpnclashfa/refs/heads/main/V2Hub5.yaml [CW?]
 
@@ -926,20 +931,21 @@ https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml
 
 https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.yml
 
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow]  
 
-<br><br>
+<br></br>  
 
 ## COUNTRIES
 
 > [!NOTE]  
+> 
 > **Credits: Dear [[SR?]]**
 >
 > Based on country for services that result in account bans if the location is changed,
 >
 > such as social media and artificial intelligence services.
 
-<br>
+</br>  
 
 | **Code** |     **Country Name**      |                                                  **Subscription Link**                                                   | **Code** |     **Country Name**      |                                                  **Subscription Link**                                                   |
 | :------: | :-----------------------: | :----------------------------------------------------------------------------------------------------------------------: | :------: | :-----------------------: | :----------------------------------------------------------------------------------------------------------------------: |
@@ -991,6 +997,7 @@ https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.
 ## COUNTRIES
 
 > [!NOTE]  
+>
 > **Credits: Dear [[10i?]]**
 
 | **Country Name**                                                                                               | **Num of Confs** | **Sub Links**                                                                                                                                         |
@@ -1149,7 +1156,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 **🇦🇪**  
 https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/United%20Arab%20Emirates/config.txt
 
-![rainbow](https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256)
+![rainbow]  
 
 ## Nighty night, sweet dreams ✨
 
@@ -1159,43 +1166,45 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
 </picture>
 
-<br>
+</br>  
 
 [Harmony]: https://github.com/NiREvil/Harmony/blob/b923d67dd5702886b0965de86182896373ade4e5/harmony.js#L892
-[Strawberry.js]: https://github.com/NiREvil/vless/blob/main/edge/strawberry.js
+[Strawberry.js]: https://github.com/NiREvil/vless/blob/main/edge/strawberry.js  
+[rainbow]: https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256  
 [10i?]: https://github.com/10ium
-[A?]: https://t.me/s/Azadi_az_inja_migzare
-[AR?]: https://t.me/s/arshia_mod_fun
-[AZ?]: https://t.me/s/AzadNet
+[A?]: https://telegram.me/s/Azadi_az_inja_migzare
+[AR?]: https://telegram.me/s/arshia_mod_fun
+[AZ?]: https://telegram.me/s/AzadNet
 [ALP?]: https://github.com/ALIILAPRO/v2rayNG-Config
 [BR?]: https://github.com/barry-far/V2ray-Configs
-[CY?]: https://t.me/s/Ln2Ray
+[CY?]: https://telegram.me/s/Ln2Ray
 [CW?]: https://github.com/coldwater-10/Vpnclashfa
 [DS?]: https://github.com/darknessm427
-[DN?]: https://t.me/s/DeamNet
-[Di4Diana]: https://t.me/Di4Diana
-[ESET CODES - VPN, ANTIVIRUS?]: https://t.me/F_NiREvil/2113
+[DN?]: https://telegram.me/s/DeamNet
+[Di4Diana]: https://telegram.me/Di4Diana
+[ESET CODES - VPN, ANTIVIRUS?]: https://telegram.me/F_NiREvil/2113
 [EP?]: https://github.com/Epodonios/v2ray-configs
-[FR?]: https://t.me/s/FREE2CONFIG
-[GE?]: https://t.me/s/gheychiamoozesh
+[FR?]: https://telegram.me/s/FREE2CONFIG
+[GE?]: https://telegram.me/s/gheychiamoozesh
 [GFW]: https://github.com/GFW-knocker/gfw_resist_HTTPS_proxy/tree/main
 [GZ?]: https://github.com/valid7996/
-[HK?]: https://github.com/HosseinKoofi/GO_V2rayCollector/
-[JN?]: https://t.me/s/JavidnamanIran
-[KV?]: https://t.me/s/KevinZakarian
-[Ni?]: https://t.me/s/F_NiREvil
+[HK?]: https://github.com/HosseinKoofi/GO_V2rayCollector/  
+[hp?]: https://raw.githubusercontent.com/hamedp-71/Clash_New/refs/heads/main/hp.yaml  
+[JN?]: https://telegram.me/s/JavidnamanIran
+[KV?]: https://telegram.me/s/KevinZakarian
+[Ni?]: https://telegram.me/s/F_NiREvil
 [MB?]: https://github.com/mahdibland/ShadowsocksAggregator/
-[ME?]: https://t.me/s/FreeVPNHomes/532
-[MK?]: https://t.me/maviks_bot?start=680cff2cb34f9a1f3951470a
-[PR?]: https://t.me/s/ProxyDaemi
+[ME?]: https://telegram.me/s/FreeVPNHomes/532
+[MK?]: https://telegram.me/maviks_bot?start=680cff2cb34f9a1f3951470a
+[PR?]: https://telegram.me/s/ProxyDaemi
 [SW?]: https://github.com/jadolg/shadowmere
 [SR?]: https://github.com/soroushmirzaei/telegram-configs-collector
-[WE?]: https://t.me/s/IranRamona
+[WE?]: https://telegram.me/s/IranRamona
 [wtf?]: https://github.com/NiREvil/vless/blob/main/sub/clash-meta-wg.yml#L40
-[XS?]: https://t.me/s/xs_filternet
-[Arshia]: https://t.me/s/warpscanner
+[XS?]: https://telegram.me/s/xs_filternet
+[Arshia]: https://telegram.me/s/warpscanner
 [Anita?]: https://ainita.net/vpn.html
-[The Darkness]: https://t.me/s/ConfigWireguard
+[The Darkness]: https://telegram.me/s/ConfigWireguard
 [Nekobox]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
 [Husi]: https://github.com/xchacha20-poly1305/husi/releases
 [Exclave]: https://github.com/dyhkwong/Exclave/releases
@@ -1207,6 +1216,6 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [SFA]: https://github.com/SagerNet/sing-box/releases
 [SFI]: https://apps.apple.com/us/app/sing-box/id6451272673
 [Hiddify]: https://github.com/hiddify/hiddify-app/releases
-[any information]: https://t.me/s/F_NiREvil/6292
+[any information]: https://telegram.me/s/F_NiREvil/6292
 [Amnezia]: https://github.com/amnezia-vpn/amnezia-client/releases
 [Clash-Meta]: https://github.com/MetaCubeX/ClashMetaForAndroid/releases
