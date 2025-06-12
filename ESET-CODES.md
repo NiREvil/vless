@@ -5,7 +5,8 @@
 > [!WARNING]
 >
 > ∅ Triggered by: **Schedule**  
-> ∆ Time-Sensitive Codes  
+> ∆ Time-Sensitive Codes
+>
 > - Expire in 24 hours
 > - Single-device binding
 > - No reactivation permitted
@@ -258,7 +259,7 @@ Password: Tp1;e&LHtMYssnb|`6`2
 <br />
 
 Everything you need to know about ESET. [^1]  
-Need more VPN access codes? [^2]  
+Need more VPN access codes? [^2]
 
 [^1]: [View Full Post](https://t.me/F_NiREvil/2113)
 
