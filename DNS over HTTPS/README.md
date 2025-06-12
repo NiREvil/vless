@@ -1,4 +1,5 @@
 # DoH-cf-workers
+
 > DNS-over-HTTPS
 
 ### این مخزن شامل اسکریپت یک دی ان اس پروکسی بسیار ساده قابل اجرا بر روی وورکر کلادفلر می‌باشد
@@ -11,9 +12,12 @@
 4. لاین 3 و 4 کد را با DoH دلخواه خود جایگزین کرده و save and deploy کنید.
 5. می‌توانید از آدرس Worker در هر برنامه‌ای که از DoH پشتیبانی می‌کند استفاده کنید (مانند AdGuard، NekoBox, Rethink , تنظیمات DNS امن مرورگرها، YogaDNS، Intra، Nebulo و غیره).
 6. در صورت تمایل می‌توانید متغیر doh را با هر سرور [any DNS-over-HTTPS server you want](https://github.com/NiREvil/vless/blob/main/DNS%20over%20HTTPS/any%20DNS-over-HTTPS%20server%20you%20want.md) جایگزین کنید.
+
 #
+
 طبق نظرات کاربران تأیید شده است که با Cloudflare، Google و [NextDNS](https://my.nextdns.io/signup) و [Adguard](https://adguard-dns.io/en/welcome.html) و controlD به خوبی کار می‌کنند.
-> اگر نمیخواستید ثبت نام و  شخصی سازی کنید DoH ادگارد، نکست و کنترل دی رو، از DoH های عمومی آن‌ها استفاده کنید برای لاین سوم و چهارم وورکر
+
+> اگر نمیخواستید ثبت نام و شخصی سازی کنید DoH ادگارد، نکست و کنترل دی رو، از DoH های عمومی آن‌ها استفاده کنید برای لاین سوم و چهارم وورکر
 
 **ادگارد:**
 
@@ -60,29 +64,36 @@
 
     https://dns.403.online/dns-query
 
-    
 برخی از ارائه دهندگان از URL یکسان استفاده می‌کنند (Cloudlfare، NextDNS)، برخی دیگر به جای مسیر /dns-query از /resolve استفاده می‌کنند (Google، AdGuard).
 
 **چرا باید DNS شخصی با وورکر ساخت؟**
 
 در صورتی که ارائه دهندگان اینترنت شروع به مسدود کردن ارائه دهندگان DNS شناخته شده کنند؛ دیگر قادر به استفاده از آن ها نخواهید بود، می‌توانید از DNS خود استفاده کنید.
+
 > حتی اگر آن‌ها بطور کامل workers.dev را مسدود کنند، می‌توانید از دامنه خود استفاده کنید (باید روی Cloudflare میزبانی شود).
+
 #
- اگر می‌خواهید از دامنه‌ای استفاده کنید که روی Cloudflare میزبانی نشده است، به جای آن از
+
+اگر می‌خواهید از دامنه‌ای استفاده کنید که روی Cloudflare میزبانی نشده است، به جای آن از
 [doh-cf-pages](https://github.com/tina-hello/doh-cf-pages) استفاده کنید، جایی که حتی رکوردهای CNAME از [FreeDNS](https://freedns.afraid.org/) برای دامنه سفارشی کافی است.
+
 #
-تعداد درخواست‌های روزانه در سطح رایگان به ۱۰۰ هزار محدود است، که برای استفاده شخصی یا حتی خانوادگی باید کافی باشد. اگر به بیشتر نیاز دارید، یا باید دامنه خریداری کرده و به اکانت کلادفلر وصل کنید و یا اکانت کلادفلر خود را به paid plan ارتقا دهید، (نیاز به کردیت کارت). 
+
+تعداد درخواست‌های روزانه در سطح رایگان به ۱۰۰ هزار محدود است، که برای استفاده شخصی یا حتی خانوادگی باید کافی باشد. اگر به بیشتر نیاز دارید، یا باید دامنه خریداری کرده و به اکانت کلادفلر وصل کنید و یا اکانت کلادفلر خود را به paid plan ارتقا دهید، (نیاز به کردیت کارت).
 در صورت استفاده از دامنه شخصی در کلادفلر و ساخت ساب‌دامین برای وورکر DNS خود و حتی در سطح رایگان بودن اکانت کلادفلر ، درخواست‌های روزانه نامحدود محاسبه خواهد شد.
 
 #
-### Anything    
+
+### Anything
+
 [![icons8-Telegram-64](https://img.icons8.com/arcade/64/telegram-app.png)](https://t.me/NiREvil)
 
 #
 
-
 [توضیجات انگلیسی منبع اسکریپت](https://github.com/tina-hello/doh-cf-workers)
+
 # doh-cf-workers
+
 A very minimalist DNS-over-HTTPS proxy on Cloudflare Workers.
 
 Sign up for a free [Cloudflare Workers](https://workers.cloudflare.com/) account, create a new worker, replace the Script with the content of [index.js](/index.js), deploy the worker, and you're done, use the address anywhere DoH is accepted (AdGuard, browsers secure DNS settings, YogaDNS, Intra, Nebulo etc). Feel free to replace the `doh` variable with [any DNS-over-HTTPS server you want](https://github.com/curl/curl/wiki/DNS-over-HTTPS). Confirmed to work with Cloudflare itself, Google, and NextDNS. The rarely supported [JSON API](https://developers.google.com/speed/public-dns/docs/doh/json) is available through the `dohjson` variable. Some providers use identical URL (Cloudlfare, NextDNS), some use `/resolve` instead of `/dns-query` for path (Google, AdGuard).
