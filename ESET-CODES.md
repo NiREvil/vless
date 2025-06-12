@@ -2,12 +2,10 @@
 
 ## Generated On: Thursday, 12 June 2025, 23:00 IRN
 
-> [!NOTE]
-> ⚠️ Triggered by: Schedule
-
-> [!WARNING] > **⏳ Time-Sensitive Codes**
->
-> - VPN access codes:
+> [!WARNING]
+> 
+> ⚠️ Triggered by: **Schedule**  
+> ⏳ Time-Sensitive Codes
 > - Expire in 24 hours
 > - Single-device binding
 > - No reactivation permitted
