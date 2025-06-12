@@ -19,8 +19,8 @@ on:
         required: true
         type: choice
         options:
-        - 1secmail
         - guerrillamail
+        - 1secmail
         - developermail
         - mailticking
         - fakemail
@@ -41,7 +41,7 @@ on:
         required: false
         default: 'main'
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '0 */6 * * *'
 
 jobs:
   generate-and-commit:
@@ -54,8 +54,8 @@ jobs:
       DEFAULT_BRANCH: 'main'
       OUTPUT_FILENAME: 'ESET-CODES.md'
       TEMP_OUTPUT_FILE: 'key_gen_output.log'
-      LOG_DIR: 'repo/edge/assets/logs'
-      LAST_RUN_DATE_FILE: 'repo/edge/assets/logs/.last_run_date'
+      LOG_DIR: 'edge/assets/logs'
+      LAST_RUN_DATE_FILE: 'edge/assets/logs/.last_run_date'
 
     steps:
       - name: Checkout Repository Code
@@ -63,13 +63,11 @@ jobs:
 
       - name: Create Log Directory
         run: |
-          # Create the log directory if it doesn't exist
           mkdir -p "${{ env.LOG_DIR }}"
           echo "Created directory: ${{ env.LOG_DIR }}"
 
       - name: Generate Keys
         run: |
-          # Determine parameters
           ACCOUNT=${{ github.event.inputs.account || env.DEFAULT_ACCOUNT }}
           KEY=${{ github.event.inputs.key || env.DEFAULT_KEY }}
           MAIL=${{ github.event.inputs.mail || env.DEFAULT_MAIL }}
@@ -79,7 +77,8 @@ jobs:
           TEMP_OUTPUT="${{ env.TEMP_OUTPUT_FILE }}"
           LAST_RUN_FILE="${{ env.LAST_RUN_DATE_FILE }}" 
 
-          echo "⚙️ Configuration ⚙️"
+          echo "*********************************"
+          echo "⚙️ Configuration"
           echo "Triggered by: ${{ github.event_name }}"
           echo "Account Count: $ACCOUNT"
           echo "Key Count: $KEY"
@@ -90,9 +89,8 @@ jobs:
           echo "Temp Output File: $TEMP_OUTPUT"
           echo "Last Run Date File: $LAST_RUN_FILE"
           echo "Log Directory: ${{ env.LOG_DIR }}"
-          echo "---------------------"
+          echo "*********************************"
 
-          # Delete old temp file if exists
           rm -f "$TEMP_OUTPUT"
 
           echo "Cloning Key-Gen repository..."
@@ -115,7 +113,6 @@ jobs:
           if [[ ${KEY} -ne 0 ]]; then
             echo "Generating $KEY keys (type: $KEY_TYPE)..."
             APPEND_FLAG=""
-            # Check if temp file already exists from account generation
             if [[ -f "../$TEMP_OUTPUT" ]]; then
               APPEND_FLAG="-a"
             fi
@@ -123,7 +120,7 @@ jobs:
             python3 main.py --auto-detect-browser ${KEY_TYPE} --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${KEY} | tee $APPEND_FLAG "../$TEMP_OUTPUT"
           fi
           echo "Generation commands executed. Output captured in ../$TEMP_OUTPUT"
-
+          
           cd ..
 
           # --- Extract values and format Markdown for NEW entry ---
@@ -136,33 +133,35 @@ jobs:
           ACCOUNT_PASSWORD=$(grep '^Account Password:' "$TEMP_OUTPUT" | sed 's/^Account Password: //' || true)
 
           NEW_ENTRY_FILE="new_entry.md.tmp"
-          CURRENT_DATETIME_IRAN=$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M IRN.')
+          CURRENT_DATETIME_IRAN=$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M IRN')
 
           # Start building the new entry
           {
-            echo "## Generated On: ${CURRENT_DATETIME_IRAN}"
+            echo "#"
             echo ""
-            echo "> [!CAUTION]"
-            echo "> Triggered by: ${{ github.event_name }}"
+            echo "## Generated On: ${CURRENT_DATETIME_IRAN}  "
             echo ""
-            echo "<br></br>"
+            echo "> [!WARNING]"
+            echo "> ∆ Triggered by: ${{ github.event_name }}  "
+            echo "> ∆ Time-Sensitive Codes:  "
+            echo "> - Expire in 24 hours"
+            echo "> - Single-device binding"
+            echo "> - No reactivation permitted"
+            echo ""
+            echo "<br />"
             echo ""
           } > "$NEW_ENTRY_FILE"
 
           # 1. Add VPN Codes Section (if VPN codes exist)
           if [[ -n "$VPN_CODES_LIST" ]]; then
             {
-              echo "### ESET VPN ACCESS CODES"
-              echo ""
-              echo "> [!NOTE]"
-              echo "> The access codes for ESET VPN will expire in 24 hours."
-              echo "> Each code is valid for login on only one device."
+              echo "**ESET VPN ACCESS CODES**"
               echo ""
               echo '```ruby'
               echo "$VPN_CODES_LIST" | sed 's/, /\n/g'
               echo '```'
               echo ""
-              echo "</br>"
+              echo "<br />"
               echo ""
             } >> "$NEW_ENTRY_FILE"
           fi
@@ -170,17 +169,14 @@ jobs:
           # 2. Add ESET Security License Section (if License Key exists)
           if [[ -n "$LICENSE_KEY" ]]; then
             {
-              echo "### ESET SECURITY LICENSE"
+              echo "**ESET BUSINESS SECURITY LICENSE**"
               echo ""
-              echo "**Name:** ${LICENSE_NAME:-N/A}"
-              echo "**Expiry:** ${LICENSE_OUT_DATE:-N/A}"
-              echo "**License Key:**"
-              echo ""
-              echo '```POV-Ray SDL'
-              echo "$LICENSE_KEY"
+              echo "```yml"
+              echo "Expiry: ${LICENSE_OUT_DATE:-N/A}"
+              echo "License Key: $LICENSE_KEY"
               echo '```'
               echo ""
-              echo "</br>"
+              echo "<br  />"
               echo ""
             } >> "$NEW_ENTRY_FILE"
           fi
@@ -188,38 +184,32 @@ jobs:
           # 3. Add ESET Account Section (if Account Email exists)
           if [[ -n "$ACCOUNT_EMAIL" ]]; then
             {
-              echo "### ESET ACCOUNT"
+              echo "**ESET ACCOUNT CREDENTIALS**"
               echo ""
-              echo "**Email:**"
-              echo ""
-              echo '```CSS'
-              echo "$ACCOUNT_EMAIL"
-              echo '```'
-              echo ""
-              echo "**Password:**"
-              echo ""
-              echo '```POV-Ray SDL'
+              echo '```yml'
+              echo "Email: $ACCOUNT_EMAIL"
               if [[ -n "$ACCOUNT_PASSWORD" ]]; then
-                echo "$ACCOUNT_PASSWORD"
+                echo "Password: $ACCOUNT_PASSWORD"
               else
                 echo "N/A"
               fi
               echo '```'
               echo ""
-              echo "</br>"
+              echo "<br  />"
               echo ""
             } >> "$NEW_ENTRY_FILE"
           fi
 
           # 4. Add Static Footer Link Section
           {
-            echo "#### 📚 Everything you need to know about ESET"
+            echo "Everything you need to know about ESET [^1]  "
+            echo "Need more VPN access codes? [^2]"
             echo ""
-            echo "[Read Here](https://t.me/F_NiREvil/2113)"
+            echo "<br />"
             echo ""
-            echo "#### 🪄 If you need more VPN codes, Check out"
+            echo "[^1]: [View Full Post](https://telegram.me/s/F_NiREvil/2113)"
             echo ""
-            echo "[The Darkness TG channel](https://t.me/Eset_key_trial)"
+            echo "[^2]: [Explore The Darkness Hub](https://telegram.me/s/Eset_key_trial)"
             echo ""
             echo "---"
             echo ""
