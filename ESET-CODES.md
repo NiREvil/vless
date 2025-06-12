@@ -1,15 +1,15 @@
 #
-## Generated On: Thursday, 12 June 2025, 23:00 IRN
 
+## Generated On: Thursday, 12 June 2025, 23:00 IRN
 
 > [!NOTE]
 > ⚠️ Triggered by: Schedule
 
-> [!WARNING]
-> **⏳ Time-Sensitive Codes**  
-> - VPN access codes:   
-> - Expire in 24 hours  
-> - Single-device binding  
+> [!WARNING] > **⏳ Time-Sensitive Codes**
+>
+> - VPN access codes:
+> - Expire in 24 hours
+> - Single-device binding
 > - No reactivation permitted
 
 <br><br />
@@ -31,15 +31,17 @@ T006TXQWKS
 
 <br />
 
-**ESET BUSINESS SECURITY LICENSE**  
+**ESET BUSINESS SECURITY LICENSE**
+
 ```yml
-Expiry: 12.07.2025  
+Expiry: 12.07.2025
 License Key: f723a7c0-6922-4214-ae78-8e85f2d11c5d
 ```
 
 <br />
 
-**ESET ACCOUNT Credentials**  
+**ESET ACCOUNT Credentials**
+
 ```yml
 Email: v4o47u+6zfjqzlpksfto@guerrillamail.biz
 Password: 6-wJYvk7J#|U.pGmo=u
@@ -48,11 +50,12 @@ Password: 6-wJYvk7J#|U.pGmo=u
 <br />
 
 Everything you need to know about ESET. [^1]  
-Need more VPN access codes? [^2]  
+Need more VPN access codes? [^2]
 
 <br><br />
 
 #
+
 ## Generated On: Thursday, 12 June 2025, 15:49 IRN
 
 <br />
@@ -74,15 +77,17 @@ B00BZDOPWC
 
 <br />
 
-**ESET BUSINESS SECURITY LICENSE**  
+**ESET BUSINESS SECURITY LICENSE**
+
 ```yml
-Expiry: 12.07.2025  
+Expiry: 12.07.2025
 License Key: F5CD-XTRS-CKNC-TSAD-AX3S
 ```
 
-<br />  
+<br />
 
-**ESET ACCOUNT Credentials**  
+**ESET ACCOUNT Credentials**
+
 ```yml
 Email: nayson.dreyson@fsitip.com
 Password: ;fj>sXTB3L}Pb_wMK(f[7
@@ -111,23 +116,26 @@ SVZI4J66AT
 
 <br />
 
-**ESET BUSINESS SECURITY LICENSE**  
+**ESET BUSINESS SECURITY LICENSE**
+
 ```yml
-Expiry: 12.07.2025  
+Expiry: 12.07.2025
 License Key: S9AC-XVTR-WSMB-5CVS-NW8N
-```  
+```
 
-<br />  
+<br />
 
-**ESET ACCOUNT Credentials**  
+**ESET ACCOUNT Credentials**
+
 ```yml
 Email: mehrab.severyn@fsitip.com
 Password: mexnrWg^;n7LCE17UXy
-```  
+```
 
 <br></br>
 
 #
+
 ## Generated On: Thursday, 12 June 2025, 07:48 IRN
 
 <br  />
@@ -149,23 +157,26 @@ OJ5SS8UWF8
 
 <br />
 
-**ESET BUSINESS SECURITY LICENSE**  
+**ESET BUSINESS SECURITY LICENSE**
+
 ```yml
-Expiry: 12.07.2025  
+Expiry: 12.07.2025
 License Key: DEUG-XK23-EBBC-RH7K-HU9S
 ```
 
 <br />
 
-**ESET ACCOUNT Credentials**  
+**ESET ACCOUNT Credentials**
+
 ```yml
 Email: kairen.keyvon@fsitip.com
 Password: M<Bj1PGalRZ:0
-```  
+```
 
 <br></br>
 
 #
+
 ## Generated On: Thursday, 12 June 2025, 04:19 IRN
 
 <br  />
@@ -187,25 +198,27 @@ SONGXP5MUH
 
 <br />
 
-**ESET BUSINESS SECURITY LICENSE**  
+**ESET BUSINESS SECURITY LICENSE**
+
 ```yml
-Expiry: 12.07.2025  
+Expiry: 12.07.2025
 License Key: 6WN9-X4FD-SK3R-KCJK-SDDF
-```  
+```
 
-<br />  
+<br />
 
-**ESET ACCOUNT Credentials**  
+**ESET ACCOUNT Credentials**
+
 ```yml
-Email:  travon.rhodes@fsitip.com
+Email: travon.rhodes@fsitip.com
 Password: Tp1;e&LHtMYssnb|`6`2
 ```
 
 <br />
 
 Everything you need to know about ESET. [^1]  
-Need more VPN access codes? [^2]  
-
+Need more VPN access codes? [^2]
 
 [^1]: [View Full Post](https://t.me/F_NiREvil/2113)
+
 [^2]: [Explore The Darkness Hub](https://t.me/Eset_key_trial)
