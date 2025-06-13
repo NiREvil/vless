@@ -63,11 +63,30 @@ bpb.yousef.isegaro.com
 156.146.53.82
 ```
 
-**🇺🇸 USA, Virginia Ashburn, Total Uptime Technologies**
+**🇺🇸 USA, Virginia, Ashburn, Total Uptime Technologies LLC.**
 
 ```POV-Ray SDL
 72.13.122.137
 ```
+
+🇺🇸 **USA, Virginia, Warrenton, OVH SAS**
+
+```POV-Ray SDL
+104.234.50.128
+```
+
+```POV-RAY SDL
+152.70.155.147
+```
+
+```POV-Ray SDL
+104.168.58.31
+```
+
+```POV-RAY SDL
+91.149.239.70
+```
+
 
 🇦🇹 **Austria, Vienna, Aeza international Ltd**
 
@@ -77,6 +96,10 @@ bpb.yousef.isegaro.com
 
 ```POV-Ray SDL
 185.106.94.67
+```
+
+```POV-Ray SDL
+94.228.169.84
 ```
 
 🇧🇬 **Bulgaria, Sofia, EDIS GmbH**
@@ -243,6 +266,27 @@ bpb.yousef.isegaro.com
 34.175.202.195
 ```
 
+🇪🇸 **Spain, Madrid, IONOS SE & M247 & PQ**   
+```POV-RAY SDL
+212.227.90.142
+```
+
+```POV-RAY SDL
+91.149.242.110
+```
+
+```POV-RAY SDL
+185.231.204.186
+```
+
+```POV-RAY SDL
+176.97.72.18
+```
+
+```POV-RAY SDL
+45.86.229.28
+```
+
 ## Amazon Technologies Inc
 
 ![rainbow]
@@ -267,8 +311,20 @@ bpb.yousef.isegaro.com
 
 **🇺🇸 USA, random, Amazon Technologies Inc**
 
+```POV-RAY SDL
+44.209.255.249
+```
+
+```POV-RAY SDL
+54.71.238.195
+```
+
 ```POV-Ray SDL
 50.112.33.254
+```
+
+```POV-RAY SDL
+67.226.220.10
 ```
 
 ```POV-Ray SDL
@@ -277,10 +333,6 @@ bpb.yousef.isegaro.com
 
 ```POV-Ray SDL
 34.225.195.136
-```
-
-```POV-Ray SDL
-213.170.157.1
 ```
 
 ```POV-Ray SDL
@@ -308,7 +360,7 @@ bpb.yousef.isegaro.com
 ```
 
 <details>
-<summary> |   And the list goes on ... </summary>
+<summary>| And subsequently ...</summary>
 
 ```POV-Ray SDL
 213.170.157.1
@@ -390,7 +442,47 @@ bpb.yousef.isegaro.com
 
 ![rainbow]
 
-**🇩🇪 Germany, Frankfurt am Main, Hetzner online**
+**🇩🇪 Germany, Frankfurt am Main, Digital Ocean & Hetzner online**
+
+```POV-Ray SDL
+95.179.167.159
+```
+
+```POV-Ray SDL
+80.66.87.42
+```
+
+```POV-Ray SDL
+93.127.223.41
+```
+
+```POV-Ray SDL
+104.248.128.137
+```
+
+```POV-Ray SDL
+138.68.124.200
+```
+
+```POV-Ray SDL
+67.207.73.198
+```
+
+```POV-Ray SDL
+128.140.2.140
+```
+
+```POV-Ray SDL
+128.140.50.32
+```
+
+```POV-Ray SDL
+78.46.233.187
+```
+
+```POV-Ray SDL
+49.13.92.32
+```
 
 ```POV-Ray SDL
 78.46.56.42
@@ -398,6 +490,10 @@ bpb.yousef.isegaro.com
 
 ```POV-Ray SDL
 91.107.135.104
+```
+
+```POV-Ray SDL
+91.107.191.214
 ```
 
 ```POV-Ray SDL
@@ -416,9 +512,6 @@ bpb.yousef.isegaro.com
 88.198.172.25
 ```
 
-```POV-Ray SDL
-65.109.167.39
-```
 
 ## Oracle cloud corporations
 
@@ -439,6 +532,10 @@ bpb.yousef.isegaro.com
 **🇮🇳 India, Airoli, Maharashtra, Oracle**
 
 ```POV-Ray SDL
+103.29.32.103
+```
+
+```POV-Ray SDL
 168.138.46.67
 ```
 
@@ -452,11 +549,7 @@ bpb.yousef.isegaro.com
 141.145.217.226
 ```
 
-```POV-Ray SDL
-144.24.200.164
-```
-
-**🇨🇭 Switzerland, Zurich Oberengstringen, Oracle**
+**🇨🇭 Switzerland, Zurich Oberengstringen, Ocle**
 
 ```POV-Ray SDL
 140.238.212.95
@@ -554,17 +647,9 @@ bpb.yousef.isegaro.com
 141.147.8.237
 ```
 
-**🇧🇷 Brazil, Sao paulo, Oracle**
+~~**🇧🇷 Brazil, Sao paulo, Oracle**~~
 
-```POV-Ray SDL
-144.22.252.124
-```
-
-**🇸🇬 Singapore, Oracle**
-
-```POV-Ray SDL
-18.141.204.88
-```
+~~**🇸🇬 Singapore, Oracle**~~  
 
 ## M247 Europe SRL
 
@@ -596,20 +681,50 @@ bpb.yousef.isegaro.com
 216.10.243.159
 ```
 
+🇺🇸 **USA, California, Los Angeles, Virtual Machine Solutions LLC.**
+
+```POV-RAY SDL
+141.11.210.29
+```
+
+```POV-RAY SDL
+139.60.162.153
+```
+
 **🇺🇸 USA, California, santa clara, Tencent cloud**
 
 ```CSS
 43.153.103.203
 ```
 
-**🇺🇸 USA, LA, HostPapa**
+🇺🇸 **USA, California, Santa Clara, HostPapa RackNerd LLC.**
 
 ```POV-Ray SDL
-198.46.200.132
+104.234.50.128
+```
+
+```POV-RAY SDL
+152.70.155.147
 ```
 
 ```POV-Ray SDL
-23.94.212.4
+104.168.58.31
+```
+
+```POV-Ray SDL
+104.168.102.163
+```
+
+```POV-Ray SDL
+103.35.188.123
+```
+
+```POV-Ray SDL
+107.172.167.194
+```
+
+```POV-Ray SDL
+107.172.159.182
 ```
 
 **🇺🇸 USA, Chicago, Elk Grove Village, Vultr Holdings, LLC**
@@ -633,6 +748,10 @@ bpb.yousef.isegaro.com
 ```
 
 **🇺🇸 USA, Virginia, Woodbridge, Alibaba Technology Ltd**
+
+```POV-RAY SDL
+5.78.114.254 443
+```
 
 ```POV-Ray SDL
 47.90.141.204
