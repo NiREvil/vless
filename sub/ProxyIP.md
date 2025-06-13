@@ -87,7 +87,6 @@ bpb.yousef.isegaro.com
 91.149.239.70
 ```
 
-
 🇦🇹 **Austria, Vienna, Aeza international Ltd**
 
 ```POV-Ray SDL
@@ -266,7 +265,8 @@ bpb.yousef.isegaro.com
 34.175.202.195
 ```
 
-🇪🇸 **Spain, Madrid, IONOS SE & M247 & PQ**   
+🇪🇸 **Spain, Madrid, IONOS SE & M247 & PQ**
+
 ```POV-RAY SDL
 212.227.90.142
 ```
@@ -512,7 +512,6 @@ bpb.yousef.isegaro.com
 88.198.172.25
 ```
 
-
 ## Oracle cloud corporations
 
 ![rainbow]
@@ -649,7 +648,7 @@ bpb.yousef.isegaro.com
 
 ~~**🇧🇷 Brazil, Sao paulo, Oracle**~~
 
-~~**🇸🇬 Singapore, Oracle**~~  
+~~**🇸🇬 Singapore, Oracle**~~
 
 ## M247 Europe SRL
 
