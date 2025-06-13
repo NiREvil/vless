@@ -133,11 +133,10 @@ jobs:
           ACCOUNT_PASSWORD=$(grep '^Account Password:' "$TEMP_OUTPUT" | sed 's/^Account Password: //' || true)
 
           NEW_ENTRY_FILE="new_entry.md.tmp"
-          CURRENT_DATETIME_IRAN=$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M IRN')
+          CURRENT_DATETIME_IRAN="$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M IRN')"
 
-          # Start building the new entry
           {
-            echo "## Generated On: ${CURRENT_DATETIME_IRAN}  "
+            echo "## Generated On: ${CURRENT_DATETIME_IRAN}"
             echo ""
             echo "> [!WARNING]"
             echo "> ∆ Triggered by: ${{ github.event_name }}  "
