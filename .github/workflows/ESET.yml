@@ -19,11 +19,11 @@ on:
         required: true
         type: choice
         options:
+        - fakemail
         - guerrillamail
         - 1secmail
         - developermail
         - mailticking
-        - fakemail
         - inboxes
         - incognitomail
         default: fakemail
@@ -137,8 +137,6 @@ jobs:
 
           # Start building the new entry
           {
-            echo "#"
-            echo ""
             echo "## Generated On: ${CURRENT_DATETIME_IRAN}  "
             echo ""
             echo "> [!WARNING]"
@@ -213,7 +211,7 @@ jobs:
             echo ""
             echo "---"
             echo ""
-            echo "<br></br>"
+            echo "<br><br  />"
             echo ""
           } >> "$NEW_ENTRY_FILE"
 
