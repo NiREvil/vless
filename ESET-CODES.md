@@ -1,14 +1,71 @@
 #
 
-## Generated On: Thursday, 12 June 2025, 7:07 IRN
+## Generated On: Thursday, 13 June 2025, 08:08 IRN
 
 > [!WARNING]
 >
-> ∆ Triggered by: **Schedule**  
-> ∆ Time-Sensitive Codes  
+> - Triggered by: **Schedule**  
+> - Time-Sensitive Codes  
 > - Expire in 24 hours
 > - Single-device binding
-> - No reactivation permitted
+> - No reactivation permitted <br><br  />
+
+<br />
+
+**ESET VPN ACCESS CODES**
+
+```ruby
+1XOUDL8EXC
+BGH77K1F7O
+8ZIKANMQEQ
+IZVIISWR5X
+NFQ7TF9WMP
+RA79PVFD7S
+Z1ZGG48LR9
+5VNS9RLS0Y
+8WA1PS0GBM
+FVEL1VOFTL
+NVC70XIFP7
+OI96G2WIU3
+OWTYUC6REU
+H9A8E7I0Q3
+UBQTNCDUTJ
+TIOBSH0E2T
+YCW3YV0XED
+U7LIB0R0ZH
+8IHRUA481W
+36TCKLQCZI
+```
+
+<br />
+
+**ESET BUSINESS SECURITY LICENSE**
+
+```yml
+Expiry: 13.07.2025
+License Key: 8RCB-XANC-JEV2-5U8P-5S2U
+```
+
+<br />
+
+**ESET ACCOUNT Credentials**
+
+```yml
+Email: demonta.coleman@fsitip.com
+Password: o4ddxqr.]=QkD:T`2Q
+```
+
+<br />
+
+Everything you need to know about ESET. [^1]  
+Need more VPN access codes? [^2]
+
+<br><br />
+
+
+#
+
+## Generated On: Thursday, 13 June 2025, 04:04 IRN
 
 <br />
 
@@ -43,7 +100,7 @@ RJ18V68V2P
 
 ```yml
 Expiry: 13.07.2025
-License Key: 8RCB-XANC-JEV2-5U8P-5S2U
+License Key: H9JC-XU7X-EA4G-EN6D-XBHJ
 ```
 
 <br />
@@ -51,14 +108,9 @@ License Key: 8RCB-XANC-JEV2-5U8P-5S2U
 **ESET ACCOUNT Credentials**
 
 ```yml
-Email: demonta.coleman@fsitip.com
-Password: o4ddxqr.]=QkD:T`2Q
+Email: capone.albino@fsitip.com
+Password: SRa7gN|G{uW+1K+Xee
 ```
-
-<br />
-
-Everything you need to know about ESET. [^1]  
-Need more VPN access codes? [^2]
 
 <br><br />
 
