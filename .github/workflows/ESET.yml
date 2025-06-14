@@ -125,12 +125,12 @@ jobs:
 
           # --- Extract values and format Markdown for NEW entry ---
           echo "✨ Extracting data and formatting Markdown for the new entry..."
-          VPN_CODES_LIST=$(grep '^VPN Codes:' "$TEMP_OUTPUT" | sed 's/^VPN Codes: //' || true)
-          LICENSE_NAME=$(grep '^License Name:' "$TEMP_OUTPUT" | sed 's/^License Name: //' || true)
-          LICENSE_KEY=$(grep '^License Key:' "$TEMP_OUTPUT" | sed 's/^License Key: //' || true)
-          LICENSE_OUT_DATE=$(grep '^License Out Date:' "$TEMP_OUTPUT" | sed 's/^License Out Date: //' || true)
-          ACCOUNT_EMAIL=$(grep '^Account Email:' "$TEMP_OUTPUT" | sed 's/^Account Email: //' || true)
-          ACCOUNT_PASSWORD=$(grep '^Account Password:' "$TEMP_OUTPUT" | sed 's/^Account Password: //' || true)
+          VPN_CODES_LIST=$( { grep '^VPN Codes:' "$TEMP_OUTPUT" | sed 's/^VPN Codes: //'; } || true)
+          LICENSE_NAME=$( { grep '^License Name:' "$TEMP_OUTPUT" | sed 's/^License Name: //'; } || true)
+          LICENSE_KEY=$( { grep '^License Key:' "$TEMP_OUTPUT" | sed 's/^License Key: //'; } || true)
+          LICENSE_OUT_DATE=$( { grep '^License Out Date:' "$TEMP_OUTPUT" | sed 's/^License Out Date: //'; } || true)
+          ACCOUNT_EMAIL=$( { grep '^Account Email:' "$TEMP_OUTPUT" | sed 's/^Account Email: //'; } || true)
+          ACCOUNT_PASSWORD=$( { grep '^Account Password:' "$TEMP_OUTPUT" | sed 's/^Account Password: //'; } || true)
 
           NEW_ENTRY_FILE="new_entry.md.tmp"
           IRAN_DATE=$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M')
