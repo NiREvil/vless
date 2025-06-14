@@ -41,7 +41,7 @@ on:
         required: false
         default: 'main'
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 */4 * * *'
 
 jobs:
   generate-and-commit:
@@ -133,8 +133,9 @@ jobs:
           ACCOUNT_PASSWORD=$(grep '^Account Password:' "$TEMP_OUTPUT" | sed 's/^Account Password: //' || true)
 
           NEW_ENTRY_FILE="new_entry.md.tmp"
-          CURRENT_DATETIME_IRAN="$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M IRN')"
-
+          IRAN_DATE=$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M')
+          CURRENT_DATETIME_IRAN="${IRAN_DATE} IRN"
+          
           {
             echo "## Generated On: ${CURRENT_DATETIME_IRAN}"
             echo ""
