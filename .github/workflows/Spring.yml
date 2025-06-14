@@ -1,14 +1,14 @@
 name: Spring
 
 on:
-  push:
-    branches: ['main']
-    paths:
-      - '**/spring.*'
-      - 'edge/assets/singbox-template.json'
-  schedule:
-    - cron: '0 */6 * * *'
-  workflow_dispatch:
+#  push:
+#    branches: ['main']
+#    paths:
+#      - '**/spring.*'
+#      - 'edge/assets/singbox-template.json'
+#  schedule:
+#    - cron: '0 */6 * * *'
+#  workflow_dispatch:
 
 jobs:
   build:
