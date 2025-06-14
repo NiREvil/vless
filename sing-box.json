@@ -49,35 +49,35 @@
       "mtu": 1280,
       "peers": [
         {
-          "address": "188.114.96.214",
+          "address": "188.114.98.224",
           "allowed_ips": ["0.0.0.0/0", "::/0"],
           "persistent_keepalive_interval": 25,
-          "port": 8854,
+          "port": 939,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
           "reserved": [137, 64, 185]
         }
       ],
       "private_key": "aDw50XC0ypl5B5+sR6LVThKzVYDufktxjV2Mf1TcVmg=",
-      "tag": "\u26aa\ufe0fTehran",
+      "tag": "⚪️Tehran",
       "type": "wireguard",
       "workers": 2
     },
     {
       "address": ["172.16.0.2/32", "2606:4700:110:8836:f1c9:4393:9b37:3814/128"],
-      "detour": "\u26aa\ufe0fTehran",
+      "detour": "⚪️Tehran",
       "mtu": 1280,
       "peers": [
         {
-          "address": "188.114.99.22",
+          "address": "188.114.98.224",
           "allowed_ips": ["0.0.0.0/0", "::/0"],
           "persistent_keepalive_interval": 25,
-          "port": 4233,
+          "port": 908,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
           "reserved": [84, 171, 10]
         }
       ],
       "private_key": "8FSmaeqhktfMN1pGl38zde8kyYGowCEyr9W7Se12y2I=",
-      "tag": "\ud83d\udfe1Berlin",
+      "tag": "🟢Baku",
       "type": "wireguard",
       "workers": 2
     }
@@ -117,14 +117,14 @@
   },
   "outbounds": [
     {
-      "default": "\ud83d\udfe1Berlin",
-      "outbounds": ["auto", "direct", "\u26aa\ufe0fTehran", "\ud83d\udfe1Berlin"],
+      "default": "🟢Baku",
+      "outbounds": ["auto", "direct", "⚪️Tehran", "🟢Baku"],
       "tag": "proxy",
       "type": "selector"
     },
     {
       "interval": "90s",
-      "outbounds": ["\u26aa\ufe0fTehran", "\ud83d\udfe1Berlin"],
+      "outbounds": ["⚪️Tehran", "🟢Baku"],
       "tag": "auto",
       "tolerance": 50,
       "type": "urltest",
