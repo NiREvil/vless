@@ -1,13 +1,11 @@
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="140x" </p><br><br  />
 
-
-
 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 
 > [!CAUTION]
 >
-> [![Opened issues](https://img.shields.io/badge/شرابط_اضطراری-موقت-darkred)](https://t.me/NiREvil_GP/106699)  
+> [![Opened issues](https://img.shields.io/badge/شرابط_اضطراری-موقت-darkred)](https://t.me/NiREvil_GP/106699)
 >
 > به گفته‌ی وزارت قطع ارتباطات به درخواست مقامات بالادستی اینترنت رو محدود کردن، به وضوح مشخصه که پهنای باند بین‌الملل رو به حداقل مقدار ممکن رسوندن بعلاوه‌ی کلی اختلال روی TLS و DNSها و برخی پروتکل‌های دیگه و همچنین تقریبا تمام آی‌پی های موجود کلادفلر ر‌و بستن.
 >
@@ -17,12 +15,12 @@
 > جنبه تست دارن لطفا استفاده سنگین نکنید.
 >
 > لینک گروه
-> [![War Zone](https://img.shields.io/badge/0x00-darkred)](https://t.me/NiREvil_GP/106699)   
->  
+> [![War Zone](https://img.shields.io/badge/0x00-darkred)](https://t.me/NiREvil_GP/106699)
+>
 > <br><br  />
 
 <br><br  />  
-<br><br  />    
+<br><br  />
 
 <div dir="rtl">  
      
@@ -1191,7 +1189,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 
 <br  />
 
-[00]: https://t.me/NiREvil_GP/106699  
+[00]: https://t.me/NiREvil_GP/106699
 [Harmony]: https://github.com/NiREvil/Harmony/blob/b923d67dd5702886b0965de86182896373ade4e5/harmony.js#L892
 [Strawberry.js]: https://github.com/NiREvil/vless/blob/main/edge/strawberry.js
 [rainbow]: https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256
