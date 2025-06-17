@@ -312,10 +312,6 @@ bpb.yousef.isegaro.com
 **🇺🇸 USA, random, Amazon Technologies Inc**
 
 ```POV-RAY SDL
-44.209.255.249
-```
-
-```POV-RAY SDL
 54.71.238.195
 ```
 
@@ -329,10 +325,6 @@ bpb.yousef.isegaro.com
 
 ```POV-Ray SDL
 54.200.244.93
-```
-
-```POV-Ray SDL
-34.225.195.136
 ```
 
 ```POV-Ray SDL
@@ -443,10 +435,6 @@ bpb.yousef.isegaro.com
 ![rainbow]
 
 **🇩🇪 Germany, Frankfurt am Main, Digital Ocean & Hetzner online**
-
-```POV-Ray SDL
-95.179.167.159
-```
 
 ```POV-Ray SDL
 80.66.87.42
