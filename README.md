@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="140x" </p><br><br  />
+<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="140x" </p><br><br/>
 
 - تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، هیدیفای، نکوباکس، کلش‌متا، آمنزیا، آوت‌لاین، نیکا، مهسا، ویتوری‌ ان‌جی، نکوری و ...
 
@@ -70,7 +70,7 @@
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
 ```
 
-</br>
+<br/>
 
 ### Sing-Box URL <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="20"/>
 
@@ -78,13 +78,13 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 ```
 
-</br>
+<br/>
 
 ### Scan with Hiddify
 
 <p align="center">
      <img src="edge/assets/QRCode-Dog.png" alt="QR" width="680px">
-   </p></br>
+   </p><br/>
 
 ![rainbow]
 
@@ -125,9 +125,9 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 > script to modify the arrangement of the IPs or to combine them with other repositories.  
 > e.g: https://strawberry.victoriacross.ir
 
-[![Here](https://img.shields.io/badge/DEMO_REAL_ADDRESS_GENERATOR-blue?logo=opencollective)](https://real-address1.victoriacross.ir/)
+[![Here](https://img.shields.io/badge/DEMO_REAL_ADDRESS_GENERATOR-silver?logo=opencollective)](https://real-address1.victoriacross.ir/)
 
-<br></br>
+<br><br/>
 
 #### All IPs
 
@@ -149,9 +149,9 @@ https://ircfspace.github.io/endpoint/
 
 https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 
-[![Here](https://img.shields.io/badge/PROXY_IP_CHECKER-silver?logo=opencollective)](https://proxyip.victoriacross.ir/)
+[![Here](https://img.shields.io/badge/PROXY_IP_CHECKER-silver?logo=opencollective)](https://proxyip.victoriacross.workers.dev/)
 
-<br></br>
+<br><br/>
 
 ## WIREGUARDS
 
@@ -198,7 +198,7 @@ https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/subwarp/warp
 
 ---
 
-</br>
+<br/>
 
 #### Warp for [NekoBox]
 
@@ -215,7 +215,7 @@ https://raw.githubusercontent.com/ndsphonemy/proxy-sub/refs/heads/main/mobile.tx
 
 ---
 
-</br>      
+<br/>      
  
 ### Warp for [v2rayNG]    
 > [!NOTE]
