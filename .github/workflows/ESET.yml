@@ -1,17 +1,19 @@
 name: ESET Key Generator
+
 permissions:
   contents: write
+
 on:
   workflow_dispatch:
     inputs:
       account:
         description: Number of Accounts to be generated (default = 0)
         required: false
-        default: "0"
+        default: '0'
       key:
         description: Number of Keys to be generated (default = 1)
         required: false
-        default: "1"
+        default: '1'
       mail:
         description: Choose the mail provider to generate license
         required: true
@@ -39,13 +41,14 @@ on:
         required: false
         default: main
   schedule:
-    - cron: "0 */4 * * *"
+    - cron: '0 */4 * * *'
+
 jobs:
   generate-and-commit:
     runs-on: ubuntu-latest
     env:
-      DEFAULT_ACCOUNT: "0"
-      DEFAULT_KEY: "1"
+      DEFAULT_ACCOUNT: '0'
+      DEFAULT_KEY: '1'
       DEFAULT_MAIL: fakemail
       DEFAULT_KEY_TYPE: --vpn-codes
       DEFAULT_BRANCH: main
@@ -53,13 +56,16 @@ jobs:
       TEMP_OUTPUT_FILE: key_gen_output.log
       LOG_DIR: logs
       LAST_RUN_DATE_FILE: edge/assets/logs/.last_run_date
+
     steps:
       - name: Checkout Repository Code
         uses: actions/checkout@v4
+
       - name: Create Log Directory
         run: |
           mkdir -p "${{ env.LOG_DIR }}"
           echo "Created directory: ${{ env.LOG_DIR }}"
+
       - name: Generate Keys
         run: |
           ACCOUNT=${{ github.event.inputs.account || env.DEFAULT_ACCOUNT }}
@@ -103,7 +109,6 @@ jobs:
             echo "Generating $ACCOUNT accounts..."
             python3 main.py --auto-detect-browser --account --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${ACCOUNT} | tee "../$TEMP_OUTPUT"
           fi
-
           if [[ ${KEY} -ne 0 ]]; then
             echo "Generating $KEY keys (type: $KEY_TYPE)..."
             APPEND_FLAG=""
@@ -113,14 +118,12 @@ jobs:
             
             python3 main.py --auto-detect-browser ${KEY_TYPE} --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${KEY} | tee $APPEND_FLAG "../$TEMP_OUTPUT"
           fi
-
           echo "Generation commands executed. Output captured in ../$TEMP_OUTPUT"
 
           cd ..
 
           # --- Extract values and format Markdown for NEW entry ---
           echo "✨ Extracting data and formatting Markdown for the new entry..."
-
           VPN_CODES_LIST=$(grep '^VPN Codes:' "$TEMP_OUTPUT" | sed 's/^VPN Codes: //' || true)
           LICENSE_NAME=$(grep '^License Name:' "$TEMP_OUTPUT" | sed 's/^License Name: //' || true)
           LICENSE_KEY=$(grep '^License Key:' "$TEMP_OUTPUT" | sed 's/^License Key: //' || true)
@@ -203,8 +206,8 @@ jobs:
             echo "<br/>"
             echo ""
           } >> "$NEW_ENTRY_FILE"
-
           # --- End of NEW_ENTRY_FILE content generation ---
+
           echo "Markdown formatting complete for the new entry in $NEW_ENTRY_FILE."
 
           echo "Determining whether to prepend or overwrite based on date..."
@@ -228,7 +231,7 @@ jobs:
               echo "Reset condition not met: Still the same day ($CURRENT_DATE_UTC == $LAST_RUN_DATE) and output file exists."
           fi
 
-          FOOTNOTES="[^1]: [View Full Post](https://t.me/F_NiREvil/2113)\n[^2]: [Explore The Darkness Hub](https://t.me/Eset_key_trial)"
+          FOOTNOTES="[^1]: [View Full Post](https://t.me/F_NiREvil/2113)\n\n[^2]: [Explore The Darkness Hub](https://t.me/Eset_key_trial)"
 
           if [[ "$SHOULD_RESET" == "true" ]]; then
               echo "Overwriting ${OUTPUT_FILE} with the new entry and new structure."
@@ -246,16 +249,25 @@ jobs:
               TEMP_COMBINED_FILE="combined.md.tmp"
 
               # Safely get the body of the old file:
+              # Skip first line (old '#'), and remove last 2 lines (old footnotes)
+              # Check if OUTPUT_FILE exists and has more than 3 lines before attempting to strip
               if [[ -f "$OUTPUT_FILE" ]] && [[ $(wc -l < "$OUTPUT_FILE") -gt 3 ]]; then
+                  # sed '1d' "$OUTPUT_FILE" | head -n -2 > "$OLD_CONTENT_BODY_TMP"
+                  # A more robust way to remove first line and last two lines:
+                  # Get total lines, then print from line 2 to line (total - 2)
                   total_lines=$(wc -l < "$OUTPUT_FILE")
-                  lines_to_keep=$((total_lines - 1 - 2))
-                  if [[ $lines_to_keep -lt 0 ]]; then lines_to_keep=0; fi
+                  lines_to_keep=$((total_lines - 1 - 2)) # -1 for first line, -2 for last two
+                  if [[ $lines_to_keep -lt 0 ]]; then lines_to_keep=0; fi # handle very short files
                   if [[ $lines_to_keep -gt 0 ]]; then
                       tail -n +2 "$OUTPUT_FILE" | head -n "$lines_to_keep" > "$OLD_CONTENT_BODY_TMP"
                   else
+                      # File is too short to contain previous entries in the expected format
+                      # (e.g. only header and footnotes, or less)
+                      # So, effectively, there's no "old body" to prepend after the new entry.
                       echo "" > "$OLD_CONTENT_BODY_TMP"
                   fi
               else
+                  # Output file doesn't exist or is too short, so no old body to preserve.
                   echo "" > "$OLD_CONTENT_BODY_TMP"
               fi
 
@@ -263,6 +275,7 @@ jobs:
                   echo ""
                   echo "#"
                   cat "$NEW_ENTRY_FILE"
+                  # Add separator if there's old content to follow
                   if [[ -s "$OLD_CONTENT_BODY_TMP" ]]; then
                       echo ""
                       echo "#"
@@ -271,25 +284,29 @@ jobs:
                   echo -e "$FOOTNOTES"
               } > "$TEMP_COMBINED_FILE"
               mv "$TEMP_COMBINED_FILE" "$OUTPUT_FILE"
+              # rm "$NEW_ENTRY_FILE" # NEW_ENTRY_FILE is temp, remove it
+              echo "$LAST_RUN_FILE remains unchanged ($LAST_RUN_DATE)."
           fi
 
-          # Clean up temporary files
+          # Clean up temporary file used for new entry markdown
           if [[ -f "$NEW_ENTRY_FILE" ]]; then
               rm "$NEW_ENTRY_FILE"
           fi
-
           if [[ -f "old_content_body.tmp" ]]; then
               rm "old_content_body.tmp"
           fi
 
+          # rm -f "$TEMP_OUTPUT"
           echo "File update complete for ${OUTPUT_FILE}."
           echo "Final content of ${OUTPUT_FILE} (first 100 lines):"
           head -n 100 "${OUTPUT_FILE}"
+
       - name: Commit and Push Generated Keys
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "feat: Update ESET generated Key/License/Accounts (${{github.event_name }})"
-          file_pattern: ${{ env.OUTPUT_FILENAME }} ${{ env.LAST_RUN_DATE_FILE }}
+          commit_message: 'feat: Update ESET generated Key/License/Accounts (${{ github.event_name }})'
+          file_pattern: '${{ env.OUTPUT_FILENAME }} ${{ env.LAST_RUN_DATE_FILE }}'
           commit_user_name: ESET Security Bot
           commit_user_email: pr@eset.com
           commit_options: --signoff
+          # push_options: '--force'
