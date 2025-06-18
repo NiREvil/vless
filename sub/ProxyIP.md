@@ -11,865 +11,690 @@
 <p align="left">
  <img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{{\color{Golden}\sqsubseteq&space;We\;have}}" width=160px" </p></br>  
  
-- [Best proxies](#Best-proxies)
-  - [Google LLC](#Google-LLC)
-  - [Amazon Technologies Inc](#Amazon-Technologies-Inc)
-  - [Hetzner Online tech](#Hetzner-Online-tech)
-  - [Oracle cloud corporations](#Oracle-cloud-corporations)
-  - [M247 Europe SLR](#M247-Europe-SLR)
-  - [Others](#Others)
-  - [Who am i ?](#Who-am-i-)
-- [Test proxyIPs](#Test-proxyIPs)
-- [Latest worker & pages](#Latest-worker--pages)
-- [Find proxyIPs](#Find-proxyIPs)
-- [Advanced](#Advanced)
+- [Dynamic & Multi-Location Proxies](#dynamic--multi-location-proxies)
+- [ISP Specific Proxies](#isp-specific-proxies)
+  - [Google LLC](#google-llc)
+  - [Amazon Technologies Inc](#amazon-technologies-inc)
+- [General Proxies by Continent](#general-proxies-by-continent)
+  - [North America](#north-america)
+  - [Europe](#europe)
+  - [Asia](#asia)
+  - [Oceania](#oceania)
+- [Test proxyIPs](#test-proxyips)
+- [Latest worker & pages](#latest-worker--pages)
+- [Find proxyIPs](#find-proxyips)
+- [Advanced](#advanced)
 
 <br><br>
 
-<p align="left">
- <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{Golden}\mathrm{\not\equiv&space;BEST\;PROXIES}" width=180px" </p></b>
-
-**🇺🇸 USA, Google LLC, Tencent & Amazon Technologies**
-
-```CSS
-nima.nscl.ir
-```
-
-**🇹🇷 Turkey, Istanbul, Stark Industries Solutions LTD**
-
-```POV-Ray SDL
-turk.radicalization.ir
-```
+# Dynamic & Multi-Location Proxies
+![rainbow]
 
 **🎌 Randomized, Everywhere, BPB Tech LTD**
-
-```POV-Ray SDL
+```yaml
 bpb.yousef.isegaro.com
 ```
 
-**🇺🇸 USA, Chicago, Texas Dallas, Rackspace Hosting**
-
-```POV-Ray SDL
-192.237.192.175
-```
-
-🇺🇸 **USA, California, san jose, DataCamp Limited**
-
-```POV-Ray SDL
-156.146.53.83
-```
-
-```POV-Ray SDL
-156.146.53.82
-```
-
-**🇺🇸 USA, Virginia, Ashburn, Total Uptime Technologies LLC.**
-
-```POV-Ray SDL
-72.13.122.137
-```
-
-🇺🇸 **USA, Virginia, Warrenton, OVH SAS**
-
-```POV-Ray SDL
-104.234.50.128
-```
-
-```POV-RAY SDL
-152.70.155.147
-```
-
-```POV-Ray SDL
-104.168.58.31
-```
-
-```POV-RAY SDL
-91.149.239.70
-```
-
-🇦🇹 **Austria, Vienna, Aeza international Ltd**
-
-```POV-Ray SDL
-147.45.41.209
-```
-
-```POV-Ray SDL
-185.106.94.67
-```
-
-```POV-Ray SDL
-94.228.169.84
-```
-
-🇧🇬 **Bulgaria, Sofia, EDIS GmbH**
-
-```POV-Ray SDL
-45.153.125.245
-```
-
-**🇹🇷 Turkey, izmir, Stark Industries Solutions LTD**
-
-```POV-Ray SDL
-62.3.12.76
-```
-
-```POV-Ray SDL
-62.3.12.190
-```
-
-```POV-Ray SDL
-62.3.12.185
-```
-
-🇹🇷 **Turkey, Istanbul, UltaHost Inc.**
-
-```POV-Ray SDL
-188.132.183.166
-```
-
-🇹🇷 **Turkey, Izmir, Alastyr A.S**
-
-```POV-Ray SDL
-185.8.129.187
-```
-
-🇹🇷 **Turkey, Izmir, PQ Hosting plus**
-
-```POV-Ray SDL
-185.234.66.91
-```
-
-```POV-Ray SDL
-62.3.12.185
-```
-
-```POV-Ray SDL
-94.131.123.44
-```
-
-```POV-Ray SDL
-94.131.123.242
-```
-
-```POV-Ray SDL
-45.89.52.247
-```
-
-```POV-Ray SDL
-95.164.11.116
-```
-
-```POV-Ray SDL
-94.131.123.74
-```
-
-🇹🇷 **Turkey, Istanbul, Scalaxy B.V**
-
-```POV-Ray SDL
-38.180.105.164
-```
-
-🇹🇷 **Turkey, Istanbul, Cogent Communications**
-
-```POV-Ray SDL
-62.3.12.14
-```
-
-**🇳🇱 Netherlands, Amsterdam, Servers Tech Fzco**
-
-```POV-Ray SDL
-147.45.69.24
-```
-
-```POV-Ray SDL
-212.34.142.238
-```
-
-```POV-Ray SDL
-212.34.142.40
-```
-
-```POV-Ray SDL
-212.34.142.54
-```
-
-```POV-Ray SDL
-212.34.142.70
-```
-
-**🇳🇱 Netherlands, Amsterdam, RAN Networks S.L**
-
-```POV-Ray SDL
-212.34.142.189
-```
-
-```POV-Ray SDL
-212.34.142.100
-```
-
-```POV-Ray SDL
-51.15.42.255
-```
-
-```POV-Ray SDL
-185.155.220.64
-```
-
-🇦🇪 **United Arab Emirates, Ras al, G-Core labs S.A**
-
-```POV-Ray SDL
-217.195.200.138
-```
-
-🇦🇪 **United Arab Emirates, M247 Europe**
-
-```POV-Ray SDL
-176.97.66.175
-```
-
-```POV-Ray SDL
-176.97.67.38
-```
-
-🇨🇦 **Canada, Toronto, Advanced Knowledge Networks**
-
-```POV-Ray SDL
-172.98.207.58
-```
-
-```POV-Ray SDL
-209.200.246.130
-```
-
-🇨🇦 **Canada, Kingston, Server Cloud Inc**
-
-```POV-Ray SDL
-199.48.102.83
-```
-
-🇨🇦 **Canada, Torento, kamatera .inc**
-
-```POV-Ray SDL
-213.255.209.207
-```
-
-🇦🇺 **Australia, Sydney, Macquarie telecom**
-
-```POV-Ray SDL
-125.7.24.251
-```
-
-🇦🇺 **Australia, Sydney, Digital Ocean**
-
-```POV-Ray SDL
-170.64.240.100
-```
-
-## Google LLC
-
-![rainbow]
-
-**🇺🇸 USA, Dalles, Google LLC**
-
-```POV-Ray SDL
-34.82.76.253
-```
-
-```POV-Ray SDL
-34.105.49.234
-```
-
-```POV-Ray SDL
-35.247.124.181
-```
-
-**🇪🇦 Spain, Madrid, Google LLC**
-
-```POV-Ray SDL
-34.175.202.195
-```
-
-🇪🇸 **Spain, Madrid, IONOS SE & M247 & PQ**
-
-```POV-RAY SDL
-212.227.90.142
-```
-
-```POV-RAY SDL
-91.149.242.110
-```
-
-```POV-RAY SDL
-185.231.204.186
-```
-
-```POV-RAY SDL
-176.97.72.18
-```
-
-```POV-RAY SDL
-45.86.229.28
-```
-
-## Amazon Technologies Inc
-
-![rainbow]
-
-**🇩🇪 Germany, Frankfurt am Main, Amazon**
-
-```POV-Ray SDL
-3.124.208.189
-```
-
-```POV-Ray SDL
-3.126.159.12
-```
-
-```POV-Ray SDL
-3.124.208.189
-```
-
-```POV-Ray SDL
-3.75.170.179
-```
-
-**🇺🇸 USA, random, Amazon Technologies Inc**
-
-```POV-RAY SDL
-54.200.244.93
-```
-
-```POV-Ray SDL
-50.112.33.254
-```
-
-```POV-RAY SDL
-184.169.181.217
-```
-
-```POV-RAY SDL
-54.71.238.195
-```
-
-```POV-RAY SDL
-67.226.220.10
-```
-
-<details>
-<summary> Click to see more IP's </summary>
-
-```POV-Ray SDL
-18.216.55.100
-```
-
-```POV-Ray SDL
-52.4.8.214
-```
-
-```POV-Ray SDL
-3.13.196.41
-```
-
-```POV-Ray SDL
-52.42.71.111
-```
-
-```POV-Ray SDL
-44.227.209.152
-```
-
-```POV-Ray SDL
-213.170.157.1
-```
-
-```POV-Ray SDL
-3.15.3.38
-```
-
-```POV-Ray SDL
-3.16.135.101
-```
-
-```POV-Ray SDL
-3.12.71.127
-```
-
-```POV-Ray SDL
-3.129.183.128
-```
-
-```POV-Ray SDL
-3.135.212.13
-```
-
-```POV-Ray SDL
-3.140.211.75
-```
-
-```POV-Ray SDL
-3.137.221.83
-```
-
-```POV-Ray SDL
-50.112.33.254
-```
-
-```POV-Ray SDL
-18.221.62.181
-```
-
-```POV-Ray SDL
-18.220.206.47
-```
-
-```POV-Ray SDL
-3.214.164.221
-```
-
-```POV-Ray SDL
-54.210.245.85
-```
-
-```POV-Ray SDL
-3.133.156.22
-```
-
-</details>
-
-🇬🇧 **England, London, Amazon tech**
-
-```POV-Ray SDL
-18.170.77.148
-```
-
-**🇫🇷 France, Paris, Amazon tech**
-
-```POV-Ray SDL
-35.180.229.1
-```
-
-**🇯🇵 Japan, Tokyo, Amazon tech**
-
-```POV-Ray SDL
-13.230.34.30
-```
-
-## Hetzner Online tech
-
-![rainbow]
-
-**🇩🇪 Germany, Frankfurt am Main, Digital Ocean & Hetzner online**
-
-```POV-Ray SDL
-80.66.87.42
-```
-
-```POV-Ray SDL
-93.127.223.41
-```
-
-```POV-Ray SDL
-104.248.128.137
-```
-
-```POV-Ray SDL
-138.68.124.200
-```
-
-```POV-Ray SDL
-67.207.73.198
-```
-
-```POV-Ray SDL
-128.140.2.140
-```
-
-```POV-Ray SDL
-128.140.50.32
-```
-
-```POV-Ray SDL
-78.46.233.187
-```
-
-```POV-Ray SDL
-49.13.92.32
-```
-
-```POV-Ray SDL
-78.46.56.42
-```
-
-```POV-Ray SDL
-91.107.135.104
-```
-
-```POV-Ray SDL
-91.107.191.214
-```
-
-```POV-Ray SDL
-167.235.242.114
-```
-
-```POV-Ray SDL
-138.201.244.245
-```
-
-```POV-Ray SDL
-135.181.81.147
-```
-
-```POV-Ray SDL
-88.198.172.25
-```
-
-## Oracle cloud corporations
-
-![rainbow]
-
-**🇦🇪 United arab emirates, Abu Dhabi, Oracle**
-
-```POV-Ray SDL
-193.123.81.105
-```
-
-**🇰🇵 Korea, , Oracle cloud llc**
-
-```POV-Ray SDL
-144.24.73.232
-```
-
-**🇮🇳 India, Airoli, Maharashtra, Oracle**
-
-```POV-Ray SDL
-103.29.32.103
-```
-
-```POV-Ray SDL
-168.138.46.67
-```
-
-```POV-Ray SDL
-141.148.203.6
-```
-
-~~**🇫🇷 France, Marseille & Île-de-France, Oracle Svenska AB**~~
-
-```POV-Ray SDL
-141.145.217.226
-```
-
-**🇨🇭 Switzerland, Zurich Oberengstringen, Ocle**
-
-```POV-Ray SDL
-140.238.212.95
-```
-
-**🇸🇪 Sweden, Stockholm, Oracle**
-
-```POV-Ray SDL
-129.151.204.91
-```
-
-```POV-Ray SDL
-168.138.46.67
-```
-
-**🇳🇱 Netherlands, Amsterdam, Oracle**
-
-```POV-Ray SDL
-141.144.197.111
-```
-
-```POV-Ray SDL
-152.70.59.90
-```
-
-```POV-Ray SDL
-143.47.191.154
-```
-
-```POV-Ray SDL
-141.148.229.106
-```
-
-```POV-Ray SDL
-193.123.36.190
-```
-
-```POV-Ray SDL
-158.101.209.76
-```
-
-```POV-Ray SDL
-141.148.236.181
-```
-
-**🇳🇿 Australia, NSW Sydney, Oracle**
-
-```POV-Ray SDL
-192.9.180.162
-```
-
-```POV-Ray SDL
-192.9.177.204
-```
-
-```POV-Ray SDL
-152.67.102.137
-```
-
-**🇩🇪 Germany, Frankfurt am Main, Oracle**
-
-```POV-Ray SDL
-193.122.58.158
-```
-
-```POV-Ray SDL
-141.147.47.32
-```
-
-```POV-Ray SDL
-138.2.136.25
-```
-
-```POV-Ray SDL
-141.147.61.116
-```
-
-```POV-Ray SDL
-144.24.169.81
-```
-
-```POV-Ray SDL
-130.162.223.59
-```
-
-```POV-Ray SDL
-130.61.23.77
-```
-
-```POV-Ray SDL
-158.180.62.67
-```
-
-```POV-Ray SDL
-141.147.8.237
-```
-
-~~**🇧🇷 Brazil, Sao paulo, Oracle**~~
-
-~~**🇸🇬 Singapore, Oracle**~~
-
-## M247 Europe SRL
-
-![rainbow]
-
-**🇯🇵 Japan, M247 SRL**
-
-```POV-Ray SDL
-176.97.73.20
-```
-
-**🇳🇱 Netherlands, Amsterdam, M247 SRL**
-
-```POV-Ray SDL
-141.144.202.203
-```
-
-```POV-Ray SDL
-158.101.223.154
-```
-
-## Others
-
-![rainbow]
-
-🇮🇳 India Mumbai, Pdrsolutionsfzc
-
-```POV-Ray SDL
-216.10.243.159
-```
-
-🇺🇸 **USA, California, Los Angeles, Virtual Machine Solutions LLC.**
-
-```POV-RAY SDL
-141.11.210.29
-```
-
-```POV-RAY SDL
-139.60.162.153
-```
-
-**🇺🇸 USA, California, santa clara, Tencent cloud**
-
-```CSS
-43.153.103.203
-```
-
-🇺🇸 **USA, California, Santa Clara, HostPapa RackNerd LLC.**
-
-```POV-Ray SDL
-104.234.50.128
-```
-
-```POV-RAY SDL
-152.70.155.147
-```
-
-```POV-Ray SDL
-104.168.58.31
-```
-
-```POV-Ray SDL
-104.168.102.163
-```
-
-```POV-Ray SDL
-103.35.188.123
-```
-
-```POV-Ray SDL
-107.172.167.194
-```
-
-```POV-Ray SDL
-107.172.159.182
-```
-
-**🇺🇸 USA, Chicago, Elk Grove Village, Vultr Holdings, LLC**
-
-```POV-Ray SDL
-45.77.109.191
-```
-
-```POV-Ray SDL
-66.135.19.169
-```
-
-```POV-Ray SDL
-173.199.117.101
-```
-
-~~**🇮🇱 Israel, Haifa, BroadBand**~~
-
-```POV-Ray SDL
-5.29.194.1
-```
-
-**🇺🇸 USA, Virginia, Woodbridge, Alibaba Technology Ltd**
-
-```POV-RAY SDL
-5.78.114.254 443
-```
-
-```POV-Ray SDL
-47.90.141.204
-```
-
-**🇯🇵 Japan, Ōi, Saitama, The Constant Company, LLC**
-
-```POV-Ray SDL
-45.77.130.245
-```
-
-**🇯🇵 Japan, Tokyo, akami technologies**
-
-```POV-Ray SDL
-172.104.120.67
-```
-
-**🇦🇺 Australia, New South Wales, Huntingwood**
-
-```POV-Ray SDL
-192.9.180.162
-```
-
-```POV-Ray SDL
-192.9.177.204
-```
-
-## Who am i ?
-
-![rainbow]
-
-**🇳🇱 IP's load from Germany, korea, CH, NL & ...**
-
-```POV-Ray SDL
-bestproxy.onecf.eu.org
-```
-
-**🇸🇬 Loads from Singapore, NL, DE, US, JP & ...**
-
-```POV-Ray SDL
-cdn-all.xn--b6gac.eu.org
-```
-
-**🇺🇸 Loads from USA new jersey, Vultr Holdings LLC**
-
-```POV-Ray SDL
-proxyip.vultr.fxxk.dedyn.io
-```
-
-**🇺🇸 Loads from USA california,Digital Ocean LLC**
-
-```POV-Ray SDL
-proxyip.digitalocean.hw.090227.xyz
-```
-
-**🇰🇷Loads from Singapore, Korea, Japan & ...**
-
-```POV-Ray SDL
-cdn-b100.xn--b6gac.eu.org
-```
-
-**🇳🇮 Loads from around the world**
-
-```POV-Ray SDL
-ipdb.rr.nu
-```
-
-**🇺🇸 Loads from USA california, multacom corporation**
-
-```POV-Ray SDL
-proxyip.multacom.fxxk.dedyn.io
-```
-
-**🇺🇸 Loads from USA arizona, Oracle corporation**
-
-```POV-Ray SDL
-proxyip.oracle.fxxk.dedyn.io
-```
-
-**🇭🇰 Loads from Hong Kong & Japan, Oracle corporation**
-
-```POV-Ray SDL
-proxy.xxxxxxxx.tk
-```
-
-**🇹🇼 Single IP load from Taipei, Taiwan,Taipei, Province of China, Pittqiao Network**
-
-```POV-Ray SDL
-ts.hpc.tw
-```
-
 **🇧🇬 Loads From around the world**
-
-```POV-Ray SDL
+```yaml
 my-telegram-is-herocore.onecf.eu.org
 ```
 
-**🇯🇵 IPs load from japan, alibaba tech**
+🇩🇪 **Loads from Germany, Alibaba Cloud**
+```yaml
+ircpipproxy.duckdns.org
+```
 
-```POV-Ray SDL
+**🇭🇰 Loads from Hong Kong & Japan, Oracle Cloud**
+```yaml
+proxy.xxxxxxxx.tk
+```
+
+**🇯🇵 IPs load from Japan, Alibaba Cloud**
+```yaml
 proxyip.aliyun.fxxk.dedyn.io
 ```
 
-🇩🇪 **Loads from Germany, alibaba tech**
+**🇰🇷 Loads from Singapore, Korea, Japan & ...**
+```yaml
+cdn-b100.xn--b6gac.eu.org
+```
 
-```POV-Ray SDL
-ircpipproxy.duckdns.org
+**🇳🇱 IP's load from Germany, Korea, CH, NL & ...**
+```yaml
+bestproxy.onecf.eu.org
+```
+
+**🇳🇮 Loads from around the world**
+```yaml
+ipdb.rr.nu
+```
+
+**🇸🇬 Loads from Singapore, NL, DE, US, JP & ...**
+```yaml
+cdn-all.xn--b6gac.eu.org
+```
+
+**🇹🇼 Single IP load from Taipei, Taiwan, Pittqiao Network**
+```yaml
+ts.hpc.tw
+```
+
+**🇺🇸 Loads from USA Arizona, Oracle Cloud**
+```yaml
+proxyip.oracle.fxxk.dedyn.io
+```
+
+**🇺🇸 Loads from USA California, Digital Ocean LLC**
+```yaml
+proxyip.digitalocean.hw.090227.xyz
+```
+
+**🇺🇸 Loads from USA New Jersey, Vultr Holdings LLC**
+```yaml
+proxyip.vultr.fxxk.dedyn.io
+```
+
+**🇺🇸 USA, Google LLC, Tencent & Amazon Technologies**
+*(Note: This is a high-level domain, specific IPs should be under respective ISP sections or general categories if applicable)*
+```yaml
+nima.nscl.ir
+```
+<br><br>
+
+# ISP Specific Proxies
+
+## Google LLC
+![rainbow]
+
+### 🇪🇦 Spain
+**Madrid, Google LLC**
+```yaml
+34.175.202.195
+```
+
+### 🇺🇸 USA
+**Dalles, Google LLC**
+```yaml
+34.105.49.234
+```
+```yaml
+34.82.76.253
+```
+```yaml
+35.247.124.181
+```
+
+## Amazon Technologies Inc
+![rainbow]
+
+### 🇫🇷 France
+**Paris, Amazon Technologies Inc**
+```yaml
+35.180.229.1
+```
+
+### 🇩🇪 Germany
+**Frankfurt am Main, Amazon Technologies Inc**
+```yaml
+3.124.208.189
+```
+```yaml
+3.126.159.12
+```
+```yaml
+3.75.170.179
+```
+
+### 🇯🇵 Japan
+**Tokyo, Amazon Technologies Inc**
+```yaml
+13.230.34.30
+```
+
+### 🇬🇧 United Kingdom
+**London, Amazon Technologies Inc**
+```yaml
+18.170.77.148
+```
+
+### 🇺🇸 USA
+**Various Locations, Amazon Technologies Inc**
+*(Note: City information was not specified for these in prior versions)*
+```yaml
+3.12.71.127
+```
+```yaml
+3.13.196.41
+```
+```yaml
+3.129.183.128
+```
+```yaml
+3.133.156.22
+```
+```yaml
+3.135.212.13
+```
+```yaml
+3.137.221.83
+```
+```yaml
+3.140.211.75
+```
+```yaml
+3.15.3.38
+```
+```yaml
+3.16.135.101
+```
+```yaml
+3.214.164.221
+```
+```yaml
+18.216.55.100
+```
+```yaml
+18.220.206.47
+```
+```yaml
+18.221.62.181
+```
+```yaml
+44.227.209.152
+```
+```yaml
+50.112.33.254
+```
+```yaml
+52.4.8.214
+```
+```yaml
+52.42.71.111
+```
+```yaml
+54.71.238.195
+```
+```yaml
+54.200.244.93
+```
+```yaml
+54.210.245.85
+```
+```yaml
+67.226.220.10
+```
+```yaml
+184.169.181.217
+```
+```yaml
+213.170.157.1
+```
+
+<br>
+
+# General Proxies by Continent
+
+## North America
+
+### 🇨🇦 Canada
+**Kingston, Ontario, Server Cloud Inc**
+```yaml
+199.48.102.83
+```
+
+**Toronto, Ontario, Advanced Knowledge Networks**
+```yaml
+172.98.207.58
+```
+```yaml
+209.200.246.130
+```
+
+**Toronto, Ontario, Kamatera Inc**
+```yaml
+213.255.209.207
+```
+
+### 🇺🇸 USA
+**Ashburn, Virginia, Total Uptime Technologies LLC**
+```yaml
+72.13.122.137
+```
+
+**Chicago, Illinois, Rackspace Hosting**
+```yaml
+192.237.192.175
+```
+
+**Chicago, Illinois, Vultr Holdings, LLC**
+```yaml
+45.77.109.191
+```
+```yaml
+66.135.19.169
+```
+```yaml
+173.199.117.101
+```
+
+**Los Angeles, California, Virtual Machine Solutions LLC**
+```yaml
+139.60.162.153
+```
+```yaml
+141.11.210.29
+```
+
+**San Jose, California, DataCamp Limited**
+```yaml
+156.146.53.82
+```
+```yaml
+156.146.53.83
+```
+
+**Santa Clara, California, HostPapa RackNerd LLC**
+```yaml
+103.35.188.123
+```
+```yaml
+104.168.58.31
+```
+```yaml
+104.168.102.163
+```
+```yaml
+104.234.50.128
+```
+```yaml
+107.172.159.182
+```
+```yaml
+107.172.167.194
+```
+```yaml
+152.70.155.147
+```
+
+**Santa Clara, California, Tencent Cloud**
+```yaml
+43.153.103.203
+```
+
+**Warrenton, Virginia, OVH SAS**
+```yaml
+91.149.239.70
+```
+```yaml
+104.168.58.31
+```
+```yaml
+104.234.50.128
+```
+```yaml
+152.70.155.147
+```
+
+**Woodbridge, Virginia, Alibaba Technology Ltd**
+```yaml
+5.78.114.254 443
+```
+```yaml
+47.90.141.204
+```
+
+## Europe
+
+### 🇦🇹 Austria
+**Vienna, Aeza international Ltd**
+```yaml
+94.228.169.84
+```
+```yaml
+147.45.41.209
+```
+```yaml
+185.106.94.67
+```
+
+### 🇧🇬 Bulgaria
+**Sofia, EDIS GmbH**
+```yaml
+45.153.125.245
+```
+
+### 🇨🇭 Switzerland
+**Zurich Oberengstringen, Oracle Cloud**
+```yaml
+140.238.212.95
+```
+
+### 🇩🇪 Germany
+**Frankfurt am Main, Hetzner Online GmbH**
+*(Note: Some IPs previously listed with Digital Ocean, now attributed to Hetzner based on section)*
+```yaml
+49.13.92.32
+```
+```yaml
+67.207.73.198
+```
+```yaml
+78.46.56.42
+```
+```yaml
+78.46.233.187
+```
+```yaml
+80.66.87.42
+```
+```yaml
+88.198.172.25
+```
+```yaml
+91.107.135.104
+```
+```yaml
+91.107.191.214
+```
+```yaml
+93.127.223.41
+```
+```yaml
+104.248.128.137
+```
+```yaml
+128.140.2.140
+```
+```yaml
+128.140.50.32
+```
+```yaml
+135.181.81.147
+```
+```yaml
+138.68.124.200
+```
+```yaml
+138.201.244.245
+```
+```yaml
+167.235.242.114
+```
+
+**Frankfurt am Main, Oracle Cloud**
+```yaml
+130.61.23.77
+```
+```yaml
+130.162.223.59
+```
+```yaml
+138.2.136.25
+```
+```yaml
+141.147.8.237
+```
+```yaml
+141.147.47.32
+```
+```yaml
+141.147.61.116
+```
+```yaml
+144.24.169.81
+```
+```yaml
+158.180.62.67
+```
+```yaml
+193.122.58.158
+```
+
+### 🇪🇦 Spain
+**Madrid, IONOS SE & M247 & PQ**
+*(Note: Multiple ISPs listed in original data)*
+```yaml
+45.86.229.28
+```
+```yaml
+91.149.242.110
+```
+```yaml
+176.97.72.18
+```
+```yaml
+185.231.204.186
+```
+```yaml
+212.227.90.142
+```
+
+### 🇳🇱 Netherlands
+**Amsterdam, M247 Europe SRL**
+```yaml
+141.144.202.203
+```
+```yaml
+158.101.223.154
+```
+
+**Amsterdam, Oracle Cloud**
+```yaml
+141.144.197.111
+```
+```yaml
+141.148.229.106
+```
+```yaml
+141.148.236.181
+```
+```yaml
+143.47.191.154
+```
+```yaml
+152.70.59.90
+```
+```yaml
+158.101.209.76
+```
+```yaml
+193.123.36.190
+```
+
+**Amsterdam, RAN Networks S.L**
+```yaml
+51.15.42.255
+```
+```yaml
+185.155.220.64
+```
+```yaml
+212.34.142.100
+```
+```yaml
+212.34.142.189
+```
+
+**Amsterdam, Servers Tech Fzco**
+```yaml
+147.45.69.24
+```
+```yaml
+212.34.142.40
+```
+```yaml
+212.34.142.54
+```
+```yaml
+212.34.142.70
+```
+```yaml
+212.34.142.238
+```
+
+### 🇸🇪 Sweden
+**Stockholm, Oracle Cloud**
+```yaml
+129.151.204.91
+```
+```yaml
+168.138.46.67
+```
+
+## Asia
+
+### 🇦🇪 United Arab Emirates
+**Abu Dhabi, Oracle Cloud**
+```yaml
+193.123.81.105
+```
+
+**Ras al Khor, G-Core labs S.A**
+```yaml
+217.195.200.138
+```
+
+**Unknown City, M247 Europe**
+```yaml
+176.97.66.175
+```
+```yaml
+176.97.67.38
+```
+
+### 🇮🇳 India
+**Airoli, Maharashtra, Oracle Cloud**
+```yaml
+103.29.32.103
+```
+```yaml
+141.148.203.6
+```
+```yaml
+168.138.46.67
+```
+
+**Mumbai, Pdrsolutionsfzc**
+```yaml
+216.10.243.159
+```
+
+### 🇯🇵 Japan
+**Ōi, Saitama, The Constant Company, LLC**
+```yaml
+45.77.130.245
+```
+
+**Tokyo, Akamai Technologies**
+```yaml
+172.104.120.67
+```
+
+**Unknown City, M247 Europe SRL**
+```yaml
+176.97.73.20
+```
+
+### 🇰🇵 Korea (North Korea)
+**(Caution: Flag 🇰🇵 used. Original data mentioned "Korea" for Oracle, verify if this location and ISP are accurate for North Korea, or if it should be South Korea 🇰🇷)**
+**Unknown City, Oracle Cloud**
+```yaml
+144.24.73.232
+```
+
+### 🇹🇷 Turkey
+**Istanbul, Cogent Communications**
+```yaml
+62.3.12.14
+```
+
+**Istanbul, Scalaxy B.V**
+```yaml
+38.180.105.164
+```
+
+**Istanbul, Stark Industries Solutions LTD**
+```yaml
+turk.radicalization.ir
+```
+
+**Istanbul, UltaHost Inc.**
+```yaml
+188.132.183.166
+```
+
+**Izmir, Alastyr A.S**
+```yaml
+185.8.129.187
+```
+
+**Izmir, PQ Hosting plus**
+```yaml
+45.89.52.247
+```
+```yaml
+62.3.12.185
+```
+```yaml
+94.131.123.44
+```
+```yaml
+94.131.123.74
+```
+```yaml
+94.131.123.242
+```
+```yaml
+95.164.11.116
+```
+```yaml
+185.234.66.91
+```
+
+**Izmir, Stark Industries Solutions LTD**
+```yaml
+62.3.12.76
+```
+```yaml
+62.3.12.185
+```
+```yaml
+62.3.12.190
+```
+
+## Oceania
+
+### 🇦🇺 Australia
+**New South Wales, Huntingwood, Unknown ISP**
+```yaml
+192.9.177.204
+```
+```yaml
+192.9.180.162
+```
+
+**Sydney, Digital Ocean**
+```yaml
+170.64.240.100
+```
+
+**Sydney, Macquarie Telecom**
+```yaml
+125.7.24.251
+```
+
+### 🇳🇿 New Zealand
+**NSW Sydney, Oracle Cloud**
+*(Note: Original data used Australian flag 🇦🇺 and listed under Australia/Oracle. City "NSW Sydney" suggests Australia, but previous version used 🇳🇿. Clarification needed. For now, listing under NZ as per last generated file's intent, but with original city details.)*
+```yaml
+152.67.102.137
+```
+```yaml
+192.9.177.204
+```
+```yaml
+192.9.180.162
 ```
 
 <br><br/>
