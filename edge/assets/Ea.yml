@@ -7,39 +7,39 @@ on:
   workflow_dispatch:
     inputs:
       account:
-        description: 'Number of Accounts to be generated (default = 0)'
+        description: Number of Accounts to be generated (default = 0)
         required: false
         default: '0'
       key:
-        description: 'Number of Keys to be generated (default = 1)'
+        description: Number of Keys to be generated (default = 1)
         required: false
         default: '1'
       mail:
-        description: 'Choose the mail provider to generate license'
+        description: Choose the mail provider to generate license
         required: true
         type: choice
         options:
-        - inboxes
-        - 1secmail
-        - fakemail
-        - mailticking
-        - guerrillamail
-        - incognitomail
-        - developermail
+          - inboxes
+          - 1secmail
+          - fakemail
+          - mailticking
+          - guerrillamail
+          - incognitomail
+          - developermail
         default: fakemail
       key_type:
-        description: 'Operation'
+        description: Operation
         required: true
         type: choice
         options:
-        - --key
-        - --vpn-codes
-        - --small-business-key
+          - --key
+          - --vpn-codes
+          - --small-business-key
         default: --vpn-codes
       branch:
-        description: "Key-Gen Repository branch (default = main)"
+        description: Key-Gen Repository branch (default = main)
         required: false
-        default: 'main'
+        default: main
   schedule:
     - cron: '0 */4 * * *'
 
@@ -49,13 +49,13 @@ jobs:
     env:
       DEFAULT_ACCOUNT: '0'
       DEFAULT_KEY: '1'
-      DEFAULT_MAIL: 'fakemail'
-      DEFAULT_KEY_TYPE: '--vpn-codes'
-      DEFAULT_BRANCH: 'main'
-      OUTPUT_FILENAME: 'ESET-CODES.md'
-      TEMP_OUTPUT_FILE: 'key_gen_output.log'
-      LOG_DIR: 'logs'
-      LAST_RUN_DATE_FILE: 'edge/assets/logs/.last_run_date'
+      DEFAULT_MAIL: fakemail
+      DEFAULT_KEY_TYPE: --vpn-codes
+      DEFAULT_BRANCH: main
+      OUTPUT_FILENAME: ESET-CODES.md
+      TEMP_OUTPUT_FILE: key_gen_output.log
+      LOG_DIR: logs
+      LAST_RUN_DATE_FILE: edge/assets/logs/.last_run_date
 
     steps:
       - name: Checkout Repository Code
@@ -301,14 +301,12 @@ jobs:
           echo "Final content of ${OUTPUT_FILE} (first 100 lines):"
           head -n 100 "${OUTPUT_FILE}"
 
-
       - name: Commit and Push Generated Keys
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "feat: Update ESET generated Key/License/Accounts (${{ github.event_name }})"
-          file_pattern: "${{ env.OUTPUT_FILENAME }} ${{ env.LAST_RUN_DATE_FILE }}"
-          commit_user_name: "ESET Security Bot"
-          commit_user_email: "pr@eset.com"
-          commit_options: '--signoff'
+          commit_message: 'feat: Update ESET generated Key/License/Accounts (${{ github.event_name }})'
+          file_pattern: '${{ env.OUTPUT_FILENAME }} ${{ env.LAST_RUN_DATE_FILE }}'
+          commit_user_name: ESET Security Bot
+          commit_user_email: pr@eset.com
+          commit_options: --signoff
           # push_options: '--force'
-          
