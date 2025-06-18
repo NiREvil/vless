@@ -237,7 +237,6 @@ jobs:
               echo "Overwriting ${OUTPUT_FILE} with the new entry and new structure."
               {
                   echo ""
-                  echo "#"
                   cat "$NEW_ENTRY_FILE"
                   echo -e "$FOOTNOTES"
               } > "$OUTPUT_FILE"
