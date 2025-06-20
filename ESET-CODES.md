@@ -1,4 +1,54 @@
 #
+## Generated On: Friday, 20 June 2025, 23:54 IRN
+
+> [!WARNING]
+>
+> - Triggered by: **schedule**
+> - Time-Sensitive Codes
+> - Expire in 24 hours
+> - Single-device binding
+> - No reactivation permitted <br><br/>
+
+<br/>
+
+**ESET VPN ACCESS CODES**
+
+```ruby
+OSWANZ0TWY
+M8WH2YU11Q
+GOMMQKOO39
+W51263W2IZ
+M34MK5V6N3
+V5UQN7866N
+RDNA31VP83
+YS6TGG9WT6
+1FNEMR7DTK
+0003FWZCN0
+```
+<br/>
+
+**ESET BUSINESS SECURITY LICENSE**
+
+```yml
+Expiry: 20.07.2025
+License Key: EWC8-XUK7-XPV4-WA75-W5E9
+```
+<br/>
+
+**ESET ACCOUNT Credentials**
+
+```yml
+Email: jamisen.keil@fsitip.com
+Password: igXH+F1wM`m-4zKUS
+```
+<br/>
+
+Everything you need to know about ESET. [^1]
+Need more VPN access codes? [^2]
+
+<br/>
+
+#
 ## Generated On: Friday, 20 June 2025, 19:57 IRN
 
 > [!WARNING]
@@ -192,6 +242,7 @@ Password: }l0?P8kc;zd#ATDMyO8aU
 Everything you need to know about ESET. [^1]
 Need more VPN access codes? [^2]
 
+<br/>
 <br/>
 <br/>
 <br/>
