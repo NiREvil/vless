@@ -30,8 +30,9 @@
 
 ## Dynamic & Multi-Location Proxies
 
-🇺🇸 **USA, Google LLC, Tencent, Stark, Amazon Tech Inc.** [^1]  
-> *This is a high-level domain with specific IPs*
+🇺🇸 **USA, Google LLC, Tencent, Stark, Amazon Tech Inc.** [^1]
+
+> _This is a high-level domain with specific IPs_
 
 ```CSS
 nima.nscl.ir
@@ -50,232 +51,295 @@ bpb.yousef.isegaro.com
 ```
 
 🇳🇮 IPs from all over the world
+
 ```yaml
 proxyip.cmliussss.net
 ```
 
-🇰🇷 Our Chinese friend [^2]  
+🇰🇷 Our Chinese friend [^2]
 
 > IPs from Korea, Hong-Kong, Japan, USA
 
 ```yaml
 ProxyIP.KR.CMLiussss.net
 ```
+
 ```yaml
 ProxyIP.DE.tp2024.CMLiussss.net
 ```
+
 ```yaml
 ProxyIP.US.CMLiussss.net
 ```
+
 ```yaml
 ProxyIP.SG.CMLiussss.net
 ```
+
 ```yaml
 ProxyIP.JP.CMLiussss.net
 ```
+
 ```yaml
 ProxyIP.HK.CMLiussss.net
 ```
+
 ```yaml
 edtproxyip.lzj.pp.ua
 ```
 
 <details>  
-<summary> Click to see More </summary> 
-
+<summary> Click to see More </summary>
 
 🏳️‍🌈 i dont know
+
 ```yaml
 edtproxyip.lzj.pp.ua
 ```
 
 🏳️‍🌈 i dont know, Maybe Arizona, Oracle Cloud
+
 ```yaml
 proxyip.oracle.fxxk.dedyn.io
 ```
 
 🏳️‍🌈 i dont know, Maybe California, Digital Ocean LLC
+
 ```yaml
 proxyip.digitalocean.hw.090227.xyz
 ```
 
 🏳️‍🌈 i dont know, Maybe New Jersey, Vultr Holdings LLC
+
 ```yaml
 proxyip.vultr.fxxk.dedyn.io
-```  
-</details>   
+```
+
+</details>
 
 <br><br/>
 
 # ISP Specific Proxies
+
 ![rainbow]
 
 ## Google LLC
 
 ### 🇪🇦 Spain
+
 Madrid, Google LLC
+
 ```yaml
 34.175.202.195
 ```
 
 ### 🇺🇸 USA
+
 Dalles, Google LLC
+
 ```yaml
 34.105.49.234
 ```
+
 ```yaml
 34.82.76.253
 ```
+
 ```yaml
 35.247.124.181
 ```
 
 ## Amazon Technologies Inc
+
 ![rainbow]
 
-### 🇦🇺 Australia 
+### 🇦🇺 Australia
+
 NSW, Sydney, Amazon Technologies Inc
+
 ```yaml
 54.79.133.41
 ```
 
 ### 🇫🇷 France
+
 Paris, Amazon Technologies Inc
+
 ```yaml
 35.180.229.1
 ```
 
 ### 🇯🇵 Japan
+
 Tokyo, Shibuya, Amazon Technologies Inc
+
 ```yaml
 13.230.34.30
 ```
 
 ### 🇩🇪 Germany
+
 Frankfurt, Amazon Technologies Inc
+
 ```yaml
 3.124.208.189
 ```
+
 ```yaml
 3.126.159.12
 ```
+
 ```yaml
 3.75.170.179
 ```
 
 ### 🇯🇵 Japan
+
 Tokyo, Amazon Technologies Inc
+
 ```yaml
 13.230.34.30
 ```
+
 ```yaml
 18.183.158.211
 ```
 
 ### 🇬🇧 United Kingdom
+
 London, Amazon Technologies Inc
+
 ```yaml
 18.170.77.148
 ```
 
-### 🇸🇬 Singapore 
+### 🇸🇬 Singapore
+
 Singapore, Amazon Tech Inc
+
 ```yaml
 13.250.131.37
 ```
+
 ```yaml
 203.174.82.38
 ```
+
 ```yaml
 51.79.254.182
 ```
+
 ```yaml
 104.248.145.216
 ```
 
 ### 🇺🇸 USA
+
 Various Locations, Amazon Technologies Inc
 
-> *City information was not specified for these in prior versions*
+> _City information was not specified for these in prior versions_
 
 ```yaml
 3.12.71.127
 ```
+
 ```yaml
 3.13.196.41
 ```
+
 ```yaml
 3.129.183.128
 ```
+
 ```yaml
 3.133.156.22
 ```
+
 ```yaml
 3.135.212.13
 ```
 
 <details>  
-<summary> Click to see More </summary> 
+<summary> Click to see More </summary>
 
 ```yaml
 3.137.221.83
 ```
+
 ```yaml
 3.140.211.75
 ```
+
 ```yaml
 3.15.3.38
 ```
+
 ```yaml
 3.16.135.101
 ```
+
 ```yaml
 3.214.164.221
 ```
+
 ```yaml
 18.216.55.100
 ```
+
 ```yaml
 18.220.206.47
 ```
+
 ```yaml
 18.221.62.181
 ```
+
 ```yaml
 44.227.209.152
 ```
+
 ```yaml
 50.112.33.254
 ```
+
 ```yaml
 52.4.8.214
 ```
+
 ```yaml
 52.42.71.111
 ```
+
 ```yaml
 54.71.238.195
 ```
+
 ```yaml
 54.200.244.93
 ```
+
 ```yaml
 54.210.245.85
 ```
+
 ```yaml
 67.226.220.10
 ```
+
 ```yaml
 184.169.181.217
 ```
+
 ```yaml
 213.170.157.1
 ```
+
 </details>
 
-<br><br/>  
+<br><br/>
 
-# General Proxies by Continent  
+# General Proxies by Continent
+
 ![rainbow]
 
 ## North America
@@ -283,271 +347,349 @@ Various Locations, Amazon Technologies Inc
 ### 🇨🇦 Canada
 
 Toronto, Ontario, Advanced Knowledge Networks
+
 ```yaml
 172.98.207.58
 ```
+
 ```yaml
 209.200.246.130
 ```
 
 Toronto, Ontario, Kamatera Inc
+
 ```yaml
 213.255.209.207
 ```
 
 Kingston, Ontario, Server Cloud Inc
+
 ```yaml
 199.48.102.83
 ```
 
 ### 🇺🇸 USA
+
 Ashburn, Virginia, Total Uptime Technologies LLC
+
 ```yaml
 72.13.122.137
 ```
 
 Chicago, Illinois, Rackspace Hosting
+
 ```yaml
 192.237.192.175
 ```
 
 Chicago, Illinois, Vultr Holdings, LLC
+
 ```yaml
 45.77.109.191
 ```
+
 ```yaml
 66.135.19.169
 ```
+
 ```yaml
 173.199.117.101
 ```
 
 Los Angeles, California, Virtual Machine Solutions LLC
+
 ```yaml
 139.60.162.153
 ```
+
 ```yaml
 141.11.210.29
 ```
 
 San Jose, California, DataCamp Limited
+
 ```yaml
 156.146.53.82
 ```
+
 ```yaml
 156.146.53.83
 ```
 
 Santa Clara, California, HostPapa RackNerd LLC
+
 ```yaml
 103.35.188.123
 ```
+
 ```yaml
 104.168.58.31
 ```
+
 ```yaml
 104.168.102.163
 ```
+
 ```yaml
 104.234.50.128
 ```
+
 ```yaml
 107.172.159.182
 ```
+
 ```yaml
 107.172.167.194
 ```
+
 ```yaml
 152.70.155.147
 ```
 
 Santa Clara, California, Tencent Cloud
+
 ```yaml
 43.153.103.203
 ```
 
 Warrenton, Virginia, OVH SAS
+
 ```yaml
 91.149.239.70
 ```
+
 ```yaml
 104.168.58.31
 ```
+
 ```yaml
 104.234.50.128
 ```
+
 ```yaml
 152.70.155.147
 ```
 
 Woodbridge, Virginia, Alibaba Technology Ltd
+
 ```yaml
 5.78.114.254 443
 ```
+
 ```yaml
 47.90.141.204
 ```
 
-Georgia, Atlanta, Constant,	Vultr Holdings LLC.
+Georgia, Atlanta, Constant, Vultr Holdings LLC.
+
 ```yaml
 155.138.209.175
 ```
+
 ```yaml
 149.248.7.208
 ```
 
-<br><br/>  
+<br><br/>
 
 ## Europe
 
 ### 🇦🇹 Austria
+
 Vienna, Aeza international Ltd
+
 ```yaml
 94.228.169.84
 ```
+
 ```yaml
 147.45.41.209
 ```
+
 ```yaml
 185.106.94.67
 ```
 
 ### 🇧🇬 Bulgaria
+
 Sofia, EDIS GmbH & Belcloud & Relink
+
 ```yaml
 193.37.215.115
 ```
+
 ```yaml
 185.82.218.224
 ```
+
 ```yaml
 185.68.93.39
 ```
+
 ```yaml
 193.239.160.24
 ```
+
 ```yaml
 193.239.160.25
 ```
+
 ```yaml
 45.153.125.245
 ```
 
 ### 🇨🇭 Switzerland
-Zurich, Baxet GP  & Private Layer & Data source & GreenNet
+
+Zurich, Baxet GP & Private Layer & Data source & GreenNet
+
 ```yaml
 179.43.166.2
 ```
+
 ```yaml
 91.192.102.55
 ```
+
 ```yaml
 176.10.125.114
 ```
+
 ```yaml
 194.135.22.181
 ```
+
 ```yaml
 194.135.22.181
 ```
+
 ```yaml
 38.180.15.45
 ```
+
 ```yaml
 38.180.85.203
 ```
+
 ```yaml
 45.85.93.21
 ```
+
 ```yaml
 45.85.93.49
 ```
+
 ```yaml
 94.247.42.207
 ```
+
 ```yaml
 94.131.12.56
 ```
+
 ```yaml
 91.90.193.24
 ```
 
 ### 🇩🇪 Germany
+
 Frankfurt am Main, Hetzner Online GmbH & Digital Ocean
 
 ```yaml
 [2a02:180:6:1::62e]
 ```
+
 ```yaml
 49.13.92.32
 ```
+
 ```yaml
 67.207.73.198
 ```
+
 ```yaml
 78.46.56.42
 ```
+
 ```yaml
 78.46.233.187
 ```
+
 ```yaml
 80.66.87.42
 ```
+
 ```yaml
 88.198.172.25
 ```
+
 ```yaml
 91.107.135.104
 ```
+
 ```yaml
 91.107.191.214
 ```
+
 ```yaml
 93.127.223.41
 ```
+
 ```yaml
 104.248.128.137
 ```
+
 ```yaml
 128.140.2.140
 ```
+
 ```yaml
 128.140.50.32
 ```
+
 ```yaml
 135.181.81.147
 ```
+
 ```yaml
 138.68.124.200
 ```
+
 ```yaml
 138.201.244.245
 ```
+
 ```yaml
 167.235.242.114
 ```
 
 Frankfurt am Main, Oracle Cloud
+
 ```yaml
 193.122.58.158
 ```
 
 ### 🇪🇦 Spain
+
 Madrid, IONOS SE & M247 & PQ
 
-> *Multiple ISPs listed in original data*
+> _Multiple ISPs listed in original data_
+
 ```yaml
 45.86.229.28
 ```
+
 ```yaml
 91.149.242.110
 ```
+
 ```yaml
 176.97.72.18
 ```
+
 ```yaml
 185.231.204.186
 ```
+
 ```yaml
 212.227.90.142
 ```
@@ -555,146 +697,189 @@ Madrid, IONOS SE & M247 & PQ
 ### 🇳🇱 Netherlands
 
 Amsterdam, RAN Networks S.L
+
 ```yaml
 51.15.42.255
 ```
+
 ```yaml
 185.155.220.64
 ```
+
 ```yaml
 212.34.142.100
 ```
+
 ```yaml
 212.34.142.189
 ```
 
 Amsterdam, Servers Tech Fzco
+
 ```yaml
 147.45.69.24
 ```
+
 ```yaml
 212.34.142.40
 ```
+
 ```yaml
 212.34.142.54
 ```
+
 ```yaml
 212.34.142.70
 ```
+
 ```yaml
 212.34.142.238
 ```
 
 Amsterdam, M247 Europe SRL
+
 ```yaml
 141.144.202.203
 ```
+
 ```yaml
 158.101.223.154
 ```
 
 Amsterdam, Oracle Cloud
+
 ```yaml
 141.148.229.106
 ```
+
 ```yaml
 141.148.236.181
 ```
 
 ### 🇸🇪 Sweden
+
 Stockholm, AEZA International LTD
+
 ```yaml
 109.120.134.133
 ```
+
 ```yaml
 109.120.134.15
 ```
+
 ```yaml
 109.120.135.199
 ```
+
 ```yaml
 147.45.73.218
 ```
+
 ```yaml
 147.45.73.239
 ```
 
 ### 🇬🇧 United Kingdoms
+
 London, MVPS LTD & Dedicated Servers
+
 ```yaml
 213.165.88.177
 ```
+
 ```yaml
 45.153.185.29
 ```
+
 ```yaml
 104.128.190.209
 ```
+
 ```yaml
 104.128.190.65
 ```
+
 ```yaml
 159.65.215.239
 ```
+
 ```yaml
 178.128.161.11
 ```
+
 ```yaml
 178.32.58.147
 ```
+
 ```yaml
 172.236.30.225
 ```
+
 ```yaml
 192.248.146.32
 ```
 
-<br><br/>  
+<br><br/>
 
 ## Asia
 
-### 🇦🇲 Armenia 
+### 🇦🇲 Armenia
+
 Kotayk, WEB LLC
 
 ```yaml
 2.56.206.64
 ```
+
 ```yaml
 2.56.204.183
 ```
+
 ```yaml
 213.159.76.175
 ```
 
 ### 🇦🇪 United Arab Emirates
+
 Ras al Khor, G-Core labs S.A
+
 ```yaml
 217.195.200.138
 ```
+
 Abu Dhabi, Oracle Cloud
+
 ```yaml
 193.123.81.105
 ```
 
 Dubai, M247 Europe
+
 ```yaml
 176.97.66.175
 ```
+
 ```yaml
 176.97.67.38
 ```
+
 ```yaml
 91.218.212.223
 ```
+
 ```yaml
 45.137.155.232
 ```
+
 ```yaml
 194.38.20.78
 ```
 
 ### 🇭🇰 Hong-Kong
+
 Kowloon, Zenlayer Inc & Hytron network
+
 ```yaml
 156.59.91.176
 ```
@@ -703,163 +888,212 @@ Kowloon, Zenlayer Inc & Hytron network
 82.152.163.227
 ```
 
-### 🇰🇿 Kazakhstan 
+### 🇰🇿 Kazakhstan
+
 Almaty, NLS Kazakhstan LLC
+
 ```yaml
 188.116.20.93
 ```
+
 ```yml
 213.148.10.177
 ```
+
 ```yaml
 103.106.3.238
 ```
 
 ### 🇮🇳 India
+
 Airoli, Maharashtra, Aryaka Networks Inc
+
 ```yaml
 103.29.32.103
 ```
+
 ```yaml
 168.138.46.67
 ```
 
 Mumbai, Pdrsolutionsfzc
+
 ```yaml
 216.10.243.159
 ```
 
 ### 🇯🇵 Japan
+
 Tokyo, Shibuya, DMIT Cloud LLC & Amazon
+
 ```yaml
 154.31.113.72
 ```
+
 ```yaml
 13.230.34.30
 ```
+
 ```yaml
 202.144.195.204
 ```
+
 ```yaml
 131.186.33.175
 ```
+
 ```yaml
 141.147.147.180
 ```
+
 ```yaml
 217.142.243.226
 ```
 
-### 🇰🇷 South Korea 
+### 🇰🇷 South Korea
+
 Seol, NewMedia Express Pte Ltd
+
 ```yaml
 113.29.230.165
 ```
+
 ```yaml
 113.29.230.248
 ```
+
 ```yaml
 38.225.100.31
 ```
+
 ```yaml
 158.179.171.53
 ```
- 
+
 ### 🇹🇷 Turkey
+
 Izmir, Stark Industries Solutions LTD
+
 ```yaml
 62.3.12.76
 ```
+
 ```yaml
 62.3.12.185
 ```
+
 ```yaml
 62.3.12.190
 ```
 
 Istanbul, Cogent Communications
+
 ```yaml
 62.3.12.14
 ```
 
 Istanbul, Scalaxy B.V
+
 ```yaml
 38.180.105.164
 ```
 
 Istanbul, Stark Industries Solutions LTD
+
 ```yaml
 turk.radicalization.ir
 ```
 
 Istanbul, UltaHost Inc.
+
 ```yaml
 188.132.183.166
 ```
 
 Izmir, Alastyr A.S
+
 ```yaml
 185.8.129.187
 ```
 
 Izmir, PQ Hosting plus
+
 ```yaml
 45.89.52.247
 ```
+
 ```yaml
 62.3.12.185
 ```
+
 ```yaml
 94.131.123.44
 ```
+
 ```yaml
 94.131.123.74
 ```
+
 ```yaml
 94.131.123.242
 ```
+
 ```yaml
 95.164.11.116
 ```
+
 ```yaml
 185.234.66.91
 ```
 
-<br><br/>  
+<br><br/>
 
 ## Oceania
 
 ### 🇦🇺 Australia
+
 New South Wales, Sydney, OVH SAS &Oracle
+
 ```yaml
 139.99.236.163
 ```
+
 ```yaml
 125.7.24.251
 ```
+
 ```yaml
 192.9.180.162
 ```
+
 ```yaml
 192.9.180.162
 ```
+
 Sydney, Digital Ocean
+
 ```yaml
 170.64.240.100
 ```
+
 Sydney, Macquarie Telecom
+
 ```yaml
 125.7.24.251
 ```
 
 ### 🇳🇿 New Zealand
+
 Unknown city, Oracle Cloud
+
 ```yaml
 152.67.102.137
 ```
+
 ```yaml
 192.9.177.204
 ```
+
 ```yaml
 192.9.180.162
 ```
@@ -933,7 +1167,7 @@ Unknown city, Oracle Cloud
 > روش های تست پروکسی‌آی‌پی‌ها در [بخش قبلی](#Test-proxyIPs) نوشته شده.
 >
 > این روش پیدا کردن پروکسی آی‌پی منسوخ شده و دوسال پیش به درد میخورد، الان میتونی از همین پست پروکسی دلخواهت رو برداری با بجای اینکه پشت دامنه‌ها دنبال پروکسی بگردی از [این‌جا برداری](bulkproxyip.csv) هرچند هزارتا که میخوای.
-> 
+>
 > https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
 >
 > https://www.nslookup.io/domains/nima.nscl.ir/dns-records/
@@ -957,10 +1191,10 @@ Unknown city, Oracle Cloud
 > https://www.nslookup.io/domains/proxyip.vultr.fxxk.dedyn.io/dns-records/
 >
 > https://www.nslookup.io/domains/workers.cloudflare.cyou/dns-records/
-> 
+>
 > یکم خلاقیت ب خرج بدی خودت میفهمی که باید دنبال چی بگردی تو سایت
 
-<br><br/>  
+<br><br/>
 
 ## Bulk proxyip
 
@@ -985,9 +1219,6 @@ and more more more IP's - [Rentry.co/CF-proxyIP]
 [^2]: https://t.me/s/CMLiussss
 
 [Rentry.co/CF-proxyIP]: https://rentry.co/CF-proxyIP
-
 [Telegra.ph]: https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06
-
 [rainbow]: https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256
-
 [zip]: https://github.com/NiREvil/vless/raw/refs/heads/main/sub/1-bilion-proxyip.zip
