@@ -1,7 +1,7 @@
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="140x" </p><br><br/>
 
-> [!CAUTION]   
+> [!CAUTION]
 >
 > [![Come Here](https://img.shields.io/badge/شرابط_اضطراری-موقت-darkred)](https://t.me/NiREvil_GP/106699)
 >
@@ -9,58 +9,59 @@
 >
 > **من درباره نت همراه حرف نمیزنم** چون اون‌ها همچنان ترکیده‌ان ولی نت ثابت وضعیتش بهتره مخصوصا مخابرات، شاتل، آسیاتک، پارس آنلاین و برخی دیگر.  
 > ما برای دسترسی به اینترنت بین الملل در همین پهنای باند حداقلی از سایفون استفاده می‌کنیم، سایفون نسخه سایت، نسخه مارکت گوگل اصلا یه چیز دیگه‌است و ظاهرا بی ربط به سایفونه!!
+>
 > <details>
 > <summary> توضیحات مربوط به سایفون   </summary><br/>   
 >  
 > من هم اسکرین‌شات از تنطیمات سایفون قرار میدم و هم به شکل متنی می‌نویسم همینجا.  
 > در ابتدا سایفون رو از سایت خودش دانلود کنید. [لینک سایت](https://psiphon.ca/en/download-store.html?psiphonca)    
-> ولی اکر به هر دلیلی نتونستید از سایت دانلود کنید مشکلی نیست فایل نصبی رو گذاشتم تو صندوقچه آروان بدون وی‌پی‌ان میشه سریع دانلود کرد. پیشنهادم v425. [لینک صندوقچه](https://ops3.s3-website.ir-thr-at1.arvanstorage.ir/)   
-> 
+> ولی اکر به هر دلیلی نتونستید از سایت دانلود کنید مشکلی نیست فایل نصبی رو گذاشتم تو صندوقچه آروان بدون وی‌پی‌ان میشه سریع دانلود کرد. پیشنهادم v425. [لینک صندوقچه](https://ops3.s3-website.ir-thr-at1.arvanstorage.ir/)
+>
 > **خب توضیحات متنی**  
->  کلا دوتا گرینه ساده رو تغییر میدیم. [^1]   
+>  کلا دوتا گرینه ساده رو تغییر میدیم. [^1]  
 > 1- از بخش `OPTIONS` در قسمت `Proxy Settings`  
-> گزینه‌ `Connect through an HTTP Proxy` رو تیک می‌زنیم فعال بشه. [^2]  
-> 
-> 2- در صفحه اصلی این‌بار در قسمت `More Options` گزینه‌ `Disable Timeouts` رو فعال می‌کنیم تا با این وضعیت داغونِ نت‌ما سریع تایم اوت نده و تلاش برای اتصال رو کنسل نکنه. [^3]   
->  
-> بقیه ستینگ پیشفرض باقی بمونه، گزینه استارت رو میزنیم ده بیست ثانیه صبر می‌کنیم اگه وصل نشد استاپ و استارت دوباره می‌کنیم، تو سومین تلاش قطعا وصل شده. [^4]   
+> گزینه‌ `Connect through an HTTP Proxy` رو تیک می‌زنیم فعال بشه. [^2]
+>
+> 2- در صفحه اصلی این‌بار در قسمت `More Options` گزینه‌ `Disable Timeouts` رو فعال می‌کنیم تا با این وضعیت داغونِ نت‌ما سریع تایم اوت نده و تلاش برای اتصال رو کنسل نکنه. [^3]
+>
+> بقیه ستینگ پیشفرض باقی بمونه، گزینه استارت رو میزنیم ده بیست ثانیه صبر می‌کنیم اگه وصل نشد استاپ و استارت دوباره می‌کنیم، تو سومین تلاش قطعا وصل شده. [^4]
 >
 > </details>  
 >  
 > <details>
-> <summary> توضیحات مربوط به کانفیگ wOW</summary><br/>  
+> <summary> توضیحات مربوط به کانفیگ wOW</summary><br/>
 >
-> یه چیز دیگه‌ای که اکثر ADSL‌ها مخصوصا مخابرات بهش وصل هستن کانفیگ ***warp ON warp*** هیدیفای یا سینگ‌باکس هستش، با پینگ زیر 100 به طرز عجیبی. [^5]
-> 
-> منظورم [این دو کانفیگ بود](#hiddify-url-).  
->  
+> یه چیز دیگه‌ای که اکثر ADSL‌ها مخصوصا مخابرات بهش وصل هستن کانفیگ **_warp ON warp_** هیدیفای یا سینگ‌باکس هستش، با پینگ زیر 100 به طرز عجیبی. [^5]
+>
+> منظورم [این دو کانفیگ بود](#hiddify-url-).
+>
 > </details>
-> 
+>
 > <details>
-> <summary> توضیحات مربوط به ESET VPN </summary><br/>  
+> <summary> توضیحات مربوط به ESET VPN </summary><br/>
 >
 > پیشنهاد آخرم برای Adsl و فیبر شاتل هست که همه میگن **ESET VPN** عالی کار میکنه باهاش.
-> 
-> پروتکل `WSTUNNEL` پورت `443` تقریبا اکثر سرور‌ها، شخصا کلمبیا رو دوست داشتم. 
-> 
-> کد ورود برای ESET و توضیحات مربوطه رو [از اینجا](./ESET-CODES.md) ببینید.  
->  
-> </details>  
-> 
-> در نهایت اگه خیلی معطل موندید بیاید گروه شاید بچه‌ها تونستن کمکی بکنن.  
-> همراه اولی‌ها نیان ✋🏿🤣 
 >
-> [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699)  [![War Zone](https://img.shields.io/badge/x-darkred)](https://t.me/NiREvil_GP/106699)   [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699)  [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) 
-> 
-> <br><br/> 
+> پروتکل `WSTUNNEL` پورت `443` تقریبا اکثر سرور‌ها، شخصا کلمبیا رو دوست داشتم.
+>
+> کد ورود برای ESET و توضیحات مربوطه رو [از اینجا](./ESET-CODES.md) ببینید.
+>
+> </details>
+>
+> در نهایت اگه خیلی معطل موندید بیاید گروه شاید بچه‌ها تونستن کمکی بکنن.  
+> همراه اولی‌ها نیان ✋🏿🤣
+>
+> [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/x-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699)
+>
+> <br><br/>
 
-<br><br/>  
+<br><br/>
 
-<br><br/>  
+<br><br/>
 
-<br><br/>  
+<br><br/>
 
-<div dir="rtl">  
+<div dir="rtl">
 
 - تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، هیدیفای، نکوباکس، کلش‌متا، آمنزیا، آوت‌لاین، نیکا، مهسا، ویتوری‌ ان‌جی، نکوری و ...
 
@@ -86,7 +87,7 @@
 > - اگر لینک عمومی سراغ داشتید که براتون خوب کار کرده می‌تونید بفرستید اضافه کنم و مردممون استفاده کنن.
 > - متاسفانه از مرداد ماه نیما دیگه بینمون نیست و من و چند دوست دیگه اکانت گیت رو در حد توان اداره می‌کنیم. به امید آزادی 🤍
 > - اکانت تلگرام من: [[Di4Diana]].
-> 
+>
 > </details>
 
 > [!IMPORTANT]
@@ -126,7 +127,7 @@
 
 ##
 
-### Hiddify URL  <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>
+### Hiddify URL <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>
 
 ```POV-Ray SDL
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
@@ -134,7 +135,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
 
 <br/>
 
-### Sing-Box URL  <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="20"/>
+### Sing-Box URL <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="20"/>
 
 ```mupad
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
@@ -1215,22 +1216,26 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Czech%20Republic/config.txt
 
 **🇦🇪**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/United%20Arab%20Emirates/config.txt   
+https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/United%20Arab%20Emirates/config.txt
 
 ![rainbow]
 
-<br><br/>  
+<br><br/>
 
-[^1]: <img src="https://github.com/user-attachments/assets/65eb04ad-67dc-4a70-aa9f-762acb2f5e77" alt="Psiphon Options" width="240"/>
+[^1]:
+    <img src="https://github.com/user-attachments/assets/65eb04ad-67dc-4a70-aa9f-762acb2f5e77" alt="Psiphon Options" width="240"/>
 
-[^2]: <img src="https://github.com/user-attachments/assets/e6f11c07-5c2e-44c6-9ee1-748b98d71aac" alt="Psiphon ProxySettings" width="240"/>
+[^2]:
+    <img src="https://github.com/user-attachments/assets/e6f11c07-5c2e-44c6-9ee1-748b98d71aac" alt="Psiphon ProxySettings" width="240"/>
 
-[^3]: <img src="https://github.com/user-attachments/assets/0699ff2f-e3e8-4e0f-98f6-bb7e288a645e" alt="Psiphon MoreOptions" width="240"/>
+[^3]:
+    <img src="https://github.com/user-attachments/assets/0699ff2f-e3e8-4e0f-98f6-bb7e288a645e" alt="Psiphon MoreOptions" width="240"/>
 
-[^4]: <img src="https://github.com/user-attachments/assets/acec4283-cf3d-415a-82ed-1ad39229a32b" alt="PsiphonIsConnected" width="240"/>
+[^4]:
+    <img src="https://github.com/user-attachments/assets/acec4283-cf3d-415a-82ed-1ad39229a32b" alt="PsiphonIsConnected" width="240"/>
 
-[^5]: <img src="https://github.com/user-attachments/assets/c83a1677-595b-472c-b50a-d40b6e08d197" alt="warpONwarp" width="240"/>
-
+[^5]:
+    <img src="https://github.com/user-attachments/assets/c83a1677-595b-472c-b50a-d40b6e08d197" alt="warpONwarp" width="240"/>
 
 [00]: https://t.me/NiREvil_GP/106699
 [Harmony]: https://github.com/NiREvil/Harmony/blob/b923d67dd5702886b0965de86182896373ade4e5/harmony.js#L892
