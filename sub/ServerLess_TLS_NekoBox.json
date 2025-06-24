@@ -1,20 +1,14 @@
 {
-  "log": {
-    "level": "warning"
-  },
   "dns": {
-    "independent_cache": true,
     "disable_cache": false,
-    "strategy": "ipv4_only",
     "fakeip": {
       "enabled": true,
       "inet4_range": "10.20.152.0/22"
     },
+    "independent_cache": true,
     "rules": [
       {
-        "rule_set": [
-          "google"
-        ],
+        "rule_set": ["google"],
         "server": "fakeip"
       }
     ],
@@ -27,15 +21,14 @@
         "address": "fakeip",
         "tag": "fakeip"
       }
-    ]
+    ],
+    "strategy": "ipv4_only"
   },
   "inbounds": [
     {
+      "address": ["172.19.0.1/28"],
       "domain_strategy": "",
       "endpoint_independent_nat": true,
-      "address": [
-        "172.19.0.1/28"
-      ],
       "mtu": 9000,
       "sniff": true,
       "sniff_override_destination": false,
@@ -53,6 +46,9 @@
       "type": "mixed"
     }
   ],
+  "log": {
+    "level": "warning"
+  },
   "outbounds": [
     {
       "tag": "direct",
@@ -63,8 +59,6 @@
     "auto_detect_interface": true,
     "rule_set": [
       {
-        "type": "inline",
-        "tag": "google",
         "rules": [
           {
             "domain": [
@@ -224,6 +218,15 @@
               "www.gstatic.com",
               "www.pxcc.com",
               "www.recaptcha.net"
+            ],
+            "domain_regex": [
+              "^adservice\\.google\\.([a-z]{2}|com?)(\\.[a-z]{2})?$",
+              "^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.xn--ngstr-lra8j\\.com$",
+              "^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.googlevideo\\.com$",
+              "^scholar\\.google\\.(com(\\.[a-z]{2})?|co\\.[a-z]{2}|[a-z]{2,3})$",
+              "^(?:[a-z0-9-]+\\.)*blogspot\\.(com(\\.[a-z]{2})?|co\\.[a-z]{2}|[a-z]{2})$",
+              "^(?:[a-z0-9-]+\\.)*google\\.(com(\\.[a-z]{2})?|co\\.[a-z]{2}|[a-z]{2,})$",
+              "^(?:[a-z0-9-]+\\.)*youtube\\.(com(\\.[a-z]{2})?|co\\.[a-z]{2}|[a-z]{2,})$"
             ],
             "domain_suffix": [
               ".and",
@@ -659,50 +662,31 @@
               "yt.be",
               "ytimg.com",
               "zukunftswerkstatt.de"
-            ],
-            "domain_regex": [
-              "^adservice\\.google\\.([a-z]{2}|com?)(\\.[a-z]{2})?$",
-              "^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.xn--ngstr-lra8j\\.com$",
-              "^r+[0-9]+(---|\\.)sn-(2x3|ni5|j5o)\\w{5}\\.googlevideo\\.com$",
-              "^scholar\\.google\\.(com(\\.[a-z]{2})?|co\\.[a-z]{2}|[a-z]{2,3})$",
-              "^(?:[a-z0-9-]+\\.)*blogspot\\.(com(\\.[a-z]{2})?|co\\.[a-z]{2}|[a-z]{2})$",
-              "^(?:[a-z0-9-]+\\.)*google\\.(com(\\.[a-z]{2})?|co\\.[a-z]{2}|[a-z]{2,})$",
-              "^(?:[a-z0-9-]+\\.)*youtube\\.(com(\\.[a-z]{2})?|co\\.[a-z]{2}|[a-z]{2,})$"
             ]
           }
-        ]
+        ],
+        "tag": "google",
+        "type": "inline"
       }
     ],
     "rules": [
       {
         "action": "hijack-dns",
-        "port": [
-          53
-        ]
+        "port": [53]
       },
       {
         "action": "hijack-dns",
-        "protocol": [
-          "dns"
-        ]
+        "protocol": ["dns"]
       },
       {
         "action": "route-options",
         "override_address": "www.google.com",
-        "rule_set": [
-          "google"
-        ]
+        "rule_set": ["google"]
       },
       {
         "action": "reject",
-        "ip_cidr": [
-          "224.0.0.0/3",
-          "ff00::/8"
-        ],
-        "source_ip_cidr": [
-          "224.0.0.0/3",
-          "ff00::/8"
-        ]
+        "ip_cidr": ["224.0.0.0/3", "ff00::/8"],
+        "source_ip_cidr": ["224.0.0.0/3", "ff00::/8"]
       }
     ]
   }
