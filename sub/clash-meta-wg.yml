@@ -1,5 +1,5 @@
 # Generated configs for clash-meta with WireGuard proxies that have amnesia values.
-# Generated on: 2025-06-24T01:02:13.677206
+# Generated on: 2025-06-24T08:48:58
 
 mixed-port: 7890
 ipv6: true
@@ -76,7 +76,7 @@ sniffer:
         - 2087
         - 2096
 proxies:
-  - name: GER-DIALER-01
+  - name: AZ-DIALER-01
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:83f4:5e65:87bb:fb82:a2e8/128
@@ -90,8 +90,8 @@ proxies:
     reserved: WWMK
     udp: true
     mtu: 1280
-    dialer-proxy: IRN-ENTRY-01
-  - name: IRN-ENTRY-01
+    dialer-proxy: IR-ENTRY-01
+  - name: IR-ENTRY-01
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:8bcb:885e:2c53:fdc4:64a2/128
@@ -109,7 +109,7 @@ proxies:
       jc: '4'
       jmin: '40'
       jmax: '70'
-  - name: GER-DIALER-02
+  - name: AZ-DIALER-02
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:83f4:5e65:87bb:fb82:a2e8/128
@@ -123,8 +123,8 @@ proxies:
     reserved: WWMK
     udp: true
     mtu: 1280
-    dialer-proxy: IRN-ENTRY-02
-  - name: IRN-ENTRY-02
+    dialer-proxy: IR-ENTRY-02
+  - name: IR-ENTRY-02
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:8bcb:885e:2c53:fdc4:64a2/128
@@ -142,7 +142,7 @@ proxies:
       jc: '4'
       jmin: '40'
       jmax: '70'
-  - name: GER-DIALER-03
+  - name: AZ-DIALER-03
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:83f4:5e65:87bb:fb82:a2e8/128
@@ -156,8 +156,8 @@ proxies:
     reserved: WWMK
     udp: true
     mtu: 1280
-    dialer-proxy: IRN-ENTRY-03
-  - name: IRN-ENTRY-03
+    dialer-proxy: IR-ENTRY-03
+  - name: IR-ENTRY-03
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:8bcb:885e:2c53:fdc4:64a2/128
@@ -175,7 +175,7 @@ proxies:
       jc: '4'
       jmin: '40'
       jmax: '70'
-  - name: GER-DIALER-04
+  - name: AZ-DIALER-04
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:83f4:5e65:87bb:fb82:a2e8/128
@@ -189,8 +189,8 @@ proxies:
     reserved: WWMK
     udp: true
     mtu: 1280
-    dialer-proxy: IRN-ENTRY-04
-  - name: IRN-ENTRY-04
+    dialer-proxy: IR-ENTRY-04
+  - name: IR-ENTRY-04
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:8bcb:885e:2c53:fdc4:64a2/128
@@ -208,7 +208,7 @@ proxies:
       jc: '4'
       jmin: '40'
       jmax: '70'
-  - name: GER-DIALER-05
+  - name: AZ-DIALER-05
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:83f4:5e65:87bb:fb82:a2e8/128
@@ -222,8 +222,8 @@ proxies:
     reserved: WWMK
     udp: true
     mtu: 1280
-    dialer-proxy: IRN-ENTRY-05
-  - name: IRN-ENTRY-05
+    dialer-proxy: IR-ENTRY-05
+  - name: IR-ENTRY-05
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:8bcb:885e:2c53:fdc4:64a2/128
@@ -241,7 +241,7 @@ proxies:
       jc: '4'
       jmin: '40'
       jmax: '70'
-  - name: GER-DIALER-06
+  - name: AZ-DIALER-06
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:83f4:5e65:87bb:fb82:a2e8/128
@@ -255,8 +255,8 @@ proxies:
     reserved: WWMK
     udp: true
     mtu: 1280
-    dialer-proxy: IRN-ENTRY-06
-  - name: IRN-ENTRY-06
+    dialer-proxy: IR-ENTRY-06
+  - name: IR-ENTRY-06
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:8bcb:885e:2c53:fdc4:64a2/128
@@ -274,7 +274,7 @@ proxies:
       jc: '4'
       jmin: '40'
       jmax: '70'
-  - name: GER-DIALER-07
+  - name: AZ-DIALER-07
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:83f4:5e65:87bb:fb82:a2e8/128
@@ -288,8 +288,8 @@ proxies:
     reserved: WWMK
     udp: true
     mtu: 1280
-    dialer-proxy: IRN-ENTRY-07
-  - name: IRN-ENTRY-07
+    dialer-proxy: IR-ENTRY-07
+  - name: IR-ENTRY-07
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:8bcb:885e:2c53:fdc4:64a2/128
@@ -307,7 +307,7 @@ proxies:
       jc: '4'
       jmin: '40'
       jmax: '70'
-  - name: GER-DIALER-08
+  - name: AZ-DIALER-08
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:83f4:5e65:87bb:fb82:a2e8/128
@@ -321,8 +321,8 @@ proxies:
     reserved: WWMK
     udp: true
     mtu: 1280
-    dialer-proxy: IRN-ENTRY-08
-  - name: IRN-ENTRY-08
+    dialer-proxy: IR-ENTRY-08
+  - name: IR-ENTRY-08
     type: wireguard
     ip: 172.16.0.2/32
     ipv6: 2606:4700:110:8bcb:885e:2c53:fdc4:64a2/128
@@ -344,53 +344,53 @@ proxy-groups:
   - name: 🔰 PROXIES
     type: select
     proxies:
-      - 🇮🇷 AUTO-IRN-ENTRY
-      - 🇩🇪 AUTO-GER-DIALER
+      - 🇮🇷 AUTO-IR-ENTRY
+      - 🇦🇿 AUTO-AZ-DIALER
       - DIRECT
-      - GER-DIALER-01
-      - GER-DIALER-02
-      - GER-DIALER-03
-      - GER-DIALER-04
-      - GER-DIALER-05
-      - GER-DIALER-06
-      - GER-DIALER-07
-      - GER-DIALER-08
-      - IRN-ENTRY-01
-      - IRN-ENTRY-02
-      - IRN-ENTRY-03
-      - IRN-ENTRY-04
-      - IRN-ENTRY-05
-      - IRN-ENTRY-06
-      - IRN-ENTRY-07
-      - IRN-ENTRY-08
-  - name: 🇮🇷 AUTO-IRN-ENTRY
+      - AZ-DIALER-01
+      - AZ-DIALER-02
+      - AZ-DIALER-03
+      - AZ-DIALER-04
+      - AZ-DIALER-05
+      - AZ-DIALER-06
+      - AZ-DIALER-07
+      - AZ-DIALER-08
+      - IR-ENTRY-01
+      - IR-ENTRY-02
+      - IR-ENTRY-03
+      - IR-ENTRY-04
+      - IR-ENTRY-05
+      - IR-ENTRY-06
+      - IR-ENTRY-07
+      - IR-ENTRY-08
+  - name: 🇮🇷 AUTO-IR-ENTRY
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 30
     tolerance: 50
     proxies:
-      - IRN-ENTRY-01
-      - IRN-ENTRY-02
-      - IRN-ENTRY-03
-      - IRN-ENTRY-04
-      - IRN-ENTRY-05
-      - IRN-ENTRY-06
-      - IRN-ENTRY-07
-      - IRN-ENTRY-08
-  - name: 🇩🇪 AUTO-GER-DIALER
+      - IR-ENTRY-01
+      - IR-ENTRY-02
+      - IR-ENTRY-03
+      - IR-ENTRY-04
+      - IR-ENTRY-05
+      - IR-ENTRY-06
+      - IR-ENTRY-07
+      - IR-ENTRY-08
+  - name: 🇦🇿 AUTO-AZ-DIALER
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 30
     tolerance: 50
     proxies:
-      - GER-DIALER-01
-      - GER-DIALER-02
-      - GER-DIALER-03
-      - GER-DIALER-04
-      - GER-DIALER-05
-      - GER-DIALER-06
-      - GER-DIALER-07
-      - GER-DIALER-08
+      - AZ-DIALER-01
+      - AZ-DIALER-02
+      - AZ-DIALER-03
+      - AZ-DIALER-04
+      - AZ-DIALER-05
+      - AZ-DIALER-06
+      - AZ-DIALER-07
+      - AZ-DIALER-08
 rule-providers:
   private:
     type: http
