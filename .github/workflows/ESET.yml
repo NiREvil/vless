@@ -41,7 +41,7 @@ on:
         required: false
         default: main
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '0 */2 * * *'
 
 jobs:
   generate-and-commit:
