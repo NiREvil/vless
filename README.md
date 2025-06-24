@@ -40,13 +40,109 @@
 > <details>
 > <summary> توضیحات مربوط به ESET VPN </summary><br/>
 >
-> پیشنهاد آخرم برای Adsl و فیبر شاتل هست که همه میگن **ESET VPN** عالی کار میکنه باهاش.
+> پیشنهاد دیگه‌ام برای Adsl و فیبر شاتل هست که همه میگن **ESET VPN** عالی کار میکنه باهاش.  
 >
-> پروتکل `WSTUNNEL` پورت `443` تقریبا اکثر سرور‌ها، شخصا کلمبیا رو دوست داشتم.
+> پروتکل `WSTUNNEL` پورت `443` تقریبا اکثر سرور‌ها،  روی بعضیاشونم پروتکل `Stealth` کار می‌کنه، شخصا کلمبیا رو دوست داشتم.
 >
-> کد ورود برای ESET و توضیحات مربوطه رو [از اینجا](./ESET-CODES.md) ببینید.
+> کد ورود برای ESET و توضیحات مربوطه رو [[از اینجا]](./ESET-CODES.md) ببینید.
 >
 > </details>
+>
+> <details>
+> <summary> توضیحات مربوط به پنل BPB </summary><br/>
+>
+> اینو خودم دارم استفاده میکنم، یه پنل BPB بالا آوردم به کمک ویزارد 90 ثانیه بیشتر طول نکشید (اکانت کلادفلر داشتم از قبل).  
+> بعد از اینکه پنل رو ایجاد کردید (ترجیحا نوع وورکر بسازید که برای این شرایط بهتره، چون میشه از پورت‌های فاقد tls مثل پورت 80 هم استفاده کرد)، داخل پنل می‌تونید به عنوان تنظیمات و چندتا آی‌پی تمیز از این فایل بکاپ من استفاده کنید. کافیه [[این فایل]](edge/assets/BPB-settings.dat.txt) رو از گزینه مشخص شده در پنل [^6] آپلود کنید تا تنظیمات من اعمال بشه براتون.  
+> از داخل پنل لینک ساب نرمال یا فول نرمال رو اضافه کنید داخل v2rayNG یا Hiddify و URL Test بگیرید می‌بینید که دو یا چهار تا کانفیگی که از دامین `www.speedtest.net` در اون‌ها استفاده شده پینگ عالی میدن. تست شده فقط با مخابرات و آسیاتک. [^7] [^8]  
+>  
+>  نحوه ساخت پنل واقعا ساده‌است مخصوصا که اگه از ابزار ویزارد استفاده بکنید و دستی نرید سراغش. یه خط دستور رو کپی پست می‌کنید داخل ترمینال لینوکس یا ویدوز یا ترماکس اندروید و به دوسه تا سوال پاسخ می‌دید و تمام. پنل ساخته میشه.  
+> از طریق [[این لینک]][WIZ] می‌تونید توضیحات کامل درباره این پروژه رو مطالعه کنید، توسط توسعه دهنده BPB نوشته شده.   
+>  
+> <details>
+> <summary> توضیحات مرحله به مرحله ویزارد BPB </summary><br/>  
+> 
+> درسته که تو لینکی که دادم توضیحات کامل نوشته شده بود، ولی مرحله به مرحله ننوشتن، خودم می‌نویسم براتون.    
+> 
+> بعد از اینکه ترماکس اندروید رو از [[مخزن گیت‌هاب]][TERMUX] دانلود و نصب (یا ترمینال ویندوز (CMD) یا لینوکس) رو باز کردید؛  
+> دستور زیر رو اجرا کنید:    
+>  
+> `bash <(curl -fsSL https://raw.githubusercontent.com/bia-pain-bache/BPB-Wizard/main/install.sh)`
+> 
+> - **اولین مرحله**   
+> > Please enter 1 to CREATE a new panel or 2 to MODIFY an existing panel:   
+>  
+> سوال اینه که می‌خواید یه پنل جدید بسازید؟ (عدد 1 رو وارد کنید) یا پنل‌های موجود توی اکانت کلادفلر خودتون رو ویرایش کنید؟ (عدد 2 را وارد کنید).   
+> ما عدد `1` رو وارد کرده و اینتر میزنیم.    
+>   
+> - **مرحله دوم**      
+> بعدش مرحله وارد شدن به حساب کلادفلر (درصورت داشتن اکانت) یا ساخت اکانت هستش، اگه اکانت داشتید که لاگین می‌کنید اگه نداشتید با ایمیل خودتون یا هزاران فیک میل یکی می‌سازید، یادتون نره بعدش برید صندوق ورودی و وریفای کنید.   
+> درنهایت وارد حساب Cloudflare شما می‌شه و ازتون اجازه دسترسی می‌خواد، دسترسی رو دادید صفحه رو می‌بندید برمی‌گردید ب ترمینال.  
+>  
+> - **مرحله سوم**   
+> > Please enter 1 for Workers or 2 for Pages deployment:  
+> 
+> میگه اگه می‌خوای `Worker` بسازی عدد یک و یا اگه میخای `Pages` بسازی عدد 2 رو وارد کن، به دلخواه خودت هرکدومو خواستی وارد کن.  
+> من پیشنهاد می‌کنم بای شرایط جنگی حال حاضر و این وضعیت اینترنت بهتره وورکر بسازی که بتونی از پورت‌های noTLS مثل 80 هم استفاده بکنی.  
+>   
+> - **مرحله چهارم**  
+> > The random generated name (Subdomain) is: 5th7sc483r2-q9  
+> > Please enter a custom name or press ENTER to use generated one:  
+> 
+> میگه ساب‌دامنه شخصی شما رندوم انتخاب میشه و مقدارش فلانه، اگه می‌خوای سفارشی باشه مقدار دلخواهت رو وارد کن، می‌تونی هرچیزی بنویسی با در نظر داشتن این که باید از: حروف کوچک انکلیسی، بدون فاصله، بدون کاما و بدون نقطه استفاده کنی، فقط عدد و حروف کوچیک چسبیده بهم، ترجیحا فقط اینتر بزنید که مقدار رندومی که خودش تعیین کرده باقی بمونه.  
+> 
+> - **مرحله پنجم**    
+> > The random generated UUID is: xxxxx  
+> > Please enter a custom UUID or press ENTER to use generated one:   
+> 
+> میگه UUID رندوم منتخب ما اینه، اگر قصدشو داری از چیز دیگه استفاده کنی برام بفرستش درغیر این‌صورت اینتر بزن بره، می‌تونی از سایت:      
+> [[uuidgenerator]][UUID]   
+> آیدی خودت رو بگیری و یا اینتر بزنی خودش انتخاب کنه، حتما اینتر بزنید، کم اهمیت ترین چیز همینه که از کجا بیاری آی‌دی رو.   
+>  
+> - **مرحله ششم**   
+> > The random generated Trojan password is: xxxx   
+> > Please enter a custom Trojan password or press ENTER to use generated one:   
+> 
+> بازم مثل قبلی‌ها، یه مقدار رندوم خودش میذاره اگه اینتر بزنی، پس بزن بره چون فاقد اهمیته.  
+>  
+> - **مرحله هفتم**    
+> > The default Proxy IP is: bpb.yousef.isegaro.com   
+> > Please enter custom Proxy IP/Domains or press ENTER to use default:  
+> 
+> انتخاب پروکسی آی‌پی، تقریبا مرحله مهم همینه، پروکسی پیش‌فرض خودشون اوکیه ولی نه خیلی، اولا همیشه نصف پروکسی‌ها از کار افتادن و دیر به دیر تغییر می‌کنن، دوما از جاهای بدرد نخور مثل oracle هستن که هر سایتی بری ده بار ازت می‌خواد کپچا حل کنی ربات‌های تلگرامی‌هم هیچ‌کدوم بالا نمیان. پیشنهاد می‌کنم پروکسی خودمون رو بذارین که دائم آپدیت میشه و باکیفیت: `nima.nscl.ir`    
+> یا هر پروکسی دیگه‌ای که می‌خواستید اینجا پیدا میشه:   
+> [[SOURCE OF PROXYIP]][ProxyIP]  
+>  
+> - **مرحله هشتم**  
+> > The default Fallback domain is: speed.cloudflare.com   
+> > Please enter a custom Fallback domain or press ENTER to use default:  
+> 
+> از روی بیکاری زیاد بود که اینو گذاشتن، اینتر بزنید بره فاقد اهمیت‌ترین همینه.  
+>  
+> - **مرحله نهم**  
+> > The random generated Subscription path is: 7b67Th1Rk$UX4aM@  
+> > Please enter a custom Subscription path or press ENTER to use generated one:  
+>  
+> این مرحله واسه امنیت بیشتره، قبلا جاشو uuid میگرفت ک میشد لو بره و سواستفاده شه از پنل، الان بهتر شده پس اینتر بزنید و بذارید که رندوم انتخاب شه.  
+>  
+> - **مرحله دهم**   
+> > You can set Custom domain ONLY if you registered domain on this cloudflare account.  
+> > Please enter a custom domain (if you have any) or press ENTER to ignore:  
+> 
+> اگه از قبل دامنه خریدید که می‌تونید اینجا یه ساب دامنه انتخاب کنید اگر نه اینتر بزنید بره.   
+>  
+> - **مرحله یازدهم**  
+سی ثانیه صبر کنید kv رو درست کنه وصل کنه متغییرهای منتخبتون رو اضافه کنه کد پروژه رو دانلود کنه ایمپورت کنه و بهتون این پیغام رو نشون بده:  
+> > Would you like to open BPB panel in browser? (y/n):
+>  
+> یدونه `Y` بویسید اینتر بزنید تا توی مرورگر باز بشه تا رمز جدیدتون رو تعیین کنید و وارد پنل بشید برای تنظیمات، پیش‌فرضش هم اوکیه، میتونید فقط لینک ساب نرمال یا فول نرمال یا هرکدوم دیگه رو نسبت به کلاینت مد نظر خودتون انتخاب کرده و اضافه کنید ولی اگه خواستید من یه بکاپ از تنطیمات خودم گذاشتم بالاتر ابتدای توضیحاتم اونم می‌تونید اد کنید.  
+>
+> تمام، موفق باشید.   
+>  
+> اکه نتونستید بسازید بیاید گروهمون و بگید کدوم مرحله خطا داد  تا راهنمایی کنیم.  
+> 
+> </details>  
+>  
+> </details>  
 >
 > در نهایت اگه خیلی معطل موندید بیاید گروه شاید بچه‌ها تونستن کمکی بکنن.  
 > همراه اولی‌ها نیان ✋🏿🤣
@@ -223,7 +319,8 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 https://channel-freevpnhomes-subscription.shampoosirsehat.homes
 
 **Single H2 conf [[KV?]]**  
-https://iserver.store/Kevin.json
+http://50.114.206.150:2096/sub/Babak-US-1?format=json  
+http://50.114.206.151:2096/sub/Babak-US-2?format=json
 
 **RefralSheets [[MK?]**  
 https://panel.maviks.eu/sub/NjA2NDY2MjQ2MiwxNzQ1NjgyMjY1vLYjANeN9l
@@ -430,8 +527,8 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_1
 
 ```CSS
 [Interface]
-PrivateKey = sCrICobPbEukaBKKYE1CO4a/vh08a5fl54ps5a9rl2w=
-Address = 10.201.12.164/32
+PrivateKey = AEP+jhH5scMAOziG/mr1wwM43SKUxgPUM9q0tU3OK2U=
+Address = 10.136.2.46/32
 DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
 MTU = 1380
 Jc = 43
@@ -443,15 +540,68 @@ H1 = 1593635057
 H2 = 430880481
 H3 = 1214405368
 H4 = 1739253821
+
 [Peer]
-PublicKey = n0z+oioqL8meQmsU1aPx0fXiMPzStqM3VwkVSmAqzG0=
-PresharedKey = a2Rmv35eo1I60q/45KtdQ55OPhVt6iFQWWYShI5sNe4=
+PublicKey = gbUPMNfaxgRSGD3xcnnbAJSclxfnOyh4U1qqmYMWmCI=
+PresharedKey = X2x3QHoIkpmviGM3zyX6mJvf6Oj905mqBSLp0hfRp/w=
 AllowedIPs = 0.0.0.0/0, ::/0
 PersistentKeepalive = 25
-Endpoint = nl01a.kcufwfgnkr.net:62931
+Endpoint = nl02awg.kcufwfgnkr.net:60136
 ```
 
-**A1 UK**
+**A2 UE**
+
+```CSS
+[Interface]
+PrivateKey = 4HRk7bt3WhdxZzKqiXNeT41xTZhAPYTVpji8sxweX0c=
+Address = 10.136.1.137/32
+DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+
+[Peer]
+PublicKey = 9mn11Gs4ouOhlLdkh1HKfV3zlAZGON9iv4L94dsPmi4=
+PresharedKey = cDxnBAIBEvXstPFAk8NFWOyRvAxHZVCDISyd/T2j4v0=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = ae01awg.kcufwfgnkr.net:60136
+```
+
+**A3 Gemini**
+
+```CSS
+[Interface]
+PrivateKey = uOiSHtjRNr5OgD9E/nPXPHdvMviUGU3FysssxcMnWVM=
+Address = 10.221.0.42/32
+DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+
+[Peer]
+PublicKey = wFAo+AY8B1z16E9VzYJYCkZfGMpD8odRbq/VNAY6rWQ=
+PresharedKey = Uw5Wb66JJoQkpzl4CLY2q9pDyScc2QvXuSnfagW3wjY=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = gb02awg.kcufwfgnkr.net:62931
+```
+
+**A4 UK**
 
 ```CSS
 [Interface]
@@ -476,7 +626,7 @@ PersistentKeepalive = 25
 Endpoint = gb01a.kcufwfgnkr.net:62931
 ```
 
-**A2 FR**
+**A5 FR**
 
 ```CSS
 [Interface]
@@ -501,7 +651,7 @@ PersistentKeepalive = 25
 Endpoint = fr01a.kcufwfgnkr.net:62931
 ```
 
-**A3 TR**
+**A6 TR**
 
 ```CSS
 [Interface]
@@ -525,6 +675,32 @@ AllowedIPs = 0.0.0.0/0, ::/0
 PersistentKeepalive = 25
 Endpoint = tr01a.kcufwfgnkr.net:62931
 ```
+
+**A7 ES**  
+
+```CSS
+[Interface]
+PrivateKey = oFvgu8trCSYnFzP/UoQUh86wo642q3pNGDM4PgpvMGA=
+Address = 10.136.0.62/32
+DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+
+[Peer]
+PublicKey = Gd2PeVUqrz3FzpnbfLmvy1tY/Mv4drWVhsoAjflUBUw=
+PresharedKey = bJ5PeReA1ArQSBZHV06Pq/BKIw57OyEM5Kqhw2qWGls=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 25
+Endpoint = est01awg.kcufwfgnkr.net:60136
+```  
 
 **A** [[Ni?]]
 
@@ -739,7 +915,7 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 
 ![rainbow]
 
-<br></br>
+<br><br/>
 
 ## XRAY
 
@@ -747,8 +923,8 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
 
 https://robin.nscl.ir [[Ni?]]
 
-https://iserver.store/Kevin.json  
-https://iserver.store/KevinVPN.json [[KV?]]
+http://50.114.206.150:2096/sub/Babak-US-1?format=json   
+http://50.114.206.151:2096/sub/Babak-US-2?format=json [[KV?]]
 
 https://shadowmere.xyz/api/b64sub [[SW?]]  
 https://shadowmere.xyz/api/sub
@@ -763,7 +939,9 @@ https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eterni
 
 https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/mix/sub.html [[AR?]]
 
-https://v2.alicivil.workers.dev/?list=4&locations=all&count=250 [[GE?]]
+https://v2.alicivil.workers.dev/?list=fi&count=300&shuffle=true&unique=false [[GE?]]  
+
+https://v2.alicivil.workers.dev/?list=us&count=300&shuffle=true&unique=false  
 
 https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/vless.html
 
@@ -1232,10 +1410,19 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
     <img src="https://github.com/user-attachments/assets/0699ff2f-e3e8-4e0f-98f6-bb7e288a645e" alt="Psiphon MoreOptions" width="240"/>
 
 [^4]:
-    <img src="https://github.com/user-attachments/assets/acec4283-cf3d-415a-82ed-1ad39229a32b" alt="PsiphonIsConnected" width="240"/>
+    <img src="https://github.com/user-attachments/assets/acec4283-cf3d-415a-82ed-1ad39229a32b" alt="PsiphonIsConnected" width="240"/>  
 
 [^5]:
-    <img src="https://github.com/user-attachments/assets/c83a1677-595b-472c-b50a-d40b6e08d197" alt="warpONwarp" width="240"/>
+    <img src="https://github.com/user-attachments/assets/c83a1677-595b-472c-b50a-d40b6e08d197" alt="warpONwarp" width="240"/>  
+
+[^6]:
+    <img src="https://github.com/user-attachments/assets/31a485b8-6168-4521-a379-c24c2181e5df" alt="warpONwarp" width="240"/>  
+
+[^7]:
+    <img src="https://github.com/user-attachments/assets/3956e479-f814-4998-baf3-0fe7360e1bac" alt="warpONwarp" width="240"/>  
+
+[^8]:
+    <img src="https://github.com/user-attachments/assets/3e3bbece-19f3-4524-9153-16f3bf0d38cd" alt="warpONwarp" width="240"/>  
 
 [00]: https://t.me/NiREvil_GP/106699
 [Harmony]: https://github.com/NiREvil/Harmony/blob/b923d67dd5702886b0965de86182896373ade4e5/harmony.js#L892
@@ -1267,10 +1454,14 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [ME?]: https://telegram.me/s/FreeVPNHomes/532
 [MK?]: https://telegram.me/maviks_bot?start=680cff2cb34f9a1f3951470a
 [PR?]: https://telegram.me/s/ProxyDaemi
+[proxyIP]: https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 [SW?]: https://github.com/jadolg/shadowmere
 [SR?]: https://github.com/soroushmirzaei/telegram-configs-collector
+[TERMUX]: https://github.com/termux/termux-app/releases
+[UUID]: https://www.uuidgenerator.net/
 [WE?]: https://telegram.me/s/IranRamona
 [wtf?]: https://github.com/NiREvil/vless/blob/main/sub/clash-meta-wg.yml#L40
+[WIZ]: https://bia-pain-bache.github.io/BPB-Worker-Panel/fa/installation/wizard/  
 [XS?]: https://telegram.me/s/xs_filternet
 [Arshia]: https://telegram.me/s/warpscanner
 [Anita?]: https://ainita.net/vpn.html
