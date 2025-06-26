@@ -35,6 +35,9 @@
 >
 > منظورم [این دو کانفیگ بود](#hiddify-url-).
 >
+> وای ولی مخابرات حتما این کانفیگ پایین رو چک کنه، بینهایت زیبا بود پینگ‌ها داخل کلاینت [کلش-متا][Clash-Meta] [^8]  
+> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-ems.yml  
+> 
 > </details>
 >
 > <details>
@@ -1421,7 +1424,11 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
     <img src="https://github.com/user-attachments/assets/3956e479-f814-4998-baf3-0fe7360e1bac" alt="warpONwarp" width="240"/>
 
 [^8]:
-    <img src="https://github.com/user-attachments/assets/3e3bbece-19f3-4524-9153-16f3bf0d38cd" alt="warpONwarp" width="240"/>
+    <img src="https://github.com/user-attachments/assets/3e3bbece-19f3-4524-9153-16f3bf0d38cd" alt="warpONwarp" width="240"/>  
+
+[^9]:
+    <img src="https://github.com/user-attachments/assets/33b7bd75-f543-4446-a2b2-11ac0565e73a" alt="WarpInClash" width="260"/>
+
 
 [00]: https://t.me/NiREvil_GP/106699
 [Harmony]: https://github.com/NiREvil/Harmony/blob/b923d67dd5702886b0965de86182896373ade4e5/harmony.js#L892
