@@ -148,6 +148,7 @@ jobs:
 
           if [[ -n "$ACCOUNT_EMAIL" ]]; then
             {
+              echo ""
               echo "**ESET ACCOUNT Credentials**"
               echo ""
               echo '```yml'
@@ -168,7 +169,7 @@ jobs:
           LAST_RUN_FILE="${{ env.LAST_RUN_DATE_FILE }}"
           CURRENT_DATE_UTC=$(date -u +'%Y-%m-%d')
           LAST_RUN_DATE=$(cat "$LAST_RUN_FILE" 2>/dev/null || echo "never")
-          FOOTNOTES="<br/>\n\n[^1]: [View Full Post - Out of work](https://t.me/F_NiREvil/2113)\n\n[^2]: [ESET KeyGen - Trial-Key & Account generator for ESET Products](https://github.com/rzc0d3r/ESET-KeyGen)"
+          FOOTNOTES="<br/>\n\n[^1]: [View Full Post - Out of work](https://t.me/F_NiREvil/2113)\n\n[^2]: [ESET KeyGen - Trial-Key generator for ESET Products](https://github.com/rzc0d3r/ESET-KeyGen)"
 
           # <--- CHANGE: The daily file reset logic is commented out. The script will now always prepend.
           # if [[ "$CURRENT_DATE_UTC" != "$LAST_RUN_DATE" ]] || [[ ! -f "$OUTPUT_FILE" ]]; then
