@@ -117,16 +117,16 @@ jobs:
           CURRENT_DATETIME_IRAN=$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M IRN')
 
           {
-            echo "## Generated On: ${CURRENT_DATETIME_IRAN}"
+            echo "### Generated On: ${CURRENT_DATETIME_IRAN}"
             echo ""
             echo "> [!IMPORTANT]"
             echo "> **POLICY CHANGE: ESET has discontinued free trial VPN codes.**"
-            echo "> This generator now only creates ESET HOME accounts with a 30-day trial license."
+            echo "> This generator now only creates ESET HOME accounts."
             echo "> No VPN codes will be provided."
             echo ""
             echo "> [!NOTE]"
-            echo "> - Triggered by: **${{ github.event_name }}**"
-            echo "> - Account licenses are valid for ~30 days."
+            echo "> Triggered by: **${{ github.event_name }}**"
+            echo "> Account licenses are valid for ~30 days."
             echo ""
             echo "<br/>"
           } > "$NEW_ENTRY_FILE"
@@ -135,6 +135,7 @@ jobs:
 
           if [[ -n "$LICENSE_KEY" ]]; then
             {
+              echo ""
               echo "**ESET BUSINESS SECURITY LICENSE**"
               echo ""
               echo '```yml'
@@ -192,9 +193,10 @@ jobs:
           tail -n +2 "$OUTPUT_FILE" | head -n -4 > "$OLD_CONTENT_BODY_TMP"
 
           {
-              echo "# ESET Trial Accounts"
+              echo "## ESET Trial Accounts"
               cat "$NEW_ENTRY_FILE"
-              echo "<hr>" # Using a horizontal rule for better separation
+              echo "<hr><br/>" # Using a horizontal rule for better separation
+              echo ""
               cat "$OLD_CONTENT_BODY_TMP"
               echo -e "$FOOTNOTES"
           } > "$OUTPUT_FILE"
