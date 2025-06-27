@@ -1,4 +1,4 @@
-name: ESET Key Generator
+name: ESET Account Generator
 
 permissions:
   contents: write
@@ -7,13 +7,13 @@ on:
   workflow_dispatch:
     inputs:
       account:
-        description: Number of Accounts to be generated (default = 0)
-        required: false
-        default: '0'
-      key:
-        description: Number of Keys to be generated (default = 1)
+        description: Number of Accounts to be generated (default = 1)
         required: false
         default: '1'
+      key:
+        description: Number of Keys to be generated (default = 0)
+        required: false
+        default: '0'
       mail:
         description: Choose the mail provider to generate license
         required: true
@@ -22,35 +22,34 @@ on:
           - inboxes
           - 1secmail
           - fakemail
-          - mailticking
           - guerrillamail
-          - incognitomail
           - developermail
+        # - mailticking    added cloudflare captcha. 
+        # - incognitomail  added cloudflare captcha. 
         default: fakemail
       key_type:
-        description: Operation
+        description: Legacy option
         required: true
         type: choice
         options:
           - --key
-          - --vpn-codes
           - --small-business-key
-        default: --vpn-codes
+        default: --key
       branch:
         description: Key-Gen Repository branch (default = main)
         required: false
         default: main
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '0 */8 * * *'
 
 jobs:
   generate-and-commit:
     runs-on: ubuntu-latest
     env:
-      DEFAULT_ACCOUNT: '0'
-      DEFAULT_KEY: '1'
+      DEFAULT_ACCOUNT: '1'
+      DEFAULT_KEY: '0'
       DEFAULT_MAIL: fakemail
-      DEFAULT_KEY_TYPE: --vpn-codes
+      DEFAULT_KEY_TYPE: --key
       DEFAULT_BRANCH: main
       OUTPUT_FILENAME: ESET-CODES.md
       TEMP_OUTPUT_FILE: key_gen_output.log
@@ -66,7 +65,7 @@ jobs:
           mkdir -p "${{ env.LOG_DIR }}"
           echo "Created directory: ${{ env.LOG_DIR }}"
 
-      - name: Generate Keys
+      - name: Generate Accounts
         run: |
           ACCOUNT=${{ github.event.inputs.account || env.DEFAULT_ACCOUNT }}
           KEY=${{ github.event.inputs.key || env.DEFAULT_KEY }}
@@ -79,7 +78,6 @@ jobs:
           echo "Account Count: $ACCOUNT"
           echo "Key Count: $KEY"
           echo "Mail Provider: $MAIL"
-          echo "Key Type: $KEY_TYPE"
           echo "---------------------"
 
           TEMP_OUTPUT="${{ env.TEMP_OUTPUT_FILE }}"
@@ -96,7 +94,7 @@ jobs:
           source venv/bin/activate
           pip install -r requirements.txt > /dev/null
 
-          echo "Generating keys..."
+          echo "Generating accounts..."
           if [[ ${ACCOUNT} -ne 0 ]]; then
             python3 main.py --auto-detect-browser --account --email-api ${MAIL} --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat ${ACCOUNT} | tee "../$TEMP_OUTPUT"
           fi
@@ -110,7 +108,6 @@ jobs:
           cd ..
           
           echo "✨ Formatting the new entry..."
-          VPN_CODES_LIST=$(grep '^VPN Codes:' "$TEMP_OUTPUT" | sed 's/^VPN Codes: //' || true)
           LICENSE_KEY=$(grep '^License Key:' "$TEMP_OUTPUT" | sed 's/^License Key: //' || true)
           LICENSE_OUT_DATE=$(grep '^License Out Date:' "$TEMP_OUTPUT" | sed 's/^License Out Date: //' || true)
           ACCOUNT_EMAIL=$(grep '^Account Email:' "$TEMP_OUTPUT" | sed 's/^Account Email: //' || true)
@@ -122,29 +119,19 @@ jobs:
           {
             echo "## Generated On: ${CURRENT_DATETIME_IRAN}"
             echo ""
-            echo "> [!WARNING]"
-            echo ">"
+            echo "> [!IMPORTANT]"
+            echo "> **POLICY CHANGE: ESET has discontinued free trial VPN codes.**"
+            echo "> This generator now only creates ESET HOME accounts with a 30-day trial license."
+            echo "> No VPN codes will be provided."
+            echo ""
+            echo "> [!NOTE]"
             echo "> - Triggered by: **${{ github.event_name }}**"
-            echo "> - Time-Sensitive Codes"
-            echo "> - Expire in 24 hours"
-            echo "> - Single-device binding"
-            echo "> - No reactivation permitted <br><br/>"
+            echo "> - Account licenses are valid for ~30 days."
             echo ""
             echo "<br/>"
-            echo ""
           } > "$NEW_ENTRY_FILE"
 
-          if [[ -n "$VPN_CODES_LIST" ]]; then
-            {
-              echo "**ESET VPN ACCESS CODES**"
-              echo ""
-              echo '```ruby'
-              echo "$VPN_CODES_LIST" | sed 's/, /\n/g'
-              echo '```'
-              echo "<br/>"
-              echo ""
-            } >> "$NEW_ENTRY_FILE"
-          fi
+          # <--- CHANGE: Removed the entire "if [[ -n "$VPN_CODES_LIST" ]]" block as it's now obsolete.
 
           if [[ -n "$LICENSE_KEY" ]]; then
             {
@@ -174,41 +161,43 @@ jobs:
 
           {
             echo "Everything you need to know about ESET. [^1]"
-            echo "Need more VPN access codes? [^2]"
+            echo "Credits [^2]"
           } >> "$NEW_ENTRY_FILE"
           
           OUTPUT_FILE="${{ env.OUTPUT_FILENAME }}"
           LAST_RUN_FILE="${{ env.LAST_RUN_DATE_FILE }}"
           CURRENT_DATE_UTC=$(date -u +'%Y-%m-%d')
           LAST_RUN_DATE=$(cat "$LAST_RUN_FILE" 2>/dev/null || echo "never")
-          FOOTNOTES="<br/>\n\n[^1]: [View Full Post](https://t.me/F_NiREvil/2113)\n\n[^2]: [Explore The Darkness Hub](https://t.me/Eset_key_trial)"
+          FOOTNOTES="<br/>\n\n[^1]: [View Full Post - Out of work](https://t.me/F_NiREvil/2113)\n\n[^2]: [ESET KeyGen - Trial-Key & Account generator for ESET Products](https://github.com/rzc0d3r/ESET-KeyGen)"
 
-          if [[ "$CURRENT_DATE_UTC" != "$LAST_RUN_DATE" ]] || [[ ! -f "$OUTPUT_FILE" ]]; then
-              echo "Overwriting ${OUTPUT_FILE} (new day or file not found)."
-              {
-                  echo "#"
-                  cat "$NEW_ENTRY_FILE"
-                  echo -e "$FOOTNOTES"
-              } > "$OUTPUT_FILE"
-              echo "$CURRENT_DATE_UTC" > "$LAST_RUN_FILE"
-          
-          else
-              echo "Prepending new entry to ${OUTPUT_FILE}."
-              OLD_CONTENT_BODY_TMP="old_content_body.tmp"
+          # <--- CHANGE: The daily file reset logic is commented out. The script will now always prepend.
+          # if [[ "$CURRENT_DATE_UTC" != "$LAST_RUN_DATE" ]] || [[ ! -f "$OUTPUT_FILE" ]]; then
+          #     echo "Overwriting ${OUTPUT_FILE} (new day or file not found)."
+          #     {
+          #         echo "#"
+          #         cat "$NEW_ENTRY_FILE"
+          #         echo -e "$FOOTNOTES"
+          #     } > "$OUTPUT_FILE"
+          #     echo "$CURRENT_DATE_UTC" > "$LAST_RUN_FILE"
+          # else
 
-              tail -n +2 "$OUTPUT_FILE" | head -n -4 > "$OLD_CONTENT_BODY_TMP"
+          echo "Prepending new entry to ${OUTPUT_FILE}."
+          OLD_CONTENT_BODY_TMP="old_content_body.tmp"
 
-              {
-                  echo "#"
-                  cat "$NEW_ENTRY_FILE"
-                  echo ""
-                  echo "<br/>"
-                  echo ""
-                  echo "#"
-                  cat "$OLD_CONTENT_BODY_TMP"
-                  echo -e "$FOOTNOTES"
-              } > "$OUTPUT_FILE"
-          fi
+          # Create the file if it doesn't exist to prevent errors
+          touch "$OUTPUT_FILE"
+
+          # Safely read the old content, ignoring the first line (header) and last lines (footnotes)
+          tail -n +2 "$OUTPUT_FILE" | head -n -4 > "$OLD_CONTENT_BODY_TMP"
+
+          {
+              echo "# ESET Trial Accounts"
+              cat "$NEW_ENTRY_FILE"
+              echo "<hr>" # Using a horizontal rule for better separation
+              cat "$OLD_CONTENT_BODY_TMP"
+              echo -e "$FOOTNOTES"
+          } > "$OUTPUT_FILE"
+          # fi
 
           rm -f *.tmp "${{ env.TEMP_OUTPUT_FILE }}"
 
@@ -216,10 +205,10 @@ jobs:
           echo "Final content of ${OUTPUT_FILE} (first 20 lines):"
           head -n 20 "${OUTPUT_FILE}"
           
-      - name: Commit and Push Generated Keys
+      - name: Commit and Push Generated Accounts
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 'feat: Update ESET generated Key/License/Accounts (${{ github.event_name }})'
+          commit_message: 'feat: Update ESET generated Accounts (${{ github.event_name }})'
           file_pattern: '${{ env.OUTPUT_FILENAME }} ${{ env.LAST_RUN_DATE_FILE }}'
           commit_user_name: ESET Security Bot
           commit_user_email: pr@eset.com
