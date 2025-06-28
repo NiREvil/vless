@@ -1133,9 +1133,7 @@ https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/NiREvil_SSTime.ya
 
 https://raw.githubusercontent.com/lagzian/TVC/main/lite/subscriptions/meta/mix [[LG?]]
 
-https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.yml  [[!*¡#
-
-
+https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.yml [[!\*¡#
 
 https://raw.githubusercontent.com/NiREvil/vless/main/sub/clash-meta.yml
 
@@ -1474,6 +1472,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [GZ?]: https://github.com/valid7996/
 [HK?]: https://github.com/HosseinKoofi/GO_V2rayCollector/
 [hp?]: https://raw.githubusercontent.com/hamedp-71/Clash_New/refs/heads/main/hp.yaml
+
 [KB?]]:;
 [JN?]: https://telegram.me/s/JavidnamanIran
 [KV?]: https://telegram.me/s/KevinZakarian
