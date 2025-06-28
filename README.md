@@ -321,7 +321,7 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 https://channel-freevpnhomes-subscription.shampoosirsehat.homes
 
 **Single H2 conf [[KV?]]**  
-http://104.234.74.23:2096/sub/VPNy.net-US-6-R?format=json
+http://104.234.74.23:2096/sub/VPNy.net-US-6-R?format=json 
 http://50.114.206.151:2096/sub/Babak-US-2?format=json
 
 **All Hysteria [[FR?]]**  
@@ -437,22 +437,22 @@ https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/clash-wg.yml 
 > [!NOTE]
 > singbox for
 > Android & IOS <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="13"/>
+ 
+https://channel-freevpnhomes-subscription.shampoosirsehat.homes  [[ME?]]
 
-https://channel-freevpnhomes-subscription.shampoosirsehat.homes [[ME?]]
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json  [[Ni?]]
 
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json [[Ni?]]
-
-https://wearestandtelegram.github.io/IranRamona [[WE?]]
+https://wearestandtelegram.github.io/IranRamona   [[WE?]]
 
 https://raw.githubusercontent.com/bamdad23/JavidnamanIran/refs/heads/main/WS%2BHysteria2
 
 https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/sing-box.json
 
-https://raw.githubusercontent.com/valid7996/Gozargah/refs/heads/main/Gozargah_sing-box_sub [[GZ?]]
+https://raw.githubusercontent.com/valid7996/Gozargah/refs/heads/main/Gozargah_sing-box_sub  [[GZ?]]
 
-https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox.json [[KB?]]
+https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox.json  [[KB?]]
 
-https://raw.githubusercontent.com/DiDiten/multi-proxy-config-fetcher/refs/heads/main/configs/singbox_configs.json [[10i?]]
+https://raw.githubusercontent.com/DiDiten/multi-proxy-config-fetcher/refs/heads/main/configs/singbox_configs.json  [[10i?]]
 
 https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox_l.json
 
@@ -922,11 +922,11 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
 
 https://robin.nscl.ir [[Ni?]]
 
-http://104.234.74.23:2096/sub/VPNy.net-US-6-R?format=json [[KV?]]
+http://104.234.74.23:2096/sub/VPNy.net-US-6-R?format=json [[KV?]]  
 
 http://50.114.206.151:2096/sub/Babak-US-2?format=json
 
-https://shadowmere.xyz/api/b64sub [[SW?]]
+https://shadowmere.xyz/api/b64sub [[SW?]]  
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/fragment
 
@@ -966,7 +966,7 @@ https://raw.githubusercontent.com/10ium/V2ray-Config/main/Splitted-By-Protocol/h
 
 https://raw.githubusercontent.com/10ium/V2Hub3/main/merged_base64
 
-https://raw.githubusercontent.com/10ium/base64-encoder/main/encoded/10ium_mixed_iran.txt
+https://raw.githubusercontent.com/10ium/base64-encoder/main/encoded/10ium_mixed_iran.txt 
 
 https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Vmess.txt
 
@@ -1133,11 +1133,11 @@ https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/NiREvil_SSTime.ya
 
 https://raw.githubusercontent.com/lagzian/TVC/main/lite/subscriptions/meta/mix [[LG?]]
 
-https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.yml [[!\*¡#
+https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.yml
 
 https://raw.githubusercontent.com/NiREvil/vless/main/sub/clash-meta.yml
 
-https://raw.githubusercontent.com/liketolivefree/kobabi/main/clash_mt_ir_prov_spr.yaml
+https://raw.githubusercontent.com/liketolivefree/kobabi/main/clash_mt_ir_prov_spr.yaml  [[KB?]]
 
 https://raw.githubusercontent.com/liketolivefree/kobabi/main/clash_mt_ir_prov_f.yaml
 
@@ -1472,11 +1472,38 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [GZ?]: https://github.com/valid7996/
 [HK?]: https://github.com/HosseinKoofi/GO_V2rayCollector/
 [hp?]: https://raw.githubusercontent.com/hamedp-71/Clash_New/refs/heads/main/hp.yaml
-
-[KB?]]:;
+[KB?]: https://github.com/liketolivefree
 [JN?]: https://telegram.me/s/JavidnamanIran
 [KV?]: https://telegram.me/s/KevinZakarian
 [LG?]: https://github.com/lagzian/TVC/?tab=readme-ov-file
-[Ni?]: https://telegram.me/s⁸]: https://telegram.me/s/F_NiREvil/6292
+[Ni?]: https://telegram.me/s/F_NiREvil
+[MB?]: https://github.com/mahdibland/ShadowsocksAggregator/
+[ME?]: https://telegram.me/s/FreeVPNHomes/532
+[MK?]: https://telegram.me/maviks_bot?start=680cff2cb34f9a1f3951470a
+[PR?]: https://telegram.me/s/ProxyDaemi
+[proxyIP]: https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
+[SW?]: https://github.com/jadolg/shadowmere
+[SR?]: https://github.com/soroushmirzaei/telegram-configs-collector
+[TERMUX]: https://github.com/termux/termux-app/releases
+[UUID]: https://www.uuidgenerator.net/
+[WE?]: https://telegram.me/s/IranRamona
+[wtf?]: https://github.com/NiREvil/vless/blob/main/sub/clash-meta-wg.yml#L40
+[WIZ]: https://bia-pain-bache.github.io/BPB-Worker-Panel/fa/installation/wizard/
+[XS?]: https://telegram.me/s/xs_filternet
+[Arshia]: https://telegram.me/s/warpscanner
+[Anita?]: https://ainita.net/vpn.html
+[The Darkness]: https://telegram.me/s/ConfigWireguard
+[Nekobox]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
+[Husi]: https://github.com/xchacha20-poly1305/husi/releases
+[Exclave]: https://github.com/dyhkwong/Exclave/releases
+[v2rayNG]: https://github.com/2dust/v2rayng/releases
+[MahsaNG]: https://github.com/mahsanet/MahsaaNG/releases
+[NikaNG]: https://github.com/mahsanet/NikaNG/releases
+[Outline]: https://getoutline.org/get-started/#step-3
+[Sing-Box]: https://github.com/SagerNet/sing-box/releases
+[SFA]: https://github.com/SagerNet/sing-box/releases
+[SFI]: https://apps.apple.com/us/app/sing-box/id6451272673
+[Hiddify]: https://github.com/hiddify/hiddify-app/releases
+[any information]: https://telegram.me/s/F_NiREvil/6292
 [Amnezia]: https://github.com/amnezia-vpn/amnezia-client/releases
 [Clash-Meta]: https://github.com/MetaCubeX/ClashMetaForAndroid/releases
