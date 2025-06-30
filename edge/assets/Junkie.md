@@ -44,7 +44,7 @@ You’ll notice that it doesn’t matter whether you use Russian or English for 
 Want to improve the quality of your image? Click the "Upscale" button under the art, and you’ll get a high-resolution PNG image.
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/5b09e183-4bf1-4605-adb6-f0299bf297b7" alt="BBBB" width="480px"></p><br/>  
+<img src="https://github.com/user-attachments/assets/5b09e183-4bf1-4605-adb6-f0299bf297b7" alt="BBBB" width="480px"></p><br/>
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/bf866f8b-bddd-41dc-973d-65121758afa9" alt="BBBB" width="480px"></p><br/>
@@ -58,11 +58,12 @@ Access the settings via the `/menu` command or by clicking the ⚙️ Menu butto
 <p align="center">
 <img src="https://github.com/user-attachments/assets/3712473f-5c37-4d24-aac2-d1aa5e0b8d06" alt="BBBB" width="480px"></p><br/>
 
-:::tip 
+:::tip
+
 - **📐 Format** – The aspect ratio of your generation. The image can be horizontal (for landscapes), vertical (for portraits), or square.
 - **📺 Model** – The foundation of your generation, determining the style. All models lean towards realism but retain their unique flair. Try them out and find your favorite! ❤️
 - **🎨 Style** – Easily customize your generation. Be sure to try each one. Examples of all styles are available in the bot!
-:::
+  :::
 
 <br/>
 
@@ -77,33 +78,32 @@ You get 8 free generations every day.
 We provide you with several free generations daily. If you run out, here’s how to get more:
 :::
 
-
 :::info Referral System
 
 In the ⚙️ Menu, select ✨ Invite a Friend and get your unique referral link in the format:  
 [https://t.me/StableDiffusion_robot/?start=]
 
 For every person who clicks your link and creates art, you’ll earn 10 generations! For example, you can write an article about the bot on Pikabu and include your referral link, or share it in a chat with friends.
-:::  
+:::
 
 :::warning Shop
 
 Find 🚀 Shop in the menu and purchase additional generations! Developing and maintaining each model costs us a lot, so we’d appreciate your financial support.
 
 If you purchase a Premium subscription, you’ll be able to create 18+ art!
-:::  
+:::
 
 ::: info Generation Contest
 
 When you upscale a generation, a 🏆 Submit to Contest button will appear.
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/6170649a-181d-4326-a6c0-0bd73cb44df9" alt="BBBB" width="480px"></p><br/>  
+<img src="https://github.com/user-attachments/assets/6170649a-181d-4326-a6c0-0bd73cb44df9" alt="BBBB" width="480px"></p><br/>
 
 > Feel free to click it—your masterpiece will be sent to our admin,
 > who periodically selects works for publication in our channel! If your work is chosen,
 > it will be published, and you’ll receive 30 bonus generations!  
-:::
+> :::
 
 <hr/><br/>
 
@@ -129,13 +129,14 @@ In the first art, we asked the bot to create a cat with flowers in the backgroun
 
 In the second art, we increased the emphasis on the "jump" and reduced the "flowers in the background." By default, each element has a weight of 1.0. We adjusted the weight from 0.5 to 1.5. It’s recommended not to overuse this, as it can distort the result. A good rule of thumb is to keep values between 0.5 and 1.6. Also, avoid applying this technique to all tags at once, as it can easily ruin the image.
 
-::: tip  
+::: tip
+
 - **(flowers in the background)** – Increases the weight from 1.0 to 1.1.
 - **((flowers in the background))** – Increases the weight from 1.0 to 1.21.
 - You can manually set the value: **(flowers in the background:<value>)**
-- **[flowers in the background]** – Decreases the weight from 1.0 to 0.9.  
+- **[flowers in the background]** – Decreases the weight from 1.0 to 0.9.
 
-You can only manually decrease the weight using round brackets. For example, you can’t write [orange ears:0.4], only (orange ears:0.4).  
+You can only manually decrease the weight using round brackets. For example, you can’t write [orange ears:0.4], only (orange ears:0.4).
 
 👍 That’s it! Mastering this technique opens up many more possibilities for refining results and fixing flaws. Practice on your own to see how it can enhance your favorite art.
 
@@ -163,7 +164,7 @@ Here, we’ll add non-obvious, interesting tags that can make your generations e
 - Medium close up
 - Full body
 - A frame from the movie
-:::
+  :::
 
 <br/>
 
@@ -328,9 +329,9 @@ Coming up with a good prompt isn’t easy, so you can look at the best art for n
 ::: tip Do you need more inspiration ?
 
 Be my guest, [Best of Stable Diffusion]
-:::  
+:::
 
-----
+---
 
 [StableDiffusion_robot]: https://t.me/StableDiffusion_robot/?start=6064662462
 [stable_diffusion_bot]: https://t.me/stable_diffusion_bot
