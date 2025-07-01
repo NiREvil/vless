@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 🌟 Dive into the related file in telegram: https://t.me/F_NiREvil/6847 🌟 -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="949"
+    android:versionName="3.9.27"
+    android:compileSdkVersion="34"
+    android:compileSdkVersionCodename="14"
+    package="com.smartwidgetlabs.chatgpt"
+    platformBuildVersionCode="34"
+    platformBuildVersionName="14">
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="34" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <!-- 🔻🔻🔻🔻🔻🔻🔻🔻 PERMISSIONS 🔻🔻🔻🔻🔻🔻🔻🔻 -->
+    <!-- Have full internet access -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- View network connections -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Access Wi-Fi network state information -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- Control vibration -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- Allows the app to conduct sales through Google Play's In-app Billing Service. -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <!-- Modify or delete the contents of your shared storage space -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Read the contents of your shared storage space -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Allows access to the images stored on the device. -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <!-- Record audio -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- Read user selected image and video files from shared storage -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+    <!-- 💀 Take pictures or videos -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.any" />
+    <!-- Run foreground service. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Allows the app to synchronize data with other services while its foreground service is running. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <!-- Allows the app to access the advertising ID. -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <!-- Allows apps to display notifications on an Android device. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Allows an app to access to the user's advertising ID (AAID). -->
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+    <!-- Allows an app to access attribution data provided by Android's AdServices framework. -->
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+    <!-- Allows an app to access the user's interest categories. -->
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_TOPICS" />
+    <!-- Prevent the phone from going to sleep -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.applovin.array.apphub.permission.BIND_APPHUB_SERVICE" />
+    <!-- Allows apps to access information about how they were installed onto your device. -->
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+    <!-- Allows the app to receive messages from Google Cloud Messaging -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- 🔺🔺🔺🔺🔺🔺🔺🔺 PERMISSIONS 🔺🔺🔺🔺🔺🔺🔺🔺 -->
+    <application
+        android:theme="@style/Theme.App"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.smartwidgetlabs.chatgpt.application.MainApplication"
+        android:manageSpaceActivity=".ui.navigation.MainActivity"
+        android:allowBackup="false"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:fullBackupContent="false"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@7f100002"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:requestLegacyExternalStorage="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:localeConfig="@xml/locales_config">
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_name" />
+        <meta-data
+            android:name="EVENT_TRACKING_DATA"
+            android:value="event_metadata.json" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.splash_screen.SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="chatsmith" />
+                <data
+                    android:scheme="chatsmith.go.link" />
+                <data android:host="keyboard" />
+                <data android:host="chat_youtube" />
+                <data android:host="chat_with_web" />
+                <data android:host="ai_art" />
+                <data android:host="multi_models" />
+                <data
+                    android:host="ai_avatar_ghibli" />
+                <data android:host="ai_math" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.navigation.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.chat.ChatDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.onboarding.OBPotentAssistantsV2Activity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.onboarding.OBAIChatBotActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.onboarding.OBNeonActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.onboarding.OBStreamlineActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.NoNetworkConnectionActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.DSPromotionBFActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.DSCarouselActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.DSCarouselTrialActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.Ds4ChatOnV2Activity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.DSPromotion1Activity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar.Transparent"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.DSRewardAdsActivity"
+            android:exported="false"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar.Transparent"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.RewardAdsActivity"
+            android:exported="false"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar.Transparent"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.DSChatBotAIActivity"
+            android:exported="false"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar.Transparent"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.DSChatBotAITrialActivity"
+            android:exported="false"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar.Transparent"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.DSChatMathAIActivity"
+            android:exported="false"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar.Transparent"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.DSChatMathAITrialActivity"
+            android:exported="false"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar.Transparent"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.DSImageAIActivity"
+            android:exported="false"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar.Transparent"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.DSChatImageAITrialActivity"
+            android:exported="false"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar.Transparent"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.DSChatBotAIPromotionActivity"
+            android:exported="false"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.DSHolidayActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.DSHolidayV2Activity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.direct_store.DSPromotionNewUserActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.Transparent"
+            android:name="com.smartwidgetlabs.chatgpt.ui.splash_screen.PushActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.old_topic.HistoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.setting.SettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.writing.WritingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.interview.InterviewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.business.BusinessActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.assistanthistory.HistoryActivityV2"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.generalassistant.GeneralAssistantActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.translate.TranslateActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.grammar.GrammarActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.summary.SummaryActivity"
+            android:exported="false"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.password_generator.PasswordGeneratorActivity"
+            android:exported="false"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.checker.PlagiarismCheckerActivity"
+            android:exported="false"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.dream_interpreter.DreamInterpreterActivity"
+            android:exported="false"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.textrecognition.TextRecognitionActivity"
+            android:exported="false"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.setting.VoiceSettingActivity"
+            android:exported="false"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.whats_new.WhatsNewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Base.Theme.AppCompat"
+            android:name="com.canhub.cropper.CropImageActivity"
+            android:exported="true" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.present_image.PresentImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.writing.email_writing.EmailWritingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.writing_solution.WritingSolutionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.writing_v2.WritingV2Activity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.setting.KeyboardSettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.ai_art_v3.AIArtV3Activity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.math_assistant.MathAssistantActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <activity
+            android:theme="@style/Theme.App.NoActionBar"
+            android:name="com.smartwidgetlabs.chatgpt.ui.chat.highlight_feature.HighlightFeatureActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation" />
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true" />
+        </service>
+        <service
+            android:label="@string/ai_keyboard"
+            android:name="com.smartwidgetlabs.chatgpt.keyboard.AIKeyboardIME"
+            android:permission="android.permission.BIND_INPUT_METHOD"
+            android:exported="true">
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/keys_config" />
+            <intent-filter>
+                <action
+                    android:name="android.view.InputMethod" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.smartwidgetlabs.chatgpt.ui.ai_art_v3.ImageProcessingService"
+            android:foregroundServiceType="dataSync" />
+        <service
+            android:name="com.smartwidgetlabs.chatgpt.ui.chat.ai_art.ChatImageGeneratorService"
+            android:foregroundServiceType="dataSync" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="@string/application_provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/app_file_provider_paths" />
+        </provider>
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="@string/ads_max_sdk_key" />
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/ads_mod_app_id" />
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <service
+            android:name="co.vulcanlabs.library.service.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
+        <receiver
+            android:name="com.adjust.sdk.AdjustReferrerReceiver"
+            android:permission="android.permission.INSTALL_PACKAGES"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="co.vulcanlabs.library.security.NotificationReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="ACTION_DELETE_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/gmts_TestSuiteTheme.NoActionBar"
+            android:label="Mediation Test Suite"
+            android:name="com.google.android.ads.mediationtestsuite.activities.HomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/gmts_AppSecondaryTheme"
+            android:name="com.google.android.ads.mediationtestsuite.activities.NetworkDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:theme="@style/gmts_AppSecondaryTheme.NoActionBar"
+            android:label="@string/gmts_ad_unit_details_title"
+            android:name="com.google.android.ads.mediationtestsuite.activities.ConfigurationItemDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/gmts_AppSecondaryTheme.NoActionBar"
+            android:name="com.google.android.ads.mediationtestsuite.activities.ConfigurationItemsSearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:exported="false"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard" />
+        <provider
+            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+            android:exported="false"
+            android:authorities="com.smartwidgetlabs.chatgpt.mobileadsinitprovider"
+            android:initOrder="100" />
+        <service
+            android:name="com.google.android.gms.ads.AdService"
+            android:enabled="true"
+            android:exported="false" />
+        <activity
+            android:name="com.google.android.gms.ads.OutOfContextTestingActivity"
+            android:exported="false"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.ads.NotificationHandlerActivity"
+            android:exported="false"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask" />
+        <property
+            android:name="android.adservices.AD_SERVICES_CONFIG"
+            android:resource="@xml/gma_ad_services_config" />
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.smartwidgetlabs.chatgpt.androidx-startup">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:enabled="@7f050002"
+            android:exported="false"
+            android:directBootAware="false" />
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@7f050004"
+            android:exported="true"
+            android:directBootAware="false" />
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@7f050003"
+            android:exported="false"
+            android:directBootAware="false" />
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false" />
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action
+                    android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BATTERY_OKAY" />
+                <action
+                    android:name="android.intent.action.BATTERY_LOW" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+                <action
+                    android:name="android.intent.action.DEVICE_STORAGE_OK" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED" />
+                <action
+                    android:name="android.intent.action.TIME_SET" />
+                <action
+                    android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:enabled="@7f050002"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/Theme.Freshchat.SelectedTheme"
+            android:name="com.freshchat.consumer.sdk.activity.ChannelListActivity" />
+        <activity
+            android:theme="@style/Theme.Freshchat.SelectedTheme"
+            android:name="com.freshchat.consumer.sdk.activity.ConversationDetailActivity"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:theme="@style/Theme.Freshchat.SelectedTheme"
+            android:name="com.freshchat.consumer.sdk.activity.DeeplinkInterstitialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/Theme.Freshchat.SelectedTheme"
+            android:name="com.freshchat.consumer.sdk.activity.PictureAttachmentActivity"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.Freshchat.SelectedTheme"
+            android:name="com.freshchat.consumer.sdk.activity.CategoryListActivity" />
+        <activity
+            android:theme="@style/Theme.Freshchat.SelectedTheme"
+            android:name="com.freshchat.consumer.sdk.activity.ArticleListActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.Freshchat.SelectedTheme"
+            android:name="com.freshchat.consumer.sdk.activity.ArticleDetailActivity" />
+        <activity
+            android:theme="@style/Freshchat.Theme.Transparent"
+            android:name="com.freshchat.consumer.sdk.activity.InterstitialActivity"
+            android:configChanges="screenSize|orientation" />
+        <activity
+            android:theme="@style/Theme.Freshchat.SelectedTheme"
+            android:name="com.freshchat.consumer.sdk.activity.BotFaqDetailsActivity" />
+        <service
+            android:name="com.freshchat.consumer.sdk.service.FreshchatService" />
+        <receiver
+            android:name="com.freshchat.consumer.sdk.receiver.FreshchatReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED" />
+                <action
+                    android:name="android.intent.action.LOCALE_CHANGED" />
+                <action
+                    android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.freshchat.consumer.sdk.receiver.FreshchatNetworkChangeReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.freshchat.consumer.sdk.provider.FreshchatInitProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.smartwidgetlabs.chatgpt.freshchat.initprovider" />
+        <activity
+            android:theme="@style/Theme.Freshchat.SelectedTheme"
+            android:name="com.freshchat.consumer.sdk.activity.FAQCategoriesActivity"
+            android:configChanges="screenSize|orientation" />
+        <activity
+            android:theme="@style/Theme.Freshchat.SelectedTheme"
+            android:name="com.freshchat.consumer.sdk.activity.FAQListActivity"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.Freshchat.SelectedTheme"
+            android:name="com.freshchat.consumer.sdk.activity.FAQDetailsActivity"
+            android:configChanges="screenSize|orientation" />
+        <activity
+            android:theme="@style/Theme.Freshchat.SelectedTheme"
+            android:name="com.freshchat.consumer.sdk.activity.FAQSearchActivity"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="adjustResize" />
+        <uses-library
+            android:name="androidx.camera.extensions.impl"
+            android:required="false" />
+        <service
+            android:name="androidx.camera.core.impl.MetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+        </service>
+        <provider
+            android:name="com.canhub.cropper.CropFileProvider"
+            android:exported="false"
+            android:authorities="com.smartwidgetlabs.chatgpt.cropper.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/library_file_paths" />
+        </provider>
+        <activity
+            android:theme="@style/com_facebook_activity_theme"
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard" />
+        <activity
+            android:name="com.facebook.CustomTabMainActivity" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="fbconnect"
+                    android:host="cct.com.smartwidgetlabs.chatgpt" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="com.applovin.sdk.AppLovinInitProvider"
+            android:exported="false"
+            android:authorities="com.smartwidgetlabs.chatgpt.applovininitprovider"
+            android:initOrder="101" />
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.applovin.adview.AppLovinFullscreenActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="com.applovin.sdk.AppLovinWebViewActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.applovin.mediation.hybridAds.MaxHybridMRecAdActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.applovin.mediation.hybridAds.MaxHybridNativeAdActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerDetailActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerAdUnitsListActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerAdUnitWaterfallsListActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerAdUnitDetailActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerCmpNetworksListActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerTcfConsentStatusesListActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerTcfInfoListActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerTcfStringActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerTestLiveNetworkActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerTestModeNetworkActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerUnifiedFlowActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerWaterfallSegmentsActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.creative.CreativeDebuggerActivity.Theme"
+            android:name="com.applovin.creative.MaxCreativeDebuggerActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <activity
+            android:theme="@style/com.applovin.creative.CreativeDebuggerActivity.Theme"
+            android:name="com.applovin.creative.MaxCreativeDebuggerDisplayedAdActivity"
+            android:configChanges="fontScale|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard|locale" />
+        <service
+            android:name="com.applovin.impl.adview.activity.FullscreenAdService"
+            android:exported="false"
+            android:stopWithTask="false" />
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false"
+            android:directBootAware="true">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.appcheck.debug.FirebaseAppCheckDebugRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.appcheck.playintegrity.FirebaseAppCheckPlayIntegrityRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.appcheck.ktx.FirebaseAppCheckKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.crashlytics.ktx.FirebaseCrashlyticsKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.ktx.FirebaseMessagingKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.ktx.FirebaseRemoteConfigKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+            android:exported="false"
+            android:directBootAware="true">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+        <provider
+            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+            android:exported="false"
+            android:authorities="com.smartwidgetlabs.chatgpt.mlkitinitprovider"
+            android:initOrder="99" />
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="false"
+            android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:exported="false"
+            android:authorities="com.smartwidgetlabs.chatgpt.firebaseinitprovider"
+            android:initOrder="100"
+            android:directBootAware="true" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.facebook.ads.AudienceNetworkActivity"
+            android:exported="false"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden" />
+        <provider
+            android:name="com.facebook.ads.AudienceNetworkContentProvider"
+            android:exported="false"
+            android:authorities="com.smartwidgetlabs.chatgpt.AudienceNetworkContentProvider" />
+        <meta-data
+            android:name="com.google.android.play.billingclient.version"
+            android:value="7.1.1" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.android.billingclient.api.ProxyBillingActivity"
+            android:exported="false"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.android.billingclient.api.ProxyBillingActivityV2"
+            android:exported="false"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false" />
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:exported="false"
+            android:authorities="com.smartwidgetlabs.chatgpt.FacebookInitProvider" />
+        <receiver
+            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+        <activity
+            android:theme="@style/WhiteBackgroundTheme"
+            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+            android:exported="true">
+            <intent-filter android:priority="-100">
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/WhiteBackgroundTheme"
+            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+            android:exported="true">
+            <intent-filter android:priority="-100">
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/WhiteBackgroundDialogTheme"
+            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+            android:exported="true">
+            <intent-filter android:priority="-100">
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <uses-library
+            android:name="android.ext.adservices"
+            android:required="false" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@7f0b0015" />
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true" />
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:exported="false"
+            android:authorities="com.smartwidgetlabs.chatgpt.com.squareup.picasso" />
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="ru.noties.jlatexmath.JLatexMathInitProvider"
+            android:exported="false"
+            android:authorities="com.smartwidgetlabs.chatgpt.jlatexmathinitprovider" />
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false">
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct" />
+        </service>
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false" />
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false" />
+        <activity
+            android:theme="@style/Theme.PlayCore.Transparent"
+            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+            android:exported="false"
+            android:stateNotNeeded="true" />
+        <meta-data
+            android:name="com.android.dynamic.apk.fused.modules"
+            android:value="base" />
+    </application>
+</manifest>
