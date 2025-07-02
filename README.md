@@ -171,6 +171,8 @@
 
 - 为以下软件提供一些共享链接：v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, Nekobox, Husi, Exclave, Amnezia, Outline, Clash-Meta 等。<br></br>
 
+<br/>  
+
 > [!IMPORTANT]
 >
 > <details>  
@@ -214,14 +216,49 @@
 
 ##
 
-> 📦 This configuration is dynamically generated and continuously updated via GitHub Actions workflows every 2 hours to ensure consistency and best practices.</br>
+> 📦 This configuration is dynamically generated and continuously updated via GitHub Actions workflows every 2 hours to ensure consistency and best practices.<br></br>
+
 
 ##
 
-### [ESET CODES - VPN, ANTIVIRUS?]
+### Regardless of anything else, 
 
-> Licences are dynamically generated every 4 hours via GitHub workflows.  
-> [Get it Now](./ESET-CODES.md)
+> [!NOTE]
+>
+> **We have a few tools here that might be useful for you.**
+> 
+> This site has prompts to **switch Gemini and Grok** to an advanced mode without any censorship or limitations.   
+> [diana-cl.github.io/Diana-Cl]
+>
+> 
+> This is a fast and accurate **Proxy IP Checker** tool, capable of testing IP ranges that I'm sure you haven't seen anywhere like it.   
+> [proxyip.victoriacross.workers.dev] 
+>
+> <br/>  
+> 
+> Have you ever seen our proxy IP pool? We add half a million new proxies every week.   
+> [Let me see here](./sub/ProxyIP.md#bulk-proxyip)
+>
+> <br/>  
+>
+> **ESET** has discontinued free trial VPN codes. This generator now only creates ESET HOME accounts. No VPN codes will be provided.  
+> [Let me see here](./ESET-CODES.md)
+>
+> <br/>
+>
+> This is a magical command line for activating Microsoft products including Windows and Office.  
+> [github.com/NiREvil/windows-activation]
+> 
+> <br/>  
+> 
+> This is a tool for receiving fake information, but at the same time, it's real.  
+> [real-address1.victoriacross.ir]
+>
+> <br/>
+>
+> <br/>
+>
+
 
 ##
 
@@ -253,7 +290,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 ## Table of Contents
 
-- [ESET VPN CODES](./ESET-CODES.md)
+- [ESET Security accounts](./ESET-CODES.md)
 - [Cloudflare IPs](#Cloudflare-IPs)
   - [All IPs](#All-IPs)
   - [Only IPv6](#All-IPs)
@@ -285,9 +322,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 > I use the same IPs for the **[Harmony]** script.  
 > Additionally, you can utilize the **[Strawberry.js]**  
 > script to modify the arrangement of the IPs or to combine them with other repositories.  
-> e.g: https://strawberry.victoriacross.ir
-
-[![Here](https://img.shields.io/badge/DEMO_REAL_ADDRESS_GENERATOR-silver?logo=opencollective)](https://real-address1.victoriacross.ir/)
+> e.g: https://strawberry.victoriacross.ir  
 
 <br><br/>
 
@@ -356,6 +391,9 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
 **Warp On Warp [[DS?]]**  
 https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/subwarp/warp
 
+**Some warp configs for Hidify [[MS?]]** 
+https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/warp
+
 ---
 
 <br/>
@@ -372,7 +410,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/exclave-wg.t
 
 **All of them**  
 https://raw.githubusercontent.com/ndsphonemy/proxy-sub/refs/heads/main/mobile.txt
-
+ 
 ---
 
 <br/>      
@@ -387,6 +425,8 @@ https://raw.githubusercontent.com/ndsphonemy/proxy-sub/refs/heads/main/wg.txt
 
 https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/WireGuard.txt [[10i?]]
 
+https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wireguard  [[MS?]]
+ 
 </br>
 
 **Warp for [MahsaNG] & [NikaNG]**
@@ -398,19 +438,19 @@ https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/Xray-WoW.json
 
 </br>
 
-```CSS
+```YAML
 wireguard://WHlr4sChnKkiY7EXb5vyx0vcujTxLGFqAWltTO4w3Xs%3D@162.159.195.141:968?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=49%2C243%2C136#Tel= @darkness_427 wire
 ```
 
-```CSS
+```YAML
 wireguard://EKlBOUZhH7fxdjmZktsX%2BRappNwTYnI3MSzRmALSy2A%3D@188.114.99.0:5279?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=158%2C76%2C232#Tel= @darkness_427 wire
 ```
 
-```CSS
+```YAML
 wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:8886?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1330&reserved=117%2C134%2C208#Tel= @arshiacomplus wire
 ```
 
-```CSS
+```YAML
 wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:8886?address=172.16.0.2/32, 2606:4700:110:846c:e510:bfa1:ea9f:5247/128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=117%2C134%2C208#Tel= @arshiacomplus wire
 ```
 
@@ -470,7 +510,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SIN
 
 > [!NOTE]
 >
-> Some configratiion for [[Outline]], Thanks to [[Anita?]]
+> Some configratiion for [[Outline]], Thanks to [[Ainita?]]
 
 ```POV-Ray SDL
 ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-1.csv
@@ -489,11 +529,11 @@ ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-4.csv
 ```
 
 ```POV-Ray SDL
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTowNEpqeHZhOWlUN2RjS2VuUkV6M3hn@176.124.207.105:37322/?outline=1
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPdTFoWGxQS3gwd0tKYk91UmZyOER5@176.124.207.105:37322/?outline=1
 ```
 
 ```POV-Ray SDL
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpZRHpOeVJ0M3BjMFR3SHRJb2huQm9M@176.124.207.105:37322/?outline=1
+ssconf://s3.amazonaws.com/beedynconprd/301yqyvqdpr1z95ub9fnu8qtdni54j6yyue94sowzgtssg0p9gylulg9a2ern7w0.json#REvil
 ```
 
 </br>
@@ -522,9 +562,9 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_1
 > [!NOTE]
 > Do you have [[any information]] on amnezia ? </br>
 
-**A0 NL**
+**A0 🇳🇱 NL**
 
-```CSS
+```YAML
 [Interface]
 PrivateKey = AEP+jhH5scMAOziG/mr1wwM43SKUxgPUM9q0tU3OK2U=
 Address = 10.136.2.46/32
@@ -548,7 +588,33 @@ PersistentKeepalive = 25
 Endpoint = nl02awg.kcufwfgnkr.net:60136
 ```
 
-**A2 UE**
+**A1  🇩🇪**
+
+```CSS
+[Interface]
+PrivateKey = IMfOHsLrIGqMzj2fFya1SqhKnJzxbV5SzbdyKiTv6nQ=
+Address = 10.221.4.239/32
+DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+
+[Peer]
+PublicKey = mTdrvswAGa9RZDcgyKS84xF0b/8U1ILoeoslvn6HRzA=
+PresharedKey = EKNmnC89ZiP8JWN+pyLvWew7Sxhi/kpz7An7BZH3I6w=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = de01a.kcufwfgnkr.net:62931
+```
+
+**A2  🇦🇪**
 
 ```CSS
 [Interface]
@@ -574,7 +640,7 @@ PersistentKeepalive = 30
 Endpoint = ae01awg.kcufwfgnkr.net:60136
 ```
 
-**A3 Gemini**
+**A3 🇬🇧 Gemini**
 
 ```CSS
 [Interface]
@@ -600,7 +666,7 @@ PersistentKeepalive = 30
 Endpoint = gb02awg.kcufwfgnkr.net:62931
 ```
 
-**A4 UK**
+**A4 🇬🇧 UK**
 
 ```CSS
 [Interface]
@@ -625,7 +691,7 @@ PersistentKeepalive = 25
 Endpoint = gb01a.kcufwfgnkr.net:62931
 ```
 
-**A5 FR**
+**A5 🇫🇷 FR**
 
 ```CSS
 [Interface]
@@ -650,7 +716,7 @@ PersistentKeepalive = 25
 Endpoint = fr01a.kcufwfgnkr.net:62931
 ```
 
-**A6 TR**
+**A6 🇹🇷 TR**
 
 ```CSS
 [Interface]
@@ -667,38 +733,13 @@ H1 = 1593635057
 H2 = 430880481
 H3 = 1214405368
 H4 = 1739253821
+
 [Peer]
 PublicKey = 6T9PkVHfTvMfDtKANISJqnW1Ulmd5kYyh8IsVkQYemU=
 PresharedKey = ZMNacbDp5sZhDlKLX0iGhcn+7zRno1gMPmx1ZU3JeWU=
 AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 25
+PersistentKeepalive = 30
 Endpoint = tr01a.kcufwfgnkr.net:62931
-```
-
-**A7 ES**
-
-```CSS
-[Interface]
-PrivateKey = oFvgu8trCSYnFzP/UoQUh86wo642q3pNGDM4PgpvMGA=
-Address = 10.136.0.62/32
-DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-
-[Peer]
-PublicKey = Gd2PeVUqrz3FzpnbfLmvy1tY/Mv4drWVhsoAjflUBUw=
-PresharedKey = bJ5PeReA1ArQSBZHV06Pq/BKIw57OyEM5Kqhw2qWGls=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 25
-Endpoint = est01awg.kcufwfgnkr.net:60136
 ```
 
 **A** [[Ni?]]
@@ -734,7 +775,7 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 </br>
 
 <details>
-<summary>|    • MORE CONTEXT </summary>
+<summary>  MORE CONTEXT </summary>
 
 **1**
 
@@ -926,6 +967,10 @@ http://104.234.74.23:2096/sub/VPNy.net-US-6-R?format=json [[KV?]]
 
 http://50.114.206.151:2096/sub/Babak-US-2?format=json
 
+https://raw.githubusercontent.com/mshojaei77/v2rayAuto/main/mix [[MS?]]
+
+https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/telegram/FREECONFIGSPLUS_Spotify_Porteghali_anty_filter_proxylabra
+
 https://shadowmere.xyz/api/b64sub [[SW?]]
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/fragment
@@ -951,6 +996,12 @@ https://raw.githubusercontent.com/darknessm427/V2ray-Sub-Collector/refs/heads/ma
 https://raw.githubusercontent.com/lagzian/IranConfigCollector/main/Base64.txt
 
 https://raw.githubusercontent.com/darknessm427/V2ray-Sub-Collector/refs/heads/main/Darkness%20Sub1.txt
+
+https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/telegram/FREECONFIGSPLUS_Spotify_Porteghali_anty_filter_proxylabra
+
+https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/telegram/V2RayRootFree_VIVA_Proxy_VPN_SOLVE_vlesskeys
+
+https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/telegram/Artemisvpn1_Porteqal3_V2ray_Collector_VIProxys_prrofile_purple
 
 https://raw.githubusercontent.com/liketolivefree/kobabi/main/sub.txt
 
@@ -978,9 +1029,9 @@ https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/outp
 
 https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt
 
-https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality [[FR?]]
+https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/hysteria
 
-https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Vless
+https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/hy2
 
 https://raw.githubusercontent.com/tkamirparsa/Javid-shah/refs/heads/main/Sub.text [[XS?]]
 
@@ -1015,6 +1066,10 @@ https://raw.githubusercontent.com/ndsphonemy/proxy-sub/refs/heads/main/speed.txt
 https://raw.githubusercontent.com/ndsphonemy/proxy-sub/refs/heads/main/hys-tuic.txt
 
 https://trojanvmess.pages.dev/cmcm?b64#cmcm?b64
+
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality [[FR?]]
+
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Vless
 
 https://raw.githubusercontent.com/barry-far/V2ray-Configs/refs/heads/main/Splitted-By-Protocol/ss.txt
 
@@ -1145,10 +1200,6 @@ https://raw.githubusercontent.com/liketolivefree/kobabi/main/clash_mt_ir_prov_f2
 
 https://raw.githubusercontent.com/liketolivefree/kobabi/main/clash_mt_ir_prov_l.yaml
 
-https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Reality [[FR?]]
-
-https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_T%2CH
-
 https://git.io/emzclash
 
 https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/free-mihomo-sub/HighSpeed.yaml [[10i?]]
@@ -1183,6 +1234,10 @@ https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml
 
 https://raw.githubusercontent.com/misersun/config003/main/config_all.yaml
 
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Reality [[FR?]]
+
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_T%2CH
+
 https://clash.221207.xyz/pubclashyaml
 
 https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml
@@ -1209,7 +1264,7 @@ https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.
 
 </br>
 
-| **Code** |     **Country Name**      |                                                  **Subscription Link**                                                   | **Code** |     **Country Name**      |                                                  **Subscription Link**                                                   |
+|  Code   |      Country Name       |                                                   Subscription Link                                                    |  Code  |      Country Name       |                                                   Subscription Link                                                    |
 | :------: | :-----------------------: | :----------------------------------------------------------------------------------------------------------------------: | :------: | :-----------------------: | :----------------------------------------------------------------------------------------------------------------------: |
 |    AL    |          Albania          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/al/mixed) |    AR    |         Argentina         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ar/mixed) |
 |    AM    |          Armenia          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/am/mixed) |    AU    |         Australia         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/au/mixed) |
@@ -1262,7 +1317,7 @@ https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.
 >
 > **Credits: Dear [[10i?]]**
 
-| **Country Name**                                                                                               | **Num of Confs** | **Sub Links**                                                                                                                                         |
+|   Country Name                                                                                                |  Num of Confs   |   Sub Links                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <img src="https://flagcdn.com/w20/af.png" width="20" alt="Afghanistan flag"> Afghanistan                       | 8                | [`Afghanistan.txt`](https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Afghanistan.txt)                       |
 | <img src="https://flagcdn.com/w20/ar.png" width="20" alt="Argentina flag"> Argentina                           | 7                | [`Argentina.txt`](https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Argentina.txt)                           |
@@ -1480,6 +1535,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [MB?]: https://github.com/mahdibland/ShadowsocksAggregator/
 [ME?]: https://telegram.me/s/FreeVPNHomes/532
 [MK?]: https://telegram.me/maviks_bot?start=680cff2cb34f9a1f3951470a
+[MS?]: https://github.com/mshojaei77/
 [PR?]: https://telegram.me/s/ProxyDaemi
 [proxyIP]: https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 [SW?]: https://github.com/jadolg/shadowmere
@@ -1491,7 +1547,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [WIZ]: https://bia-pain-bache.github.io/BPB-Worker-Panel/fa/installation/wizard/
 [XS?]: https://telegram.me/s/xs_filternet
 [Arshia]: https://telegram.me/s/warpscanner
-[Anita?]: https://ainita.net/vpn.html
+[Ainita?]: https://ainita.net/vpn.html
 [The Darkness]: https://telegram.me/s/ConfigWireguard
 [Nekobox]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
 [Husi]: https://github.com/xchacha20-poly1305/husi/releases
@@ -1507,3 +1563,9 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [any information]: https://telegram.me/s/F_NiREvil/6292
 [Amnezia]: https://github.com/amnezia-vpn/amnezia-client/releases
 [Clash-Meta]: https://github.com/MetaCubeX/ClashMetaForAndroid/releases
+[diana-cl.github.io/Diana-Cl]: https://diana-cl.github.io/Diana-Cl/
+[proxyip.victoriacross.workers.dev]: https://proxyip.victoriacross.workers.dev/
+[github.com/NiREvil/windows-activation]: https://github.com/NiREvil/windows-activation/
+[real-address1.victoriacross.ir]: https://real-address1.victoriacross.ir/
+
+ 
