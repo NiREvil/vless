@@ -220,7 +220,7 @@
 
 ##
 
-### Regardless of anything else,
+### Regardless of anything else
 
 > [!NOTE]
 >
