@@ -431,10 +431,6 @@ Santa Clara, California, HostPapa RackNerd LLC
 ```
 
 ```yaml
-104.234.50.128
-```
-
-```yaml
 107.172.159.182
 ```
 
@@ -593,6 +589,14 @@ Zurich, Baxet GP & Private Layer & Data source & GreenNet
 ### 🇩🇪 Germany
 
 Frankfurt am Main, Hetzner Online GmbH & Digital Ocean
+
+```yaml
+178.236.253.23
+```
+
+```yaml
+109.237.99.185
+```
 
 ```yaml
 [2a02:180:6:1::62e]
