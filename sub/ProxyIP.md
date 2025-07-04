@@ -1108,7 +1108,7 @@ Unknown city, Oracle Cloud
 
 ## 1. تست از طریق وب‌سایت
 
-اولین روش آسون اینه که وب‌سایت [![Here](https://img.shields.io/badge/Dì_proxyIP_Test-blue?logo=opencollective)](proxyip.victoriacross.workers.dev) رو باز کنیم، تو کادر اول آی‌پی یا دامنه پروکسی دلخواهمون رو قرار بدیم و با کلیک روی گزینه Check نتایج برامون به نمایش درمیان، امکان اسکن رنج‌آی‌پی برای کاربران حرفه‌ای هم در سایت تستمون هستش.
+اولین روش آسون اینه که وب‌سایت [![Here](https://img.shields.io/badge/Dì_proxyIP_Test-blue?logo=opencollective)](https://proxyip.victoriacross.workers.dev) رو باز کنیم، تو کادر اول آی‌پی یا دامنه پروکسی دلخواهمون رو قرار بدیم و با کلیک روی گزینه Check نتایج برامون به نمایش درمیان، امکان اسکن رنج‌آی‌پی برای کاربران حرفه‌ای هم در سایت تستمون هستش.
 
 ممکنه بعضی وقتا isp رو نشون نده و فقط بگه که این آی‌پی سالمه، اونوقت از این وب‌سایت
 [![Here](https://img.shields.io/badge/Check_Host-yellow?logo=opencollective)](https://check-host.net/ip-info) کمک بگیرید برای فهمیدن اطلاعات بیشتر (سایت پشت کلادفلر نیست).
