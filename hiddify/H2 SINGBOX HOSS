@@ -81,7 +81,7 @@
   },
   "outbounds": [
     {
-      "default": "hysteria",
+      "default": "auto",
       "outbounds": ["auto", "direct", "hysteria"],
       "tag": "proxy",
       "type": "selector"
@@ -104,9 +104,9 @@
         "password": "KevinZakarian",
         "type": "salamander"
       },
-      "password": "pWBKC4Frsk",
-      "server": "kevinx.iserver.store",
-      "server_port": 8443,
+      "password": "5UNkH2Qx0g",
+      "server": "141.11.62.217",
+      "server_port": 11003,
       "tag": "hysteria",
       "tls": {
         "enabled": true,
