@@ -182,6 +182,30 @@ Tokyo, Shibuya, Amazon Technologies Inc
 Frankfurt, Amazon Technologies Inc
 
 ```yaml
+18.197.218.69
+```
+
+```yaml
+3.123.242.99
+```
+
+```yaml
+18.184.55.249
+```
+
+```yaml
+18.184.27.249
+```
+
+```yaml
+3.75.170.179
+```
+
+```yaml
+3.67.25.193
+```
+
+```yaml
 3.124.208.189
 ```
 
@@ -189,13 +213,13 @@ Frankfurt, Amazon Technologies Inc
 3.126.159.12
 ```
 
-```yaml
-3.75.170.179
-```
-
 ### 🇯🇵 Japan
 
 Tokyo, Amazon Technologies Inc
+
+```yaml
+18.183.158.211
+```
 
 ```yaml
 13.230.34.30
@@ -216,6 +240,10 @@ London, Amazon Technologies Inc
 ### 🇸🇬 Singapore
 
 Singapore, Amazon Tech Inc
+
+```yaml
+54.169.229.188
+```
 
 ```yaml
 13.250.131.37
@@ -419,6 +447,10 @@ San Jose, California, DataCamp Limited
 Santa Clara, California, HostPapa RackNerd LLC
 
 ```yaml
+107.173.54.243
+```
+
+```yaml
 103.35.188.123
 ```
 
@@ -446,6 +478,12 @@ Santa Clara, California, Tencent Cloud
 
 ```yaml
 43.153.103.203
+```
+
+Florida, Miami, Comcast Cable Communications, LLC
+
+```yaml
+50.228.203.26
 ```
 
 Warrenton, Virginia, OVH SAS
