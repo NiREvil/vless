@@ -22,7 +22,7 @@
   - [Oceania](#oceania)
 - [Test proxyIPs](#test-proxyips)
 - [Latest workers & pages](#latest-workers--pages)
-- [Bulk proxyip](#bulk-proxyip)
+- [Bulk proxy by country](#proxyip-by-countries)
 
 ![rainbow]
 
@@ -84,12 +84,20 @@ ProxyIP.JP.CMLiussss.net
 ProxyIP.HK.CMLiussss.net
 ```
 
-```yaml
-edtproxyip.lzj.pp.ua
-```
-
 <details>  
 <summary> Click to see More </summary>
+
+🇸🇬 Most Singapore 
+
+```yaml
+cdn-all.xn--b6gac.eu.org
+```
+
+🎌 Everything 
+
+```yaml
+my-telegram-is-herocore.onecf.eu.org
+```
 
 🏳️‍🌈 i dont know
 
@@ -203,10 +211,6 @@ Frankfurt, Amazon Technologies Inc
 
 ```yaml
 3.67.25.193
-```
-
-```yaml
-3.124.208.189
 ```
 
 ```yaml
@@ -1061,19 +1065,11 @@ Izmir, Alastyr A.S
 Izmir, PQ Hosting plus
 
 ```yaml
-45.89.52.247
-```
-
-```yaml
 62.3.12.185
 ```
 
 ```yaml
 94.131.123.44
-```
-
-```yaml
-94.131.123.74
 ```
 
 ```yaml
@@ -1142,34 +1138,72 @@ Unknown city, Oracle Cloud
 
 <br><br/>
 
-# Test proxyIPs
+## proxyIP by Countries
+
+[CloudFlare ip ranges by Country][3]
+
+[All proxyIP- Daily sccan](./country_proxies/02_proxies.csv)
+
+[AE](./country_proxies/AE.txt)
+
+[AL](./country_proxies/AL.txt)
+
+[AM](./country_proxies/AM.txt)
+
+[AR](./country_proxies/AR.txt)
+
+[AT](./country_proxies/AT.txt)
+
+[AU](./country_proxies/AU.txt)
+
+[AZ](./country_proxies/AZ.txt)
+
+[BE](./country_proxies/BE.txt)
+
+[BG](./country_proxies/BG.txt)
+
+[BR](./country_proxies/BR.txt)
+
+[CA](./country_proxies/CA.txt)
+
+[CH](./country_proxies/CH.txt)
+
+[CN](./country_proxies/CN.txt)
+
+[CO](./country_proxies/CO.txt)
+
+ASAP ...
+
+
+<hr><br><br/>  
+
+## Test proxyIPs
 
 ## 1. تست از طریق وب‌سایت
 
-اولین روش آسون اینه که وب‌سایت [![Here](https://img.shields.io/badge/Dì_proxyIP_Test-blue?logo=opencollective)](https://proxyip.victoriacross.workers.dev) رو باز کنیم، تو کادر اول آی‌پی یا دامنه پروکسی دلخواهمون رو قرار بدیم و با کلیک روی گزینه Check نتایج برامون به نمایش درمیان، امکان اسکن رنج‌آی‌پی برای کاربران حرفه‌ای هم در سایت تستمون هستش.
+اولین و هم‌چنین آسون‌ترین کار اینه که بریم سراغ ابزارهایی مثل این: [victoria.workers.dev][vc]
 
-ممکنه بعضی وقتا isp رو نشون نده و فقط بگه که این آی‌پی سالمه، اونوقت از این وب‌سایت
-[![Here](https://img.shields.io/badge/Check_Host-yellow?logo=opencollective)](https://check-host.net/ip-info) کمک بگیرید برای فهمیدن اطلاعات بیشتر (سایت پشت کلادفلر نیست).
+بعد از وارد شدن به سایت، تو کادر اول آی‌پی یا دامنه پروکسی دلخواهمون رو قرار بدیم و با کلیک روی گزینه Check نتایج برامون به نمایش درمیان، امکان اسکن رنج‌آی‌پی برای کاربران حرفه‌ای هم در سایت تستمون هستش.
 
-دومین سایت یکم سختتره ولی بازم آسون به حساب میاد، اینطوریه که باید وب‌سایت [![Here](https://img.shields.io/badge/EDtunnel-blue?logo=opencollective)](https://proxyip.edtunnel.best) رو باز کنیم پروکسی دلخواهمون رو تو کادر IP قرار بدیم (اگه از پورت آی‌پی مد نظرت خبر نداری ترجیحا `443:` بذار بمونه)، در سطر بعدی گزبنه tls و هاست پیشفرض باقی بمونن و درنهایت submit رو می‌زنیم و چند ثانیه بعد نتایج به نمایش درمیاد، گزینه proxyip برابر با True باشه حله می‌تونیم ازش استفاده کنیم.
+ممکنه بعضی وقتا isp رو نشون نده و فقط بگه که این آی‌پی سالمه، اونوقت از این وب‌سایت [check-host.nen][ch] کمک بگیرید برای فهمیدن اطلاعات بیشتر (سایت پشت کلادفلر نیست).
+
+دومین سایت یکم سختتره ولی بازم آسون به حساب میاد، اینطوریه که باید وب‌سایت [https://proxyip.edtunnel.best][ed] رو باز کنیم پروکسی دلخواهمون رو تو کادر IP قرار بدیم (اگه از پورت آی‌پی مد نظرت خبر نداری ترجیحا `443:` بذار بمونه)، در سطر بعدی گزبنه tls و هاست پیشفرض باقی بمونن و درنهایت submit رو می‌زنیم و چند ثانیه بعد نتایج به نمایش درمیاد، گزینه proxyip برابر با True باشه حله می‌تونیم ازش استفاده کنیم.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/559d7334-c8b7-402c-b5e3-85c70afae972" width="680px">
+  <img src="https://github.com/user-attachments/assets/c06d6aca-4101-4250-93b0-613d732b279e" width="680px">
 </p><br><br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/dfa8fc22-f5ed-44c2-843c-5a8cb55cce71" width="680px">
-</p><br><br/>
+  <img src="https://github.com/user-attachments/assets/e1e155e8-349b-49df-928d-ef3fa5f8d99c" width="680px">
+</p><br/>
 
----
-
-<br><br/>
+<hr><br><br/>
 
 ## 2. تست از طریق پنل BPB
 
-همه می‌دونید که تو پنل [![Here](https://img.shields.io/badge/BPB-blue?logo=opencollective)](https://github.com/bia-pain-bache) یه قسمت هست برای وارد کردن پروکسی‌ آی‌پی و مارو خیلی راحت می‌کنه از ادیت کد و ساخت متغیر و غیره.  
+همه می‌دونید که تو پنل [[bia-pain-bache]][bpb] یه قسمت هست برای وارد کردن پروکسی‌ آی‌پی و مارو خیلی راحت می‌کنه از ادیت کد و ساخت متغیر و غیره.  
 نحوه انجام کار به این شکل هستش که ما پروکسی‌آی‌پی یا دامین دلخواه رو تو پنل قرار داده و دکمه `Apply Settings` رو می‌زنیم، حالا واسه اینکه این پروکسی جدید رو کانفیگ‌های‌ما اعمال بشه باید یکبار لینک اشتراک یا همون لینک ساب رو آپدیت بزنیم داخل کلاینت، تا قبل از آپدیت پروکسی آی‌پی‌ما قبلا هرچی بود همونه، بعد از آپدیت این جدیده میاد روی‌کار.  
-بعد باید به یکی از کانفیگ‌ها وصل شد و رفت سراغ یکی از سایت‌هایی که از CDN کلادفلر استفاده میکنن یا به اصطلاح پشت کلادفلر هستند، مثل لینک وورکر یا پیج خودمون، یا سایت‌های عمومی مثل [![Here](https://img.shields.io/badge/WHOER-blue?logo=opencollective)](https://whoer.net) و یا [![Here](https://img.shields.io/badge/SPEEDTEST-gray?logo=opencollective)](https://www.speedtest.net) و غیره تا ببینیم سایت برامون بالا میاد یانه.  
+بعد باید به یکی از کانفیگ‌ها وصل شد و رفت سراغ یکی از سایت‌هایی که از CDN کلادفلر استفاده میکنن یا به اصطلاح پشت کلادفلر هستند، مثل لینک وورکر یا پیج خودمون، یا سایت‌های عمومی مثل [whoer.net][wr] و یا [speedtest.net][sp] و غیره تا ببینیم سایت برامون بالا میاد یانه.  
 اگه عادی بالا میان که اوکی پس پروکسی که انتخاب کردیم درست کار می‌کنه می‌تونیم ازش استفاده کنیم. اگه بالا نیومد سایت یا هر خطای دیگه‌ای داد یا هردفعه مرورگرمون کپچا نشون داد (تو پروکسی‌آی‌پی‌های مسخره‌ی oracle این خیلی پیش میاد) یا تو ربات های تلگرامی کپچا نشون داده میشه یا بالا نمیان اونوقت باید یکی دیگه انتخاب کنیم چون این منتخبمون داغونه.
 
 <br/>
@@ -1183,19 +1217,19 @@ Unknown city, Oracle Cloud
 
 <p align="center">
   <img src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" width="600px">
-</p><br><br/>
+</p><br/>
 
-<br><br/>
+<hr><br><br/>
 
 ## Latest workers & pages
 
-- The latest script for creating a VLESS configuration on Cloudflare is here: [![Here](https://img.shields.io/badge/ZIZIFN-gold?logo=opencollective)](https://github.com/NiREvil/zizifn)
+- The latest script for creating a VLESS configuration on Cloudflare is here: [[ZiZifn]][zi]
 
-- VLESS node subscription content generator built with Cloudflare Workers to automatically generate the preferred route [![Here](https://img.shields.io/badge/HARMONY-green?logo=opencollective)](https://github.com/NiREvil/Harmony)
+- VLESS node subscription content generator built with Cloudflare Workers to automatically generate the preferred route [[Harmony]][hr]
 
-- And also A GUI Panel providing Worker subscriptions and Fragment settings and Warp configurations and many others [![Here](https://img.shields.io/badge/BPB-blue?logo=opencollective)](https://github.com/NiREvil/bia-pain-bache)
+- And also A GUI Panel providing Worker subscriptions and Fragment settings and Warp configurations and many others [[Bia Pain Bache]][BPB]
 
-<br><br/><br><br/>
+<hr><br><br/>
 
 ## Find proxyIPs
 
@@ -1208,57 +1242,98 @@ Unknown city, Oracle Cloud
 > روی هر کدوم از لینک‌های زیر کلیک کنی توی صفحه‌ای که باز شده یه لیست خواهی دید با کلی پروکسی‌ آی‌پی که پشت اون دامنه قرار گرفتند، با کلیک کردن روی هرکدوم کادر مشخصات مربوط بشون باز میشه.
 > روش های تست پروکسی‌آی‌پی‌ها در [بخش قبلی](#Test-proxyIPs) نوشته شده.
 >
-> این روش پیدا کردن پروکسی آی‌پی منسوخ شده و دوسال پیش به درد میخورد، الان میتونی از همین پست پروکسی دلخواهت رو برداری با بجای اینکه پشت دامنه‌ها دنبال پروکسی بگردی از [این‌جا برداری](bulkproxyip.csv) هرچند هزارتا که میخوای.
+> این روش پیدا کردن پروکسی آی‌پی منسوخ شده و دوسال پیش به درد میخورد، الان میتونی از همین پست پروکسی دلخواهت رو برداری با بجای اینکه پشت دامنه‌ها دنبال پروکسی بگردی از [این‌جا برداری](./country_proxies/02_proxies.csv) هرچند هزارتا که میخوای.
 >
 > https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
 >
+> 
 > https://www.nslookup.io/domains/nima.nscl.ir/dns-records/
 >
+>
+> 
 > https://www.nslookup.io/domains/my-telegram-is-herocore.onecf.eu.org/dns-records/
 >
+> 
 > https://www.nslookup.io/domains/turk.radicalization.ir/dns-records/
 >
-> https://www.nslookup.io/domains/bestproxy.onecf.eu.org/dns-records/
+> 
+> https://www.nslookup.io/domains/proxyip.cmliussss.net/dns-records/
 >
-> https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
+> 
+> https://www.nslookup.io/domains/edtproxyip.lzj.pp.ua/dns-records/
 >
-> https://www.nslookup.io/domains/proxy.xxxxxxxx.tk/dns-records/
 >
-> https://www.nslookup.io/domains/ipdb.rr.nu/dns-records/
+> https://www.nslookup.io/domains/proxyip.digitalocean.hw.090227.xyz/dns-records/
 >
-> https://www.nslookup.io/domains/cdn.xn--b6gac.eu.org/dns-records/
->
-> https://www.nslookup.io/domains/proxyip.aliyun.fxxk.dedyn.io/dns-records/
 >
 > https://www.nslookup.io/domains/proxyip.vultr.fxxk.dedyn.io/dns-records/
 >
-> https://www.nslookup.io/domains/workers.cloudflare.cyou/dns-records/
 >
+> https://www.nslookup.io/domains/proxyip.oracle.fxxk.dedyn.io/dns-records/
+>
+> 
+>
+> https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
+>
+>
+>
+> https://www.nslookup.io/domains/cdn.xn--b6gac.eu.org/dns-records/
+>
+>
+> https://www.nslookup.io/domains/proxyip.aliyun.hw.090227.xyz/dns-records/
+>
+> 
+> 
+> https://www.nslookup.io/domains/ProxyIP.DE.tp2024.CMLiussss.net/dns-records/
+>
+>
+> https://www.nslookup.io/domains/ProxyIP.KR.CMLiussss.net/dns-records/
+>
+>
+> https://www.nslookup.io/domains/ProxyIP.US.CMLiussss.net/dns-records/
+>
+>
+> https://www.nslookup.io/domains/ProxyIP.JP.CMLiussss.net/dns-records/
+>
+> 
 > یکم خلاقیت ب خرج بدی خودت میفهمی که باید دنبال چی بگردی تو سایت
+>
+> <br><br/>  
 
-<br><br/>
+<hr><br><br/>
 
 ## Bulk proxyip
 
 This file contains tens of thousands of tested and categorized IP proxies, I will publish this file weekly.
 
-You can download [from Here][zip]
+You can download [from Here](./country_proxies/1-bilion-proxyip.zip)
 
-also you can see [from Here](bulkproxyip.csv)
+also you can see [from Here](./country_proxies/02_proxies.csv)
 
-### Advanced
-
-![rainbow]
-
-How to find ProxyIPs for VLESS/VMESS/TROJAN CF Workers & Pages using Cyberspace Search Engine [Telegra.ph]
-
-<br/>
-
-and more more more IP's - [Rentry.co/CF-proxyIP]
 
 [^1]: https://t.me/s/F_NiREvil
 
 [^2]: https://t.me/s/CMLiussss
+
+[3]: https://github.com/NiREvil/vless/blob/main/edge/assets/Cloudflare_IP_ranges_by_country.md
+
+[vc]: https://proxyip.victoriacross.workers.dev
+
+[ch]: https://check-host.net/ip-info
+
+[ed]: https://proxyip.edtunnel.best
+
+[bpb]: https://github.com/bia-pain-bache
+
+[wr]: https://whoer.net
+
+[sp]: https://www.speedtest.net
+
+[zi]: https://github.com/NiREvil/zizifn
+
+[hr]: https://github.com/NiREvil/Harmony
+
+[BPB]: https://github.com/NiREvil/bia-pain-bache
 
 [Rentry.co/CF-proxyIP]: https://rentry.co/CF-proxyIP
 [Telegra.ph]: https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06
