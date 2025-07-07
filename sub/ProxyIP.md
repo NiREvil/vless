@@ -1140,39 +1140,71 @@ Unknown city, Oracle Cloud
 
 ## proxyIP by Countries
 
-[CloudFlare ip ranges by Country][3]
-
-[All proxyIP- Daily sccan](./country_proxies/02_proxies.csv)
-
-[AE](./country_proxies/AE.txt)
-
-[AL](./country_proxies/AL.txt)
-
-[AM](./country_proxies/AM.txt)
-
-[AR](./country_proxies/AR.txt)
-
-[AT](./country_proxies/AT.txt)
-
-[AU](./country_proxies/AU.txt)
-
-[AZ](./country_proxies/AZ.txt)
-
-[BE](./country_proxies/BE.txt)
-
-[BG](./country_proxies/BG.txt)
-
-[BR](./country_proxies/BR.txt)
-
-[CA](./country_proxies/CA.txt)
-
-[CH](./country_proxies/CH.txt)
-
-[CN](./country_proxies/CN.txt)
-
-[CO](./country_proxies/CO.txt)
-
-ASAP ...
+- [🏴‍☠️ CloudFlare ip ranges by Country][3]
+- [🏁 All proxyIP - Daily sccan](./country_proxies/02_proxies.csv)
+- [🇦🇪 United Arab Emirates](./country_proxies/AE.txt)
+- [🇦🇱 Albania](./country_proxies/AL.txt)
+- [🇦🇲 Armenia](./country_proxies/AM.txt)
+- [🇦🇷 Argentina](./country_proxies/AR.txt)
+- [🇦🇹 Austria](./country_proxies/AT.txt)
+- [🇦🇺 Australia](./country_proxies/AU.txt)
+- [🇦🇿 Azerbaijan](./country_proxies/AZ.txt)
+- [🇧🇪 Belgium](./country_proxies/BE.txt)
+- [🇧🇬 Bulgaria](./country_proxies/BG.txt)
+- [🇧🇷 Brazil](./country_proxies/BR.txt)
+- [🇨🇦 Canada](./country_proxies/CA.txt)
+- [🇨🇭 Switzerland](./country_proxies/CH.txt)
+- [🇨🇳 China](./country_proxies/CN.txt)
+- [🇨🇴 Colombia](./country_proxies/CO.txt)
+- [🇨🇾 Cyprus](./country_proxies/CY.txt)
+- [🇨🇿 Czechia](./country_proxies/CZ.txt)
+- [🇩🇪 Germany](./country_proxies/DE.txt)
+- [🇩🇰 Denmark](./country_proxies/DK.txt)
+- [🇪🇪 Estonia](./country_proxies/EE.txt)
+- [🇪🇸 Spain](./country_proxies/ES.txt)
+- [🇫🇮 Finland](./country_proxies/FI.txt)
+- [🇫🇷 France](./country_proxies/FR.txt)
+- [🇬🇧 United Kingdom](./country_proxies/GB.txt)
+- [🇬🇮 Gibraltar](./country_proxies/GI.txt)
+- [🇭🇰 Hong Kong](./country_proxies/HK.txt)
+- [🇭🇺 Hungary](./country_proxies/HU.txt)
+- [🇮🇩 Indonesia](./country_proxies/ID.txt)
+- [🇮🇪 Ireland](./country_proxies/IE.txt)
+- [🇮🇱 Israel](./country_proxies/IL.txt)
+- [🇮🇳 India](./country_proxies/IN.txt)
+- [🇮🇷 Iran](./country_proxies/IR.txt)
+- [🇮🇹 Italy](./country_proxies/IT.txt)
+- [🇯🇵 Japan](./country_proxies/JP.txt)
+- [🇰🇷 South Korea](./country_proxies/KR.txt)
+- [🇰🇿 Kazakhstan](./country_proxies/KZ.txt)
+- [🇱🇹 Lithuania](./country_proxies/LT.txt)
+- [🇱🇺 Luxembourg](./country_proxies/LU.txt)
+- [🇱🇻 Latvia](./country_proxies/LV.txt)
+- [🇲🇩 Moldova](./country_proxies/MD.txt)
+- [🇲🇽 Mexico](./country_proxies/MX.txt)
+- [🇲🇾 Malaysia](./country_proxies/MY.txt)
+- [🇳🇱 Netherlands](./country_proxies/NL.txt)
+- [🇳🇿 New Zealand](./country_proxies/NZ.txt)
+- [🇵🇭 Philippines](./country_proxies/PH.txt)
+- [🇵🇱 Poland](./country_proxies/PL.txt)
+- [🇵🇷 Puerto Rico](./country_proxies/PR.txt)
+- [🇵🇹 Portugal](./country_proxies/PT.txt)
+- [🇶🇦 Qatar](./country_proxies/QA.txt)
+- [🇷🇴 Romania](./country_proxies/RO.txt)
+- [🇷🇸 Serbia](./country_proxies/RS.txt)
+- [🇷🇺 Russia](./country_proxies/RU.txt)
+- [🇸🇦 Saudi Arabia](./country_proxies/SA.txt)
+- [🇸🇨 Seychelles](./country_proxies/SC.txt)
+- [🇸🇪 Sweden](./country_proxies/SE.txt)
+- [🇸🇬 Singapore](./country_proxies/SG.txt)
+- [🇸🇰 Slovakia](./country_proxies/SK.txt)
+- [🇹🇭 Thailand](./country_proxies/TH.txt)
+- [🇹🇷 Turkey](./country_proxies/TR.txt)
+- [🇹🇼 Taiwan](./country_proxies/TW.txt)
+- [🇺🇦 Ukraine](./country_proxies/UA.txt)
+- [🇺🇸 United States](./country_proxies/US.txt)
+- [🇺🇿 Uzbekistan](./country_proxies/UZ.txt)
+- [🇻🇳 Vietnam](./country_proxies/VN.txt)
 
 <hr><br><br/>
 
@@ -1180,7 +1212,7 @@ ASAP ...
 
 ## 1. تست از طریق وب‌سایت
 
-اولین و هم‌چنین آسون‌ترین کار اینه که بریم سراغ ابزارهایی مثل این: [victoria.workers.dev][vc]
+اولین و هم‌نین آسون‌ترین کار اینه که بریم سراغ ابزارهایی مثل این: [victoria.workers.dev][vc]
 
 بعد از وارد شدن به سایت، تو کادر اول آی‌پی یا دامنه پروکسی دلخواهمون رو قرار بدیم و با کلیک روی گزینه Check نتایج برامون به نمایش درمیان، امکان اسکن رنج‌آی‌پی برای کاربران حرفه‌ای هم در سایت تستمون هستش.
 
