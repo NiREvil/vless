@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 🌟 Dive into the related file in telegram: https://t.me/new_folder_revil/3437 🌟 -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="6614567"
+    android:versionName="6.73.14567"
+    android:compileSdkVersion="33"
+    android:compileSdkVersionCodename="13"
+    package="com.avast.android.vpn"
+    platformBuildVersionCode="33"
+    platformBuildVersionName="13">
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="33" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <!-- 🔻🔻🔻🔻🔻🔻🔻🔻 PERMISSIONS 🔻🔻🔻🔻🔻🔻🔻🔻 -->
+    <!-- View network connections -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Have full internet access -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Access precise location -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Allows an app to access location in the background (Android 10+). -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <!-- View network connections -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Access Wi-Fi network state information -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- Allows an app to act as an AccountAuthenticator for the AccountManager. -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <!-- Connect to or disconnect from Wi-Fi -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- Run foreground service. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Boot startup -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Allows an app to query all installed packages (Android 11+) -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <!-- Allows apps to display notifications on an Android device. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Allows the app to access the advertising ID. -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="com.avast.android.account.ACCOUNT_PERMISSION_V2" />
+    <!-- Manage the list of accounts in the AccountManager -->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <!-- Request authentication tokens from the AccountManager -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <!-- Allows an app to access approximate location (network-based). -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Prevent the phone from going to sleep -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Allows the app to receive messages from Google Cloud Messaging -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- Allows apps to access information about how they were installed onto your device. -->
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+    <!-- Allows the app to conduct sales through Google Play's In-app Billing Service. -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <!-- 🔺🔺🔺🔺🔺🔺🔺🔺 PERMISSIONS 🔺🔺🔺🔺🔺🔺🔺🔺 -->
+    <application
+        android:theme="@style/Theme.Vpn.Omni"
+        android:label="@7f15004f"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.avast.android.vpn.DefaultAvastVpnApplication"
+        android:allowBackup="false"
+        android:supportsRtl="true"
+        android:banner="@drawable/banner_secureline"
+        android:extractNativeLibs="true"
+        android:fullBackupContent="@xml/backup_scheme"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity
+            android:theme="@style/Theme.Vpn.SplashScreen"
+            android:name="com.avast.android.vpn.activity.DeepLinksActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="https"
+                    android:host="@string/dynamic_link_host" />
+                <data
+                    android:scheme="http"
+                    android:host="@string/dynamic_link_host" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.Vpn.Settings"
+            android:label="@string/device_pairing_pair_devices"
+            android:name="com.avast.android.vpn.activity.DevicePairingActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.Vpn.Main"
+            android:label="@7f15004f"
+            android:name="com.avast.android.vpn.activity.MainActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:theme="@style/Theme.Vpn.Settings"
+            android:label="@string/settings_title"
+            android:name="com.avast.android.vpn.settings.SettingsActivity"
+            android:parentActivityName="com.avast.android.vpn.activity.MainActivity" />
+        <activity
+            android:theme="@style/Theme.Leanback.SplashScreen"
+            android:name="com.avast.android.vpn.tv.TvLocationListActivity"
+            android:parentActivityName="com.avast.android.vpn.activity.MainActivity" />
+        <activity
+            android:label="@string/connection_rules_title"
+            android:name="com.avast.android.vpn.activity.ConnectionRulesActivity"
+            android:parentActivityName="com.avast.android.vpn.settings.SettingsActivity" />
+        <activity
+            android:label="@string/connection_rules_title"
+            android:name="com.avast.android.vpn.activity.WifiThreatScanActivity"
+            android:parentActivityName="com.avast.android.vpn.settings.SettingsActivity" />
+        <activity
+            android:label="@string/about_title"
+            android:name="com.avast.android.vpn.settings.help.HelpActivity" />
+        <activity
+            android:label="@string/vpn_protocol_header"
+            android:name="com.avast.android.vpn.activity.VpnProtocolActivity" />
+        <activity
+            android:label="@string/settings_local_bypass_item_title"
+            android:name="com.avast.android.vpn.activity.LocalBypassActivity" />
+        <service
+            android:name="com.avast.android.vpn.service.StateInformerService"
+            android:permission="com.avast.android.vpn.STATE_INFORMER_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.avast.android.secureline.statusinformer" />
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.avast.android.vpn.app.developer.TestingActionsReceiver"
+            android:permission="com.avast.android.secureline.permission.TESTING"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.avast.android.secureline.shepherd_update" />
+                <action
+                    android:name="com.avast.android.secureline.shepherd_use_preview" />
+                <action
+                    android:name="com.avast.android.secureline.force_stop" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.avast.android.vpn.util.BaseDeviceBootBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.avast.android.vpn.util.DataRenewBroadcastReceiver" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@7f0c000a" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7159607241708980~8586342040" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@7f030008" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification_white" />
+        <activity
+            android:theme="@style/Theme.Vpn.RestorePurchase"
+            android:label="@string/restore_purchase_title"
+            android:name="com.avast.android.vpn.activity.RestorePurchaseActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName="com.avast.android.vpn.activity.MainActivity" />
+        <activity
+            android:theme="@style/Theme.Vpn.SplashScreen"
+            android:label="@7f15004f"
+            android:name="com.avast.android.vpn.activity.OnboardingActivity"
+            android:launchMode="singleTop" />
+        <activity-alias
+            android:label="@7f15004f"
+            android:name="com.avast.android.vpn.app.wizard.WizardActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:targetActivity="com.avast.android.vpn.activity.OnboardingActivity">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+                <category
+                    android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>
+        <activity
+            android:name="com.avast.android.vpn.activity.OverlayActivity" />
+        <activity
+            android:theme="@style/Theme.Vpn.Fullscreen"
+            android:label="@7f150ed5"
+            android:name="com.avast.android.vpn.activity.NetworkDiagnosticActivity" />
+        <activity
+            android:theme="@style/Theme.Vpn.Omni.StatusBar"
+            android:label="@string/settings_personal_privacy_title"
+            android:name="com.avast.android.vpn.activity.PersonalPrivacyActivity" />
+        <activity
+            android:theme="@style/Theme.Vpn.DeveloperOptions"
+            android:label="@string/developer_options_row_developer_options_group_title"
+            android:name="com.avast.android.vpn.activity.DeveloperOptionsActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.Vpn.Omni.StatusBar"
+            android:label="@string/connection_rules_trusted_networks_title"
+            android:name="com.avast.android.vpn.activity.TrustedNetworksActivity"
+            android:parentActivityName="com.avast.android.vpn.settings.SettingsActivity" />
+        <activity
+            android:theme="@style/Theme.Vpn.Subscription"
+            android:label="@string/setting_subscription_title"
+            android:name="com.avast.android.vpn.settings.subscription.SubscriptionSettingsActivity" />
+        <activity
+            android:theme="@style/Theme.Vpn.Omni.StatusBar"
+            android:label="@string/about_title"
+            android:name="com.avast.android.vpn.about.AboutActivity" />
+        <activity
+            android:name="com.avast.android.vpn.activity.TvSupportMessageActivity" />
+        <activity
+            android:theme="@style/Theme.Vpn.Omni.StatusBar"
+            android:label="@string/contact_support_title"
+            android:name="com.avast.android.vpn.activity.ContactSupportActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.Vpn.ErrorScreen"
+            android:name="com.avast.android.vpn.activity.ErrorActivity" />
+        <activity
+            android:theme="@style/Theme.Vpn.Campaign.Purchase"
+            android:name="com.avast.android.vpn.activity.CampaignPurchaseActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:parentActivityName="com.avast.android.vpn.activity.MainActivity">
+            <intent-filter>
+                <action
+                    android:name="com.avast.android.campaigns.ACTION_PURCHASE_SCREEN" />
+                <action
+                    android:name="com.avast.android.vpn.action.ALREADY_PURCHASED" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.Vpn.Campaign.Overlay"
+            android:name="com.avast.android.vpn.activity.CampaignOverlayActivity"
+            android:exported="false"
+            android:parentActivityName="com.avast.android.vpn.activity.MainActivity">
+            <intent-filter>
+                <action
+                    android:name="com.avast.android.campaigns.action.SHOW_OVERLAY" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/Theme.Vpn.LicensePicker"
+            android:name="com.avast.android.vpn.activity.LicencePickerActivity" />
+        <activity
+            android:theme="@style/Theme.Vpn.ProhibitedCountry"
+            android:name="com.avast.android.vpn.activity.UnsupportedStateActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:theme="@style/Theme.Vpn.Survey"
+            android:name="com.avast.android.vpn.activity.SurveyActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.Vpn.Omni.StatusBar"
+            android:name="com.avast.android.vpn.activity.NotificationSettingsActivity"
+            android:parentActivityName="com.avast.android.vpn.settings.SettingsActivity" />
+        <activity
+            android:theme="@style/Theme.Vpn.Survey"
+            android:name="com.avast.android.vpn.activity.AnalyzeCodeActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:theme="@style/Theme.Vpn.Survey"
+            android:name="com.avast.android.vpn.activity.AdditionalInformationActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName="com.avast.android.vpn.activity.AnalyzeCodeActivity" />
+        <activity
+            android:theme="@style/TransparentStatusBar"
+            android:name="com.android.billingclient.api.ProxyBillingActivity"
+            android:exported="false"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard" />
+        <activity
+            android:theme="@style/Theme.Vpn.SplitTunneling"
+            android:label="@string/split_tunneling_title"
+            android:name="com.avast.android.vpn.activity.SplitTunnelingActivity" />
+        <activity
+            android:theme="@style/Theme.Leanback.SplashScreen"
+            android:label="@string/split_tunneling_title"
+            android:name="com.avast.android.vpn.activity.TvSplitTunnelingActivity" />
+        <activity
+            android:label="@string/kill_switch_title"
+            android:name="com.avast.android.vpn.activity.KillSwitchActivity"
+            android:parentActivityName="com.avast.android.vpn.settings.SettingsActivity" />
+        <activity
+            android:name="com.avast.android.vpn.tv.TvConnectionAnnouncementActivity"
+            android:parentActivityName="com.avast.android.vpn.activity.MainActivity" />
+        <activity
+            android:theme="@style/Theme.Vpn.Purchase"
+            android:name="com.avast.android.vpn.activity.PurchaseActivity"
+            android:parentActivityName="com.avast.android.vpn.activity.OnboardingActivity" />
+        <activity
+            android:name="com.avast.android.vpn.activity.AfterPurchaseActivity" />
+        <activity
+            android:name="com.avast.android.vpn.activity.WebViewActivity" />
+        <receiver
+            android:name="com.avast.android.vpn.app.autoconnect.UserPresentReceiver"
+            android:exported="false">
+            <intent-filter
+                android:enabled="true"
+                android:exported="false">
+                <action
+                    android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:label="@7f15004f"
+            android:name="com.avast.android.vpn.widget.SwitchWidgetProvider"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_small_info" />
+        </receiver>
+        <receiver
+            android:name="com.avast.android.vpn.app.upgrade.ApplicationUpgradeReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.avast.android.vpn.app.upgrade.ConnectionRulesUpgradeReceiver" />
+        <receiver
+            android:name="com.avast.android.vpn.billing.expiration.LicenseExpirationBroadcastReceiver" />
+        <receiver
+            android:name="com.avast.android.vpn.notification.promotion.BasePromoManager$PromoReceiver" />
+        <receiver
+            android:name="com.avast.android.vpn.app.developer.SensitiveOptionsBroadcastReceiver"
+            android:permission="com.avast.android.vpn.permission.TESTING"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.avast.android.secureline.enabledebugoptions" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.avast.android.vpn.util.network.ScanResultReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="aandroid.net.wifi.SCAN_RESULTS" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.singular.sdk.SingularInstallReceiver"
+            android:permission="BIND_GET_INSTALL_REFERRER_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:label="@string/tile_label_disconnected"
+            android:icon="@7f08044b"
+            android:name="com.avast.android.vpn.tile.SecureLineTileService"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.quicksettings.ACTIVE_TILE"
+                android:value="true" />
+        </service>
+        <service
+            android:name="com.avast.android.sdk.vpn.MasterVpnService"
+            android:permission="android.permission.BIND_VPN_SERVICE"
+            android:exported="false"
+            android:foregroundServiceType="location">
+            <intent-filter>
+                <action
+                    android:name="android.net.VpnService" />
+                <action
+                    android:name="com.avast.android.sdk.vpn.start" />
+                <action
+                    android:name="com.avast.android.sdk.vpn.stop" />
+                <action
+                    android:name="com.avast.android.sdk.vpn.wake_up" />
+                <action
+                    android:name="com.avast.android.sdk.vpn.shut_down" />
+                <action
+                    android:name="com.avast.android.sdk.vpn.custom_action" />
+            </intent-filter>
+            <meta-data
+                android:name="android.net.VpnService.SUPPORTS_ALWAYS_ON"
+                android:value="true" />
+        </service>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.avast.android.vpn.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+        <activity
+            android:theme="@android:style/Theme"
+            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme"
+            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Dialog"
+            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+            android:value="false" />
+        <meta-data
+            android:name="com.facebook.sdk.AutoInitEnabled"
+            android:value="false" />
+        <receiver
+            android:name="com.avast.android.account.internal.account.AccountChangedReceiver"
+            android:permission="com.avast.android.account.ACCOUNT_PERMISSION_V2"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.avast.android.account.ACCOUNTS_CHANGED_V2" />
+                <action
+                    android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.avast.android.account.internal.account.authenticator.AuthenticatorService"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.avast.android.sdk.vpn.activity.VpnConsentHandlingActivity"
+            android:configChanges="orientation" />
+        <receiver
+            android:name="com.avast.android.shepherd2.Shepherd2UpdateAttemptFinishedReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.avast.android.shepherd2.UPDATE_ATTEMPT_FINISHED" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.avast.android.notifications.internal.TrackingNotificationActivity"
+            android:exported="false"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:noHistory="true" />
+        <receiver
+            android:name="com.avast.android.notifications.internal.TrackingNotificationBroadcastReceiver"
+            android:exported="false" />
+        <service
+            android:name="com.avast.android.ffl2.account.AuthenticatorService"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <activity
+            android:name="com.mikepenz.aboutlibraries.ui.LibsActivity" />
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false"
+            android:directBootAware="true">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.perf.ktx.FirebasePerfKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.ktx.FirebaseDynamicLinksKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.ktx.FirebaseRemoteConfigKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.crashlytics.ktx.FirebaseCrashlyticsKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+        <provider
+            android:name="com.google.firebase.perf.provider.FirebasePerfProvider"
+            android:exported="false"
+            android:authorities="com.avast.android.vpn.firebaseperfprovider"
+            android:initOrder="101" />
+        <provider
+            android:name="com.mikepenz.iconics.IconicsContentProvider"
+            android:enabled="@bool/is_iconics_content_provider_enabled"
+            android:exported="false"
+            android:authorities="com.avast.android.vpn.iconics.core.provider"
+            android:initOrder="100" />
+        <activity
+            android:theme="@style/com_facebook_activity_theme"
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard" />
+        <activity
+            android:name="com.facebook.CustomTabMainActivity" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="fbconnect"
+                    android:host="cct.com.avast.android.vpn" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:exported="false"
+            android:excludeFromRecents="true" />
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:exported="true"
+            android:visibleToInstantApps="true" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false" />
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:exported="false"
+            android:authorities="com.avast.android.vpn.firebaseinitprovider"
+            android:initOrder="100"
+            android:directBootAware="true" />
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false" />
+        <activity
+            android:name="androidx.compose.ui.tooling.PreviewActivity"
+            android:exported="true" />
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:exported="false"
+            android:authorities="com.avast.android.vpn.FacebookInitProvider" />
+        <receiver
+            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false" />
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:directBootAware="false" />
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false"
+            android:directBootAware="false" />
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false" />
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action
+                    android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BATTERY_OKAY" />
+                <action
+                    android:name="android.intent.action.BATTERY_LOW" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+                <action
+                    android:name="android.intent.action.DEVICE_STORAGE_OK" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED" />
+                <action
+                    android:name="android.intent.action.TIME_SET" />
+                <action
+                    android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+            </intent-filter>
+        </receiver>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true" />
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:exported="false"
+            android:authorities="com.avast.android.vpn.com.squareup.picasso" />
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false">
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct" />
+        </service>
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false" />
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.jakewharton.processphoenix.ProcessPhoenix"
+            android:exported="false"
+            android:process=":phoenix" />
+        <activity
+            android:theme="@style/Theme.PlayCore.Transparent"
+            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+            android:exported="false"
+            android:stateNotNeeded="true" />
+        <meta-data
+            android:name="com.google.android.play.billingclient.version"
+            android:value="5.2.1" />
+        <meta-data
+            android:name="com.android.dynamic.apk.fused.modules"
+            android:value="base" />
+        <meta-data
+            android:name="com.android.stamp.source"
+            android:value="https://play.google.com/store" />
+        <meta-data
+            android:name="com.android.stamp.type"
+            android:value="STAMP_TYPE_STANDALONE_APK" />
+        <meta-data
+            android:name="com.android.vending.splits"
+            android:resource="@7f190006" />
+        <meta-data
+            android:name="com.android.vending.derived.apk.id"
+            android:value="2" />
+    </application>
+</manifest>
