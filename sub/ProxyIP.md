@@ -87,13 +87,13 @@ ProxyIP.HK.CMLiussss.net
 <details>  
 <summary> Click to see More </summary>
 
-🇸🇬 Most Singapore 
+🇸🇬 Most Singapore
 
 ```yaml
 cdn-all.xn--b6gac.eu.org
 ```
 
-🎌 Everything 
+🎌 Everything
 
 ```yaml
 my-telegram-is-herocore.onecf.eu.org
@@ -1174,8 +1174,7 @@ Unknown city, Oracle Cloud
 
 ASAP ...
 
-
-<hr><br><br/>  
+<hr><br><br/>
 
 ## Test proxyIPs
 
@@ -1246,59 +1245,39 @@ ASAP ...
 >
 > https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
 >
-> 
 > https://www.nslookup.io/domains/nima.nscl.ir/dns-records/
 >
->
-> 
 > https://www.nslookup.io/domains/my-telegram-is-herocore.onecf.eu.org/dns-records/
 >
-> 
 > https://www.nslookup.io/domains/turk.radicalization.ir/dns-records/
 >
-> 
 > https://www.nslookup.io/domains/proxyip.cmliussss.net/dns-records/
 >
-> 
 > https://www.nslookup.io/domains/edtproxyip.lzj.pp.ua/dns-records/
->
 >
 > https://www.nslookup.io/domains/proxyip.digitalocean.hw.090227.xyz/dns-records/
 >
->
 > https://www.nslookup.io/domains/proxyip.vultr.fxxk.dedyn.io/dns-records/
->
 >
 > https://www.nslookup.io/domains/proxyip.oracle.fxxk.dedyn.io/dns-records/
 >
-> 
->
 > https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
->
->
 >
 > https://www.nslookup.io/domains/cdn.xn--b6gac.eu.org/dns-records/
 >
->
 > https://www.nslookup.io/domains/proxyip.aliyun.hw.090227.xyz/dns-records/
 >
-> 
-> 
 > https://www.nslookup.io/domains/ProxyIP.DE.tp2024.CMLiussss.net/dns-records/
->
 >
 > https://www.nslookup.io/domains/ProxyIP.KR.CMLiussss.net/dns-records/
 >
->
 > https://www.nslookup.io/domains/ProxyIP.US.CMLiussss.net/dns-records/
->
 >
 > https://www.nslookup.io/domains/ProxyIP.JP.CMLiussss.net/dns-records/
 >
-> 
 > یکم خلاقیت ب خرج بدی خودت میفهمی که باید دنبال چی بگردی تو سایت
 >
-> <br><br/>  
+> <br><br/>
 
 <hr><br><br/>
 
@@ -1310,31 +1289,20 @@ You can download [from Here](./country_proxies/1-bilion-proxyip.zip)
 
 also you can see [from Here](./country_proxies/02_proxies.csv)
 
-
 [^1]: https://t.me/s/F_NiREvil
 
 [^2]: https://t.me/s/CMLiussss
 
 [3]: https://github.com/NiREvil/vless/blob/main/edge/assets/Cloudflare_IP_ranges_by_country.md
-
 [vc]: https://proxyip.victoriacross.workers.dev
-
 [ch]: https://check-host.net/ip-info
-
 [ed]: https://proxyip.edtunnel.best
-
 [bpb]: https://github.com/bia-pain-bache
-
 [wr]: https://whoer.net
-
 [sp]: https://www.speedtest.net
-
 [zi]: https://github.com/NiREvil/zizifn
-
 [hr]: https://github.com/NiREvil/Harmony
-
 [BPB]: https://github.com/NiREvil/bia-pain-bache
-
 [Rentry.co/CF-proxyIP]: https://rentry.co/CF-proxyIP
 [Telegra.ph]: https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06
 [rainbow]: https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256
