@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 🌟 Dive into the related file in telegram: https://t.me/new_folder_revil/3435 🌟 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="59009"
-    android:versionName="11.9.1"
+    android:versionCode="59979"
+    android:versionName="11.12.0"
     android:installLocation="auto"
     android:compileSdkVersion="34"
     android:compileSdkVersionCodename="14"
@@ -23,11 +24,7 @@
     <uses-feature
         android:name="android.hardware.LOCATION"
         android:required="false" />
-
-  
-    🔻🔻🔻🔻↓↓↓↓ PERMISSIONS ↓↓↓↓🔻🔻🔻🔻      
-   
-        
+    <!-- 🔻🔻🔻🔻🔻🔻🔻🔻 PERMISSIONS 🔻🔻🔻🔻🔻🔻🔻🔻 -->
     <!-- Allows the app to receive messages from Google Cloud Messaging -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="ellipi.messenger.permission.MAPS_RECEIVE" />
@@ -150,11 +147,15 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- Connect to or disconnect from Wi-Fi -->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-
-  
-   🔺🔺🔺🔺↑↑↑↑ PERMISSIONS ↑↑↑↑🔺🔺🔺🔺
-
-  
+    <!-- Allows the app to access the advertising ID. -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <!-- Allows an app to access attribution data provided by Android's AdServices framework. -->
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+    <!-- Allows an app to access to the user's advertising ID (AAID). -->
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+    <!-- Allows apps to access information about how they were installed onto your device. -->
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+    <!-- 🔺🔺🔺🔺🔺🔺🔺🔺 PERMISSIONS 🔺🔺🔺🔺🔺🔺🔺🔺 -->
     <queries>
         <package
             android:name="com.google.android.apps.maps" />
@@ -177,14 +178,6 @@
                 android:name="android.support.customtabs.action.CustomTabsService" />
         </intent>
     </queries>
-    <!-- Allows the app to access the advertising ID. -->
-    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-    <!-- Allows an app to access attribution data provided by Android's AdServices framework. -->
-    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
-    <!-- Allows an app to access to the user's advertising ID (AAID). -->
-    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
-    <!-- Allows apps to access information about how they were installed onto your device. -->
-    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
     <!-- Allows an app to access the user's interest categories (also called "topics") as determined by Android's AdServices API. -->
     <uses-permission android:name="android.permission.ACCESS_ADSERVICES_TOPICS" />
     <permission
@@ -200,7 +193,7 @@
         android:backupAgent="org.telegram.messenger.BackupAgent"
         android:allowBackup="true"
         android:restoreAnyVersion="true"
-        android:hardwareAccelerated="@7f050007"
+        android:hardwareAccelerated="@bool/useHardwareAcceleration"
         android:largeHeap="true"
         android:supportsRtl="false"
         android:usesCleartextTraffic="true"
@@ -211,7 +204,7 @@
         android:preserveLegacyExternalStorage="true">
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyDLUkm8Sa2KhdayrkYvf8c9kReG3sIa_L0" />
+            android:value="AIzaSyBAZZ82P6o66hgAZvg-W_EILYCCt_fr73Y" />
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713" />
@@ -270,7 +263,7 @@
             android:launchMode="singleTask"
             android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
             android:windowSoftInputMode="adjustResize"
-            android:hardwareAccelerated="@7f050007"
+            android:hardwareAccelerated="@bool/useHardwareAcceleration"
             android:supportsPictureInPicture="true">
             <intent-filter>
                 <action
@@ -582,7 +575,7 @@
             android:name="org.telegram.ui.BubbleActivity"
             android:configChanges="screenSize|uiMode|orientation|keyboardHidden|keyboard"
             android:windowSoftInputMode="adjustResize"
-            android:hardwareAccelerated="@7f050007"
+            android:hardwareAccelerated="@bool/useHardwareAcceleration"
             android:allowEmbedded="true"
             android:documentLaunchMode="always"
             android:resizeableActivity="true" />
@@ -594,7 +587,7 @@
             android:excludeFromRecents="true"
             android:configChanges="screenSize|uiMode|orientation|keyboardHidden|keyboard"
             android:windowSoftInputMode="adjustPan"
-            android:hardwareAccelerated="@7f050007">
+            android:hardwareAccelerated="@bool/useHardwareAcceleration">
             <intent-filter
                 android:icon="@mipmap/ic_launcher"
                 android:priority="1"
@@ -613,7 +606,7 @@
             android:exported="true"
             android:configChanges="screenSize|uiMode|orientation|keyboardHidden|keyboard"
             android:windowSoftInputMode="adjustPan"
-            android:hardwareAccelerated="@7f050007">
+            android:hardwareAccelerated="@bool/useHardwareAcceleration">
             <intent-filter
                 android:icon="@mipmap/ic_launcher"
                 android:roundIcon="@mipmap/ic_launcher_round">
@@ -628,7 +621,7 @@
             android:exported="true"
             android:configChanges="screenSize|uiMode|orientation|keyboardHidden|keyboard"
             android:windowSoftInputMode="adjustPan"
-            android:hardwareAccelerated="@7f050007">
+            android:hardwareAccelerated="@bool/useHardwareAcceleration">
             <intent-filter
                 android:icon="@mipmap/ic_launcher"
                 android:roundIcon="@mipmap/ic_launcher_round">
@@ -641,7 +634,7 @@
             android:exported="true"
             android:configChanges="screenSize|uiMode|orientation|keyboardHidden|keyboard"
             android:windowSoftInputMode="adjustPan"
-            android:hardwareAccelerated="@7f050007">
+            android:hardwareAccelerated="@bool/useHardwareAcceleration">
             <intent-filter
                 android:icon="@mipmap/ic_launcher"
                 android:roundIcon="@mipmap/ic_launcher_round">
@@ -1149,18 +1142,18 @@
         </provider>
         <service
             android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
-            android:enabled="@7f050002"
+            android:enabled="@bool/enable_system_alarm_service_default"
             android:exported="false"
             android:directBootAware="false" />
         <service
             android:name="androidx.work.impl.background.systemjob.SystemJobService"
             android:permission="android.permission.BIND_JOB_SERVICE"
-            android:enabled="@7f050004"
+            android:enabled="@bool/enable_system_job_service_default"
             android:exported="true"
             android:directBootAware="false" />
         <service
             android:name="androidx.work.impl.foreground.SystemForegroundService"
-            android:enabled="@7f050003"
+            android:enabled="@bool/enable_system_foreground_service_default"
             android:exported="false"
             android:directBootAware="false" />
         <receiver
@@ -1230,7 +1223,7 @@
         </receiver>
         <receiver
             android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
-            android:enabled="@7f050002"
+            android:enabled="@bool/enable_system_alarm_service_default"
             android:exported="false"
             android:directBootAware="false">
             <intent-filter>
