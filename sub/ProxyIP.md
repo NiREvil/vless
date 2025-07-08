@@ -494,6 +494,7 @@ Vienna, Aeza international Ltd
 ### 🇧🇬 Bulgaria
 
 Sofia, EDIS GmbH & Belcloud & Relink
+
 ```yaml
 185.68.93.39
 ```
@@ -738,7 +739,8 @@ Amsterdam, Oracle Cloud
 141.148.229.106
 ```
 
-### 🇵🇱 Poland  
+### 🇵🇱 Poland
+
 Mazovia, Warsaw, G-Core Labs S.A.
 
 ```yaml
@@ -801,7 +803,8 @@ Stockholm, AEZA International LTD
 147.45.73.239
 ```
 
-### 🇺🇦 Ukraine  
+### 🇺🇦 Ukraine
+
 Kyiv, Privately owned enterprise
 
 ```yaml
@@ -814,27 +817,31 @@ Kyiv, Privately owned enterprise
 
 ### 🇬🇧 United Kingdoms
 
-Amazon Technologies Inc.  
+Amazon Technologies Inc.
+
 ```yaml
 18.170.77.148
 ```
 
-The constant company LLC  
+The constant company LLC
+
 ```yaml
 192.248.146.32
 ```
 
-Akami Technologies Inc.  
+Akami Technologies Inc.
+
 ```yaml
 172.236.30.225
 ```
 
-British Telecommunications PLC   
+British Telecommunications PLC
+
 ```yaml
 213.1.145.50
 ```
 
-London, IONOS SE, MVPS LTD & Dedicated Serversb  
+London, IONOS SE, MVPS LTD & Dedicated Serversb
 
 ```yaml
 104.128.190.65
@@ -844,7 +851,7 @@ London, IONOS SE, MVPS LTD & Dedicated Serversb
 213.165.88.177
 ```
 
-```yaml 
+```yaml
 198.244.148.214
 ```
 
@@ -910,7 +917,8 @@ Dubai, M247 Europe
 45.137.155.232
 ```
 
-Abu Dhabi, Oracle Cloud  
+Abu Dhabi, Oracle Cloud
+
 ```yaml
 193.123.81.105
 ```
@@ -991,9 +999,9 @@ Tokyo, Shibuya, DMIT Cloud LLC & Amazon
 
 ### 🇰🇷 South Korea
 
-Seol, NewMedia Express & Aryaka Networks  
+Seol, NewMedia Express & Aryaka Networks
 
-```yaml 
+```yaml
 147.75.225.105
 ```
 
@@ -1118,6 +1126,7 @@ Sydney, Macquarie Telecom
 Unknown cities, Oracle Cloud
 
 Amazon Technologies Inc.
+
 ```yaml
 213.170.157.1
 ```
@@ -1130,7 +1139,7 @@ Amazon Technologies Inc.
 
 ## proxyIP by Countries
 
-<br/>  
+<br/>
 
 🇦🇫🇦🇽🇦🇱🇩🇿🇦🇸🇦🇩🇦🇴🇦🇮🇦🇶🇦🇬🇦🇷🇦🇲🇦🇼🇦🇺🇦🇹🇦🇿🇧🇸🇧🇭🇧🇩🇧🇧🇧🇾🇧🇪🇧🇿🇧🇯🇧🇲🇧🇹
 🇧🇴🇧🇦🇧🇼🇧🇷🇮🇴🇻🇬🇧🇳🇧🇬🇧🇫🇧🇮🇰🇭🇨🇲🇨🇦🇮🇨🇨🇻🇧🇶🇰🇾🇨🇫🇹🇩🇨🇱🇨🇳🇨🇽🇨🇨🇨🇴🇰🇲🇨🇬
@@ -1143,14 +1152,14 @@ Amazon Technologies Inc.
 🇱🇨🇵🇲🇻🇨🇸🇩🇸🇷🇸🇪🇨🇭🇸🇾🇹🇼🇹🇯🇹🇿🇹🇭🇹🇱🇹🇬🇹🇰🇹🇴🇹🇹🇹🇳🇹🇷🇹🇲🇹🇨🇹🇻🇻🇮🇺🇬🇺🇦🇦🇪
 🇬🇧🇱🇮🏴󠁧󠁢󠁥󠁮󠁧󠁿🏴󠁧󠁢󠁳󠁣󠁴󠁿🇨🇱🇰🇮🏴󠁧󠁢󠁷󠁬󠁳󠁿🇨🇻🇺🇸🇺🇾🇴🇲🇺🇿🇻🇺🇧🇼🇻🇦🇻🇪🇵🇬🇻🇳🇼🇫🇪🇭🇾🇪🇿🇲🇿🇼🇹🇫🇻🇨🇰🇬
 
-<br/>  
+<br/>
 
 <details>  
-<summary>🔍 Need a proxy IP from a specific country? Click here to see available options!</summary>  
+<summary>🔍 Need a proxy IP from a specific country? Click here to see available options!</summary>
 
-- Here you'll find a list of proxy IPs categorized by country. Simply choose the desired location and use the provided IPs.  
+- Here you'll find a list of proxy IPs categorized by country. Simply choose the desired location and use the provided IPs.
 
-- **Available Countries:** 
+- **Available Countries:**
 - [🗺️ All proxyIP - Daily sccan](./country_proxies/02_proxies.csv)
 - [🇦🇪 United Arab Emirates](./country_proxies/AE.txt)
 - [🇦🇱 Albania](./country_proxies/AL.txt)
@@ -1218,9 +1227,9 @@ Amazon Technologies Inc.
 
 Also do you need [CloudFlare ip ranges by Country][3] ?
 
-⚠️ **Note:** Always ensure you have proper authorization before using proxy services.  
+⚠️ **Note:** Always ensure you have proper authorization before using proxy services.
 
-</details>  
+</details>
 
 <hr><br><br/>
 
