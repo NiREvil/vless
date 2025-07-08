@@ -155,8 +155,7 @@
 > اگه از قبل دامنه خریدید که می‌تونید اینجا یه ساب دامنه انتخاب کنید اگر نه اینتر بزنید بره.
 >
 > - **مرحله یازدهم**  
->   سی ثانیه صبر کنید kv رو درست کنه و وصل کنه، متغییرهای منتخب رو اضافه کنه، فایل زیپ کد پروژه رو دانلود کنه، ایمپورت کنه، و بعد این اعلان رو نشون بده:  
->
+>   سی ثانیه صبر کنید kv رو درست کنه و وصل کنه، متغییرهای منتخب رو اضافه کنه، فایل زیپ کد پروژه رو دانلود کنه، ایمپورت کنه، و بعد این اعلان رو نشون بده:
 >
 > Would you like to open BPB panel in browser? (y/n):
 >
@@ -282,7 +281,6 @@
 > [itsyebekhe.github.io/tpro]
 >
 > <br/>
->
 
 ##
 
@@ -454,7 +452,7 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 
 <br/>
 
-### Warp for [MahsaNG] and [NikaNG]  
+### Warp for [MahsaNG] and [NikaNG]
 
 > [!NOTE]
 >
@@ -485,7 +483,7 @@ wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:888
 ### Warp for [Clash-Meta]
 
 > [!NOTE]
-> 
+>
 > warp Configurations are auto generated every six hours,
 > Interconnected in the form of a proxy chain, and utilize amnezia options.
 >
@@ -535,14 +533,14 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SIN
 ## ServerLess
 
 > [!NOTE]
-> 
+>
 > Only for Xray Core
 >
 > These configs are completely **Serverless** and are designed to work seamlessly with just a few DNS servers.  
-> You can enjoy lightning-fast loading speeds for YouTube videos, Twitter, and web browsing.  
+> You can enjoy lightning-fast loading speeds for YouTube videos, Twitter, and web browsing.
 >
 > Just remember, because there's no server, **your IP address won't be changed.**  
-> Happy streaming! </br>  
+> Happy streaming! </br>
 
 **tlshello [[GFW]]**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_TLS_Fragment_xray_config.json
@@ -582,7 +580,7 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPdTFoWGxQS3gwd0tKYk91UmZyOER5@176.124.207.10
 ssconf://s3.amazonaws.com/beedynconprd/301yqyvqdpr1z95ub9fnu8qtdni54j6yyue94sowzgtssg0p9gylulg9a2ern7w0.json#DEvil
 ```
 
-```POV-Ray SDL 
+```POV-Ray SDL
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3anZISEY1U2FGb2I@78.153.131.96:443/?outline=1#EVA_LTU
 ```
 
@@ -607,7 +605,7 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTptRnNTcWxIcU1DRHU@83.217.9.186:443/?outline=1
 ## [Amnezia]
 
 > [!NOTE]
-> 
+>
 > Do you have [[any information]] on amnezia ? </br>
 
 **A0 🇳🇱 NL**
