@@ -5,10 +5,10 @@
 >
 > [![Come Here](https://img.shields.io/badge/شرابط_اضطراری-موقت-darkred)](https://t.me/NiREvil_GP/106699)
 >
-> در این چند روز اخیر دیدیم که وزارت قطع ارتباطات به درخواست مقامات بالادستی اینترنت رو محدود کرد، به وضوح مشخص بود که پهنای باند بین‌الملل رو به حداقل مقدار ممکن رسوندن و حتی دوروز اول کامل بستن و نت برای اولین بار ملی شد، در این حالت دیگه فرقی نداره چه vpnی نصب دارید چه کانفیگی خریدید اصلا فرقی نداره چون مسیر ترافیک به خارج از ایران مسدود هست و هیچ پکتی ارسال و دریافت نخواهد شد، تنها استثنا کانفیگ‌هایی بودن که از یک سرور داخلی به برخی از سرورهای خارجی که آی‌پی آن‌ها هنوز مسدود نبود تانل شدند، انگشت شمار و فعال در حد چند ساعت. در سومین روز قطعی‌ها مقداری از پهنای باند بین‌الملل طبق گزارشات مردمی وکلادفلر و نت‌بلاکس به چرخه بازگشت (در حد پنج درصد) و همین کافی بود برای وصل شدن توسط برخی ابزارهای خاص.
+> در این چند روز اخیر دیدیم که وزارت قطع ارتباطات به درخواست مقامات بالادستی اینترنت رو محدود کرد، به وضوح مشخص بود که پهنای باند بین‌الملل رو به حداقل مقدار ممکن رسوندن و حتی دوروز اول کامل بستن و نت برای اولین بار ملی شد، در این حالت دیگه فرقی نداره چه vpnی نصب دارید چه کانفیگی خریدید اصلا فرقی نداره چون مسیر ترافیک به خارج از ایران مسدود هست و هیچ پکتی ارسال و دریافت نخواهد شد، تنها استثنا کانفیگ‌هایی بودن که از یک سرور داخلی به برخی از سرورهای خارجی که آی‌پی اون‌ها هنوز مسدود نبود تانل شدند، انگشت شمار و فعال در حد چند ساعت. در سومین روز از قطعی‌ها مقداری از پهنای باند بین‌الملل طبق گزارشات مردمی و کلادفلر و نت‌بلاکس به چرخه بازگشت (در حد پنج درصد) و همین کافی بود برای وصل شدن توسط برخی ابزارهای خاص.
 >
 > <details>
-> <summary> توضیحات مربوط به Avast SecureLine </summary><br/>   
+> <summary>❗ توضیحات مربوط به Avast SecureLine </summary><br/>   
 >  
 > چند روزه وی‌پی‌ان [Avast SecureLine] خیلی خوب کار می‌کنه با اکثر نت ها مخصوصا همراه اول و مخابرات، تنها کاری که باید کرد اینه که پروتکل رو بذاریم روی Mimic و انتخاب سرور هم اتومات بمونه و بزنیم کانکت شه.
 > مسائل مربوط به لایسنس و فایل نصبی و غیره رو از [[انباری]] دنبال کنید.
@@ -16,7 +16,7 @@
 > </details>
 >
 > <details>
-> <summary> توضیحات مربوط به سایفون   </summary><br/>
+> <summary>❗ توضیحات مربوط به سایفون   </summary><br/>
 >
 > ما برای دسترسی به اینترنت بین الملل در همین پهنای باند حداقلی از سایفون استفاده می‌کنیم، سایفون نسخه سایت، نسخه مارکت گوگل اصلا یه چیز دیگه‌است و ظاهرا بی ربط به سایفونه!!
 >
@@ -36,7 +36,7 @@
 > </details>  
 >  
 > <details>
-> <summary> توضیحات مربوط به کانفیگ WOW </summary><br/>
+> <summary>❗ توضیحات مربوط به کانفیگ WOW </summary><br/>
 >
 > یه چیز دیگه‌ای که اکثر ADSL‌ ها مخصوصا مخابرات بهش وصل هستن کانفیگ **warp ON warp** هیدیفای یا سینگ‌باکس هستش، با پینگ زیر 100 به طرز عجیبی. [^5]
 >
@@ -51,7 +51,7 @@
 > </details>
 >
 > <details>
-> <summary> توضیحات مربوط به پنل BPB </summary><br/>
+> <summary>❗ توضیحات مربوط به پنل BPB </summary><br/>
 >
 > اینو خودم دارم استفاده میکنم، یه پنل BPB بالا آوردم به کمک ویزارد 90 ثانیه بیشتر طول نکشید (اکانت کلادفلر داشتم از قبل).  
 > بعد از اینکه پنل رو ایجاد کردید (ترجیحا نوع وورکر بسازید که برای این شرایط بهتره، چون میشه از پورت‌های فاقد tls مثل پورت 80 هم استفاده کرد)، داخل پنل می‌تونید به عنوان تنظیمات و چندتا آی‌پی تمیز از این فایل بکاپ من استفاده کنید. کافیه [[این فایل]](edge/assets/BPB-settings.dat.txt) رو از گزینه مشخص شده در پنل [^6] آپلود کنید تا تنظیمات من اعمال بشه براتون.  
@@ -318,14 +318,14 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
   - [All IPs](#all-IPs)
   - [Warp Endpoints](#all-ips)
   - [ProxyIP](#proxyip)
-- [WireGuards](#wireGuards)
+- [WireGuards](#wireguards)
   - [Warp for Hiddify](#warp-for-hiddify)
   - [Warp for Clash-Meta](#warp-for-clash-meta)
   - [Warp for NekoBox](#warp-for-nekobox)
   - [Warp for Husi](#warp-for-nekobox)
   - [Warp for Exclave](#Warp-for-nekobox)
   - [Warp for v2rayNG](#warp-for-v2rayng)
-  - [Warp for NikaNG](warp-for-v2rayng)
+  - [Warp for NikaNG](warp-for-mahsang-and-nikang)
   - [Warp SFA and SFI](#warp-sfa-and-sfi)
 - [Xray](#xray)
 - [Clash](#clash)
@@ -350,7 +350,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 <br><br/>
 
-#### All IPs
+### All IPs
 
 https://github.com/NiREvil/vless/blob/main/Cloudflare-IPs.json
 
@@ -366,7 +366,7 @@ https://github.com/NiREvil/vless/blob/main/sub/Cf-ipv6.json
 
 https://ircfspace.github.io/endpoint/
 
-#### ProxyIP
+### ProxyIP
 
 https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 
@@ -454,7 +454,7 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 
 <br/>
 
-#### Warp for [MahsaNG] & [NikaNG]\*
+### Warp for [MahsaNG] and [NikaNG]  
 
 > [!NOTE]
 >
@@ -482,9 +482,10 @@ wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:888
 
 <hr/><br/>
 
-#### Warp for [Clash-Meta]
+### Warp for [Clash-Meta]
 
 > [!NOTE]
+> 
 > warp Configurations are auto generated every six hours,
 > Interconnected in the form of a proxy chain, and utilize amnezia options.
 >
@@ -531,11 +532,31 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SIN
 
 <hr/><br/>
 
+## ServerLess
+
+> [!NOTE]
+> 
+> Only for Xray Core
+>
+> These configs are completely **Serverless** and are designed to work seamlessly with just a few DNS servers.  
+> You can enjoy lightning-fast loading speeds for YouTube videos, Twitter, and web browsing.  
+>
+> Just remember, because there's no server, **your IP address won't be changed.**  
+> Happy streaming! </br>  
+
+**tlshello [[GFW]]**  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_TLS_Fragment_xray_config.json
+
+**1-1**  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_1-1_Fragment_xray_config.json
+
+<br></br>
+
 ## Outline
 
 > [!NOTE]
 >
-> Some configratiion for [[Outline]], Thanks to [[Ainita?]]
+> Some configratiion for [[Outline]], Thanks to [[Ainita?]] and [[EVA?]]
 
 ```POV-Ray SDL
 ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-1.csv
@@ -561,7 +582,7 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPdTFoWGxQS3gwd0tKYk91UmZyOER5@176.124.207.10
 ssconf://s3.amazonaws.com/beedynconprd/301yqyvqdpr1z95ub9fnu8qtdni54j6yyue94sowzgtssg0p9gylulg9a2ern7w0.json#DEvil
 ```
 
-```POV-Ray SDL [[EVA?]]
+```POV-Ray SDL 
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3anZISEY1U2FGb2I@78.153.131.96:443/?outline=1#EVA_LTU
 ```
 
@@ -583,28 +604,10 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTptRnNTcWxIcU1DRHU@83.217.9.186:443/?outline=1
 
 <hr/><br/>
 
-## ServerLess
-
-> [!NOTE]  
-> For Xray Core
->
-> These configs are completely **Serverless** and are designed to work seamlessly with just a few DNS servers.  
-> You can enjoy lightning-fast loading speeds for YouTube videos, Twitter, and web browsing.
->
-> Just remember, because there's no server, **your IP address won't be changed.**  
-> Happy streaming! <br></br>
-
-**tlshello [[GFW]]**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_TLS_Fragment_xray_config.json
-
-**1-1**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_1-1_Fragment_xray_config.json
-
-<br></br>
-
 ## [Amnezia]
 
 > [!NOTE]
+> 
 > Do you have [[any information]] on amnezia ? </br>
 
 **A0 🇳🇱 NL**
