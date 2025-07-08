@@ -7,15 +7,22 @@
 >
 > در این چند روز اخیر دیدیم که وزارت قطع ارتباطات به درخواست مقامات بالادستی اینترنت رو محدود کرد، به وضوح مشخص بود که پهنای باند بین‌الملل رو به حداقل مقدار ممکن رسوندن و حتی دوروز اول کامل بستن و نت برای اولین بار ملی شد، در این حالت دیگه فرقی نداره چه vpnی نصب دارید چه کانفیگی خریدید اصلا فرقی نداره چون مسیر ترافیک به خارج از ایران مسدود هست و هیچ پکتی ارسال و دریافت نخواهد شد، تنها استثنا کانفیگ‌هایی بودن که از یک سرور داخلی به برخی از سرورهای خارجی که آی‌پی آن‌ها هنوز مسدود نبود تانل شدند، انگشت شمار و فعال در حد چند ساعت. در سومین روز قطعی‌ها مقداری از پهنای باند بین‌الملل طبق گزارشات مردمی وکلادفلر و نت‌بلاکس به چرخه بازگشت (در حد پنج درصد) و همین کافی بود برای وصل شدن توسط برخی ابزارهای خاص.
 >
-> **من درباره نت همراه حرف نمیزنم** چون اون‌ها همچنان ترکیده‌ان ولی نت ثابت وضعیتش بهتره مخصوصا مخابرات، شاتل، آسیاتک، پارس آنلاین و برخی دیگر.  
-> ما برای دسترسی به اینترنت بین الملل در همین پهنای باند حداقلی از سایفون استفاده می‌کنیم، سایفون نسخه سایت، نسخه مارکت گوگل اصلا یه چیز دیگه‌است و ظاهرا بی ربط به سایفونه!!
+> <details>
+> <summary> توضیحات مربوط به Avast SecureLine </summary><br/>   
+>  
+> چند روزه وی‌پی‌ان [Avast SecureLine] خیلی خوب کار می‌کنه با اکثر نت ها مخصوصا همراه اول و مخابرات، تنها کاری که باید کرد اینه که پروتکل رو بذاریم روی Mimic و انتخاب سرور هم اتومات بمونه و بزنیم کانکت شه.
+> مسائل مربوط به لایسنس و فایل نصبی و غیره رو از [[انباری]] دنبال کنید.  
+>
+> </details>  
 >
 > <details>
 > <summary> توضیحات مربوط به سایفون   </summary><br/>   
->  
+>
+> ما برای دسترسی به اینترنت بین الملل در همین پهنای باند حداقلی از سایفون استفاده می‌کنیم، سایفون نسخه سایت، نسخه مارکت گوگل اصلا یه چیز دیگه‌است و ظاهرا بی ربط به سایفونه!!  
+>
 > من هم اسکرین‌شات از تنطیمات سایفون قرار میدم و هم به شکل متنی می‌نویسم همینجا.  
-> در ابتدا سایفون رو از سایت خودش دانلود کنید. [لینک سایت](https://psiphon.ca/en/download-store.html?psiphonca)    
-> ولی اکر به هر دلیلی نتونستید از سایت دانلود کنید مشکلی نیست فایل نصبی رو گذاشتم تو صندوقچه آروان بدون وی‌پی‌ان میشه سریع دانلود کرد. پیشنهادم v425. [لینک صندوقچه](https://ops3.s3-website.ir-thr-at1.arvanstorage.ir/)
+>
+> در ابتدا سایفون رو از سایت خودش دانلود کنید. [psiphon.ca/download]    
 >
 > **خب توضیحات متنی**  
 >  کلا دوتا گرینه ساده رو تغییر میدیم. [^1]  
@@ -29,25 +36,16 @@
 > </details>  
 >  
 > <details>
-> <summary> توضیحات مربوط به کانفیگ WOW</summary><br/>
+> <summary> توضیحات مربوط به کانفیگ WOW </summary><br/>
 >
-> یه چیز دیگه‌ای که اکثر ADSL‌ها مخصوصا مخابرات بهش وصل هستن کانفیگ **warp ON warp** هیدیفای یا سینگ‌باکس هستش، با پینگ زیر 100 به طرز عجیبی. [^5]
+> یه چیز دیگه‌ای که اکثر ADSL‌ ها مخصوصا مخابرات بهش وصل هستن کانفیگ **warp ON warp** هیدیفای یا سینگ‌باکس هستش، با پینگ زیر 100 به طرز عجیبی. [^5]
 >
 > منظورم [این دو کانفیگ بود](#hiddify-url-).
 >
 > وای ولی مخابرات حتما این کانفیگ پایین رو چک کنه، بینهایت زیبا بود پینگ‌ها داخل کلاینت [کلش-متا][Clash-Meta] [^8]  
+> ```
 > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-ems.yml
->
-> </details>
->
-> <details>
-> <summary> توضیحات مربوط به ESET VPN </summary><br/>
->
-> پیشنهاد دیگه‌ام برای Adsl و فیبر شاتل هست که همه میگن **ESET VPN** عالی کار میکنه باهاش.
->
-> پروتکل `WSTUNNEL` پورت `443` تقریبا اکثر سرور‌ها، روی بعضیاشونم پروتکل `Stealth` کار می‌کنه، شخصا کلمبیا رو دوست داشتم.
->
-> کد ورود برای ESET و توضیحات مربوطه رو [[از اینجا]](./ESET-CODES.md) ببینید.
+> ```
 >
 > </details>
 >
@@ -69,75 +67,98 @@
 > بعد از اینکه ترماکس اندروید رو از [[مخزن گیت‌هاب]][TERMUX] دانلود و نصب (یا ترمینال ویندوز (CMD) یا لینوکس) رو باز کردید؛  
 > دستور زیر رو اجرا کنید:
 >
-> `bash <(curl -fsSL https://raw.githubusercontent.com/bia-pain-bache/BPB-Wizard/main/install.sh)`
+> ```
+> bash <(curl -fsSL https://raw.githubusercontent.com/bia-pain-bache/BPB-Wizard/main/install.sh)
+> ```
 >
 > - **اولین مرحله**
->   > Please enter 1 to CREATE a new panel or 2 to MODIFY an existing panel:
+> 
+> Please enter 1 to CREATE a new panel or 2 to MODIFY an existing panel:
 >
 > سوال اینه که می‌خواید یه پنل جدید بسازید؟ (عدد 1 رو وارد کنید) یا پنل‌های موجود توی اکانت کلادفلر خودتون رو ویرایش کنید؟ (عدد 2 را وارد کنید).  
 > ما عدد `1` رو وارد کرده و اینتر میزنیم.
 >
-> - **مرحله دوم**  
->   بعدش مرحله وارد شدن به حساب کلادفلر (درصورت داشتن اکانت) یا ساخت اکانت هستش، اگه اکانت داشتید که لاگین می‌کنید اگه نداشتید با ایمیل خودتون یا هزاران فیک میل یکی می‌سازید، یادتون نره بعدش برید صندوق ورودی و وریفای کنید.  
->   درنهایت وارد حساب Cloudflare شما می‌شه و ازتون اجازه دسترسی می‌خواد، دسترسی رو دادید صفحه رو می‌بندید برمی‌گردید ب ترمینال.
+> - **مرحله دوم**   
+> بعدش مرحله وارد شدن به حساب کلادفلر (درصورت داشتن اکانت) یا ساخت اکانت هستش، اگه اکانت داشتید که لاگین می‌کنید اگه نداشتید با ایمیل خودتون یا هزاران فیک میل یکی می‌سازید، یادتون نره بعدش برید صندوق ورودی و وریفای کنید.  
+> درنهایت وارد حساب Cloudflare شما می‌شه و ازتون اجازه دسترسی می‌خواد، دسترسی رو دادید صفحه رو می‌بندید برمی‌گردید ب ترمینال.
 > - **مرحله سوم**
->   > Please enter 1 for Workers or 2 for Pages deployment:
+> Please enter 1 for Workers or 2 for Pages deployment:  
 >
 > میگه اگه می‌خوای `Worker` بسازی عدد یک و یا اگه میخای `Pages` بسازی عدد 2 رو وارد کن، به دلخواه خودت هرکدومو خواستی وارد کن.  
-> من پیشنهاد می‌کنم بای شرایط جنگی حال حاضر و این وضعیت اینترنت بهتره وورکر بسازی که بتونی از پورت‌های noTLS مثل 80 هم استفاده بکنی.
+> من پیشنهاد می‌کنم بای شرایط جنگی حال حاضر و این وضعیت اینترنت بهتره وورکر بسازی که بتونی از پورت‌های noTLS مثل 80 هم استفاده بکنی.  
 >
-> - **مرحله چهارم**
->   > The random generated name (Subdomain) is: 5th7sc483r2-q9  
->   > Please enter a custom name or press ENTER to use generated one:
+> - **مرحله چهارم**  
+>  
+> The random generated name (Subdomain) is: 5th7sc483r2-q9  
+>  
+> Please enter a custom name or press ENTER to use generated one:  
 >
-> میگه ساب‌دامنه شخصی شما رندوم انتخاب میشه و مقدارش فلانه، اگه می‌خوای سفارشی باشه مقدار دلخواهت رو وارد کن، می‌تونی هرچیزی بنویسی با در نظر داشتن این که باید از: حروف کوچک انکلیسی، بدون فاصله، بدون کاما و بدون نقطه استفاده کنی، فقط عدد و حروف کوچیک چسبیده بهم، ترجیحا فقط اینتر بزنید که مقدار رندومی که خودش تعیین کرده باقی بمونه.
+> میگه ساب‌دامنه شخصی شما رندوم انتخاب میشه و مقدارش فلانه، اگه می‌خوای سفارشی باشه مقدار دلخواهت رو وارد کن، می‌تونی هرچیزی بنویسی با در نظر داشتن این که باید از: حروف کوچک انکلیسی، بدون فاصله، بدون کاما و بدون نقطه استفاده کنی، فقط عدد و حروف کوچیک چسبیده بهم، ترجیحا فقط اینتر بزنید که مقدار رندومی که خودش تعیین کرده باقی بمونه. 
 >
-> - **مرحله پنجم**
->   > The random generated UUID is: xxxxx  
->   > Please enter a custom UUID or press ENTER to use generated one:
+> - **مرحله پنجم**  
+>   
+> The random generated UUID is: xxxxx  
 >
-> میگه UUID رندوم منتخب ما اینه، اگر قصدشو داری از چیز دیگه استفاده کنی برام بفرستش درغیر این‌صورت اینتر بزن بره، می‌تونی از سایت:  
+> Please enter a custom UUID or press ENTER to use generated one:  
+>
+> میگه UUID رندوم منتخب ما اینه، اگر قصدشو داری از چیز دیگه استفاده کنی برام بفرستش درغیر این‌صورت اینتر بزن بره، می‌تونی از سایت:   
+>  
 > [[uuidgenerator]][UUID]  
-> آیدی خودت رو بگیری و یا اینتر بزنی خودش انتخاب کنه، حتما اینتر بزنید، کم اهمیت ترین چیز همینه که از کجا بیاری آی‌دی رو.
+>  
+> آیدی خودت رو بگیری و یا اینتر بزنی خودش انتخاب کنه، حتما اینتر بزنید، کم اهمیت ترین چیز همینه که از کجا بیاری آی‌دی رو.  
 >
-> - **مرحله ششم**
->   > The random generated Trojan password is: xxxx  
->   > Please enter a custom Trojan password or press ENTER to use generated one:
+> - **مرحله ششم**  
+>  
+> The random generated Trojan password is: xxxx   
+> Please enter a custom Trojan password or press ENTER to use generated one:  
 >
-> بازم مثل قبلی‌ها، یه مقدار رندوم خودش میذاره اگه اینتر بزنی، پس بزن بره چون فاقد اهمیته.
+> بازم مثل قبلی‌ها، یه مقدار رندوم خودش میذاره اگه اینتر بزنی، پس بزن بره چون فاقد اهمیته.  
+>  
+> - **مرحله هفتم**  
+>   
+> The default Proxy IP is: `bpb.yousef.isegaro.com`   
 >
-> - **مرحله هفتم**
->   > The default Proxy IP is: bpb.yousef.isegaro.com  
->   > Please enter custom Proxy IP/Domains or press ENTER to use default:
+> Please enter custom Proxy IP/Domains or press ENTER to use default:  
 >
-> انتخاب پروکسی آی‌پی، تقریبا مرحله مهم همینه، پروکسی پیش‌فرض خودشون اوکیه ولی نه خیلی، اولا همیشه نصف پروکسی‌ها از کار افتادن و دیر به دیر تغییر می‌کنن، دوما از جاهای بدرد نخور مثل oracle هستن که هر سایتی بری ده بار ازت می‌خواد کپچا حل کنی ربات‌های تلگرامی‌هم هیچ‌کدوم بالا نمیان. پیشنهاد می‌کنم پروکسی خودمون رو بذارین که دائم آپدیت میشه و باکیفیت: `nima.nscl.ir`  
+> انتخاب پروکسی آی‌پی، تقریبا مرحله مهم همینه، پروکسی پیش‌فرض خودشون اوکیه ولی نه خیلی، اولا همیشه نصف پروکسی‌ها از کار افتادن و دیر به دیر تغییر می‌کنن، دوما از جاهای بدرد نخور مثل oracle هستن که هر سایتی بری ده بار ازت می‌خواد کپچا حل کنی ربات‌های تلگرامی‌هم هیچ‌کدوم بالا نمیان. از روی یه یارو چینی کپی شدن واسه همین مناسب استفاده در ایران نیستن. پیشنهاد می‌کنم پروکسی خودمون رو بذارین که دائم آپدیت میشه و باکیفیت خوبی داره. 
+> ```POV-Ray SDL
+> nima.nscl.ir
+> ```
+>  
 > یا هر پروکسی دیگه‌ای که می‌خواستید اینجا پیدا میشه:  
 > [[SOURCE OF PROXYIP]][ProxyIP]
 >
 > - **مرحله هشتم**
->   > The default Fallback domain is: speed.cloudflare.com  
->   > Please enter a custom Fallback domain or press ENTER to use default:
+>   
+> The default Fallback domain is: speed.cloudflare.com  
+>   
+> Please enter a custom Fallback domain or press ENTER to use default:  
 >
-> از روی بیکاری زیاد بود که اینو گذاشتن، اینتر بزنید بره فاقد اهمیت‌ترین همینه.
+> از روی بیکاری زیاد بود که اینو گذاشتن، اینتر بزنید بره فاقد اهمیت‌ترین همینه.  
 >
-> - **مرحله نهم**
->   > The random generated Subscription path is: 7b67Th1Rk$UX4aM@  
->   > Please enter a custom Subscription path or press ENTER to use generated one:
+> - **مرحله نهم**  
+> 
+> The random generated Subscription path is: 7b67Th1Rk$UX4aM@   
 >
-> این مرحله واسه امنیت بیشتره، قبلا جاشو uuid میگرفت ک میشد لو بره و سواستفاده شه از پنل، الان بهتر شده پس اینتر بزنید و بذارید که رندوم انتخاب شه.
+> Please enter a custom Subscription path or press ENTER to use generated one:  
+>  
+> این مرحله واسه امنیت بیشتره، قبلا جاشو uuid میگرفت ک میشد لو بره و سواستفاده شه از پنل، الان بهتر شده پس اینتر بزنید و بذارید که رندوم انتخاب شه.  
 >
-> - **مرحله دهم**
->   > You can set Custom domain ONLY if you registered domain on this cloudflare account.  
->   > Please enter a custom domain (if you have any) or press ENTER to ignore:
->
-> اگه از قبل دامنه خریدید که می‌تونید اینجا یه ساب دامنه انتخاب کنید اگر نه اینتر بزنید بره.
+> - **مرحله دهم**  
+> 
+> You can set Custom domain ONLY if you registered domain on this cloudflare account.  
+>  
+> Please enter a custom domain (if you have any) or press ENTER to ignore:
+> 
+> اگه از قبل دامنه خریدید که می‌تونید اینجا یه ساب دامنه انتخاب کنید اگر نه اینتر بزنید بره.  
 >
 > - **مرحله یازدهم**  
->   سی ثانیه صبر کنید kv رو درست کنه وصل کنه متغییرهای منتخبتون رو اضافه کنه کد پروژه رو دانلود کنه ایمپورت کنه و بهتون این پیغام رو نشون بده:
->   > Would you like to open BPB panel in browser? (y/n):
+> سی ثانیه صبر کنید kv رو درست کنه و وصل کنه، متغییرهای منتخب رو اضافه کنه، فایل زیپ کد پروژه رو دانلود کنه، ایمپورت کنه، و بعد این اعلان رو نشون بده:  
+>   
+> Would you like to open BPB panel in browser? (y/n):
 >
-> یدونه `Y` بویسید اینتر بزنید تا توی مرورگر باز بشه تا رمز جدیدتون رو تعیین کنید و وارد پنل بشید برای تنظیمات، پیش‌فرضش هم اوکیه، میتونید فقط لینک ساب نرمال یا فول نرمال یا هرکدوم دیگه رو نسبت به کلاینت مد نظر خودتون انتخاب کرده و اضافه کنید ولی اگه خواستید من یه بکاپ از تنطیمات خودم گذاشتم بالاتر ابتدای توضیحاتم اونم می‌تونید اد کنید.
->
+> یدونه `Y` بویسید اینتر بزنید تا توی مرورگر باز بشه تا رمز جدیدتون رو تعیین کنید و وارد پنل بشید برای تنظیمات، پیش‌فرضش هم اوکیه، میتونید فقط لینک ساب نرمال یا فول نرمال یا هرکدوم دیگه رو نسبت به کلاینت مد نظر خودتون انتخاب کرده و اضافه کنید ولی اگه خواستید من یه بکاپ از تنطیمات خودم گذاشتم بالاتر ابتدای توضیحاتم اونم می‌تونید اد کنید.  
+>  
 > تمام، موفق باشید.
 >
 > اکه نتونستید بسازید بیاید گروهمون و بگید کدوم مرحله خطا داد تا راهنمایی کنیم.
@@ -157,8 +178,6 @@
 
 <br><br/>
 
-<br><br/>
-
 <div dir="rtl">
 
 - تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، هیدیفای، نکوباکس، کلش‌متا، آمنزیا، آوت‌لاین، نیکا، مهسا، ویتوری‌ ان‌جی، نکوری و ...
@@ -169,7 +188,7 @@
 
 - **Несколько ссылок для подписки на** v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Outline, Clash-Meta и ... Вернуть результат только
 
-- 为以下软件提供一些共享链接：v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, Nekobox, Husi, Exclave, Amnezia, Outline, Clash-Meta 等。<br></br>
+- 为以下软件提供一些共享链接：v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, Nekobox, Husi, Exclave, Amnezia, Outline, Clash-Meta 等。<br><br/>
 
 <br/>
 
@@ -216,7 +235,7 @@
 
 ##
 
-> 📦 This configuration is dynamically generated and continuously updated via GitHub Actions workflows every 2 hours to ensure consistency and best practices.<br></br>
+> 📦 This configuration is dynamically generated and continuously updated via GitHub Actions workflows every 2 hours to ensure consistency and best practices. <br><br/>
 
 ##
 
@@ -254,8 +273,13 @@
 >
 > <br/>
 >
+> v2ray config collector+ Telegram proxy repository.  
+> [itsyebekhe.github.io/PSG]
+> 
+> [itsyebekhe.github.io/tpro]
+>
 > <br/>
-
+>  
 ##
 
 ### Hiddify URL <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>
@@ -277,8 +301,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 ### Scan with Hiddify
 
 <p align="center">
-     <img src="edge/assets/QRCode-Dog.png" alt="QR" width="680px">
-   </p><br/>
+     <img src="edge/assets/QRCode-Dog.png" alt="QR" width="680px"></p><br/>
 
 ![rainbow]
 
@@ -286,33 +309,34 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 ## Table of Contents
 
-- [ESET Security accounts](./ESET-CODES.md)
-- [Cloudflare IPs](#Cloudflare-IPs)
-  - [All IPs](#All-IPs)
-  - [Only IPv6](#All-IPs)
-  - [Warp Endpoints](#All-IPs)
-  - [ProxyIP](#ProxyIP)
-- [WireGuards](#WireGuards)
-  - [Warp for Hiddify](#warp-for-Hiddify)
-  - [Warp for Clash-Meta](#Warp-for-Clash-Meta)
-  - [Warp for NekoBox](#Warp-for-NekoBox)
-  - [Warp for Husi](#Warp-for-NekoBox)
-  - [Warp for Exclave](#Warp-for-NekoBox)
-  - [Warp for v2rayNG](#Warp-for-v2rayNG)
-  - [Warp for NikaNG](Warp-for-v2rayNG)
-  - [Warp SFA and SFI](#Warp-SFA-and-SFI)
-- [Xray](#Xray)
-- [Clash](#Clash)
-- [Outline](#Outline)
-- [ServerLess](#ServerLess)
-- [Amnezia](#Amnezia)
-- [Countries](#Countries)
+- [ESET Security accounts](./eset-codes.md)
+- [Cloudflare IPs](#cloudflare-ips)
+  - [All IPs](#all-IPs)
+  - [Warp Endpoints](#all-ips)
+  - [ProxyIP](#proxyip)
+- [WireGuards](#wireGuards)
+  - [Warp for Hiddify](#warp-for-hiddify)
+  - [Warp for Clash-Meta](#warp-for-clash-meta)
+  - [Warp for NekoBox](#warp-for-nekobox)
+  - [Warp for Husi](#warp-for-nekobox)
+  - [Warp for Exclave](#Warp-for-nekobox)
+  - [Warp for v2rayNG](#warp-for-v2rayng)
+  - [Warp for NikaNG](warp-for-v2rayng)
+  - [Warp SFA and SFI](#warp-sfa-and-sfi)
+- [Xray](#xray)
+- [Clash](#clash)
+- [Outline](#outline)
+- [ServerLess](#serverLess)
+- [Amnezia](#amnezia)
+- [Countries](#countries)
+- [Some Tools](#regardless-of-anything-else)
 
 <br><br/>
 
 ## Cloudflare IPs
 
-> [!NOTE]  
+> [!NOTE]
+> 
 > 📦 The links below all include fresh & clean IP addresses that are dynamically fetched every 3 hours and continuously updated via GitHub Actions workflows. Any manual edits may be overwritten by automated workflows.
 >
 > I use the same IPs for the **[Harmony]** script.  
@@ -352,11 +376,12 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 https://channel-freevpnhomes-subscription.shampoosirsehat.homes
 
 **Single H2 conf [[KV?]]**  
-http://104.234.74.23:2096/sub/VPNy.net-US-6-R?format=json
-http://50.114.206.151:2096/sub/Babak-US-2?format=json
+http://185.141.216.98:2096/sub/@KevinZakarian-1?format=json  
+http://185.141.216.99:2096/sub/@KevinZakarian-2?format=json  
+http://141.11.62.217:2096/sub/@KevinZakarian-3?format=json  
 
 **All Hysteria [[FR?]]**  
-https://igdux.top/~FREE2CONFIG,T,H
+https://igdux.top/~FREE2CONFIG,T,H  
 
 **Azadi az inja migzare [[A?]]**  
 http://azadiazinjamigzare.github.io/SingBox
@@ -390,9 +415,9 @@ https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/subwarp/warp
 **Some warp configs for Hidify [[MS?]]**
 https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/warp
 
----
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/warp/config
 
-<br/>
+<hr/><br/>
 
 #### Warp for [NekoBox]
 
@@ -407,12 +432,12 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/exclave-wg.t
 **All of them**  
 https://raw.githubusercontent.com/ndsphonemy/proxy-sub/refs/heads/main/mobile.txt
 
----
-
-<br/>      
+<hr/><br/>
  
-### Warp for [v2rayNG]    
+### Warp for [v2rayNG]
+
 > [!NOTE]
+> 
 > It is also applicable within the clients Mahsa & NikaNG
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/v2rayng-wg.txt
@@ -423,11 +448,12 @@ https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/outp
 
 https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wireguard [[MS?]]
 
-</br>
+<br/>
 
-**Warp for [MahsaNG] & [NikaNG]**
+#### Warp for [MahsaNG] & [NikaNG]*
 
 > [!NOTE]
+> 
 > Configs are from [Arshia] and [The Darkness] TG channels.
 
 https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/Xray-WoW.json
@@ -450,7 +476,7 @@ wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:888
 wireguard://eHne1kVEWJseSZH%2FvS7%2Fh15mslM7imHXVfcaILx5q2M%3D@188.114.98.47:8886?address=172.16.0.2/32, 2606:4700:110:846c:e510:bfa1:ea9f:5247/128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=117%2C134%2C208#Tel= @arshiacomplus wire
 ```
 
----
+<hr/><br/>  
 
 #### Warp for [Clash-Meta]
 
@@ -466,11 +492,12 @@ https://raw.githubusercontent.com/hamedp-71/Clash_New/refs/heads/main/hp.yaml [[
 
 https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/clash-wg.yml [[DS?]]
 
-</br>
+<br/>
 
 ### Warp [SFA] and [SFI]
 
 > [!NOTE]
+> 
 > singbox for
 > Android & IOS <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="13"/>
 
@@ -498,9 +525,7 @@ https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox_rs.json
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
 
----
-
-<br/>
+<hr/><br/>
 
 ## Outline
 
@@ -525,14 +550,34 @@ ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-4.csv
 ```
 
 ```POV-Ray SDL
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPdTFoWGxQS3gwd0tKYk91UmZyOER5@176.124.207.105:37322/?outline=1
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPdTFoWGxQS3gwd0tKYk91UmZyOER5@176.124.207.105:37322#DEvil
 ```
 
 ```POV-Ray SDL
-ssconf://s3.amazonaws.com/beedynconprd/301yqyvqdpr1z95ub9fnu8qtdni54j6yyue94sowzgtssg0p9gylulg9a2ern7w0.json#REvil
+ssconf://s3.amazonaws.com/beedynconprd/301yqyvqdpr1z95ub9fnu8qtdni54j6yyue94sowzgtssg0p9gylulg9a2ern7w0.json#DEvil
 ```
 
-</br>
+```POV-Ray SDL [[EVA?]]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3anZISEY1U2FGb2I@78.153.131.96:443/?outline=1#EVA_LTU
+```
+
+```POV-Ray SDL
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPZThXakw1WExGSlg@89.23.103.189:443/?outline=1#EVA_NLD
+```
+
+```POV-Ray SDL
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpSN3FLWGgyNnpGWjc@45.95.233.233:443/?outline=1#EVA_FRA
+```
+
+```POV-Ray SDL
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpyNFdBS2JZOHVRemY@194.87.71.12:443/?outline=1#EVA_DEU
+```
+
+```POV-Ray SDL
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTptRnNTcWxIcU1DRHU@83.217.9.186:443/?outline=1#EVA_TUR
+```
+
+<hr/><br/>
 
 ## ServerLess
 
@@ -955,11 +1000,18 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 
 ## XRAY
 
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/mix [[yb?]]
+
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/hy2
+
+
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
 
 https://robin.nscl.ir [[Ni?]]
 
-http://104.234.74.23:2096/sub/VPNy.net-US-6-R?format=json [[KV?]]
+http://185.141.216.98:2096/sub/@KevinZakarian-1?format=json [[KV?]]
+
+http://185.141.216.99:2096/sub/@KevinZakarian-2?format=json
 
 http://50.114.206.151:2096/sub/Babak-US-2?format=json
 
@@ -1174,7 +1226,12 @@ https://raw.githubusercontent.com/Created-By/Telegram-Eag1e_YT/main/%40Eag1e_YT
 ## CLASH
 
 > [!NOTE]
+> 
 > I recommend using [Clash-Meta] for better results.
+
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/mix  [[yb?]]
+
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/reality
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml [[MB?]]
 
@@ -1303,7 +1360,8 @@ https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.
 |  UY  |          Uruguay          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/uy/mixed) |  UZ  |        Uzbekistan         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/uz/mixed) |
 |  VN  |         Viet Nam          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/vn/mixed) |  VG  |  Virgin Islands, British  | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/vg/mixed) |
 
----
+
+<hr/><br/>
 
 **And subsequently ...**
 
@@ -1402,6 +1460,8 @@ https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.
 | <img src="https://flagcdn.com/w20/us.png" width="20" alt="USA flag"> USA                                       | 8534         | [`USA.txt`](https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/USA.txt)                                       |
 | <img src="https://flagcdn.com/w20/ua.png" width="20" alt="Ukraine flag"> Ukraine                               | 15           | [`Ukraine.txt`](https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Ukraine.txt)                               |
 | <img src="https://flagcdn.com/w20/vn.png" width="20" alt="Vietnam flag"> Vietnam                               | 43           | [`Vietnam.txt`](https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Vietnam.txt)                               |
+
+<br/> 
 
 > [!NOTE]
 >
@@ -1516,6 +1576,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [DN?]: https://telegram.me/s/DeamNet
 [Di4Diana]: https://telegram.me/Di4Diana
 [ESET CODES - VPN, ANTIVIRUS?]: https://telegram.me/F_NiREvil/2113
+[EVA?]: https://t.me/evavpn_bot
 [EP?]: https://github.com/Epodonios/v2ray-configs
 [FR?]: https://telegram.me/s/FREE2CONFIG
 [GE?]: https://telegram.me/s/gheychiamoozesh
@@ -1542,8 +1603,12 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [wtf?]: https://github.com/NiREvil/vless/blob/main/sub/clash-meta-wg.yml#L40
 [WIZ]: https://bia-pain-bache.github.io/BPB-Worker-Panel/fa/installation/wizard/
 [XS?]: https://telegram.me/s/xs_filternet
+[yb?]: https://t.me/YeBeKhe/527
+[itsyebekhe.github.io/PSG]: https://itsyebekhe.github.io/PSG/
+[itsyebekhe.github.io/tpro]: https://itsyebekhe.github.io/tpro/
 [Arshia]: https://telegram.me/s/warpscanner
 [Ainita?]: https://ainita.net/vpn.html
+[Avast SecureLine]: https://play.google.com/store/apps/details?id=com.avast.android.vpn&pcampaignid=web_share
 [The Darkness]: https://telegram.me/s/ConfigWireguard
 [Nekobox]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
 [Husi]: https://github.com/xchacha20-poly1305/husi/releases
@@ -1561,5 +1626,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Clash-Meta]: https://github.com/MetaCubeX/ClashMetaForAndroid/releases
 [diana-cl.github.io/Diana-Cl]: https://diana-cl.github.io/Diana-Cl/
 [proxyip.victoriacross.workers.dev]: https://proxyip.victoriacross.workers.dev/
+[psiphon.ca/download]: https://psiphon.ca/en/download-store.html?psiphonca
 [github.com/NiREvil/windows-activation]: https://github.com/NiREvil/windows-activation/
 [real-address1.victoriacross.ir]: https://real-address1.victoriacross.ir/
+[انباری]: https://t.me/new_folder_revil/3437
