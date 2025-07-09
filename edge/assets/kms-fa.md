@@ -1,8 +1,8 @@
 ---
 layout: doc
 outline: deep
-title: "روش فعال‌سازی ویندوز با KMS"
-description: "راهنمای فعال‌سازی ویندوز و آفیس با استفاده از روش KMS"
+title: 'روش فعال‌سازی ویندوز با KMS'
+description: 'راهنمای فعال‌سازی ویندوز و آفیس با استفاده از روش KMS'
 date: 2023-08-17
 editLink: true
 head:
@@ -13,15 +13,16 @@ head:
 
 <div class="rtl">
   
-# فعال‌سازی دستی با KMS  
+# فعال‌سازی دستی با KMS
 
 > این راهنما نحوه فعال‌سازی ویندوز به‌مدت ۱۸۰ روز را با استفاده از روش KMS (خدمات مدیریت کلید) توضیح می‌دهد.
 >
 > این روش، یکی از کانال‌های رسمی فعال‌سازی توسط مایکروسافت برای لایسنس‌های حجمی است و روشی موقتی، ایمن و قابل‌اعتماد محسوب می‌شود.
 
-::: danger پیش‌نیازها  
-- اتصال پایدار به اینترنت  
-- دسترسی ادمین (Administrator) داشتن پاورشل یا cmd در کامپیوتر شما  
+::: danger پیش‌نیازها
+
+- اتصال پایدار به اینترنت
+- دسترسی ادمین (Administrator) داشتن پاورشل یا cmd در کامپیوتر شما
 - فعال‌ کردن VPN درصورت اجرا نشدن فرامین. `فعلا دامنه ‌ها فیلتر نشدن پس طبیعتا نیازی به فعال کردن vpn نیست.`
 
 :::
@@ -30,12 +31,12 @@ head:
 
 ## مرحله ۱. اجرای Command Prompt با دسترسی ادمین
 
-1. روی دکمه `Start` یا آیکون جستجو کلیک کنید.  
-2. عبارت `cmd` یا `Command Prompt` را تایپ کنید.  
+1. روی دکمه `Start` یا آیکون جستجو کلیک کنید.
+2. عبارت `cmd` یا `Command Prompt` را تایپ کنید.
 3. روی گزینه **Run as administrator** کلیک نمایید.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4465a2d3-6c93-4ee1-bb63-94ab7b8e06ac" alt="اجرای cmd با حالت ادمین" width="540px" /></p><br/>  
+  <img src="https://github.com/user-attachments/assets/4465a2d3-6c93-4ee1-bb63-94ab7b8e06ac" alt="اجرای cmd با حالت ادمین" width="540px" /></p><br/>
 
 ## مرحله ۲. نصب کلید عمومی KMS
 
@@ -45,42 +46,42 @@ head:
 slmgr /ipk yourlicensekey
 ```
 
-<br/>  
+<br/>
 
-::: tip یافتن نسخه ویندوز شما  
+::: tip یافتن نسخه ویندوز شما
 
 برای مشاهده نسخه ویندوز:
 
 روی منوی Start کلیک راست کرده، گزینه **System** را انتخاب کنید و در بخش "Windows specifications" نسخه دقیق سیستم‌عامل را بررسی نمایید.
 
-کلید مناسب نسخه ویندوز خود را از جدول زیر انتخاب کرده و جایگزین عبارت `yourlicensekey` در دستور بالا کنید.   
-برای جزئیات بیشتر، راهنمای بررسی نسخه ویندوز را ببینید. [^3] <br/> 
+کلید مناسب نسخه ویندوز خود را از جدول زیر انتخاب کرده و جایگزین عبارت `yourlicensekey` در دستور بالا کنید.  
+برای جزئیات بیشتر، راهنمای بررسی نسخه ویندوز را ببینید. [^3] <br/>
 
 :::
 
 ### لیست کلیدها (GVLK)
 
-| نسخه ویندوز        | کلیدهای عمومی نسخه‌های حجمی                      |
-|:-----------------------|:------------------------------|
-| TX9XD-98N7V-6WMQ6-BX7FG-H8Q99 	|       Home       	|
-| 3KHY7-WNT83-DGQKR-F7HPR-844BM 	|      Home N      	|
-| 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH 	|   Home sl [^6]   	|
-| PVMJN-6DFY6–9CCP6–7BKTT-D3WVR 	|   Home cs [^7]   	|
-| W269N-WFGWX-YVC9B-4J6C9-T83GX 	|        Pro       	|
-| MH37W-N47XK-V7XM9-C7227-GCQG9 	|       Pro N      	|
-| YNMGQ-8RYV3-4PGQ3-C8XTP-7CFBY 	|     Education    	|
-| 84NGF-MHBT6-FXBX8-QWJK7-DRR8H 	|    Education N   	|
-| NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 	|   Pro Education  	|
-| 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ 	|  Pro Education N 	|
-| DXG7C-N36C4-C4HTG-X4T3X-2YV77 	|  Pro for W [^8]  	|
-| WYPNQ-8C467-V2W6J-TX4WX-WT2RQ 	| Pro N for W [^8] 	|
-| NPPR9-FWDCX-D2C8J-H872K-2YT43 	|    Enterprise    	|
-| DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 	|   Enterprise N   	|
-| XKCNC-J26Q9-KFHD2-FKTHY-KD72Y 	|       Team       	|
-| V3WVW-N2PV2-CGWC3-34QGF-VMJ2C 	|         S        	|
-| KY7PN-VR6RX-83W6Y-6DDYQ-T6R4W 	|        SE        	|
+| نسخه ویندوز                   | کلیدهای عمومی نسخه‌های حجمی |
+| :---------------------------- | :-------------------------- |
+| TX9XD-98N7V-6WMQ6-BX7FG-H8Q99 | Home                        |
+| 3KHY7-WNT83-DGQKR-F7HPR-844BM | Home N                      |
+| 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH | Home sl [^6]                |
+| PVMJN-6DFY6–9CCP6–7BKTT-D3WVR | Home cs [^7]                |
+| W269N-WFGWX-YVC9B-4J6C9-T83GX | Pro                         |
+| MH37W-N47XK-V7XM9-C7227-GCQG9 | Pro N                       |
+| YNMGQ-8RYV3-4PGQ3-C8XTP-7CFBY | Education                   |
+| 84NGF-MHBT6-FXBX8-QWJK7-DRR8H | Education N                 |
+| NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 | Pro Education               |
+| 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ | Pro Education N             |
+| DXG7C-N36C4-C4HTG-X4T3X-2YV77 | Pro for W [^8]              |
+| WYPNQ-8C467-V2W6J-TX4WX-WT2RQ | Pro N for W [^8]            |
+| NPPR9-FWDCX-D2C8J-H872K-2YT43 | Enterprise                  |
+| DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 | Enterprise N                |
+| XKCNC-J26Q9-KFHD2-FKTHY-KD72Y | Team                        |
+| V3WVW-N2PV2-CGWC3-34QGF-VMJ2C | S                           |
+| KY7PN-VR6RX-83W6Y-6DDYQ-T6R4W | SE                          |
 
-<br/>  
+<br/>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d5d93702-7865-4552-85d0-6916b1331bc0" alt="Install KMS Key" width="540px" /></p><br/>
@@ -92,7 +93,6 @@ slmgr /ipk yourlicensekey
 
 <br/>
 
-
 ## مرحله ۳. تنظیم آدرس سرور KMS
 
 در این مرحله، با ارسال این دستور، آدرسی از سرورهای عمومی KMS را به ویندوز معرفی کنید:
@@ -103,7 +103,6 @@ slmgr /skms kms8.msguides.com
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/edd0835f-c314-4ef8-a87d-a33e29f3f7c0" alt="Set KMS Server" width="540px" /></p><br/>
-
 
 ## مرحله ۴. فعال‌سازی نهایی
 
@@ -118,13 +117,13 @@ slmgr /ato
 
 ## مرحله ۵. بررسی وضعیت فعال‌سازی
 
-**همه چیز آماده است!** 
+**همه چیز آماده است!**
 
 برای بررسی وضعیت فعال‌سازی در ویندوز ۱۰، به مسیر زیر بروید:  
 Settings → Update & Security → Activation [^4]
 
 برای ویندوز ۱۱، از مسیر زیر وضعیت را بررسی کنید:  
-Settings → System → Activation [^5]  
+Settings → System → Activation [^5]
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/da52f1bb-79c9-45db-bade-a0f56cd0a739" alt="Activation Successful ly" width="540px" /></p><br/>
@@ -135,7 +134,7 @@ Settings → System → Activation [^5]
 
 - **این روش کار نکرد؟** اگر همچنان با مشکل روبه‌رو هستید، از روش HWID در راهنمای اصلی استفاده کنید.
 
-- **برای دریافت راهنمایی بیشتر**، به بخش [بحث‌های گیت‌هاب][2] مراجعه کرده و یا در صورت بروز مشکل با ارسال [ایمیل][3] با من در تماس باشید.  
+- **برای دریافت راهنمایی بیشتر**، به بخش [بحث‌های گیت‌هاب][2] مراجعه کرده و یا در صورت بروز مشکل با ارسال [ایمیل][3] با من در تماس باشید.
 
 <br/>
 
