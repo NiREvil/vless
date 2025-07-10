@@ -71,7 +71,7 @@ head:
 ۲. در ویندوز ۱۱ گزینه **Windows Terminal (Admin)** یا در ویندوز ۱۰ گزینه **Windows PowerShell (Admin)** را انتخاب کنید. [^1] [^2] <br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5638557d-9bfe-4e7c-a851-218bec6559bf" alt="اجرای پاورشل با حالت ادمین" width="540px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/9b27cd4b-21d8-4970-98bb-3c97010e09bf" alt="اجرای پاورشل با حالت ادمین" width="540px" /></p><br/>
 
 ## مرحله ۲. اجرای اسکریپت فعال‌سازی
 
@@ -92,7 +92,7 @@ irm https://massgrave.dev/get | iex
 <br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/dfaa3f27-efb8-4979-bc32-081362274a2e" alt="اجرای اسکریپت اصلی" width="540px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/6b72787e-f5ad-47a2-ab2b-ae93de9f70bc" alt="اجرای اسکریپت اصلی" width="540px" /></p><br/>
   
 ## مرحله ۳. انتخاب گزینه HWID
 
@@ -100,7 +100,7 @@ irm https://massgrave.dev/get | iex
 تبریک می‌گوییم! ویندوز شما اکنون با یک لایسنس دیجیتال به صورت دائمی فعال شده است. <br/>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c4289236-1d5d-421f-984f-5b3816575273" alt="فعال‌سازی با موفقیت انجام شد" width="540px" /></p><br/>
+  <img src="https://github.com/user-attachments/assets/8b119e05-d506-4c42-91cb-ac58c9a2f189" alt="فعال‌سازی با موفقیت انجام شد" width="540px" /></p><br/>
 
 برای بررسی وضعیت فعال‌سازی در ویندوز ۱۰، به مسیر Settings → Update & Security → Activation بروید. [^3]
 
@@ -159,6 +159,8 @@ irm https://massgrave.dev/get | iex
 | Team                                  | PPIPro                   | XKCNC-J26Q9-KFHD2-FKTHY-KD72Y |
 
 _در صورت نیاز، کلید عمومی به طور خودکار توسط اسکریپت اعمال می‌شود._
+
+<img width="1070" height="791" alt="p2" src="https://github.com/user-attachments/assets/6b72787e-f5ad-47a2-ab2b-ae93de9f70bc" />
 
 :::
 
