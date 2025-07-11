@@ -1057,7 +1057,7 @@ https://raw.githubusercontent.com/darknessm427/V2ray-Sub-Collector/refs/heads/ma
 
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed [[SB?]]
 
-https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/python/hysteria2 
+https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/python/hysteria2
 
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/ss
 
@@ -1067,7 +1067,7 @@ https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/vless
 
 https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY_BASE64.txt
 
-https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/telegram/meli_proxyy  [[MS?]]
+https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/telegram/meli_proxyy [[MS?]]
 
 https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/telegram/Artemisvpn1_Porteqal3_V2ray_Collector_VIProxys_prrofile_purple
 
@@ -1113,7 +1113,7 @@ https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/trojan_ira
 
 https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt
 
-https://raw.githubusercontent.com/bamdad23/JavidnamanIran/refs/heads/main/WS%2BHysteria2 
+https://raw.githubusercontent.com/bamdad23/JavidnamanIran/refs/heads/main/WS%2BHysteria2
 
 https://raw.githubusercontent.com/bamdad23/JavidnamanIran/refs/heads/main/multi
 
@@ -1130,7 +1130,6 @@ https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Vless
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vless.txt
 
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vmess.txt
-
 
 https://raw.githubusercontent.com/AzadNetCH/Clash/refs/heads/main/AzadNet_iOS.txt [[AZ?]]
 
@@ -1336,7 +1335,7 @@ https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.
 |  VN  |         Viet Nam          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/vn/mixed) |  VG  |  Virgin Islands, British  | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/vg/mixed) |
 
  -->
- 
+
 <hr/><br/>
 
 ## COUNTRIES
