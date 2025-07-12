@@ -1,15 +1,15 @@
 name: ClashMeta + Amnezia
 
 on:
-#  push:
-#    branches: ['main']
-#    paths:
-#      - '**/winterguard.*'
-#      - 'sub/*.yml'
-#      - 'edge/assets/*.yml'
-#  schedule:
-#    - cron: '0 */6 * * *'
-#  workflow_dispatch:
+  push:
+    branches: ['main']
+    paths:
+      - '**/winterguard.*'
+      - 'sub/*.yml'
+      - 'edge/assets/*.yml'
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
