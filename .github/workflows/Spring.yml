@@ -1,19 +1,19 @@
 name: Spring
 
 on:
-#  push:
-#    branches: ['main']
-#    paths:
-#      - '**/spring.*'
-#      - 'edge/assets/singbox-template.json'
-#  schedule:
-#    - cron: '0 */6 * * *'
-#  workflow_dispatch:
+  push:
+    branches: ['main']
+    paths:
+      - '**/spring.*'
+      - 'edge/assets/singbox-template.json'
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 10
     strategy:
       matrix:
         python-version: ['3.12']
