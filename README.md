@@ -248,15 +248,17 @@
 > **We have a few tools here that might be useful for you.**
 >
 > This site has prompts to **switch Gemini and Grok** to an advanced mode without any censorship or limitations.  
-> [diana-cl.github.io/Diana-Cl]
+> [diana-cl.github.io/Diana-Cl]  
 >
 > This is a fast and accurate **Proxy IP Checker** tool, capable of testing IP ranges that I'm sure you haven't seen anywhere like it.  
-> [proxyip.victoriacross.workers.dev]
+> [check79.pages.dev]  
+> [Telegram ProxyIPTesterBot]   
+> [proxyip.victoriacross.workers.dev]  
 >
 > <br/>
 >
 > Have you ever seen our proxy IP pool? We add half a million new proxies every week.  
-> [Let me see here](./sub/ProxyIP.md#bulk-proxyip)
+> [Let me see here](./sub/ProxyIP.md#proxyip-by-countries)
 >
 > <br/>
 >
@@ -374,13 +376,11 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 
 ## WIREGUARDS
 
-**Meshkintaj [[ME?]]**  
-https://channel-freevpnhomes-subscription.shampoosirsehat.homes
-
-**Single H2 conf [[KV?]]**  
+**HTTP and Hysteria [[KV?]]**  
 http://185.141.216.98:2096/sub/@KevinZakarian-1?format=json  
 http://185.141.216.99:2096/sub/@KevinZakarian-2?format=json  
-http://141.11.62.217:2096/sub/@KevinZakarian-3?format=json
+http://85.93.8.142:2096/sub/@KevinZakarian-4?format=json  
+http://178.236.254.188:2096/sub/@KevinZakarian-8?format=json
 
 **All Hysteria [[FR?]]**  
 https://igdux.top/~FREE2CONFIG,T,H
@@ -1009,6 +1009,12 @@ https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/no
 
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/hy2
 
+https://raw.githubusercontent.com/barry-far/V2ray-config/main/All_Configs_Sub.txt [[BR?]]
+
+https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/ss.txt
+
+https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/trojan.txt
+
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
 
 https://robin.nscl.ir [[Ni?]]
@@ -1018,14 +1024,8 @@ https://v2.alicivil.workers.dev [[GE?]]
 https://v2.alicivil.workers.dev/?list=us&count=300&shuffle=true&unique=false
 
 http://185.141.216.98:2096/sub/@KevinZakarian-1?format=json [[KV?]]
-
-http://185.141.216.99:2096/sub/@KevinZakarian-2?format=json
-
-https://raw.githubusercontent.com/barry-far/V2ray-config/main/All_Configs_Sub.txt [[BR?]]
-
-https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/ss.txt
-
-https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/trojan.txt
+http://185.141.216.99:2096/sub/@KevinZakarian-2?format=json  
+http://85.93.8.142:2096/sub/@KevinZakarian-4?format=json  
 
 https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/telegram/FREECONFIGSPLUS_Spotify_Porteghali_anty_filter_proxylabra
 
@@ -1098,6 +1098,8 @@ https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2r
 https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/hysteria
 
 https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/hy2
+
+https://channel-freevpnhomes-subscription.shampoosirsehat.homes [[ME?]]
 
 https://raw.githubusercontent.com/tkamirparsa/Javid-shah/refs/heads/main/Sub.text [[XS?]]
 
@@ -1600,6 +1602,8 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Clash-Meta]: https://github.com/MetaCubeX/ClashMetaForAndroid/releases
 [diana-cl.github.io/Diana-Cl]: https://diana-cl.github.io/Diana-Cl/
 [proxyip.victoriacross.workers.dev]: https://proxyip.victoriacross.workers.dev/
+[check79.pages.dev]: https://check79.pages.dev
+[Telegram ProxyIPTesterBot]: https://t.me/ProxyIPTesterBot
 [psiphon.ca/download]: https://psiphon.ca/en/download-store.html?psiphonca
 [github.com/NiREvil/windows-activation]: https://github.com/NiREvil/windows-activation/
 [real-address1.victoriacross.ir]: https://real-address1.victoriacross.ir/
