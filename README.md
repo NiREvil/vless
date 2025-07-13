@@ -1013,7 +1013,7 @@ https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/trojan.
 
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/mix [[yb?]]
 
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/hy2 
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/hy2
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
 
