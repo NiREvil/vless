@@ -248,12 +248,12 @@
 > **We have a few tools here that might be useful for you.**
 >
 > This site has prompts to **switch Gemini and Grok** to an advanced mode without any censorship or limitations.  
-> [diana-cl.github.io/Diana-Cl]  
+> [diana-cl.github.io/Diana-Cl]
 >
 > This is a fast and accurate **Proxy IP Checker** tool, capable of testing IP ranges that I'm sure you haven't seen anywhere like it.  
 > [check79.pages.dev]  
-> [Telegram ProxyIPTesterBot]   
-> [proxyip.victoriacross.workers.dev]  
+> [Telegram ProxyIPTesterBot]  
+> [proxyip.victoriacross.workers.dev]
 >
 > <br/>
 >
@@ -1025,7 +1025,7 @@ https://v2.alicivil.workers.dev/?list=us&count=300&shuffle=true&unique=false
 
 http://185.141.216.98:2096/sub/@KevinZakarian-1?format=json [[KV?]]
 http://185.141.216.99:2096/sub/@KevinZakarian-2?format=json  
-http://85.93.8.142:2096/sub/@KevinZakarian-4?format=json  
+http://85.93.8.142:2096/sub/@KevinZakarian-4?format=json
 
 https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/telegram/FREECONFIGSPLUS_Spotify_Porteghali_anty_filter_proxylabra
 
