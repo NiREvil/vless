@@ -305,7 +305,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 ### Scan with Hiddify
 
 <p align="center">
-     <img src="edge/assets/QRCode-Dog.png" alt="QR" width="680px"></p><br/>
+     <img src="edge/assets/QRCode-Dog.png" alt="QR" width="680px"></p>
 
 ![rainbow]
 
@@ -327,7 +327,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
   - [Warp for v2rayNG](#warp-for-v2rayng)
   - [Warp for NikaNG](warp-for-mahsang-and-nikang)
   - [Warp SFA and SFI](#warp-sfa-and-sfi)
-- [Xray](#xray)
+- [Xray/v2ray](#xray)
 - [Clash](#clash)
 - [Outline](#outline)
 - [ServerLess](#serverLess)
@@ -1005,15 +1005,15 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 
 ## XRAY
 
+https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/ss.txt [[EP?]]
+
+https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vmess.txt
+
+https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/trojan.txt
+
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/mix [[yb?]]
 
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/hy2
-
-https://raw.githubusercontent.com/barry-far/V2ray-config/main/All_Configs_Sub.txt [[BR?]]
-
-https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/ss.txt
-
-https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/trojan.txt
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/hy2 
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
 
@@ -1054,6 +1054,8 @@ https://raw.githubusercontent.com/lagzian/IranConfigCollector/main/Base64.txt
 https://raw.githubusercontent.com/lagzian/SS-Collector/refs/heads/main/SS/TrinityBase
 
 https://raw.githubusercontent.com/darknessm427/V2ray-Sub-Collector/refs/heads/main/Darkness%20Sub1.txt
+
+https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub
 
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed [[SB?]]
 
@@ -1101,7 +1103,9 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/hy2
 
 https://channel-freevpnhomes-subscription.shampoosirsehat.homes [[ME?]]
 
-https://raw.githubusercontent.com/tkamirparsa/Javid-shah/refs/heads/main/Sub.text [[XS?]]
+https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/ss.txt [[BR?]]
+
+https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/trojan.txt
 
 https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/mixed_iran.txt [[HK?]]
 
@@ -1114,6 +1118,16 @@ https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/vmess_iran
 https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/trojan_iran.txt
 
 https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt
+
+https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vmess.txt
+
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub1.txt
+
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub2.txt
+
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub3.txt
+
+https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_base64_Sub.txt
 
 https://raw.githubusercontent.com/bamdad23/JavidnamanIran/refs/heads/main/WS%2BHysteria2
 
@@ -1137,22 +1151,6 @@ https://raw.githubusercontent.com/AzadNetCH/Clash/refs/heads/main/AzadNet_iOS.tx
 
 https://raw.githubusercontent.com/Proxydaemitelegram/Proxydaemi44/refs/heads/main/Proxydaemi44 [[PR?]]
 
-https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub2.txt
-
-https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub3.txt
-
-https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub4.txt
-
-https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub5.txt
-
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Splitted-By-Protocol/ss.txt [[EP?]]
-
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Splitted-By-Protocol/trojan.txt
-
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Splitted-By-Protocol/vmess.txt
-
-https://github.com/Epodonios/v2ray-configs/raw/refs/heads/main/Splitted-By-Protocol/trojan.txt
-
 https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/refs/heads/master/collected-proxies/xray-json-full/actives_all.json
 
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub6.txt
@@ -1163,35 +1161,13 @@ https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub8.txt
 
 https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub9.txt
 
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Config%20list1.txt
-
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Config%20list2.txt
-
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Config%20list3.txt
-
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Config%20list4.txt
-
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Config%20list5.txt
-
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Config%20list6.txt
-
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/Config%20list7.txt
-
 https://azadnet05.pages.dev/sub/4d794980-54c0-4fcb-8def-c2beaecadbad#EN-Normal
 
-https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub
-
-https://raw.githubusercontent.com/iPsycho1/Subscription/refs/heads/main/iPsycho_Multi_Location
+https://raw.githubusercontent.com/amirparsaxs/Vip-s/refs/heads/main/Sub.vip [[XS?]]
 
 https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_links.txt
 
-https://elena.com.co/ELiV2-RAY-Sublink.txt
-
-https://raw.githubusercontent.com/AB-84-AB/Free-Shadowsocks/refs/heads/main/Telegram-id-AB_841
-
-https://raw.githubusercontent.com/TelAB841Conf/AB_841-config-Free-X-ray/refs/heads/main/X-ray_Server-Free#AB-841
-
-https://raw.githubusercontent.com/Created-By/Telegram-Eag1e_YT/main/%40Eag1e_YT
+https://raw.githubusercontent.com/Created-By/Telegram-Eag1e_YT/refs/heads/main/%40Eag1e_YT
 
 ![rainbow]
 
