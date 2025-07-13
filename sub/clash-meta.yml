@@ -3,15 +3,16 @@ allow-lan: true
 mode: Rule
 log-level: silent
 proxies:
-  - name: US->->MTN->_1
-    type: ss
-    server: 45.87.175.69
-    port: 8080
+  - name: "–Rose_Rtl_0"
+    type: vmess
+    server: yal.fxlcn.com
+    port: 45263
     udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
+    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
+    alterId: 0
+    cipher: auto
 
-  - name: DE->DE->MTN->NGINX_3
+  - name: "–Rose_Rtl_1"
     type: vmess
     server: 57.129.24.124
     port: 443
@@ -23,100 +24,50 @@ proxies:
     ws-opts:
       path: /linkvws
       headers:
-        Host: aveiror.com
+        Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
     tls: true
     skip-cert-verify: true
     servername: 
 
-  - name: CN->CN->MTN->NGINX_6
+  - name: "–Rose_Rtl_2"
     type: vmess
-    server: 120.210.205.59
-    port: 50002
+    server: 104.17.148.22
+    port: 443
     udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-
-  - name: VE->NL->MTN->_7
-    type: ss
-    server: 45.158.171.146
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: PL->PL->MTN->NGINX_8
-    type: vmess
-    server: 45.144.48.128
-    port: 80
-    udp: true
-    uuid: 10e2ff65-0e20-462d-a282-164e48b955a9
+    uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
     alterId: 0
     cipher: auto
     network: ws
     ws-opts:
-      path: /vmess/
+      path: /b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top/azumase.ren
       headers:
-        Host: 3h-poland1.09vpn.com
-
-  - name: GB->->MTN->_10
-    type: ss
-    server: series-a2-mec.samanehha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: u17T3BvpYaaiuW2c
-
-  - name: DE->DE->MTN->_11
-    type: ss
-    server: old.afoothabs.monster
-    port: 55330
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: rtR4YX74vwqRJu9MGH3e1N3CQdGMWCUFkyLisijiFuvhkU9McV5TpygfkernJ4UQe63JtcDQkrQ9HfchzqQz1kLCnTRor8jg
-
-  - name: US->NL->MTN->_12
-    type: ss
-    server: 45.87.175.199
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: VE->NL->MTN->_13
-    type: ss
-    server: 45.158.171.151
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: US->NL->MTN->_15
-    type: ss
-    server: 45.87.175.157
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: US->LU->MTN->NGINX_18
-    type: vmess
-    server: cf.fovi.tk
-    port: 443
-    udp: true
-    uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /eisasqa
-      headers:
-        Host: foxlux.fovi.tk
+        Host: bitter-boat-6004.samineh-sfri-95.workers.dev
     tls: true
     skip-cert-verify: true
-    servername: 
+    servername: bitter-boat-6004.samineh-sfri-95.workers.dev
 
-  - name: US->LU->MTN->NGINX_19
+  - name: "–Rose_Rtl_3"
+    type: vmess
+    server: 64f6e0b2-sw1z40-t51bp0-1nyy5.hgc1.tcpbbr.net
+    port: 8080
+    udp: true
+    uuid: 8f7cb770-1305-11ee-b107-f23c91cfbbc9
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /
+
+  - name: "–Rose_Rtl_4"
+    type: vmess
+    server: lt.fxlcn.com
+    port: 45276
+    udp: true
+    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Rtl_5"
     type: vmess
     server: cf.fovi.tk
     port: 443
@@ -133,62 +84,7 @@ proxies:
     skip-cert-verify: true
     servername: foxlux.fovi.tk
 
-  - name: BR->BR->MTN->NGINX_23
-    type: vmess
-    server: pq-brazil1.09vpn.com
-    port: 80
-    udp: true
-    uuid: c04c3b34-70fd-4fec-963e-c12d09f36bef
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-      headers:
-        Host: pq-brazil1.09vpn.com
-
-  - name: CN->CN->MTN->NGINX_24
-    type: vmess
-    server: 47.92.152.169
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-
-  - name: US->NL->MTN->_28
-    type: ss
-    server: 45.87.175.181
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: VE->NL->MTN->_30
-    type: ss
-    server: 45.158.171.141
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: US->NL->MTN->_31
-    type: ss
-    server: 45.87.175.22
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: DE->DE->MTN->_32
-    type: ss
-    server: 166.1.157.228
-    port: 55330
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: frsa5DFzRANYPs5yMexsVUrC7d6NY8pvBRFn4g1WkF4R71Y5a6E6qYp3SxP2EaUh2yXsAKbTAm7SmL5qk5xMGoDRjH5F8BBU
-
-  - name: CA->LU->MTN->NGINX_33
+  - name: "–Rose_Rtl_6"
     type: vmess
     server: 172.67.51.186
     port: 443
@@ -205,300 +101,7 @@ proxies:
     skip-cert-verify: true
     servername: foxlux.fovi.tk
 
-  - name: US->NL->MTN->_34
-    type: ss
-    server: 45.87.175.178
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: VE->NL->MTN->_36
-    type: ss
-    server: 45.158.171.146
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: LT->LT->MTN->_41
-    type: ss
-    server: 107.181.151.147
-    port: 43669
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 23sUrwRcTBEAvxLS6VM6Aay57KQbws1upDAxr7Btf4hXu4gaUQW4BPbComjJjStM2JqJLDwVkteXL8V33k8eWkZR4UB8intz
-
-  - name: US->NL->MTN->_43
-    type: ss
-    server: 45.87.175.178
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: SG->SG->MTN->NGINX_45
-    type: vmess
-    server: 62.146.233.159
-    port: 43763
-    udp: true
-    uuid: 1ddf3ade-5b8c-420c-84f6-f96979ec3080
-    alterId: 0
-    cipher: auto
-
-  - name: GB->->MTN->_46
-    type: ss
-    server: admin.c2.webramz.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: WstuSnlu4ieA9M0L
-
-  - name: PL->PL->MTN->NGINX_48
-    type: vmess
-    server: 3h-poland1.09vpn.com
-    port: 80
-    udp: true
-    uuid: 9694da60-f759-4db7-9057-6da1d31d33df
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-
-  - name: GB->->MTN->_49
-    type: ss
-    server: series-a2-mec.varzesh360.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: u17T3BvpYaaiuW2c
-
-  - name: SG->SG->MTN->NGINX_50
-    type: vmess
-    server: 62.146.233.112
-    port: 36712
-    udp: true
-    uuid: 9266df42-0830-48c2-8509-4c57b30fe29d
-    alterId: 0
-    cipher: auto
-
-  - name: CN->CN->MTN->NGINX_51
-    type: vmess
-    server: 112.132.215.12
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-
-  - name: US->NL->MTN->_52
-    type: ss
-    server: 45.87.175.58
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: GB->->MTN->_53
-    type: ss
-    server: Freakconfig138.usecharge.ir
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: W74XFALLLuw6m5IA
-
-  - name: US->NL->MTN->_58
-    type: ss
-    server: beesyar.org
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: US->NL->MTN->_61
-    type: ss
-    server: 45.87.175.199
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: NL->NL->MTN->_62
-    type: ss
-    server: beta.mattenadene.org
-    port: 54075
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: o38yuvzSe3m5aDNpHtUPH1zGwbGEXXMDsGwVaub2SYEmHUa2WGZUjiezX3Vvva9CCzpjxYtuJLgKsSnsyKBf9ciPVba3y4o3
-
-  - name: CA->FR->MCI->NGINX_63
-    type: vmess
-    server: biatoo.v2rayng-021.worKERs.DeV
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: DE->DE->MTN->_64
-    type: ss
-    server: 166.1.157.228
-    port: 55330
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: rtR4YX74vwqRJu9MGH3e1N3CQdGMWCUFkyLisijiFuvhkU9McV5TpygfkernJ4UQe63JtcDQkrQ9HfchzqQz1kLCnTRor8jg
-
-  - name: US->NL->MCI->_65
-    type: ss
-    server: 45.87.175.69
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: TH->TH->MCI->_70
-    type: ss
-    server: 119.59.98.58
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: VE->NL->MCI->_71
-    type: ss
-    server: 45.158.171.132
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: CN->CN->MCI->NGINX_73
-    type: vmess
-    server: 120.210.205.59
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-
-  - name: CN->CN->MCI->NGINX_74
-    type: vmess
-    server: 47.92.152.169
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-
-  - name: FR->FR->MCI->NGINX_75
-    type: vmess
-    server: beyonddsz.cfd
-    port: 443
-    udp: true
-    uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: beyonddsz.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: NL->NL->MCI->_76
-    type: ss
-    server: 193.29.139.240
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: US->NL->MCI->_78
-    type: ss
-    server: 45.87.175.164
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: VE->NL->MCI->_79
-    type: ss
-    server: 45.158.171.151
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: ES->ES->MCI->_80
-    type: ss
-    server: 194.87.45.189
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: yKHrAIt4eWUFlLkjkVNn5C
-
-  - name: US->NL->MCI->_81
-    type: ss
-    server: 45.87.175.199
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: US->NL->MCI->_83
-    type: ss
-    server: 45.87.175.157
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: CA->FR->MCI->NGINX_85
-    type: vmess
-    server: 172.67.207.26
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: NL->NL->ADSL->_87
-    type: ss
-    server: 89.23.103.125
-    port: 42090
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: O4z5EfeNoD3q4kgmSjBgCU
-
-  - name: CN->CN->MCI->NGINX_88
-    type: vmess
-    server: 47.92.152.169
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-
-  - name: BR->->MCI->NGINX_89
+  - name: "–Rose_Rtl_7"
     type: vmess
     server: pq-brazil1.09vpn.com
     port: 80
@@ -512,9 +115,167 @@ proxies:
       headers:
         Host: pq-brazil1.09vpn.com
 
-  - name: CA->CA->ADSL->NGINX_90
+  - name: "–Rose_Rtl_8"
     type: vmess
-    server: 15.235.50.172
+    server: ye.fxlcn.com
+    port: 45246
+    udp: true
+    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Rtl_9"
+    type: vmess
+    server: orvps2.horsenma.net
+    port: 8443
+    udp: true
+    uuid: 57e595e6-ef54-4e0d-b8df-e96db9612b99
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /horsen
+      headers:
+        Host: orvps2.horsenma.net
+    tls: true
+    skip-cert-verify: true
+    servername: orvps2.horsenma.net
+
+  - name: "–Rose_Rtl_10"
+    type: vmess
+    server: 5.253.41.147
+    port: 27750
+    udp: true
+    uuid: 4b1992cc-8e7c-4003-a45f-a28c3e6f6fa8
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Rtl_11"
+    type: vmess
+    server: cf.fovi.tk
+    port: 443
+    udp: true
+    uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /eisasqa
+      headers:
+        Host: foxlux.fovi.tk
+    tls: true
+    skip-cert-verify: true
+    servername: 
+
+  - name: "–Rose_Rtl_12"
+    type: vmess
+    server: lt.fxlcn.com
+    port: 45271
+    udp: true
+    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Rtl_13"
+    type: vmess
+    server: ysl.fxlcn.com
+    port: 45419
+    udp: true
+    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Rtl_14"
+    type: vmess
+    server: 120.26.55.225
+    port: 50002
+    udp: true
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Rtl_15"
+    type: vmess
+    server: 57.129.24.125
+    port: 443
+    udp: true
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /linkvws
+      headers:
+        Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    tls: true
+    skip-cert-verify: true
+    servername: 
+
+  - name: "–Rose_Rtl_16"
+    type: vmess
+    server: 51.79.103.76
+    port: 80
+    udp: true
+    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /IOebhLMhl1CTbFHbL95myfRX2
+
+  - name: "–Rose_Rtl_17"
+    type: vmess
+    server: 94.136.185.230
+    port: 10534
+    udp: true
+    uuid: b01c7ef9-33ec-41f6-bfbf-77ddc4d21649
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Mci_18"
+    type: vmess
+    server: lt.fxlcn.com
+    port: 45417
+    udp: true
+    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Mci_19"
+    type: vmess
+    server: lt.fxlcn.com
+    port: 45235
+    udp: true
+    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Rtl_20"
+    type: vmess
+    server: 43b5a616-sw04g0-swasv3-luwe.hgc1.tcpbbr.net
+    port: 8080
+    udp: true
+    uuid: a2b0fd2b-716f-0df8-d4e2-03a1c00e5f1a
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: 43b5a616-sw04g0-swasv3-luwe.hgc1.tcpbbr.net
+
+  - name: "–Rose_Rtl_21"
+    type: vmess
+    server: ysl.fxlcn.com
+    port: 45229
+    udp: true
+    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Rtl_22"
+    type: vmess
+    server: 57.129.24.124
     port: 443
     udp: true
     uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
@@ -527,15 +288,124 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: US->NL->ADSL->_91
-    type: ss
-    server: 45.87.175.69
-    port: 8080
+  - name: "–Rose_Mtn_23"
+    type: vmess
+    server: pq-brazil1.09vpn.com
+    port: 80
     udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
+    uuid: 24b6bbfb-9b27-4f17-bd32-67523bf487d9
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /vmess/
 
-  - name: DE->DE->ADSL->NGINX_95
+  - name: "–Rose_Mtn_24"
+    type: vmess
+    server: cf.fovi.tk
+    port: 443
+    udp: true
+    uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /eisasqa
+      headers:
+        Host: foxpol.fovi.tk
+    tls: true
+    skip-cert-verify: true
+    servername: cf.fovi.tk
+
+  - name: "–Rose_Wifi_25"
+    type: vmess
+    server: 45.12.145.111
+    port: 46290
+    udp: true
+    uuid: 1b41153e-c4d4-431b-83eb-10472f869f93
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Wifi_26"
+    type: vmess
+    server: 84.247.146.161
+    port: 39530
+    udp: true
+    uuid: 7aa56e39-29b8-45c3-8b53-6d2a23b2461c
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Wifi_27"
+    type: vmess
+    server: 120.210.205.59
+    port: 50002
+    udp: true
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Wifi_28"
+    type: vmess
+    server: codepen.io
+    port: 443
+    udp: true
+    uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /us.kkp.me.eu.org/aa
+      headers:
+        Host: farid.1.berozha.ir
+    tls: true
+    skip-cert-verify: true
+    servername: farid.1.berozha.ir
+
+  - name: "–Rose_Wifi_29"
+    type: vmess
+    server: lt.fxlcn.com
+    port: 45291
+    udp: true
+    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Wifi_30"
+    type: vmess
+    server: lt.fxlcn.com
+    port: 45233
+    udp: true
+    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Wifi_31"
+    type: vmess
+    server: 146.59.55.50
+    port: 443
+    udp: true
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /linkvws
+      headers:
+        Host: o.metuji.com
+    tls: true
+    skip-cert-verify: true
+    servername: o.metuji.com
+
+  - name: "–Rose_Mci_32"
+    type: vmess
+    server: 47.116.166.178
+    port: 50002
+    udp: true
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Wifi_33"
     type: vmess
     server: 57.129.24.124
     port: 443
@@ -552,2333 +422,70 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: VE->NL->ADSL->_98
-    type: ss
-    server: 45.158.171.132
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: TH->TH->ADSL->_101
-    type: ss
-    server: 119.59.98.58
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: CN->CN->ADSL->NGINX_103
+  - name: "–Rose_Mci_34"
     type: vmess
-    server: 120.210.205.59
-    port: 50002
+    server: 15.204.249.0
+    port: 48160
     udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    uuid: 5b113c12-4dd4-4bb5-9c01-cff092b559e3
     alterId: 0
     cipher: auto
 
-  - name: CN->CN->ADSL->NGINX_104
+  - name: "–Rose_Wifi_35"
     type: vmess
-    server: 47.92.152.169
-    port: 50002
+    server: 84.247.148.192
+    port: 44396
     udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-
-  - name: VE->NL->ADSL->_105
-    type: ss
-    server: 45.158.171.146
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: GB->->ADSL->_107
-    type: ss
-    server: series-a2-mec.samanehha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: u17T3BvpYaaiuW2c
-
-  - name: NO->->ADSL->_108
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: JXrw9ayK4zFgQ2g9s9SLamzYu4XVNKUw638tY1x47o36GA7Q4ooVeJShHxMEU65tFJNN3sewnpg4tAdC8SKnc18aBQtoYSSU
-
-  - name: VE->NL->ADSL->_109
-    type: ss
-    server: 45.158.171.151
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: ES->ES->ADSL->_110
-    type: ss
-    server: 194.87.45.189
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: yKHrAIt4eWUFlLkjkVNn5C
-
-  - name: NO->->ADSL->_111
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: MmeLLLXduGdF9kEcf18in3XsaGFLH6AVhxhdkeMz1Kf27oxo3RHv52WtxBhjnhdiRzQhS8eL8pXciY4ru8m5GhRKfwLJTeiU
-
-  - name: US->NL->ADSL->_112
-    type: ss
-    server: 45.87.175.157
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: DE->DE->ADSL->_114
-    type: ss
-    server: old.afoothabs.monster
-    port: 55330
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: rtR4YX74vwqRJu9MGH3e1N3CQdGMWCUFkyLisijiFuvhkU9McV5TpygfkernJ4UQe63JtcDQkrQ9HfchzqQz1kLCnTRor8jg
-
-  - name: US->US->ADSL->_115
-    type: ss
-    server: 69.50.93.80
-    port: 5498
-    udp: true
-    cipher: aes-256-gcm
-    password: lGqs95QkFHo2NV
-
-  - name: ES->ES->ADSL->NGINX_117
-    type: vmess
-    server: 67.220.66.194
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 1
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: linkvws
-      headers:
-        Host: 67.220.66.194
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: CA->FR->ADSL->NGINX_122
-    type: vmess
-    server: 104.21.15.212
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: CN->CN->ADSL->NGINX_123
-    type: vmess
-    server: 47.92.152.169
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    uuid: 3ca35e0a-e430-43fe-9c12-2e2eea70f873
     alterId: 0
     cipher: auto
 
-  - name: BR->BR->ADSL->NGINX_125
+  - name: "–Rose_Wifi_36"
     type: vmess
-    server: pq-brazil1.09vpn.com
-    port: 80
+    server: 84.247.149.77
+    port: 47211
     udp: true
-    uuid: c04c3b34-70fd-4fec-963e-c12d09f36bef
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-      headers:
-        Host: pq-brazil1.09vpn.com
-
-  - name: GB->->MTN->_129
-    type: ss
-    server: fake.namasha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: u17T3BvpYaaiuW2c
-
-  - name: CA->CA->MTN->NGINX_130
-    type: vmess
-    server: 134.195.198.147
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: inna.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: US->NL->MTN->_131
-    type: ss
-    server: 45.87.175.178
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: US->NL->MTN->_132
-    type: ss
-    server: 45.87.175.154
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: FI->FI->ADSL->_134
-    type: ss
-    server: 166.1.157.228
-    port: 55330
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: frsa5DFzRANYPs5yMexsVUrC7d6NY8pvBRFn4g1WkF4R71Y5a6E6qYp3SxP2EaUh2yXsAKbTAm7SmL5qk5xMGoDRjH5F8BBU
-
-  - name: US->NL->MTN->_136
-    type: ss
-    server: 45.87.175.154
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: TW->TW->MTN->_139
-    type: ss
-    server: 223.165.4.173
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: GB->->MTN->_140
-    type: ss
-    server: series-a2-me.varzesh360.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: Bog0ELmMM9DSxDdQ
-
-  - name: CA->FR->MTN->NGINX_141
-    type: vmess
-    server: 172.67.170.13
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: FI->FI->MTN->_142
-    type: ss
-    server: old.afoothabs.monster
-    port: 55330
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: frsa5DFzRANYPs5yMexsVUrC7d6NY8pvBRFn4g1WkF4R71Y5a6E6qYp3SxP2EaUh2yXsAKbTAm7SmL5qk5xMGoDRjH5F8BBU
-
-  - name: US->NL->MTN->_144
-    type: ss
-    server: 45.87.175.65
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: FI->FI->MTN->_147
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 28KUM8yrCkByQairv52eHLMtCeBRPvhE8a4RbwbSmixiE878ZEBerByuDZUXceEAvJCL6YdTfEpFtoKiGsPkVxMNaAqp7aWb
-
-  - name: FI->FI->MTN->_150
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2Wc6z8aR2kTL5hi2mALeHVNzbbMVfhSRvPJXu8yoYjYTsdooV7AZrLKL7Hxybr9qhFD3AB9K439WYprQNovYK3W7eYT2L5DF
-
-  - name: VE->NL->MTN->_152
-    type: ss
-    server: 45.158.171.132
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: FI->FI->MTN->_156
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: Wk2BbG6g2jpdy6J9BC92NojchPYfYbvwBmfhf4Venm4nuGs4H6Rsmx1t6wEXu7muETqMbXhLLA753KuhwtruYLaigKgQv9r5
-
-  - name: FI->FI->MTN->_157
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2NX7UBibQeMpRYPzBqkQnR8HCbKa8NSHY8o4nPUCyamDmMfDAr5VtkEvaM6xRXHD8wYyND7LKugheWcHCEKeccGFLTnpXZFc
-
-  - name: FI->FI->MTN->_160
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: tdrJtstNDHQWaRdAvdhEWC7JetCmPUsYmtG81Y5h6xwsnwf9q2sxRfddBArrXGKBcFC3h8R4TuCsownLsN9bELf5pH1o5hCf
-
-  - name: FI->FI->MTN->_164
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: vWgVt4dL6bwFutKm1D8WrjaAs2AWT535GfVMttHBg7rg6ZBFUAxGpvHc6hXjoBRKsyeyTESc1uU6y3BP3oenkTv9aefi27VN
-
-  - name: PL->PL->MTN->_165
-    type: ss
-    server: war.ssvpnapp.win
-    port: 57456
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: d3837224ed465f00
-
-  - name: FI->FI->MTN->_166
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 69h3ZdoSv5Bi15SxKc11eyPaErnac2ZBH9So5zJJkQ3S7XqFL4wgmALvAFoWNtmyiRAAtmZLpKpjhCAMHrdJVHctxCDoTVJQ
-
-  - name: FI->FI->MTN->_167
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 3ZR2BwKryGCdvPUL35h1YbSzAp3fgwunRLH5YAiAsMHQY8WXmfsTB2kTsV2L73vFJn8KMhGU27z6RAwabfkncrdgc1yxPFoC
-
-  - name: FI->FI->MTN->_168
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 7X4v2e714XHkuiceUhc9giwGctUQ6jB35Un6ygNR4hQya3Vfw1Mej48iGyp39oPedW1t7MuCtqSKqqZo8mstJaaBbwWnwt4N
-
-  - name: FI->FI->MTN->_169
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: qYu8NKq5EHv1UTYWye2Fc2kdsEk6jBEXt8Ar9E26nBCijhrWejwCYkGz4wK7oXT9V75SjLTiSjBsEShWJ3J5HeF14JRAKnqC
-
-  - name: FI->FI->MTN->_170
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: w78Sda3RQciJY89Vkk8zrvTphxBg4RKVLXujHreZp6MjXCKzmQ3RVc7xFLSpbRcCwtyLdU3MtUWVGgcNnCKxePfXdNy8Znz3
-
-  - name: VE->NL->MTN->_171
-    type: ss
-    server: beesyar.org
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: US->NL->MTN->_172
-    type: ss
-    server: 45.87.175.181
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: MY->MY->MTN->_174
-    type: ss
-    server: 103.243.215.17
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: US->US->MTN->NGINX_175
-    type: trojan
-    server: us.blazeppn.info
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: us.blazeppn.info
-
-  - name: FI->FI->MTN->_177
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2AKn9A9XbMUbNG9i8xM7Q4EKwwfT5pSopZEQULA2eDrQiz2C5nMQT7f5s3s5TmBxJFYDB6Egp2XchtA5aSWDiS9pASNebMGv
-
-  - name: FI->FI->MTN->_178
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: UzAQkBKHb6rnYCWcJEDiWtS6vcWMUpXveg4p7cwmkAV5GRC8GejJQvHFF1KYaRmEhXMg7jHeepXc74q8WbarQH71TBrdoi5w
-
-  - name: FI->FI->MTN->_179
-    type: ss
-    server: 185.5.38.111
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: VZGpJiYpqsqrwx3ACRV1vX2qNSG8Jignq4SMn1qCpBKyBWiihvK3MsdFtFdTcGevaHQzjhJ1L9qzVf8SQG7c4ygHtudNNSPk
-
-  - name: FI->FI->MTN->_180
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2KqDBzrSLFUtBQQBHU18n25yZQGQWgrf7ZmnWrwQCJsf6sjHgJWRoRwCrSCmpGyYJPH1ukk6Csee7EP9UFXMuUXCULWbXtgs
-
-  - name: FI->FI->MTN->_181
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: StQmtUVWXwLAnMDfEswRE4gxZq1mZBNBoAoKacVrQdTPvbpC9VZNPMv9b82TmP3ytef3BULaMuwz26sXg68kq39WDPy9Vf7s
-
-  - name: US->NL->MTN->_184
-    type: ss
-    server: 45.87.175.35
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: US->NL->MTN->_188
-    type: ss
-    server: 45.87.175.166
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: FI->FI->MTN->_190
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2VrTnsQrvfJhSxWwRGtSUk43T8BL3M9XU6AYssJKzSbT6Lr2paHvqWAxcYWHZ243vEqc1fSTMkWbP6VqUBbFEVKeX5pVv1CU
-
-  - name: FI->FI->MTN->_191
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: AVAd8bBnCGTNGcVuc8TQUwi2sKMuH3A7KToe5GNfLUvz285zndyPYB8pFbjgijkanLXdPXNk2QvSLUyT4ZQGGhFyxALFSkZu
-
-  - name: ID->ID->MTN->_192
-    type: ss
-    server: 154.205.159.100
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: FI->FI->MTN->_193
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: T9VPet1fGhdb4JPmUS6SS5RNZ7NSgBvQNF4rkoQTdFhGWvmGedszfjBTgefmrQYhjhyB867P9RvyBQmtEjLUegm5CNymHC3i
-
-  - name: CA->FR->MTN->NGINX_194
-    type: vmess
-    server: 172.67.170.13
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: US->NL->MTN->_197
-    type: ss
-    server: 45.87.175.157
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: GB->->MTN->_198
-    type: ss
-    server: api.namasha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: u17T3BvpYaaiuW2c
-
-  - name: FI->FI->MTN->_199
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 27BEHEQe68MwwhgusnZkLFvPTpqnU2Uwqsw9uSz2Wo3bQ56sfUW47SiZv1FETJzSJep4vtwJzMxQYrYxogE9FGbi31PVGcYS
-
-  - name: FI->FI->MTN->_202
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2UArZiZkWsgHGMxo6aDSbXbGvFCq5z1o3H2eMoUAn2TFBbaeHDTa4zTyoLPk3o6TA1hTQV9DibygB17ctGeQtvCa5ayGZdTv
-
-  - name: US->NL->MTN->_203
-    type: ss
-    server: 45.87.175.164
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: UA->UA->MTN->_210
-    type: ss
-    server: 147.78.3.93
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: CN->->MTN->NGINX_214
-    type: vmess
-    server: 47.104.186.133
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    uuid: fb674260-1c21-4f99-8bd0-3d1d341c6771
     alterId: 0
     cipher: auto
 
-  - name: SG->SG->MTN->NGINX_215
+  - name: "–Rose_Mci_37"
     type: vmess
-    server: 194.233.72.228
-    port: 27575
+    server: yal.fxlcn.com
+    port: 45272
     udp: true
-    uuid: 16509262-dbe2-43ba-99ce-07913d2a18b4
+    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
     alterId: 0
     cipher: auto
 
-  - name: CN->CN->MTN->NGINX_217
+  - name: "–Rose_Mci_38"
     type: vmess
-    server: 47.104.186.133
-    port: 50002
+    server: yal.fxlcn.com
+    port: 45273
     udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-
-  - name: CA->FR->MTN->NGINX_218
-    type: vmess
-    server: 104.21.15.212
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: FI->FI->MTN->_219
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: ZEZ2bfFbViC9usN1WB4xqvyzEuUhPA2uuUYZmjKAWTQc3mErhCaVHmZbbWgVG9oi1VHhz12KP2gAWC8LZJ4imWhypAD9PG3u
-
-  - name: FI->FI->MTN->_220
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: XJLSHUkevoRHmidSp5xeGd8gwuBBBTTp1yVYCg6kYBA2FgJbMwGjnLuTnqcmNKWKdgPDH8d7m9ag7VfsBBhW1rMc47cgX5up
-
-  - name: FI->FI->MTN->_221
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 7jb7u4FLeToDBKdjWd18tteiuY9MRhpdmySzbDRGzhtRCH2JxshKFUjsBv6kY5sjGXPtD9wwCqJfSn4ee8JmUUrrmco3FFj2
-
-  - name: GB->->MTN->_225
-    type: ss
-    server: series-a2.samanehha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: W74XFALLLuw6m5IA
-
-  - name: PL->PL->MTN->NGINX_227
-    type: vmess
-    server: 45.144.48.128
-    port: 8443
-    udp: true
-    uuid: a4850481-9b95-430f-9b2d-192d2410b4f4
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: CA->FR->MTN->NGINX_229
-    type: vmess
-    server: 172.67.156.210
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: US->US->MTN->NGINX_232
-    type: trojan
-    server: us.blazeppn.info
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: us.blazeppn.info
-
-  - name: DE->DE->MTN->NGINX_236
-    type: vmess
-    server: 57.129.25.22
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: o.metuji.com
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: PL->PL->MTN->NGINX_237
-    type: vmess
-    server: 3h-poland1.09vpn.com
-    port: 80
-    udp: true
-    uuid: 10e2ff65-0e20-462d-a282-164e48b955a9
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-      headers:
-        Host: 3h-poland1.09vpn.com
-
-  - name: US->US->MTN->_240
-    type: ss
-    server: 23.154.136.103
-    port: 8080
-    udp: true
-    cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
-
-  - name: CN->CN->MTN->NGINX_241
-    type: vmess
-    server: 120.26.55.225
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
     alterId: 0
     cipher: auto
 
-  - name: PH->PH->MTN->NGINX_242
+  - name: "–Rose_Mci_39"
     type: vmess
-    server: 3h-Philippines1.09vpn.com
-    port: 80
+    server: 154.26.129.247
+    port: 57143
     udp: true
-    uuid: 3fd35fa2-a0c6-4f0c-8310-c3c03a268155
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-
-  - name: US->US->MTN->NGINX_244
-    type: vmess
-    server: 15.204.248.92
-    port: 30562
-    udp: true
-    uuid: 82466715-6a58-4046-a363-a0d18e5b2ab4
+    uuid: 28efbf36-079a-4c98-8470-d13458db6ee6
     alterId: 0
     cipher: auto
 
-  - name: GB->->MTN->_245
-    type: ss
-    server: series-a2.samanehha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: mps3FwmDjLrWaOVg
-
-  - name: US->US->MTN->NGINX_246
-    type: trojan
-    server: us.blazeppn.info
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: VE->NL->MTN->_247
-    type: ss
-    server: 45.158.171.151
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: US->US->MTN->NGINX_248
+  - name: "–Rose_Mtn_40"
     type: vmess
-    server: 15.204.86.120
-    port: 35696
+    server: 185.189.32.179
+    port: 48737
     udp: true
-    uuid: cad0504a-a9dc-4d29-8844-b11b69f14a8d
+    uuid: 3680a006-d824-4574-90f3-21226dae6903
     alterId: 0
     cipher: auto
 
-  - name: CA->CA->ADSL->_249
-    type: ss
-    server: 64.74.163.82
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: VE->NL->ADSL->_250
-    type: ss
-    server: 45.158.171.146
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: FI->FI->MTN->_251
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2M8fNk7mewkYhRFJzEu4osJBXiJcZotQSvaH6cfmxs7bP12QANijEZvKTxRd4Hbae37Xn7xEXfBcxz4tWhmbWQ36REbnZoPQ
-
-  - name: FI->FI->MTN->_252
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2GjaJvitGS73iqeWVLoyzHBPx7rz9sp1q4MoznFPUsWPavQDBn3G685RYL15ocSCRAjHKixHqPJZ5vCwVontzZdm4WGd4X4P
-
-  - name: FI->FI->MTN->_253
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 28nNxNsEC4pjoJ7byQ7Exo2Jpzd9CX3WBqLn6JUiJxWCphZa6Jd5A5fyaJKecz3SAQMf32FKHPQgE3nv97S7ZaUinJk84odR
-
-  - name: GT->GT->ADSL->_254
-    type: ss
-    server: 185.47.254.87
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: NL->->ADSL->_256
-    type: ss
-    server: 193.29.139.227
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: US->NL->MCI->_257
-    type: ss
-    server: 45.87.175.178
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: CA->CA->MCI->_259
-    type: ss
-    server: 64.74.163.82
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: FI->FI->MCI->_260
-    type: ss
-    server: 166.1.157.228
-    port: 55330
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: frsa5DFzRANYPs5yMexsVUrC7d6NY8pvBRFn4g1WkF4R71Y5a6E6qYp3SxP2EaUh2yXsAKbTAm7SmL5qk5xMGoDRjH5F8BBU
-
-  - name: CA->CA->MCI->NGINX_261
-    type: vmess
-    server: 23.162.200.227
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: CN->CN->MCI->NGINX_263
-    type: vmess
-    server: 112.132.215.12
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-
-  - name: CA->CA->ADSL->NGINX_265
-    type: vmess
-    server: 23.162.200.227
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: PL->PL->ADSL->NGINX_266
-    type: vmess
-    server: 3h-poland1.09vpn.com
-    port: 80
-    udp: true
-    uuid: 9694da60-f759-4db7-9057-6da1d31d33df
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-
-  - name: FI->FI->ADSL->_270
-    type: ss
-    server: 185.5.38.111
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 9Bpt48HiTfWMzQDb86igS8UxrYXZ59zN3mzTTG9EvEcw3eqYtX5Q3zaenJPyyA5p2q5Nmp24Trv2bBKVBcZ1bhLKT3dn18Kk
-
-  - name: UA->UA->ADSL->_271
-    type: ss
-    server: 176.103.53.105
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: US->US->ADSL->_272
-    type: ss
-    server: 69.50.93.47
-    port: 6679
-    udp: true
-    cipher: aes-256-gcm
-    password: TEzjfAYq2IjtuoS
-
-  - name: US->US->ADSL->_273
-    type: ss
-    server: 38.143.66.87
-    port: 5600
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: US->US->ADSL->_275
-    type: ss
-    server: 23.154.136.51
-    port: 6697
-    udp: true
-    cipher: aes-256-gcm
-    password: TEzjfAYq2IjtuoS
-
-  - name: FR->FR->RTL->NGINX_279
-    type: vmess
-    server: 146.19.168.161
-    port: 443
-    udp: true
-    uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /link
-      headers:
-        Host: az05.beyondy.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: az05.beyondy.cfd
-
-  - name: US->NL->RTL->_280
-    type: ss
-    server: 45.87.175.69
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: US->US->RTL->_282
-    type: ss
-    server: 23.154.136.103
-    port: 8090
-    udp: true
-    cipher: aes-256-gcm
-    password: PCnnH6SQSnfoS27
-
-  - name: FI->FI->RTL->_283
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2CYTbbAxJMWdzMxePpCMDjkub13CDxU2BqaJzb1Zt3HBYGWsfKwNgQKhzEa7uAJut74Bj4fhiwJ6CKFBu4MiQ43QEe9xD2u7
-
-  - name: FI->FI->RTL->_284
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: vgHT4AF253YLbcGh8WG1jMRX4SFsgYxszwpocdbeaCUoaBDwNoC8SxtaiSHh1Mm51cFhhrMpfrgyyFj71kbE44VnRPcgxPAg
-
-  - name: FI->FI->RTL->_285
-    type: ss
-    server: 185.5.38.111
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: iZDJs2CDckHKqJ5W7cpvCq2veqsqWn95iqs6Kr6F3YNnyMsk2uPdRrChQfShvH1v56Br1qWEW44qJna5QcMcZF7RCJmdvwuq
-
-  - name: FI->FI->RTL->_286
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2Bn7QVszJGr45J6EWLA12YxYFSos8uMHbDTZMerfA5khEoCpTKkkyFECW9XHDuwMJVAeJ37gakGALiykWCWU7S7agEMrfzrD
-
-  - name: FI->FI->RTL->_287
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 7ART74PanTrQWCuZkr93h5NKsQrdvyCQw8CBquCKEGNtXa4ziiQWhcppgGBe33gUZe8KNXmTZiaLQ5yQcLAJtqoWvngbBkTq
-
-  - name: FI->FI->RTL->_288
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2976kAmfLwdNpCtfWXxo3PmijgKToEYnVNUZ7Wqq8XgbM8NBB8GcvktWdaG77ZkG1z6awQeTKFFin44Re8fK7dZXgT5ez6ZH
-
-  - name: CN->CN->RTL->NGINX_292
-    type: vmess
-    server: 120.210.205.59
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-
-  - name: US->US->RTL->NGINX_294
-    type: trojan
-    server: 89.187.181.172
-    port: 43118
-    udp: true
-    password: ypDt8RkT7J
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: CN->CN->RTL->NGINX_296
-    type: vmess
-    server: 47.92.152.169
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-
-  - name: GB->->RTL->_298
-    type: ss
-    server: series-a2-mec.samanehha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: u17T3BvpYaaiuW2c
-
-  - name: DE->DE->RTL->NGINX_299
-    type: vmess
-    server: 57.129.25.22
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: FR->FR->RTL->NGINX_300
-    type: vmess
-    server: beyonddsz.cfd
-    port: 443
-    udp: true
-    uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: beyonddsz.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: US->NL->RTL->_301
-    type: ss
-    server: 45.87.175.164
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: VE->NL->RTL->_302
-    type: ss
-    server: 45.158.171.151
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: US->NL->RTL->_304
-    type: ss
-    server: 45.87.175.199
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: US->US->RTL->_305
-    type: ss
-    server: 212.102.47.129
-    port: 443
-    udp: true
-    cipher: aes-128-gcm
-    password: shadowsocks
-
-  - name: FI->FI->RTL->_309
-    type: ss
-    server: old.afoothabs.monster
-    port: 55330
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: rtR4YX74vwqRJu9MGH3e1N3CQdGMWCUFkyLisijiFuvhkU9McV5TpygfkernJ4UQe63JtcDQkrQ9HfchzqQz1kLCnTRor8jg
-
-  - name: US->NL->RTL->_311
-    type: ss
-    server: 45.87.175.199
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: CA->FR->RTL->NGINX_315
-    type: vmess
-    server: 172.67.207.26
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: FI->FI->RTL->_316
-    type: ss
-    server: 185.5.38.111
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2VrTnsQrvfJhSxWwRGtSUk43T8BL3M9XU6AYssJKzSbT6Lr2paHvqWAxcYWHZ243vEqc1fSTMkWbP6VqUBbFEVKeX5pVv1CU
-
-  - name: FI->FI->RTL->_318
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: AgxyePdT6DnALxzttQRzGHJP2bitAeHnbukf6aTjC9xdYkxQQ1YK71DKEmJNc3DY8CCq1z46oCy6Dc1oZi6Q4532Nv8Swcy7
-
-  - name: FI->FI->RTL->_319
-    type: ss
-    server: 185.5.38.111
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4ju873evpjeaAi8Zq12YoRHWp63o5exdnZ71aUg1YEChiPTc2HkasYhUBxRz7UGi4K6cLrsGaU6b44H4Qa6f4cJn3zBp2cnX
-
-  - name: BR->BR->RTL->NGINX_323
-    type: vmess
-    server: pq-brazil1.09vpn.com
-    port: 80
-    udp: true
-    uuid: c04c3b34-70fd-4fec-963e-c12d09f36bef
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-      headers:
-        Host: pq-brazil1.09vpn.com
-
-  - name: US->NL->RTL->_328
-    type: ss
-    server: 45.87.175.154
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: US->US->RTL->_329
-    type: ss
-    server: 67.220.95.230
-    port: 5601
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: FI->FI->RTL->_330
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: k7xW6N5SAVpgeqi1wd7s7yxD7S8PxaehUM5W8apHrQi3pSoDRXScoAPk8SVa4mKbvRjrgENU3dUgzTgp9T3rrXinaDe4CXYk
-
-  - name: FI->FI->RTL->_331
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: iZDJs2CDckHKqJ5W7cpvCq2veqsqWn95iqs6Kr6F3YNnyMsk2uPdRrChQfShvH1v56Br1qWEW44qJna5QcMcZF7RCJmdvwuq
-
-  - name: FI->FI->RTL->_332
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: qwdScv7KoNedZ23SamWUUgvumd72THgKR5TWxceTfXJZwM9rKSdMFKejmD2GA9PmqY5FEohPT4HG3xFZM5zLEj494sKkxWBP
-
-  - name: FI->FI->RTL->_333
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: Uh11bg1NKvjFdgD3gvhqjqrdL2jEm2GUCVMMTKFyubyoDV3wVSQLcYVrhiC7ASHqzA4RivbdXbNKLWQsziRkbm8ndfqLYnmb
-
-  - name: FI->FI->RTL->_334
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2NwsvbkBts5e2QCzYZ7ety39EGXewWF6KqQ8Xnfj3H9njiLH1gvuMQFjcu9xwuFaDEE6ySLJ6h1ktzKiEatiT6uFWQ6Gir2J
-
-  - name: FI->FI->RTL->_335
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: MGKMyATcG5EXU9f2E9pmUZeGeB9iGd64rVr6KUEwbghsSABqGn6rL6Tx9ZXom6qaTvotqvT8KpriyCZRLz3UbwJY2Em5qVae
-
-  - name: US->NL->RTL->_336
-    type: ss
-    server: 45.87.175.22
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: FI->FI->RTL->_337
-    type: ss
-    server: 185.5.38.111
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oHguU86Hoa41HAncW88o4kEspy8sos9tkbnK6uLvsgfMetuFKEChk2QY6eR3a67NXAmWe2kD8vbhZEyuw2Gx1hDPXXSgmimt
-
-  - name: FI->FI->RTL->_338
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2FSHTqh121gyn68NY8QDh3f5L6soTtRJydPkNh51MtfffMxGtpxSETMAXDMa8T3C112Von1U6CsmNyNQZr9Q9xGPvroUNiE7
-
-  - name: FI->FI->RTL->_339
-    type: ss
-    server: 166.1.157.228
-    port: 55330
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: frsa5DFzRANYPs5yMexsVUrC7d6NY8pvBRFn4g1WkF4R71Y5a6E6qYp3SxP2EaUh2yXsAKbTAm7SmL5qk5xMGoDRjH5F8BBU
-
-  - name: US->NL->RTL->_340
-    type: ss
-    server: 45.87.175.178
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: SG->SG->RTL->NGINX_342
-    type: trojan
-    server: 38.180.249.177
-    port: 8443
-    udp: true
-    password: installshield
-    tls: true
-    skip-cert-verify: true
-    servername: 38.180.249.177
-
-  - name: CA->FR->RTL->NGINX_344
-    type: vmess
-    server: 172.67.170.103
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: US->US->ADL->_345
-    type: ss
-    server: 67.220.95.102
-    port: 5499
-    udp: true
-    cipher: aes-256-gcm
-    password: lGqs95QkFHo2NV
-
-  - name: GT->GT->RTL->_347
-    type: ss
-    server: 185.47.254.87
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: VE->NL->RTL->_348
-    type: ss
-    server: 45.158.171.141
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: FI->FI->RTL->_350
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: YZvzh9FMJh6ac6moh8xtkMogmwEZDL5nF99PSFDk7NffhikzuHe3CUUYzudGcaLW5vMzECV29QiH856gj62VnAcgQ2oHY5DV
-
-  - name: US->US->MTN->_351
-    type: ss
-    server: 67.220.95.102
-    port: 8091
-    udp: true
-    cipher: aes-256-gcm
-    password: PCnnH6SQSnfoS27
-
-  - name: FI->FI->RTL->_352
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 28meQdVpma7JkCtsEUWcS6gieKmFXiawCwgFMcJqCXMqS2d9WrGpucynNaiy6mUasdbkMiRVDJ5BhSrrAugCuCJnXubRBHez
-
-  - name: GB->->MTN->_353
-    type: ss
-    server: series-a1.samanehha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: mps3FwmDjLrWaOVg
-
-  - name: US->US->MTN->NGINX_354
-    type: trojan
-    server: 138.197.5.103
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: us.blazeppn.info
-
-  - name: GB->->MTN->_355
-    type: ss
-    server: Freakconfig139.usecharge.ir
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: Bog0ELmMM9DSxDdQ
-
-  - name: MY->MY->MTN->NGINX_358
-    type: vmess
-    server: 101.99.91.234
-    port: 36700
-    udp: true
-    uuid: 127ff43c-1851-4b2d-ba8c-6afba21ec04d
-    alterId: 0
-    cipher: auto
-
-  - name: FI->FI->MTN->_359
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: NRKiRKbFdENKGAB1Dtk3asvtimbQnmDS4qVG8YQeeggj92VKDxejBu98VEcWn2DG6afNaYMBmQ36WruT9RUgqxWXx5VkwW3X
-
-  - name: US->NL->MTN->_361
-    type: ss
-    server: 45.87.175.166
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: US->NL->MTN->_362
-    type: ss
-    server: 45.87.175.164
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: CA->FR->MTN->NGINX_364
-    type: vmess
-    server: 172.67.136.233
-    port: 443
-    udp: true
-    uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /link
-      headers:
-        Host: az05.beyondy.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: az05.beyondy.cfd
-
-  - name: CA->FR->MTN->NGINX_365
-    type: vmess
-    server: 172.67.170.103
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: IN->IN->MTN->NGINX_367
-    type: vmess
-    server: 152.67.8.205
-    port: 80
-    udp: true
-    uuid: 9db4c708-aef8-4359-821b-38e47990be0d
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /
-
-  - name: US->NL->MTN->_370
-    type: ss
-    server: 45.87.175.199
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: GB->->MTN->_372
-    type: ss
-    server: admin.c1.webramz.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: W74XFALLLuw6m5IA
-
-  - name: FI->FI->MTN->_373
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: N2BWo2zKfmA7JoWhnRQSXrN6LFmPSpLccpYVcUeo8UoMq4dvFafbZ3WiDVfCFDsLVPe5jiFagjMf45ZVg9rxRk1JRcJKRKJQ
-
-  - name: FI->FI->MTN->_374
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2WJbjavFHQv7vgKhyHEMg7oYTLzQ98GqTTU7LmW2ZuCHy9eZLBkojcCygB1GydiWYmDiwhGHun3Xi9Dm4s9Ho9QSnCMeHaPH
-
-  - name: FI->FI->MTN->_375
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: YLpDMwoLZi9Dvkr7Q6PCfkwCKJt23MkhD1LHDjnKVjS1R9Z4dD9vY5FffuYCtDVcSzHJLdicZbm4Dh6p8Nsd5d88gzAWYrQY
-
-  - name: FI->FI->MTN->_376
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: FjgGNNHQiELzxXmaHRxxtQbxDDvGXFxYdTbYe91JKZsjvKLHoY9rn9ruYE45377WjtU3m4kmXQZDXiHBJsgVfhmpawEoGvq9
-
-  - name: FI->FI->MTN->_377
-    type: ss
-    server: 185.5.38.111
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2EmWRS1TkS3TkxKApnrihb3aHjDSXRvT1T1K9U2Bruxrnp5A8zmpTxwwTNje6BkVqmn9BgRF6pq8qoRHCfZdcah7BLbjrpT1
-
-  - name: CA->FR->MTN->NGINX_378
-    type: vmess
-    server: 172.67.207.26
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: FI->FI->MTN->_381
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 3XNjxfSJbdo3YWsvrEG7E2hnZ85AP1qch9Dt8Fm4fZHeWEsFcnhKcoQgMNTdxridN2af1tzQVBt1S5oiSPCETFnhS3nmAYDa
-
-  - name: FI->FI->MTN->_382
-    type: ss
-    server: 185.5.38.111
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: FjgGNNHQiELzxXmaHRxxtQbxDDvGXFxYdTbYe91JKZsjvKLHoY9rn9ruYE45377WjtU3m4kmXQZDXiHBJsgVfhmpawEoGvq9
-
-  - name: US->US->MTN->_384
-    type: ss
-    server: 67.220.95.102
-    port: 8090
-    udp: true
-    cipher: aes-256-gcm
-    password: PCnnH6SQSnfoS27
-
-  - name: CN->CN->MTN->NGINX_385
-    type: vmess
-    server: 112.132.215.12
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-
-  - name: NL->NL->MTN->_388
-    type: ss
-    server: 166.88.131.195
-    port: 52952
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj
-
-  - name: US->US->MTN->_389
-    type: ss
-    server: 23.154.136.148
-    port: 6679
-    udp: true
-    cipher: aes-256-gcm
-    password: TEzjfAYq2IjtuoS
-
-  - name: CA->CA->MTN->_390
-    type: ss
-    server: 142.4.216.225
-    port: 80
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: JIhN6rBKkaEboLNXVSv5rq
-
-  - name: FI->FI->MTN->_391
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: wyRjDzZYC9E2aQ9iamj1vuj7ZckYVGLHn9yq92jRUUCdoz1AEKtSJRpiMPxXaiXfpXBJCp3gjsNbM9i2PbqeteCsXUWwDEAc
-
-  - name: FI->FI->MTN->_392
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: mtNScLaN37vstKUBqspAVDf2zQ9tevW1uY1qLW7KmR3fNaf9hjcY58Khq2E3RHoSbMW4uoM1Kr8cvt8Pk2JQcxdcgSVV9rUv
-
-  - name: FI->FI->MTN->_393
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: rUX6AnPwS4ymf9RKDwaW21vyxXuwVnVCrmmLsxUXjjZi7CfCJxoMbNrzwQfZSogzbDPHhkB8za1Ruhj1hGnwyTn3q1no1XRX
-
-  - name: FI->FI->MTN->_394
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: bZ87amPpdG7KuWM62bKtm1KHoowuVjnV8CKtq653ymHcg2dPYcPJfnaQ61stuAjr2ZiLDaqH56XpkxEYuwDzzRrMWieebWGt
-
-  - name: VE->NL->MTN->_395
-    type: ss
-    server: 45.158.171.151
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: DE->DE->MTN->NGINX_399
-    type: vmess
-    server: 57.129.24.124
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: GB->->MTN->_401
-    type: ss
-    server: series-a2-me.samanehha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: Bog0ELmMM9DSxDdQ
-
-  - name: US->US->MTN->_404
-    type: ss
-    server: 23.154.136.51
-    port: 5499
-    udp: true
-    cipher: aes-256-gcm
-    password: lGqs95QkFHo2NV
-
-  - name: GB->->MTN->_406
-    type: ss
-    server: admin.c3.webramz.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: Bog0ELmMM9DSxDdQ
-
-  - name: NL->NL->MTN->_408
-    type: ss
-    server: 89.23.103.21
-    port: 51584
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oYQ8JwEldYn4KT2gfZ6eNl
-
-  - name: FI->FI->MTN->_410
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: rU9jurtJ2zHpTf5CeJ5LCAzGoSc7KCYmzuM8qnQzAXUJA8jfreYWPJtLcHC4dJXSSAQ3mLhJdbVPE1MRop37WkganscRnYv4
-
-  - name: FI->FI->MTN->_411
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: aU7zH4CNgniMdKTCD5BvUEK2p94seoENgYE1rS77cybiNGBPeptxfDeV7QsvMvNxLyr94cbh3Ekztat43dBfu7yqLTxekGgF
-
-  - name: US->US->MTN->_412
-    type: ss
-    server: 23.154.136.132
-    port: 5499
-    udp: true
-    cipher: aes-256-gcm
-    password: lGqs95QkFHo2NV
-
-  - name: US->NL->MTN->_414
-    type: ss
-    server: 45.87.175.166
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: FI->FI->MTN->_415
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: ENfXcbbP8P2ykc1ypjV22J4hdNwTWuxDWqs5GX2mnH6GMCqL5XyhNztpn7oPzK9nyToReNDbnbV3E1gsEh98GYJrBKMf6HrS
-
-  - name: US->US->MTN->NGINX_416
-    type: vmess
-    server: 2.58.87.221
-    port: 14555
-    udp: true
-    uuid: 6c764a03-bb1a-4bc6-baca-452453fce1ae
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: FI->FI->MTN->_417
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2GxGsDp6h9ZN2UvHrMMKxgJqwrX5GUJ65dQZu6Ji9VE5k7kTQu5T1FSDkci9xgP3wxbe25mRxUF33BskcbHwt6t8U2hTYtV4
-
-  - name: FI->FI->MTN->_418
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: YK6GT67yU6Sq5tddkkqgz28RAqh16VcftFxck4xbkXyYNQ98SCn4YG3vthQ6y1rJEfnzxmHt9UGvuin6kDnC1cRercRMTYs1
-
-  - name: FI->FI->MTN->_419
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: AmxHJ6RVjmwKnuVo513Wt4Lmwh3i8cdTLXmqF35NnBGL1Ko6AYF7dvNAZNWCcBifbtLJHQxNVcc3PwgtLbxKPLrMhkDRTFab
-
-  - name: FI->FI->MTN->_420
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2DvuGfaUJ7oM9E6mHWkZN9dAjPxtpndv4ckpPpyuexJxKLn6SpDQdBBJDFE6Gqj9MXpRHPDwYfNAqKgpBWTCWPrG4eDmnGTZ
-
-  - name: VE->NL->MTN->_421
-    type: ss
-    server: 45.158.171.132
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: VN->VN->MTN->_422
-    type: ss
-    server: arxfw2b78fi2q9hzylhn.freesocks.work
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: Nk9asglDzHzjktVzTkvhaA
-
-  - name: FI->FI->MTN->_423
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: p9UCPSVPxK92Msfi2nSV7rK62WkCJf721N3Zk2e3kh6aYdVhxcLwxq34S1Z4WA4HsHQXBrhhAjkZLSKtBaMVP6hTHF31RMov
-
-  - name: FI->FI->MTN->_426
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: XieXs1xd2nXCnnr43tCRyPGS7BCANaeEiY5wepC5aVrxheM1x3jvxQwW7zLfEniWb81NPNUKYkHrA43V5TdhojcVjL7UVGo6
-
-  - name: FI->FI->MTN->_427
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2UNhq6bcq57shMzvVCgmWrnbobjgW3au5pv658oUHkJS7CRkMLpdu1WnYBzaVZDt66x6dmbJ3k9zeNKKth4mG8pstXRUnQaT
-
-  - name: FI->FI->MTN->_429
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 9nkUgSHn4Rnesx6BPMKZJGcBDa6mXVPJKLa9e48zF8NVC16hXefJSK5VdNH6Qv7US2CgR7YXtUsUVFNj8RvMXBBfH9gVwLnw
-
-  - name: GB->GB->MTN->_430
-    type: ss
-    server: portal.ninemakeda.cfd
-    port: 43669
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 23sUrwRcTBEAvxLS6VM6Aay57KQbws1upDAxr7Btf4hXu4gaUQW4BPbComjJjStM2JqJLDwVkteXL8V33k8eWkZR4UB8intz
-
-  - name: SG->SG->MTN->NGINX_431
-    type: vmess
-    server: 62.146.232.156
-    port: 33281
-    udp: true
-    uuid: 24eda0ea-acf0-4538-a001-f746a480237a
-    alterId: 0
-    cipher: auto
-
-  - name: US->NL->MTN->_432
-    type: ss
-    server: 45.87.175.164
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: BR->BR->MTN->NGINX_433
-    type: vmess
-    server: 95.164.4.88
-    port: 80
-    udp: true
-    uuid: c04c3b34-70fd-4fec-963e-c12d09f36bef
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-      headers:
-        Host: pq-brazil1.09vpn.com
-
-  - name: US->US->MTN->_434
-    type: ss
-    server: 23.154.136.132
-    port: 7002
-    udp: true
-    cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-
-  - name: VN->VN->MTN->_435
-    type: ss
-    server: 160.19.78.75
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: Nk9asglDzHzjktVzTkvhaA
-
-  - name: PL->PL->MTN->_436
-    type: ss
-    server: 45.144.48.63
-    port: 57456
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: d3837224ed465f00
-
-  - name: FI->FI->MTN->_437
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 5QMZKZoXMsCbhE8GHAg7Lixi7tVMmw3xH2A3biivUTgs3uo9ntbH685jA8pj98n4pJji3yw6ajzn2qzJUa4dFij1upacCtKW
-
-  - name: FR->FR->MTN->NGINX_438
-    type: vmess
-    server: 5.196.29.123
-    port: 2082
-    udp: true
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /
-
-  - name: FR->FR->MTN->NGINX_439
-    type: vmess
-    server: irvideo.cfd
-    port: 443
-    udp: true
-    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: irvideo.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: irvideo.cfd
-
-  - name: US->US->MTN->_440
-    type: ss
-    server: 23.154.136.132
-    port: 8080
-    udp: true
-    cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
-
-  - name: US->NL->MTN->_441
-    type: ss
-    server: 45.87.175.157
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: FI->FI->MTN->_444
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 28qiyq1L4vKsTegcgDdasTUnbCv4B66cx7uWJfHt24Ti3ry9fggm9c4Jg4izjECfWWRmcNfoGCARDy9CaCVmuZi8ovoPDLCH
-
-  - name: NL->NL->MTN->_446
-    type: ss
-    server: exchange.gameaurela.click
-    port: 52952
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj
-
-  - name: VE->NL->MTN->_447
-    type: ss
-    server: 45.158.171.60
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: SG->SG->MTN->NGINX_448
-    type: trojan
-    server: 38.180.249.177
-    port: 8443
-    udp: true
-    password: installshield
-    tls: true
-    skip-cert-verify: true
-    servername: 38.180.249.177
-
-  - name: SG->SG->MTN->NGINX_449
-    type: vmess
-    server: 62.146.232.159
-    port: 14372
-    udp: true
-    uuid: ed1d7ea8-bf40-4a4a-8eac-8e57798ba6f7
-    alterId: 0
-    cipher: auto
-
-  - name: SG->SG->MTN->NGINX_451
-    type: trojan
-    server: 38.180.249.177
-    port: 8443
-    udp: true
-    password: installshield
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: US->NL->ADL->_453
-    type: ss
-    server: 45.87.175.154
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: DE->DE->ADL->NGINX_454
-    type: vmess
-    server: 57.129.24.125
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: US->US->ADL->_456
-    type: ss
-    server: 23.154.136.132
-    port: 5498
-    udp: true
-    cipher: aes-256-gcm
-    password: lGqs95QkFHo2NV
-
-  - name: TW->TW->ADL->_461
-    type: ss
-    server: 223.165.4.173
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: US->NL->ADL->_463
-    type: ss
-    server: 45.87.175.154
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: US->US->ADL->_464
-    type: ss
-    server: 69.50.93.113
-    port: 5004
-    udp: true
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-
-  - name: PL->PL->ADL->NGINX_466
-    type: vmess
-    server: 3h-poland1.09vpn.com
-    port: 8443
-    udp: true
-    uuid: a4850481-9b95-430f-9b2d-192d2410b4f4
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-      headers:
-        Host: 3h-poland1.09vpn.com
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: CA->FR->ADL->NGINX_468
-    type: vmess
-    server: 172.67.170.13
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: FI->FI->ADL->_471
-    type: ss
-    server: 185.5.38.111
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: tRVH6ZVjtjWCvREPvSgTx6jwmensa6of9w26NwnZ5n1V3bWeNBsq2A86K3RWGRyjA89Tqibnri4HuDtvE24KU2Sb65RUeVJz
-
-  - name: US->US->ADL->_472
-    type: ss
-    server: 67.220.95.102
-    port: 3306
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: CA->CA->ADL->_473
-    type: ss
-    server: 64.74.163.218
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: MX->MX->ADL->_476
-    type: ss
-    server: 147.78.1.27
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: US->NL->ADL->_477
-    type: ss
-    server: 45.87.175.65
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: US->US->ADL->_479
-    type: ss
-    server: 173.244.56.9
-    port: 443
-    udp: true
-    cipher: aes-128-gcm
-    password: shadowsocks
-
-  - name: VE->NL->ADL->_483
-    type: ss
-    server: 45.158.171.132
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: FR->FR->ADL->_484
-    type: ss
-    server: 86.104.74.243
-    port: 14255
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: fDDmH4QefmWqMJ8UURZrGh
-
-  - name: US->US->ADL->_485
-    type: ss
-    server: 23.154.136.132
-    port: 3306
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: NL->NL->ADL->_490
-    type: ss
-    server: 213.109.147.242
-    port: 62685
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: VpKABcOpNNA0l5G2AVOmw8
-
-  - name: US->US->ADL->_492
-    type: ss
-    server: 67.220.95.102
-    port: 7002
-    udp: true
-    cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-
-  - name: FI->FI->ADL->_493
-    type: ss
-    server: 185.5.38.111
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: XJLSHUkevoRHmidSp5xeGd8gwuBBBTTp1yVYCg6kYBA2FgJbMwGjnLuTnqcmNKWKdgPDH8d7m9ag7VfsBBhW1rMc47cgX5up
-
-  - name: ES->ES->ADL->_494
-    type: ss
-    server: 194.87.45.189
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: nOfkKboDAxhTx2k1cAltIz
-
-  - name: US->US->ADL->_495
-    type: ss
-    server: 23.154.136.132
-    port: 8888
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: US->US->ADL->_496
-    type: ss
-    server: 23.154.136.132
-    port: 443
-    udp: true
-    cipher: aes-256-gcm
-    password: pKEW8JPByTVTLtM
-
-  - name: CA->FR->ADL->NGINX_497
-    type: vmess
-    server: 104.21.15.212
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: US->US->ADL->_498
-    type: ss
-    server: 67.220.95.102
-    port: 9090
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: US->US->ADL->_502
-    type: ss
-    server: 67.220.95.102
-    port: 8882
-    udp: true
-    cipher: aes-256-gcm
-    password: kDWvXYZoTBcGkC4
-
-  - name: US->US->ADL->_503
-    type: ss
-    server: 69.50.93.47
-    port: 5003
-    udp: true
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-
-  - name: US->US->ADL->_506
-    type: ss
-    server: 67.220.95.102
-    port: 5003
-    udp: true
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-
-  - name: IL->IL->ADL->_508
-    type: ss
-    server: 188.191.147.127
-    port: 31348
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 6IVOuzMfH5ROpgwtRTcNJKYJvYe9FDVaU7wAYYh8PRLxxZs6
-
-  - name: DE->DE->ADL->NGINX_509
-    type: vmess
-    server: 23.158.56.241
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: FR->FR->ADL->NGINX_510
-    type: vmess
-    server: 163.5.159.231
-    port: 443
-    udp: true
-    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: irvideo.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: irvideo.cfd
-
-  - name: RU->RU->ADL->_511
-    type: ss
-    server: 45.151.62.54
-    port: 28825
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 0zyDRZ1XmNXaaCAN7KEA8a
-
-  - name: US->NL->ADL->_512
-    type: ss
-    server: 45.87.175.181
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: DE->DE->ADL->NGINX_513
+  - name: "–Rose_Mci_41"
     type: vmess
     server: 57.129.28.69
     port: 443
@@ -2889,397 +496,13 @@ proxies:
     network: ws
     ws-opts:
       path: /linkvws
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: MY->MY->ADL->_514
-    type: ss
-    server: 103.243.215.17
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: US->US->ADL->_517
-    type: ss
-    server: 23.154.136.132
-    port: 5600
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: TR->TR->ADL->_518
-    type: ss
-    server: 185.123.101.241
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: US->US->ADL->_519
-    type: ss
-    server: 67.220.95.102
-    port: 3389
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: FI->FI->ADL->_521
-    type: ss
-    server: 185.5.38.111
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: VZGpJiYpqsqrwx3ACRV1vX2qNSG8Jignq4SMn1qCpBKyBWiihvK3MsdFtFdTcGevaHQzjhJ1L9qzVf8SQG7c4ygHtudNNSPk
-
-  - name: US->US->ADL->_523
-    type: ss
-    server: 67.220.95.102
-    port: 8080
-    udp: true
-    cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
-
-  - name: US->NL->ADL->_525
-    type: ss
-    server: 45.87.175.166
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: US->NL->ADL->_527
-    type: ss
-    server: 45.87.175.35
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: CH->CH->ADL->_529
-    type: ss
-    server: 204.136.10.115
-    port: 1866
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oXGp1+ihlfKg826H
-
-  - name: ID->ID->ADL->_530
-    type: ss
-    server: 154.205.159.100
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: US->NL->ADL->_531
-    type: ss
-    server: 45.87.175.178
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: US->US->ADL->_533
-    type: ss
-    server: 23.154.136.132
-    port: 8882
-    udp: true
-    cipher: aes-256-gcm
-    password: kDWvXYZoTBcGkC4
-
-  - name: CA->FR->ADL->NGINX_536
-    type: vmess
-    server: 172.67.170.13
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
       headers:
-        Host: glweidf.sbs
+        Host: baradiha.com
     tls: true
     skip-cert-verify: true
-    servername: glweidf.sbs
+    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
 
-  - name: US->NL->ADL->_538
-    type: ss
-    server: 45.87.175.157
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: US->US->ADL->_541
-    type: ss
-    server: 23.154.136.132
-    port: 8118
-    udp: true
-    cipher: aes-256-gcm
-    password: cdBIDV42DCwnfIN
-
-  - name: US->US->ADL->_543
-    type: ss
-    server: 67.220.95.102
-    port: 5000
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: NL->NL->ADL->_544
-    type: ss
-    server: 103.104.247.49
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: US->US->ADL->_547
-    type: ss
-    server: 69.50.93.113
-    port: 8888
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: DE->DE->ADL->NGINX_548
-    type: vmess
-    server: 57.129.24.125
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: US->US->ADL->_549
-    type: ss
-    server: 23.154.136.132
-    port: 6697
-    udp: true
-    cipher: aes-256-gcm
-    password: TEzjfAYq2IjtuoS
-
-  - name: AR->AR->ADL->_551
-    type: ss
-    server: 38.54.45.129
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: US->US->ADL->_552
-    type: ss
-    server: 23.154.136.132
-    port: 2375
-    udp: true
-    cipher: aes-256-gcm
-    password: faBAoD54k87UJG7
-
-  - name: US->NL->ADL->_553
-    type: ss
-    server: 45.87.175.164
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: CR->CR->ADL->_556
-    type: ss
-    server: 145.14.131.37
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: US->US->ADL->_557
-    type: ss
-    server: 173.244.56.6
-    port: 443
-    udp: true
-    cipher: aes-128-gcm
-    password: shadowsocks
-
-  - name: US->US->ADL->_559
-    type: ss
-    server: 67.220.95.80
-    port: 8090
-    udp: true
-    cipher: aes-256-gcm
-    password: PCnnH6SQSnfoS27
-
-  - name: US->US->ADL->_560
-    type: ss
-    server: 23.154.136.132
-    port: 6679
-    udp: true
-    cipher: aes-256-gcm
-    password: TEzjfAYq2IjtuoS
-
-  - name: CA->CA->ADL->_561
-    type: ss
-    server: 81.19.140.31
-    port: 65305
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: nlVqIVyKwWoDsD7dVYT9Y0
-
-  - name: BR->BR->ADL->NGINX_562
-    type: vmess
-    server: pq-brazil1.09vpn.com
-    port: 80
-    udp: true
-    uuid: 24b6bbfb-9b27-4f17-bd32-67523bf487d9
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-
-  - name: US->US->ADL->_563
-    type: ss
-    server: 67.220.95.102
-    port: 8881
-    udp: true
-    cipher: aes-256-gcm
-    password: kDWvXYZoTBcGkC4
-
-  - name: GB->GB->RTL->_567
-    type: ss
-    server: 107.181.151.147
-    port: 43669
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 23sUrwRcTBEAvxLS6VM6Aay57KQbws1upDAxr7Btf4hXu4gaUQW4BPbComjJjStM2JqJLDwVkteXL8V33k8eWkZR4UB8intz
-
-  - name: NL->NL->RTL->_568
-    type: ss
-    server: 103.106.1.92
-    port: 23492
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: yMX9WGPgUEcRZmlaa0YHHC
-
-  - name: US->NL->RTL->_569
-    type: ss
-    server: 45.87.175.178
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: US->NL->ADL->_570
-    type: ss
-    server: 45.87.175.92
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: US->NL->ADL->_571
-    type: ss
-    server: 45.87.175.10
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: VE->NL->RTL->_572
-    type: ss
-    server: 45.158.171.132
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: CN->CN->RTL->NGINX_573
-    type: vmess
-    server: 112.132.215.12
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-
-  - name: US->NL->RTL->_575
-    type: ss
-    server: 45.87.175.58
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: FI->FI->RTL->_577
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 3N72s3TiKcMaJH34m7i7bogM2EsQ1dQBfayVaLKbaXP9LWqePMstAkdQKJP94rg7HP13xfnHBvv68868b1w6XW1AZunxpS4H
-
-  - name: UA->UA->RTL->_579
-    type: ss
-    server: 176.103.53.105
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: US->US->RTL->_580
-    type: ss
-    server: 69.50.93.47
-    port: 6679
-    udp: true
-    cipher: aes-256-gcm
-    password: TEzjfAYq2IjtuoS
-
-  - name: FR->FR->RTL->NGINX_583
-    type: vmess
-    server: irvideo.cfd
-    port: 443
-    udp: true
-    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: irvideo.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: US->US->RTL->NGINX_584
-    type: trojan
-    server: us.blazeppn.info
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: FI->FI->RTL->_586
-    type: ss
-    server: 166.1.157.228
-    port: 55330
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: rtR4YX74vwqRJu9MGH3e1N3CQdGMWCUFkyLisijiFuvhkU9McV5TpygfkernJ4UQe63JtcDQkrQ9HfchzqQz1kLCnTRor8jg
-
-  - name: CA->CA->RTL->NGINX_588
+  - name: "–Rose_Mtn_42"
     type: vmess
     server: 51.79.102.253
     port: 80
@@ -3290,1626 +513,25 @@ proxies:
     network: ws
     ws-opts:
       path: /IOebhLMhl1CTbFHbL95myfRX2
-
-  - name: US->NL->RTL->_591
-    type: ss
-    server: 45.87.175.199
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: VE->NL->RTL->_593
-    type: ss
-    server: 45.158.171.146
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: US->NL->RTL->_594
-    type: ss
-    server: 45.87.175.178
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: FI->FI->RTL->_595
-    type: ss
-    server: 185.5.38.111
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: BpFieMT6SobpqRiKFefvYu7eXk99XfCeWfjpntzSh81FfMx9R7rJW6LTmzH78StTEhCd7w32ZMxbGJZS98gpn1ozr9jAbMoa
-
-  - name: FI->FI->RTL->_596
-    type: ss
-    server: 185.5.38.111
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 9Bpt48HiTfWMzQDb86igS8UxrYXZ59zN3mzTTG9EvEcw3eqYtX5Q3zaenJPyyA5p2q5Nmp24Trv2bBKVBcZ1bhLKT3dn18Kk
-
-  - name: US->NL->RTL->_597
-    type: ss
-    server: 45.87.175.154
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: FI->FI->RTL->_599
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2FRp4BQyeVxLA5RaBxJ9czwTtZqaXVuVTmgVtTRsmjLvpBBNSTGtyyg7uNcgppVRqnhjdJmP8bKM3zsK88rNhMgXNJoauxkJ
-
-  - name: DE->DE->RTL->NGINX_600
-    type: vmess
-    server: 57.129.24.125
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: FR->FR->RTL->NGINX_602
-    type: vmess
-    server: 146.19.168.161
-    port: 443
-    udp: true
-    uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /link
-      headers:
-        Host: az05.beyondy.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: az05.beyondy.cfd
-
-  - name: US->NL->RTL->_604
-    type: ss
-    server: 45.87.175.154
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: FI->FI->RTL->_606
-    type: ss
-    server: old.afoothabs.monster
-    port: 55330
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: frsa5DFzRANYPs5yMexsVUrC7d6NY8pvBRFn4g1WkF4R71Y5a6E6qYp3SxP2EaUh2yXsAKbTAm7SmL5qk5xMGoDRjH5F8BBU
-
-  - name: FI->FI->RTL->_607
-    type: ss
-    server: 185.5.38.111
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: tRVH6ZVjtjWCvREPvSgTx6jwmensa6of9w26NwnZ5n1V3bWeNBsq2A86K3RWGRyjA89Tqibnri4HuDtvE24KU2Sb65RUeVJz
-
-  - name: FI->FI->RTL->_608
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: bg9rGNza4dcmnDAXMiBaa4pUf9q8fc2EDePQ96UDfJrmohfvK7L27bLsJW2jikJPw97LYW76ypYK347TtUKZ6ebkw5Zf6C4s
-
-  - name: US->NL->RTL->_610
-    type: ss
-    server: 45.87.175.65
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: VE->NL->ADL->_612
-    type: ss
-    server: 45.158.171.146
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: SG->SG->ADL->NGINX_615
-    type: vmess
-    server: 194.233.72.228
-    port: 27575
-    udp: true
-    uuid: 16509262-dbe2-43ba-99ce-07913d2a18b4
-    alterId: 0
-    cipher: auto
-
-  - name: CN->CN->ADL->NGINX_617
-    type: vmess
-    server: 47.104.186.133
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-
-  - name: US->US->ADL->_620
-    type: ss
-    server: 69.50.93.47
-    port: 7002
-    udp: true
-    cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-
-  - name: CN->CN->ADL->NGINX_621
-    type: vmess
-    server: 47.104.186.133
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-
-  - name: US->US->ADL->_622
-    type: ss
-    server: 67.220.95.102
-    port: 9101
-    udp: true
-    cipher: aes-256-gcm
-    password: e4FCWrgpkji3QY
-
-  - name: US->US->ADL->_623
-    type: ss
-    server: 216.39.248.133
-    port: 7001
-    udp: true
-    cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-
-  - name: JP->JP->ADL->_626
-    type: ss
-    server: 149.22.87.241
-    port: 443
-    udp: true
-    cipher: aes-128-gcm
-    password: shadowsocks
-
-  - name: PL->PL->ADL->NGINX_627
-    type: vmess
-    server: 45.144.48.128
-    port: 8443
-    udp: true
-    uuid: a4850481-9b95-430f-9b2d-192d2410b4f4
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: NL->NL->ADL->_630
-    type: ss
-    server: 103.104.247.72
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: US->US->ADL->_634
-    type: ss
-    server: 69.50.93.47
-    port: 8119
-    udp: true
-    cipher: aes-256-gcm
-    password: cdBIDV42DCwnfIN
-
-  - name: US->US->ADL->_638
-    type: ss
-    server: 67.220.95.102
-    port: 5500
-    udp: true
-    cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
-
-  - name: US->US->ADL->_640
-    type: ss
-    server: 23.154.136.132
-    port: 5601
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: US->US->ADL->_641
-    type: ss
-    server: 67.220.95.102
-    port: 8008
-    udp: true
-    cipher: aes-256-gcm
-    password: XKFKl2rULjIp74
-
-  - name: US->US->ADL->_642
-    type: ss
-    server: 69.50.93.47
-    port: 5004
-    udp: true
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-
-  - name: GR->GR->ADL->_646
-    type: ss
-    server: 151.236.29.225
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: US->US->ADL->_648
-    type: ss
-    server: 23.154.136.47
-    port: 5498
-    udp: true
-    cipher: aes-256-gcm
-    password: lGqs95QkFHo2NV
-
-  - name: CA->FR->ADL->NGINX_649
-    type: vmess
-    server: 104.21.48.160
-    port: 443
-    udp: true
-    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: irvideo.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: irvideo.cfd
-
-  - name: US->US->ADL->_650
-    type: ss
-    server: 23.154.136.132
-    port: 7001
-    udp: true
-    cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-
-  - name: US->US->ADL->_651
-    type: ss
-    server: 23.154.136.44
-    port: 8881
-    udp: true
-    cipher: aes-256-gcm
-    password: kDWvXYZoTBcGkC4
-
-  - name: US->US->ADL->_652
-    type: ss
-    server: 23.154.136.51
-    port: 8118
-    udp: true
-    cipher: aes-256-gcm
-    password: cdBIDV42DCwnfIN
-
-  - name: DE->DE->ADL->_653
-    type: ss
-    server: 81.19.141.45
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 3TnQdgm2mVJQbuSCXmR5Vc
-
-  - name: US->US->ADL->_656
-    type: ss
-    server: 67.220.95.102
-    port: 5004
-    udp: true
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-
-  - name: CA->FR->ADL->NGINX_657
-    type: vmess
-    server: 172.67.154.84
-    port: 443
-    udp: true
-    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: irvideo.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: irvideo.cfd
-
-  - name: US->US->ADL->_658
-    type: ss
-    server: 23.154.136.132
-    port: 9090
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: BO->BO->ADL->_659
-    type: ss
-    server: 185.93.173.218
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: PH->PH->ADL->NGINX_660
-    type: vmess
-    server: 3h-Philippines1.09vpn.com
-    port: 80
-    udp: true
-    uuid: 3fd35fa2-a0c6-4f0c-8310-c3c03a268155
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-
-  - name: US->US->ADL->_661
-    type: ss
-    server: 23.154.136.103
-    port: 8080
-    udp: true
-    cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
-
-  - name: US->US->ADL->_664
-    type: ss
-    server: 69.50.93.47
-    port: 5000
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: CN->CN->ADL->NGINX_666
-    type: vmess
-    server: 120.26.55.225
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-
-  - name: US->US->ADL->NGINX_669
-    type: vmess
-    server: 15.204.248.92
-    port: 30562
-    udp: true
-    uuid: 82466715-6a58-4046-a363-a0d18e5b2ab4
-    alterId: 0
-    cipher: auto
-
-  - name: US->US->ADL->_670
-    type: ss
-    server: 69.50.93.80
-    port: 3306
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: VE->NL->ADL->_674
-    type: ss
-    server: 45.158.171.151
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: US->US->ADL->NGINX_675
-    type: vmess
-    server: 15.204.86.120
-    port: 35696
-    udp: true
-    uuid: cad0504a-a9dc-4d29-8844-b11b69f14a8d
-    alterId: 0
-    cipher: auto
-
-  - name: US->US->ADL->_677
-    type: ss
-    server: 67.220.95.102
-    port: 5600
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: US->US->ADL->_678
-    type: ss
-    server: 67.220.95.102
-    port: 8091
-    udp: true
-    cipher: aes-256-gcm
-    password: PCnnH6SQSnfoS27
-
-  - name: US->NL->ADL->_679
-    type: ss
-    server: 45.87.175.154
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: EC->EC->ADL->_682
-    type: ss
-    server: 185.47.253.227
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: MY->MY->ADL->NGINX_683
-    type: vmess
-    server: 101.99.91.234
-    port: 36700
-    udp: true
-    uuid: 127ff43c-1851-4b2d-ba8c-6afba21ec04d
-    alterId: 0
-    cipher: auto
-
-  - name: US->US->ADL->NGINX_684
-    type: trojan
-    server: 138.197.5.103
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: us.blazeppn.info
-
-  - name: US->US->ADL->_685
-    type: ss
-    server: 23.154.136.132
-    port: 8008
-    udp: true
-    cipher: aes-256-gcm
-    password: XKFKl2rULjIp74
-
-  - name: VE->NL->RTL->_692
-    type: ss
-    server: 45.158.171.132
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: FI->FI->RTL->_694
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: VZGpJiYpqsqrwx3ACRV1vX2qNSG8Jignq4SMn1qCpBKyBWiihvK3MsdFtFdTcGevaHQzjhJ1L9qzVf8SQG7c4ygHtudNNSPk
-
-  - name: FR->FR->RTL->NGINX_696
-    type: vmess
-    server: irvideo.cfd
-    port: 443
-    udp: true
-    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: FI->FI->RTL->_698
-    type: ss
-    server: 185.5.38.111
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: XJLSHUkevoRHmidSp5xeGd8gwuBBBTTp1yVYCg6kYBA2FgJbMwGjnLuTnqcmNKWKdgPDH8d7m9ag7VfsBBhW1rMc47cgX5up
-
-  - name: GB->->RTL->_700
-    type: ss
-    server: series-a1.samanehha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: W74XFALLLuw6m5IA
-
-  - name: FI->FI->RTL->_701
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: vWgVt4dL6bwFutKm1D8WrjaAs2AWT535GfVMttHBg7rg6ZBFUAxGpvHc6hXjoBRKsyeyTESc1uU6y3BP3oenkTv9aefi27VN
-
-  - name: US->NL->RTL->_703
-    type: ss
-    server: 45.87.175.181
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: US->US->RTL->_706
-    type: ss
-    server: 69.50.93.47
-    port: 5003
-    udp: true
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-
-  - name: VE->NL->RTL->_711
-    type: ss
-    server: beesyar.org
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: FR->FR->RTL->NGINX_712
-    type: vmess
-    server: 163.5.159.231
-    port: 443
-    udp: true
-    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: irvideo.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: irvideo.cfd
-
-  - name: US->NL->RTL->_713
-    type: ss
-    server: 45.87.175.181
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: PL->PL->RTL->_714
-    type: ss
-    server: war.ssvpnapp.win
-    port: 57456
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: d3837224ed465f00
-
-  - name: US->US->RTL->NGINX_719
-    type: trojan
-    server: us.blazeppn.info
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: us.blazeppn.info
-
-  - name: CA->FR->RTL->NGINX_723
-    type: vmess
-    server: ParsVds.ir
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: US->NL->RTL->_725
-    type: ss
-    server: 45.87.175.178
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: US->NL->RTL->_726
-    type: ss
-    server: 45.87.175.35
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: US->NL->RTL->_727
-    type: ss
-    server: 45.87.175.166
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: US->NL->RTL->_730
-    type: ss
-    server: 45.87.175.157
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: GB->->RTL->_733
-    type: ss
-    server: api.namasha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: u17T3BvpYaaiuW2c
-
-  - name: US->NL->RTL->_735
-    type: ss
-    server: 45.87.175.164
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: BR->BR->RTL->NGINX_736
-    type: vmess
-    server: pq-brazil1.09vpn.com
-    port: 80
-    udp: true
-    uuid: c04c3b34-70fd-4fec-963e-c12d09f36bef
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-
-  - name: FR->FR->RTL->NGINX_738
-    type: vmess
-    server: az05.beyondy.cfd
-    port: 443
-    udp: true
-    uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /link
-      headers:
-        Host: az05.beyondy.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: DE->DE->RTL->NGINX_742
-    type: vmess
-    server: 57.129.24.125
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
       headers:
         Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+
+  - name: "–Rose_Mtn_43"
+    type: vmess
+    server: 57.129.25.20
+    port: 443
+    udp: true
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    alterId: 1
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: linkvws
     tls: true
     skip-cert-verify: true
     servername: 
 
-  - name: GB->->RTL->_747
-    type: ss
-    server: admin.c1.webramz.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1xO2cqPazqjGfCfd
-
-  - name: BR->BR->RTL->NGINX_752
-    type: vmess
-    server: pq-brazil1.09vpn.com
-    port: 80
-    udp: true
-    uuid: 24b6bbfb-9b27-4f17-bd32-67523bf487d9
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-
-  - name: US->NL->RTL->_753
-    type: ss
-    server: 45.87.175.92
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: VE->NL->RTL->_754
-    type: ss
-    server: 45.158.171.146
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: MX->US->RTL->NGINX_755
-    type: vmess
-    server: 79.127.229.54
-    port: 18000
-    udp: true
-    uuid: fa1897db-1925-4c86-a495-939a959af900
-    alterId: 0
-    cipher: auto
-
-  - name: US->NL->RTL->_756
-    type: ss
-    server: 45.87.175.10
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: CN->CN->RTL->NGINX_759
-    type: vmess
-    server: 47.104.186.133
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-
-  - name: US->US->RTL->_761
-    type: ss
-    server: 38.89.70.208
-    port: 8090
-    udp: true
-    cipher: aes-256-gcm
-    password: PCnnH6SQSnfoS27
-
-  - name: US->NL->RTL->_762
-    type: ss
-    server: 45.87.175.157
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: CN->CN->RTL->NGINX_763
-    type: vmess
-    server: 47.104.186.133
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-
-  - name: US->NL->RTL->_764
-    type: ss
-    server: 45.87.175.166
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: PL->PL->RTL->NGINX_766
-    type: vmess
-    server: 45.144.48.128
-    port: 8443
-    udp: true
-    uuid: a4850481-9b95-430f-9b2d-192d2410b4f4
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: VE->NL->RTL->_768
-    type: ss
-    server: 45.158.171.141
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: IN->IN->RTL->_769
-    type: ss
-    server: 64.227.144.190
-    port: 50690
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: o0aIoQx9HZoWGHlhfAc37X
-
-  - name: GB->->RTL->_771
-    type: ss
-    server: series-a2.samanehha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: W74XFALLLuw6m5IA
-
-  - name: US->US->RTL->_773
-    type: ss
-    server: 69.50.93.47
-    port: 8119
-    udp: true
-    cipher: aes-256-gcm
-    password: cdBIDV42DCwnfIN
-
-  - name: US->US->RTL->_775
-    type: ss
-    server: 69.50.93.47
-    port: 7002
-    udp: true
-    cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-
-  - name: US->US->RTL->_778
-    type: ss
-    server: 69.50.93.47
-    port: 5004
-    udp: true
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-
-  - name: US->US->RTL->NGINX_781
-    type: trojan
-    server: us.blazeppn.info
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: us.blazeppn.info
-
-  - name: US->NL->RTL->_786
-    type: ss
-    server: beesyar.org
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: CA->FR->RTL->NGINX_787
-    type: vmess
-    server: 104.21.48.160
-    port: 443
-    udp: true
-    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: irvideo.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: irvideo.cfd
-
-  - name: FR->FR->RTL->NGINX_788
-    type: vmess
-    server: az05.beyondy.cfd
-    port: 443
-    udp: true
-    uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /link
-      headers:
-        Host: az05.beyondy.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: CA->FR->RTL->NGINX_789
-    type: vmess
-    server: 172.67.154.84
-    port: 443
-    udp: true
-    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: irvideo.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: irvideo.cfd
-
-  - name: US->US->RTL->_791
-    type: ss
-    server: 23.154.136.47
-    port: 5498
-    udp: true
-    cipher: aes-256-gcm
-    password: lGqs95QkFHo2NV
-
-  - name: PL->PL->RTL->NGINX_792
-    type: vmess
-    server: 3h-poland1.09vpn.com
-    port: 80
-    udp: true
-    uuid: 10e2ff65-0e20-462d-a282-164e48b955a9
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-      headers:
-        Host: 3h-poland1.09vpn.com
-
-  - name: PH->PH->RTL->NGINX_795
-    type: vmess
-    server: 3h-Philippines1.09vpn.com
-    port: 80
-    udp: true
-    uuid: 3fd35fa2-a0c6-4f0c-8310-c3c03a268155
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-
-  - name: IN->IN->RTL->_796
-    type: ss
-    server: 64.227.144.190
-    port: 50690
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: jQahQBlN1Xdu1uhwUKrE7k
-
-  - name: CN->CN->RTL->NGINX_797
-    type: vmess
-    server: 120.26.55.225
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-
-  - name: US->US->RTL->_798
-    type: ss
-    server: 69.50.93.47
-    port: 5000
-    udp: true
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-
-  - name: US->NL->RTL->_799
-    type: ss
-    server: beesyar.org
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: DE->DE->MTN->NGINX_801
-    type: vmess
-    server: 57.129.24.124
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: aveiror.com
-    tls: true
-    skip-cert-verify: true
-    servername: vkvd127.mycdn.me
-
-  - name: DE->DE->MTN->NGINX_813
-    type: vmess
-    server: 57.129.24.124
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: aveiror.com
-    tls: true
-    skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-
-  - name: FR->FR->MTN->NGINX_819
-    type: vmess
-    server: irvideo.cfd
-    port: 443
-    udp: true
-    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: irvideo.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: DE->DE->MCI->NGINX_822
-    type: vmess
-    server: 57.129.24.124
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: aveiror.com
-    tls: true
-    skip-cert-verify: true
-    servername: vkvd127.mycdn.me
-
-  - name: DE->DE->MCI->NGINX_827
-    type: vmess
-    server: 57.129.24.125
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    tls: true
-    skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-
-  - name: PL->PL->MCI->NGINX_833
-    type: vmess
-    server: 146.59.55.50
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: o.metuji.com
-    tls: true
-    skip-cert-verify: true
-    servername: o.metuji.com
-
-  - name: CA->FR->MCI->NGINX_834
-    type: vmess
-    server: 104.21.15.212
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: DE->DE->ADSL->NGINX_837
-    type: vmess
-    server: 57.129.24.124
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: aveiror.com
-    tls: true
-    skip-cert-verify: true
-    servername: vkvd127.mycdn.me
-
-  - name: FR->FR->ADSL->NGINX_838
-    type: vmess
-    server: 146.19.168.161
-    port: 443
-    udp: true
-    uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /link
-      headers:
-        Host: az05.beyondy.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: az05.beyondy.cfd
-
-  - name: PL->->ADSL->_842
-    type: ss
-    server: 92.118.205.228
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: DE->DE->ADSL->NGINX_845
-    type: vmess
-    server: 57.129.24.125
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    tls: true
-    skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-
-  - name: PL->PL->ADSL->NGINX_848
-    type: vmess
-    server: 146.59.55.50
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: o.metuji.com
-    tls: true
-    skip-cert-verify: true
-    servername: o.metuji.com
-
-  - name: CA->TR->ADSL->NGINX_849
-    type: vmess
-    server: 172.67.207.26
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: DE->DE->ADSL->NGINX_855
-    type: vmess
-    server: 57.129.24.124
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: aveiror.com
-    tls: true
-    skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-
-  - name: FR->FR->MTN->NGINX_856
-    type: vmess
-    server: 146.19.168.161
-    port: 443
-    udp: true
-    uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /link
-      headers:
-        Host: az05.beyondy.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: az05.beyondy.cfd
-
-  - name: FR->FR->MTN->NGINX_860
-    type: vmess
-    server: irvideo.cfd
-    port: 443
-    udp: true
-    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: CA->FR->MTN->NGINX_861
-    type: vmess
-    server: 104.21.15.212
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: SG->SG->MTN->NGINX_863
-    type: trojan
-    server: sg006.421421.xyz
-    port: 20230
-    udp: true
-    password: 4deefa4b-349d-4db8-be3c-d4d61c862718
-    network: ws
-    ws-opts:
-      path: /
-    tls: true
-    skip-cert-verify: true
-    servername: 421421.xyz
-
-  - name: FR->FR->MTN->NGINX_864
-    type: vmess
-    server: 163.5.159.231
-    port: 443
-    udp: true
-    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: irvideo.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: irvideo.cfd
-
-  - name: CA->FR->MTN->NGINX_865
-    type: vmess
-    server: ParsVds.ir
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: US->US->MTN->NGINX_866
-    type: trojan
-    server: 138.197.5.103
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: dserver.adad.ir
-
-  - name: CA->FR->MTN->NGINX_867
-    type: vmess
-    server: 172.67.154.84
-    port: 443
-    udp: true
-    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: irvideo.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: irvideo.cfd
-
-  - name: CA->CA->MTN->NGINX_869
-    type: vmess
-    server: 134.195.198.147
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: inna.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: inna.cfd
-
-  - name: FR->FR->MTN->NGINX_870
-    type: vmess
-    server: beyonddsz.cfd
-    port: 443
-    udp: true
-    uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: beyonddsz.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: beyonddsz.cfd
-
-  - name: HK->->MCI->_874
-    type: ss
-    server: a001.standard-nodes-chickenfarms.com
-    port: 50000
-    udp: true
-    cipher: aes-256-gcm
-    password: 176c983f-6a7f-4a96-9865-891a6c48ec86
-
-  - name: US->US->MCI->NGINX_875
-    type: trojan
-    server: 138.197.5.103
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: dserver.adad.ir
-
-  - name: US->US->ADSL->NGINX_876
-    type: trojan
-    server: 138.197.5.103
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: dserver.adad.ir
-
-  - name: CA->FR->RTL->NGINX_878
-    type: vmess
-    server: biatoo.v2rayng-021.worKERs.DeV
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: DE->DE->RTL->NGINX_879
-    type: vmess
-    server: 57.129.24.124
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: aveiror.com
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: DE->DE->RTL->NGINX_880
-    type: vmess
-    server: 57.129.24.124
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: aveiror.com
-    tls: true
-    skip-cert-verify: true
-    servername: vkvd127.mycdn.me
-
-  - name: US->US->RTL->NGINX_883
-    type: trojan
-    server: 89.187.181.172
-    port: 43118
-    udp: true
-    password: ypDt8RkT7J
-    tls: true
-    skip-cert-verify: true
-    servername: egcmi.phooeyunfold.com
-
-  - name: DE->DE->RTL->NGINX_884
-    type: vmess
-    server: 57.129.24.125
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    tls: true
-    skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-
-  - name: PL->PL->RTL->NGINX_885
-    type: vmess
-    server: 146.59.55.50
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: o.metuji.com
-    tls: true
-    skip-cert-verify: true
-    servername: o.metuji.com
-
-  - name: DE->DE->RTL->NGINX_887
-    type: vmess
-    server: 57.129.24.124
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: aveiror.com
-    tls: true
-    skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-
-  - name: US->US->MTN->NGINX_888
-    type: trojan
-    server: 138.197.5.103
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: telewebion.com
-
-  - name: DE->DE->MTN->NGINX_891
-    type: vmess
-    server: 57.129.24.124
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: aveiror.com
-    tls: true
-    skip-cert-verify: true
-    servername: vkvd127.mycdn.me
-
-  - name: PL->PL->MTN->NGINX_893
-    type: vmess
-    server: 146.59.55.50
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: o.metuji.com
-    tls: true
-    skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-
-  - name: DE->DE->MTN->NGINX_894
-    type: vmess
-    server: 57.129.24.125
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: aveiror.com
-    tls: true
-    skip-cert-verify: true
-    servername: aveiror.com
-
-  - name: US->US->MTN->NGINX_899
-    type: trojan
-    server: 138.197.5.103
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: telewebion.com
-
-  - name: DE->DE->MTN->NGINX_900
+  - name: "–Rose_Mtn_44"
     type: vmess
     server: 57.129.25.22
     port: 443
@@ -4920,21 +542,58 @@ proxies:
     network: ws
     ws-opts:
       path: /linkvws
+    tls: true
+    skip-cert-verify: true
+    servername: 
+
+  - name: "–Rose_Mtn_45"
+    type: vmess
+    server: 47.104.186.133
+    port: 50002
+    udp: true
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Mtn_46"
+    type: vmess
+    server: 57.129.24.124
+    port: 443
+    udp: true
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /linkvws
       headers:
-        Host: o.metuji.com
+        Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
     tls: true
     skip-cert-verify: true
     servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
 
-  - name: VE->NL->MTN->_904
-    type: ss
-    server: 45.158.171.141
-    port: 8080
+  - name: "–Rose_Wifi_47"
+    type: vmess
+    server: 43.153.104.62
+    port: 45113
     udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
+    uuid: 97cc0323-de53-4a75-d69d-c6acdac5fdc7
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /97cc0323
 
-  - name: DE->DE->ADL->NGINX_908
+  - name: "–Rose_Mci_48"
+    type: vmess
+    server: 62.146.233.112
+    port: 36712
+    udp: true
+    uuid: 9266df42-0830-48c2-8509-4c57b30fe29d
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Mci_49"
     type: vmess
     server: 57.129.25.25
     port: 443
@@ -4951,26 +610,18 @@ proxies:
     skip-cert-verify: true
     servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
 
-  - name: CA->FR->ADL->NGINX_912
+  - name: "–Rose_Mci_50"
     type: vmess
-    server: ParsVds.ir
-    port: 443
+    server: 47.92.152.169
+    port: 50002
     udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
 
-  - name: US->US->ADL->NGINX_913
+  - name: "–Rose_Wifi_51"
     type: vmess
-    server: 38.99.82.193
+    server: 57.129.28.65
     port: 443
     udp: true
     uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
@@ -4980,266 +631,12 @@ proxies:
     ws-opts:
       path: /linkvws
       headers:
-        Host: tilebani.com
+        Host: kapelleng.com
     tls: true
     skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    servername: kapelleng.com
 
-  - name: BR->BR->ADL->NGINX_914
-    type: vmess
-    server: pq-brazil1.09vpn.com
-    port: 80
-    udp: true
-    uuid: c04c3b34-70fd-4fec-963e-c12d09f36bef
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-
-  - name: DE->DE->ADL->NGINX_916
-    type: vmess
-    server: 57.129.28.69
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: baradiha.com
-    tls: true
-    skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-
-  - name: CA->CA->RTL->NGINX_917
-    type: vmess
-    server: 15.235.83.227
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: mankadmu.com
-    tls: true
-    skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-
-  - name: US->US->RTL->NGINX_918
-    type: trojan
-    server: 138.197.5.103
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: dserver.adad.ir
-
-  - name: VE->NL->RTL->_922
-    type: ss
-    server: 45.158.171.141
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: CA->CA->RTL->NGINX_924
-    type: vmess
-    server: 51.79.102.253
-    port: 80
-    udp: true
-    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /IOebhLMhl1CTbFHbL95myfRX2
-      headers:
-        Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-
-  - name: US->US->RTL->NGINX_925
-    type: trojan
-    server: us.blazeppn.info
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: telewebion.com
-
-  - name: FI->FI->RTL->_926
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 48Rz3vdwJcqXTDHpQb22n7RJ72u4F6CZ7dQV1Pys7ce3bSzqjACxAnHVJDkKjYvXeyK8TLGrBJrWWVFoADUWXPrNPsHoz6xN
-
-  - name: US->US->ADL->NGINX_927
-    type: trojan
-    server: 138.197.5.103
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: dserver.adad.ir
-
-  - name: US->US->ADL->NGINX_928
-    type: vmess
-    server: 38.99.82.193
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: tilebani.com
-    tls: true
-    skip-cert-verify: true
-    servername: tilebani.com
-
-  - name: CA->CA->ADL->NGINX_933
-    type: vmess
-    server: 15.235.50.172
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: baradiha.com
-    tls: true
-    skip-cert-verify: true
-    servername: baradiha.com
-
-  - name: PL->PL->ADL->NGINX_935
-    type: vmess
-    server: 3h-poland1.09vpn.com
-    port: 80
-    udp: true
-    uuid: 10e2ff65-0e20-462d-a282-164e48b955a9
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-      headers:
-        Host: 3h-poland1.09vpn.com
-
-  - name: CA->CA->ADL->_938
-    type: ss
-    server: 79.127.233.170
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: CA->FR->ADL->NGINX_939
-    type: vmess
-    server: 172.67.136.233
-    port: 443
-    udp: true
-    uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /link
-      headers:
-        Host: az05.beyondy.cfd
-    tls: true
-    skip-cert-verify: true
-    servername: az05.beyondy.cfd
-
-  - name: US->US->ADL->NGINX_941
-    type: trojan
-    server: 138.197.5.103
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: telewebion.com
-
-  - name: CA->FR->RTL->NGINX_943
-    type: vmess
-    server: 104.21.15.212
-    port: 443
-    udp: true
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkws
-      headers:
-        Host: glweidf.sbs
-    tls: true
-    skip-cert-verify: true
-    servername: glweidf.sbs
-
-  - name: SG->SG->RTL->NGINX_944
-    type: trojan
-    server: sg006.421421.xyz
-    port: 20230
-    udp: true
-    password: 4deefa4b-349d-4db8-be3c-d4d61c862718
-    network: ws
-    ws-opts:
-      path: /
-    tls: true
-    skip-cert-verify: true
-    servername: 421421.xyz
-
-  - name: FI->FI->RTL->_948
-    type: ss
-    server: mx2.drawnrisha.one
-    port: 55988
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 2WwGWW8RV4ykv5puvdi3guir3SHEJD3tnNogwp4YKHAp2QJVHnWH1oVbdzGYUGYqCV5B1LxDEroZm764ArBhcyPhccQdrHdN
-
-  - name: US->US->RTL->NGINX_949
-    type: trojan
-    server: 138.197.5.103
-    port: 443
-    udp: true
-    password: xxoo
-    tls: true
-    skip-cert-verify: true
-    servername: dserver.adad.ir
-
-  - name: CA->CA->RTL->NGINX_952
-    type: vmess
-    server: 15.235.50.172
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: baradiha.com
-    tls: true
-    skip-cert-verify: true
-    servername: baradiha.com
-
-  - name: DE->DE->RTL->NGINX_954
+  - name: "–Rose_Wifi_52"
     type: vmess
     server: 57.129.25.22
     port: 443
@@ -5256,652 +653,1265 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: CN->CN->MTN->NGINX_956
+  - name: "–Rose_Mci_53"
     type: vmess
-    server: 47.92.152.169
+    server: 95.164.4.140
+    port: 52937
+    udp: true
+    uuid: 71820e62-7b99-4ed9-a836-1e0f814c33a1
+    alterId: 0
+    cipher: auto
+
+  - name: "–Rose_Rtl_54"
+    type: vmess
+    server: 112.132.215.12
     port: 50002
     udp: true
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
 
-  - name: PL->PL->MTN->NGINX_957
-    type: vmess
-    server: 3h-poland1.09vpn.com
-    port: 8443
+  - name: "–Rose_Mtn_55"
+    type: ss
+    server: admin.c2.webramz.co
+    port: 443
     udp: true
-    uuid: a4850481-9b95-430f-9b2d-192d2410b4f4
-    alterId: 0
-    cipher: auto
+    cipher: chacha20-ietf-poly1305
+    password: WstuSnlu4ieA9M0L
+
+  - name: "–Rose_Mtn_56"
+    type: ss
+    server: admin.c1.webramz.co
+    port: 443
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: W74XFALLLuw6m5IA
+
+  - name: "–Rose_Mci_57"
+    type: ss
+    server: admin.c3.webramz.co
+    port: 443
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: AlCsBGpsejHdVCME
+
+  - name: "–Rose_Mci_58"
+    type: ss
+    server: series-a2-mec.varzesh360.co
+    port: 443
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: u17T3BvpYaaiuW2c
+
+  - name: "–Rose_Mci_59"
+    type: ss
+    server: 185.47.253.227
+    port: 990
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: f8f7aCzcPKbsF8p3
+
+  - name: "–Rose_Mci_60"
+    type: ss
+    server: freakconfig13.felafel.org
+    port: 443
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 1xO2cqPazqjGfCfd
+
+  - name: "–Rose_Rtl_61"
+    type: ss
+    server: exchange.gameaurela.click
+    port: 52952
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj
+
+  - name: "–Rose_Rtl_62"
+    type: ss
+    server: beesyar.org
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 4a2rfixophdjffa8KVA4Aa
+
+  - name: "–Rose_Rtl_63"
+    type: ss
+    server: 45.87.175.192
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: QCXDxuDlTTMD7jtgHUjIoj
+
+  - name: "–Rose_Rtl_64"
+    type: ss
+    server: 45.87.175.171
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: cvII85TrW6n0OGyfpHVS1u
+
+  - name: "–Rose_Rtl_65"
+    type: ss
+    server: 45.87.175.35
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: oZIoA69Q8yhcQV8ka3Pa3A
+
+  - name: "–Rose_Rtl_66"
+    type: ss
+    server: 166.1.157.228
+    port: 55330
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: rtR4YX74vwqRJu9MGH3e1N3CQdGMWCUFkyLisijiFuvhkU9McV5TpygfkernJ4UQe63JtcDQkrQ9HfchzqQz1kLCnTRor8jg
+
+  - name: "–Rose_Rtl_67"
+    type: ss
+    server: 45.87.175.171
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 4a2rfixophdjffa8KVA4Aa
+
+  - name: "–Rose_Rtl_68"
+    type: ss
+    server: 45.158.171.151
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: QCXDxuDlTTMD7jtgHUjIoj
+
+  - name: "–Rose_Rtl_69"
+    type: ss
+    server: beta.mattenadene.org
+    port: 54075
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: o38yuvzSe3m5aDNpHtUPH1zGwbGEXXMDsGwVaub2SYEmHUa2WGZUjiezX3Vvva9CCzpjxYtuJLgKsSnsyKBf9ciPVba3y4o3
+
+  - name: "–Rose_Rtl_70"
+    type: ss
+    server: 45.158.171.151
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 4a2rfixophdjffa8KVA4Aa
+
+  - name: "–Rose_Rtl_71"
+    type: ss
+    server: 45.87.175.157
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: cvII85TrW6n0OGyfpHVS1u
+
+  - name: "–Rose_Rtl_72"
+    type: ss
+    server: 94.131.21.174
+    port: 54075
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: o38yuvzSe3m5aDNpHtUPH1zGwbGEXXMDsGwVaub2SYEmHUa2WGZUjiezX3Vvva9CCzpjxYtuJLgKsSnsyKBf9ciPVba3y4o3
+
+  - name: "–Rose_Rtl_73"
+    type: ss
+    server: 45.87.175.10
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: oZIoA69Q8yhcQV8ka3Pa3A
+
+  - name: "–Rose_Rtl_74"
+    type: ss
+    server: series-a1.samanehha.co
+    port: 443
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: W74XFALLLuw6m5IA
+
+  - name: "–Rose_Rtl_75"
+    type: ss
+    server: 45.158.171.151
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 1RWwXhwfAB5gAEozU4G2Pg
+
+  - name: "–Rose_Rtl_76"
+    type: ss
+    server: 45.158.171.132
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 1RWwXhwfAB5gAEozU4G2Pg
+
+  - name: "–Rose_Rtl_77"
+    type: ss
+    server: series-a2.samanehha.co
+    port: 443
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: mps3FwmDjLrWaOVg
+
+  - name: "–Rose_Rtl_78"
+    type: ss
+    server: 45.87.175.171
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 1RWwXhwfAB5gAEozU4G2Pg
+
+  - name: "–Rose_Rtl_79"
+    type: ss
+    server: series-a1.samanehha.co
+    port: 443
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: mps3FwmDjLrWaOVg
+
+  - name: "–Rose_Rtl_80"
+    type: ss
+    server: old.afoothabs.monster
+    port: 55330
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: frsa5DFzRANYPs5yMexsVUrC7d6NY8pvBRFn4g1WkF4R71Y5a6E6qYp3SxP2EaUh2yXsAKbTAm7SmL5qk5xMGoDRjH5F8BBU
+
+  - name: "–Rose_Rtl_81"
+    type: ss
+    server: admin.c4.webramz.co
+    port: 443
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 69MUii7VDwMqh7Hz
+
+  - name: "–Rose_Rtl_82"
+    type: ss
+    server: 45.87.175.192
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 1RWwXhwfAB5gAEozU4G2Pg
+
+  - name: "–Rose_Rtl_83"
+    type: ss
+    server: api.namasha.co
+    port: 443
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: u17T3BvpYaaiuW2c
+
+  - name: "–Rose_Rtl_84"
+    type: ss
+    server: series-a2.samanehha.co
+    port: 443
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: W74XFALLLuw6m5IA
+
+  - name: "–Rose_Rtl_85"
+    type: ss
+    server: 45.87.175.178
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 1RWwXhwfAB5gAEozU4G2Pg
+
+  - name: "–Rose_Rtl_86"
+    type: ss
+    server: 45.87.175.28
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: oZIoA69Q8yhcQV8ka3Pa3A
+
+  - name: "–Rose_Rtl_87"
+    type: ss
+    server: 45.87.175.192
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 4a2rfixophdjffa8KVA4Aa
+
+  - name: "–Rose_Rtl_88"
+    type: ss
+    server: 45.158.171.132
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: fbx1Fw7mENCd7vZMvorQZ5
+
+  - name: "–Rose_Rtl_89"
+    type: ss
+    server: 45.158.171.132
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 4a2rfixophdjffa8KVA4Aa
+
+  - name: "–Rose_Rtl_90"
+    type: ss
+    server: 45.87.175.171
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: QCXDxuDlTTMD7jtgHUjIoj
+
+  - name: "–Rose_Rtl_91"
+    type: ss
+    server: 45.158.171.132
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: QCXDxuDlTTMD7jtgHUjIoj
+
+  - name: "–Rose_Rtl_92"
+    type: ss
+    server: 45.87.175.192
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: cvII85TrW6n0OGyfpHVS1u
+
+  - name: "–Rose_Rtl_93"
+    type: ss
+    server: 45.144.48.63
+    port: 57456
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: d3837224ed465f00
+
+  - name: "–Rose_Wifi_94"
+    type: ss
+    server: 45.87.175.178
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 4a2rfixophdjffa8KVA4Aa
+
+  - name: "–Rose_Wifi_95"
+    type: ss
+    server: 185.47.255.22
+    port: 990
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: f8f7aCzcPKbsF8p3
+
+  - name: "–Rose_Mci_96"
+    type: ss
+    server: beesyar.org
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: QCXDxuDlTTMD7jtgHUjIoj
+
+  - name: "–Rose_Wifi_97"
+    type: ss
+    server: 81.19.141.45
+    port: 443
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 3TnQdgm2mVJQbuSCXmR5Vc
+
+  - name: "–Rose_Wifi_98"
+    type: ss
+    server: 45.87.175.157
+    port: 8080
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 1RWwXhwfAB5gAEozU4G2Pg
+
+  - name: "–Rose_Mci_99"
+    type: ss
+    server: 92.38.171.215
+    port: 31348
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 0RsrcFJ1vOsWEqg3P55hvaacKfuShT0cc1h0t8AD0NA8u1uR
+
+  - name: "–Rose_Mci_100"
+    type: ss
+    server: 92.118.205.228
+    port: 990
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: f8f7aCzcPKbsF8p3
+
+  - name: "–Rose_Mci_101"
+    type: ss
+    server: 185.93.173.218
+    port: 990
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: f8f7aCzcPKbsF8p3
+
+  - name: "–Rose_Wifi_102"
+    type: ss
+    server: 172.233.128.126
+    port: 1866
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: oXGp1+ihlfKg826H
+
+  - name: "–Rose_Rtl_103"
+    type: ss
+    server: portal.ninemakeda.cfd
+    port: 43669
+    udp: true
+    cipher: chacha20-ietf-poly1305
+    password: 23sUrwRcTBEAvxLS6VM6Aay57KQbws1upDAxr7Btf4hXu4gaUQW4BPbComjJjStM2JqJLDwVkteXL8V33k8eWkZR4UB8intz
+
+  - name: "–Rose_Rtl_470"
+    type: trojan
+    server: log.bpminecraft.com
+    port: 443
+    udp: true
+    password: vip
     network: ws
     ws-opts:
-      path: /vmess/
+      path: /?ed=2560
       headers:
-        Host: 3h-poland1.09vpn.com
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_471"
+    type: trojan
+    server: 89.187.181.179
+    port: 43118
+    udp: true
+    password: ypDt8RkT7J
+    tls: true
+    skip-cert-verify: true
+    servername: 89.187.181.179
+
+  - name: "–Rose_Rtl_472"
+    type: trojan
+    server: 104.18.42.163
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_473"
+    type: trojan
+    server: www.visa.com.sg
+    port: 8443
+    udp: true
+    password: trojan
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: pangpi.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: pangpi.pages.dev
+
+  - name: "–Rose_Rtl_474"
+    type: trojan
+    server: www.iplocation.net
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_475"
+    type: trojan
+    server: whatismyipaddress.com
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_476"
+    type: trojan
+    server: 172.66.44.230
+    port: 8443
+    udp: true
+    password: 8r<[9'l6hAO#8ZQi
+    network: ws
+    ws-opts:
+      path: /tro8sFW1S91B6sZrM1?ed=2560
+      headers:
+        Host: koma-yt.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: Koma-YT.PAGeS.Dev
+
+  - name: "–Rose_Rtl_477"
+    type: trojan
+    server: www.gco.gov.qa
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_478"
+    type: trojan
+    server: dcf741e8.epeius-2gy.pages.dev
+    port: 443
+    udp: true
+    password: auto
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: dcf741e8.epeius-2gy.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: dcf741e8.epeius-2gy.pages.dev
+
+  - name: "–Rose_Rtl_479"
+    type: trojan
+    server: www.iakeys.com
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_480"
+    type: trojan
+    server: 109.120.132.142
+    port: 2025
+    udp: true
+    password: vpn
+    network: ws
+    ws-opts:
+      path: /
     tls: true
     skip-cert-verify: true
     servername: 
 
-  - name: DE->DE->MCI->NGINX_958
-    type: vmess
-    server: 57.129.24.124
-    port: 443
+  - name: "–Rose_Rtl_481"
+    type: trojan
+    server: www.visa.com.hk
+    port: 8443
     udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
+    password: vip
     network: ws
     ws-opts:
-      path: /linkvws
+      path: /?ed=2560
       headers:
-        Host: aveiror.com
+        Host: heihu880.pages.dev
     tls: true
     skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    servername: heihu880.pages.dev
 
-  - name: CA->CA->MCI->NGINX_960
-    type: vmess
-    server: 15.235.83.227
+  - name: "–Rose_Rtl_482"
+    type: trojan
+    server: www.zsu.gov.ua
     port: 443
     udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
+    password: vip
     network: ws
     ws-opts:
-      path: /linkvws
+      path: /?ed=2560
       headers:
-        Host: mankadmu.com
+        Host: heihu880.pages.dev
     tls: true
     skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    servername: heihu880.pages.dev
 
-  - name: CA->CA->ADSL->NGINX_961
-    type: vmess
-    server: 15.235.83.227
+  - name: "–Rose_Rtl_483"
+    type: trojan
+    server: fbi.gov
     port: 443
     udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
+    password: vip
     network: ws
     ws-opts:
-      path: /linkvws
+      path: /?ed=2560
       headers:
-        Host: mankadmu.com
+        Host: heihu880.pages.dev
     tls: true
     skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    servername: heihu880.pages.dev
 
-  - name: US->US->MTN->NGINX_962
-    type: vmess
-    server: 2.58.87.221
-    port: 12269
+  - name: "–Rose_Rtl_484"
+    type: trojan
+    server: www.gov.se
+    port: 443
     udp: true
-    uuid: db85ff0e-c33f-401d-c415-4c7cce135704
-    alterId: 0
-    cipher: auto
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_485"
+    type: trojan
+    server: www.gov.ua
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_486"
+    type: trojan
+    server: 92.243.75.49
+    port: 2087
+    udp: true
+    password: wb6368
     network: ws
     ws-opts:
       path: /
+      headers:
+        Host: hsdgbuys.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: hsdgbuys.pages.dev
 
-  - name: US->US->ADL->_966
-    type: ss
-    server: 2.58.87.221
-    port: 16899
+  - name: "–Rose_Rtl_487"
+    type: trojan
+    server: iplocation.io
+    port: 443
     udp: true
-    cipher: aes-128-gcm
-    password: Yc2CtrIz8L
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
 
-  - name: US->US->RTL->NGINX_967
-    type: vmess
-    server: 2.58.87.221
-    port: 46628
+  - name: "–Rose_Rtl_488"
+    type: trojan
+    server: www.csgo.com
+    port: 443
     udp: true
-    uuid: f6ba9e5a-711c-496f-be60-ac5464dec2b8
-    alterId: 0
-    cipher: auto
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_489"
+    type: trojan
+    server: 104.25.165.81
+    port: 8443
+    udp: true
+    password: 123456
+    network: ws
+    ws-opts:
+      path: /Az1.vpn.33.TOP/?ed=2560
+      headers:
+        Host: top-azx.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: top-azx.pages.dev
+
+  - name: "–Rose_Rtl_490"
+    type: trojan
+    server: www.ipaddress.my
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_491"
+    type: trojan
+    server: 104.25.165.83
+    port: 8443
+    udp: true
+    password: 123456
+    network: ws
+    ws-opts:
+      path: /Az1.vpn.33.TOP/?ed=2560
+      headers:
+        Host: top-azx.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: top-azx.pages.dev
+
+  - name: "–Rose_Rtl_492"
+    type: trojan
+    server: koma-yt.pages.dev
+    port: 8443
+    udp: true
+    password: 8r<[9'l6hAO#8ZQi
+    network: ws
+    ws-opts:
+      path: /tro8sFW1S91B6sZrM1?ed=2560
+      headers:
+        Host: koma-yt.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: Koma-YT.PAGeS.Dev
+
+  - name: "–Rose_Rtl_493"
+    type: trojan
+    server: time.is
+    port: 2087
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_494"
+    type: trojan
+    server: 172.66.46.254
+    port: 443
+    udp: true
+    password: auto
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: dcf741e8.epeius-2gy.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: dcf741e8.epeius-2gy.pages.dev
+
+  - name: "–Rose_Rtl_495"
+    type: trojan
+    server: ip.sb
+    port: 8443
+    udp: true
+    password: trojan
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: fofang.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: fofang.pages.dev
+
+  - name: "–Rose_Rtl_496"
+    type: trojan
+    server: www.udemy.com
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_497"
+    type: trojan
+    server: singapore.com
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_498"
+    type: trojan
+    server: 104.25.165.83
+    port: 8443
+    udp: true
+    password: 123456
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: top-azx.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: top-azx.pages.dev
+
+  - name: "–Rose_Rtl_499"
+    type: trojan
+    server: 104.17.148.22
+    port: 443
+    udp: true
+    password: redfree8
+    network: ws
+    ws-opts:
+      path: /trTelegram@@M4Dvpn/?ed=2560
+      headers:
+        Host: redfree8-p1.pooriashop.ir
+    tls: true
+    skip-cert-verify: true
+    servername: redfree8-p1.pooriashop.ir
+
+  - name: "–Rose_Rtl_500"
+    type: trojan
+    server: www.wto.org
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_501"
+    type: trojan
+    server: 104.21.112.1
+    port: 443
+    udp: true
+    password: f8b7cd5e-60c4-4e95-9b7b-d561ef4eed8c
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: yellow-cloud-d53f.vavovi6084.workers.dev
+    tls: true
+    skip-cert-verify: true
+    servername: yellow-cloud-d53f.vavovi6084.workers.dev
+
+  - name: "–Rose_Rtl_502"
+    type: trojan
+    server: www.ipget.net
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_503"
+    type: trojan
+    server: 104.18.27.94
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_504"
+    type: trojan
+    server: www.pcmag.com
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_505"
+    type: trojan
+    server: www.udacity.com
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_506"
+    type: trojan
+    server: japan.com
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_507"
+    type: trojan
+    server: www.visa.com.tw
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Wifi_508"
+    type: trojan
+    server: 104.17.148.22
+    port: 80
+    udp: true
+    password: redfree8
+    network: ws
+    ws-opts:
+      path: /trLwW5jwrnymnOdqki?ed=2560
+      headers:
+        Host: redfree8-p1.pooriashop.ir
+    tls: true
+    skip-cert-verify: true
+    servername: 
+
+  - name: "–Rose_Mci_509"
+    type: trojan
+    server: 45.82.14.144
+    port: 2025
+    udp: true
+    password: vpn
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: dns.google.com
+    tls: true
+    skip-cert-verify: true
+    servername: 
+
+  - name: "–Rose_Mtn_510"
+    type: trojan
+    server: 38.207.133.204
+    port: 10002
+    udp: true
+    password: trojan
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: qingming-b08.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: qingming-b08.pages.dev
+
+  - name: "–Rose_Mtn_511"
+    type: trojan
+    server: 104.21.18.192
+    port: 443
+    udp: true
+    password: rXzh;?nW1GGKB(K8
+    network: ws
+    ws-opts:
+      path: /tr4BCdusB84159lWnu
+      headers:
+        Host: saikoxpubgm.zhkingkurd13.workers.dev
+    tls: true
+    skip-cert-verify: true
+    servername: sAiKOXpUbGm.ZhkinGkuRD13.WorkErs.dEV
+
+  - name: "–Rose_Mtn_512"
+    type: trojan
+    server: 109.120.132.142
+    port: 2025
+    udp: true
+    password: vpn
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: vkvd127.mycdn.me
+    tls: true
+    skip-cert-verify: true
+    servername: 
+
+  - name: "–Rose_Mtn_513"
+    type: trojan
+    server: 38.99.82.225
+    port: 443
+    udp: true
+    password: 71409d3e488548e8bb076d229778f008
+    tls: true
+    skip-cert-verify: true
+    servername: 
+
+  - name: "–Rose_Rtl_514"
+    type: trojan
+    server: edtunnel-dgp.pages.dev
+    port: 443
+    udp: true
+    password: vip
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: heihu880.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: heihu880.pages.dev
+
+  - name: "–Rose_Rtl_515"
+    type: trojan
+    server: 198.41.208.69
+    port: 8443
+    udp: true
+    password: 123456
+    network: ws
+    ws-opts:
+      path: /Az1.vpn.33.TOP/?ed=2560
+      headers:
+        Host: top-azx.pages.dev
+    tls: true
+    skip-cert-verify: true
+    servername: top-azx.pages.dev
+
+  - name: "–Rose_Rtl_516"
+    type: trojan
+    server: 109.120.132.80
+    port: 2025
+    udp: true
+    password: vpn
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: vkvd127.mycdn.me
+    tls: true
+    skip-cert-verify: true
+    servername: 
 
 proxy-groups:
-  - name: 🔰 auto
+  - name: 🟢 auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - US->->MTN->_1
-      - DE->DE->MTN->NGINX_3
-      - CN->CN->MTN->NGINX_6
-      - VE->NL->MTN->_7
-      - PL->PL->MTN->NGINX_8
-      - GB->->MTN->_10
-      - DE->DE->MTN->_11
-      - US->NL->MTN->_12
-      - VE->NL->MTN->_13
-      - US->NL->MTN->_15
-      - US->LU->MTN->NGINX_18
-      - US->LU->MTN->NGINX_19
-      - BR->BR->MTN->NGINX_23
-      - CN->CN->MTN->NGINX_24
-      - US->NL->MTN->_28
-      - VE->NL->MTN->_30
-      - US->NL->MTN->_31
-      - DE->DE->MTN->_32
-      - CA->LU->MTN->NGINX_33
-      - US->NL->MTN->_34
-      - VE->NL->MTN->_36
-      - LT->LT->MTN->_41
-      - US->NL->MTN->_43
-      - SG->SG->MTN->NGINX_45
-      - GB->->MTN->_46
-      - PL->PL->MTN->NGINX_48
-      - GB->->MTN->_49
-      - SG->SG->MTN->NGINX_50
-      - CN->CN->MTN->NGINX_51
-      - US->NL->MTN->_52
-      - GB->->MTN->_53
-      - US->NL->MTN->_58
-      - US->NL->MTN->_61
-      - NL->NL->MTN->_62
-      - CA->FR->MCI->NGINX_63
-      - DE->DE->MTN->_64
-      - US->NL->MCI->_65
-      - TH->TH->MCI->_70
-      - VE->NL->MCI->_71
-      - CN->CN->MCI->NGINX_73
-      - CN->CN->MCI->NGINX_74
-      - FR->FR->MCI->NGINX_75
-      - NL->NL->MCI->_76
-      - US->NL->MCI->_78
-      - VE->NL->MCI->_79
-      - ES->ES->MCI->_80
-      - US->NL->MCI->_81
-      - US->NL->MCI->_83
-      - CA->FR->MCI->NGINX_85
-      - NL->NL->ADSL->_87
-      - CN->CN->MCI->NGINX_88
-      - BR->->MCI->NGINX_89
-      - CA->CA->ADSL->NGINX_90
-      - US->NL->ADSL->_91
-      - DE->DE->ADSL->NGINX_95
-      - VE->NL->ADSL->_98
-      - TH->TH->ADSL->_101
-      - CN->CN->ADSL->NGINX_103
-      - CN->CN->ADSL->NGINX_104
-      - VE->NL->ADSL->_105
-      - GB->->ADSL->_107
-      - NO->->ADSL->_108
-      - VE->NL->ADSL->_109
-      - ES->ES->ADSL->_110
-      - NO->->ADSL->_111
-      - US->NL->ADSL->_112
-      - DE->DE->ADSL->_114
-      - US->US->ADSL->_115
-      - ES->ES->ADSL->NGINX_117
-      - CA->FR->ADSL->NGINX_122
-      - CN->CN->ADSL->NGINX_123
-      - BR->BR->ADSL->NGINX_125
-      - GB->->MTN->_129
-      - CA->CA->MTN->NGINX_130
-      - US->NL->MTN->_131
-      - US->NL->MTN->_132
-      - FI->FI->ADSL->_134
-      - US->NL->MTN->_136
-      - TW->TW->MTN->_139
-      - GB->->MTN->_140
-      - CA->FR->MTN->NGINX_141
-      - FI->FI->MTN->_142
-      - US->NL->MTN->_144
-      - FI->FI->MTN->_147
-      - FI->FI->MTN->_150
-      - VE->NL->MTN->_152
-      - FI->FI->MTN->_156
-      - FI->FI->MTN->_157
-      - FI->FI->MTN->_160
-      - FI->FI->MTN->_164
-      - PL->PL->MTN->_165
-      - FI->FI->MTN->_166
-      - FI->FI->MTN->_167
-      - FI->FI->MTN->_168
-      - FI->FI->MTN->_169
-      - FI->FI->MTN->_170
-      - VE->NL->MTN->_171
-      - US->NL->MTN->_172
-      - MY->MY->MTN->_174
-      - US->US->MTN->NGINX_175
-      - FI->FI->MTN->_177
-      - FI->FI->MTN->_178
-      - FI->FI->MTN->_179
-      - FI->FI->MTN->_180
-      - FI->FI->MTN->_181
-      - US->NL->MTN->_184
-      - US->NL->MTN->_188
-      - FI->FI->MTN->_190
-      - FI->FI->MTN->_191
-      - ID->ID->MTN->_192
-      - FI->FI->MTN->_193
-      - CA->FR->MTN->NGINX_194
-      - US->NL->MTN->_197
-      - GB->->MTN->_198
-      - FI->FI->MTN->_199
-      - FI->FI->MTN->_202
-      - US->NL->MTN->_203
-      - UA->UA->MTN->_210
-      - CN->->MTN->NGINX_214
-      - SG->SG->MTN->NGINX_215
-      - CN->CN->MTN->NGINX_217
-      - CA->FR->MTN->NGINX_218
-      - FI->FI->MTN->_219
-      - FI->FI->MTN->_220
-      - FI->FI->MTN->_221
-      - GB->->MTN->_225
-      - PL->PL->MTN->NGINX_227
-      - CA->FR->MTN->NGINX_229
-      - US->US->MTN->NGINX_232
-      - DE->DE->MTN->NGINX_236
-      - PL->PL->MTN->NGINX_237
-      - US->US->MTN->_240
-      - CN->CN->MTN->NGINX_241
-      - PH->PH->MTN->NGINX_242
-      - US->US->MTN->NGINX_244
-      - GB->->MTN->_245
-      - US->US->MTN->NGINX_246
-      - VE->NL->MTN->_247
-      - US->US->MTN->NGINX_248
-      - CA->CA->ADSL->_249
-      - VE->NL->ADSL->_250
-      - FI->FI->MTN->_251
-      - FI->FI->MTN->_252
-      - FI->FI->MTN->_253
-      - GT->GT->ADSL->_254
-      - NL->->ADSL->_256
-      - US->NL->MCI->_257
-      - CA->CA->MCI->_259
-      - FI->FI->MCI->_260
-      - CA->CA->MCI->NGINX_261
-      - CN->CN->MCI->NGINX_263
-      - CA->CA->ADSL->NGINX_265
-      - PL->PL->ADSL->NGINX_266
-      - FI->FI->ADSL->_270
-      - UA->UA->ADSL->_271
-      - US->US->ADSL->_272
-      - US->US->ADSL->_273
-      - US->US->ADSL->_275
-      - FR->FR->RTL->NGINX_279
-      - US->NL->RTL->_280
-      - US->US->RTL->_282
-      - FI->FI->RTL->_283
-      - FI->FI->RTL->_284
-      - FI->FI->RTL->_285
-      - FI->FI->RTL->_286
-      - FI->FI->RTL->_287
-      - FI->FI->RTL->_288
-      - CN->CN->RTL->NGINX_292
-      - US->US->RTL->NGINX_294
-      - CN->CN->RTL->NGINX_296
-      - GB->->RTL->_298
-      - DE->DE->RTL->NGINX_299
-      - FR->FR->RTL->NGINX_300
-      - US->NL->RTL->_301
-      - VE->NL->RTL->_302
-      - US->NL->RTL->_304
-      - US->US->RTL->_305
-      - FI->FI->RTL->_309
-      - US->NL->RTL->_311
-      - CA->FR->RTL->NGINX_315
-      - FI->FI->RTL->_316
-      - FI->FI->RTL->_318
-      - FI->FI->RTL->_319
-      - BR->BR->RTL->NGINX_323
-      - US->NL->RTL->_328
-      - US->US->RTL->_329
-      - FI->FI->RTL->_330
-      - FI->FI->RTL->_331
-      - FI->FI->RTL->_332
-      - FI->FI->RTL->_333
-      - FI->FI->RTL->_334
-      - FI->FI->RTL->_335
-      - US->NL->RTL->_336
-      - FI->FI->RTL->_337
-      - FI->FI->RTL->_338
-      - FI->FI->RTL->_339
-      - US->NL->RTL->_340
-      - SG->SG->RTL->NGINX_342
-      - CA->FR->RTL->NGINX_344
-      - US->US->ADL->_345
-      - GT->GT->RTL->_347
-      - VE->NL->RTL->_348
-      - FI->FI->RTL->_350
-      - US->US->MTN->_351
-      - FI->FI->RTL->_352
-      - GB->->MTN->_353
-      - US->US->MTN->NGINX_354
-      - GB->->MTN->_355
-      - MY->MY->MTN->NGINX_358
-      - FI->FI->MTN->_359
-      - US->NL->MTN->_361
-      - US->NL->MTN->_362
-      - CA->FR->MTN->NGINX_364
-      - CA->FR->MTN->NGINX_365
-      - IN->IN->MTN->NGINX_367
-      - US->NL->MTN->_370
-      - GB->->MTN->_372
-      - FI->FI->MTN->_373
-      - FI->FI->MTN->_374
-      - FI->FI->MTN->_375
-      - FI->FI->MTN->_376
-      - FI->FI->MTN->_377
-      - CA->FR->MTN->NGINX_378
-      - FI->FI->MTN->_381
-      - FI->FI->MTN->_382
-      - US->US->MTN->_384
-      - CN->CN->MTN->NGINX_385
-      - NL->NL->MTN->_388
-      - US->US->MTN->_389
-      - CA->CA->MTN->_390
-      - FI->FI->MTN->_391
-      - FI->FI->MTN->_392
-      - FI->FI->MTN->_393
-      - FI->FI->MTN->_394
-      - VE->NL->MTN->_395
-      - DE->DE->MTN->NGINX_399
-      - GB->->MTN->_401
-      - US->US->MTN->_404
-      - GB->->MTN->_406
-      - NL->NL->MTN->_408
-      - FI->FI->MTN->_410
-      - FI->FI->MTN->_411
-      - US->US->MTN->_412
-      - US->NL->MTN->_414
-      - FI->FI->MTN->_415
-      - US->US->MTN->NGINX_416
-      - FI->FI->MTN->_417
-      - FI->FI->MTN->_418
-      - FI->FI->MTN->_419
-      - FI->FI->MTN->_420
-      - VE->NL->MTN->_421
-      - VN->VN->MTN->_422
-      - FI->FI->MTN->_423
-      - FI->FI->MTN->_426
-      - FI->FI->MTN->_427
-      - FI->FI->MTN->_429
-      - GB->GB->MTN->_430
-      - SG->SG->MTN->NGINX_431
-      - US->NL->MTN->_432
-      - BR->BR->MTN->NGINX_433
-      - US->US->MTN->_434
-      - VN->VN->MTN->_435
-      - PL->PL->MTN->_436
-      - FI->FI->MTN->_437
-      - FR->FR->MTN->NGINX_438
-      - FR->FR->MTN->NGINX_439
-      - US->US->MTN->_440
-      - US->NL->MTN->_441
-      - FI->FI->MTN->_444
-      - NL->NL->MTN->_446
-      - VE->NL->MTN->_447
-      - SG->SG->MTN->NGINX_448
-      - SG->SG->MTN->NGINX_449
-      - SG->SG->MTN->NGINX_451
-      - US->NL->ADL->_453
-      - DE->DE->ADL->NGINX_454
-      - US->US->ADL->_456
-      - TW->TW->ADL->_461
-      - US->NL->ADL->_463
-      - US->US->ADL->_464
-      - PL->PL->ADL->NGINX_466
-      - CA->FR->ADL->NGINX_468
-      - FI->FI->ADL->_471
-      - US->US->ADL->_472
-      - CA->CA->ADL->_473
-      - MX->MX->ADL->_476
-      - US->NL->ADL->_477
-      - US->US->ADL->_479
-      - VE->NL->ADL->_483
-      - FR->FR->ADL->_484
-      - US->US->ADL->_485
-      - NL->NL->ADL->_490
-      - US->US->ADL->_492
-      - FI->FI->ADL->_493
-      - ES->ES->ADL->_494
-      - US->US->ADL->_495
-      - US->US->ADL->_496
-      - CA->FR->ADL->NGINX_497
-      - US->US->ADL->_498
-      - US->US->ADL->_502
-      - US->US->ADL->_503
-      - US->US->ADL->_506
-      - IL->IL->ADL->_508
-      - DE->DE->ADL->NGINX_509
-      - FR->FR->ADL->NGINX_510
-      - RU->RU->ADL->_511
-      - US->NL->ADL->_512
-      - DE->DE->ADL->NGINX_513
-      - MY->MY->ADL->_514
-      - US->US->ADL->_517
-      - TR->TR->ADL->_518
-      - US->US->ADL->_519
-      - FI->FI->ADL->_521
-      - US->US->ADL->_523
-      - US->NL->ADL->_525
-      - US->NL->ADL->_527
-      - CH->CH->ADL->_529
-      - ID->ID->ADL->_530
-      - US->NL->ADL->_531
-      - US->US->ADL->_533
-      - CA->FR->ADL->NGINX_536
-      - US->NL->ADL->_538
-      - US->US->ADL->_541
-      - US->US->ADL->_543
-      - NL->NL->ADL->_544
-      - US->US->ADL->_547
-      - DE->DE->ADL->NGINX_548
-      - US->US->ADL->_549
-      - AR->AR->ADL->_551
-      - US->US->ADL->_552
-      - US->NL->ADL->_553
-      - CR->CR->ADL->_556
-      - US->US->ADL->_557
-      - US->US->ADL->_559
-      - US->US->ADL->_560
-      - CA->CA->ADL->_561
-      - BR->BR->ADL->NGINX_562
-      - US->US->ADL->_563
-      - GB->GB->RTL->_567
-      - NL->NL->RTL->_568
-      - US->NL->RTL->_569
-      - US->NL->ADL->_570
-      - US->NL->ADL->_571
-      - VE->NL->RTL->_572
-      - CN->CN->RTL->NGINX_573
-      - US->NL->RTL->_575
-      - FI->FI->RTL->_577
-      - UA->UA->RTL->_579
-      - US->US->RTL->_580
-      - FR->FR->RTL->NGINX_583
-      - US->US->RTL->NGINX_584
-      - FI->FI->RTL->_586
-      - CA->CA->RTL->NGINX_588
-      - US->NL->RTL->_591
-      - VE->NL->RTL->_593
-      - US->NL->RTL->_594
-      - FI->FI->RTL->_595
-      - FI->FI->RTL->_596
-      - US->NL->RTL->_597
-      - FI->FI->RTL->_599
-      - DE->DE->RTL->NGINX_600
-      - FR->FR->RTL->NGINX_602
-      - US->NL->RTL->_604
-      - FI->FI->RTL->_606
-      - FI->FI->RTL->_607
-      - FI->FI->RTL->_608
-      - US->NL->RTL->_610
-      - VE->NL->ADL->_612
-      - SG->SG->ADL->NGINX_615
-      - CN->CN->ADL->NGINX_617
-      - US->US->ADL->_620
-      - CN->CN->ADL->NGINX_621
-      - US->US->ADL->_622
-      - US->US->ADL->_623
-      - JP->JP->ADL->_626
-      - PL->PL->ADL->NGINX_627
-      - NL->NL->ADL->_630
-      - US->US->ADL->_634
-      - US->US->ADL->_638
-      - US->US->ADL->_640
-      - US->US->ADL->_641
-      - US->US->ADL->_642
-      - GR->GR->ADL->_646
-      - US->US->ADL->_648
-      - CA->FR->ADL->NGINX_649
-      - US->US->ADL->_650
-      - US->US->ADL->_651
-      - US->US->ADL->_652
-      - DE->DE->ADL->_653
-      - US->US->ADL->_656
-      - CA->FR->ADL->NGINX_657
-      - US->US->ADL->_658
-      - BO->BO->ADL->_659
-      - PH->PH->ADL->NGINX_660
-      - US->US->ADL->_661
-      - US->US->ADL->_664
-      - CN->CN->ADL->NGINX_666
-      - US->US->ADL->NGINX_669
-      - US->US->ADL->_670
-      - VE->NL->ADL->_674
-      - US->US->ADL->NGINX_675
-      - US->US->ADL->_677
-      - US->US->ADL->_678
-      - US->NL->ADL->_679
-      - EC->EC->ADL->_682
-      - MY->MY->ADL->NGINX_683
-      - US->US->ADL->NGINX_684
-      - US->US->ADL->_685
-      - VE->NL->RTL->_692
-      - FI->FI->RTL->_694
-      - FR->FR->RTL->NGINX_696
-      - FI->FI->RTL->_698
-      - GB->->RTL->_700
-      - FI->FI->RTL->_701
-      - US->NL->RTL->_703
-      - US->US->RTL->_706
-      - VE->NL->RTL->_711
-      - FR->FR->RTL->NGINX_712
-      - US->NL->RTL->_713
-      - PL->PL->RTL->_714
-      - US->US->RTL->NGINX_719
-      - CA->FR->RTL->NGINX_723
-      - US->NL->RTL->_725
-      - US->NL->RTL->_726
-      - US->NL->RTL->_727
-      - US->NL->RTL->_730
-      - GB->->RTL->_733
-      - US->NL->RTL->_735
-      - BR->BR->RTL->NGINX_736
-      - FR->FR->RTL->NGINX_738
-      - DE->DE->RTL->NGINX_742
-      - GB->->RTL->_747
-      - BR->BR->RTL->NGINX_752
-      - US->NL->RTL->_753
-      - VE->NL->RTL->_754
-      - MX->US->RTL->NGINX_755
-      - US->NL->RTL->_756
-      - CN->CN->RTL->NGINX_759
-      - US->US->RTL->_761
-      - US->NL->RTL->_762
-      - CN->CN->RTL->NGINX_763
-      - US->NL->RTL->_764
-      - PL->PL->RTL->NGINX_766
-      - VE->NL->RTL->_768
-      - IN->IN->RTL->_769
-      - GB->->RTL->_771
-      - US->US->RTL->_773
-      - US->US->RTL->_775
-      - US->US->RTL->_778
-      - US->US->RTL->NGINX_781
-      - US->NL->RTL->_786
-      - CA->FR->RTL->NGINX_787
-      - FR->FR->RTL->NGINX_788
-      - CA->FR->RTL->NGINX_789
-      - US->US->RTL->_791
-      - PL->PL->RTL->NGINX_792
-      - PH->PH->RTL->NGINX_795
-      - IN->IN->RTL->_796
-      - CN->CN->RTL->NGINX_797
-      - US->US->RTL->_798
-      - US->NL->RTL->_799
-      - DE->DE->MTN->NGINX_801
-      - DE->DE->MTN->NGINX_813
-      - FR->FR->MTN->NGINX_819
-      - DE->DE->MCI->NGINX_822
-      - DE->DE->MCI->NGINX_827
-      - PL->PL->MCI->NGINX_833
-      - CA->FR->MCI->NGINX_834
-      - DE->DE->ADSL->NGINX_837
-      - FR->FR->ADSL->NGINX_838
-      - PL->->ADSL->_842
-      - DE->DE->ADSL->NGINX_845
-      - PL->PL->ADSL->NGINX_848
-      - CA->TR->ADSL->NGINX_849
-      - DE->DE->ADSL->NGINX_855
-      - FR->FR->MTN->NGINX_856
-      - FR->FR->MTN->NGINX_860
-      - CA->FR->MTN->NGINX_861
-      - SG->SG->MTN->NGINX_863
-      - FR->FR->MTN->NGINX_864
-      - CA->FR->MTN->NGINX_865
-      - US->US->MTN->NGINX_866
-      - CA->FR->MTN->NGINX_867
-      - CA->CA->MTN->NGINX_869
-      - FR->FR->MTN->NGINX_870
-      - HK->->MCI->_874
-      - US->US->MCI->NGINX_875
-      - US->US->ADSL->NGINX_876
-      - CA->FR->RTL->NGINX_878
-      - DE->DE->RTL->NGINX_879
-      - DE->DE->RTL->NGINX_880
-      - US->US->RTL->NGINX_883
-      - DE->DE->RTL->NGINX_884
-      - PL->PL->RTL->NGINX_885
-      - DE->DE->RTL->NGINX_887
-      - US->US->MTN->NGINX_888
-      - DE->DE->MTN->NGINX_891
-      - PL->PL->MTN->NGINX_893
-      - DE->DE->MTN->NGINX_894
-      - US->US->MTN->NGINX_899
-      - DE->DE->MTN->NGINX_900
-      - VE->NL->MTN->_904
-      - DE->DE->ADL->NGINX_908
-      - CA->FR->ADL->NGINX_912
-      - US->US->ADL->NGINX_913
-      - BR->BR->ADL->NGINX_914
-      - DE->DE->ADL->NGINX_916
-      - CA->CA->RTL->NGINX_917
-      - US->US->RTL->NGINX_918
-      - VE->NL->RTL->_922
-      - CA->CA->RTL->NGINX_924
-      - US->US->RTL->NGINX_925
-      - FI->FI->RTL->_926
-      - US->US->ADL->NGINX_927
-      - US->US->ADL->NGINX_928
-      - CA->CA->ADL->NGINX_933
-      - PL->PL->ADL->NGINX_935
-      - CA->CA->ADL->_938
-      - CA->FR->ADL->NGINX_939
-      - US->US->ADL->NGINX_941
-      - CA->FR->RTL->NGINX_943
-      - SG->SG->RTL->NGINX_944
-      - FI->FI->RTL->_948
-      - US->US->RTL->NGINX_949
-      - CA->CA->RTL->NGINX_952
-      - DE->DE->RTL->NGINX_954
-      - CN->CN->MTN->NGINX_956
-      - PL->PL->MTN->NGINX_957
-      - DE->DE->MCI->NGINX_958
-      - CA->CA->MCI->NGINX_960
-      - CA->CA->ADSL->NGINX_961
-      - US->US->MTN->NGINX_962
-      - US->US->ADL->_966
-      - US->US->RTL->NGINX_967
+      - "–Rose_Rtl_0"
+      - "–Rose_Rtl_1"
+      - "–Rose_Rtl_2"
+      - "–Rose_Rtl_3"
+      - "–Rose_Rtl_4"
+      - "–Rose_Rtl_5"
+      - "–Rose_Rtl_6"
+      - "–Rose_Rtl_7"
+      - "–Rose_Rtl_8"
+      - "–Rose_Rtl_9"
+      - "–Rose_Rtl_10"
+      - "–Rose_Rtl_11"
+      - "–Rose_Rtl_12"
+      - "–Rose_Rtl_13"
+      - "–Rose_Rtl_14"
+      - "–Rose_Rtl_15"
+      - "–Rose_Rtl_16"
+      - "–Rose_Rtl_17"
+      - "–Rose_Mci_18"
+      - "–Rose_Mci_19"
+      - "–Rose_Rtl_20"
+      - "–Rose_Rtl_21"
+      - "–Rose_Rtl_22"
+      - "–Rose_Mtn_23"
+      - "–Rose_Mtn_24"
+      - "–Rose_Wifi_25"
+      - "–Rose_Wifi_26"
+      - "–Rose_Wifi_27"
+      - "–Rose_Wifi_28"
+      - "–Rose_Wifi_29"
+      - "–Rose_Wifi_30"
+      - "–Rose_Wifi_31"
+      - "–Rose_Mci_32"
+      - "–Rose_Wifi_33"
+      - "–Rose_Mci_34"
+      - "–Rose_Wifi_35"
+      - "–Rose_Wifi_36"
+      - "–Rose_Mci_37"
+      - "–Rose_Mci_38"
+      - "–Rose_Mci_39"
+      - "–Rose_Mtn_40"
+      - "–Rose_Mci_41"
+      - "–Rose_Mtn_42"
+      - "–Rose_Mtn_43"
+      - "–Rose_Mtn_44"
+      - "–Rose_Mtn_45"
+      - "–Rose_Mtn_46"
+      - "–Rose_Wifi_47"
+      - "–Rose_Mci_48"
+      - "–Rose_Mci_49"
+      - "–Rose_Mci_50"
+      - "–Rose_Wifi_51"
+      - "–Rose_Wifi_52"
+      - "–Rose_Mci_53"
+      - "–Rose_Rtl_54"
+      - "–Rose_Mtn_55"
+      - "–Rose_Mtn_56"
+      - "–Rose_Mci_57"
+      - "–Rose_Mci_58"
+      - "–Rose_Mci_59"
+      - "–Rose_Mci_60"
+      - "–Rose_Rtl_61"
+      - "–Rose_Rtl_62"
+      - "–Rose_Rtl_63"
+      - "–Rose_Rtl_64"
+      - "–Rose_Rtl_65"
+      - "–Rose_Rtl_66"
+      - "–Rose_Rtl_67"
+      - "–Rose_Rtl_68"
+      - "–Rose_Rtl_69"
+      - "–Rose_Rtl_70"
+      - "–Rose_Rtl_71"
+      - "–Rose_Rtl_72"
+      - "–Rose_Rtl_73"
+      - "–Rose_Rtl_74"
+      - "–Rose_Rtl_75"
+      - "–Rose_Rtl_76"
+      - "–Rose_Rtl_77"
+      - "–Rose_Rtl_78"
+      - "–Rose_Rtl_79"
+      - "–Rose_Rtl_80"
+      - "–Rose_Rtl_81"
+      - "–Rose_Rtl_82"
+      - "–Rose_Rtl_83"
+      - "–Rose_Rtl_84"
+      - "–Rose_Rtl_85"
+      - "–Rose_Rtl_86"
+      - "–Rose_Rtl_87"
+      - "–Rose_Rtl_88"
+      - "–Rose_Rtl_89"
+      - "–Rose_Rtl_90"
+      - "–Rose_Rtl_91"
+      - "–Rose_Rtl_92"
+      - "–Rose_Rtl_93"
+      - "–Rose_Wifi_94"
+      - "–Rose_Wifi_95"
+      - "–Rose_Mci_96"
+      - "–Rose_Wifi_97"
+      - "–Rose_Wifi_98"
+      - "–Rose_Mci_99"
+      - "–Rose_Mci_100"
+      - "–Rose_Mci_101"
+      - "–Rose_Wifi_102"
+      - "–Rose_Rtl_103"
+      - "–Rose_Rtl_470"
+      - "–Rose_Rtl_471"
+      - "–Rose_Rtl_472"
+      - "–Rose_Rtl_473"
+      - "–Rose_Rtl_474"
+      - "–Rose_Rtl_475"
+      - "–Rose_Rtl_476"
+      - "–Rose_Rtl_477"
+      - "–Rose_Rtl_478"
+      - "–Rose_Rtl_479"
+      - "–Rose_Rtl_480"
+      - "–Rose_Rtl_481"
+      - "–Rose_Rtl_482"
+      - "–Rose_Rtl_483"
+      - "–Rose_Rtl_484"
+      - "–Rose_Rtl_485"
+      - "–Rose_Rtl_486"
+      - "–Rose_Rtl_487"
+      - "–Rose_Rtl_488"
+      - "–Rose_Rtl_489"
+      - "–Rose_Rtl_490"
+      - "–Rose_Rtl_491"
+      - "–Rose_Rtl_492"
+      - "–Rose_Rtl_493"
+      - "–Rose_Rtl_494"
+      - "–Rose_Rtl_495"
+      - "–Rose_Rtl_496"
+      - "–Rose_Rtl_497"
+      - "–Rose_Rtl_498"
+      - "–Rose_Rtl_499"
+      - "–Rose_Rtl_500"
+      - "–Rose_Rtl_501"
+      - "–Rose_Rtl_502"
+      - "–Rose_Rtl_503"
+      - "–Rose_Rtl_504"
+      - "–Rose_Rtl_505"
+      - "–Rose_Rtl_506"
+      - "–Rose_Rtl_507"
+      - "–Rose_Wifi_508"
+      - "–Rose_Mci_509"
+      - "–Rose_Mtn_510"
+      - "–Rose_Mtn_511"
+      - "–Rose_Mtn_512"
+      - "–Rose_Mtn_513"
+      - "–Rose_Rtl_514"
+      - "–Rose_Rtl_515"
+      - "–Rose_Rtl_516"
 rules:
- - MATCH,🔰 auto
- 
+ - MATCH,🟢 auto
