@@ -3,7 +3,7 @@ allow-lan: true
 mode: Rule
 log-level: silent
 proxies:
-  - name: "–Rose_Rtl_0"
+  - name: –Rose_Rtl_0
     type: vmess
     server: yal.fxlcn.com
     port: 45263
@@ -12,7 +12,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Rtl_1"
+  - name: –Rose_Rtl_1
     type: vmess
     server: 57.129.24.124
     port: 443
@@ -29,7 +29,7 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: "–Rose_Rtl_2"
+  - name: –Rose_Rtl_2
     type: vmess
     server: 104.17.148.22
     port: 443
@@ -46,7 +46,7 @@ proxies:
     skip-cert-verify: true
     servername: bitter-boat-6004.samineh-sfri-95.workers.dev
 
-  - name: "–Rose_Rtl_3"
+  - name: –Rose_Rtl_3
     type: vmess
     server: 64f6e0b2-sw1z40-t51bp0-1nyy5.hgc1.tcpbbr.net
     port: 8080
@@ -58,7 +58,7 @@ proxies:
     ws-opts:
       path: /
 
-  - name: "–Rose_Rtl_4"
+  - name: –Rose_Rtl_4
     type: vmess
     server: lt.fxlcn.com
     port: 45276
@@ -67,7 +67,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Rtl_5"
+  - name: –Rose_Rtl_5
     type: vmess
     server: cf.fovi.tk
     port: 443
@@ -84,7 +84,7 @@ proxies:
     skip-cert-verify: true
     servername: foxlux.fovi.tk
 
-  - name: "–Rose_Rtl_6"
+  - name: –Rose_Rtl_6
     type: vmess
     server: 172.67.51.186
     port: 443
@@ -101,7 +101,7 @@ proxies:
     skip-cert-verify: true
     servername: foxlux.fovi.tk
 
-  - name: "–Rose_Rtl_7"
+  - name: –Rose_Rtl_7
     type: vmess
     server: pq-brazil1.09vpn.com
     port: 80
@@ -115,7 +115,7 @@ proxies:
       headers:
         Host: pq-brazil1.09vpn.com
 
-  - name: "–Rose_Rtl_8"
+  - name: –Rose_Rtl_8
     type: vmess
     server: ye.fxlcn.com
     port: 45246
@@ -124,7 +124,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Rtl_9"
+  - name: –Rose_Rtl_9
     type: vmess
     server: orvps2.horsenma.net
     port: 8443
@@ -141,7 +141,7 @@ proxies:
     skip-cert-verify: true
     servername: orvps2.horsenma.net
 
-  - name: "–Rose_Rtl_10"
+  - name: –Rose_Rtl_10
     type: vmess
     server: 5.253.41.147
     port: 27750
@@ -150,7 +150,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Rtl_11"
+  - name: –Rose_Rtl_11
     type: vmess
     server: cf.fovi.tk
     port: 443
@@ -167,7 +167,7 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: "–Rose_Rtl_12"
+  - name: –Rose_Rtl_12
     type: vmess
     server: lt.fxlcn.com
     port: 45271
@@ -176,7 +176,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Rtl_13"
+  - name: –Rose_Rtl_13
     type: vmess
     server: ysl.fxlcn.com
     port: 45419
@@ -185,7 +185,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Rtl_14"
+  - name: –Rose_Rtl_14
     type: vmess
     server: 120.26.55.225
     port: 50002
@@ -194,7 +194,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Rtl_15"
+  - name: –Rose_Rtl_15
     type: vmess
     server: 57.129.24.125
     port: 443
@@ -211,7 +211,7 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: "–Rose_Rtl_16"
+  - name: –Rose_Rtl_16
     type: vmess
     server: 51.79.103.76
     port: 80
@@ -223,7 +223,7 @@ proxies:
     ws-opts:
       path: /IOebhLMhl1CTbFHbL95myfRX2
 
-  - name: "–Rose_Rtl_17"
+  - name: –Rose_Rtl_17
     type: vmess
     server: 94.136.185.230
     port: 10534
@@ -232,7 +232,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Mci_18"
+  - name: –Rose_Mci_18
     type: vmess
     server: lt.fxlcn.com
     port: 45417
@@ -241,7 +241,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Mci_19"
+  - name: –Rose_Mci_19
     type: vmess
     server: lt.fxlcn.com
     port: 45235
@@ -250,7 +250,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Rtl_20"
+  - name: –Rose_Rtl_20
     type: vmess
     server: 43b5a616-sw04g0-swasv3-luwe.hgc1.tcpbbr.net
     port: 8080
@@ -264,7 +264,7 @@ proxies:
       headers:
         Host: 43b5a616-sw04g0-swasv3-luwe.hgc1.tcpbbr.net
 
-  - name: "–Rose_Rtl_21"
+  - name: –Rose_Rtl_21
     type: vmess
     server: ysl.fxlcn.com
     port: 45229
@@ -273,7 +273,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Rtl_22"
+  - name: –Rose_Rtl_22
     type: vmess
     server: 57.129.24.124
     port: 443
@@ -288,7 +288,7 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: "–Rose_Mtn_23"
+  - name: –Rose_Mtn_23
     type: vmess
     server: pq-brazil1.09vpn.com
     port: 80
@@ -300,7 +300,7 @@ proxies:
     ws-opts:
       path: /vmess/
 
-  - name: "–Rose_Mtn_24"
+  - name: –Rose_Mtn_24
     type: vmess
     server: cf.fovi.tk
     port: 443
@@ -317,7 +317,7 @@ proxies:
     skip-cert-verify: true
     servername: cf.fovi.tk
 
-  - name: "–Rose_Wifi_25"
+  - name: –Rose_Wifi_25
     type: vmess
     server: 45.12.145.111
     port: 46290
@@ -326,7 +326,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Wifi_26"
+  - name: –Rose_Wifi_26
     type: vmess
     server: 84.247.146.161
     port: 39530
@@ -335,7 +335,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Wifi_27"
+  - name: –Rose_Wifi_27
     type: vmess
     server: 120.210.205.59
     port: 50002
@@ -344,7 +344,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Wifi_28"
+  - name: –Rose_Wifi_28
     type: vmess
     server: codepen.io
     port: 443
@@ -361,7 +361,7 @@ proxies:
     skip-cert-verify: true
     servername: farid.1.berozha.ir
 
-  - name: "–Rose_Wifi_29"
+  - name: –Rose_Wifi_29
     type: vmess
     server: lt.fxlcn.com
     port: 45291
@@ -370,7 +370,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Wifi_30"
+  - name: –Rose_Wifi_30
     type: vmess
     server: lt.fxlcn.com
     port: 45233
@@ -379,7 +379,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Wifi_31"
+  - name: –Rose_Wifi_31
     type: vmess
     server: 146.59.55.50
     port: 443
@@ -396,7 +396,7 @@ proxies:
     skip-cert-verify: true
     servername: o.metuji.com
 
-  - name: "–Rose_Mci_32"
+  - name: –Rose_Mci_32
     type: vmess
     server: 47.116.166.178
     port: 50002
@@ -405,7 +405,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Wifi_33"
+  - name: –Rose_Wifi_33
     type: vmess
     server: 57.129.24.124
     port: 443
@@ -422,7 +422,7 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: "–Rose_Mci_34"
+  - name: –Rose_Mci_34
     type: vmess
     server: 15.204.249.0
     port: 48160
@@ -431,7 +431,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Wifi_35"
+  - name: –Rose_Wifi_35
     type: vmess
     server: 84.247.148.192
     port: 44396
@@ -440,7 +440,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Wifi_36"
+  - name: –Rose_Wifi_36
     type: vmess
     server: 84.247.149.77
     port: 47211
@@ -449,7 +449,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Mci_37"
+  - name: –Rose_Mci_37
     type: vmess
     server: yal.fxlcn.com
     port: 45272
@@ -458,7 +458,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Mci_38"
+  - name: –Rose_Mci_38
     type: vmess
     server: yal.fxlcn.com
     port: 45273
@@ -467,7 +467,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Mci_39"
+  - name: –Rose_Mci_39
     type: vmess
     server: 154.26.129.247
     port: 57143
@@ -476,7 +476,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Mtn_40"
+  - name: –Rose_Mtn_40
     type: vmess
     server: 185.189.32.179
     port: 48737
@@ -485,7 +485,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Mci_41"
+  - name: –Rose_Mci_41
     type: vmess
     server: 57.129.28.69
     port: 443
@@ -502,7 +502,7 @@ proxies:
     skip-cert-verify: true
     servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
 
-  - name: "–Rose_Mtn_42"
+  - name: –Rose_Mtn_42
     type: vmess
     server: 51.79.102.253
     port: 80
@@ -516,7 +516,7 @@ proxies:
       headers:
         Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
 
-  - name: "–Rose_Mtn_43"
+  - name: –Rose_Mtn_43
     type: vmess
     server: 57.129.25.20
     port: 443
@@ -531,7 +531,7 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: "–Rose_Mtn_44"
+  - name: –Rose_Mtn_44
     type: vmess
     server: 57.129.25.22
     port: 443
@@ -546,7 +546,7 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: "–Rose_Mtn_45"
+  - name: –Rose_Mtn_45
     type: vmess
     server: 47.104.186.133
     port: 50002
@@ -555,7 +555,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Mtn_46"
+  - name: –Rose_Mtn_46
     type: vmess
     server: 57.129.24.124
     port: 443
@@ -572,7 +572,7 @@ proxies:
     skip-cert-verify: true
     servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
 
-  - name: "–Rose_Wifi_47"
+  - name: –Rose_Wifi_47
     type: vmess
     server: 43.153.104.62
     port: 45113
@@ -584,7 +584,7 @@ proxies:
     ws-opts:
       path: /97cc0323
 
-  - name: "–Rose_Mci_48"
+  - name: –Rose_Mci_48
     type: vmess
     server: 62.146.233.112
     port: 36712
@@ -593,7 +593,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Mci_49"
+  - name: –Rose_Mci_49
     type: vmess
     server: 57.129.25.25
     port: 443
@@ -610,7 +610,7 @@ proxies:
     skip-cert-verify: true
     servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
 
-  - name: "–Rose_Mci_50"
+  - name: –Rose_Mci_50
     type: vmess
     server: 47.92.152.169
     port: 50002
@@ -619,7 +619,7 @@ proxies:
     alterId: 64
     cipher: auto
 
-  - name: "–Rose_Wifi_51"
+  - name: –Rose_Wifi_51
     type: vmess
     server: 57.129.28.65
     port: 443
@@ -636,7 +636,7 @@ proxies:
     skip-cert-verify: true
     servername: kapelleng.com
 
-  - name: "–Rose_Wifi_52"
+  - name: –Rose_Wifi_52
     type: vmess
     server: 57.129.25.22
     port: 443
@@ -653,7 +653,7 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: "–Rose_Mci_53"
+  - name: –Rose_Mci_53
     type: vmess
     server: 95.164.4.140
     port: 52937
@@ -662,7 +662,7 @@ proxies:
     alterId: 0
     cipher: auto
 
-  - name: "–Rose_Rtl_54"
+  - name: –Rose_Rtl_54
     type: vmess
     server: 112.132.215.12
     port: 50002
@@ -671,7 +671,7 @@ proxies:
     alterId: 64
     cipher: auto
 
-  - name: "–Rose_Mtn_55"
+  - name: –Rose_Mtn_55
     type: ss
     server: admin.c2.webramz.co
     port: 443
@@ -679,7 +679,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: WstuSnlu4ieA9M0L
 
-  - name: "–Rose_Mtn_56"
+  - name: –Rose_Mtn_56
     type: ss
     server: admin.c1.webramz.co
     port: 443
@@ -687,7 +687,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: W74XFALLLuw6m5IA
 
-  - name: "–Rose_Mci_57"
+  - name: –Rose_Mci_57
     type: ss
     server: admin.c3.webramz.co
     port: 443
@@ -695,7 +695,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: AlCsBGpsejHdVCME
 
-  - name: "–Rose_Mci_58"
+  - name: –Rose_Mci_58
     type: ss
     server: series-a2-mec.varzesh360.co
     port: 443
@@ -703,7 +703,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: u17T3BvpYaaiuW2c
 
-  - name: "–Rose_Mci_59"
+  - name: –Rose_Mci_59
     type: ss
     server: 185.47.253.227
     port: 990
@@ -711,7 +711,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "–Rose_Mci_60"
+  - name: –Rose_Mci_60
     type: ss
     server: freakconfig13.felafel.org
     port: 443
@@ -719,7 +719,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 1xO2cqPazqjGfCfd
 
-  - name: "–Rose_Rtl_61"
+  - name: –Rose_Rtl_61
     type: ss
     server: exchange.gameaurela.click
     port: 52952
@@ -727,7 +727,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj
 
-  - name: "–Rose_Rtl_62"
+  - name: –Rose_Rtl_62
     type: ss
     server: beesyar.org
     port: 8080
@@ -735,7 +735,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "–Rose_Rtl_63"
+  - name: –Rose_Rtl_63
     type: ss
     server: 45.87.175.192
     port: 8080
@@ -743,7 +743,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: QCXDxuDlTTMD7jtgHUjIoj
 
-  - name: "–Rose_Rtl_64"
+  - name: –Rose_Rtl_64
     type: ss
     server: 45.87.175.171
     port: 8080
@@ -751,7 +751,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
 
-  - name: "–Rose_Rtl_65"
+  - name: –Rose_Rtl_65
     type: ss
     server: 45.87.175.35
     port: 8080
@@ -759,7 +759,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oZIoA69Q8yhcQV8ka3Pa3A
 
-  - name: "–Rose_Rtl_66"
+  - name: –Rose_Rtl_66
     type: ss
     server: 166.1.157.228
     port: 55330
@@ -767,7 +767,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: rtR4YX74vwqRJu9MGH3e1N3CQdGMWCUFkyLisijiFuvhkU9McV5TpygfkernJ4UQe63JtcDQkrQ9HfchzqQz1kLCnTRor8jg
 
-  - name: "–Rose_Rtl_67"
+  - name: –Rose_Rtl_67
     type: ss
     server: 45.87.175.171
     port: 8080
@@ -775,7 +775,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "–Rose_Rtl_68"
+  - name: –Rose_Rtl_68
     type: ss
     server: 45.158.171.151
     port: 8080
@@ -783,7 +783,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: QCXDxuDlTTMD7jtgHUjIoj
 
-  - name: "–Rose_Rtl_69"
+  - name: –Rose_Rtl_69
     type: ss
     server: beta.mattenadene.org
     port: 54075
@@ -791,7 +791,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: o38yuvzSe3m5aDNpHtUPH1zGwbGEXXMDsGwVaub2SYEmHUa2WGZUjiezX3Vvva9CCzpjxYtuJLgKsSnsyKBf9ciPVba3y4o3
 
-  - name: "–Rose_Rtl_70"
+  - name: –Rose_Rtl_70
     type: ss
     server: 45.158.171.151
     port: 8080
@@ -799,7 +799,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "–Rose_Rtl_71"
+  - name: –Rose_Rtl_71
     type: ss
     server: 45.87.175.157
     port: 8080
@@ -807,7 +807,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
 
-  - name: "–Rose_Rtl_72"
+  - name: –Rose_Rtl_72
     type: ss
     server: 94.131.21.174
     port: 54075
@@ -815,7 +815,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: o38yuvzSe3m5aDNpHtUPH1zGwbGEXXMDsGwVaub2SYEmHUa2WGZUjiezX3Vvva9CCzpjxYtuJLgKsSnsyKBf9ciPVba3y4o3
 
-  - name: "–Rose_Rtl_73"
+  - name: –Rose_Rtl_73
     type: ss
     server: 45.87.175.10
     port: 8080
@@ -823,7 +823,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oZIoA69Q8yhcQV8ka3Pa3A
 
-  - name: "–Rose_Rtl_74"
+  - name: –Rose_Rtl_74
     type: ss
     server: series-a1.samanehha.co
     port: 443
@@ -831,7 +831,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: W74XFALLLuw6m5IA
 
-  - name: "–Rose_Rtl_75"
+  - name: –Rose_Rtl_75
     type: ss
     server: 45.158.171.151
     port: 8080
@@ -839,7 +839,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 1RWwXhwfAB5gAEozU4G2Pg
 
-  - name: "–Rose_Rtl_76"
+  - name: –Rose_Rtl_76
     type: ss
     server: 45.158.171.132
     port: 8080
@@ -847,7 +847,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 1RWwXhwfAB5gAEozU4G2Pg
 
-  - name: "–Rose_Rtl_77"
+  - name: –Rose_Rtl_77
     type: ss
     server: series-a2.samanehha.co
     port: 443
@@ -855,7 +855,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: mps3FwmDjLrWaOVg
 
-  - name: "–Rose_Rtl_78"
+  - name: –Rose_Rtl_78
     type: ss
     server: 45.87.175.171
     port: 8080
@@ -863,7 +863,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 1RWwXhwfAB5gAEozU4G2Pg
 
-  - name: "–Rose_Rtl_79"
+  - name: –Rose_Rtl_79
     type: ss
     server: series-a1.samanehha.co
     port: 443
@@ -871,7 +871,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: mps3FwmDjLrWaOVg
 
-  - name: "–Rose_Rtl_80"
+  - name: –Rose_Rtl_80
     type: ss
     server: old.afoothabs.monster
     port: 55330
@@ -879,7 +879,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: frsa5DFzRANYPs5yMexsVUrC7d6NY8pvBRFn4g1WkF4R71Y5a6E6qYp3SxP2EaUh2yXsAKbTAm7SmL5qk5xMGoDRjH5F8BBU
 
-  - name: "–Rose_Rtl_81"
+  - name: –Rose_Rtl_81
     type: ss
     server: admin.c4.webramz.co
     port: 443
@@ -887,7 +887,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 69MUii7VDwMqh7Hz
 
-  - name: "–Rose_Rtl_82"
+  - name: –Rose_Rtl_82
     type: ss
     server: 45.87.175.192
     port: 8080
@@ -895,7 +895,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 1RWwXhwfAB5gAEozU4G2Pg
 
-  - name: "–Rose_Rtl_83"
+  - name: –Rose_Rtl_83
     type: ss
     server: api.namasha.co
     port: 443
@@ -903,7 +903,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: u17T3BvpYaaiuW2c
 
-  - name: "–Rose_Rtl_84"
+  - name: –Rose_Rtl_84
     type: ss
     server: series-a2.samanehha.co
     port: 443
@@ -911,7 +911,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: W74XFALLLuw6m5IA
 
-  - name: "–Rose_Rtl_85"
+  - name: –Rose_Rtl_85
     type: ss
     server: 45.87.175.178
     port: 8080
@@ -919,7 +919,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 1RWwXhwfAB5gAEozU4G2Pg
 
-  - name: "–Rose_Rtl_86"
+  - name: –Rose_Rtl_86
     type: ss
     server: 45.87.175.28
     port: 8080
@@ -927,7 +927,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oZIoA69Q8yhcQV8ka3Pa3A
 
-  - name: "–Rose_Rtl_87"
+  - name: –Rose_Rtl_87
     type: ss
     server: 45.87.175.192
     port: 8080
@@ -935,7 +935,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "–Rose_Rtl_88"
+  - name: –Rose_Rtl_88
     type: ss
     server: 45.158.171.132
     port: 8080
@@ -943,7 +943,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: fbx1Fw7mENCd7vZMvorQZ5
 
-  - name: "–Rose_Rtl_89"
+  - name: –Rose_Rtl_89
     type: ss
     server: 45.158.171.132
     port: 8080
@@ -951,7 +951,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "–Rose_Rtl_90"
+  - name: –Rose_Rtl_90
     type: ss
     server: 45.87.175.171
     port: 8080
@@ -959,7 +959,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: QCXDxuDlTTMD7jtgHUjIoj
 
-  - name: "–Rose_Rtl_91"
+  - name: –Rose_Rtl_91
     type: ss
     server: 45.158.171.132
     port: 8080
@@ -967,7 +967,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: QCXDxuDlTTMD7jtgHUjIoj
 
-  - name: "–Rose_Rtl_92"
+  - name: –Rose_Rtl_92
     type: ss
     server: 45.87.175.192
     port: 8080
@@ -975,7 +975,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
 
-  - name: "–Rose_Rtl_93"
+  - name: –Rose_Rtl_93
     type: ss
     server: 45.144.48.63
     port: 57456
@@ -983,7 +983,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: d3837224ed465f00
 
-  - name: "–Rose_Wifi_94"
+  - name: –Rose_Wifi_94
     type: ss
     server: 45.87.175.178
     port: 8080
@@ -991,7 +991,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 4a2rfixophdjffa8KVA4Aa
 
-  - name: "–Rose_Wifi_95"
+  - name: –Rose_Wifi_95
     type: ss
     server: 185.47.255.22
     port: 990
@@ -999,7 +999,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "–Rose_Mci_96"
+  - name: –Rose_Mci_96
     type: ss
     server: beesyar.org
     port: 8080
@@ -1007,7 +1007,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: QCXDxuDlTTMD7jtgHUjIoj
 
-  - name: "–Rose_Wifi_97"
+  - name: –Rose_Wifi_97
     type: ss
     server: 81.19.141.45
     port: 443
@@ -1015,7 +1015,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 3TnQdgm2mVJQbuSCXmR5Vc
 
-  - name: "–Rose_Wifi_98"
+  - name: –Rose_Wifi_98
     type: ss
     server: 45.87.175.157
     port: 8080
@@ -1023,7 +1023,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 1RWwXhwfAB5gAEozU4G2Pg
 
-  - name: "–Rose_Mci_99"
+  - name: –Rose_Mci_99
     type: ss
     server: 92.38.171.215
     port: 31348
@@ -1031,7 +1031,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 0RsrcFJ1vOsWEqg3P55hvaacKfuShT0cc1h0t8AD0NA8u1uR
 
-  - name: "–Rose_Mci_100"
+  - name: –Rose_Mci_100
     type: ss
     server: 92.118.205.228
     port: 990
@@ -1039,7 +1039,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "–Rose_Mci_101"
+  - name: –Rose_Mci_101
     type: ss
     server: 185.93.173.218
     port: 990
@@ -1047,7 +1047,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
 
-  - name: "–Rose_Wifi_102"
+  - name: –Rose_Wifi_102
     type: ss
     server: 172.233.128.126
     port: 1866
@@ -1055,7 +1055,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: oXGp1+ihlfKg826H
 
-  - name: "–Rose_Rtl_103"
+  - name: –Rose_Rtl_103
     type: ss
     server: portal.ninemakeda.cfd
     port: 43669
@@ -1063,7 +1063,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 23sUrwRcTBEAvxLS6VM6Aay57KQbws1upDAxr7Btf4hXu4gaUQW4BPbComjJjStM2JqJLDwVkteXL8V33k8eWkZR4UB8intz
 
-  - name: "–Rose_Rtl_470"
+  - name: –Rose_Rtl_470
     type: trojan
     server: log.bpminecraft.com
     port: 443
@@ -1078,7 +1078,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_471"
+  - name: –Rose_Rtl_471
     type: trojan
     server: 89.187.181.179
     port: 43118
@@ -1088,7 +1088,7 @@ proxies:
     skip-cert-verify: true
     servername: 89.187.181.179
 
-  - name: "–Rose_Rtl_472"
+  - name: –Rose_Rtl_472
     type: trojan
     server: 104.18.42.163
     port: 443
@@ -1103,7 +1103,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_473"
+  - name: –Rose_Rtl_473
     type: trojan
     server: www.visa.com.sg
     port: 8443
@@ -1118,7 +1118,7 @@ proxies:
     skip-cert-verify: true
     servername: pangpi.pages.dev
 
-  - name: "–Rose_Rtl_474"
+  - name: –Rose_Rtl_474
     type: trojan
     server: www.iplocation.net
     port: 443
@@ -1133,7 +1133,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_475"
+  - name: –Rose_Rtl_475
     type: trojan
     server: whatismyipaddress.com
     port: 443
@@ -1148,7 +1148,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_476"
+  - name: –Rose_Rtl_476
     type: trojan
     server: 172.66.44.230
     port: 8443
@@ -1163,7 +1163,7 @@ proxies:
     skip-cert-verify: true
     servername: Koma-YT.PAGeS.Dev
 
-  - name: "–Rose_Rtl_477"
+  - name: –Rose_Rtl_477
     type: trojan
     server: www.gco.gov.qa
     port: 443
@@ -1178,7 +1178,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_478"
+  - name: –Rose_Rtl_478
     type: trojan
     server: dcf741e8.epeius-2gy.pages.dev
     port: 443
@@ -1193,7 +1193,7 @@ proxies:
     skip-cert-verify: true
     servername: dcf741e8.epeius-2gy.pages.dev
 
-  - name: "–Rose_Rtl_479"
+  - name: –Rose_Rtl_479
     type: trojan
     server: www.iakeys.com
     port: 443
@@ -1208,7 +1208,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_480"
+  - name: –Rose_Rtl_480
     type: trojan
     server: 109.120.132.142
     port: 2025
@@ -1221,7 +1221,7 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: "–Rose_Rtl_481"
+  - name: –Rose_Rtl_481
     type: trojan
     server: www.visa.com.hk
     port: 8443
@@ -1236,7 +1236,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_482"
+  - name: –Rose_Rtl_482
     type: trojan
     server: www.zsu.gov.ua
     port: 443
@@ -1251,7 +1251,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_483"
+  - name: –Rose_Rtl_483
     type: trojan
     server: fbi.gov
     port: 443
@@ -1266,7 +1266,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_484"
+  - name: –Rose_Rtl_484
     type: trojan
     server: www.gov.se
     port: 443
@@ -1281,7 +1281,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_485"
+  - name: –Rose_Rtl_485
     type: trojan
     server: www.gov.ua
     port: 443
@@ -1296,7 +1296,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_486"
+  - name: –Rose_Rtl_486
     type: trojan
     server: 92.243.75.49
     port: 2087
@@ -1311,7 +1311,7 @@ proxies:
     skip-cert-verify: true
     servername: hsdgbuys.pages.dev
 
-  - name: "–Rose_Rtl_487"
+  - name: –Rose_Rtl_487
     type: trojan
     server: iplocation.io
     port: 443
@@ -1326,7 +1326,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_488"
+  - name: –Rose_Rtl_488
     type: trojan
     server: www.csgo.com
     port: 443
@@ -1341,7 +1341,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_489"
+  - name: –Rose_Rtl_489
     type: trojan
     server: 104.25.165.81
     port: 8443
@@ -1356,7 +1356,7 @@ proxies:
     skip-cert-verify: true
     servername: top-azx.pages.dev
 
-  - name: "–Rose_Rtl_490"
+  - name: –Rose_Rtl_490
     type: trojan
     server: www.ipaddress.my
     port: 443
@@ -1371,7 +1371,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_491"
+  - name: –Rose_Rtl_491
     type: trojan
     server: 104.25.165.83
     port: 8443
@@ -1386,7 +1386,7 @@ proxies:
     skip-cert-verify: true
     servername: top-azx.pages.dev
 
-  - name: "–Rose_Rtl_492"
+  - name: –Rose_Rtl_492
     type: trojan
     server: koma-yt.pages.dev
     port: 8443
@@ -1401,7 +1401,7 @@ proxies:
     skip-cert-verify: true
     servername: Koma-YT.PAGeS.Dev
 
-  - name: "–Rose_Rtl_493"
+  - name: –Rose_Rtl_493
     type: trojan
     server: time.is
     port: 2087
@@ -1416,7 +1416,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_494"
+  - name: –Rose_Rtl_494
     type: trojan
     server: 172.66.46.254
     port: 443
@@ -1431,7 +1431,7 @@ proxies:
     skip-cert-verify: true
     servername: dcf741e8.epeius-2gy.pages.dev
 
-  - name: "–Rose_Rtl_495"
+  - name: –Rose_Rtl_495
     type: trojan
     server: ip.sb
     port: 8443
@@ -1446,7 +1446,7 @@ proxies:
     skip-cert-verify: true
     servername: fofang.pages.dev
 
-  - name: "–Rose_Rtl_496"
+  - name: –Rose_Rtl_496
     type: trojan
     server: www.udemy.com
     port: 443
@@ -1461,7 +1461,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_497"
+  - name: –Rose_Rtl_497
     type: trojan
     server: singapore.com
     port: 443
@@ -1476,7 +1476,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_498"
+  - name: –Rose_Rtl_498
     type: trojan
     server: 104.25.165.83
     port: 8443
@@ -1491,7 +1491,7 @@ proxies:
     skip-cert-verify: true
     servername: top-azx.pages.dev
 
-  - name: "–Rose_Rtl_499"
+  - name: –Rose_Rtl_499
     type: trojan
     server: 104.17.148.22
     port: 443
@@ -1506,7 +1506,7 @@ proxies:
     skip-cert-verify: true
     servername: redfree8-p1.pooriashop.ir
 
-  - name: "–Rose_Rtl_500"
+  - name: –Rose_Rtl_500
     type: trojan
     server: www.wto.org
     port: 443
@@ -1521,7 +1521,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_501"
+  - name: –Rose_Rtl_501
     type: trojan
     server: 104.21.112.1
     port: 443
@@ -1536,7 +1536,7 @@ proxies:
     skip-cert-verify: true
     servername: yellow-cloud-d53f.vavovi6084.workers.dev
 
-  - name: "–Rose_Rtl_502"
+  - name: –Rose_Rtl_502
     type: trojan
     server: www.ipget.net
     port: 443
@@ -1551,7 +1551,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_503"
+  - name: –Rose_Rtl_503
     type: trojan
     server: 104.18.27.94
     port: 443
@@ -1566,7 +1566,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_504"
+  - name: –Rose_Rtl_504
     type: trojan
     server: www.pcmag.com
     port: 443
@@ -1581,7 +1581,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_505"
+  - name: –Rose_Rtl_505
     type: trojan
     server: www.udacity.com
     port: 443
@@ -1596,7 +1596,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_506"
+  - name: –Rose_Rtl_506
     type: trojan
     server: japan.com
     port: 443
@@ -1611,7 +1611,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_507"
+  - name: –Rose_Rtl_507
     type: trojan
     server: www.visa.com.tw
     port: 443
@@ -1626,7 +1626,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Wifi_508"
+  - name: –Rose_Wifi_508
     type: trojan
     server: 104.17.148.22
     port: 80
@@ -1641,7 +1641,7 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: "–Rose_Mci_509"
+  - name: –Rose_Mci_509
     type: trojan
     server: 45.82.14.144
     port: 2025
@@ -1656,7 +1656,7 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: "–Rose_Mtn_510"
+  - name: –Rose_Mtn_510
     type: trojan
     server: 38.207.133.204
     port: 10002
@@ -1671,7 +1671,7 @@ proxies:
     skip-cert-verify: true
     servername: qingming-b08.pages.dev
 
-  - name: "–Rose_Mtn_511"
+  - name: –Rose_Mtn_511
     type: trojan
     server: 104.21.18.192
     port: 443
@@ -1686,7 +1686,7 @@ proxies:
     skip-cert-verify: true
     servername: sAiKOXpUbGm.ZhkinGkuRD13.WorkErs.dEV
 
-  - name: "–Rose_Mtn_512"
+  - name: –Rose_Mtn_512
     type: trojan
     server: 109.120.132.142
     port: 2025
@@ -1701,7 +1701,7 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: "–Rose_Mtn_513"
+  - name: –Rose_Mtn_513
     type: trojan
     server: 38.99.82.225
     port: 443
@@ -1711,7 +1711,7 @@ proxies:
     skip-cert-verify: true
     servername: 
 
-  - name: "–Rose_Rtl_514"
+  - name: –Rose_Rtl_514
     type: trojan
     server: edtunnel-dgp.pages.dev
     port: 443
@@ -1726,7 +1726,7 @@ proxies:
     skip-cert-verify: true
     servername: heihu880.pages.dev
 
-  - name: "–Rose_Rtl_515"
+  - name: –Rose_Rtl_515
     type: trojan
     server: 198.41.208.69
     port: 8443
@@ -1741,7 +1741,7 @@ proxies:
     skip-cert-verify: true
     servername: top-azx.pages.dev
 
-  - name: "–Rose_Rtl_516"
+  - name: –Rose_Rtl_516
     type: trojan
     server: 109.120.132.80
     port: 2025
@@ -1762,156 +1762,156 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - "–Rose_Rtl_0"
-      - "–Rose_Rtl_1"
-      - "–Rose_Rtl_2"
-      - "–Rose_Rtl_3"
-      - "–Rose_Rtl_4"
-      - "–Rose_Rtl_5"
-      - "–Rose_Rtl_6"
-      - "–Rose_Rtl_7"
-      - "–Rose_Rtl_8"
-      - "–Rose_Rtl_9"
-      - "–Rose_Rtl_10"
-      - "–Rose_Rtl_11"
-      - "–Rose_Rtl_12"
-      - "–Rose_Rtl_13"
-      - "–Rose_Rtl_14"
-      - "–Rose_Rtl_15"
-      - "–Rose_Rtl_16"
-      - "–Rose_Rtl_17"
-      - "–Rose_Mci_18"
-      - "–Rose_Mci_19"
-      - "–Rose_Rtl_20"
-      - "–Rose_Rtl_21"
-      - "–Rose_Rtl_22"
-      - "–Rose_Mtn_23"
-      - "–Rose_Mtn_24"
-      - "–Rose_Wifi_25"
-      - "–Rose_Wifi_26"
-      - "–Rose_Wifi_27"
-      - "–Rose_Wifi_28"
-      - "–Rose_Wifi_29"
-      - "–Rose_Wifi_30"
-      - "–Rose_Wifi_31"
-      - "–Rose_Mci_32"
-      - "–Rose_Wifi_33"
-      - "–Rose_Mci_34"
-      - "–Rose_Wifi_35"
-      - "–Rose_Wifi_36"
-      - "–Rose_Mci_37"
-      - "–Rose_Mci_38"
-      - "–Rose_Mci_39"
-      - "–Rose_Mtn_40"
-      - "–Rose_Mci_41"
-      - "–Rose_Mtn_42"
-      - "–Rose_Mtn_43"
-      - "–Rose_Mtn_44"
-      - "–Rose_Mtn_45"
-      - "–Rose_Mtn_46"
-      - "–Rose_Wifi_47"
-      - "–Rose_Mci_48"
-      - "–Rose_Mci_49"
-      - "–Rose_Mci_50"
-      - "–Rose_Wifi_51"
-      - "–Rose_Wifi_52"
-      - "–Rose_Mci_53"
-      - "–Rose_Rtl_54"
-      - "–Rose_Mtn_55"
-      - "–Rose_Mtn_56"
-      - "–Rose_Mci_57"
-      - "–Rose_Mci_58"
-      - "–Rose_Mci_59"
-      - "–Rose_Mci_60"
-      - "–Rose_Rtl_61"
-      - "–Rose_Rtl_62"
-      - "–Rose_Rtl_63"
-      - "–Rose_Rtl_64"
-      - "–Rose_Rtl_65"
-      - "–Rose_Rtl_66"
-      - "–Rose_Rtl_67"
-      - "–Rose_Rtl_68"
-      - "–Rose_Rtl_69"
-      - "–Rose_Rtl_70"
-      - "–Rose_Rtl_71"
-      - "–Rose_Rtl_72"
-      - "–Rose_Rtl_73"
-      - "–Rose_Rtl_74"
-      - "–Rose_Rtl_75"
-      - "–Rose_Rtl_76"
-      - "–Rose_Rtl_77"
-      - "–Rose_Rtl_78"
-      - "–Rose_Rtl_79"
-      - "–Rose_Rtl_80"
-      - "–Rose_Rtl_81"
-      - "–Rose_Rtl_82"
-      - "–Rose_Rtl_83"
-      - "–Rose_Rtl_84"
-      - "–Rose_Rtl_85"
-      - "–Rose_Rtl_86"
-      - "–Rose_Rtl_87"
-      - "–Rose_Rtl_88"
-      - "–Rose_Rtl_89"
-      - "–Rose_Rtl_90"
-      - "–Rose_Rtl_91"
-      - "–Rose_Rtl_92"
-      - "–Rose_Rtl_93"
-      - "–Rose_Wifi_94"
-      - "–Rose_Wifi_95"
-      - "–Rose_Mci_96"
-      - "–Rose_Wifi_97"
-      - "–Rose_Wifi_98"
-      - "–Rose_Mci_99"
-      - "–Rose_Mci_100"
-      - "–Rose_Mci_101"
-      - "–Rose_Wifi_102"
-      - "–Rose_Rtl_103"
-      - "–Rose_Rtl_470"
-      - "–Rose_Rtl_471"
-      - "–Rose_Rtl_472"
-      - "–Rose_Rtl_473"
-      - "–Rose_Rtl_474"
-      - "–Rose_Rtl_475"
-      - "–Rose_Rtl_476"
-      - "–Rose_Rtl_477"
-      - "–Rose_Rtl_478"
-      - "–Rose_Rtl_479"
-      - "–Rose_Rtl_480"
-      - "–Rose_Rtl_481"
-      - "–Rose_Rtl_482"
-      - "–Rose_Rtl_483"
-      - "–Rose_Rtl_484"
-      - "–Rose_Rtl_485"
-      - "–Rose_Rtl_486"
-      - "–Rose_Rtl_487"
-      - "–Rose_Rtl_488"
-      - "–Rose_Rtl_489"
-      - "–Rose_Rtl_490"
-      - "–Rose_Rtl_491"
-      - "–Rose_Rtl_492"
-      - "–Rose_Rtl_493"
-      - "–Rose_Rtl_494"
-      - "–Rose_Rtl_495"
-      - "–Rose_Rtl_496"
-      - "–Rose_Rtl_497"
-      - "–Rose_Rtl_498"
-      - "–Rose_Rtl_499"
-      - "–Rose_Rtl_500"
-      - "–Rose_Rtl_501"
-      - "–Rose_Rtl_502"
-      - "–Rose_Rtl_503"
-      - "–Rose_Rtl_504"
-      - "–Rose_Rtl_505"
-      - "–Rose_Rtl_506"
-      - "–Rose_Rtl_507"
-      - "–Rose_Wifi_508"
-      - "–Rose_Mci_509"
-      - "–Rose_Mtn_510"
-      - "–Rose_Mtn_511"
-      - "–Rose_Mtn_512"
-      - "–Rose_Mtn_513"
-      - "–Rose_Rtl_514"
-      - "–Rose_Rtl_515"
-      - "–Rose_Rtl_516"
+      - –Rose_Rtl_0
+      - –Rose_Rtl_1
+      - –Rose_Rtl_2
+      - –Rose_Rtl_3
+      - –Rose_Rtl_4
+      - –Rose_Rtl_5
+      - –Rose_Rtl_6
+      - –Rose_Rtl_7
+      - –Rose_Rtl_8
+      - –Rose_Rtl_9
+      - –Rose_Rtl_10
+      - –Rose_Rtl_11
+      - –Rose_Rtl_12
+      - –Rose_Rtl_13
+      - –Rose_Rtl_14
+      - –Rose_Rtl_15
+      - –Rose_Rtl_16
+      - –Rose_Rtl_17
+      - –Rose_Mci_18
+      - –Rose_Mci_19
+      - –Rose_Rtl_20
+      - –Rose_Rtl_21
+      - –Rose_Rtl_22
+      - –Rose_Mtn_23
+      - –Rose_Mtn_24
+      - –Rose_Wifi_25
+      - –Rose_Wifi_26
+      - –Rose_Wifi_27
+      - –Rose_Wifi_28
+      - –Rose_Wifi_29
+      - –Rose_Wifi_30
+      - –Rose_Wifi_31
+      - –Rose_Mci_32
+      - –Rose_Wifi_33
+      - –Rose_Mci_34
+      - –Rose_Wifi_35
+      - –Rose_Wifi_36
+      - –Rose_Mci_37
+      - –Rose_Mci_38
+      - –Rose_Mci_39
+      - –Rose_Mtn_40
+      - –Rose_Mci_41
+      - –Rose_Mtn_42
+      - –Rose_Mtn_43
+      - –Rose_Mtn_44
+      - –Rose_Mtn_45
+      - –Rose_Mtn_46
+      - –Rose_Wifi_47
+      - –Rose_Mci_48
+      - –Rose_Mci_49
+      - –Rose_Mci_50
+      - –Rose_Wifi_51
+      - –Rose_Wifi_52
+      - –Rose_Mci_53
+      - –Rose_Rtl_54
+      - –Rose_Mtn_55
+      - –Rose_Mtn_56
+      - –Rose_Mci_57
+      - –Rose_Mci_58
+      - –Rose_Mci_59
+      - –Rose_Mci_60
+      - –Rose_Rtl_61
+      - –Rose_Rtl_62
+      - –Rose_Rtl_63
+      - –Rose_Rtl_64
+      - –Rose_Rtl_65
+      - –Rose_Rtl_66
+      - –Rose_Rtl_67
+      - –Rose_Rtl_68
+      - –Rose_Rtl_69
+      - –Rose_Rtl_70
+      - –Rose_Rtl_71
+      - –Rose_Rtl_72
+      - –Rose_Rtl_73
+      - –Rose_Rtl_74
+      - –Rose_Rtl_75
+      - –Rose_Rtl_76
+      - –Rose_Rtl_77
+      - –Rose_Rtl_78
+      - –Rose_Rtl_79
+      - –Rose_Rtl_80
+      - –Rose_Rtl_81
+      - –Rose_Rtl_82
+      - –Rose_Rtl_83
+      - –Rose_Rtl_84
+      - –Rose_Rtl_85
+      - –Rose_Rtl_86
+      - –Rose_Rtl_87
+      - –Rose_Rtl_88
+      - –Rose_Rtl_89
+      - –Rose_Rtl_90
+      - –Rose_Rtl_91
+      - –Rose_Rtl_92
+      - –Rose_Rtl_93
+      - –Rose_Wifi_94
+      - –Rose_Wifi_95
+      - –Rose_Mci_96
+      - –Rose_Wifi_97
+      - –Rose_Wifi_98
+      - –Rose_Mci_99
+      - –Rose_Mci_100
+      - –Rose_Mci_101
+      - –Rose_Wifi_102
+      - –Rose_Rtl_103
+      - –Rose_Rtl_470
+      - –Rose_Rtl_471
+      - –Rose_Rtl_472
+      - –Rose_Rtl_473
+      - –Rose_Rtl_474
+      - –Rose_Rtl_475
+      - –Rose_Rtl_476
+      - –Rose_Rtl_477
+      - –Rose_Rtl_478
+      - –Rose_Rtl_479
+      - –Rose_Rtl_480
+      - –Rose_Rtl_481
+      - –Rose_Rtl_482
+      - –Rose_Rtl_483
+      - –Rose_Rtl_484
+      - –Rose_Rtl_485
+      - –Rose_Rtl_486
+      - –Rose_Rtl_487
+      - –Rose_Rtl_488
+      - –Rose_Rtl_489
+      - –Rose_Rtl_490
+      - –Rose_Rtl_491
+      - –Rose_Rtl_492
+      - –Rose_Rtl_493
+      - –Rose_Rtl_494
+      - –Rose_Rtl_495
+      - –Rose_Rtl_496
+      - –Rose_Rtl_497
+      - –Rose_Rtl_498
+      - –Rose_Rtl_499
+      - –Rose_Rtl_500
+      - –Rose_Rtl_501
+      - –Rose_Rtl_502
+      - –Rose_Rtl_503
+      - –Rose_Rtl_504
+      - –Rose_Rtl_505
+      - –Rose_Rtl_506
+      - –Rose_Rtl_507
+      - –Rose_Wifi_508
+      - –Rose_Mci_509
+      - –Rose_Mtn_510
+      - –Rose_Mtn_511
+      - –Rose_Mtn_512
+      - –Rose_Mtn_513
+      - –Rose_Rtl_514
+      - –Rose_Rtl_515
+      - –Rose_Rtl_516
 rules:
  - MATCH,🟢 auto
