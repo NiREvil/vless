@@ -141,97 +141,98 @@ export default defineConfig({
         }
       }
     },
-fa: {
-  label: 'فارسی',
-  lang: 'fa-IR',
-  title: 'Freedom to Dream',
-  description: 'ابزارهای فعال‌سازی فوری ویندوز و آفیس',
-  themeConfig: {
-    nav: [
-      { text: 'خانه', link: '/fa/index' },
-      { text: 'مستندات', link: '/fa/intro' },
-      { text: 'سوالات متداول', link: '/fa/faq' }
-    ],
-    sidebar: [
-      {
-        text: 'راهنمای فعال‌سازی',
-        collapsed: false,
-        items: [
-          { text: 'فعال‌سازی با روش HWID', link: '/fa/intro' },
-          { text: 'فعال‌سازی با روش KMS', link: '/fa/kms' },
-          { text: 'مقایسه انواع روش‌ها', link: '/fa/chart' }
-        ]
-      },
-      {
-        text: 'مستندات',
-        collapsed: false,
-        items: [
-          { text: 'جزئیات روش HWID', link: '/fa/hwid' },
-          { text: 'جزئیات روش Ohook', link: '/fa/ohook' },
-          { text: 'جزئیات روش TSforge', link: '/fa/tsforge' },
-          { text: 'جزئیات روش KMS38', link: '/fa/kms38' },
-          { text: 'جزئیات روش Online KMS', link: '/fa/online_kms' },
-          { text: 'تغییر نسخه ویندوز', link: '/fa/change_windows_edition' },
-          { text: 'تغییر نسخه آفیس', link: '/fa/change_office_edition' },
-          { text: 'رفع مشکل رجیستری WPA', link: '/fa/fix-wpa-registry' },
-          { text: 'رفع مشکل پاورشل', link: '/fa/fix_powershell' },
-          { text: 'پوشه‌های $OEM$', link: '/fa/oem-folder' },
-          { text: 'سوئیچ‌ها در خط فرمان', link: '/fa/command_line_switches' },
-          { text: 'دانلود ویندوز / آفیس', link: '/fa/genuine-installation-media' }
-        ]
-      },
-      {
-        text: 'جزئیات فنی',
-        collapsed: true,
-        items: [
-          { text: 'ویندوز ۱۰ بعد از پایان پشتیبانی', link: '/fa/windows10_eol' },
-          { text: 'حذف بدافزارها', link: '/fa/remove_malware' },
-          { text: 'نصب تمیز ویندوز', link: '/fa/clean_install_windows' },
-          { text: 'لایسنس آفیس اصل نیست', link: '/fa/office-license-is-not-genuine' },
-          { text: 'مشکل سرورهای لایسنس', link: '/fa/licensing-servers-issue' },
-          { text: 'مشکلات ناشی از اسپوفرهای گیم', link: '/fa/issues_due_to_gaming_spoofers' },
-          { text: 'مشکلات تغییر نسخه', link: '/fa/change_edition_issues' },
-          { text: 'نسخه‌های ارزیابی', link: '/fa/evaluation_editions' },
-          { text: 'رفع مشکل پاورشل', link: '/fa/fix_powershell' },
-          { text: 'رفع مشکل سرویس‌های ویندوز', link: '/fa/fix_service' },
-          { text: 'رفع مشکل رجیستری WPA', link: '/fa/fix-wpa-registry' },
-          { text: 'آپگرید تعمیری در محل', link: '/fa/in-place_repair_upgrade' },
-          { text: 'نصب سفارشی Office c2r', link: '/fa/office_c2r' },
-          { text: 'دور زدن مسدودسازی جغرافیایی روسیه', link: 'https://gravesoft.dev/bypass-russian-geoblock' }
-        ]
-      },
-      {
-        text: 'راهنمای فعال‌سازی دستی',
-        collapsed: true,
-        items: [
-          { text: 'نصب دستی HWID', link: '/fa/manual_hwid_activation' },
-          { text: 'نصب دستی Ohook', link: '/fa/manual_ohook_activation' },
-          { text: 'نصب دستی KMS38', link: '/fa/manual_kms38_activation' }
-        ]
-      },
-      {
-        text: 'ارتباط با ما',
-        collapsed: true,
-        items: [
-          { text: 'گزارش مشکلات', link: '/fa/troubleshoot' },
-          { text: 'سوالات متداول', link: '/fa/faq' },
-          { text: 'منابع', link: '/fa/credits' }
-        ]
+    fa: {
+      label: 'فارسی',
+      lang: 'fa-IR',
+      title: 'Freedom to Dream',
+      description: 'ابزارهای فعال‌سازی فوری ویندوز و آفیس',
+      themeConfig: {
+        nav: [
+          { text: 'خانه', link: '/fa/index' },
+          { text: 'مستندات', link: '/fa/intro' },
+          { text: 'سوالات متداول', link: '/fa/faq' }
+        ],
+        sidebar: [
+          {
+            text: 'راهنمای فعال‌سازی',
+            collapsed: false,
+            items: [
+              { text: 'فعال‌سازی با روش HWID', link: '/fa/intro' },
+              { text: 'فعال‌سازی با روش KMS', link: '/fa/kms' },
+              { text: 'مقایسه انواع روش‌ها', link: '/fa/chart' }
+            ]
+          },
+          {
+            text: 'مستندات',
+            collapsed: false,
+            items: [
+              { text: 'جزئیات روش HWID', link: '/fa/hwid' },
+              { text: 'جزئیات روش Ohook', link: '/fa/ohook' },
+              { text: 'جزئیات روش TSforge', link: '/fa/tsforge' },
+              { text: 'جزئیات روش KMS38', link: '/fa/kms38' },
+              { text: 'جزئیات روش Online KMS', link: '/fa/online_kms' },
+              { text: 'تغییر نسخه ویندوز', link: '/fa/change_windows_edition' },
+              { text: 'تغییر نسخه آفیس', link: '/fa/change_office_edition' },
+              { text: 'رفع مشکل رجیستری WPA', link: '/fa/fix-wpa-registry' },
+              { text: 'رفع مشکل پاورشل', link: '/fa/fix_powershell' },
+              { text: 'پوشه‌های $OEM$', link: '/fa/oem-folder' },
+              { text: 'سوئیچ‌ها در خط فرمان', link: '/fa/command_line_switches' },
+              { text: 'دانلود ویندوز / آفیس', link: '/fa/genuine-installation-media' }
+            ]
+          },
+          {
+            text: 'جزئیات فنی',
+            collapsed: true,
+            items: [
+              { text: 'ویندوز ۱۰ بعد از پایان پشتیبانی', link: '/fa/windows10_eol' },
+              { text: 'حذف بدافزارها', link: '/fa/remove_malware' },
+              { text: 'نصب تمیز ویندوز', link: '/fa/clean_install_windows' },
+              { text: 'لایسنس آفیس اصل نیست', link: '/fa/office-license-is-not-genuine' },
+              { text: 'مشکل سرورهای لایسنس', link: '/fa/licensing-servers-issue' },
+              { text: 'مشکلات ناشی از اسپوفرهای گیم', link: '/fa/issues_due_to_gaming_spoofers' },
+              { text: 'مشکلات تغییر نسخه', link: '/fa/change_edition_issues' },
+              { text: 'نسخه‌های ارزیابی', link: '/fa/evaluation_editions' },
+              { text: 'رفع مشکل پاورشل', link: '/fa/fix_powershell' },
+              { text: 'رفع مشکل سرویس‌های ویندوز', link: '/fa/fix_service' },
+              { text: 'رفع مشکل رجیستری WPA', link: '/fa/fix-wpa-registry' },
+              { text: 'آپگرید تعمیری در محل', link: '/fa/in-place_repair_upgrade' },
+              { text: 'نصب سفارشی Office c2r', link: '/fa/office_c2r' },
+              { text: 'دور زدن مسدودسازی جغرافیایی روسیه', link: 'https://gravesoft.dev/bypass-russian-geoblock' }
+            ]
+          },
+          {
+            text: 'راهنمای فعال‌سازی دستی',
+            collapsed: true,
+            items: [
+              { text: 'نصب دستی HWID', link: '/fa/manual_hwid_activation' },
+              { text: 'نصب دستی Ohook', link: '/fa/manual_ohook_activation' },
+              { text: 'نصب دستی KMS38', link: '/fa/manual_kms38_activation' }
+            ]
+          },
+          {
+            text: 'ارتباط با ما',
+            collapsed: true,
+            items: [
+              { text: 'گزارش مشکلات', link: '/fa/troubleshoot' },
+              { text: 'سوالات متداول', link: '/fa/faq' },
+              { text: 'منابع', link: '/fa/credits' }
+            ]
+          }
+        ],
+        editLink: {
+          pattern: 'https://github.com/sahar-km/windows-activation/edit/main/docs/:path',
+          text: 'این صفحه را در گیت‌هاب ویرایش کنید'
+        },
+        docFooter: {
+          prev: 'صفحه قبلی',
+          next: 'صفحه بعدی'
+        },
+        lastUpdated: {
+          text: 'آخرین بروزرسانی'
+        }
       }
-    ],
-    editLink: {
-      pattern: 'https://github.com/sahar-km/windows-activation/edit/main/docs/:path',
-      text: 'این صفحه را در گیت‌هاب ویرایش کنید'
-    },
-    docFooter: {
-      prev: 'صفحه قبلی',
-      next: 'صفحه بعدی'
-    },
-    lastUpdated: {
-      text: 'آخرین بروزرسانی'
     }
-  }
-},
+  },
 
   themeConfig: {
     logo: '/logo-h.svg',
