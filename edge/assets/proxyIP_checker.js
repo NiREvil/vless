@@ -139,6 +139,167 @@ const ipv6Regex = /(?:[A-F0-9]{1,4}:){7}[A-F0-9]{1,4}|\[(?:[A-F0-9]{1,4}:){7}[A-
 
 // --- HTML Page Generators ---
 
+function generateDomainCheckPageHTML({ domains, temporaryTOKEN }) {
+    const domainsJson = JSON.stringify(domains);
+    const domainsHTML = domains.map(domain => 
+        `<div><strong>Domain:</strong> <span class="range-tag" onclick="copyToClipboard('${domain}', this)">${domain}</span></div>`
+    ).join('');
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Resolve Results</title>
+    <style>
+        :root{--bg-color:#f4f7f9;--card-bg-color:#fff;--text-color:#2c3e50;--border-color:#e1e8ed;--hover-bg-color:#f8f9fa;--primary-color:#3498db;--primary-text-color:#fff;--subtle-text-color:#7f8c8d;--tag-bg-color:#e8eaed;--secondary-color:#95a5a6}body.dark-mode{--bg-color:#2c3e50;--card-bg-color:#34495e;--text-color:#ecf0f1;--border-color:#465b71;--hover-bg-color:#4a6075;--subtle-text-color:#bdc3c7;--tag-bg-color:#2b2b2b;--secondary-color:#7f8c8d}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background-color:var(--bg-color);color:var(--text-color);margin:0;padding:20px;transition:background-color .3s,color .3s}.container{max-width:700px;margin:0 auto}.header{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:15px;margin-bottom:25px;border-bottom:1px solid var(--border-color)}.title-section h1{font-size:1.8em;margin:0 0 10px}.domains-list{font-size:.9em;color:var(--subtle-text-color); display: flex; flex-direction: column; gap: 5px;}.range-tag{display:inline-block;background-color:var(--tag-bg-color);padding:4px 8px;border-radius:6px;font-family:'Courier New',Courier,monospace;cursor:pointer;margin:2px 0;transition:background-color .2s;text-decoration:none;color:var(--text-color);word-break:break-all;}.range-tag:hover{background-color:var(--primary-color);color:var(--primary-text-color)}.button-group{display:flex;gap:10px;flex-shrink:0;margin-left:20px}.btn{padding:8px 16px;border:none;border-radius:8px;cursor:pointer;font-weight:500;font-size:.9em;transition:transform .2s;text-decoration:none;display:inline-flex;align-items:center}.btn-primary{background:linear-gradient(135deg,var(--primary-color),#2980b9);color:var(--primary-text-color)}.btn-secondary{background-color:var(--secondary-color);color:var(--primary-text-color)}.btn:hover{transform:translateY(-2px)}.theme-toggle{background-color:var(--card-bg-color);border:1px solid var(--border-color);width:38px;height:38px;justify-content:center;padding:0;border-radius:50%}.results-card{background-color:var(--card-bg-color);border:1px solid var(--border-color);border-radius:10px;padding:10px;min-height:50px;}.ip-item{display:flex;justify-content:space-between;align-items:center;padding:12px 15px;border-radius:6px;}.ip-item:not(:last-child){border-bottom:1px solid var(--border-color)}.ip-tag{background-color:var(--tag-bg-color);padding:3px 7px;border-radius:5px;font-family:'Courier New',Courier,monospace;cursor:pointer;transition:background-color .2s}.ip-tag:hover{background-color:var(--primary-color);color:var(--primary-text-color)}.ip-details{font-size:.9em;color:var(--subtle-text-color);padding-left:15px}.action-buttons{margin-top:20px;display:flex;justify-content:center;gap:10px}.footer{text-align:center;padding:20px;margin-top:30px;color:var(--subtle-text-color);font-size:.9em;border-top:1px solid var(--border-color)}.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#333;color:#fff;padding:12px 20px;border-radius:8px;z-index:1001;opacity:0;transition:opacity .3s,transform .3s;pointer-events:none}.toast.show{opacity:1}
+        .theme-toggle svg { width: 18px; height: 18px; stroke: var(--text-color); transition: all 0.3s ease; }
+        body:not(.dark-mode) .theme-toggle .sun-icon { display: block; fill: none;}
+        body:not(.dark-mode) .theme-toggle .moon-icon { display: none; }
+        body.dark-mode .theme-toggle .sun-icon { display: none; }
+        body.dark-mode .theme-toggle .moon-icon { display: block; fill: var(--text-color); stroke: var(--text-color); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="title-section">
+                <h1 id="main-title">Domain Resolve Results:</h1>
+                <div class="domains-list">${domainsHTML}</div>
+            </div>
+            <div class="button-group">
+                <button class="btn theme-toggle" onclick="toggleTheme()">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+            </div>
+        </header>
+        <p id="summary">Resolving domains and preparing to check IPs...</p>
+        <main id="results-container" class="results-card">
+            <p style="text-align:center; padding: 20px;">Processing...</p>
+        </main>
+        <div id="action-buttons-container"></div>
+        <footer class="footer">
+            <p>© ${new Date().getFullYear()} <strong>© 2025 REvil</strong> — proxyIP checker</p>
+        </footer>
+    </div>
+    <div id="toast" class="toast"></div>
+    <script>
+        const domainsToCheck = ${domainsJson};
+        const TEMP_TOKEN = "${temporaryTOKEN}";
+        let successfulIPs = [];
+        let checkedCount = 0;
+        let totalIPs = 0;
+
+        function showToast(message) { const toast = document.getElementById('toast'); toast.textContent = message; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 3000); }
+        function copyToClipboard(text, element) { navigator.clipboard.writeText(text).then(() => { const o = element ? element.textContent : ''; if(element) {element.textContent = 'Copied!'; setTimeout(()=>element.textContent=o, 2000);} else { showToast('Copied!')} }).catch(err => { showToast('Copy failed!'); }); }
+        function toggleTheme() {
+            const body = document.body; body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+        }
+
+        async function fetchAPI(path, params) {
+            params.append('token', TEMP_TOKEN);
+            const response = await fetch('/api' + path + '?' + params.toString());
+            const data = await response.json();
+            if (!response.ok && typeof data.success === 'undefined') {
+                throw new Error('API Error: ' + (data.message || response.statusText));
+            }
+            return data;
+        }
+
+        function renderResult(item) {
+            const container = document.getElementById('results-container');
+            if (successfulIPs.length === 1 && container.querySelector('p')) {
+                 container.innerHTML = '';
+            }
+            const detailsParts = [];
+            if (item.info && item.info.country) detailsParts.push(item.info.country);
+            if (item.info && item.info.as) detailsParts.push(item.info.as);
+            const detailsText = detailsParts.length > 0 ? \`(\${detailsParts.join(' - ')})\` : '';
+            const itemHTML = \`<div class="ip-item"><span class="ip-tag" onclick="copyToClipboard('\${item.ip}', this)">\${item.ip}</span><span class="ip-details">\${detailsText}</span></div>\`;
+            container.insertAdjacentHTML('beforeend', itemHTML);
+        }
+
+        function updateSummary() {
+            document.getElementById('summary').textContent = \`Checked: \${checkedCount} / \${totalIPs} | Successful: \${successfulIPs.length}\`;
+        }
+
+        async function startChecking() {
+            let allIPsToTest = [];
+            document.getElementById('results-container').innerHTML = '<p style="text-align:center; padding: 20px;">Resolving domains...</p>';
+
+            const resolvePromises = domainsToCheck.map(async (domain) => {
+                try {
+                    const resolveData = await fetchAPI('/resolve', new URLSearchParams({ domain }));
+                    if (resolveData.success) {
+                        return resolveData.ips;
+                    }
+                } catch (e) { console.error("Failed to resolve", domain, e); }
+                return [];
+            });
+
+            const resolvedIPArrays = await Promise.all(resolvePromises);
+            allIPsToTest = [...new Set(resolvedIPArrays.flat())];
+            totalIPs = allIPsToTest.length;
+
+            if (totalIPs === 0) {
+                 document.getElementById('summary').textContent = 'No IPs found for the given domains.';
+                 document.getElementById('results-container').innerHTML = '<p style="text-align:center;">Could not resolve any IPs.</p>';
+                 return;
+            }
+            
+            document.getElementById('results-container').innerHTML = '<p style="text-align:center; padding: 20px;">Checking IPs...</p>';
+            updateSummary();
+
+            const batchSize = 20;
+            for (let i = 0; i < allIPsToTest.length; i += batchSize) {
+                const batch = allIPsToTest.slice(i, i + batchSize);
+                const promises = batch.map(async (ip) => {
+                    try {
+                        const checkData = await fetchAPI('/check', new URLSearchParams({ proxyip: ip }));
+                        const ipInfo = checkData.success ? await fetchAPI('/ip-info', new URLSearchParams({ ip: checkData.proxyIP })) : null;
+                        
+                        if (checkData.success) {
+                            const resultItem = { ip: checkData.proxyIP, success: checkData.success, info: ipInfo };
+                            successfulIPs.push(resultItem);
+                            renderResult(resultItem);
+                        }
+                    } catch (e) {
+                        console.error('Failed to check ip:', ip, e);
+                    } finally {
+                        checkedCount++;
+                    }
+                });
+                await Promise.allSettled(promises);
+                updateSummary();
+            }
+
+            document.title = \`\${successfulIPs.length} Successful IPs Found\`;
+            const actionContainer = document.getElementById('action-buttons-container');
+            if (successfulIPs.length === 0) {
+                 if (checkedCount >= totalIPs) {
+                    document.getElementById('results-container').innerHTML = '<p style="text-align:center;">No successful proxies found.</p>';
+                 }
+            } else {
+                 const successfulIPsText = successfulIPs.map(i=>i.ip).join('\\n');
+                 const dataUrl = \`data:text/plain;charset=utf-8;base64,\${btoa(unescape(encodeURIComponent(successfulIPsText)))}\`;
+                 const downloadButton = \`<a href="\${dataUrl}" download="successful_ips.txt" class="btn btn-secondary">📥 Download Results</a>\`;
+                 actionContainer.innerHTML = \`<div class="action-buttons">\${downloadButton}<button class="btn btn-primary" onclick="copyToClipboard('\${successfulIPsText}')">📋 Copy All</button></div>\`;
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                 document.body.classList.add('dark-mode');
+            }
+            startChecking();
+        });
+    </script>
+</body>
+</html>`;
+}
+
 function generateClientSideCheckPageHTML({ title, subtitleLabel, subtitleContent, ipsToCheck, temporaryTOKEN, pageType, contentHash }) {
     const ipsJson = JSON.stringify(ipsToCheck);
     let subtitleHTML = '';
@@ -146,7 +307,7 @@ function generateClientSideCheckPageHTML({ title, subtitleLabel, subtitleContent
         if (pageType === 'file') {
              subtitleHTML = `<div class="ranges-list"><strong>${subtitleLabel}</strong> <a href="${subtitleContent}" class="range-tag" target="_blank" rel="noopener noreferrer">${subtitleContent}</a></div>`;
         } else if (pageType === 'iprange') {
-             const ranges = subtitleContent.split(',').map(r => `<span class="range-tag" data-copy="${r.trim()}">${r.trim()}</span>`).join('<br>');
+             const ranges = subtitleContent.split(',').map(r => `<span class="range-tag" onclick="copyToClipboard('${r.trim()}', this)">${r.trim()}</span>`).join('<br>');
              subtitleHTML = `<div class="ranges-list"><strong>${subtitleLabel}</strong><br>${ranges}</div>`;
         } else {
              subtitleHTML = `<div class="ranges-list"><strong>${subtitleLabel}</strong> <span class="range-tag">${subtitleContent}</span></div>`;
@@ -747,7 +908,7 @@ function generateMainHTML(faviconURL) {
   </style>
 </head>
 <body>
-  <a href="https://github.com/mehdi-hexing/CF-Workers-CheckProxyIP" target="_blank" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+  <a href="https://github.com/NiREvil" target="_blank" class="github-corner" aria-label="View on Github"><svg width="60" height="60" viewBox="0 0 200 200" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
   <div class="container">
     <header class="header">
       <h1 class="main-title">Proxy IP Checker</h1>
@@ -756,11 +917,11 @@ function generateMainHTML(faviconURL) {
       <div class="form-section">
         <label for="proxyip" class="form-label">Enter IPs or Domains (one per line):</label>
         <div class="input-wrapper">
-        <textarea id="proxyip" class="form-input" rows="4" placeholder="127.0.0.1 or nima.nscl.ir" autocomplete="off"></textarea>
+          <textarea id="proxyip" class="form-input" rows="4" placeholder="127.0.0.1 or nima.nscl.ir" autocomplete="off"></textarea>
         </div>
         <label for="proxyipRangeRows" class="form-label">Enter IP Range(s) (one per line):</label>
         <div class="input-wrapper">
-        <textarea id="proxyipRangeRows" class="form-input" rows="3" placeholder="127.0.0.0/24 or 127.0.0.0-255" autocomplete="off"></textarea>
+          <textarea id="proxyipRangeRows" class="form-input" rows="3" placeholder="127.0.0.0/24 or 127.0.0.0-255" autocomplete="off"></textarea>
         </div>
         <button id="checkBtn" class="btn-primary">
             <span style="display: flex; align-items: center; justify-content: center;">
@@ -786,14 +947,14 @@ function generateMainHTML(faviconURL) {
         </div>
     </div>
     <div class="api-docs">
-       <h3 style="margin-bottom:15px; text-align:center;">URL PATHDocumentation</h3>
+       <h3 style="margin-bottom:15px; text-align:center;">URL PATH Documentation</h3>
        <p><code>/proxyip/IP1,IP2,IP3,...</code></p>
        <p><code>/iprange/127.0.0.0/24,... or 127.0.0.0-255,...</code></p>
        <p><code>/file/https://your.file/ip1.txt or ip1.csv</code></p>
-       <hr style="border:0; border-top: 1px solid var(--border-color); margin: 20px 0;"/>
+       <p><code>/domain/domain1.com,domain2.com,...</code></p>
     </div>
     <footer class="footer">
-      <p>© ${year} Proxy IP Checker - By <strong>mehdi-hexing</strong></p>
+      <p>© ${year} <strong>© 2025 REvil</strong> —  proxyIP checker</p>
     </footer>
   </div>
   <div id="toast" class="toast"></div>
@@ -813,6 +974,17 @@ export default {
         const path = url.pathname;
         const UA = request.headers.get('User-Agent') || 'null';
         const hostname = url.hostname;
+        
+        if (path.toLowerCase().startsWith('/domain/')) {
+            const domains_string = decodeURIComponent(path.substring('/domain/'.length));
+            const domains = domains_string.split(',').map(s => s.trim()).filter(Boolean);
+            if (domains.length === 0) {
+                return new Response('No domains provided', { status: 400 });
+            }
+            const timestamp = Math.ceil(new Date().getTime() / (1000 * 60 * 31));
+            const temporaryTOKEN = await doubleHash(hostname + timestamp + UA);
+            return new Response(generateDomainCheckPageHTML({ domains, temporaryTOKEN }), { headers: { 'Content-Type': 'text/html;charset=UTF-8' } });
+        }
         
         if (path.toLowerCase().startsWith('/file/') || path.toLowerCase().startsWith('/iprange/') || path.toLowerCase().startsWith('/proxyip/')) {
             const timestamp = Math.ceil(new Date().getTime() / (1000 * 60 * 31));
@@ -842,7 +1014,7 @@ export default {
                     subtitleLabel: "Range's:",
                     subtitleContent: ranges_string,
                 };
-            } else { // /file/ path
+            } else { 
                 pageType = 'file';
                 const targetUrl = decodeURIComponent(request.url.substring(request.url.indexOf('/file/') + 6));
                 if (!targetUrl || !targetUrl.startsWith('http')) return new Response('Invalid URL', {status: 400});
@@ -918,46 +1090,11 @@ export default {
                 const data = await getIpInfo(ip);
                 return new Response(JSON.stringify(data), { headers: { "Content-Type": "application/json" } });
             }
-
-            // --- NEW API ENDPOINT FOR THE BOT ---
-            if (path.toLowerCase() === '/api/check_file') {
-                const targetUrl = url.searchParams.get('url');
-                if (!targetUrl || !targetUrl.startsWith('http')) {
-                    return new Response(JSON.stringify({ success: false, error: 'Invalid or missing URL parameter' }), { status: 400, headers: { "Content-Type": "application/json" } });
-                }
-                try {
-                    const response = await fetch(targetUrl, { headers: {'User-Agent': 'ProxyChecker/1.0'} });
-                    if (!response.ok) throw new Error(`Fetch failed: ${response.statusText}`);
-                    
-                    const text = await response.text();
-                    const foundIPs = [...new Set([...(text.match(forgivingIPv4Regex) || []), ...(text.match(ipv6Regex) || [])])];
-                    
-                    const ipsToCheck = foundIPs.filter(ip => {
-                        const parts = ip.split(':');
-                        return parts.length === 1 || !isNaN(parseInt(parts[parts.length - 1]));
-                    });
-
-                    const allResults = [];
-                    const batchSize = 20;
-#=                        const batch = ipsToCheck.slice(i, i + batchSize);
-                        const checkPromises = batch.map(ip => checkProxyIP(ip));
-                        const batchResults = await Promise.all(checkPromises);
-                        allResults.push(...batchResults);
-                    }
-                    
-                    const successfulIPs = allResults.filter(r => r.success).map(r => r.proxyIP);
-                    return new Response(JSON.stringify({ success: true, successful_ips: successfulIPs }), { headers: { "Content-Type": "application/json" } });
-
-                } catch (e) {
-                    return new Response(JSON.stringify({ success: false, error: e.message }), { status: 500, headers: { "Content-Type": "application/json" } });
-                }
-      8
-            }
             
             return new Response(JSON.stringify({success: false, error: 'API route not found'}), { status: 404, headers: { "Content-Type": "application/json" } });
         }
-        ft
-        const faviconURL = env.ICO || 'https://github.com/user-attachments/assets/31a6ced0-62b8-429f-a98e-082ea5ac1990';
+        
+        const faviconURL = env.ICO || 'https://raw.githubusercontent.com/sahar-km/windows-activation/refs/heads/main/docs/public/favicon.ico';
 
         if (path.toLowerCase() === '/favicon.ico') {
             return Response.redirect(faviconURL, 302);
