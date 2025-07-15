@@ -1,12 +1,12 @@
-import { defineConfig } from 'vitepress'
-import footnote from 'markdown-it-footnote'
-import mathjax3 from 'markdown-it-mathjax3'
-import attrs from 'markdown-it-attrs'
-import { mermaid } from 'vitepress-plugin-mermaid'
-import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
+import { defineConfig } from 'vitepress';
+import footnote from 'markdown-it-footnote';
+import mathjax3 from 'markdown-it-mathjax3';
+import attrs from 'markdown-it-attrs';
+import { mermaid } from 'vitepress-plugin-mermaid';
+import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs';
 
-const base = '/windows-activation/'
-const siteUrl = `https://sahar-km.github.io${base}`
+const base = '/windows-activation/';
+const siteUrl = `https://sahar-km.github.io${base}`;
 
 export default defineConfig({
   base: base,
@@ -17,28 +17,41 @@ export default defineConfig({
     ['link', { rel: 'icon', href: `${base}favicon.ico` }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
-    ['link', { href: 'https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap', rel: 'stylesheet' }],
+    [
+      'link',
+      {
+        href: 'https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap',
+        rel: 'stylesheet',
+      },
+    ],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
-    ['link', { rel: 'stylesheet', href: 'https://unpkg.com/video.js@8.17.4/dist/video-js.min.css' }],
+    [
+      'link',
+      { rel: 'stylesheet', href: 'https://unpkg.com/video.js@8.17.4/dist/video-js.min.css' },
+    ],
     ['script', { src: 'https://unpkg.com/video.js@8.17.4/dist/video.min.js' }],
-    ['style', {}, `
+    [
+      'style',
+      {},
+      `
       .video-js {
         width: 100%;
         max-width: 960px;
         height: auto;
         aspect-ratio: 16/9;
       }
-    `]
+    `,
+    ],
   ],
 
   markdown: {
-    config: (md) => {
-      md.use(footnote)
-      md.use(mathjax3)
-      md.use(attrs)
-      md.use(tabsMarkdownPlugin)
+    config: md => {
+      md.use(footnote);
+      md.use(mathjax3);
+      md.use(attrs);
+      md.use(tabsMarkdownPlugin);
     },
-    lineNumbers: true
+    lineNumbers: true,
   },
 
   mermaid: {},
@@ -53,7 +66,7 @@ export default defineConfig({
         nav: [
           { text: 'Home', link: '/' },
           { text: 'Docs', link: '/en/' },
-          { text: 'FAQ', link: '/en/faq' }
+          { text: 'FAQ', link: '/en/faq' },
         ],
         sidebar: {
           '/en/': [
@@ -63,8 +76,8 @@ export default defineConfig({
               items: [
                 { text: 'HWID Activation', link: '/en/' },
                 { text: 'KMS Activation', link: '/en/kms' },
-                { text: 'Methods Chart', link: '/en/chart' }
-              ]
+                { text: 'Methods Chart', link: '/en/chart' },
+              ],
             },
             {
               text: 'Docs',
@@ -81,8 +94,8 @@ export default defineConfig({
                 { text: 'Fix Powershell', link: '/en/fix_powershell' },
                 { text: '$OEM$ Folders', link: '/en/oem-folder' },
                 { text: 'Switches in Command line', link: '/en/command_line_switches' },
-                { text: 'Download Windows / Office', link: '/en/genuine-installation-media' }
-              ]
+                { text: 'Download Windows / Office', link: '/en/genuine-installation-media' },
+              ],
             },
             {
               text: 'Technical Details',
@@ -91,9 +104,15 @@ export default defineConfig({
                 { text: 'Win 10 After End-Of-Life', link: '/en/windows10_eol' },
                 { text: 'Remove Malware', link: '/en/remove_malware' },
                 { text: 'Clean Install Windows', link: '/en/clean_install_windows' },
-                { text: 'Office License Is Not Genuine', link: '/en/office-license-is-not-genuine' },
+                {
+                  text: 'Office License Is Not Genuine',
+                  link: '/en/office-license-is-not-genuine',
+                },
                 { text: 'Licensing Servers Issue', link: '/en/licensing-servers-issue' },
-                { text: 'Issues Due To Gaming Spoofers', link: '/en/issues_due_to_gaming_spoofers' },
+                {
+                  text: 'Issues Due To Gaming Spoofers',
+                  link: '/en/issues_due_to_gaming_spoofers',
+                },
                 { text: 'Change Edition Issues', link: '/en/change_edition_issues' },
                 { text: 'Evaluation Editions', link: '/en/evaluation_editions' },
                 { text: 'Fix Powershell', link: '/en/fix_powershell' },
@@ -101,8 +120,11 @@ export default defineConfig({
                 { text: 'Fix WPA Registry', link: '/en/fix-wpa-registry' },
                 { text: 'In-place Repair Upgrade ', link: '/en/in-place_repair_upgrade' },
                 { text: 'Office c2r Custom Install', link: '/en/office_c2r' },
-                { text: 'Bypass Russian Geoblock', link: 'https://gravesoft.dev/bypass-russian-geoblock' }
-              ]
+                {
+                  text: 'Bypass Russian Geoblock',
+                  link: 'https://gravesoft.dev/bypass-russian-geoblock',
+                },
+              ],
             },
             {
               text: 'Manual Activation Guides',
@@ -110,8 +132,8 @@ export default defineConfig({
               items: [
                 { text: 'Manual HWID activation', link: '/en/manual_hwid_activation' },
                 { text: 'Manual Ohook activation', link: '/en/manual_ohook_activation' },
-                { text: 'Manual KMS38 activation', link: '/en/manual_kms38_activation' }
-              ]
+                { text: 'Manual KMS38 activation', link: '/en/manual_kms38_activation' },
+              ],
             },
             {
               text: 'Contact Us',
@@ -119,27 +141,27 @@ export default defineConfig({
               items: [
                 { text: 'Troubleshoot', link: '/en/troubleshoot' },
                 { text: 'FAQ', link: '/en/faq' },
-                { text: 'Credits', link: '/en/credits' }
-              ]
-            }
-          ]
+                { text: 'Credits', link: '/en/credits' },
+              ],
+            },
+          ],
         },
         editLink: {
           pattern: 'https://github.com/sahar-km/windows-activation/edit/main/docs/:path',
-          text: 'Edit this page on GitHub'
+          text: 'Edit this page on GitHub',
         },
         docFooter: {
           prev: 'Previous page',
-          next: 'Next page'
+          next: 'Next page',
         },
         lastUpdated: {
           text: 'Last updated',
           formatOptions: {
             dateStyle: 'medium',
-            timeStyle: 'short'
-          }
-        }
-      }
+            timeStyle: 'short',
+          },
+        },
+      },
     },
     fa: {
       label: 'فارسی',
@@ -150,7 +172,7 @@ export default defineConfig({
         nav: [
           { text: 'خانه', link: '/fa/index' },
           { text: 'مستندات', link: '/fa/intro' },
-          { text: 'سوالات متداول', link: '/fa/faq' }
+          { text: 'سوالات متداول', link: '/fa/faq' },
         ],
         sidebar: [
           {
@@ -159,8 +181,8 @@ export default defineConfig({
             items: [
               { text: 'فعال‌سازی با روش HWID', link: '/fa/intro' },
               { text: 'فعال‌سازی با روش KMS', link: '/fa/kms' },
-              { text: 'مقایسه انواع روش‌ها', link: '/fa/chart' }
-            ]
+              { text: 'مقایسه انواع روش‌ها', link: '/fa/chart' },
+            ],
           },
           {
             text: 'مستندات',
@@ -177,8 +199,8 @@ export default defineConfig({
               { text: 'رفع مشکل پاورشل', link: '/fa/fix_powershell' },
               { text: 'پوشه‌های $OEM$', link: '/fa/oem-folder' },
               { text: 'سوئیچ‌ها در خط فرمان', link: '/fa/command_line_switches' },
-              { text: 'دانلود ویندوز / آفیس', link: '/fa/genuine-installation-media' }
-            ]
+              { text: 'دانلود ویندوز / آفیس', link: '/fa/genuine-installation-media' },
+            ],
           },
           {
             text: 'جزئیات فنی',
@@ -197,8 +219,11 @@ export default defineConfig({
               { text: 'رفع مشکل رجیستری WPA', link: '/fa/fix-wpa-registry' },
               { text: 'آپگرید تعمیری در محل', link: '/fa/in-place_repair_upgrade' },
               { text: 'نصب سفارشی Office c2r', link: '/fa/office_c2r' },
-              { text: 'دور زدن مسدودسازی جغرافیایی روسیه', link: 'https://gravesoft.dev/bypass-russian-geoblock' }
-            ]
+              {
+                text: 'دور زدن مسدودسازی جغرافیایی روسیه',
+                link: 'https://gravesoft.dev/bypass-russian-geoblock',
+              },
+            ],
           },
           {
             text: 'راهنمای فعال‌سازی دستی',
@@ -206,8 +231,8 @@ export default defineConfig({
             items: [
               { text: 'نصب دستی HWID', link: '/fa/manual_hwid_activation' },
               { text: 'نصب دستی Ohook', link: '/fa/manual_ohook_activation' },
-              { text: 'نصب دستی KMS38', link: '/fa/manual_kms38_activation' }
-            ]
+              { text: 'نصب دستی KMS38', link: '/fa/manual_kms38_activation' },
+            ],
           },
           {
             text: 'ارتباط با ما',
@@ -215,43 +240,43 @@ export default defineConfig({
             items: [
               { text: 'گزارش مشکلات', link: '/fa/troubleshoot' },
               { text: 'سوالات متداول', link: '/fa/faq' },
-              { text: 'منابع', link: '/fa/credits' }
-            ]
-          }
+              { text: 'منابع', link: '/fa/credits' },
+            ],
+          },
         ],
         editLink: {
           pattern: 'https://github.com/sahar-km/windows-activation/edit/main/docs/:path',
-          text: 'این صفحه را در گیت‌هاب ویرایش کنید'
+          text: 'این صفحه را در گیت‌هاب ویرایش کنید',
         },
         docFooter: {
           prev: 'صفحه قبلی',
-          next: 'صفحه بعدی'
+          next: 'صفحه بعدی',
         },
         lastUpdated: {
-          text: 'آخرین بروزرسانی'
-        }
-      }
-    }
+          text: 'آخرین بروزرسانی',
+        },
+      },
+    },
   },
 
   themeConfig: {
     logo: '/logo-h.svg',
     search: {
-      provider: 'local'
+      provider: 'local',
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/NiREvil/' },
-      { icon: 'telegram', link: 'https://t.me/F_NiREvil/6448' }
+      { icon: 'telegram', link: 'https://t.me/F_NiREvil/6448' },
     ],
     footer: {
       message: 'Made with using VitePress',
-      copyright: '© 2025 REvil — Sharing knowledge, one note at a time'
-    }
+      copyright: '© 2025 REvil — Sharing knowledge, one note at a time',
+    },
   },
 
   vite: {
     optimizeDeps: {
-      include: ['video.js']
-    }
-  }
-})
+      include: ['video.js'],
+    },
+  },
+});
