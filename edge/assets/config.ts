@@ -148,7 +148,7 @@ export default defineConfig({
       items: [
         { text: 'فعال‌سازی با روش HWID', link: '/fa/intro' },
         { text: 'فعال‌سازی با روش KMS', link: '/fa/kms' },
-        { text: 'مقایسه انواع روش‌ها', link: '/fa/chart' },
+        { text: 'مقایسه انواع روش‌ها', link: '/fa/chart' }
       ]
     },
     {
