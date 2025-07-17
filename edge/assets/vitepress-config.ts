@@ -103,9 +103,15 @@ export default defineConfig({
                 { text: 'Win 10 After End-Of-Life', link: '/wa/windows10_eol' },
                 { text: 'Remove Malware', link: '/wa/remove_malware' },
                 { text: 'Clean Install Windows', link: '/wa/clean_install_windows' },
-                { text: 'Office License Is Not Genuine', link: '/wa/office-license-is-not-genuine' },
+                {
+                  text: 'Office License Is Not Genuine',
+                  link: '/wa/office-license-is-not-genuine',
+                },
                 { text: 'Licensing Servers Issue', link: '/wa/licensing-servers-issue' },
-                { text: 'Issues Due To Gaming Spoofers', link: '/wa/issues_due_to_gaming_spoofers' },
+                {
+                  text: 'Issues Due To Gaming Spoofers',
+                  link: '/wa/issues_due_to_gaming_spoofers',
+                },
                 { text: 'Change Edition Issues', link: '/wa/change_edition_issues' },
                 { text: 'Evaluation Editions', link: '/wa/evaluation_editions' },
                 { text: 'Fix Powershell', link: '/wa/fix_powershell' },
@@ -138,8 +144,14 @@ export default defineConfig({
         logo: '/logo-h.svg',
         search: { provider: 'local' },
         docFooter: { prev: 'Previous page', next: 'Next page' },
-        lastUpdated: { text: 'Last updated', formatOptions: { dateStyle: 'medium', timeStyle: 'short' } },
-        editLink: { pattern: 'https://github.com/NiREvil/windows-activation/edit/main/docs/:path', text: 'Edit this page on GitHub' },
+        lastUpdated: {
+          text: 'Last updated',
+          formatOptions: { dateStyle: 'medium', timeStyle: 'short' },
+        },
+        editLink: {
+          pattern: 'https://github.com/NiREvil/windows-activation/edit/main/docs/:path',
+          text: 'Edit this page on GitHub',
+        },
         socialLinks: [
           { icon: 'github', link: 'https://github.com/NiREvil/' },
           { icon: 'telegram', link: 'https://t.me/F_NiREvil/6448' },
@@ -148,7 +160,7 @@ export default defineConfig({
           copyright: '© 2025 REvil — Sharing knowledge, one note at a time',
           message: 'Made with using VitePress',
         },
-      }
+      },
     },
     fa: {
       label: 'فارسی',
@@ -196,7 +208,10 @@ export default defineConfig({
                 { text: 'نصب تمیز ویندوز', link: '/fa/wa/clean_install_windows' },
                 { text: 'لایسنس آفیس اصل نیست', link: '/fa/wa/office-license-is-not-genuine' },
                 { text: 'مشکل سرورهای لایسنس', link: '/fa/wa/licensing-servers-issue' },
-                { text: 'مشکلات ناشی از اسپوفرهای گیم', link: '/fa/wa/issues_due_to_gaming_spoofers' },
+                {
+                  text: 'مشکلات ناشی از اسپوفرهای گیم',
+                  link: '/fa/wa/issues_due_to_gaming_spoofers',
+                },
                 { text: 'مشکلات تغییر نسخه', link: '/fa/wa/change_edition_issues' },
                 { text: 'نسخه‌های ارزیابی', link: '/fa/wa/evaluation_editions' },
                 { text: 'رفع مشکل پاورشل', link: '/fa/wa/fix_powershell' },
@@ -226,16 +241,19 @@ export default defineConfig({
             },
           ],
         },
-        editLink: { pattern: 'https://github.com/NiREvil/windows-activation/edit/main/docs/:path', text: 'این صفحه را در گیت‌هاب ویرایش کنید' },
+        editLink: {
+          pattern: 'https://github.com/NiREvil/windows-activation/edit/main/docs/:path',
+          text: 'این صفحه را در گیت‌هاب ویرایش کنید',
+        },
         docFooter: { prev: 'صفحه قبلی', next: 'صفحه بعدی' },
         lastUpdated: { text: 'آخرین بروزرسانی' },
-      }
-    }
+      },
+    },
   },
 
   vite: {
     optimizeDeps: {
-      exclude: ['video.js']
-    }
-  }
-})
+      exclude: ['video.js'],
+    },
+  },
+});
