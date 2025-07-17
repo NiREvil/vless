@@ -1,8 +1,7 @@
-[Table Generator][T] —  [Code Beautify][B]
+[Table Generator][T] — [Code Beautify][B]
 
-<br><br/> 
-<br><br/> 
-
+<br><br/>
+<br><br/>
 
 <!DOCTYPE html>
 <html>
@@ -197,7 +196,6 @@
 	</table>
 </body>
 </html>
-
 
 [T]: https://codebeautify.org/html-table-generator#
 [B]: https://codebeautify.org/
