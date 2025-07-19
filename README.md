@@ -383,9 +383,9 @@ https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/python/hysteria2
 https://raw.githubusercontent.com/arshiacomplus/eva-sub/refs/heads/main/configs.txt [[AR?]]
 
 http://185.141.216.98:2096/sub/@KevinZakarian-1?format=json [[KV?]]  
-http://185.141.216.99:2096/sub/@KevinZakarian-2?format=json   
-http://85.93.8.142:2096/sub/@KevinZakarian-4?format=json   
-http://178.236.254.188:2096/sub/@KevinZakarian-8?format=json   
+http://185.141.216.99:2096/sub/@KevinZakarian-2?format=json  
+http://85.93.8.142:2096/sub/@KevinZakarian-4?format=json  
+http://178.236.254.188:2096/sub/@KevinZakarian-8?format=json
 
 https://shadowmere.xyz/api/b64sub [[SW?]]
 
@@ -408,7 +408,6 @@ https://raw.githubusercontent.com/lagzian/SS-Collector/refs/heads/main/SS/Trinit
 https://raw.githubusercontent.com/darknessm427/V2ray-Sub-Collector/refs/heads/main/Darkness%20Sub1.txt
 
 https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub
-
 
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/ss
 
@@ -649,7 +648,6 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 
 https://v2.alicivil.workers.dev/?protocol=wireguard&ip=188.114.99.137&output=hiddify
 
-
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/warp/config [[YBK?]]
 
 **Auto generate in workflows - warp ON warp [[Ni?]]**  
@@ -664,7 +662,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/WarpOnWa
 **Warp On Warp [[TD?]]**  
 https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/subwarp/warp
 
-**Warp + Windscribe + Hysteria - Hiddify**    https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscribe%20on%20H2
+**Warp + Windscribe + Hysteria - Hiddify** https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscribe%20on%20H2
 
 **Warp + Proton for Hiddify with DNS clean**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Proton%20ON%20WARP%2B%20DNS%20Clean
@@ -718,6 +716,7 @@ https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/Xray-WoW.json
 </br>
 
 Ex for NikaNG [[TD?]]
+
 ```YAML
 wireguard://oP4D2HXriimhBqk%2Bw4CpI41OEQd5p2rJV8MtbeV7eUs%3D@188.114.98.224:955?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1280&reserved=195%2C216%2C199#@darkness_427
 ```
@@ -727,6 +726,7 @@ wireguard://yHmk7qZA48yn%2FPCgMV%2F95lazmj2JgXBxk5MoUjsSwEo%3D@188.114.99.137:99
 ```
 
 Ex for MahsaNG
+
 ```YAML
 wireguard://oP4D2HXriimhBqk%2Bw4CpI41OEQd5p2rJV8MtbeV7eUs%3D@188.114.98.224:3476?address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=195%2C216%2C199#@darkness_427
 ```
@@ -736,12 +736,14 @@ wireguard://yHmk7qZA48yn%2FPCgMV%2F95lazmj2JgXBxk5MoUjsSwEo%3D@188.114.99.137:23
 ```
 
 Ex for Mahsa/NikaNG
+
 ```JSON
- 
+
  {"remarks": "ArshiaComPlus - WoW", "log": {"loglevel": "warning"}, "dns": {"hosts": {}, "servers": ["https://94.140.14.14/dns-query", {"address": "8.8.8.8", "domains": ["geosite:category-ir", "domain:.ir"], "expectIPs": ["geoip:ir"], "port": 53}], "tag": "dns"}, "inbounds": [{"port": 10808, "protocol": "socks", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": true}, "tag": "socks-in"}, {"port": 10809, "protocol": "http", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": true}, "tag": "http-in"}, {"listen": "127.0.0.1", "port": 10853, "protocol": "dokodemo-door", "settings": {"address": "1.1.1.1", "network": "tcp,udp", "port": 53}, "tag": "dns-in"}], "outbounds": [{"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "mtu": 1280, "peers": [{"endpoint": "188.114.98.224:878", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [228, 173, 88], "secretKey": "IIyOyrR8UpHgotd7U/Vi1hm12IkWKOML7bm5OmlD23g=", "keepAlive": 10, "wnoise": "quic", "wnoisecount": "10-15", "wpayloadsize": "1-5", "wnoisedelay": "1-3"}, "streamSettings": {"sockopt": {"dialerProxy": "warp-ir"}}, "tag": "warp-out"}, {"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "mtu": 1280, "peers": [{"endpoint": "188.114.99.138:942", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [8, 29, 217], "secretKey": "IDXG9mb1NMz6fgENEvSO2TlVDU8BIf/absJLAm3hJlM=", "keepAlive": 10, "wnoise": "quic", "wnoisecount": "10-15", "wpayloadsize": "1-8", "wnoisedelay": "1-3"}, "tag": "warp-ir"}, {"protocol": "dns", "tag": "dns-out"}, {"protocol": "freedom", "settings": {}, "tag": "direct"}, {"protocol": "blackhole", "settings": {"response": {"type": "http"}}, "tag": "block"}], "policy": {"levels": {"8": {"connIdle": 300, "downlinkOnly": 1, "handshake": 4, "uplinkOnly": 1}}, "system": {"statsOutboundUplink": true, "statsOutboundDownlink": true}}, "routing": {"domainStrategy": "IPIfNonMatch", "rules": [{"inboundTag": ["dns-in"], "outboundTag": "dns-out", "type": "field"}, {"ip": ["8.8.8.8"], "outboundTag": "direct", "port": "53", "type": "field"}, {"domain": ["geosite:category-ir", "domain:.ir"], "outboundTag": "direct", "type": "field"}, {"ip": ["geoip:ir", "geoip:private"], "outboundTag": "direct", "type": "field"}, {"outboundTag": "warp-out", "type": "field", "network": "tcp,udp"}]}, "stats": {}}
 ```
 
 Ex for Hiddify
+
 ```JSON
 {"outbounds": [{"type": "wireguard", "tag": "@darkness_427 Warp-IR1", "local_address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "private_key": "oP4D2HXriimhBqk+w4CpI41OEQd5p2rJV8MtbeV7eUs=", "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=", "server": "188.114.98.224", "server_port": 878, "reserved": [195, 216, 199], "mtu": 1280, "fake_packets": "1-3", "fake_packets_size": "10-30", "fake_packets_delay": "10-30", "fake_packets_mode": "m4"}, {"type": "wireguard", "tag": "@darkness_427 Warp-Main1", "detour": "@darkness_427 Warp-IR1", "local_address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "private_key": "ODd0kPser1fJ/Zupag1h1fNxoj7YCc0hOjYEgWs2CkU=", "server": "188.114.99.118", "server_port": 955, "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=", "reserved": [69, 191, 86], "mtu": 1300, "fake_packets_mode": "m4"}]}
 ```
@@ -772,7 +774,6 @@ https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/clash-wg.yml 
 > SFA: Singbox for Android <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="13"/>
 >
 > SFI: Singbox for IOS
-> 
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json [[Ni?]]
 
@@ -780,7 +781,7 @@ https://raw.githubusercontent.com/4n0nymou3/Universal-Proxy-Finder/master/Output
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
 
-https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/sing-box.json 
+https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/sing-box.json
 
 https://raw.githubusercontent.com/valid7996/Gozargah/refs/heads/main/Gozargah_sing-box_sub [[GZ?]]
 
@@ -1261,7 +1262,6 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 
 <br><br/>
 
-
  <!--I'm commenting on the links to Soroush's repository for now so that we can find out later what happened to her GitHub repository. 🤷🏻‍♀️ 
 
 ## COUNTRIES
@@ -1558,8 +1558,6 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [SW?]: https://github.com/jadolg/shadowmere
 [TD?]: https://telegram.me/s/mansor427
 [WE?]: https://telegram.me/s/IranRamona
-
-
 [Arshia]: https://telegram.me/s/warpscanner
 [any information]: https://telegram.me/s/F_NiREvil/6292
 [Amnezia]: https://github.com/amnezia-vpn/amnezia-client/releases
