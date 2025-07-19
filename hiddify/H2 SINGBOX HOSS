@@ -1,5 +1,5 @@
 //profile-title: base64:SDIgT04gU0lOR0JPWA==
-//profile-update-interval: 4
+//profile-update-interval: 12
 //subscription-userinfo: upload=64424500944; download=45097156608; total=1073741824000; expire=1762646400
 //support-url: https://t.me/F_NiREvil
 //profile-web-page-url: https://github.com/NiREvil/vless
@@ -87,12 +87,12 @@
       "type": "selector"
     },
     {
-      "interval": "90s",
+      "interval": "5m",
       "outbounds": ["hysteria"],
       "tag": "auto",
       "tolerance": 50,
       "type": "urltest",
-      "url": "https://www.gstatic.com/generate_204"
+      "url": "http://www.gstatic.com/generate_204"
     },
     {
       "tag": "direct",
@@ -101,12 +101,12 @@
     },
     {
       "obfs": {
-        "password": "KevinZakarian",
+        "password": "FarzanehDreams",
         "type": "salamander"
       },
-      "password": "5UNkH2Qx0g",
-      "server": "141.11.62.217",
-      "server_port": 11003,
+      "password": "5oITDYnNW7",
+      "server": "45.138.99.213",
+      "server_port": 8443,
       "tag": "hysteria",
       "tls": {
         "enabled": true,
