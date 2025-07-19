@@ -270,6 +270,7 @@
 > 📦 This configuration is dynamically generated and continuously updated via GitHub Actions every 4 hours to ensure consistency and best practices. <br><br/>
 
 ##
+
 ### Hiddify URL <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>
 
 ```POV-Ray SDL
@@ -509,7 +510,6 @@ https://azadnet05.pages.dev/sub/4d794980-54c0-4fcb-8def-c2beaecadbad#EN-Normal
 https://raw.githubusercontent.com/amirparsaxs/Vip-s/refs/heads/main/Sub.vip [[XS?]]
 
 https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_links.txt
-
 
 ![rainbow]
 
