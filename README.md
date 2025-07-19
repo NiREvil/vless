@@ -270,7 +270,6 @@
 > 📦 This configuration is dynamically generated and continuously updated via GitHub Actions every 4 hours to ensure consistency and best practices. <br><br/>
 
 ##
-
 ### Hiddify URL <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>
 
 ```POV-Ray SDL
@@ -281,7 +280,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
 
 ### Sing-Box URL <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="20"/>
 
-```mupad
+```Elixir
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 ```
 
@@ -341,6 +340,8 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 > [itsyebekhe.github.io/tpro]
 >
 > <br/><br/>
+
+<br><br/>
 
 ## XRAY
 
@@ -491,7 +492,7 @@ https://raw.githubusercontent.com/AzadNetCH/Clash/refs/heads/main/AzadNet_iOS.tx
 
 https://raw.githubusercontent.com/Proxydaemitelegram/Proxydaemi44/refs/heads/main/Proxydaemi44 [[PR?]]
 
-httpps://channel-freevpnhomes-subscription.shampoosirsehat.homes [[ME?]]
+https://channel-freevpnhomes-subscription.shampoosirsehat.homes [[ME?]]
 
 https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/refs/heads/master/collected-proxies/xray-json-full/actives_all.json
 
@@ -509,7 +510,403 @@ https://raw.githubusercontent.com/amirparsaxs/Vip-s/refs/heads/main/Sub.vip [[XS
 
 https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_links.txt
 
-https://raw.githubusercontent.com/Created-By/Telegram-Eag1e_YT/refs/heads/main/%40Eag1e_YT
+
+![rainbow]
+
+<br></br>
+
+## [Amnezia]
+
+> [!NOTE]
+>
+> Do you have [[any information]] on amnezia ? </br>
+
+**A0 🇳🇱 NL**
+
+```Elixir
+[Interface]
+PrivateKey = AEP+jhH5scMAOziG/mr1wwM43SKUxgPUM9q0tU3OK2U=
+Address = 10.136.2.46/32
+DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+[Peer]
+PublicKey = gbUPMNfaxgRSGD3xcnnbAJSclxfnOyh4U1qqmYMWmCI=
+PresharedKey = X2x3QHoIkpmviGM3zyX6mJvf6Oj905mqBSLp0hfRp/w=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 25
+Endpoint = nl02awg.kcufwfgnkr.net:60136
+```
+
+**A1 🇫🇮**
+
+```Ballerina
+[Interface]
+PrivateKey = +NINvwWX6DQ82zqC3pKPSh01UNlBw+n1JGPD9Bzr01o=
+Address = 10.146.0.94/32
+DNS = 1.1.1.1, 8.8.4.4, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1330
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+[Peer]
+PublicKey = fjcBbSCl00At7hkm/h8uVlfITrq3k6twlbICtXMael4=
+PresharedKey = 2uq120k3ihWXIAPrQTY/mk1M8yGxKTxIWC7nCNGx6DE=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = fin01wg.kcufwfgnkr.net:50146
+```
+
+**A2 🇦🇪**
+
+```Elixir
+[Interface]
+PrivateKey = 4HRk7bt3WhdxZzKqiXNeT41xTZhAPYTVpji8sxweX0c=
+Address = 10.136.1.137/32
+DNS = 1.1.1.1, 8.8.4.4, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+[Peer]
+PublicKey = 9mn11Gs4ouOhlLdkh1HKfV3zlAZGON9iv4L94dsPmi4=
+PresharedKey = cDxnBAIBEvXstPFAk8NFWOyRvAxHZVCDISyd/T2j4v0=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = ae01awg.kcufwfgnkr.net:60136
+```
+
+**A3 🇪🇪**
+
+```Ballerina
+[Interface]
+PrivateKey = iPC3ihkqcyBouWGfCP+9f1pYOsktfW1fUmtKoh/eC2M=
+Address = 10.136.1.165/32
+DNS = 1.1.1.1, 8.8.4.4, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1330
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+[Peer]
+PublicKey = Gd2PeVUqrz3FzpnbfLmvy1tY/Mv4drWVhsoAjflUBUw=
+PresharedKey = lnJvUBbTO4gDjRrClntTo+Re/1ONRgxfW8p2rw68ddE=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = est01awg.kcufwfgnkr.net:60136
+```
+
+**A4 🇬🇧 UK**
+
+```Elixir
+[Interface]
+PrivateKey = KCjVjySbNGSviVYG0MwmleRz0QhXOqcwHbiHRjGxn0A=
+Address = 10.221.0.78/32
+DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+[Peer]
+PublicKey = jJgnoLdV8w94rWI0gbXWhhcY8dFA3SuBdD0Fng3u/xo=
+PresharedKey = 6+oOnvoa2He0UE8j0Af3cRx/lJSdRSdyHLA1eKc9FCM=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 25
+Endpoint = gb01a.kcufwfgnkr.net:62931
+```
+
+**A5 🇫🇷 FR**
+
+```Ballerina
+[Interface]
+PrivateKey = +EkO5G9s8wtavwusVRx693iUU44u/cA4KaiXFraTvVU=
+Address = 10.201.5.49/32
+DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+[Peer]
+PublicKey = 6jIt22KMxyN3Hm62/8I4/M54gNsUJD4P8AqOWaGR7F4=
+PresharedKey = XdzRw2puotZqp4uUj3d/nh2zK9FNS80qFcfZR27g9WU=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 25
+Endpoint = fr01a.kcufwfgnkr.net:62931
+```
+
+**A6 🇹🇷 TR**
+
+```Elixir
+[Interface]
+PrivateKey = gCQsj/7vZrBCjLuKtNvCrwhEa0CqSXRWRHvoddNin38=
+Address = 10.201.2.124/32
+DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+
+[Peer]
+PublicKey = 6T9PkVHfTvMfDtKANISJqnW1Ulmd5kYyh8IsVkQYemU=
+PresharedKey = ZMNacbDp5sZhDlKLX0iGhcn+7zRno1gMPmx1ZU3JeWU=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = tr01a.kcufwfgnkr.net:62931
+```
+
+**A** [[Ni?]]
+
+```POV-Ray SDL
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWEgRnJlZSBJUiIsICJkZXNjcmlwdGlvbiI6ICJBbW5lemlhIEZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJYbWtoWjhTay5UaTY0NENQTnBnTnQydW12ektUSGJRY1NSY2hpRXhlWSJ9
+```
+
+**B**
+
+```Elixir
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWEgRnJlZSBJUiIsICJkZXNjcmlwdGlvbiI6ICJBbW5lemlhIEZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJCSmE1R0FlVy44ZzFXOXl6Q3VGZXMwQzFJREdhM2k3VGE0MDNuSU02NiJ9
+```
+
+**C**
+
+```CSS
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJxcjV5elZsYi5sSnVwY3hVVlc3TTBmY2k0TzdCMVFDdVJpS0ZBdjkxaiJ9
+```
+
+**D**
+
+```POV-Ray SDL
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAidlZxckZIa3guZ0V6M0tKTk44YWlwaFU0MjNGS2Roc2R6MUVXbnNZZ1cifQ==
+```
+
+**E**
+
+```mupad
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJRNE9YYkdaei4wUTJDN1NoMEM1UXBGcURyenBtcktaYmZtMU00ZE1SSyJ9
+```
+
+</br>
+
+<details>
+<summary>  MORE CONTEXT </summary>
+
+**1**
+
+```POV-Ray SDL
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiT2hSZHVRbU0uWlRZV05LRW5lSGdhV3lURmFwNjJrbWpscGRxSXZZRlIifQ==
+```
+
+**2-**
+
+```POV-Ray SDL
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiTE1QTjRJalEuMkZ2R3N0U0NaRnhVVVVsbUt3V044bHdDektjMmlIRVEifQ==
+```
+
+**3-**
+
+```mupad
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVVBQWEN3eVkuRDRzZ0I1RUk3eTNvdHJDWFBtZmpCZ0pCazhnSUs0c3gifQ==
+```
+
+**4-**
+
+```mupad
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAic0pBbEhEbGwuaWtodXg0Mjg4R2ZqakdZUGhMVHExdkhmMVB2NWVUckMifQ==
+```
+
+**5-**
+
+```CSS
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiODA0OENnNGcucDNXaUF2b2hVSExhSGlJanhVak9sQnlPaHBSREIxWEcifQ==
+```
+
+**6-**
+
+```CSS
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiNmdLdnB1YnkuZUl1Q3k4SVpwUDJLU3FmV2FJMVNTWnlrYkl5RDVsNlEifQ==
+```
+
+**7-**
+
+```robots.txt
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiWjNnZmZncEMuUkpZUnhrcGNRWW9NWU0wZDBoUDl5eEVqZkJ0WjcxQ1cifQ==
+```
+
+**8-**
+
+```robots.txt
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiSnNMUllUNGMua25QVkhReEpmWlJOb0xkcUJrd1NFQlVlUTQxQU1GbWoifQ==
+```
+
+**9-**
+
+```POV-Ray SDL
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAibUQ2dXBkMTUuUmRTb2o4czZLMTJTaUIxemRLaEx4bFBPdnp0MnVRU3QifQ==
+```
+
+**10-**
+
+```POV-Ray SDL
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAicXZVZHFzVlQuRTJIZWZtc1FuZkR6bTJXZTZSd0tncEF1eTZrb0t6N1MifQ==
+```
+
+**11-**
+
+```mupad
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJWRTAyZnhVUi5XU0EzMmtQUkJ6QVlSc3FFbFA2VmZ5dE1yUklrWDAwbiJ9ifQ==
+```
+
+**12-**
+
+```mupad
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVkUwMmZ4VVIuV1NBMzJrUFJCekFZUnNxRWxQNlZmeXRNclJJa1gwMG4ifQ==
+```
+
+**13-**
+
+```CSS
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJNd2NIYmNHMi5reWI2UTlRUjdNT0YxQjNRUUJabkV2bmJlU2RZU1ZPWCJ9
+```
+
+**14-**
+
+```CSS
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiTXdjSGJjRzIua3liNlE5UVI3TU9GMUIzUVFCWm5Fdm5iZVNkWVNWT1gifQ==
+```
+
+**15-**
+
+```robots.txt
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAianhPNmI4d0guZHVwZExaV290OVdFdjd0ZDBvM0NxWUsxZWU0ZVFTMzUifQ==
+```
+
+**16-**
+
+```robots.txt
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiRTRVYWR5N3cuSlpJbllDekFCRHBqeElGa0kxM21EM0k1MTd4MVhVVjEifQ==
+```
+
+**17-**
+
+```POV-Ray SDL
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiSGpzNUo0dkouS2VXemRib3dxM01ZRzlwYTQwRUlGMDE5aW9UcllhYloifQ==
+```
+
+**18-**
+
+```POV-Ray SDL
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiUUNSR05DelcuNnJNbDQzVzhBbDFrMzk3Y0NiTkQ2QTVRMEVwQjJwSUQifQ==
+```
+
+**19-**
+
+```mupad
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAieDVhN1c5Z0cuanpINUh4aTQwNHdJOGRwNmRWY3Bwd1lqSXZNMnpFTG4ifQ==
+```
+
+**20-**
+
+```mupad
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiY25lYjJSRGsuUFMwMHhzQ1VmMGlLZVFRZzZFVG42elJlZm15QXoyb24ifQ==
+```
+
+**21-**
+
+```CSS
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiRnFOb1hZNmguTGJUZmxnRXZIdTNaNlFnR2VrVFB6c0NlWEJxeXBhMmsifQ==
+```
+
+**22-**
+
+```CSS
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiRXRSTFZVQzIuZmd3Y0I2cEZHMWV2ZTl5TW40UjJFa1haZm9EVkgyaHYifQ==
+```
+
+**23-**
+
+```robots.txt
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVldKaElZQm0uQ1pFUGp6M2JUQ0plOTd3cVZSZlNxMUFjVTdpVFR3dHoifQ==
+```
+
+**24-**
+
+```robots.txt
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVFRNazlBY1YuSE5DQWN0d3lYTWhibDRSeXI0WGFoTzB5SE1UUmdQU1EifQ==
+```
+
+**25-**
+
+```POV-Ray SDL
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiNjkwZ3o0TVYubVRWeXh0TFVtQ05DckZjakVXWWM1UDd3WFJDTFRrSUgifQ==
+```
+
+**26-**
+
+```POV-Ray SDL
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVVoxRnRPOU4uaFc0M1dDaGZWR0FXanpOcFN1VXlNNUk2RGpnVkU1S3cifQ==
+```
+
+**27-**
+
+```POV-Ray SDL
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiQkphNUdBZVcuOGcxVzl5ekN1RmVzMEMxSURHYTNpN1RhNDAzbklNNjYifQ==
+```
+
+**28-**
+
+```POV-Ray SDL
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVVoxRnRPOU4uaFc0M1dDaGZWR0FXanpOcFN1VXlNNUk2RGpnVkU1S3cifQ==
+```
+
+**29-**
+
+```POV-Ray SDL
+vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJxcjV5elZsYi5sSnVwY3hVVlc3TTBmY2k0TzdCMVFDdVJpS0ZBdjkxaiJ9
+```
+
+</details>
 
 ![rainbow]
 
@@ -860,407 +1257,6 @@ ssconf://s3.amazonaws.com/beedynconprd/301yqyvqdpr1z95ub9fnu8qtdni54j6yyue94sowz
 ```
 
 <hr/><br/>
-
-## [Amnezia]
-
-> [!NOTE]
->
-> Do you have [[any information]] on amnezia ? </br>
-
-**A0 🇳🇱 NL**
-
-```YAML
-[Interface]
-PrivateKey = AEP+jhH5scMAOziG/mr1wwM43SKUxgPUM9q0tU3OK2U=
-Address = 10.136.2.46/32
-DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-
-[Peer]
-PublicKey = gbUPMNfaxgRSGD3xcnnbAJSclxfnOyh4U1qqmYMWmCI=
-PresharedKey = X2x3QHoIkpmviGM3zyX6mJvf6Oj905mqBSLp0hfRp/w=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 25
-Endpoint = nl02awg.kcufwfgnkr.net:60136
-```
-
-**A1 🇩🇪**
-
-```CSS
-[Interface]
-PrivateKey = IMfOHsLrIGqMzj2fFya1SqhKnJzxbV5SzbdyKiTv6nQ=
-Address = 10.221.4.239/32
-DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-
-[Peer]
-PublicKey = mTdrvswAGa9RZDcgyKS84xF0b/8U1ILoeoslvn6HRzA=
-PresharedKey = EKNmnC89ZiP8JWN+pyLvWew7Sxhi/kpz7An7BZH3I6w=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = de01a.kcufwfgnkr.net:62931
-```
-
-**A2 🇦🇪**
-
-```CSS
-[Interface]
-PrivateKey = 4HRk7bt3WhdxZzKqiXNeT41xTZhAPYTVpji8sxweX0c=
-Address = 10.136.1.137/32
-DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-
-[Peer]
-PublicKey = 9mn11Gs4ouOhlLdkh1HKfV3zlAZGON9iv4L94dsPmi4=
-PresharedKey = cDxnBAIBEvXstPFAk8NFWOyRvAxHZVCDISyd/T2j4v0=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = ae01awg.kcufwfgnkr.net:60136
-```
-
-**A3 🇬🇧 Gemini**
-
-```CSS
-[Interface]
-PrivateKey = uOiSHtjRNr5OgD9E/nPXPHdvMviUGU3FysssxcMnWVM=
-Address = 10.221.0.42/32
-DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-
-[Peer]
-PublicKey = wFAo+AY8B1z16E9VzYJYCkZfGMpD8odRbq/VNAY6rWQ=
-PresharedKey = Uw5Wb66JJoQkpzl4CLY2q9pDyScc2QvXuSnfagW3wjY=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = gb02awg.kcufwfgnkr.net:62931
-```
-
-**A4 🇬🇧 UK**
-
-```CSS
-[Interface]
-PrivateKey = KCjVjySbNGSviVYG0MwmleRz0QhXOqcwHbiHRjGxn0A=
-Address = 10.221.0.78/32
-DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-[Peer]
-PublicKey = jJgnoLdV8w94rWI0gbXWhhcY8dFA3SuBdD0Fng3u/xo=
-PresharedKey = 6+oOnvoa2He0UE8j0Af3cRx/lJSdRSdyHLA1eKc9FCM=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 25
-Endpoint = gb01a.kcufwfgnkr.net:62931
-```
-
-**A5 🇫🇷 FR**
-
-```CSS
-[Interface]
-PrivateKey = +EkO5G9s8wtavwusVRx693iUU44u/cA4KaiXFraTvVU=
-Address = 10.201.5.49/32
-DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-[Peer]
-PublicKey = 6jIt22KMxyN3Hm62/8I4/M54gNsUJD4P8AqOWaGR7F4=
-PresharedKey = XdzRw2puotZqp4uUj3d/nh2zK9FNS80qFcfZR27g9WU=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 25
-Endpoint = fr01a.kcufwfgnkr.net:62931
-```
-
-**A6 🇹🇷 TR**
-
-```CSS
-[Interface]
-PrivateKey = gCQsj/7vZrBCjLuKtNvCrwhEa0CqSXRWRHvoddNin38=
-Address = 10.201.2.124/32
-DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-
-[Peer]
-PublicKey = 6T9PkVHfTvMfDtKANISJqnW1Ulmd5kYyh8IsVkQYemU=
-PresharedKey = ZMNacbDp5sZhDlKLX0iGhcn+7zRno1gMPmx1ZU3JeWU=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = tr01a.kcufwfgnkr.net:62931
-```
-
-**A** [[Ni?]]
-
-```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWEgRnJlZSBJUiIsICJkZXNjcmlwdGlvbiI6ICJBbW5lemlhIEZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJYbWtoWjhTay5UaTY0NENQTnBnTnQydW12ektUSGJRY1NSY2hpRXhlWSJ9
-```
-
-**B**
-
-```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWEgRnJlZSBJUiIsICJkZXNjcmlwdGlvbiI6ICJBbW5lemlhIEZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJCSmE1R0FlVy44ZzFXOXl6Q3VGZXMwQzFJREdhM2k3VGE0MDNuSU02NiJ9
-```
-
-**C**
-
-```CSS
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJxcjV5elZsYi5sSnVwY3hVVlc3TTBmY2k0TzdCMVFDdVJpS0ZBdjkxaiJ9
-```
-
-**D**
-
-```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAidlZxckZIa3guZ0V6M0tKTk44YWlwaFU0MjNGS2Roc2R6MUVXbnNZZ1cifQ==
-```
-
-**E**
-
-```mupad
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJRNE9YYkdaei4wUTJDN1NoMEM1UXBGcURyenBtcktaYmZtMU00ZE1SSyJ9
-```
-
-</br>
-
-<details>
-<summary>  MORE CONTEXT </summary>
-
-**1**
-
-```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiT2hSZHVRbU0uWlRZV05LRW5lSGdhV3lURmFwNjJrbWpscGRxSXZZRlIifQ==
-```
-
-**2-**
-
-```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiTE1QTjRJalEuMkZ2R3N0U0NaRnhVVVVsbUt3V044bHdDektjMmlIRVEifQ==
-```
-
-**3-**
-
-```mupad
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVVBQWEN3eVkuRDRzZ0I1RUk3eTNvdHJDWFBtZmpCZ0pCazhnSUs0c3gifQ==
-```
-
-**4-**
-
-```mupad
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAic0pBbEhEbGwuaWtodXg0Mjg4R2ZqakdZUGhMVHExdkhmMVB2NWVUckMifQ==
-```
-
-**5-**
-
-```CSS
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiODA0OENnNGcucDNXaUF2b2hVSExhSGlJanhVak9sQnlPaHBSREIxWEcifQ==
-```
-
-**6-**
-
-```CSS
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiNmdLdnB1YnkuZUl1Q3k4SVpwUDJLU3FmV2FJMVNTWnlrYkl5RDVsNlEifQ==
-```
-
-**7-**
-
-```robots.txt
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiWjNnZmZncEMuUkpZUnhrcGNRWW9NWU0wZDBoUDl5eEVqZkJ0WjcxQ1cifQ==
-```
-
-**8-**
-
-```robots.txt
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiSnNMUllUNGMua25QVkhReEpmWlJOb0xkcUJrd1NFQlVlUTQxQU1GbWoifQ==
-```
-
-**9-**
-
-```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAibUQ2dXBkMTUuUmRTb2o4czZLMTJTaUIxemRLaEx4bFBPdnp0MnVRU3QifQ==
-```
-
-**10-**
-
-```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAicXZVZHFzVlQuRTJIZWZtc1FuZkR6bTJXZTZSd0tncEF1eTZrb0t6N1MifQ==
-```
-
-**11-**
-
-```mupad
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJWRTAyZnhVUi5XU0EzMmtQUkJ6QVlSc3FFbFA2VmZ5dE1yUklrWDAwbiJ9ifQ==
-```
-
-**12-**
-
-```mupad
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVkUwMmZ4VVIuV1NBMzJrUFJCekFZUnNxRWxQNlZmeXRNclJJa1gwMG4ifQ==
-```
-
-**13-**
-
-```CSS
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJNd2NIYmNHMi5reWI2UTlRUjdNT0YxQjNRUUJabkV2bmJlU2RZU1ZPWCJ9
-```
-
-**14-**
-
-```CSS
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiTXdjSGJjRzIua3liNlE5UVI3TU9GMUIzUVFCWm5Fdm5iZVNkWVNWT1gifQ==
-```
-
-**15-**
-
-```robots.txt
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAianhPNmI4d0guZHVwZExaV290OVdFdjd0ZDBvM0NxWUsxZWU0ZVFTMzUifQ==
-```
-
-**16-**
-
-```robots.txt
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiRTRVYWR5N3cuSlpJbllDekFCRHBqeElGa0kxM21EM0k1MTd4MVhVVjEifQ==
-```
-
-**17-**
-
-```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiSGpzNUo0dkouS2VXemRib3dxM01ZRzlwYTQwRUlGMDE5aW9UcllhYloifQ==
-```
-
-**18-**
-
-```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiUUNSR05DelcuNnJNbDQzVzhBbDFrMzk3Y0NiTkQ2QTVRMEVwQjJwSUQifQ==
-```
-
-**19-**
-
-```mupad
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAieDVhN1c5Z0cuanpINUh4aTQwNHdJOGRwNmRWY3Bwd1lqSXZNMnpFTG4ifQ==
-```
-
-**20-**
-
-```mupad
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiY25lYjJSRGsuUFMwMHhzQ1VmMGlLZVFRZzZFVG42elJlZm15QXoyb24ifQ==
-```
-
-**21-**
-
-```CSS
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiRnFOb1hZNmguTGJUZmxnRXZIdTNaNlFnR2VrVFB6c0NlWEJxeXBhMmsifQ==
-```
-
-**22-**
-
-```CSS
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiRXRSTFZVQzIuZmd3Y0I2cEZHMWV2ZTl5TW40UjJFa1haZm9EVkgyaHYifQ==
-```
-
-**23-**
-
-```robots.txt
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVldKaElZQm0uQ1pFUGp6M2JUQ0plOTd3cVZSZlNxMUFjVTdpVFR3dHoifQ==
-```
-
-**24-**
-
-```robots.txt
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVFRNazlBY1YuSE5DQWN0d3lYTWhibDRSeXI0WGFoTzB5SE1UUmdQU1EifQ==
-```
-
-**25-**
-
-```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiNjkwZ3o0TVYubVRWeXh0TFVtQ05DckZjakVXWWM1UDd3WFJDTFRrSUgifQ==
-```
-
-**26-**
-
-```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVVoxRnRPOU4uaFc0M1dDaGZWR0FXanpOcFN1VXlNNUk2RGpnVkU1S3cifQ==
-```
-
-**27-**
-
-```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiQkphNUdBZVcuOGcxVzl5ekN1RmVzMEMxSURHYTNpN1RhNDAzbklNNjYifQ==
-```
-
-**28-**
-
-```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVVoxRnRPOU4uaFc0M1dDaGZWR0FXanpOcFN1VXlNNUk2RGpnVkU1S3cifQ==
-```
-
-**29-**
-
-```POV-Ray SDL
-vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJxcjV5elZsYi5sSnVwY3hVVlc3TTBmY2k0TzdCMVFDdVJpS0ZBdjkxaiJ9
-```
-
-</details>
-
-![rainbow]
-
-<br><br/>
 
  <!--I'm commenting on the links to Soroush's repository for now so that we can find out later what happened to her GitHub repository. 🤷🏻‍♀️ 
 
