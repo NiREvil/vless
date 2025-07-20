@@ -121,7 +121,7 @@
       "server_port": 987,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "anz+",
-      "mtu": 1300,
+      "mtu": 1330,
       "fake_packets": "1-3",
       "fake_packets_size": "10-30",
       "fake_packets_delay": "10-30",
@@ -140,7 +140,7 @@
       "server_port": 987,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
       "reserved": "cAxU",
-      "mtu": 1300,
+      "mtu": 1330,
       "fake_packets_mode": "m5"
     },
     {
@@ -170,25 +170,6 @@
     }
   ],
   "route": {
-    "rules": [
-      {
-        "inbound": "dns-in",
-        "outbound": "dns-out"
-      },
-      {
-        "port": 53,
-        "outbound": "dns-out"
-      },
-      {
-        "domain_suffix": ".ir",
-        "outbound": "direct"
-      },
-      {
-        "rule_set": ["geoip-ir", "geosite-ir"],
-        "outbound": "direct"
-      }
-    ],
-    "route": {
     "rules": [
       {
         "inbound": "dns-in",
