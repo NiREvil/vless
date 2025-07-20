@@ -352,7 +352,7 @@ https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vmess.t
 
 https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/trojan.txt
 
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/mix [[yb?]]
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/mix [[YB?]]
 
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/hy2
 
@@ -918,7 +918,7 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 >
 > I recommend using [Clash-Meta] for better results.
 
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/mix [[yb?]]
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/mix [[YB?]]
 
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/reality
 
@@ -1045,7 +1045,7 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 
 https://v2.alicivil.workers.dev/?protocol=wireguard&ip=188.114.99.137&output=hiddify
 
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/warp/config [[YBK?]]
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/warp/config [[YB?]]
 
 **Auto generate in workflows - warp ON warp [[Ni?]]**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
@@ -1053,7 +1053,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
 **Warp in M1,M2, ... ,h04FA0A mode with random ip:port**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/rand-ip
 
-**Chaining Warp confs**  
+**Chaining Warp confs — Azerbaijan IP's**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/WarpOnWarp.json
 
 **Warp On Warp [[TD?]]**  
@@ -1174,6 +1174,12 @@ https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/clash-wg.yml 
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json [[Ni?]]
 
+http://45.138.99.213:2096/sub/FarVPN?format=json [[KV?]]
+
+http://185.141.216.98:2096/sub/@KevinZakarian-1?format=json
+
+http://185.141.216.99:2096/sub/@KevinZakarian-2?format=json
+
 https://raw.githubusercontent.com/4n0nymou3/Universal-Proxy-Finder/master/Output/singbox_subscription.json [[ANO?]]
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
@@ -1183,14 +1189,6 @@ https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/sing-box.json
 https://raw.githubusercontent.com/valid7996/Gozargah/refs/heads/main/Gozargah_sing-box_sub [[GZ?]]
 
 https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox.json [[KB?]]
-
-http://185.141.216.98:2096/sub/@KevinZakarian-1?format=json [[KV?]]
-
-http://185.141.216.99:2096/sub/@KevinZakarian-2?format=json
-
-http://85.93.8.142:2096/sub/@KevinZakarian-4?format=json
-
-http://178.236.254.188:2096/sub/@KevinZakarian-8?format=json
 
 https://igdux.top/~FREE2CONFIG,T,H [[FR?]]
 
@@ -1592,4 +1590,4 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [WIZ]: https://bia-pain-bache.github.io/BPB-Worker-Panel/fa/installation/wizard/
 [WTF?]: https://github.com/NiREvil/vless/blob/main/sub/clash-meta-wg.yml#L40
 [XS?]: https://telegram.me/s/xs_filternet
-[yb?]: https://telegram.me/s/YeBeKhe/527
+[YB?]: https://telegram.me/s/YeBeKhe/527
