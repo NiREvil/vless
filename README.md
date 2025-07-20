@@ -372,6 +372,12 @@ https://v2.alicivil.workers.dev [[GE?]]
 
 https://v2.alicivil.workers.dev/?list=us&count=300&shuffle=true&unique=false
 
+http://45.138.99.213:2096/sub/FarVPN?format=json [[KV?]]
+
+http://185.141.216.98:2096/sub/@KevinZakarian-1?format=json
+
+http://185.141.216.99:2096/sub/@KevinZakarian-2?format=json
+
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity [[MB?]]
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir
@@ -383,11 +389,6 @@ https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed [[S
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/python/hysteria2
 
 https://raw.githubusercontent.com/arshiacomplus/eva-sub/refs/heads/main/configs.txt [[AR?]]
-
-http://185.141.216.98:2096/sub/@KevinZakarian-1?format=json [[KV?]]  
-http://185.141.216.99:2096/sub/@KevinZakarian-2?format=json  
-http://85.93.8.142:2096/sub/@KevinZakarian-4?format=json  
-http://178.236.254.188:2096/sub/@KevinZakarian-8?format=json
 
 https://shadowmere.xyz/api/b64sub [[SW?]]
 
@@ -1071,6 +1072,44 @@ https://raw.githubusercontent.com/4n0nymou3/ss-config-updater/refs/heads/main/co
 
 <hr/><br/>
 
+### Warp [SFA] and [SFI]
+
+> [!NOTE]
+>
+> SFA: Singbox for Android <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="13"/>
+>
+> SFI: Singbox for IOS
+
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json [[Ni?]]
+
+http://45.138.99.213:2096/sub/FarVPN?format=json [[KV?]]
+
+http://185.141.216.98:2096/sub/@KevinZakarian-1?format=json
+
+http://185.141.216.99:2096/sub/@KevinZakarian-2?format=json
+
+https://raw.githubusercontent.com/4n0nymou3/Universal-Proxy-Finder/master/Output/singbox_subscription.json [[ANO?]]
+
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
+
+https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/sing-box.json
+
+https://raw.githubusercontent.com/valid7996/Gozargah/refs/heads/main/Gozargah_sing-box_sub [[GZ?]]
+
+https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox.json [[KB?]]
+
+https://igdux.top/~FREE2CONFIG,T,H [[FR?]]
+
+http://azadiazinjamigzare.github.io/SingBox [[AIM?]]
+
+https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox_l.json [[LK?]]
+
+https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox_fkip.json
+
+https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox_rs.json
+
+<hr/><br/>
+
 #### Warp for [NekoBox]
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/nekobox-wg.txt
@@ -1163,46 +1202,6 @@ https://raw.githubusercontent.com/hamedp-71/Clash_New/refs/heads/main/hp.yaml [[
 https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/clash-wg.yml [[DS?]]
 
 <br/>
-
-### Warp [SFA] and [SFI]
-
-> [!NOTE]
->
-> SFA: Singbox for Android <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="13"/>
->
-> SFI: Singbox for IOS
-
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json [[Ni?]]
-
-http://45.138.99.213:2096/sub/FarVPN?format=json [[KV?]]
-
-http://185.141.216.98:2096/sub/@KevinZakarian-1?format=json
-
-http://185.141.216.99:2096/sub/@KevinZakarian-2?format=json
-
-https://raw.githubusercontent.com/4n0nymou3/Universal-Proxy-Finder/master/Output/singbox_subscription.json [[ANO?]]
-
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
-
-https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/sing-box.json
-
-https://raw.githubusercontent.com/valid7996/Gozargah/refs/heads/main/Gozargah_sing-box_sub [[GZ?]]
-
-https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox.json [[KB?]]
-
-https://igdux.top/~FREE2CONFIG,T,H [[FR?]]
-
-http://azadiazinjamigzare.github.io/SingBox [[AIM?]]
-
-https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox_l.json [[LK?]]
-
-https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox_fkip.json
-
-https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox_rs.json
-
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
-
-<hr/><br/>
 
 ## ServerLess
 
