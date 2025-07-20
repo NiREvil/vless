@@ -1,5 +1,5 @@
-//profile-title: base64:d2FycCBPTiB3YXJw
-//profile-update-interval: 8
+//profile-title: base64:V2FycCBvbiBXYXJwIOKAlSBBemVyYmFpamFu
+//profile-update-interval: 24
 //subscription-userinfo: upload=51474803648; download=3221225472; total=966367641600; expire=1762889400
 //support-url:  https://t.me/F_NiREvil
 //profile-web-page-url: https://github.com/NiREvil
@@ -24,7 +24,7 @@
       },
       {
         "tag": "dns-direct",
-        "address": "tcp://185.228.168.9",
+        "address": "8.8.8.8",
         "address_resolver": "dns-local",
         "detour": "direct"
       },
@@ -40,7 +40,7 @@
     ],
     "rules": [
       {
-        "domain": "clients3.google.com",
+        "domain": "www.gstatic.com",
         "server": "dns-remote",
         "rewrite_ttl": 3000
       },
@@ -49,17 +49,20 @@
         "server": "dns-direct"
       },
       {
-        "rule_set": ["geoip-ir", "geosite-ir"],
+        "rule_set": [
+          "geoip-ir",
+          "geosite-ir"
+        ],
         "server": "dns-direct"
       }
     ],
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "104.17.148.22",
         "104.17.147.22",
-        "188.114.99.0",
-        "188.114.98.0"
+        "104.17.148.22",
+        "188.114.97.3",
+        "188.114.96.3"
       ]
     },
     "independent_cache": true
@@ -85,32 +88,40 @@
     {
       "type": "selector",
       "tag": "select",
-      "outbounds": ["auto", "Tehran § 0", "Berlin § 1"],
-      "default": "Berlin § 1"
+      "outbounds": [
+        "auto",
+        "⚪️Tehran § 0",
+        "🟢Baku § 1"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": true
     },
     {
       "type": "urltest",
       "tag": "auto",
-      "outbounds": ["Tehran § 0", "Berlin § 1"],
-      "url": "https://clients3.google.com/generate_204",
-      "interval": "10m0s",
+      "outbounds": [
+        "⚪️Tehran § 0",
+        "🟢Baku § 1"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m0s",
       "tolerance": 1,
       "idle_timeout": "30m0s",
       "interrupt_exist_connections": true
     },
     {
       "type": "wireguard",
-      "tag": "Tehran § 0",
+      "tag": "⚪️Tehran § 0",
       "local_address": [
         "172.16.0.2/24",
-        "2606:4700:110:8f3a:ea39:ed71:ca5e:9ea4/128"
+        "2606:4700:110:8bad:f10a:f838:bd05:b5b3/128"
       ],
-      "private_key": "yNbtLWHvVlXrayxosI7l/aja+6KiMajKdbdVFbhUmFw=",
-      "server": "162.159.192.126",
-      "server_port": 928,
+      "private_key": "WKtvUYL/MMaLNkZxJ/TBmFoS2cO26dY8qj0UCAEW2Fk=",
+      "server": "188.114.98.224",
+      "server_port": 987,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": [250, 199, 106],
-      "mtu": 1306,
+      "reserved": "anz+",
+      "mtu": 1300,
       "fake_packets": "1-3",
       "fake_packets_size": "10-30",
       "fake_packets_delay": "10-30",
@@ -118,18 +129,19 @@
     },
     {
       "type": "wireguard",
-      "tag": "Berlin § 1",
-      "detour": "Tehran § 0",
+      "tag": "🟢Baku § 1",
+      "detour": "⚪️Tehran § 0",
       "local_address": [
-        "172.16.0.2/32",
-        "2606:4700:110:897b:9c3:13fb:7b2c:8cae/128"
+        "172.16.0.2/24",
+        "2606:4700:110:8b1d:4498:9bc5:8781:cac3/128"
       ],
-      "private_key": "oMUx2ZTi1G7ZQvWlClFuKVbWixrdxq+RyIfVpVio/1s=",
-      "server": "162.159.192.126",
-      "server_port": 928,
+      "private_key": "CLwYOI7s/mCUZRACTMdD2e65+ASnVPBBfB2uzIyuZV4=",
+      "server": "188.114.98.224",
+      "server_port": 987,
       "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": [75, 115, 46],
-      "mtu": 1300
+      "reserved": "cAxU",
+      "mtu": 1300,
+      "fake_packets_mode": "m5"
     },
     {
       "type": "dns",
@@ -145,7 +157,7 @@
       "tls_fragment": {
         "enabled": true,
         "size": "10-30",
-        "sleep": "1-2"
+        "sleep": "2-8"
       }
     },
     {
@@ -176,6 +188,28 @@
         "outbound": "direct"
       }
     ],
+    "route": {
+    "rules": [
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "domain_suffix": ".ir",
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "geoip-ir",
+          "geosite-ir"
+        ],
+        "outbound": "direct"
+      }
+    ],
     "rule_set": [
       {
         "type": "remote",
@@ -203,7 +237,7 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:16756",
-      "secret": "gT1fIsgho6sk83ZH"
+      "secret": "k2waxsSces_EjJCw"
     }
   }
 }
