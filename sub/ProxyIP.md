@@ -361,10 +361,6 @@ Los Angeles, California, Virtual Machine Solutions LLC
 139.60.162.153
 ```
 
-```yaml
-141.11.210.29
-```
-
 San Jose, California, DataCamp Limited
 
 ```yaml
@@ -496,10 +492,6 @@ Vienna, Aeza international Ltd
 Sofia, EDIS GmbH & Belcloud & Relink
 
 ```yaml
-185.68.93.39
-```
-
-```yaml
 193.239.160.25
 ```
 
@@ -513,6 +505,10 @@ Sofia, EDIS GmbH & Belcloud & Relink
 
 ```yaml
 78.128.127.89
+```
+
+```yaml
+185.68.93.39
 ```
 
 ```yaml
@@ -694,10 +690,6 @@ Madrid, IONOS SE & M247 & PQ
 ### 🇳🇱 Netherlands
 
 Amsterdam, RAN Networks S.L
-
-```yaml
-51.15.42.255
-```
 
 ```yaml
 185.155.220.64
@@ -1155,7 +1147,7 @@ Amazon Technologies Inc.
 <br/>
 
 <details>  
-<summary>🔍 Need a proxy IP from a specific country? Click here to see available options!</summary>
+<summary>🦋 Need a proxy IP from a specific country? Click here to see available options!</summary>
 
 - Here you'll find a list of proxy IPs categorized by country. Simply choose the desired location and use the provided IPs.
 
@@ -1231,14 +1223,13 @@ Also do you need [CloudFlare ip ranges by Country][3] ?
 
 </details>
 
-<hr><br><br/>
+<hr><br/>
 
 ## Test proxyIPs
 
 ## 1. تست از طریق وب‌سایت
 
-اولین و هم‌نین آسون‌ترین کار اینه که بریم سراغ ابزارهایی مثل این: [victoria.workers.dev][vc]
-
+اولین و هم‌چنین آسون‌ترین کار اینه که بریم سراغ ابزارهایی مثل این: [victoria.workers.dev][vc] و یا [چکر مهدی][4] و یا [ربات تلگرامی][5] که یکی از یکی قشنکتر هستن.
 بعد از وارد شدن به سایت، تو کادر اول آی‌پی یا دامنه پروکسی دلخواهمون رو قرار بدیم و با کلیک روی گزینه Check نتایج برامون به نمایش درمیان، امکان اسکن رنج‌آی‌پی برای کاربران حرفه‌ای هم در سایت تستمون هستش.
 
 ممکنه بعضی وقتا isp رو نشون نده و فقط بگه که این آی‌پی سالمه، اونوقت از این وب‌سایت [check-host.nen][ch] کمک بگیرید برای فهمیدن اطلاعات بیشتر (سایت پشت کلادفلر نیست).
@@ -1247,7 +1238,7 @@ Also do you need [CloudFlare ip ranges by Country][3] ?
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c06d6aca-4101-4250-93b0-613d732b279e" width="680px">
-</p><br><br/>
+</p><br/>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/e1e155e8-349b-49df-928d-ef3fa5f8d99c" width="680px">
@@ -1273,7 +1264,7 @@ Also do you need [CloudFlare ip ranges by Country][3] ?
 
 <p align="center">
   <img src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" width="600px">
-</p><br/>
+</p>
 
 <hr><br><br/>
 
@@ -1290,11 +1281,12 @@ Also do you need [CloudFlare ip ranges by Country][3] ?
 ## Find proxyIPs
 
 <p align="left">
- <img src="https://latex.codecogs.com/svg.image?\mathrm{{\color{Golden}Let's\;go\;sweetie}}" width=160px" </p><br/>
+ <img src="https://latex.codecogs.com/svg.image?\mathrm{{\color{Golden}Let's\;go\;sweetie}}" width=160px" 
+</p>
 
 > [!TIP]
 >
-> **فکر کنم این آسونترین روش برای پیدا کردن پروکسی آی‌پی باشه.**  
+> **یکی دیگه از آسونترین روش‌ها برای پیدا کردن پروکسی آی‌پی اینه که:**  
 > روی هر کدوم از لینک‌های زیر کلیک کنی توی صفحه‌ای که باز شده یه لیست خواهی دید با کلی پروکسی‌ آی‌پی که پشت اون دامنه قرار گرفتند، با کلیک کردن روی هرکدوم کادر مشخصات مربوط بشون باز میشه.
 > روش های تست پروکسی‌آی‌پی‌ها در [بخش قبلی](#Test-proxyIPs) نوشته شده.
 >
@@ -1351,6 +1343,8 @@ also you can see [from Here](./country_proxies/02_proxies.csv)
 [^2]: https://t.me/s/CMLiussss
 
 [3]: https://github.com/NiREvil/vless/blob/main/edge/assets/Cloudflare_IP_ranges_by_country.md
+[4]: https://check79.pages.dev/
+[5]: https://t.me/ProxyIPTesterBot
 [vc]: https://proxyip.victoriacross.workers.dev
 [ch]: https://check-host.net/ip-info
 [ed]: https://proxyip.edtunnel.best
