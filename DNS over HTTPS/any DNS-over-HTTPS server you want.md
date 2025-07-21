@@ -309,8 +309,8 @@ DoH queries resolve over HTTPS for privacy, performance, and security. DoH also 
 | @publicarray [dns.seby.io](https://dns.seby.io) | https://doh-2.seby.io/dns-query | :heavy_check_mark: | Australian server that runs [@m13253's Go implementation](https://github.com/m13253/dns-over-https), OpenNIC, Unbound with DNSSEC, No ECS, and No logs. Support DoT
 
 
-*: Tested via `curl --doh-url <RESOLVER_URI> http://google.com`.
-<br>**: Cloudflare/ControlD upstream means Cloudflare/ControlD can see the queries' content and the DoH's IP, but usually not the client's IP unless the DoH server forwards it.<br>False positives or negatives from Cloudflare filtering can be reported through [Cloudflare Radar](https://radar.cloudflare.com/).<br>AdGuard's web service receives [hash prefixes](https://adguard.com/kb/general/browsing-security/#in-apps) of the requested domain.<br>[DoT](https://en.wikipedia.org/wiki/DNS_over_TLS) is the primary protocol for Android's [Private DNS](https://developers.google.com/speed/public-dns/docs/using#android_9_pie_or_higher).<br>[DoQ](https://datatracker.ietf.org/doc/html/rfc9250) send raw DNS query through QUIC stream, skipping HTTP overhead of DoH3
+*:Tested via `curl --doh-url <RESOLVER_URI> http://google.com`.*
+<br> **: Cloudflare/ControlD** upstream means Cloudflare/ControlD can see the queries content and the DoH's IP, but usually not the client's IP unless the DoH server forwards it.<br> False positives or negatives from Cloudflare filtering can be reported through [Cloudflare Radar](https://radar.cloudflare.com/). <br> AdGuard's web service receives [hash prefixes](https://adguard.com/kb/general/browsing-security/#in-apps) of the requested domain.<br>[DoT](https://en.wikipedia.org/wiki/DNS_over_TLS) is the primary protocol for Android's [Private DNS](https://developers.google.com/speed/public-dns/docs/using#android_9_pie_or_higher).<br> [DoQ](https://datatracker.ietf.org/doc/html/rfc9250) send raw DNS query through QUIC stream, skipping HTTP overhead of DoH3
 
 Download a recent snapshot of the above list as JSON from [here](https://github.com/cslev/encrypted_dns_resolvers).
 
