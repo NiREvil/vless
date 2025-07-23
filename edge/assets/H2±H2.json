@@ -6,18 +6,12 @@
         "action": "route",
         "clash_mode": "Global",
         "server": "proxy-dns",
-        "source_ip_cidr": [
-          "172.19.0.0/30",
-          "fdfe:dcba:9876::1/126"
-        ]
+        "source_ip_cidr": ["172.19.0.0/30", "fdfe:dcba:9876::1/126"]
       },
       {
         "action": "route",
         "server": "proxy-dns",
-        "source_ip_cidr": [
-          "172.19.0.0/30",
-          "fdfe:dcba:9876::1/126"
-        ]
+        "source_ip_cidr": ["172.19.0.0/30", "fdfe:dcba:9876::1/126"]
       },
       {
         "action": "route",
@@ -26,39 +20,34 @@
       },
       {
         "action": "route",
-        "rule_set": [
-          "geosite-ir"
-        ],
+        "rule_set": ["geosite-ir"],
         "server": "direct-dns"
       }
     ],
     "servers": [
       {
-        "type": "tcp",
+        "detour": "select",
         "server": "8.8.8.8",
         "tag": "proxy-dns",
-        "detour": "select",
-        "tag": "proxy-dns"
+        "tag": "proxy-dns",
+        "type": "tcp"
       },
       {
-        "type": "local",
         "detour": "direct",
-        "tag": "local-dns"
+        "tag": "local-dns",
+        "type": "local"
       },
       {
-        "type": "tcp",
         "server": "8.8.8.8",
-        "tag": "direct-dns"
+        "tag": "direct-dns",
+        "type": "tcp"
       }
     ],
     "strategy": "prefer_ipv4"
   },
   "inbounds": [
     {
-      "address": [
-        "172.19.0.1/30",
-        "fdfe:dcba:9876::1/126"
-      ],
+      "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
       "endpoint_independent_nat": false,
       "mtu": 9000,
@@ -81,18 +70,18 @@
   ],
   "outbounds": [
     {
-      "type": "selector",
-      "tag": "select",
-      "outbounds": ["auto", "🇩🇪H2", "🇺🇸H2"],
       "default": "auto",
-      "interrupt_exist_connections": true
+      "interrupt_exist_connections": true,
+      "outbounds": ["auto", "🇩🇪H2", "🇺🇸H2"],
+      "tag": "select",
+      "type": "selector"
     },
     {
-      "type": "urltest",
-      "tag": "auto",
-      "outbounds": ["🇩🇪H2", "🇺🇸H2"],
       "interval": "5m0s",
+      "outbounds": ["🇩🇪H2", "🇺🇸H2"],
+      "tag": "auto",
       "tolerance": 1,
+      "type": "urltest",
       "url": "https://www.gstatic.com/generate_204"
     },
     {
@@ -100,34 +89,34 @@
       "type": "direct"
     },
     {
-      "type": "hysteria2",
-      "tag": "🇩🇪H2",
-      "server": "45.138.99.213",
-      "server_port": 8443,
       "obfs": {
-        "type": "salamander",
-        "password": "FarzanehDreams"
+        "password": "FarzanehDreams",
+        "type": "salamander"
       },
       "password": "5oITDYnNW7",
+      "server": "45.138.99.213",
+      "server_port": 8443,
+      "tag": "🇩🇪H2",
       "tls": {
         "enabled": true,
         "insecure": true
-      }
+      },
+      "type": "hysteria2"
     },
     {
-      "type": "hysteria2",
-      "tag": "🇺🇸H2",
+      "obfs": {
+        "password": "TabassomDreams",
+        "type": "salamander"
+      },
+      "password": "BZnk2SlPkq",
       "server": "144.172.106.192",
       "server_port": 8443,
-      "password": "BZnk2SlPkq",
-      "obfs": {
-        "type": "salamander",
-        "password": "TabassomDreams"
-      },
+      "tag": "🇺🇸H2",
       "tls": {
         "enabled": true,
         "insecure": true
-      }
+      },
+      "type": "hysteria2"
     }
   ],
   "route": {
@@ -191,18 +180,11 @@
       {
         "action": "route",
         "outbound": "direct",
-        "rule_set": [
-          "geoip-private",
-          "geosite-private",
-          "geosite-ir",
-          "geoip-ir"
-        ]
+        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"]
       },
       {
         "action": "reject",
-        "rule_set": [
-          "geosite-ads"
-        ]
+        "rule_set": ["geosite-ads"]
       }
     ]
   }
