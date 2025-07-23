@@ -1,190 +1,197 @@
 {
   "dns": {
-    "final": "local-dns",
+    "servers": [
+      {
+        "type": "tcp",
+        "tag": "proxy-dns",
+        "detour": "select",
+        "server": "8.8.8.8"
+      },
+      {
+        "type": "local",
+        "tag": "local-dns",
+        "detour": "direct"
+      },
+      {
+        "type": "tcp",
+        "tag": "direct-dns",
+        "server": "8.8.8.8"
+      }
+    ],
     "rules": [
       {
-        "action": "route",
+        "source_ip_cidr": [
+          "172.19.0.0/30",
+          "fdfe:dcba:9876::1/126"
+        ],
         "clash_mode": "Global",
-        "server": "proxy-dns",
-        "source_ip_cidr": ["172.19.0.0/30", "fdfe:dcba:9876::1/126"]
+        "server": "proxy-dns"
       },
       {
-        "action": "route",
-        "server": "proxy-dns",
-        "source_ip_cidr": ["172.19.0.0/30", "fdfe:dcba:9876::1/126"]
+        "source_ip_cidr": [
+          "172.19.0.0/30",
+          "fdfe:dcba:9876::1/126"
+        ],
+        "server": "proxy-dns"
       },
       {
-        "action": "route",
         "clash_mode": "Direct",
         "server": "direct-dns"
       },
       {
-        "action": "route",
-        "rule_set": ["geosite-ir"],
+        "rule_set": "geosite-ir",
         "server": "direct-dns"
       }
     ],
-    "servers": [
-      {
-        "detour": "select",
-        "server": "8.8.8.8",
-        "tag": "proxy-dns",
-        "type": "tcp"
-      },
-      {
-        "detour": "direct",
-        "tag": "local-dns",
-        "type": "local"
-      },
-      {
-        "server": "8.8.8.8",
-        "tag": "direct-dns",
-        "type": "tcp"
-      }
-    ],
+    "final": "proxy-dns",
     "strategy": "prefer_ipv4"
   },
   "inbounds": [
     {
-      "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
-      "auto_route": true,
-      "endpoint_independent_nat": false,
+      "type": "tun",
       "mtu": 9000,
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "stack": "system",
       "platform": {
         "http_proxy": {
           "enabled": true,
           "server": "127.0.0.1",
           "server_port": 2080
         }
-      },
-      "stack": "system",
-      "strict_route": false,
-      "type": "tun"
+      }
     },
     {
+      "type": "mixed",
       "listen": "127.0.0.1",
-      "listen_port": 2080,
-      "type": "mixed"
+      "listen_port": 2080
     }
   ],
   "outbounds": [
     {
-      "default": "auto",
-      "interrupt_exist_connections": true,
-      "outbounds": ["auto", "🇩🇪H2", "🇺🇸H2"],
+      "type": "selector",
       "tag": "select",
-      "type": "selector"
+      "outbounds": [
+        "auto",
+        "🇩🇪H2",
+        "🇺🇸H2"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": true
     },
     {
-      "interval": "5m0s",
-      "outbounds": ["🇩🇪H2", "🇺🇸H2"],
-      "tag": "auto",
-      "tolerance": 1,
       "type": "urltest",
-      "url": "https://www.gstatic.com/generate_204"
+      "tag": "auto",
+      "outbounds": [
+        "🇩🇪H2",
+        "🇺🇸H2"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m0s",
+      "tolerance": 1
     },
     {
-      "tag": "direct",
-      "type": "direct"
+      "type": "direct",
+      "tag": "direct"
     },
     {
-      "obfs": {
-        "password": "FarzanehDreams",
-        "type": "salamander"
-      },
-      "password": "5oITDYnNW7",
+      "type": "hysteria2",
+      "tag": "🇩🇪H2",
       "server": "45.138.99.213",
       "server_port": 8443,
-      "tag": "🇩🇪H2",
+      "obfs": {
+        "type": "salamander",
+        "password": "FarzanehDreams"
+      },
+      "password": "5oITDYnNW7",
       "tls": {
         "enabled": true,
         "insecure": true
-      },
-      "type": "hysteria2"
+      }
     },
     {
-      "obfs": {
-        "password": "TabassomDreams",
-        "type": "salamander"
-      },
-      "password": "BZnk2SlPkq",
+      "type": "hysteria2",
+      "tag": "🇺🇸H2",
       "server": "144.172.106.192",
       "server_port": 8443,
-      "tag": "🇺🇸H2",
+      "obfs": {
+        "type": "salamander",
+        "password": "TabassomDreams"
+      },
+      "password": "BZnk2SlPkq",
       "tls": {
         "enabled": true,
         "insecure": true
-      },
-      "type": "hysteria2"
+      }
     }
   ],
   "route": {
-    "auto_detect_interface": true,
-    "final": "select",
-    "rule_set": [
-      {
-        "download_detour": "direct",
-        "format": "binary",
-        "tag": "geosite-ads",
-        "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs"
-      },
-      {
-        "download_detour": "direct",
-        "format": "binary",
-        "tag": "geosite-private",
-        "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs"
-      },
-      {
-        "download_detour": "direct",
-        "format": "binary",
-        "tag": "geosite-ir",
-        "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ir.srs"
-      },
-      {
-        "download_detour": "direct",
-        "format": "binary",
-        "tag": "geoip-private",
-        "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/private.srs"
-      },
-      {
-        "download_detour": "direct",
-        "format": "binary",
-        "tag": "geoip-ir",
-        "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/ir.srs"
-      }
-    ],
     "rules": [
       {
         "action": "sniff"
       },
       {
-        "action": "route",
         "clash_mode": "Direct",
         "outbound": "direct"
       },
       {
-        "action": "route",
         "clash_mode": "Global",
         "outbound": "select"
       },
       {
-        "action": "hijack-dns",
-        "protocol": "dns"
+        "protocol": "dns",
+        "action": "hijack-dns"
       },
       {
-        "action": "route",
-        "outbound": "direct",
-        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"]
+        "rule_set": [
+          "geoip-private",
+          "geosite-private",
+          "geosite-ir",
+          "geoip-ir"
+        ],
+        "outbound": "direct"
       },
       {
-        "action": "reject",
-        "rule_set": ["geosite-ads"]
+        "rule_set": "geosite-ads",
+        "action": "reject"
       }
-    ]
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geosite-ads",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-private",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-ir",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ir.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-private",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/private.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-ir",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/ir.srs",
+        "download_detour": "direct"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true
   }
 }
