@@ -72,6 +72,9 @@ ProxyIP.DE.tp2024.CMLiussss.net
 ProxyIP.US.CMLiussss.net
 ```
 
+<details>  
+<summary> Click to see More </summary>
+
 ```yaml
 ProxyIP.SG.CMLiussss.net
 ```
@@ -83,10 +86,6 @@ ProxyIP.JP.CMLiussss.net
 ```yaml
 ProxyIP.HK.CMLiussss.net
 ```
-
-<details>  
-<summary> Click to see More </summary>
-
 🇸🇬 Singapore
 
 ```yaml
@@ -131,7 +130,35 @@ proxyip.vultr.fxxk.dedyn.io
 
 ![rainbow]
 
+## Cloudflare Inc
+
+### 🇺🇸 USA
+
+United States, California, Cloudflare Inc
+
+```yaml
+142.171.140.152
+```
+
+```yaml
+142.171.233.183
+```
+
+```yaml
+104.168.102.163
+```
+
 ## Google LLC
+
+![rainbow]
+
+### 🇧🇪 Belgium
+
+Brussels, Google LLC
+
+```yaml
+34.22.190.30
+```
 
 ### 🇪🇦 Spain
 
@@ -177,13 +204,18 @@ Dalles, Google LLC
 
 ![rainbow]
 
-### 🇦🇺 Australia
+### 🇨🇦 Canada
 
-NSW, Sydney, Amazon Technologies Inc
+Montreal, Canada, Amazon.com Inc
 
 ```yaml
-54.79.133.41
+35.182.7.190
 ```
+
+```yaml
+35.183.163.195
+```
+
 
 ### 🇫🇷 France
 
@@ -284,11 +316,27 @@ Various Locations, Amazon Technologies Inc
 > _City information was not specified for these in prior versions_
 
 ```yaml
+18.207.186.154
+```
+
+```yaml
 34.194.76.43
 ```
 
 ```yaml
+44.227.209.152
+```
+
+```yaml
 3.147.73.220
+```
+
+```yaml
+18.216.55.100
+```
+
+```yaml
+54.167.43.59
 ```
 
 ```yaml
@@ -337,7 +385,11 @@ Various Locations, Amazon Technologies Inc
 
 ### 🇨🇦 Canada
 
-Toronto, Ontario, Advanced Knowledge Networks
+Toronto, Ontario,  Atlantic.net, Advanced Knowledge Networks
+
+```yaml
+69.28.82.253
+```
 
 ```yaml
 172.98.207.58
@@ -346,6 +398,7 @@ Toronto, Ontario, Advanced Knowledge Networks
 ```yaml
 209.200.246.130
 ```
+
 
 Toronto, Ontario, Kamatera Inc
 
@@ -497,10 +550,14 @@ Georgia, Atlanta, Constant, Vultr Holdings LLC.
 
 ### 🇦🇹 Austria
 
-Vienna, Aeza international Ltd
+Vienna, Alwyzon, Aeza Ltd
 
 ```yaml
-94.177.8.10
+94.177.8.4
+```
+
+```yaml
+94.177.8.19
 ```
 
 ```yaml
@@ -509,10 +566,6 @@ Vienna, Aeza international Ltd
 
 ```yaml
 185.106.94.67
-```
-
-```yaml
-94.177.8.19
 ```
 
 ```yaml
@@ -620,15 +673,43 @@ Zurich, Baxet GP & Private Layer & Data source & GreenNet
 Frankfurt am Main, Hetzner Online GmbH & Digital Ocean
 
 ```yaml
-178.236.253.23
+159.69.92.30
+```
+
+```yaml
+148.251.134.189
+```
+
+```yaml
+49.12.110.72
+```
+
+```yaml
+5.75.193.134
+```
+
+```yaml
+88.198.13.253
+```
+
+```yaml
+167.99.137.56
+```
+
+```yaml
+104.248.17.101
+```
+
+```yaml
+46.101.158.60
+```
+
+```yaml
+54.38.159.25
 ```
 
 ```yaml
 109.237.99.185
-```
-
-```yaml
-[2a02:180:6:1::62e]
 ```
 
 ```yaml
@@ -1127,7 +1208,11 @@ Izmir, PQ Hosting plus
 
 ### 🇦🇺 Australia
 
-New South Wales, Sydney, OVH SAS &Oracle
+New South Wales, Sydney, OVH, The Constant Company
+
+```yaml
+45.77.236.204
+```
 
 ```yaml
 139.99.236.163
