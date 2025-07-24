@@ -154,6 +154,10 @@ Dalles, Google LLC
 ```
 
 ```yaml
+34.69.150.180
+```
+
+```yaml
 34.83.245.149
 ```
 
@@ -279,6 +283,36 @@ Various Locations, Amazon Technologies Inc
 
 > _City information was not specified for these in prior versions_
 
+
+```yaml
+34.194.76.43
+```
+
+```yaml
+3.147.73.220
+```
+
+```yaml
+34.105.49.234
+```
+
+```yaml
+52.35.114.64
+```
+
+```yaml
+54.167.43.59
+```
+
+```yaml
+34.208.221.169
+```
+
+
+```yaml
+34.218.130.79
+```
+
 ```yaml
 35.83.185.225
 ```
@@ -355,7 +389,11 @@ Chicago, Illinois, Vultr Holdings, LLC
 173.199.117.101
 ```
 
-Los Angeles, California, Virtual Machine Solutions LLC
+Los Angeles, California, RoyaleHosting BV
+
+```yaml
+45.42.214.153
+```
 
 ```yaml
 139.60.162.153
@@ -439,6 +477,10 @@ Woodbridge, Virginia, Alibaba Technology Ltd
 
 ```yaml
 47.90.141.204
+```
+
+```yaml
+45.79.168.17
 ```
 
 Georgia, Atlanta, Constant, Vultr Holdings LLC.
