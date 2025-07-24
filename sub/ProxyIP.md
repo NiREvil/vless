@@ -86,6 +86,7 @@ ProxyIP.JP.CMLiussss.net
 ```yaml
 ProxyIP.HK.CMLiussss.net
 ```
+
 🇸🇬 Singapore
 
 ```yaml
@@ -215,7 +216,6 @@ Montreal, Canada, Amazon.com Inc
 ```yaml
 35.183.163.195
 ```
-
 
 ### 🇫🇷 France
 
@@ -385,7 +385,7 @@ Various Locations, Amazon Technologies Inc
 
 ### 🇨🇦 Canada
 
-Toronto, Ontario,  Atlantic.net, Advanced Knowledge Networks
+Toronto, Ontario, Atlantic.net, Advanced Knowledge Networks
 
 ```yaml
 69.28.82.253
@@ -398,7 +398,6 @@ Toronto, Ontario,  Atlantic.net, Advanced Knowledge Networks
 ```yaml
 209.200.246.130
 ```
-
 
 Toronto, Ontario, Kamatera Inc
 
