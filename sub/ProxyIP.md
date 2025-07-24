@@ -283,7 +283,6 @@ Various Locations, Amazon Technologies Inc
 
 > _City information was not specified for these in prior versions_
 
-
 ```yaml
 34.194.76.43
 ```
@@ -307,7 +306,6 @@ Various Locations, Amazon Technologies Inc
 ```yaml
 34.208.221.169
 ```
-
 
 ```yaml
 34.218.130.79
