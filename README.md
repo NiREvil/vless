@@ -1166,7 +1166,114 @@ https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/Xray-WoW.json
 for NikaNG
 
 ```json
-{ "remarks": "🇹🇷TR-wow", "log": {"loglevel": "warning"}, "dns": {"hosts": {}, "servers": ["https://94.140.14.14/dns-query", {"address": "8.8.8.8", "domains": ["geosite:category-ir", "domain:.ir"], "expectIPs": ["geoip:ir"], "port": 53}], "tag": "dns"}, "inbounds": [{"port": 10808, "protocol": "socks", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": true}, "tag": "socks-in"}, {"port": 10809, "protocol": "http", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": true}, "tag": "http-in"}, {"listen": "127.0.0.1", "port": 10853, "protocol": "dokodemo-door", "settings": {"address": "1.1.1.1", "network": "tcp,udp", "port": 53}, "tag": "dns-in"}], "outbounds": [{"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "mtu": 1330, "peers": [{"endpoint": "8.39.214.12:1701", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [88, 72, 74], "secretKey": "MF+TsNC4bLugY6S9djyo0KCYtITtAlZiLamgFfm603U=", "keepAlive": 10, "wnoise": "quic", "wnoisecount": "15", "wpayloadsize": "1-8", "wnoisedelay": "1-3"}, "streamSettings": {"sockopt": {"dialerProxy": "proxy"}}, "tag": "chain"}, {"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "mtu": 1330, "peers": [{"endpoint": "8.39.214.0:1387", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [1, 121, 35], "secretKey": "iGYP9x6sdaOA5fk5aMRuVfKkWTIkyp5ZMfrudW1IJlQ=", "keepAlive": 10, "wnoise": "quic", "wnoisecount": "15", "wpayloadsize": "1-5", "wnoisedelay": "1-2"}, "tag": "proxy"}, {"protocol": "dns", "tag": "dns-out"}, {"protocol": "freedom", "settings": {}, "tag": "direct"}, {"protocol": "blackhole", "settings": {"response": {"type": "http"}}, "tag": "block"}], "policy": {"levels": {"8": {"connIdle": 300, "downlinkOnly": 1, "handshake": 4, "uplinkOnly": 1}}, "system": {"statsOutboundUplink": true, "statsOutboundDownlink": true}}, "routing": {"domainStrategy": "IPIfNonMatch", "rules": [{"inboundTag": ["dns-in"], "outboundTag": "dns-out", "type": "field"}, {"ip": ["8.8.8.8"], "outboundTag": "direct", "port": "53", "type": "field"}, {"domain": ["geosite:category-ir", "domain:.ir"], "outboundTag": "direct", "type": "field"}, {"ip": ["geoip:ir", "geoip:private"], "outboundTag": "direct", "type": "field"}, {"domain": ["geosite:category-ads-all", "geosite:category-ads-ir"], "outboundTag": "block", "type": "field"}, {"outboundTag": "chain", "type": "field", "network": "tcp,udp"}]}, "stats": {}}
+{
+  "remarks": "🇹🇷TR-wow",
+  "log": { "loglevel": "warning" },
+  "dns": {
+    "hosts": {},
+    "servers": [
+      "https://94.140.14.14/dns-query",
+      {
+        "address": "8.8.8.8",
+        "domains": ["geosite:category-ir", "domain:.ir"],
+        "expectIPs": ["geoip:ir"],
+        "port": 53
+      }
+    ],
+    "tag": "dns"
+  },
+  "inbounds": [
+    {
+      "port": 10808,
+      "protocol": "socks",
+      "settings": { "auth": "noauth", "udp": true, "userLevel": 8 },
+      "sniffing": { "destOverride": ["http", "tls"], "enabled": true, "routeOnly": true },
+      "tag": "socks-in"
+    },
+    {
+      "port": 10809,
+      "protocol": "http",
+      "settings": { "auth": "noauth", "udp": true, "userLevel": 8 },
+      "sniffing": { "destOverride": ["http", "tls"], "enabled": true, "routeOnly": true },
+      "tag": "http-in"
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": 10853,
+      "protocol": "dokodemo-door",
+      "settings": { "address": "1.1.1.1", "network": "tcp,udp", "port": 53 },
+      "tag": "dns-in"
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "wireguard",
+      "settings": {
+        "address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"],
+        "mtu": 1330,
+        "peers": [
+          {
+            "endpoint": "8.39.214.12:1701",
+            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+          }
+        ],
+        "reserved": [88, 72, 74],
+        "secretKey": "MF+TsNC4bLugY6S9djyo0KCYtITtAlZiLamgFfm603U=",
+        "keepAlive": 10,
+        "wnoise": "quic",
+        "wnoisecount": "15",
+        "wpayloadsize": "1-8",
+        "wnoisedelay": "1-3"
+      },
+      "streamSettings": { "sockopt": { "dialerProxy": "proxy" } },
+      "tag": "chain"
+    },
+    {
+      "protocol": "wireguard",
+      "settings": {
+        "address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"],
+        "mtu": 1330,
+        "peers": [
+          {
+            "endpoint": "8.39.214.0:1387",
+            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+          }
+        ],
+        "reserved": [1, 121, 35],
+        "secretKey": "iGYP9x6sdaOA5fk5aMRuVfKkWTIkyp5ZMfrudW1IJlQ=",
+        "keepAlive": 10,
+        "wnoise": "quic",
+        "wnoisecount": "15",
+        "wpayloadsize": "1-5",
+        "wnoisedelay": "1-2"
+      },
+      "tag": "proxy"
+    },
+    { "protocol": "dns", "tag": "dns-out" },
+    { "protocol": "freedom", "settings": {}, "tag": "direct" },
+    { "protocol": "blackhole", "settings": { "response": { "type": "http" } }, "tag": "block" }
+  ],
+  "policy": {
+    "levels": { "8": { "connIdle": 300, "downlinkOnly": 1, "handshake": 4, "uplinkOnly": 1 } },
+    "system": { "statsOutboundUplink": true, "statsOutboundDownlink": true }
+  },
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      { "inboundTag": ["dns-in"], "outboundTag": "dns-out", "type": "field" },
+      { "ip": ["8.8.8.8"], "outboundTag": "direct", "port": "53", "type": "field" },
+      { "domain": ["geosite:category-ir", "domain:.ir"], "outboundTag": "direct", "type": "field" },
+      { "ip": ["geoip:ir", "geoip:private"], "outboundTag": "direct", "type": "field" },
+      {
+        "domain": ["geosite:category-ads-all", "geosite:category-ads-ir"],
+        "outboundTag": "block",
+        "type": "field"
+      },
+      { "outboundTag": "chain", "type": "field", "network": "tcp,udp" }
+    ]
+  },
+  "stats": {}
+}
 ```
 
 For NikaNG [[TD?]]
