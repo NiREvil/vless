@@ -10,8 +10,7 @@
     "rules": [
       {
         "clash_mode": "Global",
-        "server": "proxy-dns",
-        "source_ip_cidr": ["172.19.0.0/30", "fdfe:dcba:9876::1/126"]
+        "server": "proxy-dns"
       },
       {
         "server": "proxy-dns",
@@ -71,13 +70,29 @@
     {
       "default": "auto",
       "interrupt_exist_connections": true,
-      "outbounds": ["auto", "🇩🇪H2", "🇺🇸H2"],
+      "outbounds": [
+        "auto",
+        "direct",
+        "🇩🇪H2 - Berlin",
+        "🇺🇸H2 - Utah",
+        "🇬🇧H2 - London",
+        "🇺🇸H2 - Atlanta",
+        "🇹🇷H2 - Istanbul",
+        "🇫🇷H2 - Paris"
+      ],
       "tag": "select",
       "type": "selector"
     },
     {
       "interval": "5m0s",
-      "outbounds": ["🇩🇪H2", "🇺🇸H2"],
+      "outbounds": [
+        "🇩🇪H2 - Berlin",
+        "🇺🇸H2 - Utah",
+        "🇬🇧H2 - London",
+        "🇺🇸H2 - Atlanta",
+        "🇹🇷H2 - Istanbul",
+        "🇫🇷H2 - Paris"
+      ],
       "tag": "auto",
       "tolerance": 1,
       "type": "urltest",
@@ -95,7 +110,7 @@
       "password": "5oITDYnNW7",
       "server": "45.138.99.213",
       "server_port": 8443,
-      "tag": "🇩🇪H2",
+      "tag": "🇩🇪H2 - Berlin",
       "tls": {
         "enabled": true,
         "insecure": true
@@ -110,7 +125,67 @@
       "password": "BZnk2SlPkq",
       "server": "144.172.106.192",
       "server_port": 8443,
-      "tag": "🇺🇸H2",
+      "tag": "🇺🇸H2 - Utah",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "type": "hysteria2"
+    },
+    {
+      "obfs": {
+        "password": "KevinZakarian",
+        "type": "salamander"
+      },
+      "password": "@KevinZakarian",
+      "server": "54.36.225.180",
+      "server_port": 8443,
+      "tag": "🇬🇧H2 - London",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "type": "hysteria2"
+    },
+    {
+      "obfs": {
+        "password": "KevinZakarian",
+        "type": "salamander"
+      },
+      "password": "@KevinZakarian",
+      "server": "129.212.182.3",
+      "server_port": 8443,
+      "tag": "🇺🇸H2 - Atlanta",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "type": "hysteria2"
+    },
+    {
+      "obfs": {
+        "password": "KevinZakarian",
+        "type": "salamander"
+      },
+      "password": "aFs3HWCicZ",
+      "server": "103.83.86.119",
+      "server_port": 8443,
+      "tag": "🇹🇷H2 - Istanbul",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "type": "hysteria2"
+    },
+    {
+      "obfs": {
+        "password": "MOhsenpiMI1370",
+        "type": "salamander"
+      },
+      "password": "JMbuUvn2sX",
+      "server": "35.180.251.237",
+      "server_port": 54789,
+      "tag": "🇫🇷H2 - Paris",
       "tls": {
         "enabled": true,
         "insecure": true
