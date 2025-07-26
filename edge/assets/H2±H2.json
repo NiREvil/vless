@@ -64,13 +64,29 @@
     {
       "default": "auto",
       "interrupt_exist_connections": true,
-      "outbounds": ["auto", "direct", "🇩🇪H2 - Berlin", "🇺🇸H2 - Utah", "🇬🇧H2 - London", "🇺🇸H2 - Atlanta", "🇹🇷H2 - Istanbul", "🇫🇷H2 - Paris"],
+      "outbounds": [
+        "auto",
+        "direct",
+        "🇩🇪H2 - Berlin",
+        "🇺🇸H2 - Utah",
+        "🇬🇧H2 - London",
+        "🇺🇸H2 - Atlanta",
+        "🇹🇷H2 - Istanbul",
+        "🇫🇷H2 - Paris"
+      ],
       "tag": "select",
       "type": "selector"
     },
     {
       "interval": "5m0s",
-      "outbounds": ["🇩🇪H2 - Berlin", "🇺🇸H2 - Utah", "🇬🇧H2 - London", "🇺🇸H2 - Atlanta", "🇹🇷H2 - Istanbul", "🇫🇷H2 - Paris"],
+      "outbounds": [
+        "🇩🇪H2 - Berlin",
+        "🇺🇸H2 - Utah",
+        "🇬🇧H2 - London",
+        "🇺🇸H2 - Atlanta",
+        "🇹🇷H2 - Istanbul",
+        "🇫🇷H2 - Paris"
+      ],
       "tag": "auto",
       "tolerance": 1,
       "type": "urltest",
