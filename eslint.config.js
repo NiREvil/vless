@@ -75,7 +75,7 @@ export default [
         },
       ],
       ...eslintConfigPrettier.rules,
-    }
+    },
   },
 
   // ⚙️ TypeScript
