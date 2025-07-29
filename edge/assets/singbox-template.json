@@ -23,21 +23,19 @@
     "servers": [
       {
         "detour": "proxy",
-        "domain_resolver": "local-dns",
         "server": "185.228.168.9",
         "tag": "proxy-dns",
         "type": "tcp"
       },
       {
         "detour": "direct",
-        "server": "8.8.8.8",
         "tag": "local-dns",
-        "type": "tcp"
+        "type": "local"
       },
       {
-        "detour": "direct",
+        "server": "1.1.1.1",
         "tag": "direct-dns",
-        "type": "local"
+        "type": "udp"
       }
     ],
     "strategy": "prefer_ipv4"
@@ -53,7 +51,7 @@
       "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
       "endpoint_independent_nat": false,
-      "mtu": 9000,
+      "mtu": 1500,
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -78,18 +76,18 @@
   },
   "outbounds": [
     {
-      "default": "🟡Berlin",
-      "outbounds": ["auto", "direct"],
+      "outbounds": ["auto"],
       "tag": "proxy",
-      "type": "selector"
+      "type": "selector",
+      "default": "auto"
     },
     {
-      "interval": "90s",
       "outbounds": [],
       "tag": "auto",
+      "interval": "90s",
       "tolerance": 50,
       "type": "urltest",
-      "url": "https://www.gstatic.com/generate_204"
+      "url": "http://www.gstatic.com/generate_204"
     },
     {
       "domain_resolver": {
@@ -98,6 +96,10 @@
       },
       "tag": "direct",
       "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
     }
   ],
   "route": {
@@ -161,7 +163,12 @@
       },
       {
         "outbound": "direct",
-        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"]
+        "rule_set": [
+          "geoip-private",
+          "geosite-private",
+          "geosite-ir",
+          "geoip-ir"
+        ]
       },
       {
         "outbound": "block",
