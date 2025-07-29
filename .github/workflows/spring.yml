@@ -1,0 +1,78 @@
+name: Spring
+
+on:
+  push:
+    branches: ['main']
+    paths:
+      - '**/spring.*'
+      - 'edge/assets/singbox-template.json'
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        python-version: ['3.12']
+        dummy: ['single']
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: 'recursive'
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Step 2: Set up the specified Python version
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: x64
+
+      # Step 3: Cache pip dependencies to speed up subsequent runs
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('edge/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-${{ matrix.python-version }}-
+
+      # Step 4: Install Python packages (will use cache if available)
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f edge/requirements.txt ]; then
+            pip install -r edge/requirements.txt
+          else
+            echo "requirements.txt not found, skipping dependency installation."
+          fi
+
+      # Step 5: Run the main Python script and show live logs
+      - name: Run Python Script
+        run: python edge/spring.py
+
+      # Step 6: Commit and push the generated files if they have changed
+      - name: Commit and push if changed
+        run: |
+          git config --local user.name "Diana-Cl"
+          git config --local user.email "135276904+Diana-Cl@users.noreply.github.com"
+          
+          # Add all generated JSON files to staging
+          git add *.json
+          
+          # Check if there are any changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            echo "Changes detected. Committing and pushing..."
+            git commit -m "Automated config refresh completed at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" -m "Wireguard private keys, addresses, reserved codea, and all IPs have been renewed"
+            git -c committer.name="NiREvil" -c committer.email="126243832+NiREvil@users.noreply.github.com" commit --amend --no-edit
+            git push
+          fi
