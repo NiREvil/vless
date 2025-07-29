@@ -26,6 +26,7 @@ export default [
       'sub/ProxyIP.md',
       'node_modules/**',
       'DNS over HTTPS/**',
+      'package-lock.json',
       'sub/clash-meta.yml',
       'edge/all-in-one.js',
       'edge/LoadBalance.js',
