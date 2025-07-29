@@ -26,21 +26,19 @@
     "servers": [
       {
         "detour": "proxy",
-        "domain_resolver": "local-dns",
         "server": "185.228.168.9",
         "tag": "proxy-dns",
         "type": "tcp"
       },
       {
         "detour": "direct",
-        "server": "8.8.8.8",
         "tag": "local-dns",
-        "type": "tcp"
+        "type": "local"
       },
       {
-        "detour": "direct",
+        "server": "1.1.1.1",
         "tag": "direct-dns",
-        "type": "local"
+        "type": "udp"
       }
     ],
     "strategy": "prefer_ipv4"
@@ -55,22 +53,22 @@
       "mtu": 1280,
       "peers": [
         {
-          "address": "188.114.99.149",
+          "address": "188.114.98.85",
           "allowed_ips": [
             "0.0.0.0/0",
             "::/0"
           ],
           "persistent_keepalive_interval": 30,
-          "port": 955,
+          "port": 500,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
           "reserved": [
-            17,
-            118,
-            196
+            215,
+            162,
+            10
           ]
         }
       ],
-      "private_key": "2E0FP6WLs9pTf0Fx0KNqZlaXhd8rSzHuPLtoPMxC2GI=",
+      "private_key": "4Oud4c6ktKslqs8gvBo8K0RtFL0ima2SwwIfPrk6AUM=",
       "tag": "\u26aa\ufe0fTehran",
       "type": "wireguard",
       "workers": 2
@@ -84,22 +82,22 @@
       "mtu": 1280,
       "peers": [
         {
-          "address": "162.159.192.59",
+          "address": "188.114.97.44",
           "allowed_ips": [
             "0.0.0.0/0",
             "::/0"
           ],
           "persistent_keepalive_interval": 30,
-          "port": 1387,
+          "port": 2371,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
           "reserved": [
-            206,
-            238,
-            15
+            39,
+            167,
+            152
           ]
         }
       ],
-      "private_key": "WBYHMPgE0j4x7i4y4rPQVgrq6I1xDf7uOYVbnRJ7b2E=",
+      "private_key": "KI/YtMfeNTJWl76DcGCx8Qwz58tSxNTry5vBRw2ctXk=",
       "tag": "\ud83d\udfe2Somewhere",
       "type": "wireguard",
       "workers": 2
@@ -118,7 +116,7 @@
       ],
       "auto_route": true,
       "endpoint_independent_nat": false,
-      "mtu": 9000,
+      "mtu": 1500,
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -143,26 +141,25 @@
   },
   "outbounds": [
     {
-      "default": "\ud83d\udfe1Berlin",
       "outbounds": [
         "auto",
-        "direct",
         "\u26aa\ufe0fTehran",
         "\ud83d\udfe2Somewhere"
       ],
       "tag": "proxy",
-      "type": "selector"
+      "type": "selector",
+      "default": "auto"
     },
     {
-      "interval": "90s",
       "outbounds": [
         "\u26aa\ufe0fTehran",
         "\ud83d\udfe2Somewhere"
       ],
       "tag": "auto",
+      "interval": "90s",
       "tolerance": 50,
       "type": "urltest",
-      "url": "https://www.gstatic.com/generate_204"
+      "url": "http://www.gstatic.com/generate_204"
     },
     {
       "domain_resolver": {
@@ -171,6 +168,10 @@
       },
       "tag": "direct",
       "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
     }
   ],
   "route": {
