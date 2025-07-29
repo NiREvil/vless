@@ -76,15 +76,15 @@
   },
   "outbounds": [
     {
+      "default": "auto",
       "outbounds": ["auto"],
       "tag": "proxy",
-      "type": "selector",
-      "default": "auto"
+      "type": "selector"
     },
     {
+      "interval": "90s",
       "outbounds": [],
       "tag": "auto",
-      "interval": "90s",
       "tolerance": 50,
       "type": "urltest",
       "url": "http://www.gstatic.com/generate_204"
@@ -163,12 +163,7 @@
       },
       {
         "outbound": "direct",
-        "rule_set": [
-          "geoip-private",
-          "geosite-private",
-          "geosite-ir",
-          "geoip-ir"
-        ]
+        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"]
       },
       {
         "outbound": "block",

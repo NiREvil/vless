@@ -13,10 +13,7 @@
       },
       {
         "server": "proxy-dns",
-        "source_ip_cidr": [
-          "172.19.0.1/30",
-          "fdfe:dcba:9876::1/126"
-        ]
+        "source_ip_cidr": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"]
       },
       {
         "clash_mode": "Global",
@@ -45,27 +42,17 @@
   },
   "endpoints": [
     {
-      "address": [
-        "172.16.0.2/32",
-        "2606:4700:110:8836:f1c9:4393:9b37:3814/128"
-      ],
+      "address": ["172.16.0.2/32", "2606:4700:110:8836:f1c9:4393:9b37:3814/128"],
       "detour": "direct",
       "mtu": 1280,
       "peers": [
         {
           "address": "188.114.98.85",
-          "allowed_ips": [
-            "0.0.0.0/0",
-            "::/0"
-          ],
+          "allowed_ips": ["0.0.0.0/0", "::/0"],
           "persistent_keepalive_interval": 30,
           "port": 500,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "reserved": [
-            215,
-            162,
-            10
-          ]
+          "reserved": [215, 162, 10]
         }
       ],
       "private_key": "4Oud4c6ktKslqs8gvBo8K0RtFL0ima2SwwIfPrk6AUM=",
@@ -74,27 +61,17 @@
       "workers": 2
     },
     {
-      "address": [
-        "172.16.0.2/32",
-        "2606:4700:110:8836:f1c9:4393:9b37:3814/128"
-      ],
+      "address": ["172.16.0.2/32", "2606:4700:110:8836:f1c9:4393:9b37:3814/128"],
       "detour": "\u26aa\ufe0fTehran",
       "mtu": 1280,
       "peers": [
         {
           "address": "188.114.97.44",
-          "allowed_ips": [
-            "0.0.0.0/0",
-            "::/0"
-          ],
+          "allowed_ips": ["0.0.0.0/0", "::/0"],
           "persistent_keepalive_interval": 30,
           "port": 2371,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "reserved": [
-            39,
-            167,
-            152
-          ]
+          "reserved": [39, 167, 152]
         }
       ],
       "private_key": "KI/YtMfeNTJWl76DcGCx8Qwz58tSxNTry5vBRw2ctXk=",
@@ -110,10 +87,7 @@
   },
   "inbounds": [
     {
-      "address": [
-        "172.19.0.1/30",
-        "fdfe:dcba:9876::1/126"
-      ],
+      "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
       "endpoint_independent_nat": false,
       "mtu": 1500,
@@ -141,22 +115,15 @@
   },
   "outbounds": [
     {
-      "outbounds": [
-        "auto",
-        "\u26aa\ufe0fTehran",
-        "\ud83d\udfe2Somewhere"
-      ],
+      "default": "auto",
+      "outbounds": ["auto", "\u26aa\ufe0fTehran", "\ud83d\udfe2Somewhere"],
       "tag": "proxy",
-      "type": "selector",
-      "default": "auto"
+      "type": "selector"
     },
     {
-      "outbounds": [
-        "\u26aa\ufe0fTehran",
-        "\ud83d\udfe2Somewhere"
-      ],
-      "tag": "auto",
       "interval": "90s",
+      "outbounds": ["\u26aa\ufe0fTehran", "\ud83d\udfe2Somewhere"],
+      "tag": "auto",
       "tolerance": 50,
       "type": "urltest",
       "url": "http://www.gstatic.com/generate_204"
@@ -235,12 +202,7 @@
       },
       {
         "outbound": "direct",
-        "rule_set": [
-          "geoip-private",
-          "geosite-private",
-          "geosite-ir",
-          "geoip-ir"
-        ]
+        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"]
       },
       {
         "outbound": "block",
