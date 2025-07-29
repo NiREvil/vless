@@ -1,5 +1,4 @@
 name: Spring
-
 on:
   push:
     branches: ['main']
@@ -7,18 +6,16 @@ on:
       - '**/spring.*'
       - 'edge/assets/singbox-template.json'
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 */12 * * *'
   workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 15
     strategy:
       matrix:
         python-version: ['3.12']
         dummy: ['single']
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -33,38 +30,30 @@ jobs:
           python-version: ${{ matrix.python-version }}
           architecture: x64
 
-      - name: Cache pip dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('edge/requirements.txt') }}-${{ github.run_id }}
-          restore-keys: |
-            ${{ runner.os }}-pip-${{ matrix.python-version }}-
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f edge/requirements.txt ]; then
-            pip install -r edge/requirements.txt
-          else
-            echo "requirements.txt not found, skipping dependency installation"
-          fi
+          pip install requests
 
-      - name: Run python
+      - name: Create log directory
         run: |
-          python edge/spring.py >> log.txt 2>&1 || (cat log.txt && exit 1)
+          mkdir -p edge/assets/logs
+
+      - name: Run python script
+        run: |
+          python edge/spring.py > edge/assets/logs/log.txt 2>&1 || (cat edge/assets/logs/log.txt && exit 1)
 
       - name: Upload log file
         uses: actions/upload-artifact@v4
         with:
           name: spring-execution-log
-          path: edge/assets/logs/log.txt    
+          path: edge/assets/logs/log.txt
 
       - name: Commit and push if changed
         run: |
           git config --local user.name "Diana-Cl"
           git config --local user.email "135276904+Diana-Cl@users.noreply.github.com"
-          git add *.json
+          git add *.json warp.json
           git diff --quiet && git diff --staged --quiet || (
             git commit -m "Automated config refresh completed at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" -m "Wireguard private keys, addresses, reserved, and all IPs have been renewed"
             git -c committer.name="NiREvil" -c committer.email="126243832+NiREvil@users.noreply.github.com" \

@@ -13,16 +13,22 @@ logging.basicConfig(level=logging.INFO)
 
 # Constants
 IRAN_SYMBOL = "⚪️"
-GERMANY_SYMBOL = "🟡"
+FOREIGN_SYMBOL = "🟢"
 
 IR_TAG = f"{IRAN_SYMBOL}Tehran"
-DE_TAG = f"{GERMANY_SYMBOL}Berlin"
+SW_TAG = f"{FOREIGN_SYMBOL}Somewhere"
 
+# IPv4 prefixes associated with the CloudFlare WARP service
 warp_cidr = [
+    "8.6.112.0/24",
+    "8.34.70.0/24",
+    "8.34.146.0/24",
+    "8.35.211.0/24",
+    "8.39.125.0/24",
+    "8.39.204.0/24",
+    "8.47.69.0/24",
     "162.159.192.0/24",
-    "162.159.193.0/24",
     "162.159.195.0/24",
-    "162.159.204.0/24",
     "188.114.96.0/24",
     "188.114.97.0/24",
     "188.114.98.0/24",
@@ -33,9 +39,8 @@ warp_cidr = [
 script_directory = os.path.dirname(__file__)
 main_directory = os.path.dirname(script_directory)
 edge_directory = os.path.join(main_directory, "edge")
-
 edge_bestip_path = os.path.join(edge_directory, "Bestip.txt")
-edge_result_path = os.path.join(edge_directory, "Endpoints.csv")
+edge_result_path = os.path.join(main_directory, "result.csv")
 main_singbox_path = os.path.join(main_directory, "sing-box.json")
 main_warp_path = os.path.join(main_directory, "warp.json")
 
@@ -69,7 +74,7 @@ def arch_suffix():
 
 # Function to generate Hiddify config
 def export_Hiddify(t_ips):
-    config_prefix = f"warp://{t_ips[0]}?ifp=1-3&ifpm=m4#{IR_TAG}&&detour=warp://{t_ips[1]}?ifp=1-2&ifpm=m5#{DE_TAG}"
+    config_prefix = f"warp://{t_ips[0]}?ifp=1-3&ifpm=m4#{IR_TAG}&&detour=warp://{t_ips[1]}?ifp=1-2&ifpm=m5#{SW_TAG}"
     formatted_time = datetime.datetime.now().strftime("%A, %d %b %Y, %H:%M")
     return config_prefix, formatted_time
 
@@ -99,7 +104,7 @@ def toSingBox(tag, clean_ip, detour):
                     {
                         "address": f"{clean_ip.split(':')[0]}",
                         "allowed_ips": ["0.0.0.0/0", "::/0"],
-                        "persistent_keepalive_interval": 25,
+                        "persistent_keepalive_interval": 30,
                         "port": int(clean_ip.split(":")[1]),
                         "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
                         "reserved": data["config"]["reserved"],
@@ -132,8 +137,8 @@ def export_SingBox(t_ips):
     with open(template_path, "r") as f:
         data = json.load(f)
 
-    data["outbounds"][0]["outbounds"].extend([IR_TAG, DE_TAG])
-    data["outbounds"][1]["outbounds"].extend([IR_TAG, DE_TAG])
+    data["outbounds"][0]["outbounds"].extend([IR_TAG, SW_TAG])
+    data["outbounds"][1]["outbounds"].extend([IR_TAG, SW_TAG])
 
     tehran_wg = toSingBox(IR_TAG, t_ips[0], "direct")
     if tehran_wg:
@@ -141,11 +146,11 @@ def export_SingBox(t_ips):
     else:
         logging.error(f"Failed to generate {IR_TAG} configuration.")
 
-    berlin_wg = toSingBox(DE_TAG, t_ips[1], IR_TAG)
-    if berlin_wg:
-        data["endpoints"].append(berlin_wg)
+    Somewhere_wg = toSingBox(SW_TAG, t_ips[1], IR_TAG)
+    if Somewhere_wg:
+        data["endpoints"].append(Somewhere_wg)
     else:
-        logging.error(f"Failed to generate {DE_TAG} configuration.")
+        logging.error(f"Failed to generate {SW_TAG} configuration.")
 
     with open(main_singbox_path, "w") as f:
         json.dump(data, f, indent=2)
@@ -167,13 +172,14 @@ def main():
         url = f"https://gitlab.com/Misaka-blog/warp-script/-/raw/main/files/warp-yxip/warp-linux-{arch}"
 
         warp_executable = os.path.join(edge_directory, "warp")
-        subprocess.run(["wget", url, "-O", warp_executable], check=True)
+
+        logging.info(f"Downloading warp executable from {url}")
+        subprocess.run(["wget", "-O", warp_executable, url], check=True)
         os.chmod(warp_executable, 0o755)
 
-        if sys.platform == "win32":
-            subprocess.run(["curl", "-o", warp_executable, url], check=True)
-        else:
-            subprocess.run(["wget", "-O", warp_executable, url], check=True)
+        if os.path.exists(edge_result_path):
+            os.remove(edge_result_path)
+            logging.info("Removed existing Endpoints.csv to force a new scan.")
 
         logging.info("Scanning IPs...")
         result = subprocess.run(
