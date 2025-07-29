@@ -6,6 +6,8 @@ import eslintPluginYml from 'eslint-plugin-yml';
 import ymlParser from 'yaml-eslint-parser';
 import eslintPluginHtml from 'eslint-plugin-html';
 import eslintConfigPrettier from 'eslint-config-prettier';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
 
 export default [
   {
@@ -32,9 +34,8 @@ export default [
     ],
   },
 
-  js.configs.recommended,
+  // ⚙️ JavaScript
   {
-    // ⚙️ JavaScript
     files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
     languageOptions: {
       ecmaVersion: 2022,
@@ -42,6 +43,21 @@ export default [
       globals: {
         ...globals.node,
         ...globals.browser,
+        fetch: 'readonly',
+        Response: 'readonly',
+        URLSearchParams: 'readonly',
+        btoa: 'readonly',
+        atob: 'readonly',
+        Headers: 'readonly',
+        Blob: 'readonly',
+        TextDecoder: 'readonly',
+        TransformStream: 'readonly',
+        WritableStream: 'readonly',
+        ReadableStream: 'readonly',
+        WebSocketPair: 'readonly',
+        addEventListener: 'readonly',
+        console: 'readonly',
+        URL: 'readonly',
       },
     },
     rules: {
@@ -58,9 +74,51 @@ export default [
           skipTemplates: true,
         },
       ],
-    },
+      ...eslintConfigPrettier.rules,
+    }
+  },
 
-    // ⚙️ JSON, JSONC, JSON5
+  // ⚙️ TypeScript
+  {
+    files: ['**/*.ts', '**/*.tsx'],
+    languageOptions: {
+      parser: tsParser,
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+        fetch: 'readonly',
+        Response: 'readonly',
+        URLSearchParams: 'readonly',
+        btoa: 'readonly',
+        atob: 'readonly',
+        Headers: 'readonly',
+        Blob: 'readonly',
+        TextDecoder: 'readonly',
+        TransformStream: 'readonly',
+        WritableStream: 'readonly',
+        ReadableStream: 'readonly',
+        WebSocketPair: 'readonly',
+        addEventListener: 'readonly',
+        console: 'readonly',
+        URL: 'readonly',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      ...eslintConfigPrettier.rules,
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/semi': ['error', 'always'],
+      '@typescript-eslint/quotes': ['error', 'single'],
+    },
+  },
+
+  // ⚙️ JSON, JSONC, JSON5
+  {
     files: ['**/*.json', '**/*.jsonc', '**/*.json5'],
     plugins: {
       jsonc: eslintPluginJsonc,
@@ -74,8 +132,8 @@ export default [
     },
   },
 
+  // ⚙️ YAML
   {
-    // ⚙️ YAML
     files: ['**/*.yaml', '**/*.yml'],
     plugins: {
       yml: eslintPluginYml,
@@ -89,8 +147,8 @@ export default [
     },
   },
 
+  // ⚙️ HTML – For linting <script> blocks
   {
-    // ⚙️ HTML (For linting inside <script>)
     files: ['**/*.html'],
     plugins: {
       html: eslintPluginHtml,
