@@ -432,7 +432,6 @@ https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/ss_iran.tx
 
 https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/ss/ss.txt
 
-
 https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/trojan/trojan_part1.txt
 
 https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/vless/vless_part1.txt
