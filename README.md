@@ -346,6 +346,8 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 ## XRAY
 
+https://dev1.irdevs.sbs [[Ll?]]
+
 https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/ss.txt [[EP?]]
 
 https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vmess.txt
@@ -427,6 +429,23 @@ https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/mixed_iran
 https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/vless_iran.txt
 
 https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/ss_iran.txt
+
+https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/ss/ss.txt
+
+
+https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/trojan/trojan_part1.txt
+
+https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/vless/vless_part1.txt
+
+https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/mixed_iran.txt
+
+https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/vless_iran.txt
+
+https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/trojan_iran.txt
+
+https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/ss_iran.txt
+
+https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/vmess_iran.txt
 
 https://raw.githubusercontent.com/Stinsonysm/GO_V2rayCollector/refs/heads/main/trojan_iran.txt
 
@@ -1663,6 +1682,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [KV?]: https://telegram.me/s/KevinZakarian
 [LG?]: https://github.com/lagzian/TVC/?tab=readme-ov-file
 [LK?]: https://github.com/liketolivefree
+[Ll?]: https://t.me/s/Learn_launch
 [MB?]: https://github.com/mahdibland/ShadowsocksAggregator/
 [ME?]: https://telegram.me/s/FreeVPNHomes/532
 [MK?]: https://telegram.me/maviks_bot?start=680cff2cb34f9a1f3951470a
