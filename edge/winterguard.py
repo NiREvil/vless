@@ -14,7 +14,6 @@ from tenacity import (
     retry,
     stop_after_attempt,
     wait_exponential,
-    retry_if_result,
     retry_if_exception_type,
 )
 
@@ -62,6 +61,7 @@ logger = logging.getLogger(__name__)
 class RateLimitError(Exception):
     pass
 
+
 # Function to encode bytes to base64
 def byte_to_base64(myb):
     return base64.b64encode(myb).decode("utf-8")
@@ -75,6 +75,7 @@ def generate_public_key(key_bytes):
         encoding=serialization.Encoding.Raw, format=serialization.PublicFormat.Raw
     )
     return public_key_bytes
+
 
 # Function to generate a new private key with specific bit manipulations
 def generate_private_key():
@@ -91,6 +92,7 @@ def generate_private_key():
     key[31] &= 127
     key[31] |= 64
     return bytes(key)
+
 
 # Load cached keys
 def load_cached_keys():
@@ -132,6 +134,7 @@ def should_retry(exception):
             return True
     return False
 
+
 def log_before_sleep(retry_state):
     exc = retry_state.outcome.exception()
     if isinstance(exc, requests.exceptions.HTTPError):
@@ -142,14 +145,14 @@ def log_before_sleep(retry_state):
     else:
         logger.warning(f"Retrying due to exception: {exc}")
 
+
 @retry(
-    stop=stop_after_attempt(6), # Retry up to 6 times
+    stop=stop_after_attempt(6),  # Retry up to 6 times
     wait=wait_exponential(multiplier=1, min=5, max=60),  # Exponential backoff
     retry=retry_if_exception_type(Exception).filter(should_retry),
-    reraise=True, # Reraise the exception if all retries fail
+    reraise=True,  # Reraise the exception if all retries fail
     before_sleep=log_before_sleep,
 )
-
 def register_key_on_CF(pub_key):
     logger.info(f"Registering public key: {pub_key[:10]}... with Cloudflare API")
     try:
