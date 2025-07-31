@@ -4,8 +4,8 @@
     "independent_cache": true,
     "rules": [
       {
-      "rule_set": "geosite-ir",
-      "server": "direct-dns"
+        "rule_set": "geosite-ir",
+        "server": "direct-dns"
       },
       {
         "server": "proxy-dns",
@@ -145,30 +145,30 @@
       }
     ],
     "rules": [
-    {
-      "action": "sniff",
-      "timeout": "1s"
-    },
-    {
-      "action": "hijack-dns",
-      "protocol": "dns"
-    },
-    {
-      "clash_mode": "Direct",
-      "outbound": "direct"
-    },
-    {
-      "outbound": "direct",
-      "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"]
-    },
-    {
-      "outbound": "block",
-      "rule_set": "geosite-ads"
-    },
-    {
-      "clash_mode": "Global",
-      "outbound": "proxy"
-    }
-  ]
- }
+      {
+        "action": "sniff",
+        "timeout": "1s"
+      },
+      {
+        "action": "hijack-dns",
+        "protocol": "dns"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "outbound": "direct",
+        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"]
+      },
+      {
+        "outbound": "block",
+        "rule_set": "geosite-ads"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "proxy"
+      }
+    ]
+  }
 }
