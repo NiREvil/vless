@@ -73,11 +73,11 @@
       "interrupt_exist_connections": true,
       "outbounds": [
         "auto",
-        "🇩🇪H2 - Berlin",
-        "🇫🇷H2 - Paris",
-        "🇺🇸H2 - Atlanta",
         "🇹🇷H2 - Istanbul",
         "🇹🇷H2 - Ankara",
+        "🇺🇸H2 - Atlanta",
+        "🇫🇷H2 - Paris",
+        "🇩🇪H2 - Berlin",
         "direct"
       ],
       "tag": "select",
@@ -86,62 +86,16 @@
     {
       "interval": "10m",
       "outbounds": [
-        "🇩🇪H2 - Berlin",
-        "🇫🇷H2 - Paris",
-        "🇺🇸H2 - Atlanta",
         "🇹🇷H2 - Istanbul",
-        "🇹🇷H2 - Ankara"
+        "🇹🇷H2 - Ankara",
+        "🇺🇸H2 - Atlanta",
+        "🇫🇷H2 - Paris",
+        "🇩🇪H2 - Berlin"
       ],
       "tag": "auto",
       "tolerance": 50,
       "type": "urltest",
       "url": "http://www.gstatic.com/generate_204"
-    },
-    {
-      "obfs": {
-        "password": "FarzanehDreams",
-        "type": "salamander"
-      },
-      "password": "5oITDYnNW7",
-      "server": "45.138.99.213",
-      "server_port": 8443,
-      "tag": "🇩🇪H2 - Berlin",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "type": "hysteria2"
-    },
-    {
-      "obfs": {
-        "password": "\u0026O#28YB5qK!5t#U",
-        "type": "salamander"
-      },
-      "password": "freehomesvpnchannel3",
-      "server": "62.60.157.181",
-      "server_port": 46914,
-      "tag": "🇫🇷H2 - Paris",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "domain_resolver": "local-dns",
-      "type": "hysteria2"
-    },
-    {
-      "obfs": {
-        "password": "KevinZakarian",
-        "type": "salamander"
-      },
-      "password": "@KevinZakarian",
-      "server": "129.212.182.3",
-      "server_port": 8443,
-      "tag": "🇺🇸H2 - Atlanta",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "type": "hysteria2"
     },
     {
       "obfs": {
@@ -172,6 +126,52 @@
         "insecure": true
       },
       "domain_resolver": "local-dns",
+      "type": "hysteria2"
+    },
+    {
+      "obfs": {
+        "password": "KevinZakarian",
+        "type": "salamander"
+      },
+      "password": "@KevinZakarian",
+      "server": "129.212.182.3",
+      "server_port": 8443,
+      "tag": "🇺🇸H2 - Atlanta",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "type": "hysteria2"
+    },
+    {
+      "obfs": {
+        "password": "\u0026O#28YB5qK!5t#U",
+        "type": "salamander"
+      },
+      "password": "freehomesvpnchannel3",
+      "server": "62.60.157.181",
+      "server_port": 46914,
+      "tag": "🇫🇷H2 - Paris",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "domain_resolver": "local-dns",
+      "type": "hysteria2"
+    },
+    {
+      "obfs": {
+        "password": "FarzanehDreams",
+        "type": "salamander"
+      },
+      "password": "5oITDYnNW7",
+      "server": "45.138.99.213",
+      "server_port": 8443,
+      "tag": "🇩🇪H2 - Berlin",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
       "type": "hysteria2"
     },
     {
