@@ -118,14 +118,13 @@
         "type": "salamander"
       },
       "password": "VPNy.net-@VPNynet",
-      "server": "kevin.vpny.online",
+      "server": "193.124.2.145",
       "server_port": 11001,
       "tag": "🇹🇷H2 - Ankara",
       "tls": {
         "enabled": true,
         "insecure": true
       },
-      "domain_resolver": "local-dns",
       "type": "hysteria2"
     },
     {
@@ -154,9 +153,9 @@
       "tag": "🇫🇷H2 - Paris",
       "tls": {
         "enabled": true,
-        "insecure": true
+        "insecure": true,
+        "server_name": "www.google.com"
       },
-      "domain_resolver": "local-dns",
       "type": "hysteria2"
     },
     {
