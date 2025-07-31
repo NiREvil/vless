@@ -74,7 +74,6 @@
       "outbounds": [
         "auto",
         "🇩🇪H2 - Berlin",
-        "🇺🇸H2 - Utah",
         "🇫🇷H2 - Paris",
         "🇺🇸H2 - Atlanta",
         "🇹🇷H2 - Istanbul",
@@ -88,7 +87,6 @@
       "interval": "10m",
       "outbounds": [
         "🇩🇪H2 - Berlin",
-        "🇺🇸H2 - Utah",
         "🇫🇷H2 - Paris",
         "🇺🇸H2 - Atlanta",
         "🇹🇷H2 - Istanbul",
@@ -98,10 +96,6 @@
       "tolerance": 50,
       "type": "urltest",
       "url": "http://www.gstatic.com/generate_204"
-    },
-    {
-      "tag": "direct",
-      "type": "direct"
     },
     {
       "obfs": {
@@ -120,33 +114,18 @@
     },
     {
       "obfs": {
-        "password": "TabassomDreams",
-        "type": "salamander"
-      },
-      "password": "BZnk2SlPkq",
-      "server": "144.172.106.192",
-      "server_port": 8443,
-      "tag": "🇺🇸H2 - Utah",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "type": "hysteria2"
-    },
-    {
-      "obfs": {
         "password": "\u0026O#28YB5qK!5t#U",
         "type": "salamander"
       },
       "password": "freehomesvpnchannel3",
-      "server": "channel1.saghetalaie.homes",
+      "server": "62.60.157.181",
       "server_port": 46914,
       "tag": "🇫🇷H2 - Paris",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "www.google.com"
+        "insecure": true
       },
+      "domain_resolver": "local-dns",
       "type": "hysteria2"
     },
     {
@@ -192,7 +171,16 @@
         "enabled": true,
         "insecure": true
       },
+      "domain_resolver": "local-dns",
       "type": "hysteria2"
+    },
+    {
+     "tag": "direct",
+     "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
     }
   ],
   "route": {
