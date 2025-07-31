@@ -47,7 +47,6 @@ ENTRY_PROXY_BASE_NAME = os.environ.get("ENTRY_PROXY_BASE_NAME", "IRN-ENTRY")
 MAIN_SELECTOR_GROUP_NAME = os.environ.get("MAIN_SELECTOR_GROUP_NAME", "🔰 PROXIES")
 DIALER_URL_TEST_GROUP_NAME = f"🇩🇪 AUTO-{DIALER_PROXY_BASE_NAME}"
 ENTRY_URL_TEST_GROUP_NAME = f"🇮🇷 AUTO-{ENTRY_PROXY_BASE_NAME}"
-# --- End Configuration ---
 
 # Log settings
 logging.basicConfig(
@@ -304,10 +303,16 @@ ipv6_prefixes = ["2606:4700:d1", "2606:4700:d0"]
 
 # IPv4 prefixes for generating endpoints
 ipv4_prefixes = [
+    "8.6.112.",
+    "8.34.70.",
+    "8.34.146.",
+    "8.35.211.",
+    "8.39.125.",
+    "8.39.204.",
+    "8.39.214.",
+    "8.47.69.",
     "162.159.192.",
-    "162.159.193.",
     "162.159.195.",
-    #   "162.159.204.",
     "188.114.96.",
     "188.114.97.",
     "188.114.98.",
@@ -459,14 +464,12 @@ def main():
                 )
                 server_entry, port_entry = generate_ipv4_endpoint()
             else:
-                # For pairs > 4, we can revert to the original logic if needed,
+
                 # or simply use IPv6 like the dialer. Here we mirror the dialer logic.
                 logger.debug(f"Using IPv6 endpoint for Entry proxy {pair_num}")
                 server_entry, port_entry = generate_ipv6_endpoint()
 
             # Note: The previous logic using ipv6_endpoint_count and NUM_IPV6_ENTRY_ENDPOINTS
-            # for entry proxy endpoint selection has been replaced by the logic above.
-
             entry_proxy = {
                 "name": entry_proxy_name,
                 "type": "wireguard",
@@ -497,23 +500,23 @@ def main():
                     ENTRY_URL_TEST_GROUP_NAME,
                     DIALER_URL_TEST_GROUP_NAME,
                     "DIRECT",
-                    *dialer_proxy_names,  # Dialer proxies first in list
-                    *entry_proxy_names,  # Entry proxies second
+                    *dialer_proxy_names,
+                    *entry_proxy_names,
                 ],
             },
             {
                 "name": ENTRY_URL_TEST_GROUP_NAME,
                 "type": "url-test",
-                "url": "https://www.gstatic.com/generate_204",
-                "interval": 30,
+                "url": "http://www.gstatic.com/generate_204",
+                "interval": 60,
                 "tolerance": 50,
                 "proxies": entry_proxy_names,
             },
             {
                 "name": DIALER_URL_TEST_GROUP_NAME,
                 "type": "url-test",
-                "url": "https://www.gstatic.com/generate_204",
-                "interval": 30,
+                "url": "http://www.gstatic.com/generate_204",
+                "interval": 60,
                 "tolerance": 50,
                 "proxies": dialer_proxy_names,
             },
@@ -538,14 +541,13 @@ def main():
                 updated_rules.append(f"MATCH,{MAIN_SELECTOR_GROUP_NAME}")
             config_template_dict["rules"] = updated_rules
 
-        # Ensure the primary DNS nameserver uses the correct selector group name tag
         if (
             "dns" in config_template_dict
             and "nameserver" in config_template_dict["dns"]
         ):
             if config_template_dict["dns"]["nameserver"]:
                 parts = config_template_dict["dns"]["nameserver"][0].split("#")
-                if len(parts) >= 1:  # Check if there is at least a server part
+                if len(parts) >= 1: 
                     # Rebuild tag using the main selector group name
                     config_template_dict["dns"]["nameserver"][0] = (
                         f"{parts[0]}#{MAIN_SELECTOR_GROUP_NAME}"
@@ -567,7 +569,7 @@ def main():
             # Add comments to the beginning of the file
             generation_time = datetime.datetime.now().isoformat()
             header_comment = "# Generated configs for clash-meta with WireGuard proxies that have amnesia values.\n"
-            header_comment += f"# Generated on: {generation_time}\n\n"
+            header_comment += f"# Time is: {generation_time}\n\n"
 
             with open(OUTPUT_YAML_FILENAME, "w", encoding="utf-8") as f:
                 f.write(header_comment)
