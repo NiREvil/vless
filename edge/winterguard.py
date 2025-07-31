@@ -464,7 +464,6 @@ def main():
                 )
                 server_entry, port_entry = generate_ipv4_endpoint()
             else:
-
                 # or simply use IPv6 like the dialer. Here we mirror the dialer logic.
                 logger.debug(f"Using IPv6 endpoint for Entry proxy {pair_num}")
                 server_entry, port_entry = generate_ipv6_endpoint()
@@ -547,7 +546,7 @@ def main():
         ):
             if config_template_dict["dns"]["nameserver"]:
                 parts = config_template_dict["dns"]["nameserver"][0].split("#")
-                if len(parts) >= 1: 
+                if len(parts) >= 1:
                     # Rebuild tag using the main selector group name
                     config_template_dict["dns"]["nameserver"][0] = (
                         f"{parts[0]}#{MAIN_SELECTOR_GROUP_NAME}"
