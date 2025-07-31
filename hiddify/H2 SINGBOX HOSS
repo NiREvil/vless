@@ -58,6 +58,7 @@
         }
       },
       "stack": "system",
+      "strict_route": false,
       "type": "tun"
     },
     {
@@ -72,31 +73,31 @@
       "interrupt_exist_connections": true,
       "outbounds": [
         "auto",
-        "direct",
         "🇩🇪H2 - Berlin",
         "🇺🇸H2 - Utah",
-        "🇬🇧H2 - London",
+        "🇫🇷H2 - Paris",
         "🇺🇸H2 - Atlanta",
         "🇹🇷H2 - Istanbul",
-        "🇫🇷H2 - Paris"
+        "🇹🇷H2 - Ankara",
+        "direct"
       ],
       "tag": "select",
       "type": "selector"
     },
     {
-      "interval": "5m0s",
+      "interval": "10m",
       "outbounds": [
         "🇩🇪H2 - Berlin",
         "🇺🇸H2 - Utah",
-        "🇬🇧H2 - London",
+        "🇫🇷H2 - Paris",
         "🇺🇸H2 - Atlanta",
         "🇹🇷H2 - Istanbul",
-        "🇫🇷H2 - Paris"
+        "🇹🇷H2 - Ankara"
       ],
       "tag": "auto",
-      "tolerance": 1,
+      "tolerance": 50,
       "type": "urltest",
-      "url": "https://www.gstatic.com/generate_204"
+      "url": "http://www.gstatic.com/generate_204"
     },
     {
       "tag": "direct",
@@ -134,16 +135,17 @@
     },
     {
       "obfs": {
-        "password": "KevinZakarian",
+        "password": "\u0026O#28YB5qK!5t#U",
         "type": "salamander"
       },
-      "password": "@KevinZakarian",
-      "server": "54.36.225.180",
-      "server_port": 8443,
-      "tag": "🇬🇧H2 - London",
+      "password": "freehomesvpnchannel3",
+      "server": "channel1.saghetalaie.homes",
+      "server_port": 46914,
+      "tag": "🇫🇷H2 - Paris",
       "tls": {
         "enabled": true,
-        "insecure": true
+        "insecure": true,
+        "server_name": "www.google.com"
       },
       "type": "hysteria2"
     },
@@ -179,13 +181,13 @@
     },
     {
       "obfs": {
-        "password": "MOhsenpiMI1370",
+        "password": "VPNy.net-@VPNynet",
         "type": "salamander"
       },
-      "password": "JMbuUvn2sX",
-      "server": "35.180.251.237",
-      "server_port": 54789,
-      "tag": "🇫🇷H2 - Paris",
+      "password": "VPNy.net-@VPNynet",
+      "server": "kevin.vpny.online",
+      "server_port": 11001,
+      "tag": "🇹🇷H2 - Ankara",
       "tls": {
         "enabled": true,
         "insecure": true
