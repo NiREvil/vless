@@ -14,7 +14,7 @@ from tenacity import (
     retry,
     stop_after_attempt,
     wait_exponential,
-    retry_if_exception_type,
+    retry_if_exception,
 )
 
 # --- Configuration ---
@@ -149,7 +149,7 @@ def log_before_sleep(retry_state):
 @retry(
     stop=stop_after_attempt(6),  # Retry up to 6 times
     wait=wait_exponential(multiplier=1, min=5, max=60),  # Exponential backoff
-    retry=retry_if_exception_type(Exception).filter(should_retry),
+    retry=retry_if_exception(should_retry),
     reraise=True,  # Reraise the exception if all retries fail
     before_sleep=log_before_sleep,
 )
