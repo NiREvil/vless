@@ -412,15 +412,13 @@ def main():
         priv_key_entry, reserved_entry, ip_v4_entry, ip_v6_entry = bind_keys("entry")
 
         # Prepare unique interface IPs, adding CIDR notation
-        ip_dialer = f"{ip_v4_dialer}/32" if ip_v4_dialer else "172.16.0.2/32"
+        ip_dialer = "172.16.0.3/32"
         ipv6_dialer = (
             f"{ip_v6_dialer}/128"
             if ip_v6_dialer
             else "2606:4700:110:8867:3f4a:906:1933:43c5/128"
         )
-        ip_entry = (
-            f"{ip_v4_entry}/32" if ip_v4_entry else "172.16.0.3/32"
-        )  # Use a fallback
+        ip_entry = "172.16.0.2/32"
         ipv6_entry = (
             f"{ip_v6_entry}/128"
             if ip_v6_entry
