@@ -7,57 +7,47 @@ on:
       - '**/preprocessor.*'
       - 'sub/*.json'
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 12 * * *'
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-24.04
-    strategy:
-      matrix:
-        dummy: ['single'] 
     defaults:
       run:
         shell: bash -e {0}
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          submodules: 'recursive'
+          submodules: recursive
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3' 
+          php-version: '8.3'
 
-      - name: Run preprocessor.php
-        run: php edge/preprocessor.php || exit 1
+      - name: Run script
+        run: php edge/preprocessor.php
 
-      - name: Configure Git
+      - name: Configure git
         run: |
           git config --local user.name "BotFather"
-          git config --local user.email "BotFather.REvil@proton.me"
+          git config --local user.email "BotFather.rev@proton.me"
 
-      - name: Commit changes with timestamp
+      - name: Commit changes
         run: |
           git add -A
           if ! git diff --cached --quiet; then
             git commit -m "Cloudflare IPs Refreshed at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" \
-                       -m "The list of Cloudflare IPs has been updated" \
-                       --author="Diana-Cl <135276904+Diana-Cl@users.noreply.github.com>"
+                         -m "The list of Cloudflare IPs has been updated" \
+                         --author="Diana-Cl <135276904+Diana-Cl@users.noreply.github.com>"
           else
             echo "No changes detected. Skipping commit."
-          fi
 
       - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          
-      # Step 6: Push changes
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v0.6.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
