@@ -9,7 +9,10 @@
       },
       {
         "server": "proxy-dns",
-        "source_ip_cidr": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"]
+        "source_ip_cidr": [
+          "172.19.0.1/30",
+          "fdfe:dcba:9876::1/126"
+        ]
       },
       {
         "clash_mode": "Direct",
@@ -33,7 +36,8 @@
         "type": "local"
       },
       {
-        "server": "178.22.122.100",
+        "domain_resolver": "local-dns",
+        "server": "free.shekan.ir",
         "tag": "direct-dns",
         "type": "https"
       }
@@ -42,42 +46,62 @@
   },
   "endpoints": [
     {
-      "address": ["172.16.0.2/32", "2606:4700:110:8836:f1c9:4393:9b37:3814/128"],
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8836:f1c9:4393:9b37:3814/128"
+      ],
       "detour": "direct",
       "mtu": 1280,
       "peers": [
         {
-          "address": "188.114.98.139",
-          "allowed_ips": ["0.0.0.0/0", "::/0"],
+          "address": "188.114.99.195",
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
           "persistent_keepalive_interval": 30,
-          "port": 4233,
+          "port": 908,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "reserved": [190, 78, 193]
+          "reserved": [
+            51,
+            61,
+            107
+          ]
         }
       ],
-      "private_key": "oKWWWLthODbeOcVtUa0gvVv1I2Cai2Kkb2LKST1iwGc=",
+      "private_key": "gBM/HA7hb8ZDOnRbDc1916ULaik6QPbAg24XV1CoNnE=",
       "tag": "\u26aa\ufe0fTehran",
       "type": "wireguard",
-      "workers": 2
+      "workers": 4
     },
     {
-      "address": ["172.16.0.2/32", "2606:4700:110:8836:f1c9:4393:9b37:3814/128"],
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8836:f1c9:4393:9b37:3814/128"
+      ],
       "detour": "\u26aa\ufe0fTehran",
       "mtu": 1280,
       "peers": [
         {
-          "address": "188.114.98.45",
-          "allowed_ips": ["0.0.0.0/0", "::/0"],
+          "address": "162.159.192.28",
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
           "persistent_keepalive_interval": 30,
-          "port": 7152,
+          "port": 903,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "reserved": [177, 155, 156]
+          "reserved": [
+            108,
+            251,
+            112
+          ]
         }
       ],
-      "private_key": "ABhmniZ0wWsdvIQTo7nRbYjyvqSrnTmesK4vz9cBGGc=",
+      "private_key": "oLBrL55Ciy8v6x2K+LRaX9JVplAyExP/2zZCblsaQUo=",
       "tag": "\ud83d\udfe2Somewhere",
       "type": "wireguard",
-      "workers": 2
+      "workers": 4
     }
   ],
   "experimental": {
@@ -87,9 +111,11 @@
   },
   "inbounds": [
     {
-      "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
       "auto_route": true,
-      "endpoint_independent_nat": false,
       "mtu": 9000,
       "platform": {
         "http_proxy": {
@@ -116,13 +142,20 @@
   "outbounds": [
     {
       "default": "auto",
-      "outbounds": ["auto", "\u26aa\ufe0fTehran", "\ud83d\udfe2Somewhere"],
+      "outbounds": [
+        "auto",
+        "\u26aa\ufe0fTehran",
+        "\ud83d\udfe2Somewhere"
+      ],
       "tag": "proxy",
       "type": "selector"
     },
     {
-      "interval": "3m",
-      "outbounds": ["\u26aa\ufe0fTehran", "\ud83d\udfe2Somewhere"],
+      "interval": "3m0s",
+      "outbounds": [
+        "\u26aa\ufe0fTehran",
+        "\ud83d\udfe2Somewhere"
+      ],
       "tag": "auto",
       "tolerance": 50,
       "type": "urltest",
@@ -149,35 +182,30 @@
     "rule_set": [
       {
         "download_detour": "direct",
-        "format": "binary",
         "tag": "geosite-ads",
         "type": "remote",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs"
       },
       {
         "download_detour": "direct",
-        "format": "binary",
         "tag": "geosite-private",
         "type": "remote",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs"
       },
       {
         "download_detour": "direct",
-        "format": "binary",
         "tag": "geosite-ir",
         "type": "remote",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ir.srs"
       },
       {
         "download_detour": "direct",
-        "format": "binary",
         "tag": "geoip-private",
         "type": "remote",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/private.srs"
       },
       {
         "download_detour": "direct",
-        "format": "binary",
         "tag": "geoip-ir",
         "type": "remote",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/ir.srs"
@@ -198,7 +226,12 @@
       },
       {
         "outbound": "direct",
-        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"]
+        "rule_set": [
+          "geoip-private",
+          "geosite-private",
+          "geosite-ir",
+          "geoip-ir"
+        ]
       },
       {
         "outbound": "block",
