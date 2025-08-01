@@ -5,9 +5,9 @@ on:
     branches: ['main']
     paths:
       - '**/spring.*'
-      - 'edge/assets/singbox-template.json'
+      - '**/singbox-template.*'
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 12 * * *'
   workflow_dispatch:
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
     timeout-minutes: 15
     strategy:
       matrix:
-        python-version: ['3.12']
+        python-version: ['3.13']
         dummy: ['single']
 
     steps:
