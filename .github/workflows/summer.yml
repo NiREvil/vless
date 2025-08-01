@@ -2,12 +2,12 @@ name: SummerTime
 
 on:
   push:
-    branches: ['main']
+    branches: 'main'
     paths:
       - '**/summer.*'
       - 'sub/*.txt'
   schedule:
-    - cron: '0 */8 * * *'
+    - cron: '0 12 * * *'
   workflow_dispatch:
 
 permissions:
@@ -29,7 +29,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.13'
           cache: pip
           architecture: x64
 
@@ -46,7 +46,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r edge/requirements.txt || exit 1
 
-      - name: Run summer.py to fetch new wireguard configratiions
+      - name: Run script
         run: |
           python edge/summer.py
 
