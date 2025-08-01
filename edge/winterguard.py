@@ -40,12 +40,11 @@ OUTPUT_YAML_FILENAME = os.path.join(
     PARENT_DIR, "sub", "clash-meta-wg.yml"
 )  # Output YML filename
 
-
 # --- Proxy Naming Configuration ---
 DIALER_PROXY_BASE_NAME = os.environ.get("DIALER_PROXY_BASE_NAME", "GER-DIALER")
 ENTRY_PROXY_BASE_NAME = os.environ.get("ENTRY_PROXY_BASE_NAME", "IRN-ENTRY")
 MAIN_SELECTOR_GROUP_NAME = os.environ.get("MAIN_SELECTOR_GROUP_NAME", "🔰 PROXIES")
-DIALER_URL_TEST_GROUP_NAME = f"🇩🇪 AUTO-{DIALER_PROXY_BASE_NAME}"
+DIALER_URL_TEST_GROUP_NAME = f":🇸🇪 AUTO-{DIALER_PROXY_BASE_NAME}"
 ENTRY_URL_TEST_GROUP_NAME = f"🇮🇷 AUTO-{ENTRY_PROXY_BASE_NAME}"
 
 # Log settings
@@ -463,6 +462,7 @@ def main():
                 "type": "wireguard",
                 "ip": ip_dialer,
                 "ipv6": ipv6_dialer,
+                "ip-version": "dual",
                 "private-key": priv_key_dialer,
                 "server": server_dialer,
                 "port": port_dialer,
@@ -495,6 +495,7 @@ def main():
                 "type": "wireguard",
                 "ip": ip_entry,
                 "ipv6": ipv6_entry,
+                "ip-version": "dual",
                 "private-key": priv_key_entry,
                 "server": server_entry,
                 "port": port_entry,
@@ -503,7 +504,7 @@ def main():
                 "reserved": reserved_entry,
                 "udp": True,
                 "mtu": 1280,
-                "amnezia-wg-option": {"jc": "4", "jmin": "40", "jmax": "70"},
+                "amnezia-wg-option": {"jc": "5", "jmin": "500", "jmax": "501"},
             }
             proxies_list.append(entry_proxy)
 
@@ -527,17 +528,21 @@ def main():
             {
                 "name": ENTRY_URL_TEST_GROUP_NAME,
                 "type": "url-test",
-                "url": "http://www.gstatic.com/generate_204",
-                "interval": 60,
+                "url": "https://www.gstatic.com/generate_204",
+                "interval": 180,
                 "tolerance": 50,
+                "timeout": 5000,
+                "max-failed-times": 3,
                 "proxies": entry_proxy_names,
             },
             {
                 "name": DIALER_URL_TEST_GROUP_NAME,
                 "type": "url-test",
-                "url": "http://www.gstatic.com/generate_204",
-                "interval": 60,
+                "url": "https://www.gstatic.com/generate_204",
+                "interval": 180,
                 "tolerance": 50,
+                "timeout": 5000,
+                "max-failed-times": 3,
                 "proxies": dialer_proxy_names,
             },
         ]
