@@ -33,7 +33,8 @@
         "type": "local"
       },
       {
-        "server": "178.22.122.100",
+        "domain_resolver": "local-dns",
+        "server": "free.shekan.ir",
         "tag": "direct-dns",
         "type": "https"
       }
@@ -50,7 +51,6 @@
     {
       "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
-      "endpoint_independent_nat": false,
       "mtu": 9000,
       "platform": {
         "http_proxy": {
@@ -82,7 +82,7 @@
       "type": "selector"
     },
     {
-      "interval": "3m",
+      "interval": "3m0s",
       "outbounds": [],
       "tag": "auto",
       "tolerance": 50,
@@ -110,35 +110,30 @@
     "rule_set": [
       {
         "download_detour": "direct",
-        "format": "binary",
         "tag": "geosite-ads",
         "type": "remote",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs"
       },
       {
         "download_detour": "direct",
-        "format": "binary",
         "tag": "geosite-private",
         "type": "remote",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs"
       },
       {
         "download_detour": "direct",
-        "format": "binary",
         "tag": "geosite-ir",
         "type": "remote",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ir.srs"
       },
       {
         "download_detour": "direct",
-        "format": "binary",
         "tag": "geoip-private",
         "type": "remote",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/private.srs"
       },
       {
         "download_detour": "direct",
-        "format": "binary",
         "tag": "geoip-ir",
         "type": "remote",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/ir.srs"
