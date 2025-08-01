@@ -41,13 +41,6 @@ jobs:
         run: |
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Cloudflare IPs Refreshed at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" \
-                         -m "The list of Cloudflare IPs has been updated" \
-                         --author="Diana-Cl <135276904+Diana-Cl@users.noreply.github.com>"
+            git commit -m "Cloudflare IPs Refreshed at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" -m "The list of Cloudflare IPs has been updated" --author="Diana-Cl <135276904+Diana-Cl@users.noreply.github.com>"
           else
             echo "No changes detected. Skipping commit."
-
-      - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
