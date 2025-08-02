@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-24.04
     strategy:
       matrix:
-        dummy: ['single'] 
+        dummy: ['single']
     defaults:
       run:
         shell: bash -e {0}
@@ -41,11 +41,12 @@ jobs:
           git config --local user.name "BotFather"
           git config --local user.email "botfather.rev@proton.me"
 
-      - name: Commit changes
+      - name: Commit and push changes
         run: |
           git add -A
           if ! git diff --cached --quiet; then
             git commit -m "Cloudflare IPs Refreshed at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" -m "The list of Cloudflare IPs has been updated" --author="Diana-Cl <135276904+Diana-Cl@users.noreply.github.com>"
+            git push origin main
           else
-            echo "No changes detected. Skipping commit."
+            echo "No changes detected. Skipping commit and push."
           fi
