@@ -1176,8 +1176,6 @@ Istanbul, Global Connectivity
 <details>  
 <summary> Click to see More </summary>
 
-
-
 ```yaml
 62.133.63.14
 ```
@@ -1574,10 +1572,7 @@ Istanbul, Global Connectivity
 62.133.63.240
 ```
 
-
-
 </details>
-
 
 Istanbul, Cogent Communications
 
