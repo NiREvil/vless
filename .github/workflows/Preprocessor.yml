@@ -13,9 +13,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        dummy: ['single'] 
     defaults:
       run:
         shell: bash -e {0}
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
