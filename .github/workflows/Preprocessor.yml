@@ -39,7 +39,7 @@ jobs:
       - name: Configure git
         run: |
           git config --local user.name "BotFather"
-          git config --local user.email "BotFather.rev@proton.me"
+          git config --local user.email "botfather.rev@proton.me"
 
       - name: Commit changes
         run: |
@@ -48,3 +48,4 @@ jobs:
             git commit -m "Cloudflare IPs Refreshed at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" -m "The list of Cloudflare IPs has been updated" --author="Diana-Cl <135276904+Diana-Cl@users.noreply.github.com>"
           else
             echo "No changes detected. Skipping commit."
+          fi
