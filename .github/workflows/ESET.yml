@@ -24,8 +24,8 @@ on:
           - fakemail
           - guerrillamail
           - developermail
-        # - mailticking    added cloudflare captcha. 
-        # - incognitomail  added cloudflare captcha. 
+#         - mailticking    added cloudflare captcha. 
+#         - incognitomail  added cloudflare captcha. 
         default: fakemail
       key_type:
         description: Legacy option
@@ -40,7 +40,7 @@ on:
         required: false
         default: main
   schedule:
-    - cron: '0 */8 * * *'
+    - cron: '0 12 * * *'
 
 jobs:
   generate-and-commit:
