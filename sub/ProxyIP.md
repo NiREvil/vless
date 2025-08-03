@@ -217,17 +217,49 @@ Montreal, Canada, Amazon.com Inc
 35.183.163.195
 ```
 
-### 🇫🇷 France
+### 🇮🇪 Ireland 
 
-Paris, Amazon Technologies Inc
+Dublin, Amazon Technologies Inc
 
 ```yaml
-35.157.240.237
+34.253.234.62
+```
+
+```yaml
+52.213.11.150
 ```
 
 ### 🇩🇪 Germany
 
 Frankfurt, Amazon Technologies Inc
+
+```yaml
+3.67.232.136
+```
+
+```yaml
+18.192.93.64
+```
+
+```yaml
+3.127.55.133
+```
+
+```yaml
+3.75.170.179
+```
+
+```yaml
+18.198.227.161
+```
+
+```yaml
+18.197.218.69
+```
+
+```yaml
+3.68.31.54
+```
 
 ```yaml
 35.157.240.237
@@ -290,6 +322,14 @@ Tokyo, Shibuya, Amazon Technologies Inc
 London, Amazon Technologies Inc
 
 ```yaml
+3.9.223.59
+```
+
+```yaml
+35.176.229.223
+```
+
+```yaml
 18.170.77.148
 ```
 
@@ -322,6 +362,34 @@ Singapore, Amazon Tech Inc
 Various Locations, Amazon Technologies Inc
 
 > _City information was not specified for these in prior versions_
+
+```yaml
+35.83.185.225
+```
+
+```yaml
+67.226.221.102
+```
+
+```yaml
+54.203.85.46
+```
+
+```yaml
+44.224.24.91
+```
+
+```yaml
+67.226.221.104
+```
+
+```yaml
+34.208.221.169
+```
+
+```yaml
+184.169.181.217
+```
 
 ```yaml
 18.207.186.154
