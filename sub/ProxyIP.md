@@ -627,7 +627,7 @@ Sofia, EDIS GmbH & Belcloud & Relink
 45.153.125.245
 ```
 
-### 🇫🇷 France 
+### 🇫🇷 France
 
 paris, Bugget LLC, Europe SRL
 
