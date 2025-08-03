@@ -222,7 +222,7 @@ Montreal, Canada, Amazon.com Inc
 Paris, Amazon Technologies Inc
 
 ```yaml
-35.180.229.1
+35.157.240.237
 ```
 
 ### 🇩🇪 Germany
@@ -230,7 +230,15 @@ Paris, Amazon Technologies Inc
 Frankfurt, Amazon Technologies Inc
 
 ```yaml
-18.197.218.69
+35.157.240.237
+```
+
+```yaml
+3.69.0.8
+```
+
+```yaml
+146.70.36.114
 ```
 
 ```yaml
@@ -619,6 +627,34 @@ Sofia, EDIS GmbH & Belcloud & Relink
 45.153.125.245
 ```
 
+### 🇫🇷 France 
+
+paris, Bugget LLC, Europe SRL
+
+```yaml
+185.87.150.54
+```
+
+```yml
+193.176.179.214
+```
+
+```yaml
+51.15.210.1
+```
+
+```yaml
+51.254.6.14
+```
+
+```yaml
+152.228.191.232
+```
+
+```yaml
+103.82.101.179
+```
+
 ### 🇨🇭 Switzerland
 
 Zurich, Baxet GP & Private Layer & Data source & GreenNet
@@ -712,6 +748,10 @@ Frankfurt am Main, Hetzner Online GmbH & Digital Ocean
 ```
 
 ```yaml
+146.70.36.114
+```
+
+```yaml
 49.13.92.32
 ```
 
@@ -775,6 +815,16 @@ Frankfurt am Main, Hetzner Online GmbH & Digital Ocean
 167.235.242.114
 ```
 
+Nuremberg, Hetzner Online GmbH
+
+```yaml
+195.201.231.143
+```
+
+```yaml
+159.69.92.30
+```
+
 Frankfurt am Main, Oracle Cloud
 
 ```yaml
@@ -805,6 +855,10 @@ Madrid, IONOS SE & M247 & PQ
 
 ```yaml
 212.227.90.142
+```
+
+```yaml
+23.88.88.104,443
 ```
 
 ### 🇳🇱 Netherlands
@@ -939,6 +993,10 @@ The constant company LLC
 
 ```yaml
 192.248.146.32
+```
+
+```yaml
+178.32.58.147
 ```
 
 Akami Technologies Inc.
@@ -1637,10 +1695,6 @@ New South Wales, Sydney, OVH, The Constant Company
 ```
 
 ```yaml
-139.99.236.163
-```
-
-```yaml
 125.7.24.251
 ```
 
@@ -1881,7 +1935,7 @@ Also do you need [CloudFlare ip ranges by Country][3] ?
 
 This file contains tens of thousands of tested and categorized IP proxies, I will publish this file weekly.
 
-You can download [from Here](./country_proxies/1-bilion-proxyip.zip)
+You can download [from Here](./sub/1-bilion-proxyip.zip)
 
 also you can see [from Here](./country_proxies/02_proxies.csv)
 
