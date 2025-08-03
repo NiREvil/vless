@@ -6,7 +6,7 @@
 
 {
   "dns": {
-    "final": "local-dns",
+    "final": "proxy-dns",
     "rules": [
       {
         "clash_mode": "Global",
@@ -74,7 +74,7 @@
       "outbounds": [
         "auto",
         "🇹🇷H2 - Istanbul",
-        "🇹🇷H2 - Ankara",
+        "🇩🇪H2 - Frankfurt",
         "🇺🇸H2 - Atlanta",
         "🇫🇷H2 - Paris",
         "🇩🇪H2 - Berlin",
@@ -87,7 +87,7 @@
       "interval": "10m",
       "outbounds": [
         "🇹🇷H2 - Istanbul",
-        "🇹🇷H2 - Ankara",
+        "🇩🇪H2 - Frankfurt",
         "🇺🇸H2 - Atlanta",
         "🇫🇷H2 - Paris",
         "🇩🇪H2 - Berlin"
@@ -114,13 +114,13 @@
     },
     {
       "obfs": {
-        "password": "VPNy.net-@VPNynet",
+        "password": "KevinZakarian",
         "type": "salamander"
       },
-      "password": "VPNy.net-@VPNynet",
-      "server": "193.124.2.145",
+      "password": "yZ6gCWyJv9",
+      "server": "104.194.156.75",
       "server_port": 11001,
-      "tag": "🇹🇷H2 - Ankara",
+      "tag": "🇩🇪H2 - Frankfurt",
       "tls": {
         "enabled": true,
         "insecure": true
