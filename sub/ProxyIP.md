@@ -217,7 +217,7 @@ Montreal, Canada, Amazon.com Inc
 35.183.163.195
 ```
 
-### 🇮🇪 Ireland 
+### 🇮🇪 Ireland
 
 Dublin, Amazon Technologies Inc
 
