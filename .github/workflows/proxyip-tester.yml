@@ -1,9 +1,9 @@
 name: Daily Proxy IP Test
 
 on:
-  workflow_dispatch:
   schedule:
     - cron: '0 12 * * *'
+  workflow_dispatch:
 
 jobs:
   test:
@@ -14,6 +14,7 @@ jobs:
         chunk: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
     steps:
       - uses: actions/checkout@v4
+      
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -34,9 +35,11 @@ jobs:
 
   combine:
     needs: test
+    if: always()
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+      
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -50,9 +53,10 @@ jobs:
           merge-multiple: true
 
       - name: Combine results and generate final markdown
+        id: combine_step
         run: |
-          # Combine all partial files into one, or create an empty file if none exist
-          cat artifacts/*.txt > all_working_proxies.txt 2>/dev/null || touch all_working_proxies.txt
+          cat artifacts/*.txt > all_working_proxies.txt 2>/dev/null || true
+          
           node edge/generate-markdown.js
 
       - name: Commit and Push Results
