@@ -64,5 +64,6 @@ jobs:
         with:
           commit_message: 'Update working proxies list'
           file_pattern: 'sub/ProxyIP-Daily.md'
-          commit_user_name: 'GitHub Actions Bot'
-          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_user_name: 'NET Sentinel Bot'
+          commit_user_email: '224584266+NetSentinel-Bot@users.noreply.github.com'
+          token: ${{ secrets.BOT_TOKEN }}
