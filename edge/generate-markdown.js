@@ -37,13 +37,13 @@ try {
     markdownContent += `No working proxies were found in this run.\n`;
   }
 
-  fs.writeFileSync('ProxyIP-Daily.md', markdownContent);
+  fs.writeFileSync('../sub/ProxyIP-Daily.md', markdownContent);
   console.log(`Successfully generated ProxyIP-Daily.md with ${proxies.length} proxies.`);
 } catch (error) {
   if (error.code === 'ENOENT') {
     console.log('No partial results found. Generating an empty markdown file.');
     fs.writeFileSync(
-      'ProxyIP-Daily.md',
+      '../sub/ProxyIP-Daily.md',
       `## Active proxies\n\n*Last updated on: ${new Date().toUTCString()}*\n\nNo working proxies were found in this run.\n`
     );
   } else {
