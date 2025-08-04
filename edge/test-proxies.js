@@ -60,7 +60,7 @@ async function main() {
     const chunkIndex = parseInt(process.env.CHUNK_INDEX, 10);
     const totalChunks = parseInt(process.env.TOTAL_CHUNKS, 10);
     
-    const proxyFilePath = path.join(__dirname, 'sub/country_proxies/02_proxies.csv');
+    const proxyFilePath = path.join(__dirname, '../sub/country_proxies/02_proxies.csv');
     const rawContent = fs.readFileSync(proxyFilePath, 'utf-8');
 
     const ipPortCombinations = [];
