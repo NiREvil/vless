@@ -20,10 +20,10 @@ try {
   if (fs.existsSync(resultsPath)) {
     const rawContent = fs.readFileSync(resultsPath, 'utf-8');
     if (rawContent.trim() !== '') {
-        proxies = rawContent
-            .split(/\r?\n/)
-            .filter(line => line.trim() !== '')
-            .map(line => JSON.parse(line));
+      proxies = rawContent
+        .split(/\r?\n/)
+        .filter(line => line.trim() !== '')
+        .map(line => JSON.parse(line));
     }
   }
 
@@ -49,8 +49,9 @@ try {
   }
 
   fs.writeFileSync(outputPath, markdownContent);
-  console.log(`Successfully generated ${path.basename(outputPath)} with ${proxies.length} proxies.`);
-
+  console.log(
+    `Successfully generated ${path.basename(outputPath)} with ${proxies.length} proxies.`,
+  );
 } catch (error) {
   console.error('An error occurred in generate-markdown.js:', error);
   process.exit(1);
