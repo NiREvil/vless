@@ -1,0 +1,64 @@
+name: Daily Proxy IP Test
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        chunk: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Run Proxy Test on Chunk
+        run: node edge/test-proxies.js
+        env:
+          CHUNK_INDEX: ${{ matrix.chunk }}
+          TOTAL_CHUNKS: 20
+
+      - name: Upload Partial Result
+        uses: actions/upload-artifact@v4
+        with:
+          name: partial-results-${{ matrix.chunk }}
+          path: working_proxies_partial.txt
+          if-no-files-found: ignore
+
+  combine:
+    needs: test
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Download all partial results
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          pattern: partial-results-*
+          merge-multiple: true
+
+      - name: Combine results and generate final markdown
+        run: |
+          # Combine all partial files into one, or create an empty file if none exist
+          cat artifacts/*.txt > all_working_proxies.txt 2>/dev/null || touch all_working_proxies.txt
+          node edge/generate-markdown.js
+
+      - name: Commit and Push Results
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'Update working proxies list'
+          file_pattern: 'sub/ProxyIP-Daily.md'
+          commit_user_name: 'GitHub Actions Bot'
+          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
