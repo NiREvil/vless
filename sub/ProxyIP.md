@@ -20,9 +20,10 @@
   - [Europe](#europe)
   - [Asia](#asia)
   - [Oceania](#oceania)
+- [Daily Proxies](#daily-proxies)
+- [Bulk proxy by country](#proxyip-by-countries)
 - [Test proxyIPs](#test-proxyips)
 - [Latest workers & pages](#latest-workers--pages)
-- [Bulk proxy by country](#proxyip-by-countries)
 
 ![rainbow]
 
@@ -622,6 +623,8 @@ Georgia, Atlanta, Constant, Vultr Holdings LLC.
 <br><br/>
 
 ## Europe
+
+![rainbow]
 
 ### 🇦🇹 Austria
 
@@ -1754,6 +1757,8 @@ Izmir, PQ Hosting plus
 
 ## Oceania
 
+![rainbow]
+
 ### 🇦🇺 Australia
 
 New South Wales, Sydney, OVH, The Constant Company
@@ -1795,6 +1800,8 @@ Amazon Technologies Inc.
 ```yaml
 192.9.180.162
 ```
+
+![rainbow]
 
 <br><br/>
 
@@ -1894,6 +1901,12 @@ Also do you need [CloudFlare ip ranges by Country][3] ?
 
 <hr><br/>
 
+## Daily Proxies
+
+Here we provide active IP proxies that are scanned and tested daily.
+
+- **[See Here](./ProxyIP-Daily.md)**
+
 ## Test proxyIPs
 
 ## 1. تست از طریق وب‌سایت
@@ -1917,7 +1930,7 @@ Also do you need [CloudFlare ip ranges by Country][3] ?
 
 ## 2. تست از طریق پنل BPB
 
-همه می‌دونید که تو پنل [[bia-pain-bache]][bpb] یه قسمت هست برای وارد کردن پروکسی‌ آی‌پی و مارو خیلی راحت می‌کنه از ادیت کد و ساخت متغیر و غیره.  
+همه می‌دونید که تو پنل [[bia-pain-bache][bpb]] یه قسمت هست برای وارد کردن پروکسی‌ آی‌پی و مارو خیلی راحت می‌کنه از ادیت کد و ساخت متغیر و غیره.  
 نحوه انجام کار به این شکل هستش که ما پروکسی‌آی‌پی یا دامین دلخواه رو تو پنل قرار داده و دکمه `Apply Settings` رو می‌زنیم، حالا واسه اینکه این پروکسی جدید رو کانفیگ‌های‌ما اعمال بشه باید یکبار لینک اشتراک یا همون لینک ساب رو آپدیت بزنیم داخل کلاینت، تا قبل از آپدیت پروکسی آی‌پی‌ما قبلا هرچی بود همونه، بعد از آپدیت این جدیده میاد روی‌کار.  
 بعد باید به یکی از کانفیگ‌ها وصل شد و رفت سراغ یکی از سایت‌هایی که از CDN کلادفلر استفاده میکنن یا به اصطلاح پشت کلادفلر هستند، مثل لینک وورکر یا پیج خودمون، یا سایت‌های عمومی مثل [whoer.net][wr] و یا [speedtest.net][sp] و غیره تا ببینیم سایت برامون بالا میاد یانه.  
 اگه عادی بالا میان که اوکی پس پروکسی که انتخاب کردیم درست کار می‌کنه می‌تونیم ازش استفاده کنیم. اگه بالا نیومد سایت یا هر خطای دیگه‌ای داد یا هردفعه مرورگرمون کپچا نشون داد (تو پروکسی‌آی‌پی‌های مسخره‌ی oracle این خیلی پیش میاد) یا تو ربات های تلگرامی کپچا نشون داده میشه یا بالا نمیان اونوقت باید یکی دیگه انتخاب کنیم چون این منتخبمون داغونه.
@@ -1939,11 +1952,13 @@ Also do you need [CloudFlare ip ranges by Country][3] ?
 
 ## Latest workers & pages
 
-- The latest script for creating a VLESS configuration on Cloudflare is here: [[ZiZifn]][zi]
+- The latest script for creating a VLESS configuration on Cloudflare is here: [[ZiZifn][zi]]
 
-- VLESS node subscription content generator built with Cloudflare Workers to automatically generate the preferred route [[Harmony]][hr]
+- VLESS node subscription content generator built with Cloudflare Workers to automatically generate the preferred route [[Harmony][hr]]
 
-- And also A GUI Panel providing Worker subscriptions and Fragment settings and Warp configurations and many others [[Bia Pain Bache]][BPB]
+- And also A GUI Panel providing Worker subscriptions and Fragment settings and Warp configurations and many others [[Bia Pain Bache][BPB]]
+
+![rainbow]
 
 <hr><br><br/>
 
@@ -1996,6 +2011,8 @@ Also do you need [CloudFlare ip ranges by Country][3] ?
 > یکم خلاقیت ب خرج بدی خودت میفهمی که باید دنبال چی بگردی تو سایت
 >
 > <br><br/>
+
+![rainbow]
 
 <hr><br><br/>
 
