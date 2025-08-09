@@ -357,7 +357,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 ## XRAY
 
-https://dev1.irdevs.sbs [[Ll?]]
+https://dev1.irdevs.sbs [[PI?]]
 
 https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/ss.txt [[EP?]]
 
@@ -942,6 +942,9 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 > [!NOTE]
 >
 > I recommend using [Clash-Meta] for better results.
+
+
+https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/clash.yaml [[PI?]]
 
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/mix [[YB?]]
 
@@ -1687,17 +1690,17 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [EP?]: https://github.com/Epodonios/v2ray-configs
 [FR?]: https://telegram.me/s/FREE2CONFIG
 [GE?]: https://telegram.me/s/gheychiamoozesh
-[GFW]: https://github.com/GFW-knocker/gfw_resist_HTTPS_proxy/tree/main
+[GFW]: https://github.com/GFW-knocker/
 [GA?]: https://telegram.me/s/gheychiamoozesh/387
 [GZ?]: https://github.com/valid7996/
 [HK?]: https://github.com/HosseinKoofi/GO_V2rayCollector/
-[HP?]: https://raw.githubusercontent.com/hamedp-71/Clash_New/refs/heads/main/hp.yaml
+[HP?]: https://github.com/hamedp-71/
 [JN?]: https://telegram.me/s/JavidnamanIran
 [KB?]: https://github.com/liketolivefree
 [KV?]: https://telegram.me/s/KevinZakarian
-[LG?]: https://github.com/lagzian/TVC/?tab=readme-ov-file
+[LG?]: https://github.com/lagzian/
 [LK?]: https://github.com/liketolivefree
-[Ll?]: https://t.me/s/Learn_launch
+[PI?]: https://t.me/firewebgroup
 [MB?]: https://github.com/mahdibland/ShadowsocksAggregator/
 [ME?]: https://telegram.me/s/FreeVPNHomes/532
 [MK?]: https://telegram.me/maviks_bot?start=680cff2cb34f9a1f3951470a
