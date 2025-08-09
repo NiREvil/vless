@@ -357,8 +357,6 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 ## XRAY
 
-https://dev1.irdevs.sbs [[PI?]]
-
 https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/ss.txt [[EP?]]
 
 https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vmess.txt
@@ -369,7 +367,11 @@ https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/no
 
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/hy2
 
+https://yalda.nscl.ir [[Ni?]]
+
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
+
+https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/index.html [[PI?]]
 
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/ss.txt [[BR?]]
 
@@ -378,8 +380,6 @@ https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protoc
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vmess.txt
 
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vless.txt
-
-https://robin.nscl.ir [[Ni?]]
 
 https://v2.alicivil.workers.dev [[GE?]]
 
