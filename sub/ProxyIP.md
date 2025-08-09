@@ -150,6 +150,12 @@ United States, California, Cloudflare Inc
 104.168.102.163
 ```
 
+### Armenia, Yerevan
+
+```yaml
+5.10.215.26
+```
+
 ## Google LLC
 
 ![rainbow]
@@ -370,6 +376,10 @@ Various Locations, Amazon Technologies Inc
 
 ```yaml
 67.226.221.102
+```
+
+```yaml
+213.170.157.1
 ```
 
 ```yaml
