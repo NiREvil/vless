@@ -1,62 +1,61 @@
 ## Active proxies (Port 443)
 
-_Last updated on: Fri, 08 Aug 2025 01:49:15 GMT_
-_Total working proxies found: 55_
+*Last updated on: Sat, 09 Aug 2025 01:40:12 GMT*
+*Total working proxies found: 54*
 
-| Proxy IP          | Location                     | ISP / Organization                          |
-| ----------------- | ---------------------------- | ------------------------------------------- |
-| `103.102.228.113` | Assen, The Netherlands       | AS50053 Individual Entrepreneur Anton Levin |
-| `109.120.185.29`  | Helsinki, Finland            | AS210644 AEZA INTERNATIONAL LTD             |
-| `141.94.223.220`  | Gravelines, France           | AS16276 OVH SAS                             |
-| `147.45.73.239`   | Stockholm, Sweden            | AS210644 AEZA INTERNATIONAL LTD             |
-| `147.45.74.190`   | Stockholm, Sweden            | AS210644 AEZA INTERNATIONAL LTD             |
-| `147.45.76.247`   | Stockholm, Sweden            | AS210644 AEZA INTERNATIONAL LTD             |
-| `159.100.198.106` | Dubai, United Arab Emirates  | AS11179 Aryaka Networks, Inc.               |
-| `162.19.247.245`  | Limburg an der Lahn, Germany | AS16276 OVH SAS                             |
-| `167.235.57.61`   | Nuremberg, Germany           | AS24940 Hetzner Online GmbH                 |
-| `185.220.204.87`  | Amsterdam, Netherlands       | AS41436 Kamatera Inc                        |
-| `185.225.201.204` | Amsterdam, Netherlands       | AS210644 AEZA INTERNATIONAL LTD             |
-| `185.238.169.177` | Meppel, The Netherlands      | AS58061 Scalaxy B.V.                        |
-| `185.246.155.198` | Amsterdam, The Netherlands   | AS56630 Melbikomas UAB                      |
-| `185.68.93.39`    | Sofia, Bulgaria              | AS56577 Relink LTD                          |
-| `185.8.60.113`    | Riga, Latvia                 | AS58269 CloudHosting SIA                    |
-| `193.122.58.158`  | Frankfurt am Main, Germany   | AS31898 Oracle Corporation                  |
-| `194.147.115.132` | Dronten, The Netherlands     | AS52000 MIRhosting B.V.                     |
-| `194.147.33.13`   | Dronten, Netherlands         | AS41745 Baykov Ilya Sergeevich              |
-| `194.147.33.188`  | Dronten, Netherlands         | AS41745 Baykov Ilya Sergeevich              |
-| `194.26.232.203`  | Oude Meer, The Netherlands   | AS211381 Podaon SIA                         |
-| `195.133.75.35`   | Dronten, Netherlands         | AS41745 Baykov Ilya Sergeevich              |
-| `195.234.62.215`  | Frankfurt am Main, Germany   | AS202422 G-Core Labs S.A.                   |
-| `195.58.50.233`   | Dronten, Netherlands         | AS41745 Baykov Ilya Sergeevich              |
-| `213.183.61.191`  | Amsterdam, The Netherlands   | AS56630 Melbikomas UAB                      |
-| `213.226.68.142`  | Frankfurt am Main, Germany   | AS56630 Melbikomas UAB                      |
-| `31.207.47.231`   | Amsterdam, The Netherlands   | AS57043 HOSTKEY B.V.                        |
-| `37.252.5.75`     | Tallinn, Estonia             | AS34702 Aktsiaselts WaveCom                 |
-| `37.27.4.238`     | Helsinki, Finland            | AS24940 Hetzner Online GmbH                 |
-| `38.180.10.162`   | Tallinn, Estonia             | AS34702 Aktsiaselts WaveCom                 |
-| `38.180.85.203`   | Bern, Switzerland            | AS51852 Private Layer INC                   |
-| `45.144.51.81`    | Warsaw, Poland               | AS49791 Newserverlife LLC                   |
-| `45.153.125.245`  | Warsaw, Poland               | AS57169 EDIS GmbH                           |
-| `45.82.255.141`   | Warsaw, Poland               | AS44477 PQ HOSTING PLUS S.R.L.              |
-| `46.226.165.244`  | Stockholm, Sweden            | AS210644 AEZA INTERNATIONAL LTD             |
-| `46.8.229.48`     | Amsterdam, The Netherlands   | AS56971 AS56971 Cloud                       |
-| `46.8.232.217`    | Helsinki, Finland            | AS56971 AS56971 Cloud                       |
-| `66.151.42.224`   | Amsterdam, The Netherlands   | AS57043 HOSTKEY B.V.                        |
-| `77.105.147.253`  | Frankfurt am Main, Germany   | AS211522 Hypercore Ltd                      |
-| `77.238.233.68`   | Amsterdam, The Netherlands   | AS216071 SERVERS TECH FZCO                  |
-| `77.238.241.143`  | Amsterdam, The Netherlands   | AS216071 SERVERS TECH FZCO                  |
-| `79.137.194.243`  | Amsterdam, The Netherlands   | AS210644 AEZA INTERNATIONAL LTD             |
-| `79.137.197.181`  | Amsterdam, The Netherlands   | AS210644 AEZA INTERNATIONAL LTD             |
-| `79.137.248.111`  | Helsinki, Finland            | AS210644 AEZA INTERNATIONAL LTD             |
-| `80.211.231.169`  | Arezzo, Italy                | AS31034 Aruba S.p.A.                        |
-| `80.76.32.165`    | Frankfurt am Main, Germany   | AS200740 FIRST SERVER LIMITED               |
-| `85.192.61.198`   | Helsinki, Finland            | AS210644 AEZA INTERNATIONAL LTD             |
-| `89.110.120.29`   | Amsterdam, The Netherlands   | AS216071 SERVERS TECH FZCO                  |
-| `89.110.66.68`    | Amsterdam, The Netherlands   | AS216071 SERVERS TECH FZCO                  |
-| `89.169.34.172`   | Stockholm, Sweden            | AS210644 AEZA INTERNATIONAL LTD             |
-| `91.208.162.68`   | Amsterdam, The Netherlands   | AS200019 ALEXHOST SRL                       |
-| `91.208.206.103`  | Amsterdam, The Netherlands   | AS200019 ALEXHOST SRL                       |
-| `91.239.148.34`   | Gdansk, Poland               | AS199058 SERVA ONE LTD                      |
-| `93.183.69.31`    | Amsterdam, The Netherlands   | AS43581 ZTV CORP LLC                        |
-| `94.177.8.11`     | Wien, Austria                | AS40994 Hohl IT e.U.                        |
-| `94.177.8.6`      | Wien, Austria                | AS40994 Hohl IT e.U.                        |
+| Proxy IP | Location | ISP / Organization |
+|----------|----------|--------------------|
+| `104.128.190.65` | Coventry, United Kingdom | AS42831 UK Dedicated Servers Limited |
+| `142.171.140.152` | Los Angeles, United States | AS35916 MULTACOM CORPORATION |
+| `147.75.230.33` | Bengaluru, India | AS11179 Aryaka Networks, Inc. |
+| `148.251.157.127` | Falkenstein, Germany | AS24940 Hetzner Online GmbH |
+| `171.22.120.111` | Frankfurt am Main, Germany | AS44477 PQ HOSTING PLUS S.R.L. |
+| `176.10.125.114` | Hünenberg, Switzerland | AS51395 Datasource AG |
+| `178.32.58.147` | Southwark, United Kingdom | AS16276 OVH SAS |
+| `178.62.210.202` | Amsterdam, The Netherlands | AS14061 DigitalOcean, LLC |
+| `18.184.27.249` | Frankfurt am Main, Germany | AS16509 Amazon.com, Inc. |
+| `18.193.131.26` | Frankfurt am Main, Germany | AS16509 Amazon.com, Inc. |
+| `18.207.186.154` | Ashburn, United States | AS14618 Amazon.com, Inc. |
+| `18.216.55.100` | Dublin, United States | AS16509 Amazon.com, Inc. |
+| `185.209.161.104` | Amsterdam, The Netherlands | AS14576 Hosting Solution Ltd. |
+| `185.94.164.160` | Amsterdam, The Netherlands | AS200740 FIRST SERVER LIMITED |
+| `193.176.179.214` | Paris, France | AS56971 AS56971 Cloud |
+| `193.3.168.163` | Oude Meer, The Netherlands | AS211381 Podaon SIA |
+| `194.180.189.36` | Helsinki, Finland | AS57043 HOSTKEY B.V. |
+| `194.36.170.247` | Paris, France | AS56971 AS56971 Cloud |
+| `194.58.39.80` | Amsterdam, The Netherlands | AS26383 Baxet Group Inc. |
+| `212.22.74.89` | Dronten, Netherlands | AS41745 Baykov Ilya Sergeevich |
+| `31.44.2.57` | Amsterdam, The Netherlands | AS208951 ITGLOBAL.COM |
+| `34.105.49.234` | The Dalles, United States | AS396982 Google LLC |
+| `34.194.76.43` | Ashburn, United States | AS14618 Amazon.com, Inc. |
+| `34.208.221.169` | Portland, United States | AS16509 Amazon.com, Inc. |
+| `34.218.130.79` | Portland, United States | AS16509 Amazon.com, Inc. |
+| `38.180.99.103` | Amsterdam, The Netherlands | AS58061 Scalaxy B.V. |
+| `44.227.209.152` | Portland, United States | AS16509 Amazon.com, Inc. |
+| `45.144.29.77` | Copenhagen, Denmark | AS44477 PQ HOSTING PLUS S.R.L. |
+| `45.144.49.146` | Warsaw, Poland | AS49791 Newserverlife LLC |
+| `45.153.185.29` | Maidenhead, United Kingdom | AS202448 MVPS LTD |
+| `45.42.214.153` | Secaucus, United States | AS212477 RoyaleHosting BV |
+| `45.79.168.17` | Cedar Knolls, United States | AS63949 Akamai Connected Cloud |
+| `45.85.93.59` | Geneva, Switzerland | AS199058 SERVA ONE LTD |
+| `49.12.110.72` | Falkenstein, Germany | AS24940 Hetzner Online GmbH |
+| `51.195.91.96` | Limburg an der Lahn, Germany | AS16276 OVH SAS |
+| `52.35.114.64` | Portland, United States | AS16509 Amazon.com, Inc. |
+| `54.167.43.59` | Ashburn, United States | AS14618 Amazon.com, Inc. |
+| `54.38.159.25` | Limburg an der Lahn, Germany | AS16276 OVH SAS |
+| `64.227.114.71` | Frankfurt am Main, Germany | AS14061 DigitalOcean, LLC |
+| `77.238.244.214` | Amsterdam, The Netherlands | AS216071 SERVERS TECH FZCO |
+| `77.238.247.131` | Amsterdam, The Netherlands | AS216071 SERVERS TECH FZCO |
+| `78.46.233.187` | Nuremberg, Germany | AS24940 Hetzner Online GmbH |
+| `80.76.35.73` | Amsterdam, The Netherlands | AS200740 FIRST SERVER LIMITED |
+| `85.192.29.4` | Amsterdam, The Netherlands | AS210644 AEZA INTERNATIONAL LTD |
+| `89.110.107.215` | Amsterdam, The Netherlands | AS216071 SERVERS TECH FZCO |
+| `89.110.121.20` | Amsterdam, The Netherlands | AS216071 SERVERS TECH FZCO |
+| `89.110.127.203` | Amsterdam, The Netherlands | AS216071 SERVERS TECH FZCO |
+| `89.169.54.138` | Frankfurt Am Main, Germany | AS210644 AEZA INTERNATIONAL LTD |
+| `91.201.67.6` | Palermo, Italy | AS56630 Melbikomas UAB |
+| `94.131.122.72` | Coventry, United Kingdom | AS44477 PQ HOSTING PLUS S.R.L. |
+| `94.177.8.34` | Wien, Austria | AS40994 Hohl IT e.U. |
+| `94.177.8.8` | Wien, Austria | AS40994 Hohl IT e.U. |
+| `94.177.8.9` | Wien, Austria | AS40994 Hohl IT e.U. |
+| `95.181.151.172` | Frankfurt am Main, Germany | AS216127 INTERNATIONAL HOSTING COMPANY LIMITED |
