@@ -1,4 +1,79 @@
 ## ESET Trial Accounts
+### Generated On: Monday, 11 August 2025, 16:29 IRN
+
+> [!IMPORTANT]
+> **POLICY CHANGE: ESET has discontinued free trial VPN codes.**
+> This generator now only creates ESET HOME accounts.
+> No VPN codes will be provided.
+
+> [!NOTE]
+> Triggered by: **schedule**
+> Account licenses are valid for ~30 days.
+
+<br/>
+
+**ESET ACCOUNT Credentials**
+
+```yml
+Email: locklin.jones@freedrops.org
+Password: B=789mL=+</zVr
+```
+<br/>
+
+Everything you need to know about ESET. [^1]
+Credits [^2]
+<hr><br/>
+
+### Generated On: Sunday, 10 August 2025, 16:23 IRN
+
+> [!IMPORTANT]
+> **POLICY CHANGE: ESET has discontinued free trial VPN codes.**
+> This generator now only creates ESET HOME accounts.
+> No VPN codes will be provided.
+
+> [!NOTE]
+> Triggered by: **schedule**
+> Account licenses are valid for ~30 days.
+
+<br/>
+
+**ESET ACCOUNT Credentials**
+
+```yml
+Email: samer.ilias@freedrops.org
+Password: AJ6FMLZS[UTgD:Av$*
+```
+<br/>
+
+Everything you need to know about ESET. [^1]
+Credits [^2]
+<hr><br/>
+
+### Generated On: Saturday, 09 August 2025, 16:22 IRN
+
+> [!IMPORTANT]
+> **POLICY CHANGE: ESET has discontinued free trial VPN codes.**
+> This generator now only creates ESET HOME accounts.
+> No VPN codes will be provided.
+
+> [!NOTE]
+> Triggered by: **schedule**
+> Account licenses are valid for ~30 days.
+
+<br/>
+
+**ESET ACCOUNT Credentials**
+
+```yml
+Email: jeter.tajai@freedrops.org
+Password: ^Y]QN;#Ykns4tx[0qiZ
+```
+<br/>
+
+Everything you need to know about ESET. [^1]
+Credits [^2]
+<hr><br/>
+
 ### Generated On: Friday, 08 August 2025, 16:29 IRN
 
 > [!IMPORTANT]
@@ -507,6 +582,9 @@ Password: qrcxyKtr}.5|6
 Everything you need to know about ESET. [^1]
 Credits [^2]
 
+<br/>
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
