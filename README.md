@@ -1646,7 +1646,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 
 <a href="https://trendshift.io/repositories/10442" target="_blank"><img src="https://trendshift.io/api/badge/repositories/10442" alt="NiREvil%2Fvless | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
-<br/> 
+<br/>
 
 [^1]:
     <img src="https://github.com/user-attachments/assets/65eb04ad-67dc-4a70-aa9f-762acb2f5e77" alt="Psiphon Options" width="360"/>
