@@ -143,10 +143,6 @@ United States, California, Cloudflare Inc
 ```
 
 ```yaml
-142.171.233.183
-```
-
-```yaml
 104.168.102.163
 ```
 
@@ -189,10 +185,6 @@ Dalles, Google LLC
 ```
 
 ```yaml
-34.69.150.180
-```
-
-```yaml
 34.83.245.149
 ```
 
@@ -212,18 +204,6 @@ Dalles, Google LLC
 
 ![rainbow]
 
-### 🇨🇦 Canada
-
-Montreal, Canada, Amazon.com Inc
-
-```yaml
-35.182.7.190
-```
-
-```yaml
-35.183.163.195
-```
-
 ### 🇮🇪 Ireland
 
 Dublin, Amazon Technologies Inc
@@ -232,36 +212,20 @@ Dublin, Amazon Technologies Inc
 34.253.234.62
 ```
 
-```yaml
-52.213.11.150
-```
-
 ### 🇩🇪 Germany
 
 Frankfurt, Amazon Technologies Inc
-
-```yaml
-3.67.232.136
-```
 
 ```yaml
 18.192.93.64
 ```
 
 ```yaml
-3.127.55.133
+18.185.254.189
 ```
 
 ```yaml
 3.75.170.179
-```
-
-```yaml
-18.198.227.161
-```
-
-```yaml
-18.197.218.69
 ```
 
 ```yaml
@@ -277,14 +241,6 @@ Frankfurt, Amazon Technologies Inc
 ```
 
 ```yaml
-146.70.36.114
-```
-
-```yaml
-3.123.242.99
-```
-
-```yaml
 18.184.55.249
 ```
 
@@ -294,10 +250,6 @@ Frankfurt, Amazon Technologies Inc
 
 ```yaml
 3.75.170.179
-```
-
-```yaml
-3.67.25.193
 ```
 
 ```yaml
@@ -375,19 +327,7 @@ Various Locations, Amazon Technologies Inc
 ```
 
 ```yaml
-67.226.221.102
-```
-
-```yaml
 213.170.157.1
-```
-
-```yaml
-54.203.85.46
-```
-
-```yaml
-44.224.24.91
 ```
 
 ```yaml
@@ -403,15 +343,7 @@ Various Locations, Amazon Technologies Inc
 ```
 
 ```yaml
-18.207.186.154
-```
-
-```yaml
 34.194.76.43
-```
-
-```yaml
-44.227.209.152
 ```
 
 ```yaml
@@ -443,10 +375,6 @@ Various Locations, Amazon Technologies Inc
 ```
 
 ```yaml
-34.218.130.79
-```
-
-```yaml
 35.83.185.225
 ```
 
@@ -475,7 +403,11 @@ Various Locations, Amazon Technologies Inc
 Toronto, Ontario, Atlantic.net, Advanced Knowledge Networks
 
 ```yaml
-69.28.82.253
+64.21.191.164
+```
+
+```yaml
+213.255.209.189
 ```
 
 ```yaml
@@ -677,10 +609,6 @@ Sofia, EDIS GmbH & Belcloud & Relink
 ```
 
 ```yaml
-185.82.218.224
-```
-
-```yaml
 193.239.160.24
 ```
 
@@ -787,6 +715,14 @@ Zurich, Baxet GP & Private Layer & Data source & GreenNet
 ### 🇩🇪 Germany
 
 Frankfurt am Main, Hetzner Online GmbH & Digital Ocean
+
+```yaml
+104.168.102.163
+```
+
+```yaml
+194.32.79.161
+```
 
 ```yaml
 159.69.92.30
