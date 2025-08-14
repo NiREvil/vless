@@ -45,7 +45,6 @@
  *   - "Extensibility:" Add org-specific VPN/hosting patterns, stricter UA parsing, or scoring weights.
  */
 
-
 async function handleRequest(request) {
   const headers = request.headers;
   const url = new URL(request.url);
@@ -53,57 +52,67 @@ async function handleRequest(request) {
   // Helper function to get country flag
   function getCountryFlag(countryCode) {
     if (!countryCode || countryCode.length !== 2) return null;
-    return countryCode.split('').map(char => 
-      String.fromCodePoint(127397 + char.charCodeAt())
-    ).join('');
+    return countryCode
+      .split('')
+      .map(char => String.fromCodePoint(127397 + char.charCodeAt()))
+      .join('');
   }
 
   // Enhanced connection type detection
   function getConnectionType(asOrganization, asn) {
     if (!asOrganization) return 'Unknown';
     const org = asOrganization.toLowerCase();
-    
+
     // Common VPN/Proxy ASNs and patterns
     const vpnPatterns = ['private customer', 'vpn', 'proxy', 'privacy', 'anonymous'];
-    const hostingPatterns = ['hosting', 'server', 'cloud', 'datacenter', 'digital ocean', 'amazon', 'google', 'microsoft'];
+    const hostingPatterns = [
+      'hosting',
+      'server',
+      'cloud',
+      'datacenter',
+      'digital ocean',
+      'amazon',
+      'google',
+      'microsoft',
+    ];
     const mobilePatterns = ['mobile', 'cellular', 'wireless', 'telecom'];
     const ispPatterns = ['broadband', 'cable', 'fiber', 'fibre', 'internet', 'communications'];
-    
+
     if (vpnPatterns.some(pattern => org.includes(pattern))) return 'VPN/Proxy';
     if (hostingPatterns.some(pattern => org.includes(pattern))) return 'Hosting/Datacenter';
     if (mobilePatterns.some(pattern => org.includes(pattern))) return 'Mobile/Cellular';
     if (ispPatterns.some(pattern => org.includes(pattern))) return 'ISP/Residential';
-    
+
     return 'Unknown';
   }
 
   // Device detection from User Agent
   function analyzeUserAgent(userAgent) {
     if (!userAgent) return {};
-    
+
     const ua = userAgent.toLowerCase();
     let device = 'Unknown';
     let os = 'Unknown';
     let browser = 'Unknown';
-    
+
     // Device detection
     if (ua.includes('mobile')) device = 'Mobile';
     else if (ua.includes('tablet')) device = 'Tablet';
     else device = 'Desktop';
-    
+
     // OS detection
     if (ua.includes('android')) os = 'Android';
     else if (ua.includes('iphone') || ua.includes('ipad')) os = 'iOS';
     else if (ua.includes('windows')) os = 'Windows';
     else if (ua.includes('macintosh') || ua.includes('mac os')) os = 'macOS';
     else if (ua.includes('linux')) os = 'Linux';
-    
+
     // Browser detection
     if (ua.includes('chrome') && !ua.includes('edge')) browser = 'Chrome';
     else if (ua.includes('firefox')) browser = 'Firefox';
     else if (ua.includes('safari') && !ua.includes('chrome')) browser = 'Safari';
     else if (ua.includes('edge')) browser = 'Edge';
-    
+
     return { device, os, browser };
   }
 
@@ -111,41 +120,41 @@ async function handleRequest(request) {
   function assessRisk(cf, headers, userAgent) {
     let riskScore = 0;
     let riskFactors = [];
-    
+
     // VPN/Proxy detection
     if (cf?.asOrganization?.toLowerCase().includes('private customer')) {
       riskScore += 30;
       riskFactors.push('Possible VPN/Proxy');
     }
-    
+
     // No User Agent
     if (!userAgent) {
       riskScore += 50;
       riskFactors.push('Missing User Agent');
     }
-    
+
     // Suspicious headers
     if (!headers.get('Accept-Language')) {
       riskScore += 20;
       riskFactors.push('Missing Accept-Language');
     }
-    
+
     // Very low RTT (might indicate datacenter)
     if (cf?.clientTcpRtt && cf.clientTcpRtt < 5) {
       riskScore += 10;
       riskFactors.push('Very low latency');
     }
-    
+
     // Missing common headers
     if (!headers.get('Accept')) {
       riskScore += 25;
       riskFactors.push('Missing Accept header');
     }
-    
+
     let riskLevel = 'Low';
     if (riskScore >= 70) riskLevel = 'High';
     else if (riskScore >= 40) riskLevel = 'Medium';
-    
+
     return { riskScore, riskLevel, riskFactors };
   }
 
@@ -156,20 +165,20 @@ async function handleRequest(request) {
     // Basic Info
     ip: headers.get('CF-Connecting-IP') || headers.get('X-Forwarded-For') || null,
     userAgent: headers.get('User-Agent') || null,
-    
+
     // Request Info
     method: request.method,
     url: request.url,
     protocol: url.protocol,
     host: headers.get('Host') || null,
     referer: headers.get('Referer') || null,
-    
+
     // Geo Information
     cf: {
       // Network Info
       asn: request.cf?.asn || null,
       asOrganization: request.cf?.asOrganization || null,
-      
+
       // Location Info
       city: request.cf?.city || null,
       region: request.cf?.region || null,
@@ -182,7 +191,7 @@ async function handleRequest(request) {
       latitude: request.cf?.latitude || null,
       longitude: request.cf?.longitude || null,
       timezone: request.cf?.timezone || null,
-      
+
       // Technical Info
       colo: request.cf?.colo || null,
       clientTcpRtt: request.cf?.clientTcpRtt || null,
@@ -190,25 +199,25 @@ async function handleRequest(request) {
       requestPriority: request.cf?.requestPriority || null,
       tlsCipher: request.cf?.tlsCipher || null,
       tlsVersion: request.cf?.tlsVersion || null,
-      
+
       // Security & Bot Detection
       botManagement: request.cf?.botManagement || null,
       clientAcceptEncoding: request.cf?.clientAcceptEncoding || null,
       edgeRequestKeepAliveStatus: request.cf?.edgeRequestKeepAliveStatus || null,
       threat: request.cf?.threat || null,
       isEUCountry: request.cf?.isEUCountry || null,
-      
+
       // Enhanced custom fields
       countryFlag: getCountryFlag(request.cf?.country),
       connectionType: getConnectionType(request.cf?.asOrganization, request.cf?.asn),
     },
-    
+
     // Device Analysis
     device: userAgentAnalysis,
-    
+
     // Risk Assessment
     security: riskAssessment,
-    
+
     // Headers Analysis
     headers: {
       acceptLanguage: headers.get('Accept-Language') || null,
@@ -220,25 +229,25 @@ async function handleRequest(request) {
       secFetchMode: headers.get('Sec-Fetch-Mode') || null,
       secFetchUser: headers.get('Sec-Fetch-User') || null,
       secFetchDest: headers.get('Sec-Fetch-Dest') || null,
-      
+
       // Cloudflare specific
       cfRay: headers.get('CF-RAY') || null,
       cfVisitor: headers.get('CF-Visitor') || null,
       cfIpCountry: headers.get('CF-IPCountry') || null,
     },
-    
+
     // Additional Info
-    isBot: !!(request.cf?.botManagement?.score),
+    isBot: !!request.cf?.botManagement?.score,
     isMobile: userAgentAnalysis.device === 'Mobile',
     isVPN: getConnectionType(request.cf?.asOrganization).includes('VPN'),
-    
+
     // Timestamps
     timestamp: new Date().toISOString(),
     timestampUnix: Math.floor(Date.now() / 1000),
   };
 
   return new Response(JSON.stringify(data, null, 2), {
-    headers: { 
+    headers: {
       'content-type': 'application/json;charset=UTF-8',
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET,HEAD,POST,OPTIONS',

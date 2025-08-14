@@ -13,7 +13,6 @@
 > **Next update:** Fri, 15 Aug 2025 01:40:36 GMT
 >
 > <br/>
->
 
 </br>
 
@@ -29,8 +28,8 @@
 ## 🔌 Ports Distribution
 
 | Port | Count | Percentage |
-|------|-------|------------|
-| 443  | 45     | 100.0%     |
+| ---- | ----- | ---------- |
+| 443  | 45    | 100.0%     |
 
 <br/>
 
@@ -40,108 +39,108 @@
 
 ### 🇳🇱 The Netherlands (20 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `166.1.201.179` | Amsterdam | AS26383 Baxet Group Inc. | TCP |
-| `194.164.33.236` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `212.111.82.92` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `5.35.68.61` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `62.84.98.178` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `77.221.133.147` | Amsterdam | AS216139 Iron Hosting Centre LTD | TCP |
-| `77.238.231.102` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `77.238.244.214` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `77.246.108.130` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `79.137.205.127` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD | TCP |
-| `85.192.60.188` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD | TCP |
-| `89.110.107.69` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `89.110.116.141` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `89.110.117.195` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `89.110.121.190` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `89.110.65.201` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `89.110.67.172` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `89.110.69.173` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `89.150.35.129` | Amsterdam | AS216154 CLODO CLOUD SERVICE CO. L.L.C | TCP |
-| `91.184.242.46` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD | TCP |
+| Proxy IP         | City      | ISP / Organization                     | Method |
+| ---------------- | --------- | -------------------------------------- | ------ |
+| `166.1.201.179`  | Amsterdam | AS26383 Baxet Group Inc.               | TCP    |
+| `194.164.33.236` | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `212.111.82.92`  | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `5.35.68.61`     | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `62.84.98.178`   | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `77.221.133.147` | Amsterdam | AS216139 Iron Hosting Centre LTD       | TCP    |
+| `77.238.231.102` | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `77.238.244.214` | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `77.246.108.130` | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `79.137.205.127` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD        | TCP    |
+| `85.192.60.188`  | Amsterdam | AS210644 AEZA INTERNATIONAL LTD        | TCP    |
+| `89.110.107.69`  | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `89.110.116.141` | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `89.110.117.195` | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `89.110.121.190` | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `89.110.65.201`  | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `89.110.67.172`  | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `89.110.69.173`  | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `89.150.35.129`  | Amsterdam | AS216154 CLODO CLOUD SERVICE CO. L.L.C | TCP    |
+| `91.184.242.46`  | Amsterdam | AS210644 AEZA INTERNATIONAL LTD        | TCP    |
 
 ### 🇫🇮 Finland (8 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `193.109.84.39` | Helsinki | AS207569 I-SERVERS LTD | TCP |
-| `37.27.4.238` | Helsinki | AS24940 Hetzner Online GmbH | TCP |
-| `37.27.85.102` | Helsinki | AS24940 Hetzner Online GmbH | TCP |
-| `45.138.73.83` | Helsinki | AS200740 FIRST SERVER LIMITED | TCP |
-| `45.9.72.101` | Helsinki | AS200740 FIRST SERVER LIMITED | TCP |
-| `46.8.71.70` | Helsinki | AS56971 AS56971 Cloud | TCP |
-| `65.108.209.46` | Helsinki | AS24940 Hetzner Online GmbH | TCP |
-| `95.217.134.104` | Helsinki | AS24940 Hetzner Online GmbH | TCP |
+| Proxy IP         | City     | ISP / Organization            | Method |
+| ---------------- | -------- | ----------------------------- | ------ |
+| `193.109.84.39`  | Helsinki | AS207569 I-SERVERS LTD        | TCP    |
+| `37.27.4.238`    | Helsinki | AS24940 Hetzner Online GmbH   | TCP    |
+| `37.27.85.102`   | Helsinki | AS24940 Hetzner Online GmbH   | TCP    |
+| `45.138.73.83`   | Helsinki | AS200740 FIRST SERVER LIMITED | TCP    |
+| `45.9.72.101`    | Helsinki | AS200740 FIRST SERVER LIMITED | TCP    |
+| `46.8.71.70`     | Helsinki | AS56971 AS56971 Cloud         | TCP    |
+| `65.108.209.46`  | Helsinki | AS24940 Hetzner Online GmbH   | TCP    |
+| `95.217.134.104` | Helsinki | AS24940 Hetzner Online GmbH   | TCP    |
 
 ### 🇩🇪 Germany (4 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `185.247.118.7` | Frankfurt | AS204548 Kamatera Inc | TCP |
-| `194.58.33.103` | Frankfurt am Main | AS216127 INTERNATIONAL HOSTING COMPANY LIMITED | TCP |
-| `54.38.159.25` | Limburg an der Lahn | AS16276 OVH SAS | TCP |
-| `77.223.215.167` | Frankfurt am Main | AS46475 Limestone Networks, Inc. | TCP |
+| Proxy IP         | City                | ISP / Organization                             | Method |
+| ---------------- | ------------------- | ---------------------------------------------- | ------ |
+| `185.247.118.7`  | Frankfurt           | AS204548 Kamatera Inc                          | TCP    |
+| `194.58.33.103`  | Frankfurt am Main   | AS216127 INTERNATIONAL HOSTING COMPANY LIMITED | TCP    |
+| `54.38.159.25`   | Limburg an der Lahn | AS16276 OVH SAS                                | TCP    |
+| `77.223.215.167` | Frankfurt am Main   | AS46475 Limestone Networks, Inc.               | TCP    |
 
 ### 🇸🇪 Sweden (3 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `212.113.101.35` | Stockholm | AS210644 AEZA INTERNATIONAL LTD | TCP |
-| `77.221.137.133` | Stockholm | AS210644 AEZA INTERNATIONAL LTD | TCP |
-| `89.169.35.39` | Stockholm | AS210644 AEZA INTERNATIONAL LTD | TCP |
+| Proxy IP         | City      | ISP / Organization              | Method |
+| ---------------- | --------- | ------------------------------- | ------ |
+| `212.113.101.35` | Stockholm | AS210644 AEZA INTERNATIONAL LTD | TCP    |
+| `77.221.137.133` | Stockholm | AS210644 AEZA INTERNATIONAL LTD | TCP    |
+| `89.169.35.39`   | Stockholm | AS210644 AEZA INTERNATIONAL LTD | TCP    |
 
 ### 🇵🇱 Poland (2 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `45.144.51.81` | Warsaw | AS49791 Newserverlife LLC | TCP |
-| `91.149.253.249` | Warsaw | AS26383 Baxet Group Inc. | TCP |
+| Proxy IP         | City   | ISP / Organization        | Method |
+| ---------------- | ------ | ------------------------- | ------ |
+| `45.144.51.81`   | Warsaw | AS49791 Newserverlife LLC | TCP    |
+| `91.149.253.249` | Warsaw | AS26383 Baxet Group Inc.  | TCP    |
 
 ### 🇨🇭 Switzerland (2 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `45.85.93.49` | Geneva | AS199058 SERVA ONE LTD | TCP |
-| `94.247.42.207` | Hünenberg | AS51395 Datasource AG | TCP |
+| Proxy IP        | City      | ISP / Organization     | Method |
+| --------------- | --------- | ---------------------- | ------ |
+| `45.85.93.49`   | Geneva    | AS199058 SERVA ONE LTD | TCP    |
+| `94.247.42.207` | Hünenberg | AS51395 Datasource AG  | TCP    |
 
 ### 🇧🇪 Belgium (1 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `34.22.190.30` | Brussels | AS396982 Google LLC | TCP |
+| Proxy IP       | City     | ISP / Organization  | Method |
+| -------------- | -------- | ------------------- | ------ |
+| `34.22.190.30` | Brussels | AS396982 Google LLC | TCP    |
 
 ### 🇩🇰 Denmark (1 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `45.144.29.77` | Copenhagen | AS44477 PQ HOSTING PLUS S.R.L. | TCP |
+| Proxy IP       | City       | ISP / Organization             | Method |
+| -------------- | ---------- | ------------------------------ | ------ |
+| `45.144.29.77` | Copenhagen | AS44477 PQ HOSTING PLUS S.R.L. | TCP    |
 
 ### 🌍 Estonia (1 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `45.129.199.232` | Tallinn | AS62005 BlueVPS OU | TCP |
+| Proxy IP         | City    | ISP / Organization | Method |
+| ---------------- | ------- | ------------------ | ------ |
+| `45.129.199.232` | Tallinn | AS62005 BlueVPS OU | TCP    |
 
 ### 🇳🇱 Netherlands (1 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `195.58.50.134` | Dronten | AS41745 Baykov Ilya Sergeevich | TCP |
+| Proxy IP        | City    | ISP / Organization             | Method |
+| --------------- | ------- | ------------------------------ | ------ |
+| `195.58.50.134` | Dronten | AS41745 Baykov Ilya Sergeevich | TCP    |
 
 ### 🇦🇪 United Arab Emirates (1 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `176.97.67.38` | Dubai | AS9009 M247 Europe SRL | TCP |
+| Proxy IP       | City  | ISP / Organization     | Method |
+| -------------- | ----- | ---------------------- | ------ |
+| `176.97.67.38` | Dubai | AS9009 M247 Europe SRL | TCP    |
 
 ### 🇺🇸 United States (1 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `23.254.226.110` | Seattle | AS54290 Hostwinds LLC. | TCP |
+| Proxy IP         | City    | ISP / Organization     | Method |
+| ---------------- | ------- | ---------------------- | ------ |
+| `23.254.226.110` | Seattle | AS54290 Hostwinds LLC. | TCP    |
 
 <br/>
 
