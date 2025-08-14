@@ -315,7 +315,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 > [darknessm427.github.io/DNS-Tester]
 >
 > This is a fast and accurate **Proxy IP Checker** tool, capable of testing IP ranges that I'm sure you haven't seen anywhere like it.  
-> [check79.pages.dev]  
+> [checker-3j2.pages.dev]  
 > [Telegram ProxyIPTesterBot]  
 > [proxyip.victoriacross.workers.dev]
 >
@@ -1721,7 +1721,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Amnezia]: https://github.com/amnezia-vpn/amnezia-client/releases
 [Avast SecureLine]: https://play.google.com/store/apps/details?id=com.avast.android.vpn&pcampaignid=web_share
 [Clash-Meta]: https://github.com/MetaCubeX/ClashMetaForAndroid/releases
-[check79.pages.dev]: https://check79.pages.dev
+[checker-3j2.pages.dev]: https://checker-3j2.pages.dev
 [darknessm427.github.io/DNS-Tester]: https://darknessm427.github.io/DNS-Tester/
 [Di4Diana]: https://telegram.me/Di4Diana
 [diana-cl.github.io/Diana-Cl]: https://diana-cl.github.io/Diana-Cl/

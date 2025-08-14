@@ -1975,7 +1975,7 @@ also you can see [from Here](./country_proxies/02_proxies.csv)
 [^2]: https://t.me/s/CMLiussss
 
 [3]: https://github.com/NiREvil/vless/blob/main/edge/assets/Cloudflare_IP_ranges_by_country.md
-[4]: https://check79.pages.dev/
+[4]: https://checker-3j2.pages.dev
 [5]: https://t.me/ProxyIPTesterBot
 [vc]: https://proxyip.victoriacross.workers.dev
 [ch]: https://check-host.net/ip-info
