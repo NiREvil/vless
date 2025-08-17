@@ -149,6 +149,7 @@ proxyip.vultr.fxxk.dedyn.io
 ```
 
 ### Armenia
+
 > _Yerevan, Google LLC_
 
 ```yaml
@@ -220,6 +221,7 @@ proxyip.vultr.fxxk.dedyn.io
 ```
 
 ### 🇨🇦 Canada
+
 > _Toronto, Amazon Technologies Inc._
 
 ```yaml
@@ -571,7 +573,8 @@ proxyip.vultr.fxxk.dedyn.io
 ```yaml
 94.177.8.60
 ```
-### 🇧🇷 Brazil 
+
+### 🇧🇷 Brazil
 
 > _Sao Paulo, M247 Europe SRL_
 
@@ -582,7 +585,6 @@ proxyip.vultr.fxxk.dedyn.io
 ```yaml
 38.180.79.9
 ```
-
 
 ### 🇧🇬 Bulgaria
 
@@ -1096,7 +1098,6 @@ proxyip.vultr.fxxk.dedyn.io
 77.91.74.6
 ```
 
-
 ### 🇰🇿 Kazakhstan
 
 > _Almaty, NLS Kazakhstan LLC_
@@ -1419,7 +1420,7 @@ Here we provide active IP proxies that are scanned and tested daily.
 
 و یا پروکسی تستر [دوستمون مهدی][4] و [ربات تلگرام][5] اون که یکی از یکی قشنگتر و خفن‌تر هستن.
 
-یه پروکسی آی‌پی تستر دیگه هم به چشمم خورد چندروز قبل، نمی‌دونم واسه که اصلا ولی بدک نبود، تست کنید خودتون  [Yummy][6].
+یه پروکسی آی‌پی تستر دیگه هم به چشمم خورد چندروز قبل، نمی‌دونم واسه که اصلا ولی بدک نبود، تست کنید خودتون [Yummy][6].
 
 پروکسی تستر [Cmliu][7] دوست چینیمون هم هست که وجه تمایزش با بقیه نشون دادن پینگ هستش، ولی قابلیت‌های دیگه رو نداره مثل اسکن رنج و اسکن بر اساس کشور مورد نظر و ...
 
@@ -1439,7 +1440,7 @@ Here we provide active IP proxies that are scanned and tested daily.
 <details>  
 <summary> برای مشاهده تصاویر بیشتر کلیک کنید </summary>
 
-<br/> 
+<br/>
 
 <img width="1080" height="1828" alt="MehdiProxyIP" src="https://github.com/user-attachments/assets/ff33cc27-d2ee-45ea-a65c-4ac6b5f696b9" />
 
@@ -1509,9 +1510,9 @@ Here we provide active IP proxies that are scanned and tested daily.
 > <br/>
 >
 > **یکی دیگه از روش‌های پیدا کردن پروکسی آی‌پی این بود که:**
-> 
+>
 > روی هر کدوم از لینک‌های زیر اگه کلیک کنی توی صفحه‌ای که باز شده یه لیست خواهی دید با کلی پروکسی‌ آی‌پی که پشت اون دامین‌ها قرار گرفتن، با کلیک کردن روی هرکدوم کادر مشخصات مربوط به آی‌پی باز میشه.
-> 
+>
 > انواع روش‌های تست پروکسی‌ آی‌پی‌ در [بخش قبلی](#Test-proxyIPs) توضیح داده شده.
 >
 > https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
@@ -1547,10 +1548,10 @@ Here we provide active IP proxies that are scanned and tested daily.
 > https://www.nslookup.io/domains/ProxyIP.JP.CMLiussss.net/dns-records/
 >
 > یکم خلاقیت ب خرج بدی خودت میفهمی که باید دنبال چی بگردی تو سایت
-> 
+>
 > <br/>
 
-<br/> 
+<br/>
 
 <img width="1080" height="2219" alt="nima.nscl.ir" src="https://github.com/user-attachments/assets/4c0b3f7b-6acd-4168-99e2-6f62ada4f5b1" />
 
@@ -1589,7 +1590,6 @@ also you can see [from Here](./country_proxies/02_proxies.csv)
 </p>
 
 <br/>
-
 
 [^1]: https://t.me/s/F_NiREvil
 
