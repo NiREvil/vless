@@ -31,7 +31,7 @@
 
 ## Dynamic & Multi-Location Proxies
 
-🇺🇸 **USA, Google LLC, Tencent, Stark, Amazon Tech Inc.** [^1]
+🇺🇸 **USA, Google LLC, Tencent, Stark, Amazon Tech** [^1]
 
 > _This is a high-level domain with specific IPs_
 
@@ -75,6 +75,8 @@ ProxyIP.US.CMLiussss.net
 
 <details>  
 <summary> Click to see More </summary>
+
+<br/>
 
 ```yaml
 ProxyIP.SG.CMLiussss.net
@@ -136,7 +138,7 @@ proxyip.vultr.fxxk.dedyn.io
 
 ### 🇺🇸 USA
 
-United States, California, Cloudflare Inc
+> _United States, California, Cloudflare Inc_
 
 ```yaml
 142.171.140.152
@@ -146,7 +148,8 @@ United States, California, Cloudflare Inc
 104.168.102.163
 ```
 
-### Armenia, Yerevan
+### Armenia
+> _Yerevan, Google LLC_
 
 ```yaml
 5.10.215.26
@@ -158,7 +161,7 @@ United States, California, Cloudflare Inc
 
 ### 🇧🇪 Belgium
 
-Brussels, Google LLC
+> _Brussels, Google LLC_
 
 ```yaml
 34.22.190.30
@@ -166,15 +169,19 @@ Brussels, Google LLC
 
 ### 🇪🇦 Spain
 
-Madrid, Google LLC
+> _Madrid, Google LLC_
 
 ```yaml
 34.175.202.195
 ```
 
+```yaml
+45.86.229.28
+```
+
 ### 🇺🇸 USA
 
-Dalles, Google LLC
+> _Dalles, Google LLC_
 
 ```yaml
 35.230.79.26
@@ -206,15 +213,26 @@ Dalles, Google LLC
 
 ### 🇮🇪 Ireland
 
-Dublin, Amazon Technologies Inc
+> _Dublin, Amazon Data Services Ireland Limited_
 
 ```yaml
 34.253.234.62
 ```
 
+### 🇨🇦 Canada
+> _Toronto, Amazon Technologies Inc._
+
+```yaml
+35.182.7.190
+```
+
+```yaml
+35.183.163.195
+```
+
 ### 🇩🇪 Germany
 
-Frankfurt, Amazon Technologies Inc
+> _Frankfurt am Main, Amazon Data Services Ltd_
 
 ```yaml
 18.192.93.64
@@ -258,7 +276,7 @@ Frankfurt, Amazon Technologies Inc
 
 ### 🇯🇵 Japan
 
-Tokyo, Shibuya, Amazon Technologies Inc
+> _Tokyo, Shibuya, Amazon Technologies Inc_
 
 ```yaml
 13.230.34.30
@@ -269,16 +287,16 @@ Tokyo, Shibuya, Amazon Technologies Inc
 ```
 
 ```yaml
-13.230.34.30
-```
-
-```yaml
-18.183.158.211
+3.112.21.102
 ```
 
 ### 🇬🇧 United Kingdom
 
-London, Amazon Technologies Inc
+> _London, Amazon Technologies Inc_
+
+```yaml
+18.170.77.148
+```
 
 ```yaml
 3.9.223.59
@@ -288,50 +306,14 @@ London, Amazon Technologies Inc
 35.176.229.223
 ```
 
-```yaml
-18.170.77.148
-```
-
-### 🇸🇬 Singapore
-
-Singapore, Amazon Tech Inc
-
-```yaml
-54.169.229.188
-```
-
-```yaml
-13.250.131.37
-```
-
-```yaml
-203.174.82.38
-```
-
-```yaml
-51.79.254.182
-```
-
-```yaml
-104.248.145.216
-```
-
 ### 🇺🇸 USA
 
-Various Locations, Amazon Technologies Inc
+> _Various Locations, Amazon Technologies Inc_
 
 > _City information was not specified for these in prior versions_
 
 ```yaml
 35.83.185.225
-```
-
-```yaml
-213.170.157.1
-```
-
-```yaml
-67.226.221.104
 ```
 
 ```yaml
@@ -347,19 +329,11 @@ Various Locations, Amazon Technologies Inc
 ```
 
 ```yaml
-3.147.73.220
-```
-
-```yaml
 18.216.55.100
 ```
 
 ```yaml
 54.167.43.59
-```
-
-```yaml
-34.105.49.234
 ```
 
 ```yaml
@@ -386,10 +360,6 @@ Various Locations, Amazon Technologies Inc
 44.227.209.152
 ```
 
-```yaml
-54.200.244.93
-```
-
 <br><br/>
 
 # General Proxies by Continent
@@ -400,7 +370,15 @@ Various Locations, Amazon Technologies Inc
 
 ### 🇨🇦 Canada
 
-Toronto, Ontario, Atlantic.net, Advanced Knowledge Networks
+> _Toronto, Ontario, Atlantic.net, Advanced Knowledge Networks_
+
+```yaml
+172.98.207.58
+```
+
+```yaml
+192.99.252.243
+```
 
 ```yaml
 64.21.191.164
@@ -418,33 +396,37 @@ Toronto, Ontario, Atlantic.net, Advanced Knowledge Networks
 209.200.246.130
 ```
 
-Toronto, Ontario, Kamatera Inc
-
-```yaml
-213.255.209.207
-```
-
-Kingston, Ontario, Server Cloud Inc
+> _Kingston, Ontario, N6 Cloud Inc_
 
 ```yaml
 199.48.102.83
 ```
 
+```yaml
+64.21.191.164
+```
+
+> _Toronto, Ontario, Kamatera Inc_
+
+```yaml
+213.255.209.207
+```
+
 ### 🇺🇸 USA
 
-Ashburn, Virginia, Total Uptime Technologies LLC
+> _Ashburn, Virginia, Total Uptime Technologies LLC_
 
 ```yaml
 72.13.122.137
 ```
 
-Chicago, Illinois, Rackspace Hosting
+> _Chicago, Illinois, Rackspace Hosting_
 
 ```yaml
 192.237.192.175
 ```
 
-Chicago, Illinois, Vultr Holdings, LLC
+> _Chicago, Illinois, Vultr Holdings, LLC_
 
 ```yaml
 45.77.109.191
@@ -458,7 +440,7 @@ Chicago, Illinois, Vultr Holdings, LLC
 173.199.117.101
 ```
 
-Los Angeles, California, RoyaleHosting BV
+> _Los Angeles, California, RoyaleHosting BV_
 
 ```yaml
 45.42.214.153
@@ -468,7 +450,7 @@ Los Angeles, California, RoyaleHosting BV
 139.60.162.153
 ```
 
-San Jose, California, DataCamp Limited
+> _San Jose, California, DataCamp Limited_
 
 ```yaml
 156.146.53.82
@@ -478,10 +460,14 @@ San Jose, California, DataCamp Limited
 156.146.53.83
 ```
 
-Santa Clara, California, HostPapa RackNerd LLC
+> _Santa Clara, California, RackNerd LLC_
 
 ```yaml
 107.173.54.243
+```
+
+```yaml
+104.168.102.163
 ```
 
 ```yaml
@@ -493,10 +479,6 @@ Santa Clara, California, HostPapa RackNerd LLC
 ```
 
 ```yaml
-104.168.102.163
-```
-
-```yaml
 107.172.159.182
 ```
 
@@ -504,23 +486,23 @@ Santa Clara, California, HostPapa RackNerd LLC
 107.172.167.194
 ```
 
+> _Santa Clara, California, Oracle Corporation_
+
 ```yaml
 152.70.155.147
 ```
 
-Santa Clara, California, Tencent Cloud
-
-```yaml
-43.153.103.203
-```
-
-Florida, Miami, Comcast Cable Communications, LLC
+> _Florida, Miami, Comcast Cable Communications_
 
 ```yaml
 50.228.203.26
 ```
 
-Warrenton, Virginia, OVH SAS
+```yaml
+67.226.221.104
+```
+
+> _Warrenton, Virginia, OVH SAS_
 
 ```yaml
 91.149.239.70
@@ -531,35 +513,21 @@ Warrenton, Virginia, OVH SAS
 ```
 
 ```yaml
-104.234.50.128
-```
-
-```yaml
 152.70.155.147
 ```
 
-Woodbridge, Virginia, Alibaba Technology Ltd
+> _Georgia, Atlanta, Constant, Vultr Holdings LLC._
 
 ```yaml
-5.78.114.254 443
-```
-
-```yaml
-47.90.141.204
+149.248.7.208
 ```
 
 ```yaml
 45.79.168.17
 ```
 
-Georgia, Atlanta, Constant, Vultr Holdings LLC.
-
 ```yaml
-155.138.209.175
-```
-
-```yaml
-149.248.7.208
+5.78.114.254
 ```
 
 <br><br/>
@@ -570,7 +538,11 @@ Georgia, Atlanta, Constant, Vultr Holdings LLC.
 
 ### 🇦🇹 Austria
 
-Vienna, Alwyzon, Aeza Ltd
+> _Vienna, Alwyzon, Aeza Ltd_
+
+```yaml
+94.177.8.3
+```
 
 ```yaml
 94.177.8.4
@@ -581,11 +553,11 @@ Vienna, Alwyzon, Aeza Ltd
 ```
 
 ```yaml
-147.45.41.209
+212.113.119.130
 ```
 
 ```yaml
-185.106.94.67
+147.45.41.209
 ```
 
 ```yaml
@@ -593,24 +565,28 @@ Vienna, Alwyzon, Aeza Ltd
 ```
 
 ```yaml
-212.113.119.130
+94.177.8.62
 ```
 
 ```yaml
-185.217.197.166
+94.177.8.60
 ```
+### 🇧🇷 Brazil 
+
+> _Sao Paulo, M247 Europe SRL_
+
+```yaml
+38.180.78.255
+```
+
+```yaml
+38.180.79.9
+```
+
 
 ### 🇧🇬 Bulgaria
 
-Sofia, EDIS GmbH & Belcloud & Relink
-
-```yaml
-193.239.160.25
-```
-
-```yaml
-193.239.160.24
-```
+> _Sofia, EDIS GmbH & Redcluster LTD_
 
 ```yaml
 78.128.127.89
@@ -621,31 +597,31 @@ Sofia, EDIS GmbH & Belcloud & Relink
 ```
 
 ```yaml
-213.183.63.185
-```
-
-```yaml
 91.215.153.85
-```
-
-```yaml
-85.217.171.231
 ```
 
 ```yaml
 45.153.125.245
 ```
 
-### 🇫🇷 France
-
-paris, Bugget LLC, Europe SRL
-
 ```yaml
-185.87.150.54
+193.239.160.25
 ```
 
-```yml
-193.176.179.214
+```yaml
+193.239.160.24
+```
+
+```yaml
+85.217.171.231
+```
+
+### 🇫🇷 France
+
+> _Paris, Bugget, M247 Europe SRL_
+
+```yaml
+62.60.148.9
 ```
 
 ```yaml
@@ -666,11 +642,7 @@ paris, Bugget LLC, Europe SRL
 
 ### 🇨🇭 Switzerland
 
-Zurich, Baxet GP & Private Layer & Data source & GreenNet
-
-```yaml
-179.43.166.2
-```
+> _Zurich, Baxet GP, Private Layer, GreenNet_
 
 ```yaml
 91.192.102.55
@@ -678,10 +650,6 @@ Zurich, Baxet GP & Private Layer & Data source & GreenNet
 
 ```yaml
 176.10.125.114
-```
-
-```yaml
-194.135.22.181
 ```
 
 ```yaml
@@ -697,15 +665,7 @@ Zurich, Baxet GP & Private Layer & Data source & GreenNet
 ```
 
 ```yaml
-45.85.93.49
-```
-
-```yaml
 94.247.42.207
-```
-
-```yaml
-94.131.12.56
 ```
 
 ```yaml
@@ -714,14 +674,10 @@ Zurich, Baxet GP & Private Layer & Data source & GreenNet
 
 ### 🇩🇪 Germany
 
-Frankfurt am Main, Hetzner Online GmbH & Digital Ocean
+> _Frankfurt am Main, Hetzner Online AG, GmbH, Digital Ocean_
 
 ```yaml
-104.168.102.163
-```
-
-```yaml
-194.32.79.161
+45.129.78.142
 ```
 
 ```yaml
@@ -753,23 +709,7 @@ Frankfurt am Main, Hetzner Online GmbH & Digital Ocean
 ```
 
 ```yaml
-46.101.158.60
-```
-
-```yaml
 54.38.159.25
-```
-
-```yaml
-109.237.99.185
-```
-
-```yaml
-146.70.36.114
-```
-
-```yaml
-49.13.92.32
 ```
 
 ```yaml
@@ -777,19 +717,7 @@ Frankfurt am Main, Hetzner Online GmbH & Digital Ocean
 ```
 
 ```yaml
-78.46.56.42
-```
-
-```yaml
 78.46.233.187
-```
-
-```yaml
-80.66.87.42
-```
-
-```yaml
-88.198.172.25
 ```
 
 ```yaml
@@ -832,7 +760,7 @@ Frankfurt am Main, Hetzner Online GmbH & Digital Ocean
 167.235.242.114
 ```
 
-Nuremberg, Hetzner Online GmbH
+> _Nuremberg, Hetzner Online GmbH_
 
 ```yaml
 195.201.231.143
@@ -842,7 +770,11 @@ Nuremberg, Hetzner Online GmbH
 159.69.92.30
 ```
 
-Frankfurt am Main, Oracle Cloud
+```yaml
+23.88.88.104
+```
+
+> _Frankfurt am Main, Oracle Cloud_
 
 ```yaml
 193.122.58.158
@@ -850,9 +782,15 @@ Frankfurt am Main, Oracle Cloud
 
 ### 🇪🇦 Spain
 
-Madrid, IONOS SE & M247 & PQ
+> _Madrid, IONOS SE, M247, PQ_
 
-> _Multiple ISPs listed in original data_
+```yaml
+93.93.119.91
+```
+
+```yaml
+185.114.72.148
+```
 
 ```yaml
 45.86.229.28
@@ -875,12 +813,20 @@ Madrid, IONOS SE & M247 & PQ
 ```
 
 ```yaml
-23.88.88.104,443
+94.131.117.4
+```
+
+```yaml
+208.76.222.64
 ```
 
 ### 🇳🇱 Netherlands
 
-Amsterdam, RAN Networks S.L
+> _Amsterdam, RAN Networks S.L_
+
+```yaml
+45.43.88.219
+```
 
 ```yaml
 185.155.220.64
@@ -894,7 +840,7 @@ Amsterdam, RAN Networks S.L
 212.34.142.189
 ```
 
-Amsterdam, Servers Tech Fzco
+> _Amsterdam, Servers Tech Fzco_
 
 ```yaml
 147.45.69.24
@@ -916,7 +862,7 @@ Amsterdam, Servers Tech Fzco
 212.34.142.238
 ```
 
-Amsterdam, Oracle Cloud
+> _Amsterdam, Oracle Cloud_
 
 ```yaml
 141.148.229.106
@@ -924,7 +870,7 @@ Amsterdam, Oracle Cloud
 
 ### 🇵🇱 Poland
 
-Mazovia, Warsaw, G-Core Labs S.A.
+> _Mazovia, Warsaw, G-Core Labs S.A._
 
 ```yaml
 185.188.147.79
@@ -952,7 +898,7 @@ Mazovia, Warsaw, G-Core Labs S.A.
 
 ### 🇸🇪 Sweden
 
-Stockholm, AEZA International LTD
+> _Stockholm, AEZA International LTD_
 
 ```yaml
 109.120.184.66
@@ -988,7 +934,7 @@ Stockholm, AEZA International LTD
 
 ### 🇺🇦 Ukraine
 
-Kyiv, Privately owned enterprise
+> _Kyiv, Privately Owned Enterprise_
 
 ```yaml
 194.38.20.78
@@ -1000,13 +946,13 @@ Kyiv, Privately owned enterprise
 
 ### 🇬🇧 United Kingdoms
 
-Amazon Technologies Inc.
+> _Amazon Technologies Inc._
 
 ```yaml
 18.170.77.148
 ```
 
-The constant company LLC
+> _The constant company LLC_
 
 ```yaml
 192.248.146.32
@@ -1016,19 +962,19 @@ The constant company LLC
 178.32.58.147
 ```
 
-Akami Technologies Inc.
+> _Akami Technologies Inc._
 
 ```yaml
 172.236.30.225
 ```
 
-British Telecommunications PLC
+> _British Telecommunications PLC_
 
 ```yaml
 213.1.145.50
 ```
 
-London, IONOS SE, MVPS LTD & Dedicated Serversb
+> _London, IONOS SE, MVPS LTD, Dedicated Serversb_
 
 ```yaml
 104.128.190.65
@@ -1072,7 +1018,11 @@ London, IONOS SE, MVPS LTD & Dedicated Serversb
 
 ### 🇦🇲 Armenia
 
-Kotayk, WEB LLC
+> _Kotayk, PQ Hosting, Proitlab LLC_
+
+```yaml
+2.56.204.183
+```
 
 ```yaml
 2.56.206.64
@@ -1084,13 +1034,21 @@ Kotayk, WEB LLC
 
 ### 🇦🇪 United Arab Emirates
 
-Ras al Khor, G-Core labs S.A
+> _Ras al Khor, G-Core labs S.A_
 
 ```yaml
 217.195.200.138
 ```
 
-Dubai, M247 Europe
+> _Dubai, M247 Europe_
+
+```yaml
+38.180.11.201
+```
+
+```yaml
+176.97.78.80
+```
 
 ```yaml
 176.97.66.175
@@ -1100,19 +1058,19 @@ Dubai, M247 Europe
 176.97.67.38
 ```
 
-```yaml
-45.137.155.232
-```
-
-Abu Dhabi, Oracle Cloud
+> _Abu Dhabi, Oracle Cloud_
 
 ```yaml
 193.123.81.105
 ```
 
+```yaml
+139.185.34.131
+```
+
 ### 🇭🇰 Hong-Kong
 
-Zenlayer Inc
+> _Zenlayer Inc_
 
 ```yaml
 156.59.91.176
@@ -1122,9 +1080,34 @@ Zenlayer Inc
 82.152.163.227
 ```
 
+### 🇮🇱 Israel
+
+> _Tel Aviv, CLOUD LEASE Ltd, PQ HOSTING PLUS S.R.L_
+
+```yaml
+77.91.69.146
+```
+
+```yaml
+77.91.74.150
+```
+
+```yaml
+77.91.74.6
+```
+
+
 ### 🇰🇿 Kazakhstan
 
-Almaty, NLS Kazakhstan LLC
+> _Almaty, NLS Kazakhstan LLC_
+
+```yaml
+45.82.14.221
+```
+
+```yaml
+91.200.151.172
+```
 
 ```yaml
 188.116.20.93
@@ -1140,40 +1123,38 @@ Almaty, NLS Kazakhstan LLC
 
 ### 🇮🇳 India
 
-Airoli, Maharashtra, Aryaka Networks Inc
-
-```yaml
-103.29.32.103
-```
-
-```yaml
-168.138.46.67
-```
-
-Mumbai, Pdrsolutionsfzc
+> _Mumbai, Maharashtra, PDR Networks Inc_
 
 ```yaml
 216.10.243.159
 ```
 
-### 🇯🇵 Japan
-
-Tokyo, Shibuya, DMIT Cloud LLC & Amazon
+```yaml
+3.109.185.221
+```
 
 ```yaml
-154.31.113.72
+20.235.105.146
 ```
+
+### 🇯🇵 Japan
+
+> _Tokyo, Shibuya, Amazon Tech, DMIT Cloud Service_
 
 ```yaml
 13.230.34.30
 ```
 
 ```yaml
-202.144.195.204
+154.31.113.72
 ```
 
 ```yaml
-131.186.33.175
+18.183.158.211
+```
+
+```yaml
+3.112.21.102
 ```
 
 ```yaml
@@ -1181,481 +1162,58 @@ Tokyo, Shibuya, DMIT Cloud LLC & Amazon
 ```
 
 ```yaml
+217.142.236.93
+```
+
+```yaml
 217.142.243.226
+```
+
+```yaml
+168.138.46.67
 ```
 
 ### 🇰🇷 South Korea
 
-Seol, NewMedia Express & Aryaka Networks
+> _Seol, NewMedia Express & Aryaka Networks_
 
 ```yaml
-147.75.225.105
+52.141.25.42
 ```
 
 ```yaml
-113.29.230.165
+146.56.162.25
 ```
 
-```yaml
-113.29.230.248
-```
+### 🇸🇬 Singapore
+
+> _Singapore, Digital Ocean_
 
 ```yaml
-38.225.100.31
-```
-
-```yaml
-158.179.171.53
+104.248.145.216
 ```
 
 ### 🇹🇷 Turkey
 
-Izmir, Stark Industries Solutions LTD
+> _Izmir, Stark Industries Solutions LTD_
 
 ```yaml
 62.3.12.76
 ```
 
 ```yaml
-62.3.12.190
+62.3.12.2
 ```
 
-Istanbul, TradeZone LLC
-
-```yaml
-188.132.192.194
-```
-
-```yaml
-176.223.66.5
-```
-
-```yaml
-62.133.63.86
-```
-
-Istanbul, Global Connectivity
-
-```yaml
-62.133.63.2
-```
-
-```yaml
-62.133.63.3
-```
-
-```yaml
-62.133.63.5
-```
-
-<details>  
-<summary> Click to see More </summary>
-
-```yaml
-62.133.63.14
-```
-
-```yaml
-62.133.63.4
-```
-
-```yaml
-62.133.63.6
-```
-
-```yaml
-62.133.63.16
-```
-
-```yaml
-62.133.63.7
-```
-
-```yaml
-62.133.63.21
-```
-
-```yaml
-62.133.63.27
-```
-
-```yaml
-62.133.63.33
-```
-
-```yaml
-62.133.63.23
-```
-
-```yaml
-62.133.63.35
-```
-
-```yaml
-62.133.63.43
-```
-
-```yaml
-62.133.63.42
-```
-
-```yaml
-62.133.63.57
-```
-
-```yaml
-62.133.63.41
-```
-
-```yaml
-62.133.63.51
-```
-
-```yaml
-62.133.63.50
-```
-
-```yaml
-62.133.63.56
-```
-
-```yaml
-62.133.63.53
-```
-
-```yaml
-62.133.63.58
-```
-
-```yaml
-62.133.63.55
-```
-
-```yaml
-62.133.63.40
-```
-
-```yaml
-62.133.63.45
-```
-
-```yaml
-62.133.63.61
-```
-
-```yaml
-62.133.63.67
-```
-
-```yaml
-62.133.63.63
-```
-
-```yaml
-62.133.63.75
-```
-
-```yaml
-62.133.63.70
-```
-
-```yaml
-62.133.63.64
-```
-
-```yaml
-62.133.63.66
-```
-
-```yaml
-62.133.63.69
-```
-
-```yaml
-62.133.63.62
-```
-
-```yaml
-62.133.63.90
-```
-
-```yaml
-62.133.63.99
-```
-
-```yaml
-62.133.63.86
-```
-
-```yaml
-62.133.63.97
-```
-
-```yaml
-62.133.63.80
-```
-
-```yaml
-62.133.63.88
-```
-
-```yaml
-62.133.63.105
-```
-
-```yaml
-62.133.63.107
-```
-
-```yaml
-62.133.63.116
-```
-
-```yaml
-62.133.63.113
-```
-
-```yaml
-62.133.63.104
-```
-
-```yaml
-62.133.63.123
-```
-
-```yaml
-62.133.63.120
-```
-
-```yaml
-62.133.63.130
-```
-
-```yaml
-62.133.63.126
-```
-
-```yaml
-62.133.63.138
-```
-
-```yaml
-62.133.63.132
-```
-
-```yaml
-62.133.63.134
-```
-
-```yaml
-62.133.63.141
-```
-
-```yaml
-62.133.63.142
-```
-
-```yaml
-62.133.63.155
-```
-
-```yaml
-62.133.63.151
-```
-
-```yaml
-62.133.63.154
-```
-
-```yaml
-62.133.63.171
-```
-
-```yaml
-62.133.63.161
-```
-
-```yaml
-62.133.63.163
-```
-
-```yaml
-62.133.63.179
-```
-
-```yaml
-62.133.63.169
-```
-
-```yaml
-62.133.63.167
-```
-
-```yaml
-62.133.63.162
-```
-
-```yaml
-62.133.63.190
-```
-
-```yaml
-62.133.63.181
-```
-
-```yaml
-62.133.63.187
-```
-
-```yaml
-62.133.63.180
-```
-
-```yaml
-62.133.63.182
-```
-
-```yaml
-62.133.63.184
-```
-
-```yaml
-62.133.63.199
-```
-
-```yaml
-62.133.63.192
-```
-
-```yaml
-62.133.63.193
-```
-
-```yaml
-62.133.63.210
-```
-
-```yaml
-62.133.63.203
-```
-
 ```yaml
-62.133.63.205
+62.3.12.90
 ```
-
-```yaml
-62.133.63.207
-```
-
-```yaml
-62.133.63.219
-```
-
-```yaml
-62.133.63.217
-```
-
-```yaml
-62.133.63.213
-```
-
-```yaml
-62.133.63.218
-```
-
-```yaml
-62.133.63.209
-```
-
-```yaml
-62.133.63.223
-```
-
-```yaml
-62.133.63.227
-```
-
-```yaml
-62.133.63.229
-```
-
-```yaml
-62.133.63.237
-```
-
-```yaml
-62.133.63.222
-```
-
-```yaml
-62.133.63.221
-```
-
-```yaml
-62.133.63.225
-```
-
-```yaml
-62.133.63.238
-```
-
-```yaml
-62.133.63.233
-```
-
-```yaml
-62.133.63.232
-```
-
-```yaml
-62.133.63.230
-```
-
-```yaml
-62.133.63.245
-```
-
-```yaml
-62.133.63.247
-```
-
-```yaml
-62.133.63.246
-```
-
-```yaml
-62.133.63.253
-```
-
-```yaml
-62.133.63.248
-```
-
-```yaml
-62.133.63.241
-```
-
-```yaml
-62.133.63.254
-```
-
-```yaml
-62.133.63.249
-```
-
-```yaml
-62.133.63.240
-```
-
-</details>
-
-Istanbul, Cogent Communications
 
 ```yaml
-62.3.12.14
+62.3.12.96
 ```
 
-Istanbul, Scalaxy B.V
+> _Istanbul, Scalaxy B.V_
 
 ```yaml
 38.180.105.201
@@ -1665,19 +1223,25 @@ Istanbul, Scalaxy B.V
 38.180.105.164
 ```
 
-Istanbul, UltaHost Inc.
-
-```yaml
-188.132.183.166
-```
-
-Izmir, Alastyr A.S
+> _Izmir, Alastyr A.S, UltaHost Inc._
 
 ```yaml
 185.8.129.187
 ```
 
-Izmir, PQ Hosting plus
+```yaml
+188.132.183.166
+```
+
+> _Izmir, PQ Hosting plus_
+
+```yaml
+185.8.129.187
+```
+
+```yaml
+185.234.66.91
+```
 
 ```yaml
 62.3.12.185
@@ -1699,52 +1263,40 @@ Izmir, PQ Hosting plus
 185.234.66.91
 ```
 
+```yaml
+45.89.52.247
+```
+
+```yaml
+94.131.123.74
+```
+
 <br><br/>
 
 ## Oceania
 
-![rainbow]
-
 ### 🇦🇺 Australia
 
-New South Wales, Sydney, OVH, The Constant Company
+> _New South Wales, Sydney, The Constant Company_
+
+```yaml
+125.7.24.251
+```
+
+```yaml
+192.9.180.162
+```
 
 ```yaml
 45.77.236.204
 ```
 
-```yaml
-125.7.24.251
-```
-
-```yaml
-192.9.180.162
-```
-
-Sydney, Digital Ocean
-
-```yaml
-170.64.240.100
-```
-
-Sydney, Macquarie Telecom
-
-```yaml
-125.7.24.251
-```
-
 ### 🇳🇿 New Zealand
 
-Unknown cities, Oracle Cloud
-
-Amazon Technologies Inc.
+> _Amazon Technologies Inc._
 
 ```yaml
 213.170.157.1
-```
-
-```yaml
-192.9.180.162
 ```
 
 ![rainbow]
@@ -1770,6 +1322,8 @@ Amazon Technologies Inc.
 
 <details>  
 <summary>🦋 Need a proxy IP from a specific country? Click here to see available options!</summary>
+
+<br/>
 
 - Here you'll find a list of proxy IPs categorized by country. Simply choose the desired location and use the provided IPs.
 
@@ -1845,7 +1399,7 @@ Also do you need [CloudFlare ip ranges by Country][3] ?
 
 </details>
 
-<hr><br/>
+<br><br/>
 
 ## Daily Proxies
 
@@ -1853,74 +1407,112 @@ Here we provide active IP proxies that are scanned and tested daily.
 
 - **[See Here](./ProxyIP-Daily.md)**
 
+<br/>
+
 ## Test proxyIPs
 
-## 1. تست از طریق وب‌سایت
+<div class="rtl">
 
-اولین و هم‌چنین آسون‌ترین کار اینه که بریم سراغ ابزارهایی مثل این: [victoria.workers.dev][vc] و یا [چکر مهدی][4] و یا [ربات تلگرامی][5] که یکی از یکی قشنکتر هستن.
-بعد از وارد شدن به سایت، تو کادر اول آی‌پی یا دامنه پروکسی دلخواهمون رو قرار بدیم و با کلیک روی گزینه Check نتایج برامون به نمایش درمیان، امکان اسکن رنج‌آی‌پی برای کاربران حرفه‌ای هم در سایت تستمون هستش.
+### 1. تست و اسکن پروکسی آی‌پی توسط ابزارهای مختلف
 
-ممکنه بعضی وقتا isp رو نشون نده و فقط بگه که این آی‌پی سالمه، اونوقت از این وب‌سایت [check-host.nen][ch] کمک بگیرید برای فهمیدن اطلاعات بیشتر (سایت پشت کلادفلر نیست).
+اولین و هم‌چنین آسون‌ترین کار اینه که بریم سراغ ابزارهای تست پروکسی آی‌پی مثل این [VictoriaCross][vc]
 
-دومین سایت یکم سختتره ولی بازم آسون به حساب میاد، اینطوریه که باید وب‌سایت [https://proxyip.edtunnel.best][ed] رو باز کنیم پروکسی دلخواهمون رو تو کادر IP قرار بدیم (اگه از پورت آی‌پی مد نظرت خبر نداری ترجیحا `443:` بذار بمونه)، در سطر بعدی گزبنه tls و هاست پیشفرض باقی بمونن و درنهایت submit رو می‌زنیم و چند ثانیه بعد نتایج به نمایش درمیاد، گزینه proxyip برابر با True باشه حله می‌تونیم ازش استفاده کنیم.
+و یا پروکسی تستر [دوستمون مهدی][4] و [ربات تلگرام][5] اون که یکی از یکی قشنگتر و خفن‌تر هستن.
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/c06d6aca-4101-4250-93b0-613d732b279e" width="680px">
-</p><br/>
+یه پروکسی آی‌پی تستر دیگه هم به چشمم خورد چندروز قبل، نمی‌دونم واسه که اصلا ولی بدک نبود، تست کنید خودتون  [Yummy][6].
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/e1e155e8-349b-49df-928d-ef3fa5f8d99c" width="680px">
-</p><br/>
+پروکسی تستر [Cmliu][7] دوست چینیمون هم هست که وجه تمایزش با بقیه نشون دادن پینگ هستش، ولی قابلیت‌های دیگه رو نداره مثل اسکن رنج و اسکن بر اساس کشور مورد نظر و ...
 
-<hr><br><br/>
+بعد از وارد شدن به سایت، تو کادر اول آی‌پی یا دامنه پروکسی دلخواهمون رو قرار میدیم و با کلیک روی گزینه Check یا Analysis نتایج تست ب نمایش درمیان، امکان اسکن رنج‌ آی‌پی و یا چند آی‌پی همزمان هم امکان پذیر هست.
 
-## 2. تست از طریق پنل BPB
+ممکنه بعضی وقتا isp رو نشون نده و فقط بگه که این آی‌پی سالمه، اگه خیلی براتون مهم بود اونوقت از این وب‌سایت [check-host.nen][ch] کمک بگیرید برای فهمیدن اطلاعات بیشتر (سایت پشت کلادفلر نیست).
 
-همه می‌دونید که تو پنل [[bia-pain-bache][bpb]] یه قسمت هست برای وارد کردن پروکسی‌ آی‌پی و مارو خیلی راحت می‌کنه از ادیت کد و ساخت متغیر و غیره.  
-نحوه انجام کار به این شکل هستش که ما پروکسی‌آی‌پی یا دامین دلخواه رو تو پنل قرار داده و دکمه `Apply Settings` رو می‌زنیم، حالا واسه اینکه این پروکسی جدید رو کانفیگ‌های‌ما اعمال بشه باید یکبار لینک اشتراک یا همون لینک ساب رو آپدیت بزنیم داخل کلاینت، تا قبل از آپدیت پروکسی آی‌پی‌ما قبلا هرچی بود همونه، بعد از آپدیت این جدیده میاد روی‌کار.  
-بعد باید به یکی از کانفیگ‌ها وصل شد و رفت سراغ یکی از سایت‌هایی که از CDN کلادفلر استفاده میکنن یا به اصطلاح پشت کلادفلر هستند، مثل لینک وورکر یا پیج خودمون، یا سایت‌های عمومی مثل [whoer.net][wr] و یا [speedtest.net][sp] و غیره تا ببینیم سایت برامون بالا میاد یانه.  
-اگه عادی بالا میان که اوکی پس پروکسی که انتخاب کردیم درست کار می‌کنه می‌تونیم ازش استفاده کنیم. اگه بالا نیومد سایت یا هر خطای دیگه‌ای داد یا هردفعه مرورگرمون کپچا نشون داد (تو پروکسی‌آی‌پی‌های مسخره‌ی oracle این خیلی پیش میاد) یا تو ربات های تلگرامی کپچا نشون داده میشه یا بالا نمیان اونوقت باید یکی دیگه انتخاب کنیم چون این منتخبمون داغونه.
+چهارمین سایت تست پروکسی‌آی‌پی یکم سخت‌تره ولی بازم اوکیه چون دقت بالایی داره، عملکردش اینطوریه که باید وارد وب‌سایت [proxyip.edtunnel.best][ed] بشیم، پروکسی دلخواهمون رو تو کادر IP قرار بدیم،  
+اگه از پورت آی‌پی مورد نظرت اطلاع نداری ترجیحا `443` بذار بمونه، در سطر بعدی گزینه tls و Host هم پیشفرض باقی میمونن و درنهایت submit رو می‌زنیم و چند ثانیه بعد نتیجه تست نمایش داده میشه، گزینه proxyip برابر با True باشه اوکیه و می‌تونیم ازش استفاده کنیم.
 
 <br/>
 
-## 3. قراردادن پروکسی داخل کد یا ازطریق متغیرها
+<img width="1080" height="1986" alt="VictoriaCross" src="https://github.com/user-attachments/assets/4a9bfa17-927e-422e-90f1-ee8b079fe819" />
 
-روش کلاسیک واسه تست اینه که پروکسی‌آی‌پی رو داخل کد وورکر یا پیج قرار بدیم یا یکم حرفه‌ای تر بخوایم عمل کنیم برای پیج یا وورکر خودمون از داخل کلادفلر داخل وورکر یا پیجمون از تو ستینگ یه متغییر جدید `(Environment variable)` تعیین میکنیم به اسم `PROXYIP` و مقدار اون رو برابر با پروکسی دلخواه قرار میدیم.  
-بعد از انجام `Retry deployment` مجدد به کانفیگمون وصل میشیم و میریم سراغ یکی از سایت‌هایی که از CDN کلادفلر استفاده میکنن که تو روش دوم کامل توضیح دادم.
+<br/>
+
+<details>  
+<summary> برای مشاهده تصاویر بیشتر کلیک کنید </summary>
+
+<br/> 
+
+<img width="1080" height="1828" alt="MehdiProxyIP" src="https://github.com/user-attachments/assets/ff33cc27-d2ee-45ea-a65c-4ac6b5f696b9" />
+
+<br/>
+
+<img width="1080" height="939" alt="YummyScanner" src="https://github.com/user-attachments/assets/917a2502-6437-40a5-9c72-d5e41bb4980d" />
+
+<br/>
+
+<img width="1080" height="883" alt="CMLIU" src="https://github.com/user-attachments/assets/26fbd7c0-9c42-420c-bd31-71fcf8ba6711" />
+
+<br/>
+
+<img width="1080" height="936" alt="EDTunnelScanner" src="https://github.com/user-attachments/assets/7c3faf3d-78c3-415c-8ee7-321639c49c14" />
+
+</details>
 
 <br><br/>
 
-<p align="center">
-  <img src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" width="600px">
-</p>
+### 2. تست از طریق پنل BPB
 
-<hr><br><br/>
+<details>  
+<summary> برای مشاهده توضیحات کلیک کنید </summary>
 
-## Latest workers & pages
+<br/>
 
-- The latest script for creating a VLESS configuration on Cloudflare is here: [[ZiZifn][zi]]
+- (❌ **از رده خارج** - برای دوسال قبل مناسب بود این روش)
 
-- VLESS node subscription content generator built with Cloudflare Workers to automatically generate the preferred route [[Harmony][hr]]
+همه می‌دونید که تو پنل [[bia-pain-bache][bpb]] یه قسمت هست برای وارد کردن پروکسی‌ آی‌پی و مارو خیلی راحت می‌کنه از ادیت کد و ساخت متغیر و غیره.
 
-- And also A GUI Panel providing Worker subscriptions and Fragment settings and Warp configurations and many others [[Bia Pain Bache][BPB]]
+نحوه انجام کار به این شکل هست که ما پروکسی‌ آی‌پی یا دامین دلخواه رو تو پنل قرار داده و دکمه `Apply Settings` رو می‌زنیم، حالا واسه اینکه این پروکسی جدید رو کانفیگ‌های‌ما اعمال بشه باید یک‌بار لینک اشتراک یا همون لینک ساب رو آپدیت بزنیم داخل کلاینت، تا قبل از آپدیت پروکسی آی‌پی‌ما قبلا هرچی بود همونه، بعد از آپدیت این جدیده میاد روی کار.
 
-![rainbow]
+بعد باید به یکی از کانفیگ‌ها وصل شد و رفت سراغ یکی از سایت‌هایی که از CDN کلادفلر استفاده میکنن یا به اصطلاح پشت کلادفلر هستند، مثل لینک وورکر یا پیج خودمون، یا سایت‌های عمومی مثل [whoer.net][wr] و یا [speedtest.net][sp] و غیره تا ببینیم سایت برامون بالا میاد یانه.  
+اگه عادی بالا میان که اوکی پس پروکسی که انتخاب کردیم درست کار می‌کنه می‌تونیم ازش استفاده کنیم. اگه بالا نیومد سایت یا هر خطای دیگه‌ای داد یا هردفعه مرورگرمون پست سر هم کپچا نشون داد (تو پروکسی‌آی‌پی‌های مسخره‌ی oracle این خیلی پیش میاد) یا تو ربات‌های تلگرامی کپچا نشون داده میشه یا بالا نمیان اونوقت باید یکی دیگه انتخاب کنیم چون این منتخبمون داغونه.
 
-<hr><br><br/>
+</details>
 
-## Find proxyIPs
+<br/>
 
-<p align="left">
- <img src="https://latex.codecogs.com/svg.image?\mathrm{{\color{Golden}Let's\;go\;sweetie}}" width=160px" 
-</p>
+### 3. قراردادن پروکسی داخل کد یا از طریق متغیرها
 
-> [!TIP]
+<details>  
+<summary> برای مشاهده توضیحات کلیک کنید </summary>
+
+<br/>
+
+- (❌ از رده خارج - برای دوسال قبل مناسب بود این روش)
+
+روش کلاسیک واسه تست اینه که پروکسی‌آی‌پی رو داخل کد وورکر یا پیج قرار بدیم یا یکم حرفه‌ای تر بخوایم عمل کنیم برای پیج یا وورکر خودمون از داشبورد کلادفلر داخل وورکر یا پیجمون از تو یه متغییر جدید `(Environment variable)` تعیین می‌کنیم به اسم `PROXYIP` و مقدار اون رو برابر با پروکسی دلخواه قرار می‌دیم.  
+بعد از انجام `Retry deployment` مجدد به کانفیگمون وصل می‌شیم و میریم سراغ یکی از سایت‌هایی که از CDN کلادفلر استفاده می‌کنن که تو روش دوم کامل توضیح دادم.
+
+</details>
+
+<br/>
+
+### 4. جستجوی آی‌پی در پشت دامین‌های عمومی
+
+<details>  
+<summary> برای مشاهده توضیحات کلیک کنید </summary>
+
+<br/>
+
+(💡 از رده خارج نیست، همیشه میشه پشت دامنه‌هارو چک کرد ولی خیلی عقلانی هم نیست این کار، برای چند سال قبل مناسب بود)
+
+چون الان به راحتی می‌تونی داخل پروکسی تستر خودمون یا مهدی کلیک کنی رو اسم کشور پروکسی‌های سالمش رو برات لیست کنه، یا حتی می‌تونی از همین پست پروکسی دلخواهت رو برداری و یا حتی بجای اینکه پشت دامنه‌ها دنبال پروکسی بگردی به شکل فله‌ای از [این‌جا](./country_proxies/02_proxies.csv) هرچند هزارتا که می‌خوای برداری
+
+> <br/>
 >
-> **یکی دیگه از آسونترین روش‌ها برای پیدا کردن پروکسی آی‌پی اینه که:**  
-> روی هر کدوم از لینک‌های زیر کلیک کنی توی صفحه‌ای که باز شده یه لیست خواهی دید با کلی پروکسی‌ آی‌پی که پشت اون دامنه قرار گرفتند، با کلیک کردن روی هرکدوم کادر مشخصات مربوط بشون باز میشه.
-> روش های تست پروکسی‌آی‌پی‌ها در [بخش قبلی](#Test-proxyIPs) نوشته شده.
->
-> این روش پیدا کردن پروکسی آی‌پی منسوخ شده و دوسال پیش به درد میخورد، الان میتونی از همین پست پروکسی دلخواهت رو برداری با بجای اینکه پشت دامنه‌ها دنبال پروکسی بگردی از [این‌جا برداری](./country_proxies/02_proxies.csv) هرچند هزارتا که میخوای.
+> **یکی دیگه از روش‌های پیدا کردن پروکسی آی‌پی این بود که:**
+> 
+> روی هر کدوم از لینک‌های زیر اگه کلیک کنی توی صفحه‌ای که باز شده یه لیست خواهی دید با کلی پروکسی‌ آی‌پی که پشت اون دامین‌ها قرار گرفتن، با کلیک کردن روی هرکدوم کادر مشخصات مربوط به آی‌پی باز میشه.
+> 
+> انواع روش‌های تست پروکسی‌ آی‌پی‌ در [بخش قبلی](#Test-proxyIPs) توضیح داده شده.
 >
 > https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
 >
@@ -1955,12 +1547,22 @@ Here we provide active IP proxies that are scanned and tested daily.
 > https://www.nslookup.io/domains/ProxyIP.JP.CMLiussss.net/dns-records/
 >
 > یکم خلاقیت ب خرج بدی خودت میفهمی که باید دنبال چی بگردی تو سایت
->
-> <br><br/>
+> 
+> <br/>
+
+<br/> 
+
+<img width="1080" height="2219" alt="nima.nscl.ir" src="https://github.com/user-attachments/assets/4c0b3f7b-6acd-4168-99e2-6f62ada4f5b1" />
+
+<br/>
+
+</details>
+
+</div>
 
 ![rainbow]
 
-<hr><br><br/>
+<br><br/>
 
 ## Bulk proxyip
 
@@ -1970,6 +1572,25 @@ You can download [from Here](./sub/1-bilion-proxyip.zip)
 
 also you can see [from Here](./country_proxies/02_proxies.csv)
 
+<br><br/>
+
+## Latest workers & pages
+
+- The latest script for creating a VLESS configuration on Cloudflare is here: [[ZiZifn][zi]]
+
+- VLESS node subscription content generator built with Cloudflare Workers to automatically generate the preferred route [[Harmony][hr]]
+
+- And also A GUI Panel providing Worker subscriptions and Fragment settings and Warp configurations and many others [[Bia Pain Bache][BPB]]
+
+<br><br/>
+
+<p align="center">
+  <img src="https://img.icons8.com/ios-filled/250/logan-paul-maverick.png" width="600px">
+</p>
+
+<br/>
+
+
 [^1]: https://t.me/s/F_NiREvil
 
 [^2]: https://t.me/s/CMLiussss
@@ -1977,15 +1598,17 @@ also you can see [from Here](./country_proxies/02_proxies.csv)
 [3]: https://github.com/NiREvil/vless/blob/main/edge/assets/Cloudflare_IP_ranges_by_country.md
 [4]: https://checker-3j2.pages.dev
 [5]: https://t.me/ProxyIPTesterBot
+[6]: https://yumiproxy.vercel.app/
+[7]: https://check.proxyip.cmliussss.net/
 [vc]: https://proxyip.victoriacross.workers.dev
 [ch]: https://check-host.net/ip-info
 [ed]: https://proxyip.edtunnel.best
 [bpb]: https://github.com/bia-pain-bache
 [wr]: https://whoer.net
 [sp]: https://www.speedtest.net
-[zi]: https://github.com/NiREvil/zizifn
-[hr]: https://github.com/NiREvil/Harmony
-[BPB]: https://github.com/NiREvil/bia-pain-bache
+[zi]: https://github.com/NiREvil/zizifn/
+[hr]: https://github.com/NiREvil/Harmony/
+[BPB]: https://github.com/NiREvil/bia-pain-bache/
 [Rentry.co/CF-proxyIP]: https://rentry.co/CF-proxyIP
 [Telegra.ph]: https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06
 [rainbow]: https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256
