@@ -23,9 +23,9 @@
     "servers": [
       {
         "detour": "proxy",
-        "server": "1.1.1.1",
+        "server": "185.228.168.9",
         "tag": "proxy-dns",
-        "type": "tls"
+        "type": "tcp"
       },
       {
         "detour": "direct",
@@ -33,10 +33,9 @@
         "type": "local"
       },
       {
-        "domain_resolver": "local-dns",
-        "server": "free.shekan.ir",
+        "server": "8.8.8.8",
         "tag": "direct-dns",
-        "type": "https"
+        "type": "tcp"
       }
     ],
     "strategy": "prefer_ipv4"
@@ -82,12 +81,13 @@
       "type": "selector"
     },
     {
-      "interval": "3m0s",
+      "interval": "5m0s",
       "outbounds": [],
       "tag": "auto",
       "tolerance": 50,
       "type": "urltest",
-      "url": "https://www.gstatic.com/generate_204"
+      "url": "https://www.gstatic.com/generate_204",
+      "interrupt_exist_connections": false
     },
     {
       "domain_resolver": {
