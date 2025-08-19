@@ -367,6 +367,8 @@ https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/no
 
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/hy2
 
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/normal/vmess
+
 https://yalda.nscl.ir [[Ni?]]
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
@@ -409,13 +411,21 @@ https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/v
 
 https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/HighSpeed.txt
 
-https://raw.githubusercontent.com/darknessm427/V2ray-Sub-Collector/refs/heads/main/Darkness%20Sub3.txt [[DS?]]
+https://raw.githubusercontent.com/DarknessShade/Sub/main/V2mix [[DS?]]
+
+https://raw.githubusercontent.com/DarknessShade/Sub/main/Ss
 
 https://raw.githubusercontent.com/lagzian/IranConfigCollector/main/Base64.txt
 
 https://raw.githubusercontent.com/lagzian/SS-Collector/refs/heads/main/SS/TrinityBase
 
-https://raw.githubusercontent.com/darknessm427/V2ray-Sub-Collector/refs/heads/main/Darkness%20Sub1.txt
+https://raw.githubusercontent.com/MahsaNetConfigTopic/config/refs/heads/main/xray_final.txt
+
+https://raw.githubusercontent.com/hamedcode/port-based-v2ray-configs/main/sub/vless.txt  [[HC?]]
+
+https://raw.githubusercontent.com/hamedcode/port-based-v2ray-configs/main/sub/vmess.txt
+
+https://raw.githubusercontent.com/hamedcode/port-based-v2ray-configs/main/sub/ss.txt
 
 https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub
 
@@ -451,8 +461,6 @@ https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/vmess_iran.tx
 
 https://raw.githubusercontent.com/Stinsonysm/GO_V2rayCollector/refs/heads/main/trojan_iran.txt
 
-https://raw.githubusercontent.com/4n0nymou3/Universal-Proxy-Finder/master/Output/v2ray_subscription.txt
-
 https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector_Py/refs/heads/main/sub/Mix/mix.txt [[MT?]]
 
 https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector_Py/refs/heads/main/sub/United%20States/config.txt
@@ -475,6 +483,14 @@ https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/outp
 
 https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Trojan.txt
 
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub1.txt
+
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub2.txt
+
+https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub3.txt
+
+https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_base64_Sub.txt
+
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub1.txt
 
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub2.txt
@@ -484,14 +500,6 @@ https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub3.txt
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub4.txt
 
 https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt
-
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub1.txt
-
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub2.txt
-
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/refs/heads/main/Sub3.txt
-
-https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_base64_Sub.txt
 
 https://raw.githubusercontent.com/bamdad23/JavidnamanIran/refs/heads/main/WS%2BHysteria2 [[JN?]]
 
@@ -1173,6 +1181,8 @@ https://raw.githubusercontent.com/ndsphonemy/proxy-sub/refs/heads/main/mobile.tx
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/v2rayng-wg.txt
 
+https://raw.githubusercontent.com/DarknessShade/WoW/refs/heads/main/Xray-WoW.json
+
 https://raw.githubusercontent.com/ndsphonemy/proxy-sub/refs/heads/main/wg.txt
 
 https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/WireGuard.txt [[10i?]]
@@ -1355,7 +1365,7 @@ https://raw.githubusercontent.com/hamedp-71/Clash_New/refs/heads/main/hp.yaml [[
 
 https://hamedp-71.github.io/clash_warp/
 
-https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/clash-wg.yml [[DS?]]
+https://raw.githubusercontent.com/DarknessShade/WoW/refs/heads/main/clash-wg.yml  [[DS?]]
 
 <br/>
 
@@ -1687,7 +1697,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [CF?]: https://ircf.space/contacts
 [CY?]: https://telegram.me/s/Ln2Ray
 [CW?]: https://github.com/coldwater-10/Vpnclashfa
-[DS?]: https://github.com/darknessm427
+[DS?]: https://github.com/DarknessShade
 [DN?]: https://telegram.me/s/DeamNet
 [EVA?]: https://t.me/evavpn_bot
 [EP?]: https://github.com/Epodonios/v2ray-configs
@@ -1698,6 +1708,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [GZ?]: https://github.com/valid7996/
 [HK?]: https://github.com/HosseinKoofi/GO_V2rayCollector/
 [HP?]: https://github.com/hamedp-71/
+[HC?]: https://github.com/hamedcode
 [JN?]: https://telegram.me/s/JavidnamanIran
 [KB?]: https://github.com/liketolivefree
 [KV?]: https://telegram.me/s/KevinZakarian
