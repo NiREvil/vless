@@ -421,7 +421,7 @@ https://raw.githubusercontent.com/lagzian/SS-Collector/refs/heads/main/SS/Trinit
 
 https://raw.githubusercontent.com/MahsaNetConfigTopic/config/refs/heads/main/xray_final.txt
 
-https://raw.githubusercontent.com/hamedcode/port-based-v2ray-configs/main/sub/vless.txt  [[HC?]]
+https://raw.githubusercontent.com/hamedcode/port-based-v2ray-configs/main/sub/vless.txt [[HC?]]
 
 https://raw.githubusercontent.com/hamedcode/port-based-v2ray-configs/main/sub/vmess.txt
 
@@ -1365,7 +1365,7 @@ https://raw.githubusercontent.com/hamedp-71/Clash_New/refs/heads/main/hp.yaml [[
 
 https://hamedp-71.github.io/clash_warp/
 
-https://raw.githubusercontent.com/DarknessShade/WoW/refs/heads/main/clash-wg.yml  [[DS?]]
+https://raw.githubusercontent.com/DarknessShade/WoW/refs/heads/main/clash-wg.yml [[DS?]]
 
 <br/>
 
