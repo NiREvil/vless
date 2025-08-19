@@ -9,7 +9,10 @@
       },
       {
         "server": "proxy-dns",
-        "source_ip_cidr": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"]
+        "source_ip_cidr": [
+          "172.19.0.1/30",
+          "fdfe:dcba:9876::1/126"
+        ]
       },
       {
         "clash_mode": "Direct",
@@ -23,9 +26,9 @@
     "servers": [
       {
         "detour": "proxy",
-        "server": "1.1.1.1",
+        "server": "185.228.168.9",
         "tag": "proxy-dns",
-        "type": "tls"
+        "type": "tcp"
       },
       {
         "detour": "direct",
@@ -33,49 +36,68 @@
         "type": "local"
       },
       {
-        "domain_resolver": "local-dns",
-        "server": "free.shekan.ir",
+        "server": "8.8.8.8",
         "tag": "direct-dns",
-        "type": "https"
+        "type": "tcp"
       }
     ],
     "strategy": "prefer_ipv4"
   },
   "endpoints": [
     {
-      "address": ["172.16.0.2/32", "2606:4700:110:8836:f1c9:4393:9b37:3814/128"],
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8836:f1c9:4393:9b37:3814/128"
+      ],
       "detour": "direct",
       "mtu": 1280,
       "peers": [
         {
-          "address": "162.159.192.222",
-          "allowed_ips": ["0.0.0.0/0", "::/0"],
+          "address": "8.6.112.38",
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
           "persistent_keepalive_interval": 30,
-          "port": 890,
+          "port": 2408,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "reserved": [247, 63, 28]
+          "reserved": [
+            57,
+            185,
+            34
+          ]
         }
       ],
-      "private_key": "WDgf8Ej+GGjNI+aZfRw4VHX+GN9pDtgHqNjWgAkInWw=",
+      "private_key": "SLjLgsg6LvjsOOK+YdOfv0hrmt54D51NTJ/DpTn7OFc=",
       "tag": "\u26aa\ufe0fTehran",
       "type": "wireguard",
       "workers": 4
     },
     {
-      "address": ["172.16.0.3/32", "2606:4700:110:8867:3f4a:906:1933:43c5/128"],
+      "address": [
+        "172.16.0.3/32",
+        "2606:4700:110:8867:3f4a:906:1933:43c5/128"
+      ],
       "detour": "\u26aa\ufe0fTehran",
       "mtu": 1280,
       "peers": [
         {
-          "address": "8.34.70.59",
-          "allowed_ips": ["0.0.0.0/0", "::/0"],
+          "address": "188.114.99.77",
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
           "persistent_keepalive_interval": 30,
-          "port": 2371,
+          "port": 1074,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "reserved": [214, 212, 149]
+          "reserved": [
+            99,
+            149,
+            231
+          ]
         }
       ],
-      "private_key": "ABHTOqYC3RMmMSNgQLFcZorRAeUj4R4uyvO0zPTE5lo=",
+      "private_key": "iBUQJLhYQ/+nlizdvV2WIDatyUKIQfriA/OeOyNt/EY=",
       "tag": "\ud83d\udfe2Somewhere",
       "type": "wireguard",
       "workers": 4
@@ -88,7 +110,10 @@
   },
   "inbounds": [
     {
-      "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
       "auto_route": true,
       "mtu": 9000,
       "platform": {
@@ -116,17 +141,25 @@
   "outbounds": [
     {
       "default": "auto",
-      "outbounds": ["auto", "\u26aa\ufe0fTehran", "\ud83d\udfe2Somewhere"],
+      "outbounds": [
+        "auto",
+        "\u26aa\ufe0fTehran",
+        "\ud83d\udfe2Somewhere"
+      ],
       "tag": "proxy",
       "type": "selector"
     },
     {
-      "interval": "3m0s",
-      "outbounds": ["\u26aa\ufe0fTehran", "\ud83d\udfe2Somewhere"],
+      "interval": "5m0s",
+      "outbounds": [
+        "\u26aa\ufe0fTehran",
+        "\ud83d\udfe2Somewhere"
+      ],
       "tag": "auto",
       "tolerance": 50,
       "type": "urltest",
-      "url": "https://www.gstatic.com/generate_204"
+      "url": "https://www.gstatic.com/generate_204",
+      "interrupt_exist_connections": false
     },
     {
       "domain_resolver": {
@@ -193,7 +226,12 @@
       },
       {
         "outbound": "direct",
-        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"]
+        "rule_set": [
+          "geoip-private",
+          "geosite-private",
+          "geosite-ir",
+          "geoip-ir"
+        ]
       },
       {
         "outbound": "block",
