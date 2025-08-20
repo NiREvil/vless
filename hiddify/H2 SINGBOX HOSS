@@ -7,13 +7,14 @@
 {
   "dns": {
     "final": "direct-dns",
+    "independent_cache": true,
     "rules": [
       {
         "clash_mode": "Global",
         "server": "proxy-dns"
       },
       {
-        "server": "proxy-dns",
+        "server": "direct-dns",
         "source_ip_cidr": ["172.19.0.0/30", "fdfe:dcba:9876::1/126"]
       },
       {
@@ -21,26 +22,30 @@
         "server": "direct-dns"
       },
       {
-        "rule_set": "geosite-ir",
+        "rule_set": ["geosite-ir", "geoip-ir"],
+        "server": "direct-dns"
+      },
+      {
+        "domain_suffix": ".ir",
         "server": "direct-dns"
       }
     ],
     "servers": [
       {
+        "server": "1.1.1.1",
+        "tag": "direct-dns",
+        "type": "udp"
+      },
+      {
         "detour": "select",
-        "server": "185.228.168.9",
+        "server": "8.8.8.8",
         "tag": "proxy-dns",
-        "type": "tcp"
+        "type": "https"
       },
       {
         "detour": "direct",
         "tag": "local-dns",
         "type": "local"
-      },
-      {
-        "server": "8.8.8.8",
-        "tag": "direct-dns",
-        "type": "tcp"
       }
     ],
     "strategy": "prefer_ipv4"
@@ -58,7 +63,6 @@
         }
       },
       "stack": "system",
-      "strict_route": false,
       "type": "tun"
     },
     {
@@ -70,7 +74,6 @@
   "outbounds": [
     {
       "default": "auto",
-      "interrupt_exist_connections": false,
       "outbounds": [
         "auto",
         "🇫🇷H2 - Paris",
@@ -84,7 +87,7 @@
       "type": "selector"
     },
     {
-      "interval": "10m",
+      "interval": "10m0s",
       "outbounds": [
         "🇫🇷H2 - Paris",
         "🇹🇷H2 - Istanbul",
@@ -174,8 +177,8 @@
       "type": "hysteria2"
     },
     {
-     "tag": "direct",
-     "type": "direct"
+      "tag": "direct",
+      "type": "direct"
     },
     {
       "tag": "block",
