@@ -81,13 +81,13 @@
       "type": "selector"
     },
     {
+      "interrupt_exist_connections": false,
       "interval": "5m0s",
       "outbounds": [],
       "tag": "auto",
       "tolerance": 50,
       "type": "urltest",
-      "url": "https://www.gstatic.com/generate_204",
-      "interrupt_exist_connections": false
+      "url": "https://www.gstatic.com/generate_204"
     },
     {
       "domain_resolver": {
