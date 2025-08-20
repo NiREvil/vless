@@ -84,7 +84,7 @@ jobs:
           rm -f "$TEMP_OUTPUT"
 
           echo "Cloning Key-Gen repository..."
-          git clone -b ${BRANCH} https://github.com/rzc0d3r/ESET-KeyGen.git
+          git clone -b ${BRANCH} https://github.com/Diana-Cl/Key-Gen.git
           cd ESET-KeyGen
 
           echo "Setting up Python environment..."
