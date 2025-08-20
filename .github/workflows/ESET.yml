@@ -85,7 +85,7 @@ jobs:
 
           echo "Cloning Key-Gen repository..."
           git clone -b ${BRANCH} https://github.com/Diana-Cl/Key-Gen.git
-          cd ESET-KeyGen
+          cd Key-Gen
 
           echo "Setting up Python environment..."
           sudo apt-get update -y > /dev/null
