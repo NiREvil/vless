@@ -6,13 +6,14 @@
 >
 > <br/>
 >
-> **Last updated:** Wed, 20 Aug 2025 01:26:12 GMT
+> **Last updated:** Thu, 21 Aug 2025 01:25:36 GMT
 >
 > <br/>
 >
-> **Next update:** Fri, 22 Aug 2025 01:26:12 GMT
+> **Next update:** Sat, 23 Aug 2025 01:25:36 GMT
 >
 > <br/>
+>
 
 </br>
 
@@ -28,8 +29,8 @@
 ## 🔌 Ports Distribution
 
 | Port | Count | Percentage |
-| ---- | ----- | ---------- |
-| 443  | 45    | 100.0%     |
+|------|-------|------------|
+| 443  | 45     | 100.0%     |
 
 <br/>
 
@@ -37,105 +38,105 @@
 
 <br/>
 
-### 🇳🇱 The Netherlands (21 proxies)
+### 🇳🇱 The Netherlands (22 proxies)
 
-| Proxy IP          | City      | ISP / Organization                          | Method |
-| ----------------- | --------- | ------------------------------------------- | ------ |
-| `103.97.88.187`   | Amsterdam | AS56630 Melbikomas UAB                      | TCP    |
-| `146.0.73.202`    | Amsterdam | AS57043 HOSTKEY B.V.                        | TCP    |
-| `159.100.199.200` | Amsterdam | AS11179 Aryaka Networks, Inc.               | TCP    |
-| `176.222.55.163`  | Amsterdam | AS57043 HOSTKEY B.V.                        | TCP    |
-| `176.222.55.17`   | Amsterdam | AS57043 HOSTKEY B.V.                        | TCP    |
-| `185.36.143.166`  | Meppel    | AS214790 Brainoza OU                        | TCP    |
-| `194.164.32.50`   | Amsterdam | AS216071 SERVERS TECH FZCO                  | TCP    |
-| `195.133.17.189`  | Amsterdam | AS50053 Individual Entrepreneur Anton Levin | TCP    |
-| `195.133.39.89`   | Amsterdam | AS50053 Individual Entrepreneur Anton Levin | TCP    |
-| `213.183.61.191`  | Amsterdam | AS56630 Melbikomas UAB                      | TCP    |
-| `24.144.79.45`    | Amsterdam | AS14061 DigitalOcean, LLC                   | TCP    |
-| `37.1.202.160`    | Amsterdam | AS58061 Scalaxy B.V.                        | TCP    |
-| `37.1.221.155`    | Meppel    | AS58061 Scalaxy B.V.                        | TCP    |
-| `38.180.99.103`   | Amsterdam | AS58061 Scalaxy B.V.                        | TCP    |
-| `5.182.86.130`    | Amsterdam | AS210644 AEZA INTERNATIONAL LTD             | TCP    |
-| `5.182.86.55`     | Amsterdam | AS210644 AEZA INTERNATIONAL LTD             | TCP    |
-| `77.221.148.189`  | Amsterdam | AS210644 AEZA INTERNATIONAL LTD             | TCP    |
-| `79.137.204.189`  | Amsterdam | AS210644 AEZA INTERNATIONAL LTD             | TCP    |
-| `89.110.66.154`   | Amsterdam | AS216071 SERVERS TECH FZCO                  | TCP    |
-| `89.208.104.144`  | Amsterdam | AS210644 AEZA INTERNATIONAL LTD             | TCP    |
-| `93.183.88.35`    | Amsterdam | AS216071 SERVERS TECH FZCO                  | TCP    |
+| Proxy IP | City | ISP / Organization | Method |
+|----------|------|--------------------|--------|
+| `103.97.88.187` | Amsterdam | AS56630 Melbikomas UAB | TCP |
+| `146.0.73.202` | Amsterdam | AS57043 HOSTKEY B.V. | TCP |
+| `159.100.199.200` | Amsterdam | AS11179 Aryaka Networks, Inc. | TCP |
+| `176.222.55.163` | Amsterdam | AS57043 HOSTKEY B.V. | TCP |
+| `176.222.55.17` | Amsterdam | AS57043 HOSTKEY B.V. | TCP |
+| `185.36.143.166` | Meppel | AS214790 Brainoza OU | TCP |
+| `194.164.32.50` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
+| `195.133.17.189` | Amsterdam | AS50053 Individual Entrepreneur Anton Levin | TCP |
+| `195.133.39.89` | Amsterdam | AS50053 Individual Entrepreneur Anton Levin | TCP |
+| `213.183.61.191` | Amsterdam | AS56630 Melbikomas UAB | TCP |
+| `24.144.79.45` | Amsterdam | AS14061 DigitalOcean, LLC | TCP |
+| `37.1.202.160` | Amsterdam | AS58061 Scalaxy B.V. | TCP |
+| `37.1.221.155` | Meppel | AS58061 Scalaxy B.V. | TCP |
+| `38.180.99.103` | Amsterdam | AS58061 Scalaxy B.V. | TCP |
+| `5.182.86.130` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD | TCP |
+| `5.182.86.55` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD | TCP |
+| `5.39.219.35` | Amsterdam | AS57043 HOSTKEY B.V. | TCP |
+| `77.221.148.189` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD | TCP |
+| `79.137.204.189` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD | TCP |
+| `89.110.66.154` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
+| `89.208.104.144` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD | TCP |
+| `93.183.88.35` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
 
-### 🇩🇪 Germany (10 proxies)
+### 🇩🇪 Germany (9 proxies)
 
-| Proxy IP         | City                | ISP / Organization                             | Method |
-| ---------------- | ------------------- | ---------------------------------------------- | ------ |
-| `146.70.101.111` | Frankfurt am Main   | AS9009 M247 Europe SRL                         | TCP    |
-| `147.45.197.119` | Frankfurt am Main   | AS216127 INTERNATIONAL HOSTING COMPANY LIMITED | TCP    |
-| `192.248.177.3`  | Frankfurt am Main   | AS20473 The Constant Company, LLC              | TCP    |
-| `193.226.77.245` | Frankfurt am Main   | AS9009 M247 Europe SRL                         | TCP    |
-| `35.157.240.237` | Frankfurt am Main   | AS16509 Amazon.com, Inc.                       | TCP    |
-| `5.39.249.146`   | Frankfurt Am Main   | AS41745 Baykov Ilya Sergeevich                 | TCP    |
-| `51.38.98.202`   | Limburg an der Lahn | AS16276 OVH SAS                                | TCP    |
-| `54.38.159.25`   | Limburg an der Lahn | AS16276 OVH SAS                                | TCP    |
-| `91.149.223.242` | Frankfurt am Main   | AS26383 Baxet Group Inc.                       | TCP    |
-| `93.127.223.41`  | Frankfurt am Main   | AS46475 Limestone Networks, Inc.               | TCP    |
+| Proxy IP | City | ISP / Organization | Method |
+|----------|------|--------------------|--------|
+| `146.70.101.111` | Frankfurt am Main | AS9009 M247 Europe SRL | TCP |
+| `147.45.197.119` | Frankfurt am Main | AS216127 INTERNATIONAL HOSTING COMPANY LIMITED | TCP |
+| `192.248.177.3` | Frankfurt am Main | AS20473 The Constant Company, LLC | TCP |
+| `193.226.77.245` | Frankfurt am Main | AS9009 M247 Europe SRL | TCP |
+| `35.157.240.237` | Frankfurt am Main | AS16509 Amazon.com, Inc. | TCP |
+| `51.38.98.202` | Limburg an der Lahn | AS16276 OVH SAS | TCP |
+| `54.38.159.25` | Limburg an der Lahn | AS16276 OVH SAS | TCP |
+| `91.149.223.242` | Frankfurt am Main | AS26383 Baxet Group Inc. | TCP |
+| `93.127.223.41` | Frankfurt am Main | AS46475 Limestone Networks, Inc. | TCP |
 
 ### 🇦🇹 Austria (3 proxies)
 
-| Proxy IP      | City | ISP / Organization   | Method |
-| ------------- | ---- | -------------------- | ------ |
-| `94.177.8.10` | Wien | AS40994 Hohl IT e.U. | TCP    |
-| `94.177.8.11` | Wien | AS40994 Hohl IT e.U. | TCP    |
-| `94.177.8.8`  | Wien | AS40994 Hohl IT e.U. | TCP    |
+| Proxy IP | City | ISP / Organization | Method |
+|----------|------|--------------------|--------|
+| `94.177.8.10` | Wien | AS40994 Hohl IT e.U. | TCP |
+| `94.177.8.11` | Wien | AS40994 Hohl IT e.U. | TCP |
+| `94.177.8.8` | Wien | AS40994 Hohl IT e.U. | TCP |
 
 ### 🇨🇭 Switzerland (3 proxies)
 
-| Proxy IP         | City      | ISP / Organization        | Method |
-| ---------------- | --------- | ------------------------- | ------ |
-| `176.10.125.114` | Hünenberg | AS51395 Datasource AG     | TCP    |
-| `38.180.84.46`   | Bern      | AS51852 Private Layer INC | TCP    |
-| `45.85.93.49`    | Geneva    | AS199058 SERVA ONE LTD    | TCP    |
+| Proxy IP | City | ISP / Organization | Method |
+|----------|------|--------------------|--------|
+| `176.10.125.114` | Hünenberg | AS51395 Datasource AG | TCP |
+| `38.180.84.46` | Bern | AS51852 Private Layer INC | TCP |
+| `45.85.93.49` | Geneva | AS199058 SERVA ONE LTD | TCP |
 
 ### 🇺🇸 United States (2 proxies)
 
-| Proxy IP        | City       | ISP / Organization  | Method |
-| --------------- | ---------- | ------------------- | ------ |
-| `34.105.49.234` | The Dalles | AS396982 Google LLC | TCP    |
-| `34.82.76.253`  | The Dalles | AS396982 Google LLC | TCP    |
+| Proxy IP | City | ISP / Organization | Method |
+|----------|------|--------------------|--------|
+| `34.105.49.234` | The Dalles | AS396982 Google LLC | TCP |
+| `34.82.76.253` | The Dalles | AS396982 Google LLC | TCP |
 
 ### 🇫🇮 Finland (1 proxies)
 
-| Proxy IP        | City     | ISP / Organization          | Method |
-| --------------- | -------- | --------------------------- | ------ |
-| `65.109.167.39` | Helsinki | AS24940 Hetzner Online GmbH | TCP    |
+| Proxy IP | City | ISP / Organization | Method |
+|----------|------|--------------------|--------|
+| `65.109.167.39` | Helsinki | AS24940 Hetzner Online GmbH | TCP |
 
 ### 🇫🇷 France (1 proxies)
 
-| Proxy IP      | City    | ISP / Organization | Method |
-| ------------- | ------- | ------------------ | ------ |
-| `51.38.44.17` | Roubaix | AS16276 OVH SAS    | TCP    |
+| Proxy IP | City | ISP / Organization | Method |
+|----------|------|--------------------|--------|
+| `51.38.44.17` | Roubaix | AS16276 OVH SAS | TCP |
 
 ### 🇮🇹 Italy (1 proxies)
 
-| Proxy IP        | City   | ISP / Organization   | Method |
-| --------------- | ------ | -------------------- | ------ |
-| `85.235.151.34` | Arezzo | AS31034 Aruba S.p.A. | TCP    |
+| Proxy IP | City | ISP / Organization | Method |
+|----------|------|--------------------|--------|
+| `85.235.151.34` | Arezzo | AS31034 Aruba S.p.A. | TCP |
 
 ### 🇳🇱 Netherlands (1 proxies)
 
-| Proxy IP      | City    | ISP / Organization             | Method |
-| ------------- | ------- | ------------------------------ | ------ |
-| `45.88.67.65` | Dronten | AS41745 Baykov Ilya Sergeevich | TCP    |
+| Proxy IP | City | ISP / Organization | Method |
+|----------|------|--------------------|--------|
+| `45.88.67.65` | Dronten | AS41745 Baykov Ilya Sergeevich | TCP |
 
 ### 🌍 Serbia (1 proxies)
 
-| Proxy IP         | City     | ISP / Organization     | Method |
-| ---------------- | -------- | ---------------------- | ------ |
-| `38.180.101.177` | Belgrade | AS9009 M247 Europe SRL | TCP    |
+| Proxy IP | City | ISP / Organization | Method |
+|----------|------|--------------------|--------|
+| `38.180.101.177` | Belgrade | AS9009 M247 Europe SRL | TCP |
 
 ### 🇬🇧 United Kingdom (1 proxies)
 
-| Proxy IP        | City      | ISP / Organization       | Method |
-| --------------- | --------- | ------------------------ | ------ |
-| `185.66.164.51` | Loudwater | AS47264 LDeX Connect LTD | TCP    |
+| Proxy IP | City | ISP / Organization | Method |
+|----------|------|--------------------|--------|
+| `185.66.164.51` | Loudwater | AS47264 LDeX Connect LTD | TCP |
 
 <br/>
 
@@ -155,7 +156,6 @@
 192.248.177.3
 193.226.77.245
 35.157.240.237
-5.39.249.146
 51.38.98.202
 54.38.159.25
 91.149.223.242
@@ -182,6 +182,7 @@
 38.180.99.103
 5.182.86.130
 5.182.86.55
+5.39.219.35
 77.221.148.189
 79.137.204.189
 89.110.66.154
@@ -291,15 +292,6 @@
     "country": "Germany",
     "city": "Frankfurt am Main",
     "as": "AS16509 Amazon.com, Inc.",
-    "proxy": "unknown"
-  },
-  {
-    "ip": "5.39.249.146",
-    "port": "443",
-    "method": "TCP",
-    "country": "Germany",
-    "city": "Frankfurt Am Main",
-    "as": "AS41745 Baykov Ilya Sergeevich",
     "proxy": "unknown"
   },
   {
@@ -535,6 +527,15 @@
     "city": "Amsterdam",
     "as": "AS210644 AEZA INTERNATIONAL LTD",
     "proxy": true
+  },
+  {
+    "ip": "5.39.219.35",
+    "port": "443",
+    "method": "TCP",
+    "country": "The Netherlands",
+    "city": "Amsterdam",
+    "as": "AS57043 HOSTKEY B.V.",
+    "proxy": "unknown"
   },
   {
     "ip": "77.221.148.189",
