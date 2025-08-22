@@ -13,7 +13,6 @@
 > **Next update:** Sun, 24 Aug 2025 01:26:44 GMT
 >
 > <br/>
->
 
 </br>
 
@@ -29,8 +28,8 @@
 ## 🔌 Ports Distribution
 
 | Port | Count | Percentage |
-|------|-------|------------|
-| 443  | 45     | 100.0%     |
+| ---- | ----- | ---------- |
+| 443  | 45    | 100.0%     |
 
 <br/>
 
@@ -40,83 +39,83 @@
 
 ### 🇳🇱 The Netherlands (29 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `146.0.73.211` | Amsterdam | AS57043 HOSTKEY B.V. | TCP |
-| `176.222.54.31` | Amsterdam | AS57043 HOSTKEY B.V. | TCP |
-| `178.208.76.68` | Amsterdam | AS216139 Iron Hosting Centre LTD | TCP |
-| `185.94.164.107` | Amsterdam | AS200740 FIRST SERVER LIMITED | TCP |
-| `188.116.26.216` | Amsterdam | AS58061 Scalaxy B.V. | TCP |
-| `194.26.232.203` | Oude Meer | AS211381 Podaon SIA | TCP |
-| `212.34.153.65` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `31.44.2.57` | Amsterdam | AS208951 ITGLOBAL.COM | TCP |
-| `37.1.203.192` | Amsterdam | AS58061 Scalaxy B.V. | TCP |
-| `37.1.206.30` | Amsterdam | AS58061 Scalaxy B.V. | TCP |
-| `5.2.75.70` | Amsterdam | AS60404 The Infrastructure Group B.V. | TCP |
-| `5.35.46.16` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `5.35.69.122` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `66.151.42.104` | Amsterdam | AS57043 HOSTKEY B.V. | TCP |
-| `77.221.155.136` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD | TCP |
-| `77.238.226.178` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `77.238.233.141` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `77.238.242.168` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `77.238.247.131` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `77.238.247.93` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `79.137.205.127` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD | TCP |
-| `89.110.109.64` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `89.110.120.29` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `89.110.80.121` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `89.110.84.203` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `89.150.35.129` | Amsterdam | AS216154 CLODO CLOUD SERVICE CO. L.L.C | TCP |
-| `89.208.105.25` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD | TCP |
-| `91.201.112.15` | Amsterdam | AS216071 SERVERS TECH FZCO | TCP |
-| `93.183.69.31` | Amsterdam | AS43581 ZTV CORP LLC | TCP |
+| Proxy IP         | City      | ISP / Organization                     | Method |
+| ---------------- | --------- | -------------------------------------- | ------ |
+| `146.0.73.211`   | Amsterdam | AS57043 HOSTKEY B.V.                   | TCP    |
+| `176.222.54.31`  | Amsterdam | AS57043 HOSTKEY B.V.                   | TCP    |
+| `178.208.76.68`  | Amsterdam | AS216139 Iron Hosting Centre LTD       | TCP    |
+| `185.94.164.107` | Amsterdam | AS200740 FIRST SERVER LIMITED          | TCP    |
+| `188.116.26.216` | Amsterdam | AS58061 Scalaxy B.V.                   | TCP    |
+| `194.26.232.203` | Oude Meer | AS211381 Podaon SIA                    | TCP    |
+| `212.34.153.65`  | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `31.44.2.57`     | Amsterdam | AS208951 ITGLOBAL.COM                  | TCP    |
+| `37.1.203.192`   | Amsterdam | AS58061 Scalaxy B.V.                   | TCP    |
+| `37.1.206.30`    | Amsterdam | AS58061 Scalaxy B.V.                   | TCP    |
+| `5.2.75.70`      | Amsterdam | AS60404 The Infrastructure Group B.V.  | TCP    |
+| `5.35.46.16`     | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `5.35.69.122`    | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `66.151.42.104`  | Amsterdam | AS57043 HOSTKEY B.V.                   | TCP    |
+| `77.221.155.136` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD        | TCP    |
+| `77.238.226.178` | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `77.238.233.141` | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `77.238.242.168` | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `77.238.247.131` | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `77.238.247.93`  | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `79.137.205.127` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD        | TCP    |
+| `89.110.109.64`  | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `89.110.120.29`  | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `89.110.80.121`  | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `89.110.84.203`  | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `89.150.35.129`  | Amsterdam | AS216154 CLODO CLOUD SERVICE CO. L.L.C | TCP    |
+| `89.208.105.25`  | Amsterdam | AS210644 AEZA INTERNATIONAL LTD        | TCP    |
+| `91.201.112.15`  | Amsterdam | AS216071 SERVERS TECH FZCO             | TCP    |
+| `93.183.69.31`   | Amsterdam | AS43581 ZTV CORP LLC                   | TCP    |
 
 ### 🇩🇪 Germany (7 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `116.202.31.174` | Falkenstein | AS24940 Hetzner Online GmbH | TCP |
-| `165.227.134.63` | Frankfurt am Main | AS14061 DigitalOcean, LLC | TCP |
-| `18.156.209.101` | Frankfurt am Main | AS16509 Amazon.com, Inc. | TCP |
-| `18.159.105.97` | Frankfurt am Main | AS16509 Amazon.com, Inc. | TCP |
-| `195.234.62.215` | Frankfurt am Main | AS202422 G-Core Labs S.A. | TCP |
-| `3.68.31.54` | Frankfurt am Main | AS16509 Amazon.com, Inc. | TCP |
-| `77.105.147.253` | Frankfurt am Main | AS211522 Hypercore Ltd | TCP |
+| Proxy IP         | City              | ISP / Organization          | Method |
+| ---------------- | ----------------- | --------------------------- | ------ |
+| `116.202.31.174` | Falkenstein       | AS24940 Hetzner Online GmbH | TCP    |
+| `165.227.134.63` | Frankfurt am Main | AS14061 DigitalOcean, LLC   | TCP    |
+| `18.156.209.101` | Frankfurt am Main | AS16509 Amazon.com, Inc.    | TCP    |
+| `18.159.105.97`  | Frankfurt am Main | AS16509 Amazon.com, Inc.    | TCP    |
+| `195.234.62.215` | Frankfurt am Main | AS202422 G-Core Labs S.A.   | TCP    |
+| `3.68.31.54`     | Frankfurt am Main | AS16509 Amazon.com, Inc.    | TCP    |
+| `77.105.147.253` | Frankfurt am Main | AS211522 Hypercore Ltd      | TCP    |
 
 ### 🇳🇱 Netherlands (3 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `185.225.201.194` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD | TCP |
-| `193.33.153.151` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD | TCP |
-| `82.115.5.199` | Amsterdam | AS42532 SIA VEESP | TCP |
+| Proxy IP          | City      | ISP / Organization              | Method |
+| ----------------- | --------- | ------------------------------- | ------ |
+| `185.225.201.194` | Amsterdam | AS210644 AEZA INTERNATIONAL LTD | TCP    |
+| `193.33.153.151`  | Amsterdam | AS210644 AEZA INTERNATIONAL LTD | TCP    |
+| `82.115.5.199`    | Amsterdam | AS42532 SIA VEESP               | TCP    |
 
 ### 🇬🇧 United Kingdom (3 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `178.32.58.147` | Southwark | AS16276 OVH SAS | TCP |
-| `91.149.202.142` | London | AS26383 Baxet Group Inc. | TCP |
-| `91.149.238.88` | London | AS26383 Baxet Group Inc. | TCP |
+| Proxy IP         | City      | ISP / Organization       | Method |
+| ---------------- | --------- | ------------------------ | ------ |
+| `178.32.58.147`  | Southwark | AS16276 OVH SAS          | TCP    |
+| `91.149.202.142` | London    | AS26383 Baxet Group Inc. | TCP    |
+| `91.149.238.88`  | London    | AS26383 Baxet Group Inc. | TCP    |
 
 ### 🇦🇺 Australia (1 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `125.7.24.251` | Sydney | AS17477 Macquarie Technology Operations Pty Limite | TCP |
+| Proxy IP       | City   | ISP / Organization                                 | Method |
+| -------------- | ------ | -------------------------------------------------- | ------ |
+| `125.7.24.251` | Sydney | AS17477 Macquarie Technology Operations Pty Limite | TCP    |
 
 ### 🇦🇹 Austria (1 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `94.177.8.5` | Wien | AS40994 Hohl IT e.U. | TCP |
+| Proxy IP     | City | ISP / Organization   | Method |
+| ------------ | ---- | -------------------- | ------ |
+| `94.177.8.5` | Wien | AS40994 Hohl IT e.U. | TCP    |
 
 ### 🇯🇵 Japan (1 proxies)
 
-| Proxy IP | City | ISP / Organization | Method |
-|----------|------|--------------------|--------|
-| `141.147.147.180` | Osaka | AS31898 Oracle Corporation | TCP |
+| Proxy IP          | City  | ISP / Organization         | Method |
+| ----------------- | ----- | -------------------------- | ------ |
+| `141.147.147.180` | Osaka | AS31898 Oracle Corporation | TCP    |
 
 <br/>
 
