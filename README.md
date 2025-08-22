@@ -312,11 +312,12 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 >
 > Best DNS testing tool, just start it.  
 > Tip — use xstack DoH to bypass restrictions on YouTube, Instagram, and more.  
-> [darknessm427.github.io/DNS-Tester]
+> [darknessshade.github.io/DNS-Tester]  
+> Read more about DNS Tester in [Here][iran-core]
 >
 > This is a fast and accurate **Proxy IP Checker** tool, capable of testing IP ranges that I'm sure you haven't seen anywhere like it.  
 > [checker-3j2.pages.dev]  
-> [Telegram ProxyIPTesterBot]  
+> [Telegram ProxyIPChecker_Bot]  
 > [proxyip.victoriacross.workers.dev]
 >
 > <br/>
@@ -1703,7 +1704,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [CF?]: https://ircf.space/contacts
 [CY?]: https://telegram.me/s/Ln2Ray
 [CW?]: https://github.com/coldwater-10/Vpnclashfa
-[DS?]: https://github.com/DarknessShade
+[DS?]: https://github.com/Darknessshade
 [DN?]: https://telegram.me/s/DeamNet
 [EVA?]: https://t.me/evavpn_bot
 [EP?]: https://github.com/Epodonios/v2ray-configs
@@ -1739,7 +1740,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Avast SecureLine]: https://play.google.com/store/apps/details?id=com.avast.android.vpn&pcampaignid=web_share
 [Clash-Meta]: https://github.com/MetaCubeX/ClashMetaForAndroid/releases
 [checker-3j2.pages.dev]: https://checker-3j2.pages.dev
-[darknessm427.github.io/DNS-Tester]: https://darknessm427.github.io/DNS-Tester/
+[darknessshade.github.io/DNS-Tester]: https://darknessshade.github.io/DNS-Tester/
 [Di4Diana]: https://telegram.me/Di4Diana
 [diana-cl.github.io/Diana-Cl]: https://diana-cl.github.io/Diana-Cl/
 [ESET CODES - VPN, ANTIVIRUS?]: https://telegram.me/F_NiREvil/2113
@@ -1765,7 +1766,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [SFI]: https://apps.apple.com/us/app/sing-box/id6451272673
 [Sing-Box]: https://github.com/SagerNet/sing-box/releases
 [Strawberry.js]: https://github.com/NiREvil/vless/blob/main/edge/strawberry.js
-[Telegram ProxyIPTesterBot]: https://telegram.me/s/ProxyIPTesterBot
+[Telegram ProxyIPChecker_Bot]: https://telegram.me/ProxyIPChecker_Bot
 [The Darkness]: https://telegram.me/s/ConfigWireguard
 [TERMUX]: https://github.com/termux/termux-app/releases
 [UUID]: https://www.uuidgenerator.net/
