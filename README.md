@@ -415,6 +415,8 @@ https://raw.githubusercontent.com/DarknessShade/Sub/main/V2mix [[DS?]]
 
 https://raw.githubusercontent.com/DarknessShade/Sub/main/Ss
 
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/freedom
+
 https://raw.githubusercontent.com/lagzian/IranConfigCollector/main/Base64.txt
 
 https://raw.githubusercontent.com/lagzian/SS-Collector/refs/heads/main/SS/TrinityBase
@@ -442,6 +444,10 @@ https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/mixed_iran
 https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/vless_iran.txt
 
 https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/ss_iran.txt
+
+https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/V2Ray-Config-By-EbraSha.txt
+
+https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/vmess_configs.txt
 
 https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/ss/ss.txt
 
