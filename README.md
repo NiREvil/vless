@@ -374,11 +374,11 @@ https://yalda.nscl.ir [[Ni?]]
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
 
-https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/index.html [[PI?]]
+https://dev1.irdevs.sbs [[PI?]]
+
+https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/index.html
 
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/ss.txt [[BR?]]
-
-https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/trojan.txt
 
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vmess.txt
 
@@ -394,11 +394,13 @@ https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eterni
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/trojan.txt
 
+https://raw.githubusercontent.com/nscl5/5/refs/heads/main/configs/all.txt [[L5?]]
+
+https://raw.githubusercontent.com/nscl5/5/refs/heads/main/configs/vmess.txt
+
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed [[SB?]]
 
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/python/hysteria2
-
-https://raw.githubusercontent.com/arshiacomplus/eva-sub/refs/heads/main/configs.txt [[AR?]]
 
 https://shadowmere.xyz/api/b64sub [[SW?]]
 
@@ -406,7 +408,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/fragment
 
 https://raw.githubusercontent.com/Mahdi0024/ProxyCollector/master/sub/proxies.txt
 
-https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/mix/sub.html
+https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/mix/sub.html [[AR?]]
 
 https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/vless.html
 
@@ -1719,6 +1721,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [JN?]: https://telegram.me/s/JavidnamanIran
 [KB?]: https://github.com/liketolivefree
 [KV?]: https://telegram.me/s/KevinZakarian
+[L5?]: https://github.com/nscl5/5/
 [LG?]: https://github.com/lagzian/
 [LK?]: https://github.com/liketolivefree
 [PI?]: https://t.me/firewebgroup
@@ -1727,7 +1730,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [MK?]: https://telegram.me/maviks_bot?start=680cff2cb34f9a1f3951470a
 [MS?]: https://github.com/mshojaei77
 [MT?]: https://github.com/MhdiTaheri
-[Ni?]: https://telegram.me/s/F_NiREvil
+[Ni?]: https://telegram.me/F_NiREvil
 [PR?]: https://telegram.me/s/ProxyDaemi
 [SB?]: https://github.com/Surfboardv2ray
 [SR?]: https://github.com/soroushmirzaei/telegram-configs-collector
