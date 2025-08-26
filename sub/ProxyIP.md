@@ -208,6 +208,17 @@ proxyip.vultr.fxxk.dedyn.io
 35.247.124.181
 ```
 
+
+> _Microsoft Limited_
+
+```yaml
+172.206.209.177
+```
+
+```yaml
+154.29.155.249
+```
+
 ## Amazon Technologies Inc
 
 ![rainbow]
@@ -295,6 +306,26 @@ proxyip.vultr.fxxk.dedyn.io
 ### 🇬🇧 United Kingdom
 
 > _London, Amazon Technologies Inc_
+
+```yaml
+13.43.217.212
+```
+
+```yaml
+18.133.198.66
+```
+
+```yaml
+18.133.228.129
+```
+
+```yaml
+13.41.164.243
+```
+
+```yaml
+35.176.187.206
+```
 
 ```yaml
 18.170.77.148
