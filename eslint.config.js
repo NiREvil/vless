@@ -30,6 +30,7 @@ export default [
       'sub/clash-meta.yml',
       'edge/all-in-one.js',
       'edge/LoadBalance.js',
+      'sub/ProxyIP-Daily.md',
       'real address generator/**',
       'boringtun-boringtun-cli-0.5.2/**',
     ],
