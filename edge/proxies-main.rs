@@ -258,20 +258,21 @@ fn write_markdown_file(proxies_by_country: &BTreeMap<String, Vec<(ProxyInfo, u12
         avg_ping
     )?;
 
-    let flag = country_flag(&country);
+    for (country, proxies) in proxies_by_country.iter() {
+        let flag = country_flag(country);
         writeln!(file, "## {} {} ({} proxies)", flag, country, proxies.len())?;
         writeln!(file, "<details open>")?;
         writeln!(file, "<summary>Click to collapse</summary>\n")?;
         writeln!(file, "| IP | Location | ISP | Ping |")?;
         writeln!(file, "|----|----------|-----|------|")?;
 
-        for (info, ping) in proxies {
+        for (info, ping) in proxies.iter() {
             let location = format!("{}, {}", info.region, info.city);
             let emoji = if *ping < 500 { "⚡" } else if *ping < 900 { "🐌" } else { "🦥" };
             writeln!(
                 file,
                 "| `{}` | {} | {} | {} ms {} |",
-                info.ip, info.isp, location, ping, emoji
+                info.ip, location, info.isp, ping, emoji
             )?;
         }
         writeln!(file, "\n</details>\n\n---\n")?;
