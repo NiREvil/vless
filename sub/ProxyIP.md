@@ -56,18 +56,23 @@ proxyip.cmliussss.net
 ```
 ProxyIP.KR.CMLiussss.net
 ```
+
 ```
 ProxyIP.DE.tp2024.CMLiussss.net
 ```
+
 ```
 ProxyIP.US.CMLiussss.net
 ```
+
 ```
 ProxyIP.SG.CMLiussss.net
 ```
+
 ```
 ProxyIP.JP.CMLiussss.net
 ```
+
 ```
 ProxyIP.HK.CMLiussss.net
 ```
@@ -116,7 +121,7 @@ edtproxyip.lzj.pp.ua
 
 پروکسی آی‌پی‌های خودمون رو از این به بعد در این فایل قرار میدیم، آی‌پی‌ها هر 48 ساعت یک‌بار اتومات اسکن و تست شده و اینجا لیست میشن به تفکیک لوکیشن آی‌پی، دقیق‌ترین تست پینگ و وضعیت آی‌پی که توسط خود کلادفلر انجام میشه، تعیین کردیم که فقط آی‌پی‌های که پورت ۴۴۳ دارن لیست بشن و همچنین فقط تست فقط از آی‌پی‌ ISP‌های مطرح دنیا مثل:  
 Google, Amazon, Microsoft, Cloudflare, OVH, Hetzner, Tencent, Akami and ...  
-انجام بشه. 
+انجام بشه.
 
 - **[Which one is the best??](./ProxyIP-Daily.md)**
 
