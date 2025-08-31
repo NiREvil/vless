@@ -1,6 +1,5 @@
 [package]
 name = "RScanner"
-path = "edge/proxies-main.rs"
 version = "0.1.0"
 edition = "2021"
 
@@ -15,3 +14,7 @@ chrono = "0.4"
 futures = "0.3"
 colored = "2"
 anyhow = "1"
+
+[[bin]]
+name = "RScanner"
+path = "edge/proxies-main.rs"
