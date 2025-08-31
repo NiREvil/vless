@@ -7,7 +7,7 @@ on:
       - '**/summer.*'
       - 'sub/*.txt'
   schedule:
-    - cron: '0 12 * * *'
+    - cron: '0 16 * * *'
   workflow_dispatch:
 
 permissions:
@@ -31,7 +31,6 @@ jobs:
         with:
           python-version: '3.13'
           cache: pip
-          architecture: x64
 
       - name: Cache Python packages
         uses: actions/cache@v4
@@ -58,7 +57,7 @@ jobs:
 
           if ! git diff --quiet || ! git diff --staged --quiet; then
             git commit -m "WireGuard configs harvest at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" \
-                       -m "The new wireguard configurations were obtained from Telegram channels --Diwire and --FreeWireGuard, And subsequently added to the list corresponding to their respective clients." \
+                       -m "The new wireguard configurations were obtained from Telegram channels, And subsequently added to the list corresponding to their respective clients." \
                        --author="Diana-Cl <135276904+Diana-Cl@users.noreply.github.com>"
             git push || exit 1
           else
