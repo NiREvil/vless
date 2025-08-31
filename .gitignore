@@ -9,3 +9,6 @@ package-lock.json
 *.exe
 *.tar.gz
 *.db
+
+# Ignore the build output directory
+target/
