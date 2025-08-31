@@ -1,0 +1,41 @@
+name: Rust Proxy Scanner
+
+on:
+  workflow_dispatch: 
+  schedule:
+    - cron: '0 */24 * * *' 
+
+jobs:
+  update-proxies:
+    runs-on: ubuntu-latest
+    name: Scan and test proxies
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GIT_TOKEN }}
+
+    - name: Install Rust Toolchain
+      uses: dtolnay/rust-toolchain@stable
+
+    - name: Build Rust Project (Release)
+      run: cargo build --release
+
+    - name: Give Execute Permission to Binary
+      run: chmod +x ./target/release/RScanner
+
+    - name: 💀 Run Scanner
+      run: ./target/release/RScanner
+
+    - name: Commit and Push if Changed
+      if: ${{ success() }}
+      run: |
+        git config --global user.name "NET Sentinel Bot"
+        git config --global user.email "224584266+NetSentinel-Bot@users.noreply.github.com"
+        git add sub/ProxyIP-Daily.md
+        git diff --cached --quiet || git commit -m "Proxy IPs test completion at: $(TZ='Asia/Tehran' date '+%H:%M:%S')"
+        git -c committer.name="Diana-Cl" -c committer.email="135276904+Diana-Cl@users.noreply.github.com" commit --amend --no-edit
+        git push origin main --force
+      shell: bash
