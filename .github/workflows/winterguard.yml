@@ -8,7 +8,7 @@ on:
       - 'sub/*.yml'
       - 'edge/assets/*.yml'
   schedule:
-    - cron: '0 12 * * *'
+    - cron: '0 14 * * *'
   workflow_dispatch:
 
 jobs:
@@ -35,7 +35,6 @@ jobs:
           python-version: '3.13'
           cache: pip
 
-      # Creating a cache for increased speed and performance, also saving resources
       - name: Cache Python packages
         uses: actions/cache@v4
         with:
@@ -49,20 +48,20 @@ jobs:
           python -m pip install --upgrade pip || exit 1
           pip install -r edge/requirements.txt || exit 1
        
-      # Run ;⁠)
+      # Run 💀
       - name: Run config generation script
         run: |
           python edge/winterguard.py 2>&1 || { echo "Script failed with exit code $?"; exit 1; }
 
       - name: Commit and push config files
         run: |
-          git config --local user.name "Github Actions"
-          git config --local user.email "actions@github.com"
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions-bot@users.noreply.github.com"
                     
           if git status --porcelain | grep -q "sub/clash-meta-wg.yml" || git status --porcelain; then
             echo "Changes detected. Committing and pushing."
             git add sub/clash-meta-wg.yml
-            git commit -m "Auto: Update clash-wg configurations at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" -m "Wireguard private key, addresses, reserved, and all IPs have been renewed" --author="Diana-Cl <135276904+Diana-Cl@users.noreply.github.com>"
+            git commit -m "Auto: Update clash-wireGuard configurations at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" -m "Wireguard private key, addresses, reserved, and all IPs have been renewed" --author="Diana-Cl <135276904+Diana-Cl@users.noreply.github.com>"
             git push
           else
             echo "No changes detected in config files."
