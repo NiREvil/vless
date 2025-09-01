@@ -16,33 +16,45 @@ use native_tls::TlsConnector as NativeTlsConnector;
 
 const DEFAULT_PROXY_FILE: &str = "edge/assets/list-september-lite.txt";
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
-const DEFAULT_MAX_CONCURRENT: usize = 20;
+const DEFAULT_MAX_CONCURRENT: usize = 30;
 const DEFAULT_TIMEOUT_SECONDS: u64 = 8;
 const REQUEST_DELAY_MS: u64 = 500;
 
 const GOOD_ISPS: &[&str] = &[
+    "OVH",
+    "M247",
+    "gmbh",
+    "GCore",
+    "IONOS",
     "Google",
     "Amazon",
-    "Cloudflare",
-    "Rackspace",
-    "M247",
-    "DataCamp",
-    "Total Uptime",
-    "gmbh",
+    "NetLab",
     "Akamai",
-    "Tencent",
-    "The Empire",
-    "OVH",
-    "ByteDance",
-    "Starlink",
-    "3NT SOLUTION",
-    "WorkTitans B.V.",
-    "PQ Hosting",
-    "Multacom Corporation",
-    "The Constant Company",
     "G-Core",
-    "IONOS",
+    "Turunc",
+    "HostLAB",
+    "Tencent",
+    "Constant",
+    "Multacom",
+    "HostPapa",
+    "Ultahost",
+    "DataCamp",
+    "Hypercore",
+    "ByteDance",
+    "Rackspace",
+    "Amazoncom",
+    "Online Ltd",
+    "The Empire",
+    "Cloudflare",
+    "PQ Hosting",
+    "White Label",
+    "Total Uptime",
+    "3NT SOLUTION",
+    "Plant Holding",
+    "IROKO Networks",
+    "WorkTitans B.V",
     "Stark Industries",
+    "Private Customer",
 ];
 
 #[derive(Parser, Clone)]
@@ -217,7 +229,7 @@ fn write_markdown_file(proxies_by_country: &BTreeMap<String, Vec<(ProxyInfo, u12
     };
 
     let now = Utc::now();
-    let next_update = now + ChronoDuration::days(2); 
+    let next_update = now + ChronoDuration::days(1); 
     let last_updated_str = now.format("%a, %d %b %Y %H:%M:%S").to_string();
     let next_update_str = next_update.format("%a, %d %b %Y %H:%M:%S").to_string();
 
@@ -230,22 +242,22 @@ fn write_markdown_file(proxies_by_country: &BTreeMap<String, Vec<(ProxyInfo, u12
 >
 > **Daily Fresh Proxies**
 >
-> Only **high-quality**, tested proxies from **top ISPs** and data centers worldwide such as Google, Cloudflare, Amazon, Tencent, OVH, DataCamp.
+> Only **high-quality**, tested proxies from **top ISPs** and Data centers worldwide such as Google, Cloudflare, Amazon, Tencent, OVH, DataCamp ...
 >
 > <Br/>
 >
 > **Automatically updated every day**
 >
-> **Last updated:** {} <br/>
-> **Next update:** {}
+> Last updated: **{}** <br/>
+> Next update: **{}**
 >
 > <br/>
 > 
 > **Summary**
 > 
-> **Total Active Proxies:** {} <br/>
-> **Countries Covered:** {} <br/> 
-> **Average Ping:** {} ms
+> Total Active Proxies: **{}** <br/>
+> Countries Covered: **{}** <br/> 
+> Average Ping: **{} ms**
 >
 > <br/>
 
@@ -268,7 +280,7 @@ fn write_markdown_file(proxies_by_country: &BTreeMap<String, Vec<(ProxyInfo, u12
 
         for (info, ping) in proxies.iter() {
             let location = format!("{}, {}", info.region, info.city);
-            let emoji = if *ping < 500 { "⚡" } else if *ping < 900 { "🐌" } else { "🦥" };
+            let emoji = if *ping < 700 { "⚡" } else if *ping < 1000 { "🐌" } else { "🦥" };
             writeln!(
                 file,
                 "| `{}` | {} | {} | {} ms {} |",
