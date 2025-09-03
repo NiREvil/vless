@@ -1,28 +1,50 @@
 //profile-title: base64:SDIgT04gU0lOR0JPWA==
-//profile-update-interval: 12
+//profile-update-interval: 8
 //subscription-userinfo: upload=64424500944; download=45097156608; total=1073741824000; expire=1762646400
 //support-url: https://telegram.me/s/F_NiREvil
 //profile-web-page-url: https://telegram.me/s/NiREvil_GP
 
 {
   "dns": {
-    "final": "direct-dns",
-    "independent_cache": true,
+    "servers": [
+      {
+        "type": "tcp",
+        "tag": "direct-dns",
+        "server": "8.8.8.8"
+      },
+      {
+        "type": "https",
+        "tag": "proxy-dns",
+        "detour": "select",
+        "server": "8.8.8.8"
+      },
+      {
+        "type": "local",
+        "tag": "local-dns",
+        "detour": "direct"
+      }
+    ],
     "rules": [
       {
         "clash_mode": "Global",
         "server": "proxy-dns"
       },
       {
-        "server": "direct-dns",
-        "source_ip_cidr": ["172.19.0.0/30", "fdfe:dcba:9876::1/126"]
+        "source_ip_cidr": [
+          "172.19.0.0/30",
+          "fdfe:dcba:9876::1/126"
+        ],
+        "server": "direct-dns"
       },
       {
         "clash_mode": "Direct",
         "server": "direct-dns"
       },
       {
-        "rule_set": ["geosite-ir", "geoip-ir"],
+        "rule_set": [
+          "geosite-ir",
+          "geoip-ir"
+        ],
         "server": "direct-dns"
       },
       {
@@ -30,50 +52,38 @@
         "server": "direct-dns"
       }
     ],
-    "servers": [
-      {
-        "server": "8.8.8.8",
-        "tag": "direct-dns",
-        "type": "tcp"
-      },
-      {
-        "detour": "select",
-        "server": "8.8.8.8",
-        "tag": "proxy-dns",
-        "type": "https"
-      },
-      {
-        "detour": "direct",
-        "tag": "local-dns",
-        "type": "local"
-      }
-    ],
-    "strategy": "prefer_ipv4"
+    "final": "direct-dns",
+    "strategy": "prefer_ipv4",
+    "independent_cache": true
   },
   "inbounds": [
     {
-      "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
-      "auto_route": true,
+      "type": "tun",
       "mtu": 9000,
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "stack": "system",
       "platform": {
         "http_proxy": {
           "enabled": true,
           "server": "127.0.0.1",
           "server_port": 2080
         }
-      },
-      "stack": "system",
-      "type": "tun"
+      }
     },
     {
+      "type": "mixed",
       "listen": "127.0.0.1",
-      "listen_port": 2080,
-      "type": "mixed"
+      "listen_port": 2080
     }
   ],
   "outbounds": [
     {
-      "default": "auto",
+      "type": "selector",
+      "tag": "select",
       "outbounds": [
         "auto",
         "🇫🇷 France",
@@ -85,11 +95,11 @@
         "🇨🇭 Switzerland-2",
         "direct"
       ],
-      "tag": "select",
-      "type": "selector"
+      "default": "auto"
     },
     {
-      "interval": "10m",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
         "🇫🇷 France",
         "🇫🇷 France-2",
@@ -99,165 +109,127 @@
         "🇨🇭 Switzerland",
         "🇨🇭 Switzerland-2"
       ],
-      "tag": "auto",
-      "tolerance": 50,
-      "type": "urltest",
-      "url": "http://www.gstatic.com/generate_204"
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m0s",
+      "tolerance": 50
     },
     {
-      "obfs": {
-        "password": "\u0026O#28YB5qK!5t#U",
-        "type": "salamander"
-      },
-      "password": "freehomesvpnchannel3",
+      "type": "hysteria2",
+      "tag": "🇫🇷 France",
       "server": "62.60.157.181",
       "server_port": 46914,
-      "tag": "🇫🇷 France",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.google.com"
-      },
-      "type": "hysteria2"
-    },
-    {
       "obfs": {
-        "password": "\u0026O#28YB5qK!5t#U",
-        "type": "salamander"
+        "type": "salamander",
+        "password": "\u0026O#28YB5qK!5t#U"
       },
       "password": "freehomesvpnchannel3",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇫🇷 France-2",
       "server": "channel1.saghetalaie.homes",
       "server_port": 46914,
-      "tag": "🇫🇷 France-2",
+      "obfs": {
+        "type": "salamander",
+        "password": "\u0026O#28YB5qK!5t#U"
+      },
+      "password": "freehomesvpnchannel3",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "www.google.com"
-      },
-      "type": "hysteria2"
+        "server_name": "www.google.com",
+        "insecure": true
+      }
     },
     {
-      "obfs": {
-        "password": "KevinZakarian",
-        "type": "salamander"
-      },
-      "password": "@KevinZakarian",
+      "type": "hysteria2",
+      "tag": "🇺🇸 USA",
       "server": "129.212.182.3",
       "server_port": 8443,
-      "tag": "🇺🇸 USA",
+      "obfs": {
+        "type": "salamander",
+        "password": "KevinZakarian"
+      },
+      "password": "@KevinZakarian",
       "tls": {
         "enabled": true,
         "insecure": true
-      },
-      "type": "hysteria2"
+      }
     },
     {
-      "obfs": {
-        "password": "FarzanehDreams",
-        "type": "salamander"
-      },
-      "password": "5oITDYnNW7",
+      "type": "hysteria2",
+      "tag": "🇩🇪 Germany",
       "server": "45.138.99.213",
       "server_port": 8443,
-      "tag": "🇩🇪 Germany",
+      "obfs": {
+        "type": "salamander",
+        "password": "FarzanehDreams"
+      },
+      "password": "5oITDYnNW7",
       "tls": {
         "enabled": true,
         "insecure": true
-      },
-      "type": "hysteria2"
+      }
     },
     {
-      "obfs": {
-        "password": "@KevinZakarian",
-        "type": "salamander"
-      },
-      "password": "@KevinZakarian",
+      "type": "hysteria2",
+      "tag": "🇨🇭 Switzerland",
       "server": "kevin.vpny.online",
       "server_port": 11001,
-      "tag": "🇨🇭 Switzerland",
+      "obfs": {
+        "type": "salamander",
+        "password": "@KevinZakarian"
+      },
+      "password": "@KevinZakarian",
       "tls": {
         "enabled": true,
         "insecure": true
-      },
-      "type": "hysteria2"
+      }
     },
     {
-      "obfs": {
-        "password": "@KevinZakarian",
-        "type": "salamander"
-      },
-      "password": "@KevinZakarian",
+      "type": "hysteria2",
+      "tag": "🇨🇭 Switzerland-2",
       "server": "kevin.vpny.online",
       "server_port": 11002,
-      "tag": "🇨🇭 Switzerland-2",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "type": "hysteria2"
-    },
-    {
       "obfs": {
-        "password": "KevinZakarian",
-        "type": "salamander"
+        "type": "salamander",
+        "password": "@KevinZakarian"
       },
       "password": "@KevinZakarian",
-      "server": "172.233.46.5",
-      "server_port": 8443,
-      "tag": "🇳🇱 Netherlands",
       "tls": {
         "enabled": true,
         "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇳🇱 Netherlands",
+      "server": "172.233.46.5",
+      "server_port": 8443,
+      "obfs": {
+        "type": "salamander",
+        "password": "KevinZakarian"
       },
-      "type": "hysteria2"
+      "password": "@KevinZakarian",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
     },
     {
-      "tag": "direct",
-      "type": "direct"
+      "type": "direct",
+      "tag": "direct"
     },
     {
-      "tag": "block",
-      "type": "block"
+      "type": "block",
+      "tag": "block"
     }
   ],
   "route": {
-    "auto_detect_interface": true,
-    "final": "select",
-    "default_domain_resolver": {
-      "server": "local-dns"
-    },
-    "rule_set": [
-      {
-        "download_detour": "direct",
-        "tag": "geosite-ads",
-        "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs"
-      },
-      {
-        "download_detour": "direct",
-        "tag": "geosite-private",
-        "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs"
-      },
-      {
-        "download_detour": "direct",
-        "tag": "geosite-ir",
-        "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ir.srs"
-      },
-      {
-        "download_detour": "direct",
-        "tag": "geoip-private",
-        "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/private.srs"
-      },
-      {
-        "download_detour": "direct",
-        "tag": "geoip-ir",
-        "type": "remote",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/ir.srs"
-      }
-    ],
     "rules": [
       {
         "action": "sniff"
@@ -271,17 +243,57 @@
         "outbound": "select"
       },
       {
-        "action": "hijack-dns",
-        "protocol": "dns"
+        "protocol": "dns",
+        "action": "hijack-dns"
       },
       {
-        "outbound": "direct",
-        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"]
+        "rule_set": [
+          "geoip-private",
+          "geosite-private",
+          "geosite-ir",
+          "geoip-ir"
+        ],
+        "outbound": "direct"
       },
       {
-        "action": "reject",
-        "rule_set": "geosite-ads"
+        "rule_set": "geosite-ads",
+        "action": "reject"
       }
-    ]
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geosite-ads",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-private",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-ir",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ir.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-private",
+        "url" "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/private.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-ir",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/ir.srs",
+        "download_detour": "direct"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true,
+    "default_domain_resolver": "local-dns"
   }
 }
