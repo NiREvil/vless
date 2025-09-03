@@ -22,26 +22,32 @@
 
 > _This is a high-level domain with specific IPs._
 
-```
+```POV-Ray SDL
 nima.nscl.ir
 ```
 
 🇹🇷 **Turkey, Istanbul, Stark Industries, PQ Hosting**
 
-```
+```POV-Ray SDL
 turk.radicalization.ir
 ```
 
 🇮🇷 **Across Iran, BPB LTD**
 
-```
+```POV-Ray SDL
 bpb.yousef.isegaro.com
 ```
 
 🌎 **Worldwide IPs** [^2]
 
-```
+```POV-Ray SDL
 proxyip.cmliussss.net
+```
+
+🇱🇨 **IPv6 proxies**
+
+```POV-Ray SDL
+ProxyIP.2602-fc59-b0-64--6812-29be.ip.090227.xyz
 ```
 
 <details>
@@ -51,65 +57,65 @@ proxyip.cmliussss.net
 
 🇰🇷 **South Korea, Germany, USA, Singapore, Japan, Hong Kong**
 
-> IPs provided from Korea and ...
+> _IPs provided from Korea and ..._
 
-```
+```POV-Ray SDL
 ProxyIP.KR.CMLiussss.net
 ```
 
-```
+```POV-Ray SDL
 ProxyIP.DE.tp2024.CMLiussss.net
 ```
 
-```
+```POV-Ray SDL
 ProxyIP.US.CMLiussss.net
 ```
 
-```
+```POV-Ray SDL
 ProxyIP.SG.CMLiussss.net
 ```
 
-```
+```POV-Ray SDL
 ProxyIP.JP.CMLiussss.net
 ```
 
-```
+```POV-Ray SDL
 ProxyIP.HK.CMLiussss.net
 ```
 
 🇸🇬 **Singapore**
 
-```
+```POV-Ray SDL
 cdn-all.xn--b6gac.eu.org
 ```
 
 🎌 **Global**
 
-```
+```POV-Ray SDL
 my-telegram-is-herocore.onecf.eu.org
 ```
 
 🏳️ **Origin Unknown – Possibly Oracle Cloud**
 
-```
+```POV-Ray SDL
 proxyip.oracle.fxxk.dedyn.io
 ```
 
 🏳️‍🌈 **Origin Unknown – Possibly Digital Ocean LLC**
 
-```
+```POV-Ray SDL
 proxyip.digitalocean.hw.090227.xyz
 ```
 
 🏳️‍🌈 **Origin Unknown – Possibly Vultr Holdings LLC**
 
-```
+```POV-Ray SDL
 proxyip.vultr.fxxk.dedyn.io
 ```
 
 🏳️‍🌈 **Not Specified**
 
-```
+```POV-Ray SDL
 edtproxyip.lzj.pp.ua
 ```
 
@@ -119,11 +125,12 @@ edtproxyip.lzj.pp.ua
 
 ## Daily Scanned Proxies
 
-پروکسی آی‌پی‌های خودمون رو از این به بعد در این فایل قرار میدیم، آی‌پی‌ها هر 48 ساعت یک‌بار اتومات اسکن و تست شده و اینجا لیست میشن به تفکیک لوکیشن آی‌پی، دقیق‌ترین تست پینگ و وضعیت آی‌پی که توسط خود کلادفلر انجام میشه، تعیین کردیم که فقط آی‌پی‌های که پورت ۴۴۳ دارن لیست بشن و همچنین فقط تست فقط از آی‌پی‌ ISP‌های مطرح دنیا مثل:  
-Google, Amazon, Microsoft, Cloudflare, OVH, Hetzner, Tencent, Akami and ...  
-انجام بشه.
+پروکسی آی‌پی‌های خودمون رو از این به بعد در این فایل قرار میدیم، آی‌پی‌ها هر 24 ساعت یک‌بار اتومات اسکن و تست شده و اینجا لیست میشن به تفکیک لوکیشن، تست پینگ و وضعیت آی‌پی و اطلاعات اون توسط خود کلادفلر انجام میشه، تعیین کردیم که فقط آی‌پی‌های که پورت ۴۴۳ دارن لیست بشن و همچنین فقط پروکسی آی‌پی‌ از ISP‌های مطرح دنیا مانند:   
+_Google, Amazon, Microsoft, Cloudflare, OVH, Hetzner, Tencent, Akami and ..._  
 
-- **[Which one is the best??](./ProxyIP-Daily.md)**
+لیست بشن.
+
+- **[برای مشاهده لیست پروکسی آی‌پی‌های روزانه اینجا کلیک کنید](./ProxyIP-Daily.md)**
 
 ![rainbow]
 
@@ -151,7 +158,7 @@ Google, Amazon, Microsoft, Cloudflare, OVH, Hetzner, Tencent, Akami and ...
 
 <br/>
 
-- در این بخش می‌تونید پروکسی‌های دسته‌بندی‌شده بر اساس لوکیشن رو مشاهده کنید.
+- در این بخش می‌تونید پروکسی‌های دسته‌بندی‌شده بر اساس کشور مقصد رو مشاهده کنید.
 
 - **Available Countries:**
 - [🌠 Daily Scanned](./ProxyIP-Daily.md)
@@ -220,9 +227,9 @@ Google, Amazon, Microsoft, Cloudflare, OVH, Hetzner, Tencent, Akami and ...
 - [🇺🇿 Uzbekistan](./country_proxies/UZ.txt)
 - [🇻🇳 Vietnam](./country_proxies/VN.txt)
 
-همچنین آیا به لیست آی‌پی‌های کلادفلر بر اساس تفکیک کشورها نیاز دارید؟؟ [CloudFlare ip ranges by Country][3] ?
+آیا همچنین به لیست آی‌پی‌های کلادفلر بر اساس تفکیک کشورها نیاز دارید؟؟ [CloudFlare ip ranges by Country][3] ?
 
-⚠️ **Note:** Always ensure you have proper authorization before using proxy services.
+⚠️ _**Note:** Always ensure you have proper authorization before using proxy services._
 
 </details>
 
@@ -235,8 +242,8 @@ Google, Amazon, Microsoft, Cloudflare, OVH, Hetzner, Tencent, Akami and ...
 <div dir="rtl">
 
 - آخرین نسخه اسکریپت ساخت کانفیگ VLESS روی Cloudflare: [[ZiZifn][zi]]
-- تولیدکننده لینک ساب با مخازن آی‌پی تمیز برای کانفیگ‌های VLESS مبتنی بر Cloudflare Worker and Pages: [[Harmony][hr]]
-- یک پنل گرافیکی جهت دریافت کانفیگ و سابسکریپشن و تنظیمات مختلف و سایر امکانات: [[Bia Pain Bache][BPB]]
+- ساخت لینک ساب حاوی مخازن آی‌پی‌های تمیز کلادفلر برای کانفیگ‌های VLESS مبتنی بر Cloudflare Worker and Pages: [[Harmony][hr]]
+- پنل گرافیکی جهت دریافت کانفیگ و سابسکریپشن و تنظیمات مختلف و سایر امکانات: [[Bia Pain Bache][BPB]]
 
 ![rainbow]
 
@@ -244,7 +251,7 @@ Google, Amazon, Microsoft, Cloudflare, OVH, Hetzner, Tencent, Akami and ...
 
 ## How to test proxyIPs
 
-### ۱. تست و اسکن پروکسی آی‌پی با ابزارهای آنلاین
+### ۱. اسکن و تست پروکسی آی‌پی با ابزارهای پیشرفته
 
 برای تست و بررسی پروکسی آی‌پی می‌تونید از این ابزارها استفاده کنید:
 
