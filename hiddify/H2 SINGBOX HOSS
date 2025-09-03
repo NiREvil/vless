@@ -1,8 +1,8 @@
 //profile-title: base64:SDIgT04gU0lOR0JPWA==
 //profile-update-interval: 12
 //subscription-userinfo: upload=64424500944; download=45097156608; total=1073741824000; expire=1762646400
-//support-url: https://t.me/F_NiREvil
-//profile-web-page-url: https://github.com/NiREvil/vless
+//support-url: https://telegram.me/s/F_NiREvil
+//profile-web-page-url: https://telegram.me/s/NiREvil_GP
 
 {
   "dns": {
@@ -40,7 +40,7 @@
         "detour": "select",
         "server": "8.8.8.8",
         "tag": "proxy-dns",
-        "type": "tcp"
+        "type": "https"
       },
       {
         "detour": "direct",
@@ -76,24 +76,28 @@
       "default": "auto",
       "outbounds": [
         "auto",
-        "🇫🇷 — Paris",
-        "🇫🇷 — Marseille",
-        "🇺🇸 — Atlanta",
-        "🇳🇱 — Rotterdam",
-        "🇩🇪 — Berlin",
+        "🇫🇷 France",
+        "🇫🇷 France-2",
+        "🇺🇸 USA",
+        "🇩🇪 Germany",
+        "🇳🇱 Netherlands",
+        "🇨🇭 Switzerland",
+        "🇨🇭 Switzerland-2",
         "direct"
       ],
       "tag": "select",
       "type": "selector"
     },
     {
-      "interval": "10m0s",
+      "interval": "10m",
       "outbounds": [
-        "🇫🇷 — Paris",
-        "🇫🇷 — Marseille",
-        "🇺🇸 — Atlanta",
-        "🇳🇱 — Rotterdam",
-        "🇩🇪 — Berlin"
+        "🇫🇷 France",
+        "🇫🇷 France-2",
+        "🇺🇸 USA",
+        "🇩🇪 Germany",
+        "🇳🇱 Netherlands",
+        "🇨🇭 Switzerland",
+        "🇨🇭 Switzerland-2"
       ],
       "tag": "auto",
       "tolerance": 50,
@@ -108,7 +112,7 @@
       "password": "freehomesvpnchannel3",
       "server": "62.60.157.181",
       "server_port": 46914,
-      "tag": "🇫🇷 — Paris",
+      "tag": "🇫🇷 France",
       "tls": {
         "enabled": true,
         "insecure": true,
@@ -124,7 +128,7 @@
       "password": "freehomesvpnchannel3",
       "server": "channel1.saghetalaie.homes",
       "server_port": 46914,
-      "tag": "🇫🇷 — Marseille",
+      "tag": "🇫🇷 France-2",
       "tls": {
         "enabled": true,
         "insecure": true,
@@ -140,22 +144,7 @@
       "password": "@KevinZakarian",
       "server": "129.212.182.3",
       "server_port": 8443,
-      "tag": "🇺🇸 — Atlanta",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      },
-      "type": "hysteria2"
-    },
-    {
-      "obfs": {
-        "password": "KevinZakarian",
-        "type": "salamander"
-      },
-      "password": "@KevinZakarian",
-      "server": "172.233.46.5",
-      "server_port": 8443,
-      "tag": "🇳🇱 — Rotterdam",
+      "tag": "🇺🇸 USA",
       "tls": {
         "enabled": true,
         "insecure": true
@@ -170,7 +159,52 @@
       "password": "5oITDYnNW7",
       "server": "45.138.99.213",
       "server_port": 8443,
-      "tag": "🇩🇪 — Berlin",
+      "tag": "🇩🇪 Germany",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "type": "hysteria2"
+    },
+    {
+      "obfs": {
+        "password": "@KevinZakarian",
+        "type": "salamander"
+      },
+      "password": "@KevinZakarian",
+      "server": "kevin.vpny.online",
+      "server_port": 11001,
+      "tag": "🇨🇭 Switzerland",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "type": "hysteria2"
+    },
+    {
+      "obfs": {
+        "password": "@KevinZakarian",
+        "type": "salamander"
+      },
+      "password": "@KevinZakarian",
+      "server": "kevin.vpny.online",
+      "server_port": 11002,
+      "tag": "🇨🇭 Switzerland-2",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "type": "hysteria2"
+    },
+    {
+      "obfs": {
+        "password": "KevinZakarian",
+        "type": "salamander"
+      },
+      "password": "@KevinZakarian",
+      "server": "172.233.46.5",
+      "server_port": 8443,
+      "tag": "🇳🇱 Netherlands",
       "tls": {
         "enabled": true,
         "insecure": true
@@ -189,6 +223,9 @@
   "route": {
     "auto_detect_interface": true,
     "final": "select",
+    "default_domain_resolver": {
+      "server": "local-dns"
+    },
     "rule_set": [
       {
         "download_detour": "direct",
