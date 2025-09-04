@@ -93,6 +93,7 @@
         "🇳🇱 Netherlands",
         "🇨🇭 Switzerland",
         "🇨🇭 Switzerland-2",
+        "🇨🇭 Switzerland-2",
         "direct"
       ],
       "default": "auto"
@@ -107,7 +108,8 @@
         "🇩🇪 Germany",
         "🇳🇱 Netherlands",
         "🇨🇭 Switzerland",
-        "🇨🇭 Switzerland-2"
+        "🇨🇭 Switzerland-2",
+        "🇨🇭 Switzerland-3"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m0s",
@@ -195,6 +197,21 @@
       "tag": "🇨🇭 Switzerland-2",
       "server": "kevin.vpny.online",
       "server_port": 11002,
+      "obfs": {
+        "type": "salamander",
+        "password": "@KevinZakarian"
+      },
+      "password": "@KevinZakarian",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇨🇭 Switzerland-3",
+      "server": "kevin.vpny.online",
+      "server_port": 11003,
       "obfs": {
         "type": "salamander",
         "password": "@KevinZakarian"
