@@ -13,7 +13,7 @@
         "server": "8.8.8.8"
       },
       {
-        "type": "https",
+        "type": "tcp",
         "tag": "proxy-dns",
         "detour": "select",
         "server": "8.8.8.8"
@@ -52,7 +52,7 @@
         "server": "direct-dns"
       }
     ],
-    "final": "direct-dns",
+    "final": "local-dns",
     "strategy": "prefer_ipv4",
     "independent_cache": true
   },
@@ -86,15 +86,15 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "direct",
         "🇫🇷 France",
         "🇫🇷 France-2",
         "🇺🇸 USA",
         "🇩🇪 Germany",
-        "🇳🇱 Netherlands",
         "🇨🇭 Switzerland",
         "🇨🇭 Switzerland-2",
-        "🇨🇭 Switzerland-2",
-        "direct"
+        "🇨🇭 Switzerland-3",
+        "🇳🇱 Netherlands"
       ],
       "default": "auto"
     },
@@ -106,10 +106,10 @@
         "🇫🇷 France-2",
         "🇺🇸 USA",
         "🇩🇪 Germany",
-        "🇳🇱 Netherlands",
         "🇨🇭 Switzerland",
         "🇨🇭 Switzerland-2",
-        "🇨🇭 Switzerland-3"
+        "🇨🇭 Switzerland-3",
+        "🇳🇱 Netherlands"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m0s",
@@ -225,11 +225,11 @@
     {
       "type": "hysteria2",
       "tag": "🇳🇱 Netherlands",
-      "server": "172.233.46.5",
-      "server_port": 8443,
+      "server": "kevin.vpny.online",
+      "server_port": 11004,
       "obfs": {
         "type": "salamander",
-        "password": "KevinZakarian"
+        "password": "@KevinZakarian"
       },
       "password": "@KevinZakarian",
       "tls": {
