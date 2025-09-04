@@ -12,6 +12,7 @@ jobs:
   sync_latest_from_upstream:
     name: Sync latest commits from upstream repo
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     if: ${{ github.event.repository.fork }}
 
     steps:
@@ -19,6 +20,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0  
 
       - name: Configure Git
         run: |
@@ -35,8 +37,16 @@ jobs:
           target_repo_token: ${{ secrets.GITHUB_TOKEN }}
           test_mode: false
 
-      - name: Sync check
-        if: failure()
+      - name: Handle merge conflicts
+        if: failure() && steps.sync.conclusion == 'failure'
+        run: |
+          echo "⚠️ Merge conflicts detected!"
+          echo "Please resolve conflicts manually in your fork."
+          echo "After resolving conflicts, re-run this workflow."
+          exit 1
+
+      - name: General sync failure
+        if: failure() && steps.sync.conclusion != 'failure'
         run: |
           echo "[Error] Due to a change in the workflow file of the upstream repository, GitHub has automatically suspended the scheduled automatic update. You need to manually sync your fork."
           exit 1
@@ -45,4 +55,5 @@ jobs:
         if: success()
         run: |
           echo "✅ Successfully synced with upstream repository!"
-          echo "🔄 Your fork is now up to date with the latest changes."
+          echo "🔄 Your fork is now up to date with NiREvil/vless"
+          echo "📅 Sync completed at: $(date)"
