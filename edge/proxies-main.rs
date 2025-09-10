@@ -53,7 +53,7 @@ const GOOD_ISPS: &[&str] = &[
     "3NT SOLUTION",
     "Plant Holding",
     "IROKO Networks",
-    "WorkTitans B.V",
+    "WorkTitans",
     "Stark Industries",
     "Private Customer",
 ];
