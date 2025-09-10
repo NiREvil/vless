@@ -11,8 +11,8 @@
 >
 > <p><b>Auto-updated daily, without exception</b></p>
 >
-> <b>Last updated:</b> Wed, 10 Sep 2025 22:17:06 <br/>
-> <b>Next update:</b> Thu, 11 Sep 2025 22:17:06
+> <b>Last updated:</b> Wed, 10 Sep 2025 22:17:06 – IRN <br/>
+> <b>Next update:</b> Thu, 11 Sep 2025 22:17:06 – IRN
 >
 > <br/>
 > 
@@ -215,10 +215,7 @@
 | <pre><code>62.60.245.255</code></pre> | Hesse, Frankfurt am Main | Hypercore Ltd | 802 ms ⚡ |
 | <pre><code>185.106.93.146</code></pre> | Hesse, Frankfurt am Main | Hypercore Ltd | 826 ms ⚡ |
 | <pre><code>91.103.252.181</code></pre> | Hesse, Frankfurt am Main | Hypercore Ltd | 880 ms ⚡ |
-| <pre><code>3.68.128.205</code></pre> | Hesse, Frankfurt am Main | A100 ROW GmbH | 1139 ms 🐌 |
-| <pre><code>62.60.244.40</code></pre> | Hesse, Frankfurt am Main | Hypercore Ltd | 1694 ms 🦥 |
 | <pre><code>3.68.128.205</code></pre> | Hesse, Frankfurt am Main | A100 ROW GmbH | 938 ms ⚡ |
-| <pre><code>5.252.118.97</code></pre> | Hesse, Frankfurt am Main | Hypercore Ltd | 1648 ms 🦥 |
 | <pre><code>2a05:d014:ed:9600:f52b:ab01:6bb:bc9d</code></pre> | Hesse, Frankfurt am Main | Amazon Data Services Ireland Ltd | 1224 ms 🐌 |
 | <pre><code>3.68.128.205</code></pre> | Hesse, Frankfurt am Main | A100 ROW GmbH | 1226 ms 🐌 |
 | <pre><code>217.160.216.30</code></pre> | Hesse, Usingen | IONOS SE | 1227 ms 🐌 |
@@ -477,53 +474,13 @@
 <details open>
 <summary>Click to collapse</summary>
 
-|   IP    |    Location     | ISP | Ping |
-| :-------| :-------------- |-----|------|
+|   IP    |   Location    | ISP | Ping |
+| :-------| :------------ |-----|------|
 | <pre><code>104.248.165.18</code></pre> | England, London | DigitalOcean, LLC | 963 ms ⚡ |
 | <pre><code>18.170.77.148</code></pre> | England, London | Amazon Data Services UK | 1029 ms 🐌 |
 | <pre><code>2a01:7e00::f03c:93ff:fec2:819</code></pre> | England, London | Linode, LLC | 507 ms ⚡ |
 | <pre><code>104.248.174.139</code></pre> | England, London | DigitalOcean, LLC | 508 ms ⚡ |
-| <pre><code>2a01:7e00::f03c:93ff:fec2:851</code></pre> | England, London | Linode, LLC | 1059 ms 🐌 |
-| <pre><code>2a01:7e00::f03c:93ff:fec2:8dc</code></pre> | England, London | Linode, LLC | 1063 ms 🐌 |
-| <pre><code>2a01:7e00::f03c:93ff:fec2:898</code></pre> | England, London | Linode, LLC | 1064 ms 🐌 |
-| <pre><code>129.151.74.25</code></pre> | Wales, Cardiff | Oracle Corporation | 1065 ms 🐌 |
-| <pre><code>2a01:7e00::f03c:93ff:fec2:882</code></pre> | England, London | Linode, LLC | 1066 ms 🐌 |
-| <pre><code>2a01:7e00::f03c:93ff:fec2:845</code></pre> | England, London | Linode, LLC | 1067 ms 🐌 |
-| <pre><code>2a01:7e00::f03c:93ff:fec2:870</code></pre> | England, London | Linode, LLC | 1068 ms 🐌 |
-| <pre><code>2a01:7e00::f03c:93ff:fec2:836</code></pre> | England, London | Linode, LLC | 1069 ms 🐌 |
-| <pre><code>2a01:7e00::f03c:93ff:fec2:899</code></pre> | England, London | Linode, LLC | 1070 ms 🐌 |
-| <pre><code>129.151.84.69</code></pre> | Wales, Cardiff | Oracle Corporation | 1073 ms 🐌 |
-| <pre><code>138.68.155.145</code></pre> | England, London | DigitalOcean, LLC | 679 ms ⚡ |
-| <pre><code>129.151.85.111</code></pre> | Wales, Cardiff | Oracle Corporation | 1297 ms 🐌 |
-| <pre><code>134.122.105.188</code></pre> | England, London | DigitalOcean, LLC | 692 ms ⚡ |
-| <pre><code>134.122.107.60</code></pre> | England, London | DigitalOcean, LLC | 716 ms ⚡ |
-| <pre><code>138.68.167.49</code></pre> | England, London | DigitalOcean, LLC | 809 ms ⚡ |
-| <pre><code>138.68.185.210</code></pre> | England, London | DigitalOcean, LLC | 870 ms ⚡ |
-| <pre><code>138.68.187.128</code></pre> | England, London | DigitalOcean, LLC | 873 ms ⚡ |
-| <pre><code>2a01:7e00::f03c:93ff:fec2:d5e9</code></pre> | England, London | Linode, LLC | 891 ms ⚡ |
-| <pre><code>139.162.215.216</code></pre> | England, London | 139.162.0.0/16 | 896 ms ⚡ |
-| <pre><code>2a01:7e00::f03c:93ff:fec2:d5db</code></pre> | England, London | Linode, LLC | 904 ms ⚡ |
-| <pre><code>2a01:7e00::f03c:93ff:fec2:d5b2</code></pre> | England, London | Linode, LLC | 909 ms ⚡ |
-| <pre><code>2a01:7e00::f03c:93ff:fec2:d511</code></pre> | England, London | Linode, LLC | 912 ms ⚡ |
-| <pre><code>139.162.215.134</code></pre> | England, London | 139.162.0.0/16 | 921 ms ⚡ |
-| <pre><code>2a01:7e00::f03c:93ff:fec2:d557</code></pre> | England, London | Linode, LLC | 996 ms ⚡ |
-| <pre><code>2a01:7e00::f03c:93ff:fec2:d5e7</code></pre> | England, London | Linode, LLC | 1086 ms 🐌 |
-| <pre><code>167.99.200.247</code></pre> | England, London | DigitalOcean, LLC | 553 ms ⚡ |
-| <pre><code>2600:3c13::f03c:95ff:fede:8b18</code></pre> | England, London | Linode | 660 ms ⚡ |
-| <pre><code>178.128.175.85</code></pre> | England, London | DigitalOcean, LLC | 661 ms ⚡ |
-| <pre><code>178.128.41.235</code></pre> | England, London | DigitalOcean, LLC | 699 ms ⚡ |
-| <pre><code>178.62.81.173</code></pre> | England, London | DigitalOcean London | 462 ms ⚡ |
-| <pre><code>188.166.154.9</code></pre> | England, London | DigitalOcean, LLC | 542 ms ⚡ |
-| <pre><code>206.189.125.64</code></pre> | England, London | DigitalOcean, LLC | 488 ms ⚡ |
-| <pre><code>206.189.21.73</code></pre> | England, London | DigitalOcean, LLC | 473 ms ⚡ |
-| <pre><code>206.189.24.227</code></pre> | England, London | DigitalOcean, LLC | 503 ms ⚡ |
-| <pre><code>206.189.26.80</code></pre> | England, London | DigitalOcean, LLC | 496 ms ⚡ |
-| <pre><code>2a03:b0c0:1:e0::2135:2001</code></pre> | England, London | DigitalOcean, LLC | 592 ms ⚡ |
-| <pre><code>209.97.133.64</code></pre> | England, London | DigitalOcean, LLC | 472 ms ⚡ |
-| <pre><code>209.97.183.194</code></pre> | England, London | DigitalOcean, LLC | 586 ms ⚡ |
 | <pre><code>46.101.29.160</code></pre> | England, London | DigitalOcean, LLC | 529 ms ⚡ |
-| <pre><code>5.144.182.188</code></pre> | England, London | ahbr company limited | 581 ms ⚡ |
-| <pre><code>8.208.19.143</code></pre> | England, London | Aliyun Computing Co.LTD | 540 ms ⚡ |
 | <pre><code>8.208.24.19</code></pre> | England, London | Aliyun Computing Co.LTD | 489 ms ⚡ |
 | <pre><code>84.8.145.58</code></pre> | England, London | Oracle Svenska AB | 533 ms ⚡ |
 | <pre><code>87.106.65.110</code></pre> | England, London | IONOS SE | 545 ms ⚡ |
@@ -826,7 +783,6 @@
 | <pre><code>2403:18c0:1000:1be:1055:b4ff:fedf:1bbd</code></pre> | Tokyo, Tokyo | DMIT Cloud Service - Tokyo | 1224 ms 🐌 |
 | <pre><code>35.78.229.176</code></pre> | Tokyo, Tokyo | Amazon Data Services Japan | 1225 ms 🐌 |
 | <pre><code>18.183.158.211</code></pre> | Tokyo, Tokyo | Amazon Data Services Japan | 1226 ms 🐌 |
-| <pre><code>138.2.16.61</code></pre> | Chiba, Inzai | Oracle Corporation | 1228 ms 🐌 |
 | <pre><code>13.230.34.30</code></pre> | Tokyo, Tokyo | Amazon Data Services Japan | 1231 ms 🐌 |
 | <pre><code>3.112.21.102</code></pre> | Tokyo, Tokyo | Amazon Data Services Japan | 1234 ms 🐌 |
 | <pre><code>2600:1900:4050:8d5::</code></pre> | Tokyo, Tokyo | Google LLC | 1237 ms 🐌 |
@@ -1198,8 +1154,6 @@
 | <pre><code>166.1.190.51</code></pre> | California, Los Angeles | Ace Data Centers, Inc. | 776 ms ⚡ |
 | <pre><code>2605:e440:5::18</code></pre> | California, Los Angeles | Baxet Group Inc. | 322 ms ⚡ |
 | <pre><code>47.88.15.127</code></pre> | California, Los Angeles | Alibaba Cloud - US | 367 ms ⚡ |
-| <pre><code>64.181.247.243</code></pre> | California, San Jose | Oracle Corporation | 438 ms ⚡ |
-| <pre><code>2602:f988:90:264::bf0</code></pre> | Utah, Salt Lake City | BAGE CLOUD LLC | 1152 ms 🐌 |
 | <pre><code>38.180.137.75</code></pre> | Texas, Dallas | 3NT SOLUTIONS LLP | 637 ms ⚡ |
 | <pre><code>107.172.167.194</code></pre> | Virginia, Ashburn | HostPapa | 790 ms ⚡ |
 | <pre><code>2a09:bac5:a5fa:8c::e:33b</code></pre> | New York, Buffalo | Cloudflare London, LLC | 964 ms ⚡ |
@@ -1307,4 +1261,3 @@
 </details>
 
 ---
-
