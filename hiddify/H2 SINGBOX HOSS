@@ -89,12 +89,14 @@
         "direct",
         "🇫🇷 France",
         "🇫🇷 France-2",
-        "🇺🇸 USA",
-        "🇩🇪 Germany",
+        "🇬🇧 United Kingdom",
+        "🇬🇧 United Kingdom-2",
         "🇨🇭 Switzerland",
         "🇨🇭 Switzerland-2",
         "🇨🇭 Switzerland-3",
-        "🇳🇱 Netherlands"
+        "🇳🇱 Netherlands",
+        "🇩🇪 Germany",
+        "🇺🇸 USA"
       ],
       "default": "auto"
     },
@@ -104,12 +106,14 @@
       "outbounds": [
         "🇫🇷 France",
         "🇫🇷 France-2",
-        "🇺🇸 USA",
-        "🇩🇪 Germany",
+        "🇬🇧 United Kingdom",
+        "🇬🇧 United Kingdom-2",
         "🇨🇭 Switzerland",
         "🇨🇭 Switzerland-2",
         "🇨🇭 Switzerland-3",
-        "🇳🇱 Netherlands"
+        "🇳🇱 Netherlands",
+        "🇩🇪 Germany",
+        "🇺🇸 USA"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m0s",
@@ -149,16 +153,33 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇺🇸 USA",
-      "server": "129.212.182.3",
-      "server_port": 8443,
+      "tag": "🇬🇧 United Kingdom",
+      "server": "195.22.157.104",
+      "server_port": 19561,
       "obfs": {
         "type": "salamander",
-        "password": "KevinZakarian"
+        "password": "fxdc345t4gcvj459tgc"
       },
-      "password": "@KevinZakarian",
+      "password": "1sbtkLK7F3",
       "tls": {
         "enabled": true,
+        "server_name": "joon.arshiacomplus.dpdns.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇬🇧 United Kingdom-2",
+      "server": "195.22.157.104",
+      "server_port": 26150,
+      "obfs": {
+        "type": "salamander",
+        "password": "FG$#G#F$FW#"
+      },
+      "password": "1sbtkLK7F3",
+      "tls": {
+        "enabled": true,
+        "server_name": "joon.arshiacomplus.dpdns.org",
         "insecure": true
       }
     },
@@ -230,6 +251,21 @@
       "obfs": {
         "type": "salamander",
         "password": "@KevinZakarian"
+      },
+      "password": "@KevinZakarian",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 USA",
+      "server": "129.212.182.3",
+      "server_port": 8443,
+      "obfs": {
+        "type": "salamander",
+        "password": "KevinZakarian"
       },
       "password": "@KevinZakarian",
       "tls": {
