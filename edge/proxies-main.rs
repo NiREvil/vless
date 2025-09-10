@@ -8,6 +8,7 @@ use std::path::Path;
 use std::sync::{Arc, Mutex};
 use std::time::{Duration, Instant};
 use chrono::{Duration as ChronoDuration, Utc};
+use chrono_tz::Asia::Tehran;
 use colored::*;
 use futures::StreamExt;
 use tokio::net::TcpStream;
@@ -200,18 +201,18 @@ async fn process_proxy(
                     region: meta.region.unwrap_or_else(|| "Unknown".to_string()),
                     city: meta.city.unwrap_or_else(|| "Unknown".to_string()),
                 };
-                println!("{}", format!("PROXY LIVE 🟢: {} ({} ms)", ip, ping).green());
+                println!("{}", format!("PROXY LIVE 🟩: {} ({} ms)", ip, ping).green());
                 let mut active_proxies_locked = active_proxies.lock().unwrap();
                 active_proxies_locked
                     .entry(info.country.clone())
                     .or_default()
                     .push((info, ping));
             } else {
-                println!("PROXY DEAD 💀: {} (did not change IP)", ip);
+                println!("PROXY DEAD ❗❌: {} (did not change IP)", ip);
             }
         }
         Err(e) => {
-            println!("PROXY DEAD 💀: {} ({})", ip, e);
+            println!("PROXY DEAD ❗❌: {} ({})", ip, e);
         }
     }
 }
@@ -228,10 +229,11 @@ fn write_markdown_file(proxies_by_country: &BTreeMap<String, Vec<(ProxyInfo, u12
         0
     };
 
-    let now = Utc::now();
-    let next_update = now + ChronoDuration::days(1); 
-    let last_updated_str = now.format("%a, %d %b %Y %H:%M:%S").to_string();
-    let next_update_str = next_update.format("%a, %d %b %Y %H:%M:%S").to_string();
+let now = Utc::now();
+let tehran_now = now.with_timezone(&Tehran);
+let tehran_next = tehran_now + ChronoDuration::days(1);
+let last_updated_str = tehran_now.format("%a, %d %b %Y %H:%M:%S").to_string();
+let next_update_str = tehran_next.format("%a, %d %b %Y %H:%M:%S").to_string();
 
     writeln!(
         file,
@@ -240,26 +242,26 @@ fn write_markdown_file(proxies_by_country: &BTreeMap<String, Vec<(ProxyInfo, u12
 
 > [!WARNING]
 >
-> **Daily Fresh Proxies**
+> <p><b>Daily Fresh Proxies</b></p>
 >
-> Only **high-quality**, tested proxies from **top ISPs** and Data centers worldwide such as Google, Cloudflare, Amazon, Tencent, OVH, DataCamp ...
+> Only <b>high-quality</b>, tested proxies from <b>premier Internet Service Providers</b> (ISPs) and data centers worldwide, including but not limited to <b>Google</b>, <b>Amazon</b>, Cloudflare, Tencent, OVH, and DataCamp, etc
 >
 > <Br/>
 >
-> **Automatically updated every day**
+> <p><b>Auto-updated daily, without exception</b></p>
 >
-> Last updated: **{}** <br/>
-> Next update: **{}**
+> <b>Last updated:</b> {} <br/>
+> <b>Next update:</b> {}
 >
 > <br/>
 > 
-> **Summary**
-> 
-> Total Active Proxies: **{}** <br/>
-> Countries Covered: **{}** <br/> 
-> Average Ping: **{} ms**
+> <p><b>Overview</b></p>
 >
-> <br/>
+> Total Active Proxies: <b>{}</b><br/>
+> Countries Covered: <b>{}</b><br/> 
+> Average latency: <b>{} ms</b>
+>
+> <br><br/>
 
 </br>
         "##,
@@ -275,15 +277,15 @@ fn write_markdown_file(proxies_by_country: &BTreeMap<String, Vec<(ProxyInfo, u12
         writeln!(file, "## {} {} ({} proxies)", flag, country, proxies.len())?;
         writeln!(file, "<details open>")?;
         writeln!(file, "<summary>Click to collapse</summary>\n")?;
-        writeln!(file, "| IP | Location | ISP | Ping |")?;
-        writeln!(file, "|----|----------|-----|------|")?;
+        writeln!(file, "|   IP    |    Location     | ISP | Ping |")?;
+        writeln!(file, "| :-------| :-------------- |-----|------|")?;
 
         for (info, ping) in proxies.iter() {
             let location = format!("{}, {}", info.region, info.city);
-            let emoji = if *ping < 700 { "⚡" } else if *ping < 1000 { "🐌" } else { "🦥" };
+            let emoji = if *ping < 999 { "⚡" } else if *ping < 1499 { "🐌" } else { "🦥" };
             writeln!(
                 file,
-                "| `{}` | {} | {} | {} ms {} |",
+                "| <pre><code>{}</code></pre> | {} | {} | {} ms {} |",
                 info.ip, location, info.isp, ping, emoji
             )?;
         }
