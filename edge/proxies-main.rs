@@ -208,11 +208,11 @@ async fn process_proxy(
                     .or_default()
                     .push((info, ping));
             } else {
-                println!("PROXY DEAD ❗❌: {} (did not change IP)", ip);
+                println!("PROXY DEAD ❌: {} (did not change IP)", ip);
             }
         }
         Err(e) => {
-            println!("PROXY DEAD ❗❌: {} ({})", ip, e);
+            println!("PROXY DEAD ❌: {} ({})", ip, e);
         }
     }
 }
@@ -248,10 +248,10 @@ let next_update_str = tehran_next.format("%a, %d %b %Y %H:%M:%S").to_string();
 >
 > <Br/>
 >
-> <p><b>Auto-updated daily, without exception</b></p>
+> <p><b>Auto-updated daily</b></p>
 >
-> <b>Last updated:</b> {} <br/>
-> <b>Next update:</b> {}
+> <b>Last updated:</b> {} – IRN <br/>
+> <b>Next update:</b> {} – IRN
 >
 > <br/>
 > 
@@ -277,12 +277,12 @@ let next_update_str = tehran_next.format("%a, %d %b %Y %H:%M:%S").to_string();
         writeln!(file, "## {} {} ({} proxies)", flag, country, proxies.len())?;
         writeln!(file, "<details open>")?;
         writeln!(file, "<summary>Click to collapse</summary>\n")?;
-        writeln!(file, "|   IP    |    Location     | ISP | Ping |")?;
-        writeln!(file, "| :-------| :-------------- |-----|------|")?;
+        writeln!(file, "|   IP   |  Location   |   ISP   |   Ping   |")?;
+        writeln!(file, "| :----- | :---------- | :-----: | :------: |")?;
 
         for (info, ping) in proxies.iter() {
             let location = format!("{}, {}", info.region, info.city);
-            let emoji = if *ping < 999 { "⚡" } else if *ping < 1499 { "🐌" } else { "🦥" };
+            let emoji = if *ping < 999 { "⚡" } else if *ping < 1499 { "🐇" } else { "🐌" };
             writeln!(
                 file,
                 "| <pre><code>{}</code></pre> | {} | {} | {} ms {} |",
