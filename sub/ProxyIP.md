@@ -127,11 +127,11 @@ edtproxyip.lzj.pp.ua
 
 From now on, we will place our proxy IPs in this file. The IPs are automatically scanned and tested every 24 hours and are listed here by location. Ping testing and IP status verification are performed directly by Cloudflare. We have determined that only IPs with port 443 open will be listed, and only proxy IPs from world-renowned ISPs such as Google, Amazon, Cloudflare, OVH, DataCamp, Tencent, etc, will be included.
 
- ‏<strong>پروکسی آی‌پی‌های خودمون رو از این به بعد در این فایل قرار میدیم، آی‌پی‌ها هر 24 ساعت یک‌بار اتومات اسکن و تست شده و اینجا لیست میشن به تفکیک لوکیشن، تست پینگ و وضعیت آی‌پی و اطلاعات اون توسط خود کلادفلر انجام میشه، تعیین کردیم که فقط آی‌پی‌های که پورت ۴۴۳ دارن لیست بشن و همچنین فقط پروکسی آی‌پی‌ از ISP‌های مطرح دنیا مانند:  Google, Amazon, Cloudflare, OVH, DataCamp, Tencent و غیره لیست بشن. </strong>
+‏<strong>پروکسی آی‌پی‌های خودمون رو از این به بعد در این فایل قرار میدیم، آی‌پی‌ها هر 24 ساعت یک‌بار اتومات اسکن و تست شده و اینجا لیست میشن به تفکیک لوکیشن، تست پینگ و وضعیت آی‌پی و اطلاعات اون توسط خود کلادفلر انجام میشه، تعیین کردیم که فقط آی‌پی‌های که پورت ۴۴۳ دارن لیست بشن و همچنین فقط پروکسی آی‌پی‌ از ISP‌های مطرح دنیا مانند: Google, Amazon, Cloudflare, OVH, DataCamp, Tencent و غیره لیست بشن. </strong>
 
 <div markdown='1' align='center'>
 
- **[برای مشاهده لیست پروکسی آی‌پی‌های روزانه اینجا کلیک کنید](./ProxyIP-Daily.md)**
+**[برای مشاهده لیست پروکسی آی‌پی‌های روزانه اینجا کلیک کنید](./ProxyIP-Daily.md)**
 
 </div>
 
