@@ -1,9 +1,9 @@
 <p align="left">
-  <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{Golden}\mathrm{PR{\color{black}\O}XY\;IP}}" width="200px" />
+  <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{Golden}\mathrm{PR{\color{black}\O}XY\;IP}}" width="220px" />
 </p><br><br/>
 
 <p align="left">
-  <img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{{\color{Golden}\sqsubseteq&space;We\;have}}" width="140px" />
+  <img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{{\color{Golden}\sqsubseteq&space;We\;have}}" width="150px" />
 </p>
 
 - [Dynamic & Multi-Location Proxies](#dynamic--multi-location-proxies)
@@ -22,7 +22,7 @@
 
 > _This is a high-level domain with specific IPs._
 
-```POV-Ray SDL
+```yaml
 nima.nscl.ir
 ```
 
@@ -34,20 +34,14 @@ turk.radicalization.ir
 
 🇮🇷 **Across Iran, BPB LTD**
 
-```POV-Ray SDL
+```ruby
 bpb.yousef.isegaro.com
 ```
 
 🌎 **Worldwide IPs** [^2]
 
-```POV-Ray SDL
+```ruby
 proxyip.cmliussss.net
-```
-
-🇱🇨 **IPv6 proxies**
-
-```POV-Ray SDL
-ProxyIP.2602-fc59-b0-64--6812-29be.ip.090227.xyz
 ```
 
 <details>
@@ -57,65 +51,71 @@ ProxyIP.2602-fc59-b0-64--6812-29be.ip.090227.xyz
 
 🇰🇷 **South Korea, Germany, USA, Singapore, Japan, Hong Kong**
 
-> _IPs provided from Korea and ..._
+> _**IPs provided from Korea and**..._
 
-```POV-Ray SDL
+```css
 ProxyIP.KR.CMLiussss.net
 ```
 
-```POV-Ray SDL
+```css
 ProxyIP.DE.tp2024.CMLiussss.net
 ```
 
-```POV-Ray SDL
+```css
 ProxyIP.US.CMLiussss.net
 ```
 
-```POV-Ray SDL
+```css
 ProxyIP.SG.CMLiussss.net
 ```
 
-```POV-Ray SDL
+```css
 ProxyIP.JP.CMLiussss.net
 ```
 
-```POV-Ray SDL
+```css
 ProxyIP.HK.CMLiussss.net
 ```
 
 🇸🇬 **Singapore**
 
-```POV-Ray SDL
+```css
 cdn-all.xn--b6gac.eu.org
 ```
 
 🎌 **Global**
 
-```POV-Ray SDL
+```css
 my-telegram-is-herocore.onecf.eu.org
+```
+
+🇱🇨 **IPv6 proxies**
+
+```css
+ProxyIP.2602-fc59-b0-64--6812-29be.ip.090227.xyz
 ```
 
 🏳️ **Origin Unknown – Possibly Oracle Cloud**
 
-```POV-Ray SDL
+```css
 proxyip.oracle.fxxk.dedyn.io
 ```
 
 🏳️‍🌈 **Origin Unknown – Possibly Digital Ocean LLC**
 
-```POV-Ray SDL
+```css
 proxyip.digitalocean.hw.090227.xyz
 ```
 
 🏳️‍🌈 **Origin Unknown – Possibly Vultr Holdings LLC**
 
-```POV-Ray SDL
+```css
 proxyip.vultr.fxxk.dedyn.io
 ```
 
 🏳️‍🌈 **Not Specified**
 
-```POV-Ray SDL
+```css
 edtproxyip.lzj.pp.ua
 ```
 
@@ -125,12 +125,17 @@ edtproxyip.lzj.pp.ua
 
 ## Daily Scanned Proxies
 
-پروکسی آی‌پی‌های خودمون رو از این به بعد در این فایل قرار میدیم، آی‌پی‌ها هر 24 ساعت یک‌بار اتومات اسکن و تست شده و اینجا لیست میشن به تفکیک لوکیشن، تست پینگ و وضعیت آی‌پی و اطلاعات اون توسط خود کلادفلر انجام میشه، تعیین کردیم که فقط آی‌پی‌های که پورت ۴۴۳ دارن لیست بشن و همچنین فقط پروکسی آی‌پی‌ از ISP‌های مطرح دنیا مانند:  
-_Google, Amazon, Microsoft, Cloudflare, OVH, Hetzner, Tencent, Akami and ..._
+From now on, we will place our proxy IPs in this file. The IPs are automatically scanned and tested every 24 hours and are listed here by location. Ping testing and IP status verification are performed directly by Cloudflare. We have determined that only IPs with port 443 open will be listed, and only proxy IPs from world-renowned ISPs such as Google, Amazon, Cloudflare, OVH, DataCamp, Tencent, etc, will be included.
 
-لیست بشن.
+ ‏<strong>پروکسی آی‌پی‌های خودمون رو از این به بعد در این فایل قرار میدیم، آی‌پی‌ها هر 24 ساعت یک‌بار اتومات اسکن و تست شده و اینجا لیست میشن به تفکیک لوکیشن، تست پینگ و وضعیت آی‌پی و اطلاعات اون توسط خود کلادفلر انجام میشه، تعیین کردیم که فقط آی‌پی‌های که پورت ۴۴۳ دارن لیست بشن و همچنین فقط پروکسی آی‌پی‌ از ISP‌های مطرح دنیا مانند:  Google, Amazon, Cloudflare, OVH, DataCamp, Tencent و غیره لیست بشن. </strong>
 
-- **[برای مشاهده لیست پروکسی آی‌پی‌های روزانه اینجا کلیک کنید](./ProxyIP-Daily.md)**
+<div markdown='1' align='center'>
+
+ **[برای مشاهده لیست پروکسی آی‌پی‌های روزانه اینجا کلیک کنید](./ProxyIP-Daily.md)**
+
+</div>
+
+<br></br>
 
 ![rainbow]
 
@@ -154,11 +159,9 @@ _Google, Amazon, Microsoft, Cloudflare, OVH, Hetzner, Tencent, Akami and ..._
 <br/>
 
 <details>
-<summary>🦋 برای دریافت پروکسی یک کشور خاص اینجا کلیک کنید</summary>
+<summary> ‏🦋 Click here to get proxies from a specific country </summary>
 
 <br/>
-
-- در این بخش می‌تونید پروکسی‌های دسته‌بندی‌شده بر اساس کشور مقصد رو مشاهده کنید.
 
 - **Available Countries:**
 - [🌠 Daily Scanned](./ProxyIP-Daily.md)
@@ -262,9 +265,11 @@ _Google, Amazon, Microsoft, Cloudflare, OVH, Hetzner, Tencent, Akami and ..._
 - برای مشاهده اطلاعات بیشتر ISP می‌توانید به [check-host.net][ch] مراجعه کنید.
 - برای تست دقیق‌تر و پیشرفته‌تر می‌توانید از [proxyip.edtunnel.best][ed] استفاده کنید. اطلاعات لازم را وارد کرده (در صورت عدم اطلاع از پورت، مقدار `443` را وارد کنید) و نتیجه تست را مشاهده نمایید.
 
+<div markdown='1' align='center'>
+
 <br/>
 
-<img width="1080" height="1986" alt="VictoriaCross" src="https://github.com/user-attachments/assets/4a9bfa17-927e-422e-90f1-ee8b079fe819" />
+<img width="740" alt="VictoriaCross" src="https://github.com/user-attachments/assets/4a9bfa17-927e-422e-90f1-ee8b079fe819" />
 
 <br/>
 
@@ -273,23 +278,23 @@ _Google, Amazon, Microsoft, Cloudflare, OVH, Hetzner, Tencent, Akami and ..._
 
 <br/>
 
-<img width="1080" height="1828" alt="MehdiProxyIP" src="https://github.com/user-attachments/assets/ff33cc27-d2ee-45ea-a65c-4ac6b5f696b9" />
+<img width="740" alt="MehdiProxyIP" src="https://github.com/user-attachments/assets/ff33cc27-d2ee-45ea-a65c-4ac6b5f696b9" />
 
 <br/>
 
-<img width="1080" height="939" alt="YummyScanner" src="https://github.com/user-attachments/assets/917a2502-6437-40a5-9c72-d5e41bb4980d" />
+<img width="740" alt="YummyScanner" src="https://github.com/user-attachments/assets/917a2502-6437-40a5-9c72-d5e41bb4980d" />
 
 <br/>
 
-<img width="1080" height="883" alt="CMLIU" src="https://github.com/user-attachments/assets/26fbd7c0-9c42-420c-bd31-71fcf8ba6711" />
+<img width="740" alt="CMLIU" src="https://github.com/user-attachments/assets/26fbd7c0-9c42-420c-bd31-71fcf8ba6711" />
 
 <br/>
 
-<img width="1080" height="936" alt="EDTunnelScanner" src="https://github.com/user-attachments/assets/7c3faf3d-78c3-415c-8ee7-321639c49c14" />
+<img width="740" alt="EDTunnelScanner" src="https://github.com/user-attachments/assets/7c3faf3d-78c3-415c-8ee7-321639c49c14" />
 
 </details>
 
-<br><br/>
+</div> <br><br/>
 
 ### 2. تست از طریق پنل BPB
 
