@@ -240,8 +240,6 @@ async function handleWebSocketRequest(request, config) {
  * @param {object} env The environment variables.
  * @returns {object} A comprehensive configuration object.
  */
-function createRequestConfig(request, env) {
-    const url = new URL(request.url);
 
 function createRequestConfig(request, env) {
   const url = new URL(request.url);
@@ -1551,7 +1549,7 @@ async function fetchScamalyticsData(ipToLookup, scamalyticsConfig) {
 }
 
 
-// isValidUUID, safeCloseWebSocket, stringify, etc.
+// ... Other utility functions like isValidUUID, safeCloseWebSocket, stringify, etc.
 // They are omitted for brevity in this response but are required for the script to work.
 
 function stringify(arr, offset=0){
@@ -1644,15 +1642,17 @@ async function socks5Connect(addressType, addressRemote, portRemote, log, parsed
 	const writer = socket.writable.getWriter();
 	const reader = socket.readable.getReader();
 
+	// Greeting
 	await writer.write(new Uint8Array([5, 1, 0])); // Version 5, 1 auth method, No-Auth
 	let res = (await reader.read()).value;
 	if (res[0] !== 0x05 || res[1] !== 0x00) {
 		throw new Error('SOCKS5 greeting failed');
 	}
 
+	// Request
     const encoder = new TextEncoder();
-  	let DSTADDR;
-	  switch (addressType) {
+	let DSTADDR;
+	switch (addressType) {
 		case 1: DSTADDR = new Uint8Array([1, ...addressRemote.split('.').map(Number)]); break;
 		case 2: DSTADDR = new Uint8Array([3, addressRemote.length, ...encoder.encode(addressRemote)]); break;
 		case 3: DSTADDR = new Uint8Array([4, ...addressRemote.split(':').flatMap(x => [parseInt(x.slice(0, 2), 16), parseInt(x.slice(2), 16)])]); break;
