@@ -1,5 +1,5 @@
 //profile-title: base64:SDIgT04gU0lOR0JPWA==
-//profile-update-interval: 
+//profile-update-interval: 9
 //subscription-userinfo: upload=64424500944; download=45097156608; total=1073741824000; expire=1762646400
 //support-url: https://F_NiREvil.t.me
 //profile-web-page-url: https:NiREvil_GP.t.me
@@ -89,8 +89,7 @@
         "direct",
         "🇫🇷 France",
         "🇫🇷 France-2",
-        "🇬🇧 United Kingdom",
-        "🇬🇧 United Kingdom-2",
+        "🇫🇷 France-3",
         "🇨🇭 Switzerland",
         "🇨🇭 Switzerland-2",
         "🇨🇭 Switzerland-3",
@@ -106,8 +105,7 @@
       "outbounds": [
         "🇫🇷 France",
         "🇫🇷 France-2",
-        "🇬🇧 United Kingdom",
-        "🇬🇧 United Kingdom-2",
+        "🇫🇷 France-3",
         "🇨🇭 Switzerland",
         "🇨🇭 Switzerland-2",
         "🇨🇭 Switzerland-3",
@@ -122,11 +120,11 @@
     {
       "type": "hysteria2",
       "tag": "🇫🇷 France",
-      "server": "62.60.157.181",
+      "server": "channel1.saghetalaie.homes",
       "server_port": 46914,
       "obfs": {
         "type": "salamander",
-        "password": "\u0026O#28YB5qK!5t#U"
+        "password": ""\u0026O#28YB5qK!5t#U"
       },
       "password": "freehomesvpnchannel3",
       "tls": {
@@ -138,7 +136,7 @@
     {
       "type": "hysteria2",
       "tag": "🇫🇷 France-2",
-      "server": "channel1.saghetalaie.homes",
+      "server": "channel2.saghetalaie.homes",
       "server_port": 46914,
       "obfs": {
         "type": "salamander",
@@ -153,33 +151,17 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇬🇧 United Kingdom",
-      "server": "195.22.157.104",
-      "server_port": 19561,
+      "tag": "🇫🇷 France-3",
+      "server": "channel3.saghetalaie.homes",
+      "server_port": 46914,
       "obfs": {
         "type": "salamander",
-        "password": "fxdc345t4gcvj459tgc"
+        "password": "\u0026O#28YB5qK!5t#U"
       },
-      "password": "1sbtkLK7F3",
+      "password": "yhqy5AHofQq",
       "tls": {
         "enabled": true,
-        "server_name": "joon.arshiacomplus.dpdns.org",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇬🇧 United Kingdom-2",
-      "server": "195.22.157.104",
-      "server_port": 26150,
-      "obfs": {
-        "type": "salamander",
-        "password": "FG$#G#F$FW#"
-      },
-      "password": "1sbtkLK7F3",
-      "tls": {
-        "enabled": true,
-        "server_name": "joon.arshiacomplus.dpdns.org",
+        "server_name": "www.bing.com",
         "insecure": true
       }
     },
@@ -210,6 +192,7 @@
       "password": "@KevinZakarian",
       "tls": {
         "enabled": true,
+        "server_name": "www.google.com",
         "insecure": true
       }
     },
