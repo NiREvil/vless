@@ -17,9 +17,9 @@ use native_tls::TlsConnector as NativeTlsConnector;
 
 const DEFAULT_PROXY_FILE: &str = "edge/assets/list-september-lite.txt";
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
-const DEFAULT_MAX_CONCURRENT: usize = 30;
-const DEFAULT_TIMEOUT_SECONDS: u64 = 8;
-const REQUEST_DELAY_MS: u64 = 500;
+const DEFAULT_MAX_CONCURRENT: usize = 40;
+const DEFAULT_TIMEOUT_SECONDS: u64 = 9;
+const REQUEST_DELAY_MS: u64 = 800;
 
 const GOOD_ISPS: &[&str] = &[
     "OVH",
@@ -35,8 +35,7 @@ const GOOD_ISPS: &[&str] = &[
     "Turunc",
     "HostLAB",
     "Tencent",
-    "Constant",
-    "Multacom",
+    "MULTACOM",
     "HostPapa",
     "Ultahost",
     "DataCamp",
@@ -49,13 +48,16 @@ const GOOD_ISPS: &[&str] = &[
     "Cloudflare",
     "PQ Hosting",
     "White Label",
-    "Total Uptime",
+    "The Constant",
     "3NT SOLUTION",
     "Plant Holding",
+    "WorkTitans BV",
     "IROKO Networks",
-    "WorkTitans",
     "Stark Industries",
     "Private Customer",
+    "Cogent Communications",
+    "Microsoft Corporation",
+    "Total Uptime Technologies",
 ];
 
 #[derive(Parser, Clone)]
@@ -248,18 +250,18 @@ let next_update_str = tehran_next.format("%a, %d %b %Y %H:%M:%S").to_string();
 >
 > <Br/>
 >
-> <p><b>Auto-updated daily</b></p>
+> <p><b>Auto-updated Daily</b></p>
 >
-> <b>Last updated:</b> {} – IRN <br/>
-> <b>Next update:</b> {} – IRN
+> <b>Last updated:</b> {}–IRN <br/>
+> <b>Next update:</b> {}
 >
 > <br/>
 > 
 > <p><b>Overview</b></p>
 >
-> Total Active Proxies: <b>{}</b><br/>
-> Countries Covered: <b>{}</b><br/> 
-> Average latency: <b>{} ms</b>
+> <b>Total Active Proxies:</b> {}<br/>
+> <b>Countries Covered:</b> {}<br/> 
+> <b>Average latency:</b> {} ms
 >
 > <br><br/>
 
@@ -282,7 +284,7 @@ let next_update_str = tehran_next.format("%a, %d %b %Y %H:%M:%S").to_string();
 
         for (info, ping) in proxies.iter() {
             let location = format!("{}, {}", info.region, info.city);
-            let emoji = if *ping < 999 { "⚡" } else if *ping < 1499 { "🐇" } else { "🐌" };
+            let emoji = if *ping < 1199 { "⚡" } else if *ping < 1699 { "🐇" } else { "🐌" };
             writeln!(
                 file,
                 "| <pre><code>{}</code></pre> | {} | {} | {} ms {} |",
