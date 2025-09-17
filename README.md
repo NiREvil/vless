@@ -5,28 +5,62 @@
 
 > [!CAUTION]
 >
-> [![Come Here](https://img.shields.io/badge/شرابط_اضطراری-موقت-darkred)](https://t.me/NiREvil_GP/106699)
+> [![MahsaAmini](https://img.shields.io/badge/وضعیت_نابسامان_وارپ-darkred)](https://t.me/NiREvil_GP/)
 >
-> در این چند روز اخیر دیدیم که وزارت قطع ارتباطات به درخواست مقامات بالادستی اینترنت رو محدود کرد، به وضوح مشخص بود که پهنای باند بین‌الملل رو به حداقل مقدار ممکن رسوندن و حتی دوروز اول کامل بستن و نت برای اولین بار ملی شد، در این حالت دیگه فرقی نداره چه vpnی نصب دارید چه کانفیگی خریدید اصلا فرقی نداره چون مسیر ترافیک به خارج از ایران مسدود هست و هیچ پکتی ارسال و دریافت نخواهد شد، تنها استثنا کانفیگ‌هایی بودن که از یک سرور داخلی به برخی از سرورهای خارجی که آی‌پی اون‌ها هنوز مسدود نبود تانل شدند، انگشت شمار و فعال در حد چند ساعت. در سومین روز از قطعی‌ها مقداری از پهنای باند بین‌الملل طبق گزارشات مردمی و کلادفلر و نت‌بلاکس به چرخه بازگشت (در حد پنج درصد) و همین کافی بود برای وصل شدن توسط برخی ابزارهای خاص.
+> <br><br/>
+> 
+> **پیرامون بسته‌شدن آی‌پی‌های وارپ**
+> 
+> نقل قول از گروه **IRCF**
 >
+> طبق بررسی‌های انجام شده، دلیل مشکل اتصال وارپ در کشورهایی نظیر ایران و چین و عدم کارکرد کلاینت‌های کاستوم‌شده مانند Oblivion و بقیه برنامه‌هایی که از هسته اصلی وارپ استفاده نمی‌کنن، بسته‌شدن اندپوینت‌های کلودفلر برای دریافت دیتای وایرگارد کاستوم هست.
+> 
+> <details>
+> <summary>❗ مطالعه ادامه گزارش </summary><br/>   
+>  
+> این‌مورد یا به‌علت تغییر سیاست کلودفلر بوده، یا صرفا یک باگ هست که بعد از بروزرسانی‌های جدید وارپ به وجود اومده.  
+> اگرچه نباید نقش فیلترینگ رو در اختلال یا فیلتر کردن آی‌پی‌های وارپ نادیده گرفت، ولی فعلا مشکل اصلی از سمت خود کلودفلر هست.  
+> البته اپ رسمی کلودفلر برای اتصال از پروتکل مسک/ Masque استفاده می‌کنه، یا کاربران رو در وارپ به یک اندپوینت خاص وصل میکنه، که در ایران عمدتا به‌دلیل فیلترینگ استیبل نیست.
+> 
+> در مجموع، هسته اصلی وارپ به‌علت نمایه مشخص برای فایروال هنوز اتصال ثابتی در قسمت وارپ با پروتکل وایرگارد نداره و از قبل بسته شده بود؛ این باعث شده تا کاربران به این‌اشتباه بیفتن. (به‌صورت تخصصی کلاینت جوری نوشته شده که MITM یا همون ارور HAPPY EYEBALLS در خود برنامه شناسایی میشه و خودکار کانکشن رو می‌بنده؛ یعنی کلودفلر فکر میکنه کانکشن داره شنود میشه و درست‌هم فکر میکنه).  
+> 
+> مکاتبه‌ای برای حل این‌مشکل با کلودفلر انجام شده، تا شرایط فعلی کلاینت‌های کاستوم رو بررسی کنن. امیدوارم این مکاتبه نتیجه‌بخش باشه و این‌مورد به زودی برطرف بشه.  
+> 
+> **بخش دوم گزارش:**
+> 
+> توی گزارشی که امروز منتشر کردم، گفته شد علاوه بر فیلترینگ، خود کلودفلر هم خواسته یا ناخواسته باعث شده کلاینت‌های غیررسمی وارپ به مشکل بخورن.
+> 
+> اما پشت ماجرا یه چیز دیگه هم هست؛ یه منبع ناشناس نسخه‌ای از یک نامه بهم رسونده که شورای عالی فضای مجازی صراحتاً خواسته بود همه‌ی کانکشن‌های وارپ به کلودفلر کاملا مسدود بشه، آی‌پی‌های باز فیلتر بشن، و حتی گزارش فنی از این بستن‌ها به شورا ارسال بشه.
+> 
+> یعنی رسم دستور دادن که وارپ برای همیشه بسته بشه و نمیشه به سادگی از این قضیه عبور کرد.
+>
+> 🔍 [ircf.space][IRCF]
+>
+> </details>
+> 
+> <br/> 
+> 
 > <details>
 > <summary>❗ توضیحات مربوط به Avast SecureLine </summary><br/>   
 >  
-> چند روزه وی‌پی‌ان [Avast SecureLine] خیلی خوب کار می‌کنه با اکثر نت ها مخصوصا همراه اول و مخابرات، تنها کاری که باید کرد اینه که پروتکل رو بذاریم روی Mimic و انتخاب سرور هم اتومات بمونه و بزنیم کانکت شه.
+> چند روزه وی‌پی‌ان [Avast SecureLine] خیلی خوب کار می‌کنه با اکثر نت ها مخصوصا همراه اول و ایرانسل و شاتل و مخابرات، تنها کاری که باید کرد اینه که پروتکل رو بذاریم روی Mimic و انتخاب سرور هم اتومات بمونه و بزنیم کانکت شه.  
 > مسائل مربوط به لایسنس و فایل نصبی و غیره رو از [[انباری][New-Folder]] دنبال کنید.
 >
 > </details>
->
+> 
+> <br/> 
+> 
 > <details>
-> <summary>❗ توضیحات مربوط به سایفون   </summary><br/>
+> <summary>❗ توضیحات مربوط به سایفون  </summary><br/>
 >
 > ما برای دسترسی به اینترنت بین الملل در همین پهنای باند حداقلی از سایفون استفاده می‌کنیم، سایفون نسخه سایت، نسخه مارکت گوگل اصلا یه چیز دیگه‌است و ظاهرا بی ربط به سایفونه!!
+> **نکته:** حواستون باشه سایفون صرفا به درد شرایط جنگی منگی می‌خوره، برای وقتایی که پهنای باند کف زمینه و اختلال بی‌نهایت. برای مواقع عادی خوب نیست، نه سرعت دانلود و آپلود مناسبی داره و نه کیفیت آی‌پی داره.
 >
-> من هم اسکرین‌شات از تنطیمات سایفون قرار میدم و هم به شکل متنی می‌نویسم همینجا.
+> من هم اسکرین‌شات از تنطیمات سایفون قرار میدم و هم به شکل متن می‌نویسم همینجا.
 >
 > در ابتدا سایفون رو از سایت خودش دانلود کنید. [psiphon.ca/download]
 >
-> **خب توضیحات متنی**  
+> **خب اول توضیحات متنی**  
 >  کلا دوتا گرینه ساده رو تغییر میدیم. [^1]  
 > 1- از بخش `OPTIONS` در قسمت `Proxy Settings`  
 > گزینه‌ `Connect through an HTTP Proxy` رو تیک می‌زنیم فعال بشه. [^2]
@@ -36,27 +70,15 @@
 > بقیه ستینگ پیشفرض باقی بمونه، گزینه استارت رو میزنیم ده بیست ثانیه صبر می‌کنیم اگه وصل نشد استاپ و استارت دوباره می‌کنیم، تو سومین تلاش قطعا وصل شده. [^4]
 >
 > </details>  
+> 
+> <br/> 
 >  
-> <details>
-> <summary>❗ توضیحات مربوط به کانفیگ WOW </summary><br/>
->
-> یه چیز دیگه‌ای که اکثر ADSL‌ ها مخصوصا مخابرات بهش وصل هستن کانفیگ **warp ON warp** هیدیفای یا سینگ‌باکس هستش، با پینگ زیر 100 به طرز عجیبی. [^5]
->
-> منظورم [این دو کانفیگ بود](#hiddify-url-).
->
-> وای ولی مخابرات حتما این کانفیگ پایین رو چک کنه، بینهایت زیبا بود پینگ‌ها داخل کلاینت [کلش-متا][Clash-Meta] [^8]
->
-> ```
-> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-ems.yml
-> ```
->
-> </details>
->
 > <details>
 > <summary>❗ توضیحات مربوط به پنل BPB </summary><br/>
 >
 > اینو خودم دارم استفاده میکنم، یه پنل BPB بالا آوردم به کمک ویزارد 90 ثانیه بیشتر طول نکشید (اکانت کلادفلر داشتم از قبل).  
 > بعد از اینکه پنل رو ایجاد کردید (ترجیحا نوع وورکر بسازید که برای این شرایط بهتره، چون میشه از پورت‌های فاقد tls مثل پورت 80 هم استفاده کرد)، داخل پنل می‌تونید به عنوان تنظیمات و چندتا آی‌پی تمیز از این فایل بکاپ من استفاده کنید. کافیه [[این فایل]](edge/assets/BPB-settings.dat.txt) رو از گزینه مشخص شده در پنل [^6] آپلود کنید تا تنظیمات من اعمال بشه براتون.  
+> 
 > از داخل پنل لینک ساب نرمال یا فول نرمال رو اضافه کنید داخل v2rayNG یا Hiddify و URL Test بگیرید می‌بینید که دو یا چهار تا کانفیگی که از دامین `www.speedtest.net` در اون‌ها استفاده شده پینگ عالی میدن. تست شده فقط با مخابرات و آسیاتک. [^7] [^8]
 >
 > نحوه ساخت پنل واقعا ساده‌است مخصوصا که اگه از ابزار ویزارد استفاده بکنید و دستی نرید سراغش. یه خط دستور رو کپی پست می‌کنید داخل ترمینال لینوکس یا ویدوز یا ترماکس اندروید و به دوسه تا سوال پاسخ می‌دید و تمام. پنل ساخته میشه.  
@@ -70,7 +92,7 @@
 > بعد از اینکه ترماکس اندروید رو از [[مخزن گیت‌هاب]][TERMUX] دانلود و نصب (یا ترمینال ویندوز (CMD) یا لینوکس) رو باز کردید؛  
 > دستور زیر رو اجرا کنید:
 >
-> ```
+> ```powershell
 > bash <(curl -fsSL https://raw.githubusercontent.com/bia-pain-bache/BPB-Wizard/main/install.sh)
 > ```
 >
@@ -79,16 +101,17 @@
 > Please enter 1 to CREATE a new panel or 2 to MODIFY an existing panel:
 >
 > سوال اینه که می‌خواید یه پنل جدید بسازید؟ (عدد 1 رو وارد کنید) یا پنل‌های موجود توی اکانت کلادفلر خودتون رو ویرایش کنید؟ (عدد 2 را وارد کنید).  
-> ما عدد `1` رو وارد کرده و اینتر میزنیم.
+> ما عدد `1` رو وارد کرده و اینتر میزنیم.  
 >
 > - **مرحله دوم**  
->   بعدش مرحله وارد شدن به حساب کلادفلر (درصورت داشتن اکانت) یا ساخت اکانت هستش، اگه اکانت داشتید که لاگین می‌کنید اگه نداشتید با ایمیل خودتون یا هزاران فیک میل یکی می‌سازید، یادتون نره بعدش برید صندوق ورودی و وریفای کنید.  
->   درنهایت وارد حساب Cloudflare شما می‌شه و ازتون اجازه دسترسی می‌خواد، دسترسی رو دادید صفحه رو می‌بندید برمی‌گردید ب ترمینال.
-> - **مرحله سوم**
->   Please enter 1 for Workers or 2 for Pages deployment:
->
+> بعدش مرحله وارد شدن به حساب کلادفلر (درصورت داشتن اکانت) یا ساخت اکانت هستش، اگه اکانت داشتید که لاگین می‌کنید اگه نداشتید با ایمیل خودتون یا هزاران فیک میل یکی می‌سازید، یادتون نره بعدش برید صندوق ورودی و وریفای کنید.  
+> درنهایت وارد حساب Cloudflare شما می‌شه و ازتون اجازه دسترسی می‌خواد، دسترسی رو دادید صفحه رو می‌بندید برمی‌گردید ب ترمینال.
+> 
+> - **مرحله سوم**  
+> Please enter 1 for Workers or 2 for Pages deployment:
+> 
 > میگه اگه می‌خوای `Worker` بسازی عدد یک و یا اگه میخای `Pages` بسازی عدد 2 رو وارد کن، به دلخواه خودت هرکدومو خواستی وارد کن.  
-> من پیشنهاد می‌کنم بای شرایط جنگی حال حاضر و این وضعیت اینترنت بهتره وورکر بسازی که بتونی از پورت‌های noTLS مثل 80 هم استفاده بکنی.
+> من پیشنهاد می‌کنم برای شرایط حال حاضر و وضعیت داغون اینترنت بهتره وورکر بسازی که بتونی از پورت‌های noTLS مثل 80 هم استفاده بکنی.
 >
 > - **مرحله چهارم**
 >
@@ -96,7 +119,8 @@
 >
 > Please enter a custom name or press ENTER to use generated one:
 >
-> میگه ساب‌دامنه شخصی شما رندوم انتخاب میشه و مقدارش فلانه، اگه می‌خوای سفارشی باشه مقدار دلخواهت رو وارد کن، می‌تونی هرچیزی بنویسی با در نظر داشتن این که باید از: حروف کوچک انکلیسی، بدون فاصله، بدون کاما و بدون نقطه استفاده کنی، فقط عدد و حروف کوچیک چسبیده بهم، ترجیحا فقط اینتر بزنید که مقدار رندومی که خودش تعیین کرده باقی بمونه.
+> میگه ساب‌دامین شخصی شما رندوم انتخاب میشه و مقدارش فلانه، اگه می‌خوای سفارشی باشه مقدار دلخواهت رو وارد کن، می‌تونی هرچیزی بنویسی با در نظر داشتن این که باید از:   
+> حروف کوچک انکلیسی، بدون فاصله، بدون کاما و بدون نقطه استفاده کنی، فقط عدد و حروف کوچیک چسبیده بهم، ترجیحا فقط اینتر بزنید که مقدار رندومی که خودش تعیین کرده باقی بمونه.
 >
 > - **مرحله پنجم**
 >
@@ -115,14 +139,14 @@
 > The random generated Trojan password is: xxxx  
 > Please enter a custom Trojan password or press ENTER to use generated one:
 >
-> بازم مثل قبلی‌ها، یه مقدار رندوم خودش میذاره اگه اینتر بزنی، پس بزن بره چون فاقد اهمیته.
->
+> بازم مثل قبلی‌ها، یه مقدار رندوم خودش میذاره اگه اینتر بزنی، پس بزن بره چون فاقد اهمیته.>
+> 
 > - **مرحله هفتم**
 >
 > The default Proxy IP is: `bpb.yousef.isegaro.com`
 >
 > Please enter custom Proxy IP/Domains or press ENTER to use default:
->
+> 
 > انتخاب پروکسی آی‌پی، تقریبا مرحله مهم همینه، پروکسی پیش‌فرض خودشون اوکیه ولی نه خیلی، اولا همیشه نصف پروکسی‌ها از کار افتادن و دیر به دیر تغییر می‌کنن، دوما از جاهای بدرد نخور مثل oracle هستن که هر سایتی بری ده بار ازت می‌خواد کپچا حل کنی ربات‌های تلگرامی‌هم هیچ‌کدوم بالا نمیان. از روی یه یارو چینی کپی شدن واسه همین مناسب استفاده در ایران نیستن. پیشنهاد می‌کنم پروکسی خودمون رو بذارین که دائم آپدیت میشه و باکیفیت خوبی داره.
 >
 > ```POV-Ray SDL
@@ -156,25 +180,44 @@
 >
 > اگه از قبل دامنه خریدید که می‌تونید اینجا یه ساب دامنه انتخاب کنید اگر نه اینتر بزنید بره.
 >
-> - **مرحله یازدهم**  
->   سی ثانیه صبر کنید kv رو درست کنه و وصل کنه، متغییرهای منتخب رو اضافه کنه، فایل زیپ کد پروژه رو دانلود کنه، ایمپورت کنه، و بعد این اعلان رو نشون بده:
+> - **مرحله یازدهم**   
+> سی ثانیه صبر کنید kv رو درست کنه و وصل کنه، متغییرهای منتخب رو اضافه کنه، فایل زیپ کد پروژه رو دانلود کنه، ایمپورت کنه، و بعد این اعلان رو نشون بده:
 >
 > Would you like to open BPB panel in browser? (y/n):
 >
-> یدونه `Y` بویسید اینتر بزنید تا توی مرورگر باز بشه تا رمز جدیدتون رو تعیین کنید و وارد پنل بشید برای تنظیمات، پیش‌فرضش هم اوکیه، میتونید فقط لینک ساب نرمال یا فول نرمال یا هرکدوم دیگه رو نسبت به کلاینت مد نظر خودتون انتخاب کرده و اضافه کنید ولی اگه خواستید من یه بکاپ از تنطیمات خودم گذاشتم بالاتر ابتدای توضیحاتم اونم می‌تونید اد کنید.
+> یدونه `Y` بنویسید و اینتر بزنید تا صفحه مرورگر باز بشه و رمز جدیدتون رو تعیین کنید سپس وارد پنل بشید برای تنظیمات، پیش‌فرضش هم اوکیه، می‌تونید فقط لینک ساب نرمال یا فرگمنت یا هرکدوم دیگه رو نسبت به کلاینت مد نظر خودتون انتخاب کرده و بهش اضافه کنید ولی اگه خواستید من یه بکاپ از تنطیمات خودم گذاشتم بالاتر ابتدای توضیحاتم اونم می‌تونید اد کنید چندتا دونه آی‌پی تمیز داخلش هست.
 >
-> تمام، موفق باشید.
+> تمام، موفق باشید.  
+> 
 >
-> اکه نتونستید بسازید بیاید گروهمون و بگید کدوم مرحله خطا داد تا راهنمایی کنیم.
+> اکه نتونستید BPB رو بسازید بیاید گروهمون و بگید کدوم مرحله خطا داد بچه‌ها هستن که راهنمایی بکنن.
 >
 > </details>  
+> 
+> </details>
+>
+> <br/>
+> 
+> <details>
+> <summary>❗ توضیحات مربوط به پنل ZiZifn </summary><br/>
+>
+> این پنل راستش واسه استفاده شخصی خودمونه و جایی ازش حرفی نزدیم و تبلیغی نشده ولی بازم با این حال یه سریا ازش استفاده می‌کنن، الان که کد‌های وورکر اکثرشون استیبل نیستن و به محض ساخت وورکر یا pages خطای 1101 کلودفلر رو می‌گیرن خواستم این‌یکی رو معرفی کنم بهتون، تو سال اخیر حتی یکبار هم خطای 1101 نکرفتیم باهاش، چه موقعی که 100K رکوئست داشته یه وورکر، و چه موقعی که 14 میلیارد رکوئست روزانه داشته. 
+> 
+> محض اطلاع باید بگم که کد حتی یک مرحله هم مبهم نشده!!  
+> 
+> داخل رپو دوتا فایل هست یکیش index.js کد اصلی و عادی برای ساخت وورکر و فایل _worker.js فشرده شده (مبهم نه) برای ساخت pages کلودفلر، می‌تونید فورک بزنید و باقی مراحل، می‌تونید از روش آپلود پیش برید هیچ‌فرقی نداره. توضیحات بیشتر داخل رپو نوشته شده.  
+> تنها متغیر UUID رو ایجاد کنید کفایت می‌کنه.
+> 
+> [github.com/NiREvil/zizifn][Zizifn]
 >  
 > </details>
+>
+> <br/> 
 >
 > در نهایت اگه خیلی معطل موندید بیاید گروه شاید بچه‌ها تونستن کمکی بکنن.  
 > همراه اولی‌ها نیان ✋🏿🤣
 >
-> [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/x-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699)
+> [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/x-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP)
 >
 > <br><br/>
 
@@ -191,8 +234,6 @@
 - Some subscription links are available for [v2rayNG], [Sing-Box], [Hiddify], [NikaNG], [MahsaNG], [NekoBox], [Husi], [Exclave], [Amnezia], [Outline] [Clash-Meta] and other clients.
 
 - **Несколько ссылок для подписки на** v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Outline, Clash-Meta и ... Вернуть результат только
-
-- 为以下软件提供一些共享链接：v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, Nekobox, Husi, Exclave, Amnezia, Outline, Clash-Meta 等。<br><br/>
 
 <br/>
 
@@ -213,28 +254,6 @@
 >
 > </details>
 
-> [!IMPORTANT]
->
-> <details>  
-> <summary> Automated Project Management Notice </summary>
->
-> **⚙️ Dynamic Updates:**  
-> Approximately **53% of this repository** (including configuration files, templates, and metadata) is **automatically regenerated every hours in a day** via GitHub Actions.
->
-> **🛠️ Manual Edits Warning:**  
-> Any changes made to files **may be overwritten** without prior notice.
->
-> github/workflow/_  
-> boringtun/_  
-> edge/_  
-> root/\*  
-> _/.js  
-> _/.py  
-> _/.html  
-> \*/.yml
->
-> </details>
-
 <br><br/>
 
 ## Table of Contents
@@ -247,7 +266,7 @@
 - [Countries](#countries)
 - [WireGuards](#wireguards)
   - [Warp for Clash-Meta](#warp-for-clash-meta)
-  - [Warp for Exclave](#Warp-for-nekobox)
+  - [Warp for Exclave](#warp-for-nekobox)
   - [Warp for Hiddify](#warp-for-hiddify)
   - [Warp for Husi](#warp-for-nekobox)
   - [Warp for NekoBox](#warp-for-nekobox)
@@ -313,7 +332,9 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 > Best DNS testing tool, just start it.  
 > Tip — use xstack DoH to bypass restrictions on YouTube, Instagram, and more.  
 > [darknessshade.github.io/DNS-Tester]  
-> Read more about DNS Tester in [Here][iran-core]
+> Read more about DNS Tester in [Here][iran-core]  
+>Darkness Telegram proxies fetcher [proxy-fetcher.pages.dev]
+>
 >
 > This is a fast and accurate **Proxy IP Checker** tool, capable of testing IP ranges that I'm sure you haven't seen anywhere like it.  
 > [checker-3j2.pages.dev]  
@@ -358,23 +379,27 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 ## XRAY
 
+https://vpny.online/VPNy.json [[KV?]]
+
 https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/ss.txt [[EP?]]
 
 https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vmess.txt
 
 https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/trojan.txt
 
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/mix [[YB?]]
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt [[MG?]]
 
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/hy2
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/sub1.txt
 
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/normal/vmess
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/ss.txt
+
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt
+
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt
 
 https://yalda.nscl.ir [[Ni?]]
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
-
-https://dev1.irdevs.sbs [[PI?]]
 
 https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/index.html
 
@@ -383,6 +408,8 @@ https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protoc
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vmess.txt
 
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vless.txt
+
+https://dev1.irdevs.sbs [[PI?]]
 
 https://v2.alicivil.workers.dev [[GE?]]
 
@@ -404,7 +431,17 @@ https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/python/hysteria2
 
 https://shadowmere.xyz/api/b64sub [[SW?]]
 
+https://openproxylist.com/v2ray/
+
+https://openproxylist.com/v2ray/
+
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/fragment
+
+https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/Protocols/ss.txt [[ST?]]
+
+https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/Protocols/vmess.txt
+
+https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/Protocols/vless.txt
 
 https://raw.githubusercontent.com/Mahdi0024/ProxyCollector/master/sub/proxies.txt
 
@@ -418,7 +455,17 @@ https://raw.githubusercontent.com/DarknessShade/Sub/main/V2mix [[DS?]]
 
 https://raw.githubusercontent.com/DarknessShade/Sub/main/Ss
 
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/freedom
+https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/mixed_iran.txt [[YA?]]
+
+https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/ss_iran.txt
+
+https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/vless_iran.txt
+
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/mix [[YB?]]
+
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/hy2
+
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/normal/vmess
 
 https://raw.githubusercontent.com/lagzian/IranConfigCollector/main/Base64.txt
 
@@ -448,25 +495,17 @@ https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/vless_iran
 
 https://raw.githubusercontent.com/HosseinKoofi/GO_V2rayCollector/main/ss_iran.txt
 
+https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/ss_configs.txt [[EB?]]
+
 https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/V2Ray-Config-By-EbraSha.txt
 
 https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/vmess_configs.txt
 
-https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/ss/ss.txt
+https://raw.githubusercontent.com/Argh94/V2RayAutoConfig/refs/heads/main/configs/Vmess.txt
 
-https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/trojan/trojan_part1.txt
+https://raw.githubusercontent.com/Argh94/V2RayAutoConfig/refs/heads/main/configs/Hysteria2.txt
 
-https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/vless/vless_part1.txt
-
-https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/mixed_iran.txt
-
-https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/vless_iran.txt
-
-https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/trojan_iran.txt
-
-https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/ss_iran.txt
-
-https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/vmess_iran.txt
+https://raw.githubusercontent.com/Argh94/V2RayAutoConfig/refs/heads/main/configs/Germany.txt
 
 https://raw.githubusercontent.com/Stinsonysm/GO_V2rayCollector/refs/heads/main/trojan_iran.txt
 
@@ -507,6 +546,8 @@ https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub2.txt
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub3.txt
 
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub4.txt
+
+https://raw.githubusercontent.com/aqayerez/MatnOfficial-VPN/refs/heads/main/MatnOfficial#MatnOfficial
 
 https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs.txt
 
@@ -960,21 +1001,12 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 >
 > I recommend using [Clash-Meta] for better results.
 
-https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/clash.yaml [[PI?]]
-
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/mix [[YB?]]
-
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/reality
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml [[MB?]]
 
 https://cdn.jsdelivr.net/gh/mahdibland/V2RayAggregator@master/update/provider/provider-meta-others.yml
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.yml
-
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml [[Ni?]]
-
-https://raw.githubusercontent.com/NiREvil/vless/main/sub/clash-meta.yml
 
 https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/NiREvil_SSTime.yaml
 
@@ -985,6 +1017,14 @@ https://raw.githubusercontent.com/liketolivefree/kobabi/main/clash_mt_ir_prov_sp
 https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/free-mihomo-sub/rayan_proxy.yaml [[10i?]]
 
 https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/free-mihomo-sub/roosterkid.yaml
+
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/mix [[YB?]]
+
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/reality
+
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml [[Ni?]]
+
+https://raw.githubusercontent.com/NiREvil/vless/main/sub/clash-meta.yml
 
 https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/free-mihomo-sub/Maimengmeng.yaml
 
@@ -1004,9 +1044,27 @@ https://raw.githubusercontent.com/DiDiten/ScrapeAndCategorize/main/Clash/output/
 
 https://raw.githubusercontent.com/DiDiten/ScrapeAndCategorize/main/Clash/output/diditen-fetcher.yaml
 
-https://raw.githubusercontent.com/coldwater-10/Vpnclashfa/refs/heads/main/free-mihomo-sub/MahsaFreeConfig-mtn.yaml
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/ainita.yaml
 
-https://raw.githubusercontent.com/coldwater-10/Vpnclashfa/refs/heads/main/free-mihomo-sub/MahsaFreeConfig-mci.yaml
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/amin_o__o_bitplatform.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/hamedp-71/Sub_Checker_Creator_final.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/hamedp-71/Trojan_hp.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/MatinGhanbari_v2ray-configs-super-sub.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/namira.dev.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/yebekhe/vpn-fail.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/gheychiamoozesh.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/the3rf_com_sub_php.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/F0rc3Run_XX.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/shatakvpn.yaml
 
 https://raw.githubusercontent.com/coldwater-10/Vpnclashfa/refs/heads/main/V2Hub5.yaml [CW?]
 
@@ -1033,6 +1091,8 @@ https://raw.githubusercontent.com/misersun/config003/main/config_all.yaml
 https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Reality [[FR?]]
 
 https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_T%2CH
+
+https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/clash.yaml [[PI?]]
 
 https://clash.221207.xyz/pubclashyaml
 
@@ -1093,6 +1153,10 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 
 ### Warp for Hiddify
 
+> [!NOTE]
+>
+> ❌ Unfortunately, Warp configs do not currently work **in Iran.**
+
 **Custom Warp—Hiddify [[GA?]]**
 
 https://v2.alicivil.workers.dev/?protocol=wireguard&ip=188.114.99.137&output=hiddify
@@ -1105,7 +1169,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
 **Warp in M1,M2, ... ,h04FA0A mode with random ip:port**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/rand-ip
 
-**Chaining Warp confs — Azerbaijan IP's**  
+**Chaining Warp confs**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/WarpOnWarp.json
 
 **Warp On Warp [[TD?]]**  
@@ -1432,7 +1496,7 @@ ssconf://s3.amazonaws.com/beedynconprd/301yqyvqdpr1z95ub9fnu8qtdni54j6yyue94sowz
 
 <br/>
 
- <!--I'm commenting on the links to Soroush's repository for now so that we can find out later what happened to her GitHub repository. 🤷🏻‍♀️ 
+ <!-- I'm commenting on the links to Soroush's repository for now so that we can find out later what happened to her GitHub repository. 🤷🏻‍♀️ 
 
 ## COUNTRIES
 
@@ -1661,6 +1725,29 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 
 ![rainbow]
 
+> [!IMPORTANT]
+>
+> <details>  
+> <summary> Automated Project Management Notice </summary>
+>
+> **⚙️ Dynamic Updates:**  
+> Approximately **53% of this repository** (including configuration files, templates, and metadata) is **automatically regenerated every hours in a day** via GitHub Actions.
+>
+> **🛠️ Manual Edits Warning:**  
+> Any changes made to files **may be overwritten** without prior notice.
+>
+> github/workflow/_  
+> boringtun/_  
+> edge/_  
+> root/\*  
+> _/.js  
+> _/.py  
+> _/.html  
+> \*/.yml
+>
+> </details>
+
+
 <br/>
 
 <a href="https://trendshift.io/repositories/10442" target="_blank"><img src="https://trendshift.io/api/badge/repositories/10442" alt="NiREvil%2Fvless | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
@@ -1708,6 +1795,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [CW?]: https://github.com/coldwater-10/Vpnclashfa
 [DS?]: https://github.com/Darknessshade
 [DN?]: https://telegram.me/s/DeamNet
+[EB?]: https://github.com/ebrasha/free-v2ray-public-list/
 [EVA?]: https://t.me/evavpn_bot
 [EP?]: https://github.com/Epodonios/v2ray-configs
 [FR?]: https://telegram.me/s/FREE2CONFIG
@@ -1717,7 +1805,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [GZ?]: https://github.com/valid7996/
 [HK?]: https://github.com/HosseinKoofi/GO_V2rayCollector/
 [HP?]: https://github.com/hamedp-71/
-[HC?]: https://github.com/hamedcode
+[HC?]: https://github.com/hamedcod
 [JN?]: https://telegram.me/s/JavidnamanIran
 [KB?]: https://github.com/liketolivefree
 [KV?]: https://telegram.me/s/KevinZakarian
@@ -1727,6 +1815,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [PI?]: https://t.me/firewebgroup
 [MB?]: https://github.com/mahdibland/ShadowsocksAggregator/
 [ME?]: https://telegram.me/s/FreeVPNHomes/532
+[MG?]: https://github.com/MatinGhanbari/v2ray-configs/
 [MK?]: https://telegram.me/maviks_bot?start=680cff2cb34f9a1f3951470a
 [MS?]: https://github.com/mshojaei77
 [MT?]: https://github.com/MhdiTaheri
@@ -1734,9 +1823,11 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [PR?]: https://telegram.me/s/ProxyDaemi
 [SB?]: https://github.com/Surfboardv2ray
 [SR?]: https://github.com/soroushmirzaei/telegram-configs-collector
+[ST?]: https://github.com/SoliSpirit/v2ray-configs
 [SW?]: https://github.com/jadolg/shadowmere
 [TD?]: https://telegram.me/s/mansor427
 [WE?]: https://telegram.me/s/IranRamona
+[YA?]]: https://github.com/youfoundamin/V2rayCollector/
 [Arshia]: https://telegram.me/s/warpscanner
 [any information]: https://telegram.me/s/F_NiREvil/6292
 [Amnezia]: https://github.com/amnezia-vpn/amnezia-client/releases
@@ -1744,6 +1835,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Clash-Meta]: https://github.com/MetaCubeX/ClashMetaForAndroid/releases
 [checker-3j2.pages.dev]: https://checker-3j2.pages.dev
 [darknessshade.github.io/DNS-Tester]: https://darknessshade.github.io/DNS-Tester/
+[proxy-fetcher.pages.dev]: https://telegram-proxy-fetcher.pages.dev/
 [Di4Diana]: https://telegram.me/Di4Diana
 [diana-cl.github.io/Diana-Cl]: https://diana-cl.github.io/Diana-Cl/
 [ESET CODES - VPN, ANTIVIRUS?]: https://telegram.me/F_NiREvil/2113
@@ -1752,6 +1844,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Harmony]: https://github.com/NiREvil/Harmony/blob/b923d67dd5702886b0965de86182896373ade4e5/harmony.js#L892
 [Hiddify]: https://github.com/hiddify/hiddify-app/releases
 [Husi]: https://github.com/xchacha20-poly1305/husi/releases
+[IRCF]: https://t.me/ircfspace/1383
 [itsyebekhe.github.io/PSG]: https://itsyebekhe.github.io/PSG/
 [itsyebekhe.github.io/tpro]: https://itsyebekhe.github.io/tpro/
 [itsyebekhe.github.io/warp]: https://itsyebekhe.github.io/warp/
@@ -1778,3 +1871,4 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [WTF?]: https://github.com/NiREvil/vless/blob/main/sub/clash-meta-wg.yml#L40
 [XS?]: https://telegram.me/s/xs_filternet
 [YB?]: https://telegram.me/s/YeBeKhe/527
+[Zizifn]: https://github.com/NiREvil/zizifn
