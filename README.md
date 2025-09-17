@@ -5,7 +5,7 @@
 
 > [!CAUTION]
 >
->  ‏[![MahsaAmini](https://img.shields.io/badge/وضعیت_نابسامان_وارپ-darkred)](https://t.me/NiREvil_GP)
+> ‏[![MahsaAmini](https://img.shields.io/badge/وضعیت_نابسامان_وارپ-darkred)](https://t.me/NiREvil_GP)
 >
 > <br/>
 >
@@ -220,7 +220,7 @@
 >
 > </details>
 >
->  ‏[![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/x-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP)
+> ‏[![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/x-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP)
 >
 > <br><br/>
 
