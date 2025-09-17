@@ -5,7 +5,7 @@
 
 > [!CAUTION]
 >
-> [![MahsaAmini](https://img.shields.io/badge/وضعیت_نابسامان_وارپ-darkred)](https://t.me/NiREvil_GP/)
+>  ‏[![MahsaAmini](https://img.shields.io/badge/وضعیت_نابسامان_وارپ-darkred)](https://t.me/NiREvil_GP)
 >
 > <br/>
 >
@@ -220,7 +220,7 @@
 >
 > </details>
 >
-> ‏[![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/x-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP)
+>  ‏[![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/x-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP)
 >
 > <br><br/>
 
@@ -314,7 +314,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 ### Scan with Hiddify
 
 <p align="center">
-     <img src="edge/assets/QRCode-Dog.png" alt="QR" width="640px">
+     <img src="edge/assets/QRCode-Dog.png" alt="QR" width="420px">
      </p>
 
 ![rainbow]
@@ -1827,8 +1827,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [SW?]: https://github.com/jadolg/shadowmere
 [TD?]: https://telegram.me/s/mansor427
 [WE?]: https://telegram.me/s/IranRamona
-
-[YA?]]: https://github.com/youfoundamin/V2rayCollector/
+[YA?]: https://github.com/youfoundamin/V2rayCollector
 [Arshia]: https://telegram.me/s/warpscanner
 [any information]: https://telegram.me/s/F_NiREvil/6292
 [Amnezia]: https://github.com/amnezia-vpn/amnezia-client/releases
