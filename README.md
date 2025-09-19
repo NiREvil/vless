@@ -234,7 +234,7 @@
 
 </div>
 
-- Some subscription links are available for [v2rayNG], [Sing-Box], [Hiddify], [NikaNG], [MahsaNG], [NekoBox], [Husi], [Exclave], [Amnezia], [Outline] [Clash-Meta] and other clients.
+- Some subscription links are available for [v2rayNG], [Singbox], [Hiddify], [MahsaNG], [NikaNG], [NekoBox], [Exclave], [Karing], [Husi], [Amnezia], [WgTunnel], [ProxyCloud], [ClashMeta], [FiClash], [ClashMI], [Nekoray], [Outline], [Happ], [v2rayTun] and other clients.
 
 - **Несколько ссылок для подписки на** v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Outline, Clash-Meta и ... Вернуть результат только
 
@@ -242,18 +242,28 @@
 
 > [!IMPORTANT]
 >
-> <details>  
+> <details>
 > <summary> In case of dissatisfaction </summary>
 >
-> - سلام امیدوارم حالتون عالی باشه
-> - لینک‌های ساب وایرگارد هیدیفای و ویتوری و ...
-> - عموما برای الگو گرفتن و ساخت کانفیگ شخصی هستن و برای استفاده عموم مناسب نیستن،
-> - لینک‌های singbox همه ساب‌های مورد علاقه خودمون هستن و تا جای ممکن سورس ساب‌هارو پیدا کرده و با [?] در جلوی اونها مشخص کردم.
-> - اگر لینک شما مابین‌ اونها بود و نمی‌خواستید که باشه لطفا پیام بدید تا با یک‌دنیا شرمندگی و معذرت‌خواهی از لیست حذف کنم.
-> - اگر سورس هرکدوم رو سراغ داشتید لطفا اطلاع بدید اضافه کنم جلوی لینک.
-> - اگر لینک عمومی سراغ داشتید که براتون خوب کار کرده می‌تونید بفرستید اضافه کنم و مردممون استفاده کنن.
-> - متاسفانه از مرداد ماه نیما دیگه بینمون نیست و من و چند دوست دیگه اکانت گیت رو در حد توان اداره می‌کنیم. به امید آزادی 🤍
-> - اکانت تلگرام من: [[Di4Diana]].
+> سلام، امیدوارم حالتون عالی باشه 🌸 
+> 
+> این مخزن در ابتدای شروع کار خودش جایی بود برای نوشتن ایده‌ها مربوط به کانفیگ‌های کاستوم علی الخصوص کانفیگ‌های وایرگارد برای کلاینت‌هایی مثل هیدیفای و ویتوری و غیره، کانفیگ‌های کاستوم شده با تکنیک فرگمنت حالت‌های متغیر و ترکیب کانفیگ‌های پروتون و نورد و وارپ و اینا با همدیگه داخل مخزن قرار می‌گرفت تا بقیه از از اونا ایده بگیرن و نسخه شخصی خودشون رو بسازن.  
+> ولی به مرور زمان ناخوداگاه علاوه‌بر اون‌ها تبدیل شد به یک مخزن از لینک‌‌های ساب‌‌اسکریپشن‌های عمومی و یه سری ابزار‌هایی که روتین واسه خیلی‌ها لازمه مثل اسکنر و تستر های پروکسی آی‌پی برای استفاده داخل وورکرها به تفکیک کشور‌های مختلف و آی‌پی تمیزهای کلادفلر واسه پنل‌هایی مثل BPB و کد وورکر شخصی zizifn و هارمونی، ابزارهای ساخت DNS و جنریت اتومات وارپ و کلش و این‌جور چیز‌ها. 
+> 
+> اگه تازه با ما آشنا شدی پیشنهاد می‌کنم سمت مسیر /assets نری چون پر از خرت و پرت‌هایی هست که به درد هیچکس نمی‌خوره، تو مخزن prettier و linter اجرا شده واسه‌ی همین اگه جای دیگه هم کدی نوشته باشیم آخرسر اینجا آپلودش می‌کنیم که فرمتش کنه و کارای خوشگلاسیشون رو انجام بده و عیب‌و ایرادش رو بگه، برای همینه که می‌گم به چشم انباری باید بهش نگاه کرد پر از چیز‌های بی مصرف. اکثر چیزای بدرد بخور برای عموم داخل root یا مسیر sub هستن. 
+> 
+> لینک‌های [Singbox](#warp-for-sfa-and-sfi) عموما شامل ساب‌های مورد علاقه‌ی خودمون هستن. همچنین کانفیگ‌های [Amnezia](#amnezia) کلاینت بی دردسر و ساده ولی خفن و با ابهت، تا حد امکان سورس‌ لینک‌هارو مقابلشون با علامت `[?Who]` مشخص کردم.
+> 
+>  اگر لینک شما هم اونجا بود و مایل نبودید منتشر بشه، کافیه بگید؛ با عرض شرمندگی و در کمال احترام سریعا حذفش می‌کنم.
+> 
+> اگر منبع هرکدوم از لینک‌ها رو می‌دونید، لطفا اطلاع بدید تا اضافه کنم.
+> 
+> همچنین اگر لینک عمومی و مفیدی دارید که خوب کار می‌کنه، می‌تونید بفرستید تا اضافه بشه و بقیه هم استفاده کنن.
+> 
+> متأسفانه از مرداد ماه سال 403 نیما دیگه بین ما نیست، و من به همراه چند دوست دیگه در حد توان این اکانت گیت رو هندل می‌کنیم.
+> 
+> - به امید آزادی 🤍  
+> - تلگرام من: [[Di4Diana]]
 >
 > </details>
 
@@ -266,24 +276,19 @@
 - [Outline](#outline)
 - [ServerLess](#serverless)
 - [Amnezia](#amnezia)
-- [Countries](#countries)
+- [Sub By Countries](#countries)
 - [WireGuards](#wireguards)
-  - [Warp for Clash-Meta](#warp-for-clash-meta)
-  - [Warp for Exclave](#warp-for-nekobox)
-  - [Warp for Hiddify](#warp-for-hiddify)
-  - [Warp for Husi](#warp-for-nekobox)
-  - [Warp for NekoBox](#warp-for-nekobox)
-  - [Warp for NikaNG](warp-for-mahsang-and-nikang)
   - [Warp for SFA & SFI](#warp-for-sfa-and-sfi)
-  - [Warp for v2rayNG](#warp-for-v2rayng)
-- [Cloudflare IPs](#cloudflare-ips)
-  - [All IPs](#all-ips)
+  - [Warp for Clash Meta](#warp-for-clashmeta)
+  - [Warp for Hiddify](#warp-for-hiddify)
+  - [Warp for NekoBox](#warp-for-nekobox)
+  - [Warp for MahsaNG](#warp-for-mahsang-and-nikang)
+- [Cloudflare IP's](#cloudflare-ips)
+  - [Daily Scanned CF IP's](#all-ips)
+  - [Daily Scanned Proxy IP's](./sub/ProxyIP.md#daily-scanned-proxies)
   - [IP ranges by Country](./edge/assets/Cloudflare_IP_ranges_by_country.md)
-  - [Warp Endpoints](#all-ips)
-  - [proxyIP Source](#proxyip)
-  - [proxy IP by Country](./sub/ProxyIP.md#proxyip-by-countries)
-- [ESET Security accounts](./eset-codes.md)
-- [Some Tools](#regardless-of-anything-else)
+  - [Warp Endpoints](#warp-endpoints)
+- [Some Sheets](#regardless-of-anything-else)
 
 ![rainbow]
 
@@ -330,50 +335,48 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 > **We've got a toolbox here that would make even a Swiss Army knife jealous! Let's see what treasures might come in handy for you.**
 >
 > This article is your golden ticket to flip Gemini and Grok into advanced mode, unleashing them without any pesky censorship or restrictions.  
-> [diana-cl.github.io/Diana-Cl]
+> - [diana-cl.github.io/Diana-Cl]
 >
 > Best DNS testing tool, just start it.  
 > Tip — use xstack DoH to bypass restrictions on YouTube, Instagram, and more.  
-> [darknessshade.github.io/DNS-Tester]  
-> Read more about DNS Tester in [Here][iran-core]  
-> Darkness Telegram proxies fetcher [proxy-fetcher.pages.dev]
+> - [darknessshade.github.io/DNS-Tester]
+> - Read more about DNS Tester in [iran-core]
+> - Darkness Telegram proxies fetcher [proxy-fetcher.pages.dev]
 >
 > This is a fast and accurate **Proxy IP Checker** tool, capable of testing IP ranges that I'm sure you haven't seen anywhere like it.  
-> [checker-3j2.pages.dev]  
-> [Telegram ProxyIPChecker_Bot]  
-> [proxyip.victoriacross.workers.dev]
+> - [checker-3j2.pages.dev]
+> - [Telegram ProxyIPChecker_Bot]
+> - [proxyip.victoriacross.workers.dev]
 >
 > <br/>
 >
-> Have you ever seen our proxy IP pool? We add half a million new proxies three times in a week.  
-> [Let me see](./sub/ProxyIP.md#proxyip-by-countries)
+> Have you ever seen our proxy IP pool? We add tons of new proxies every single day. 
+> - [Daily Scanned Proxy IP's](./sub/ProxyIP.md#daily-scanned-proxies)
 >
 > <br/>
 >
 > This is a magical command line for activating Microsoft products including Windows and Office.  
-> [github.com/NiREvil/windows-activation]
+> - [github.com/NiREvil/windows-activation]
 >
 > <br/>
 >
 > This is a tool for receiving fake information, but at the same time, it's real.  
-> [real-address1.victoriacross.ir]
+> - [Real Fake Address Gen]
 >
 > <br/>
 >
 > Ultimate WARP Generator for any client in just 2 seconds.  
-> [itsyebekhe.github.io/warp]
+> - [itsyebekhe.github.io/warp]
 >
 > <br/>
 >
 > v2ray config collector + Telegram proxy repository.  
-> [itsyebekhe.github.io/PSG]
+> - [itsyebekhe.github.io/PSG]
 >
-> [itsyebekhe.github.io/tpro]
+> - [itsyebekhe.github.io/tpro]
 >
 > <br/>
 >
-> **ESET** has discontinued free trial VPN codes. This generator now only creates ESET HOME accounts. No VPN codes will be provided.  
-> [Let me see](./ESET-CODES.md)
 >
 > <br><br/>
 
@@ -399,7 +402,9 @@ https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions
 
 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt
 
-https://yalda.nscl.ir [[Ni?]]
+https://robin.victoriacross.ir [[Ni?]]
+
+https://raw.githubusercontent.com/STR97/STRUGOV/refs/heads/main/Vless
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
 
@@ -422,10 +427,6 @@ https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eterni
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/trojan.txt
-
-https://raw.githubusercontent.com/nscl5/5/refs/heads/main/configs/all.txt [[L5?]]
-
-https://raw.githubusercontent.com/nscl5/5/refs/heads/main/configs/vmess.txt
 
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed [[SB?]]
 
@@ -457,6 +458,10 @@ https://raw.githubusercontent.com/DarknessShade/Sub/main/V2mix [[DS?]]
 
 https://raw.githubusercontent.com/DarknessShade/Sub/main/Ss
 
+https://raw.githubusercontent.com/nscl5/5/refs/heads/main/configs/all.txt [[L5?]]
+
+https://raw.githubusercontent.com/nscl5/5/refs/heads/main/configs/vmess.txt
+
 https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/mixed_iran.txt [[YA?]]
 
 https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/ss_iran.txt
@@ -480,6 +485,12 @@ https://raw.githubusercontent.com/hamedcode/port-based-v2ray-configs/main/sub/vl
 https://raw.githubusercontent.com/hamedcode/port-based-v2ray-configs/main/sub/vmess.txt
 
 https://raw.githubusercontent.com/hamedcode/port-based-v2ray-configs/main/sub/ss.txt
+
+https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet.txt
+
+https://raw.githubusercontent.com/Leon406/SubCrawler/refs/heads/main/sub/share/a11
+
+https://raw.githubusercontent.com/imalrzai/ExclaveVirtual/refs/heads/main/ExclaveVirtual
 
 https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub
 
@@ -603,16 +614,16 @@ https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_l
 >
 > Do you have [[any information]] on amnezia ?
 >
-> Also can using configs in [WG-Tunnel] Client.  
+> Also can using configs in [WgTunnel] Client.  
 > <br/>
 
 **A0 🇳🇱 NL**
 
 ```Elixir
 [Interface]
-PrivateKey = AEP+jhH5scMAOziG/mr1wwM43SKUxgPUM9q0tU3OK2U=
-Address = 10.136.2.46/32
-DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+PrivateKey = 4DzhwkvPIDyt9n6Jsy7gZ0tt6Xo9oP8ZBNfkse51IlQ=
+Address = 10.136.4.52/32
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
 MTU = 1380
 Jc = 43
 Jmin = 50
@@ -625,20 +636,20 @@ H3 = 1214405368
 H4 = 1739253821
 [Peer]
 PublicKey = gbUPMNfaxgRSGD3xcnnbAJSclxfnOyh4U1qqmYMWmCI=
-PresharedKey = X2x3QHoIkpmviGM3zyX6mJvf6Oj905mqBSLp0hfRp/w=
+PresharedKey = gRYXRdp5bE26cbnOLPFuXh8GlWpIPZjv1ZQs0ymgvGo=
 AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 25
+PersistentKeepalive = 30
 Endpoint = nl02awg.kcufwfgnkr.net:60136
 ```
 
-**A1 🇫🇮**
+**A1 🇳🇱 NL**
 
 ```Ballerina
 [Interface]
-PrivateKey = +NINvwWX6DQ82zqC3pKPSh01UNlBw+n1JGPD9Bzr01o=
-Address = 10.146.0.94/32
-DNS = 1.1.1.1, 8.8.4.4, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1330
+PrivateKey = sCrICobPbEukaBKKYE1CO4a/vh08a5fl54ps5a9rl2w=
+Address = 10.201.12.164/32
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1380
 Jc = 43
 Jmin = 50
 Jmax = 70
@@ -649,20 +660,45 @@ H2 = 430880481
 H3 = 1214405368
 H4 = 1739253821
 [Peer]
-PublicKey = fjcBbSCl00At7hkm/h8uVlfITrq3k6twlbICtXMael4=
-PresharedKey = 2uq120k3ihWXIAPrQTY/mk1M8yGxKTxIWC7nCNGx6DE=
+PublicKey = n0z+oioqL8meQmsU1aPx0fXiMPzStqM3VwkVSmAqzG0=
+PresharedKey = a2Rmv35eo1I60q/45KtdQ55OPhVt6iFQWWYShI5sNe4=
 AllowedIPs = 0.0.0.0/0, ::/0
 PersistentKeepalive = 30
-Endpoint = fin01wg.kcufwfgnkr.net:50146
+Endpoint = nl01a.kcufwfgnkr.net:62931
 ```
 
-**A2 🇦🇪**
+**A2 🇰🇿 KZ**
+
+```Ballerina
+[Interface]
+PrivateKey = eCuJMxzhjESh13AuZABQnD484969ZKUerZmZgzzRKXY=
+Address = 10.136.0.180/32
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+[Peer]
+PublicKey = NyiezkT2pv7jPVbosAbaWE5t/1U65LVrA84Z2U3EWTw=
+PresharedKey = OeEyckrhhs24gsb6KFX5+aDbURhSG4R8SnzamT6vwhA=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = kz01awg.kcufwfgnkr.net:60136
+```
+
+**A3 🇦🇪 AE**
 
 ```Elixir
 [Interface]
 PrivateKey = 4HRk7bt3WhdxZzKqiXNeT41xTZhAPYTVpji8sxweX0c=
 Address = 10.136.1.137/32
-DNS = 1.1.1.1, 8.8.4.4, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
 MTU = 1380
 Jc = 43
 Jmin = 50
@@ -681,38 +717,13 @@ PersistentKeepalive = 30
 Endpoint = ae01awg.kcufwfgnkr.net:60136
 ```
 
-**A3 🇪🇪**
-
-```Ballerina
-[Interface]
-PrivateKey = iPC3ihkqcyBouWGfCP+9f1pYOsktfW1fUmtKoh/eC2M=
-Address = 10.136.1.165/32
-DNS = 1.1.1.1, 8.8.4.4, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1330
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-[Peer]
-PublicKey = Gd2PeVUqrz3FzpnbfLmvy1tY/Mv4drWVhsoAjflUBUw=
-PresharedKey = lnJvUBbTO4gDjRrClntTo+Re/1ONRgxfW8p2rw68ddE=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = est01awg.kcufwfgnkr.net:60136
-```
-
 **A4 🇬🇧 UK**
 
 ```Elixir
 [Interface]
-PrivateKey = KCjVjySbNGSviVYG0MwmleRz0QhXOqcwHbiHRjGxn0A=
-Address = 10.221.0.78/32
-DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+PrivateKey = gJGh5oDmSfsIjFoipAhH9VrXGndgm81M74WfqA5JDn4=
+Address = 10.221.23.9/32
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
 MTU = 1380
 Jc = 43
 Jmin = 50
@@ -725,9 +736,9 @@ H3 = 1214405368
 H4 = 1739253821
 [Peer]
 PublicKey = jJgnoLdV8w94rWI0gbXWhhcY8dFA3SuBdD0Fng3u/xo=
-PresharedKey = 6+oOnvoa2He0UE8j0Af3cRx/lJSdRSdyHLA1eKc9FCM=
+PresharedKey = gJYLQ1Wlj5iq34S1t7IjsLx5tvxr+431SW9rgg/oEFI=
 AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 25
+PersistentKeepalive = 30
 Endpoint = gb01a.kcufwfgnkr.net:62931
 ```
 
@@ -735,9 +746,9 @@ Endpoint = gb01a.kcufwfgnkr.net:62931
 
 ```Ballerina
 [Interface]
-PrivateKey = +EkO5G9s8wtavwusVRx693iUU44u/cA4KaiXFraTvVU=
+PrivateKey = 2DwqSLnw/z80XsyI3fkg8XDc2YS+phxIBuwxm+u2oV4=
 Address = 10.201.5.49/32
-DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
 MTU = 1380
 Jc = 43
 Jmin = 50
@@ -750,19 +761,19 @@ H3 = 1214405368
 H4 = 1739253821
 [Peer]
 PublicKey = 6jIt22KMxyN3Hm62/8I4/M54gNsUJD4P8AqOWaGR7F4=
-PresharedKey = XdzRw2puotZqp4uUj3d/nh2zK9FNS80qFcfZR27g9WU=
+PresharedKey = LseW8c+Tplmio8JfNSENGHetoF9bEm8zuizeEU6/TkA=
 AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 25
+PersistentKeepalive = 30
 Endpoint = fr01a.kcufwfgnkr.net:62931
 ```
 
-**A6 🇹🇷 TR**
+**A6 🇰🇷 KR**
 
 ```Elixir
 [Interface]
-PrivateKey = gCQsj/7vZrBCjLuKtNvCrwhEa0CqSXRWRHvoddNin38=
-Address = 10.201.2.124/32
-DNS = 1.1.1.1, 8.8.8.8, 9.9.9.9, 208.67.222.222, 2606:4700:4700::1111
+PrivateKey = CId0mgqhuZBJs7uotRXOgK1oB+wJWtO278w0ve6rnXM=
+Address = 10.136.0.43/32
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
 MTU = 1380
 Jc = 43
 Jmin = 50
@@ -773,16 +784,68 @@ H1 = 1593635057
 H2 = 430880481
 H3 = 1214405368
 H4 = 1739253821
-
 [Peer]
-PublicKey = 6T9PkVHfTvMfDtKANISJqnW1Ulmd5kYyh8IsVkQYemU=
-PresharedKey = ZMNacbDp5sZhDlKLX0iGhcn+7zRno1gMPmx1ZU3JeWU=
+PublicKey = D9GXNxSpDKWNj8OWnU1qs7IdBuFdlrX0vBNzOfN77XQ=
+PresharedKey = mx5PwEY+MSFoOb3C1HpVsY+80WBmsrHQ0bNcBRF2VNY=
 AllowedIPs = 0.0.0.0/0, ::/0
 PersistentKeepalive = 30
-Endpoint = tr01a.kcufwfgnkr.net:62931
+Endpoint = kr01awg.kcufwfgnkr.net:60136
 ```
 
-**A** [[Ni?]]
+**A7 🇫🇮 FN**
+
+```Elixir
+[Interface]
+PrivateKey = +NINvwWX6DQ82zqC3pKPSh01UNlBw+n1JGPD9Bzr01o=
+Address = 10.146.0.94/32
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+[Peer]
+PublicKey = fjcBbSCl00At7hkm/h8uVlfITrq3k6twlbICtXMael4=
+PresharedKey = 2uq120k3ihWXIAPrQTY/mk1M8yGxKTxIWC7nCNGx6DE=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = fin01wg.kcufwfgnkr.net:50146
+```
+
+**A8 🇱🇹 LT**
+
+```Elixir
+[Interface]
+PrivateKey = 2LOm982JgOqYlHwBcCAyXi5FJt1NbO1xa0n+XuhdUEs=
+Address = 10.136.1.102/32
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+[Peer]
+PublicKey = 4csd4T5lqPKX4tot3YQ7PWLviNzl8XgZ00JMsLuCywg=
+PresharedKey = Skih2QLnkuG4DwymdakKF612tlFg1UQuXBLqojGiUXU=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = ltu01awg.kcufwfgnkr.net:60136
+```
+
+
+### Amnezia free configuration's
+
+**A**
 
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWEgRnJlZSBJUiIsICJkZXNjcmlwdGlvbiI6ICJBbW5lemlhIEZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJYbWtoWjhTay5UaTY0NENQTnBnTnQydW12ektUSGJRY1NSY2hpRXhlWSJ9
@@ -815,7 +878,7 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 <br/>
 
 <details>
-<summary>  MORE CONTEXT </summary>
+<summary> MORE CONTENT</summary>
 
 **1**
 
@@ -1001,7 +1064,9 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 
 > [!NOTE]
 >
-> I recommend using [Clash-Meta] for better results.
+> You can use sublinks in [ClashMeta], [FiClash], [ClashMI] Clients.
+>
+> <br/> 
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml [[MB?]]
 
@@ -1119,8 +1184,8 @@ https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.
 > Additionally, you can utilize the **[Strawberry.js]**  
 > script to modify the arrangement of the IPs or to combine them with other repositories.  
 > e.g: https://strawberry.victoriacross.ir
-
-<br><br/>
+> 
+> <br/>
 
 ### All IPs
 
@@ -1134,7 +1199,7 @@ https://github.com/NiREvil/vless/blob/main/sub/Cf-ipv4.json
 
 https://github.com/NiREvil/vless/blob/main/sub/Cf-ipv6.json
 
-**Warp Endpoints**
+### Warp Endpoints
 
 https://ircfspace.github.io/endpoint/ [[CF?]]
 
@@ -1152,65 +1217,23 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 
 ## WIREGUARDS
 
-### Warp for Hiddify
-
-> [!NOTE]
->
-> ❌ Unfortunately, Warp configs do not currently work **in Iran.**
-
-**Custom Warp—Hiddify [[GA?]]**
-
-https://v2.alicivil.workers.dev/?protocol=wireguard&ip=188.114.99.137&output=hiddify
-
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/warp/config [[YB?]]
-
-**Auto generate in workflows - warp ON warp [[Ni?]]**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
-
-**Warp in M1,M2, ... ,h04FA0A mode with random ip:port**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/rand-ip
-
-**Chaining Warp confs**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/WarpOnWarp.json
-
-**Warp On Warp [[TD?]]**  
-https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/subwarp/warp
-
-**Warp + Windscribe + Hysteria - Hiddify** https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscribe%20on%20H2
-
-**Warp + Proton for Hiddify with DNS clean**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Proton%20ON%20WARP%2B%20DNS%20Clean
-
-**Some warp configs for Hidify [[MS?]]**
-https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/warp
-
-https://raw.githubusercontent.com/4n0nymou3/ss-config-updater/refs/heads/main/configs.txt [[ANO?]]
-
-<br><br/>
-
 ### Warp for [SFA] and [SFI]
 
 > [!NOTE]
 >
-> SFA: Singbox for Android <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="13"/>
+> **SFA:** Singbox for Android <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="14"/>
 >
-> SFI: Singbox for IOS
-
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json [[Ni?]]
+> **SFI:** Singbox for IOS
+>
+> <br/> 
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
 
 https://vpny.online/VPNy.json [[KV?]]
 
-http://45.138.99.213:2096/sub/FarVPN?format=json
-
-http://144.172.106.192:2096/sub/KasraVPN?format=json
-
-http://103.83.86.119:2096/sub/NamelessVPN?format=json
-
-http://129.212.182.3:2096/sub/BenVPN?format=json
-
 https://channel-freevpnhomes-subscription.shampoosirsehat.homes [[ME?]]
+
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json [[Ni?]]
 
 https://raw.githubusercontent.com/4n0nymou3/Universal-Proxy-Finder/master/Output/singbox_subscription.json [[ANO?]]
 
@@ -1232,7 +1255,7 @@ https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox_rs.json
 
 <br><br/>
 
-#### Warp for [NekoBox]
+### Warp for [Nekobox]
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/nekobox-wg.txt
 
@@ -1251,7 +1274,9 @@ https://raw.githubusercontent.com/ndsphonemy/proxy-sub/refs/heads/main/mobile.tx
 
 > [!NOTE]
 >
-> It is also applicable within the clients Mahsa & NikaNG
+> It is also applicable within the clients [MahsaNG] & [NikaNG]
+>
+> <br/>
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/v2rayng-wg.txt
 
@@ -1265,11 +1290,52 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 
 <br><br/>
 
+### Warp for Hiddify
+
+> [!NOTE]
+>
+> ❌ Unfortunately, Warp configs do not currently work **in Iran.**
+>
+> <br/>
+
+**Custom Warp—Hiddify [[GA?]]**
+
+https://v2.alicivil.workers.dev/?protocol=wireguard&ip=188.114.99.137&output=hiddify
+
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/warp/config [[YB?]]
+
+**Auto generate in workflows - warp ON warp [[Ni?]]**  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
+
+**Warp in M1,M2, ... ,h04FA0A mode with random ip:port**  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/rand-ip
+
+**Chaining Warp confs**  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/WarpOnWarp.json
+
+**Warp On Warp [[TD?]]**  
+https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/subwarp/warp
+
+**Warp + Windscribe + Hysteria - Hiddify**  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscribe%20on%20H2
+
+**Warp + Proton for Hiddify with DNS clean**  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Proton%20ON%20WARP%2B%20DNS%20Clean
+
+**Some warp configs for Hidify [[MS?]]**
+https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/warp
+
+https://raw.githubusercontent.com/4n0nymou3/ss-config-updater/refs/heads/main/configs.txt [[ANO?]]
+
+<br><br/>
+
 ### Warp for [MahsaNG] and [NikaNG]
 
 > [!NOTE]
 >
 > Configs are from telegram channels of — [Arshia] and [The Darkness].
+>
+> <br/> 
 
 https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/Xray-WoW.json
 
@@ -1424,14 +1490,14 @@ wireguard://yHmk7qZA48yn%2FPCgMV%2F95lazmj2JgXBxk5MoUjsSwEo%3D@188.114.99.137:23
 
 <br/>
 
-### Warp for [Clash-Meta]
+### Warp for [ClashMeta]
 
 > [!NOTE]
 >
 > warp Configurations are auto generated every six hours,
 > Interconnected in the form of a proxy chain, and utilize amnezia options.
 >
-> Suitable for ChatGPT [[WTF?]]
+> <br/>
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml
 
@@ -1452,10 +1518,13 @@ https://raw.githubusercontent.com/DarknessShade/WoW/refs/heads/main/clash-wg.yml
 > These configs are completely **Serverless** and are designed to work seamlessly with just a few DNS servers.  
 > You can enjoy lightning-fast loading speeds for YouTube videos, Twitter, and web browsing.
 >
-> Just remember, because there's no server, **your IP address won't be changed!**  
-> Happy streaming! <br/>
+> Just remember, because there's no server, **your IP address won't be changed!**
+> 
+> Happy streaming!
+>
+> <br/>
 
-**tlshello [[GFW]]**  
+**tlshello** [[GFW?]]  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_TLS_Fragment_xray_config.json
 
 **1-1**  
@@ -1470,6 +1539,8 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_1
 > [!NOTE]
 >
 > Some configratiion for [[Outline]], Thanks to — [[Ainita?][AIN]]
+>
+> <br/>
 
 ```POV-Ray SDL
 ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-1.csv
@@ -1488,11 +1559,11 @@ ssconf://ainita.s3.eu-north-1.amazonaws.com/AinitaServer-4.csv
 ```
 
 ```POV-Ray SDL
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPdTFoWGxQS3gwd0tKYk91UmZyOER5@176.124.207.105:37322#DEvil
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpqRTFrNmI2TnNjTVI4WTE0MWlqVmlz@176.124.207.105:37322/?outline=1
 ```
 
 ```POV-Ray SDL
-ssconf://s3.amazonaws.com/beedynconprd/301yqyvqdpr1z95ub9fnu8qtdni54j6yyue94sowzgtssg0p9gylulg9a2ern7w0.json#DEvil
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpyMGZySUFuTGVhbTFGcmhsYkM4bzlJ@176.124.207.105:37322/?outline=1
 ```
 
 <br/>
@@ -1564,7 +1635,7 @@ ssconf://s3.amazonaws.com/beedynconprd/301yqyvqdpr1z95ub9fnu8qtdni54j6yyue94sowz
 
 > [!NOTE]
 >
-> **Credits — Dear [[10i?]]**
+> **Credits — Dear [[10i?]]** <br/> 
 
 | Country Name                                                                                                   | Num of Confs | Sub Links                                                                                                                                             |
 | -------------------------------------------------------------------------------------------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1662,7 +1733,7 @@ ssconf://s3.amazonaws.com/beedynconprd/301yqyvqdpr1z95ub9fnu8qtdni54j6yyue94sowz
 >
 > **Credits — Dear [[EP?]]**
 >
-> And next up ...
+> And next up ... <br/>
 
 **🇺🇸**  
 https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/United%20States/config.txt
@@ -1726,6 +1797,8 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 
 ![rainbow]
 
+<br/> 
+
 > [!IMPORTANT]
 >
 > <details>  
@@ -1750,7 +1823,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 
 <br/>
 
-<a href="https://trendshift.io/repositories/10442" target="_blank"><img src="https://trendshift.io/api/badge/repositories/10442" alt="NiREvil%2Fvless | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+<a href="https://trendshift.io/repositories/10442" target="_blank"><img src="https://trendshift.io/api/badge/repositories/10442" alt="NiREvil%2Fvless | Trendshift" style="width: 260px; height: 60px;" width="250" height="55"/></a>
 
 <br/>
 
@@ -1800,7 +1873,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [EP?]: https://github.com/Epodonios/v2ray-configs
 [FR?]: https://telegram.me/s/FREE2CONFIG
 [GE?]: https://telegram.me/s/gheychiamoozesh
-[GFW]: https://github.com/GFW-knocker/
+[GFW?]: https://github.com/GFW-knocker/
 [GA?]: https://telegram.me/s/gheychiamoozesh/387
 [GZ?]: https://github.com/valid7996/
 [HK?]: https://github.com/HosseinKoofi/GO_V2rayCollector/
@@ -1828,11 +1901,14 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [TD?]: https://telegram.me/s/mansor427
 [WE?]: https://telegram.me/s/IranRamona
 [YA?]: https://github.com/youfoundamin/V2rayCollector
+
+
 [Arshia]: https://telegram.me/s/warpscanner
 [any information]: https://telegram.me/s/F_NiREvil/6292
 [Amnezia]: https://github.com/amnezia-vpn/amnezia-client/releases
 [Avast SecureLine]: https://play.google.com/store/apps/details?id=com.avast.android.vpn&pcampaignid=web_share
-[Clash-Meta]: https://github.com/MetaCubeX/ClashMetaForAndroid/releases
+[ClashMeta]: https://github.com/MetaCubeX/ClashMetaForAndroid/releases
+[ClashMI]: https://github.com/KaringX/clashmi/releases
 [checker-3j2.pages.dev]: https://checker-3j2.pages.dev
 [darknessshade.github.io/DNS-Tester]: https://darknessshade.github.io/DNS-Tester/
 [proxy-fetcher.pages.dev]: https://telegram-proxy-fetcher.pages.dev/
@@ -1840,33 +1916,41 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [diana-cl.github.io/Diana-Cl]: https://diana-cl.github.io/Diana-Cl/
 [ESET CODES - VPN, ANTIVIRUS?]: https://telegram.me/F_NiREvil/2113
 [Exclave]: https://github.com/dyhkwong/Exclave/releases
+[FiClash]: https://github.com/chen08209/FlClash/releases
 [github.com/NiREvil/windows-activation]: https://github.com/NiREvil/windows-activation/
+[Happ]: https://play.google.com/store/apps/details?id=com.happproxy
 [Harmony]: https://github.com/NiREvil/Harmony/blob/b923d67dd5702886b0965de86182896373ade4e5/harmony.js#L892
 [Hiddify]: https://github.com/hiddify/hiddify-app/releases
 [Husi]: https://github.com/xchacha20-poly1305/husi/releases
+[iran-core]: https://diana-cl.github.io/Diana-Cl/topics/iran-core
 [IRCF]: https://t.me/ircfspace/1383
 [itsyebekhe.github.io/PSG]: https://itsyebekhe.github.io/PSG/
 [itsyebekhe.github.io/tpro]: https://itsyebekhe.github.io/tpro/
 [itsyebekhe.github.io/warp]: https://itsyebekhe.github.io/warp/
+[Karing]: https://github.com/KaringX/karing/releases
 [MahsaNG]: https://github.com/mahsanet/MahsaaNG/releases
 [Nekobox]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
+[Nekoray]: https://github.com/MRT-project/Neko-ray/releases
 [New-Folder]: https://telegram.me/new_folder_revil/3437
 [NikaNG]: https://github.com/mahsanet/NikaNG/releases
 [Outline]: https://getoutline.org/get-started/#step-3
+[ProxyCloud]: https://github.com/code3-dev/ProxyCloud/releases
 [proxyip.victoriacross.workers.dev]: https://proxyip.victoriacross.workers.dev/
 [psiphon.ca/download]: https://psiphon.ca/en/download-store.html?psiphonca
 [proxyIP]: https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 [rainbow]: https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256
-[real-address1.victoriacross.ir]: https://real-address1.victoriacross.ir/
+[Real Fake Address Gen]: https://github.com/NiREvil/vless/tree/main/real%20address%20generator
 [SFA]: https://github.com/SagerNet/sing-box/releases
 [SFI]: https://apps.apple.com/us/app/sing-box/id6451272673
-[Sing-Box]: https://github.com/SagerNet/sing-box/releases
+[Singbox]: https://github.com/SagerNet/sing-box/releases
 [Strawberry.js]: https://github.com/NiREvil/vless/blob/main/edge/strawberry.js
 [Telegram ProxyIPChecker_Bot]: https://telegram.me/ProxyIPChecker_Bot
 [The Darkness]: https://telegram.me/s/ConfigWireguard
 [TERMUX]: https://github.com/termux/termux-app/releases
 [UUID]: https://www.uuidgenerator.net/
 [v2rayNG]: https://github.com/2dust/v2rayng/releases
+[v2rayTun]: https://play.google.com/store/apps/details?id=com.v2raytun.android
+[WgTunnel]: https://github.com/wgtunnel/wgtunnel/releases
 [WIZ]: https://bia-pain-bache.github.io/BPB-Worker-Panel/fa/installation/wizard/
 [WTF?]: https://github.com/NiREvil/vless/blob/main/sub/clash-meta-wg.yml#L40
 [XS?]: https://telegram.me/s/xs_filternet
