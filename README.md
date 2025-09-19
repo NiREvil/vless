@@ -397,7 +397,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 >
 > The public subscription links for Xray [clients](#clients) Core.  
 > Some of them can also be used in Sing-box clients.  
-> None of them have been tested.  
+> None of them have been tested.
 >
 > [🗺 Go Back to Contents](#table-of-contents)
 >
