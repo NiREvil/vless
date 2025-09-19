@@ -245,24 +245,24 @@
 > <details>
 > <summary> In case of dissatisfaction </summary>
 >
-> سلام، امیدوارم حالتون عالی باشه 🌸 
-> 
+> سلام، امیدوارم حالتون عالی باشه 🌸
+>
 > این مخزن در ابتدای شروع کار خودش جایی بود برای نوشتن ایده‌ها مربوط به کانفیگ‌های کاستوم علی الخصوص کانفیگ‌های وایرگارد برای کلاینت‌هایی مثل هیدیفای و ویتوری و غیره، کانفیگ‌های کاستوم شده با تکنیک فرگمنت حالت‌های متغیر و ترکیب کانفیگ‌های پروتون و نورد و وارپ و اینا با همدیگه داخل مخزن قرار می‌گرفت تا بقیه از از اونا ایده بگیرن و نسخه شخصی خودشون رو بسازن.  
-> ولی به مرور زمان ناخوداگاه علاوه‌بر اون‌ها تبدیل شد به یک مخزن از لینک‌‌های ساب‌‌اسکریپشن‌های عمومی و یه سری ابزار‌هایی که روتین واسه خیلی‌ها لازمه مثل اسکنر و تستر های پروکسی آی‌پی برای استفاده داخل وورکرها به تفکیک کشور‌های مختلف و آی‌پی تمیزهای کلادفلر واسه پنل‌هایی مثل BPB و کد وورکر شخصی zizifn و هارمونی، ابزارهای ساخت DNS و جنریت اتومات وارپ و کلش و این‌جور چیز‌ها. 
-> 
-> اگه تازه با ما آشنا شدی پیشنهاد می‌کنم سمت مسیر /assets نری چون پر از خرت و پرت‌هایی هست که به درد هیچکس نمی‌خوره، تو مخزن prettier و linter اجرا شده واسه‌ی همین اگه جای دیگه هم کدی نوشته باشیم آخرسر اینجا آپلودش می‌کنیم که فرمتش کنه و کارای خوشگلاسیشون رو انجام بده و عیب‌و ایرادش رو بگه، برای همینه که می‌گم به چشم انباری باید بهش نگاه کرد پر از چیز‌های بی مصرف. اکثر چیزای بدرد بخور برای عموم داخل root یا مسیر sub هستن. 
-> 
+> ولی به مرور زمان ناخوداگاه علاوه‌بر اون‌ها تبدیل شد به یک مخزن از لینک‌‌های ساب‌‌اسکریپشن‌های عمومی و یه سری ابزار‌هایی که روتین واسه خیلی‌ها لازمه مثل اسکنر و تستر های پروکسی آی‌پی برای استفاده داخل وورکرها به تفکیک کشور‌های مختلف و آی‌پی تمیزهای کلادفلر واسه پنل‌هایی مثل BPB و کد وورکر شخصی zizifn و هارمونی، ابزارهای ساخت DNS و جنریت اتومات وارپ و کلش و این‌جور چیز‌ها.
+>
+> اگه تازه با ما آشنا شدی پیشنهاد می‌کنم سمت مسیر /assets نری چون پر از خرت و پرت‌هایی هست که به درد هیچکس نمی‌خوره، تو مخزن prettier و linter اجرا شده واسه‌ی همین اگه جای دیگه هم کدی نوشته باشیم آخرسر اینجا آپلودش می‌کنیم که فرمتش کنه و کارای خوشگلاسیشون رو انجام بده و عیب‌و ایرادش رو بگه، برای همینه که می‌گم به چشم انباری باید بهش نگاه کرد پر از چیز‌های بی مصرف. اکثر چیزای بدرد بخور برای عموم داخل root یا مسیر sub هستن.
+>
 > لینک‌های [Singbox](#warp-for-sfa-and-sfi) عموما شامل ساب‌های مورد علاقه‌ی خودمون هستن. همچنین کانفیگ‌های [Amnezia](#amnezia) کلاینت بی دردسر و ساده ولی خفن و با ابهت، تا حد امکان سورس‌ لینک‌هارو مقابلشون با علامت `[?Who]` مشخص کردم.
-> 
->  اگر لینک شما هم اونجا بود و مایل نبودید منتشر بشه، کافیه بگید؛ با عرض شرمندگی و در کمال احترام سریعا حذفش می‌کنم.
-> 
+>
+> اگر لینک شما هم اونجا بود و مایل نبودید منتشر بشه، کافیه بگید؛ با عرض شرمندگی و در کمال احترام سریعا حذفش می‌کنم.
+>
 > اگر منبع هرکدوم از لینک‌ها رو می‌دونید، لطفا اطلاع بدید تا اضافه کنم.
-> 
+>
 > همچنین اگر لینک عمومی و مفیدی دارید که خوب کار می‌کنه، می‌تونید بفرستید تا اضافه بشه و بقیه هم استفاده کنن.
-> 
+>
 > متأسفانه از مرداد ماه سال 403 نیما دیگه بین ما نیست، و من به همراه چند دوست دیگه در حد توان این اکانت گیت رو هندل می‌کنیم.
-> 
-> - به امید آزادی 🤍  
+>
+> - به امید آزادی 🤍
 > - تلگرام من: [[Di4Diana]]
 >
 > </details>
@@ -334,49 +334,55 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 >
 > **We've got a toolbox here that would make even a Swiss Army knife jealous! Let's see what treasures might come in handy for you.**
 >
-> This article is your golden ticket to flip Gemini and Grok into advanced mode, unleashing them without any pesky censorship or restrictions.  
+> This article is your golden ticket to flip Gemini and Grok into advanced mode, unleashing them without any pesky censorship or restrictions.
+>
 > - [diana-cl.github.io/Diana-Cl]
 >
 > Best DNS testing tool, just start it.  
-> Tip — use xstack DoH to bypass restrictions on YouTube, Instagram, and more.  
+> Tip — use xstack DoH to bypass restrictions on YouTube, Instagram, and more.
+>
 > - [darknessshade.github.io/DNS-Tester]
 > - Read more about DNS Tester in [iran-core]
 > - Darkness Telegram proxies fetcher [proxy-fetcher.pages.dev]
 >
-> This is a fast and accurate **Proxy IP Checker** tool, capable of testing IP ranges that I'm sure you haven't seen anywhere like it.  
+> This is a fast and accurate **Proxy IP Checker** tool, capable of testing IP ranges that I'm sure you haven't seen anywhere like it.
+>
 > - [checker-3j2.pages.dev]
 > - [Telegram ProxyIPChecker_Bot]
 > - [proxyip.victoriacross.workers.dev]
 >
 > <br/>
 >
-> Have you ever seen our proxy IP pool? We add tons of new proxies every single day. 
+> Have you ever seen our proxy IP pool? We add tons of new proxies every single day.
+>
 > - [Daily Scanned Proxy IP's](./sub/ProxyIP.md#daily-scanned-proxies)
 >
 > <br/>
 >
-> This is a magical command line for activating Microsoft products including Windows and Office.  
+> This is a magical command line for activating Microsoft products including Windows and Office.
+>
 > - [github.com/NiREvil/windows-activation]
 >
 > <br/>
 >
-> This is a tool for receiving fake information, but at the same time, it's real.  
+> This is a tool for receiving fake information, but at the same time, it's real.
+>
 > - [Real Fake Address Gen]
 >
 > <br/>
 >
-> Ultimate WARP Generator for any client in just 2 seconds.  
+> Ultimate WARP Generator for any client in just 2 seconds.
+>
 > - [itsyebekhe.github.io/warp]
 >
 > <br/>
 >
-> v2ray config collector + Telegram proxy repository.  
-> - [itsyebekhe.github.io/PSG]
+> v2ray config collector + Telegram proxy repository.
 >
+> - [itsyebekhe.github.io/PSG]
 > - [itsyebekhe.github.io/tpro]
 >
 > <br/>
->
 >
 > <br><br/>
 
@@ -842,7 +848,6 @@ PersistentKeepalive = 30
 Endpoint = ltu01awg.kcufwfgnkr.net:60136
 ```
 
-
 ### Amnezia free configuration's
 
 **A**
@@ -1066,7 +1071,7 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 >
 > You can use sublinks in [ClashMeta], [FiClash], [ClashMI] Clients.
 >
-> <br/> 
+> <br/>
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml [[MB?]]
 
@@ -1184,7 +1189,7 @@ https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.
 > Additionally, you can utilize the **[Strawberry.js]**  
 > script to modify the arrangement of the IPs or to combine them with other repositories.  
 > e.g: https://strawberry.victoriacross.ir
-> 
+>
 > <br/>
 
 ### All IPs
@@ -1225,7 +1230,7 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 >
 > **SFI:** Singbox for IOS
 >
-> <br/> 
+> <br/>
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
 
@@ -1335,7 +1340,7 @@ https://raw.githubusercontent.com/4n0nymou3/ss-config-updater/refs/heads/main/co
 >
 > Configs are from telegram channels of — [Arshia] and [The Darkness].
 >
-> <br/> 
+> <br/>
 
 https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/Xray-WoW.json
 
@@ -1519,7 +1524,7 @@ https://raw.githubusercontent.com/DarknessShade/WoW/refs/heads/main/clash-wg.yml
 > You can enjoy lightning-fast loading speeds for YouTube videos, Twitter, and web browsing.
 >
 > Just remember, because there's no server, **your IP address won't be changed!**
-> 
+>
 > Happy streaming!
 >
 > <br/>
@@ -1635,7 +1640,7 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpyMGZySUFuTGVhbTFGcmhsYkM4bzlJ@176.124.207.10
 
 > [!NOTE]
 >
-> **Credits — Dear [[10i?]]** <br/> 
+> **Credits — Dear [[10i?]]** <br/>
 
 | Country Name                                                                                                   | Num of Confs | Sub Links                                                                                                                                             |
 | -------------------------------------------------------------------------------------------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1797,7 +1802,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 
 ![rainbow]
 
-<br/> 
+<br/>
 
 > [!IMPORTANT]
 >
@@ -1901,8 +1906,6 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [TD?]: https://telegram.me/s/mansor427
 [WE?]: https://telegram.me/s/IranRamona
 [YA?]: https://github.com/youfoundamin/V2rayCollector
-
-
 [Arshia]: https://telegram.me/s/warpscanner
 [any information]: https://telegram.me/s/F_NiREvil/6292
 [Amnezia]: https://github.com/amnezia-vpn/amnezia-client/releases
