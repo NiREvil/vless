@@ -32,9 +32,9 @@
 >
 > اما پشت ماجرا یه چیز دیگه هم هست؛ یه منبع ناشناس نسخه‌ای از یک نامه بهم رسونده که شورای عالی فضای مجازی صراحتاً خواسته بود همه‌ی کانکشن‌های وارپ به کلودفلر کاملا مسدود بشه، آی‌پی‌های باز فیلتر بشن، و حتی گزارش فنی از این بستن‌ها به شورا ارسال بشه.
 >
-> یعنی رسم دستور دادن که وارپ برای همیشه بسته بشه و نمیشه به سادگی از این قضیه عبور کرد.
+> یعنی رسما دستور دادن که وارپ برای همیشه بسته بشه و نمیشه به سادگی از این قضیه عبور کرد.
 >
-> 🔍 [ircf.space][IRCF]
+> 🔍 [ircf.space][IRCF] 🩶
 >
 > </details>
 >
@@ -193,7 +193,7 @@
 >
 > تمام، موفق باشید.
 >
-> اکه نتونستید BPB رو بسازید بیاید گروهمون و بگید کدوم مرحله خطا داد بچه‌ها هستن که راهنمایی بکنن.
+> اکه نتونستید BPB رو بسازید بیاید گروهمون و بگید کدوم مرحله خطا داد بچه‌ها هستن که راهنمایی کنن.
 >
 > </details>
 >
@@ -204,9 +204,9 @@
 > <details>
 > <summary>❗ توضیحات مربوط به پنل ZiZifn </summary><br/>
 >
-> این پنل راستش واسه استفاده شخصی خودمونه و جایی ازش حرفی نزدیم و تبلیغی نشده ولی بازم با این حال یه سریا ازش استفاده می‌کنن، الان که کد‌های وورکر اکثرشون استیبل نیستن و به محض ساخت وورکر یا pages خطای 1101 کلودفلر رو می‌گیرن خواستم این‌یکی رو معرفی کنم بهتون، تو سال اخیر حتی یکبار هم خطای 1101 نکرفتیم باهاش، چه موقعی که 100K رکوئست داشته یه وورکر، و چه موقعی که 14 میلیارد رکوئست روزانه داشته.
+> این پنل راستش واسه استفاده شخصی خودمونه و جایی ازش حرفی نزدیم و تبلیغی نشده ولی بازم با این حال یه سریا ازش استفاده می‌کنن، الان که کد‌های وورکر اکثرشون استیبل نیستن و به محض ساخت وورکر یا pages خطای 1101 کلودفلر رو می‌گیرن خواستم این‌یکی رو معرفی کنم بهتون، تو سال اخیر حتی یک‌بار هم خطای 1101 نگرفتیم باهاش، چه وقتایی که 100K رکوئست داشته، و چه وقتایی که 14 میلیارد رکوئست روزانه داشته.
 >
-> محض اطلاع باید بگم که کد حتی یک مرحله هم مبهم نشده!!
+> محض اطلاع بگم که این کد حتی یک مرحله هم مبهم نشده!!
 >
 > داخل رپو دوتا فایل هست یکیش index.js کد اصلی و عادی برای ساخت وورکر و فایل \_worker.js فشرده شده (مبهم نه) برای ساخت pages کلودفلر، می‌تونید فورک بزنید و باقی مراحل، می‌تونید از روش آپلود پیش برید هیچ‌فرقی نداره. توضیحات بیشتر داخل رپو نوشته شده.  
 > تنها متغیر UUID رو ایجاد کنید کفایت می‌کنه.
@@ -220,15 +220,17 @@
 >
 > </details>
 >
-> ‏[![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/x-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP)
+> [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/x-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP)
 >
 > <br><br/>
 
 <br><br/>
 
-<br><br/>
-
 <div dir="rtl">
+
+##
+
+### Clients
 
 - تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، هیدیفای، نکوباکس، کلش‌متا، آمنزیا، آوت‌لاین، نیکا، مهسا، ویتوری‌ ان‌جی، نکوری و ...
 
@@ -254,7 +256,7 @@
 >
 > لینک‌های [Singbox](#warp-for-sfa-and-sfi) عموما شامل ساب‌های مورد علاقه‌ی خودمون هستن. همچنین کانفیگ‌های [Amnezia](#amnezia) کلاینت بی دردسر و ساده ولی خفن و با ابهت، تا حد امکان سورس‌ لینک‌هارو مقابلشون با علامت `[?Who]` مشخص کردم.
 >
-> اگر لینک شما هم اونجا بود و مایل نبودید منتشر بشه، کافیه بگید؛ با عرض شرمندگی و در کمال احترام سریعا حذفش می‌کنم.
+> اگر لینک شما هم اونجا بود و مایل نبودید منتشر بشه، کافیه بگید؛ با عرض شرمندگی و در کمال احترام بلافاصله حذفش می‌کنم.
 >
 > اگر منبع هرکدوم از لینک‌ها رو می‌دونید، لطفا اطلاع بدید تا اضافه کنم.
 >
@@ -288,6 +290,7 @@
   - [Daily Scanned Proxy IP's](./sub/ProxyIP.md#daily-scanned-proxies)
   - [IP ranges by Country](./edge/assets/Cloudflare_IP_ranges_by_country.md)
   - [Warp Endpoints](#warp-endpoints)
+- [Clients](#clients)
 - [Some Sheets](#regardless-of-anything-else)
 
 ![rainbow]
@@ -390,6 +393,18 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 ## XRAY
 
+> [!NOTE]
+>
+> The public subscription links for Xray [clients](#clients) Core.  
+> Some of them can also be used in Sing-box clients.  
+> None of them have been tested.  
+>
+> [🗺 Go Back to Contents](#table-of-contents)
+>
+> <br/>
+
+<br/>
+
 https://vpny.online/VPNy.json [[KV?]]
 
 https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/ss.txt [[EP?]]
@@ -458,7 +473,7 @@ https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/m
 
 https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/vless.html
 
-https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/HighSpeed.txt
+https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/HighSpeed.txt [[10i?]]
 
 https://raw.githubusercontent.com/DarknessShade/Sub/main/V2mix [[DS?]]
 
@@ -500,7 +515,7 @@ https://raw.githubusercontent.com/imalrzai/ExclaveVirtual/refs/heads/main/Exclav
 
 https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub
 
-https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/ss
+https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/ss [[SB?]]
 
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/trojan
 
@@ -520,7 +535,7 @@ https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main
 
 https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/vmess_configs.txt
 
-https://raw.githubusercontent.com/Argh94/V2RayAutoConfig/refs/heads/main/configs/Vmess.txt
+https://raw.githubusercontent.com/Argh94/V2RayAutoConfig/refs/heads/main/configs/Vmess.txt [[AG?]]
 
 https://raw.githubusercontent.com/Argh94/V2RayAutoConfig/refs/heads/main/configs/Hysteria2.txt
 
@@ -622,13 +637,13 @@ https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_l
 >
 > Also can using configs in [WgTunnel] Client.
 >
-> [🗺 **Go Back** to Contents](#table-of-contents)
+> [🗺 Go Back to Contents](#table-of-contents)
 >
 > <br/>
 
 <br/>
 
-**A0 🇳🇱 NL**
+**A0 🇳🇱 NL** [[VZ?]]
 
 ```Elixir
 [Interface]
@@ -853,7 +868,7 @@ PersistentKeepalive = 30
 Endpoint = ltu01awg.kcufwfgnkr.net:60136
 ```
 
-### Amnezia free configuration's
+### Amnezia free configurations
 
 **A**
 
@@ -1076,7 +1091,7 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 >
 > You can use sublinks in [ClashMeta], [FiClash], [ClashMI] Clients.
 >
-> [🗺 **Go Back** to Contents](#table-of-contents)
+> [🗺 **Go Back**](#table-of-contents)
 >
 > <br/>
 
@@ -1199,7 +1214,7 @@ https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.
 > script to modify the arrangement of the IPs or to combine them with other repositories.  
 > e.g: https://strawberry.victoriacross.ir
 >
-> [🗺 **Go Back** to Contents](#table-of-contents)
+> [🗺 **Go Back**](#table-of-contents)
 >
 > <br/>
 
@@ -1576,7 +1591,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_1
 
 > [!NOTE]
 >
-> Some configratiion for [[Outline]], Thanks to — [[Ainita?][AIN]]
+> Some configratiion for [[Outline]], Thanks to — [[Ainita?]]
 >
 > [🗺 **Go Back**](#table-of-contents)
 >
@@ -1783,7 +1798,7 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpyMGZySUFuTGVhbTFGcmhsYkM4bzlJ@176.124.207.10
 >
 > And next up ...
 >
-> [🗺 **Go Back** to Contents](#table-of-contents)
+> [🗺 Go Back to Contents](#table-of-contents)
 >
 > <br/>
 
@@ -1910,8 +1925,8 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 
 [00]: https://t.me/NiREvil_GP/106699
 [10i?]: https://github.com/10ium
+[AG?]: https://github.com/Argh94/V2RayAutoConfig/
 [AIM?]: https://telegram.me/s/Azadi_az_inja_migzare
-[AIN]: https://ainita.net/vpn.html
 [ALP?]: https://github.com/ALIILAPRO/v2rayNG-Config
 [ANO?]: https://github.com/4n0nymou3/
 [AR?]: https://telegram.me/s/arshia_mod_fun
@@ -1953,8 +1968,10 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [ST?]: https://github.com/SoliSpirit/v2ray-configs
 [SW?]: https://github.com/jadolg/shadowmere
 [TD?]: https://telegram.me/s/mansor427
+[VZ?]: https://telegram.me/VPNVezdehodBot
 [WE?]: https://telegram.me/s/IranRamona
 [YA?]: https://github.com/youfoundamin/V2rayCollector
+[Ainita?]: https://ainita.net/vpn.html
 [Arshia]: https://telegram.me/s/warpscanner
 [any information]: https://telegram.me/s/F_NiREvil/6292
 [Amnezia]: https://github.com/amnezia-vpn/amnezia-client/releases
