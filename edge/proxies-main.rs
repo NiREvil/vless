@@ -33,16 +33,19 @@ const GOOD_ISPS: &[&str] = &[
     "Akamai",
     "G-Core",
     "Turunc",
+    "Linode",
     "HostLAB",
     "Tencent",
     "MULTACOM",
     "HostPapa",
     "Ultahost",
     "DataCamp",
+    "Zenlayer",
     "Hypercore",
     "ByteDance",
     "Rackspace",
     "Amazoncom",
+    "TradeZone",
     "Online Ltd",
     "The Empire",
     "Cloudflare",
@@ -60,7 +63,7 @@ const GOOD_ISPS: &[&str] = &[
     "Total Uptime Technologies",
 ];
 
-#[derive(Parser, Clone)]
+#[deriveParser, Clone)]
 #[command(name = "Proxy Checker")]
 #[command(about = "Checks proxies via Cloudflare /meta and outputs active ones")]
 struct Args {
@@ -234,8 +237,8 @@ fn write_markdown_file(proxies_by_country: &BTreeMap<String, Vec<(ProxyInfo, u12
 let now = Utc::now();
 let tehran_now = now.with_timezone(&Tehran);
 let tehran_next = tehran_now + ChronoDuration::days(1);
-let last_updated_str = tehran_now.format("%a, %d %b %Y %H:%M:%S").to_string();
-let next_update_str = tehran_next.format("%a, %d %b %Y %H:%M:%S").to_string();
+let last_updated_str = tehran_now.format("%a, %d %b %Y %H:%M").to_string();
+let next_update_str = tehran_next.format("%a, %d %b %Y %H:%M").to_string();
 
     writeln!(
         file,
@@ -253,15 +256,15 @@ let next_update_str = tehran_next.format("%a, %d %b %Y %H:%M:%S").to_string();
 > <p><b>Auto-updated Daily</b></p>
 >
 > <b>Last updated:</b> {}–IRN <br/>
-> <b>Next update:</b> {}
+> <b>Next update:</b> {}-IRN
 >
 > <br/>
 > 
 > <p><b>Overview</b></p>
 >
-> <b>Total Active Proxies:</b> {}<br/>
-> <b>Countries Covered:</b> {}<br/> 
-> <b>Average latency:</b> {} ms
+> Total Active Proxies: <b>{}<br/>
+> Countries Covered: <b>{}<b/><br/> 
+> Average latency: <b>{} ms<b/>
 >
 > <br><br/>
 
@@ -280,11 +283,11 @@ let next_update_str = tehran_next.format("%a, %d %b %Y %H:%M:%S").to_string();
         writeln!(file, "<details open>")?;
         writeln!(file, "<summary>Click to collapse</summary>\n")?;
         writeln!(file, "|   IP   |  Location   |   ISP   |   Ping   |")?;
-        writeln!(file, "| :----- | :---------- | :-----: | :------: |")?;
+        writeln!(file, "|:-------|:------------|:-------:|:--------:|")?;
 
         for (info, ping) in proxies.iter() {
             let location = format!("{}, {}", info.region, info.city);
-            let emoji = if *ping < 1199 { "⚡" } else if *ping < 1699 { "🐇" } else { "🐌" };
+            let emoji = if *ping < 1299 { "⚡" } else if *ping < 1799 { "🐇" } else { "🐌" };
             writeln!(
                 file,
                 "| <pre><code>{}</code></pre> | {} | {} | {} ms {} |",
