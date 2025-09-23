@@ -63,7 +63,7 @@ const GOOD_ISPS: &[&str] = &[
     "Total Uptime Technologies",
 ];
 
-#[deriveParser, Clone)]
+#[derive(Parser, Clone)]
 #[command(name = "Proxy Checker")]
 #[command(about = "Checks proxies via Cloudflare /meta and outputs active ones")]
 struct Args {
