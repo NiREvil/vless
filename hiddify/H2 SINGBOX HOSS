@@ -90,9 +90,7 @@
         "🇫🇷 France",
         "🇫🇷 France-2",
         "🇫🇷 France-3",
-        "🇨🇭 Switzerland",
-        "🇨🇭 Switzerland-2",
-        "🇨🇭 Switzerland-3",
+        "🇹🇷 Turkey",
         "🇳🇱 Netherlands",
         "🇩🇪 Germany",
         "🇺🇸 USA"
@@ -106,9 +104,7 @@
         "🇫🇷 France",
         "🇫🇷 France-2",
         "🇫🇷 France-3",
-        "🇨🇭 Switzerland",
-        "🇨🇭 Switzerland-2",
-        "🇨🇭 Switzerland-3",
+        "🇹🇷 Turkey",
         "🇳🇱 Netherlands",
         "🇩🇪 Germany",
         "🇺🇸 USA"
@@ -182,47 +178,17 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇨🇭 Switzerland",
+      "tag": "🇹🇷 Turkey",
       "server": "kevin.vpny.online",
       "server_port": 11001,
       "obfs": {
         "type": "salamander",
-        "password": "@KevinZakarian"
+        "password": "KevinZakarian"
       },
       "password": "@KevinZakarian",
       "tls": {
         "enabled": true,
         "server_name": "www.google.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇨🇭 Switzerland-2",
-      "server": "kevin.vpny.online",
-      "server_port": 11002,
-      "obfs": {
-        "type": "salamander",
-        "password": "@KevinZakarian"
-      },
-      "password": "@KevinZakarian",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇨🇭 Switzerland-3",
-      "server": "kevin.vpny.online",
-      "server_port": 11003,
-      "obfs": {
-        "type": "salamander",
-        "password": "@KevinZakarian"
-      },
-      "password": "@KevinZakarian",
-      "tls": {
-        "enabled": true,
         "insecure": true
       }
     },
