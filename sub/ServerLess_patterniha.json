@@ -1,6 +1,5 @@
 [
   {
-
     "dns": {
       "hosts": {
         "cloudflare-dns.com": "www.cloudflare.com",
@@ -112,7 +111,6 @@
       "dnsLog": false,
       "loglevel": "warning"
     },
-
 
     "outbounds": [
       {
@@ -270,7 +268,6 @@
     },
     "remarks": "serverless—Xstack",
 
-
     "routing": {
       "domainStrategy": "IPOnDemand",
       "rules": [
@@ -314,10 +311,8 @@
       "min": "25.9.5"
     }
   },
-  
+
   {
-
-
     "dns": {
       "hosts": {
         "cloudflare-dns.com": "www.cloudflare.com",
@@ -390,7 +385,6 @@
       "dnsLog": false,
       "loglevel": "warning"
     },
-
 
     "outbounds": [
       {
@@ -548,7 +542,6 @@
     },
     "remarks": "serverless—Cloudflare",
 
-
     "routing": {
       "domainStrategy": "IPOnDemand",
       "rules": [
@@ -590,8 +583,6 @@
   },
 
   {
-
-
     "dns": {
       "hosts": {
         "cloudflare-dns.com": "www.cloudflare.com",
@@ -703,7 +694,6 @@
       "dnsLog": false,
       "loglevel": "warning"
     },
-
 
     "outbounds": [
       {
@@ -861,7 +851,6 @@
     },
     "remarks": "serverless—Cloudflare-local",
 
-
     "routing": {
       "domainStrategy": "IPOnDemand",
       "rules": [
@@ -907,8 +896,6 @@
   },
 
   {
-
-
     "dns": {
       "hosts": {
         "cloudflare-dns.com": "www.cloudflare.com",
@@ -1020,7 +1007,6 @@
       "dnsLog": false,
       "loglevel": "warning"
     },
-
 
     "outbounds": [
       {
@@ -1178,7 +1164,6 @@
     },
     "remarks": "serverless—Dynx",
 
-
     "routing": {
       "domainStrategy": "IPOnDemand",
       "rules": [
@@ -1224,8 +1209,6 @@
   },
 
   {
-
-
     "dns": {
       "hosts": {
         "cloudflare-dns.com": "www.cloudflare.com",
@@ -1337,7 +1320,6 @@
       "dnsLog": false,
       "loglevel": "warning"
     },
-
 
     "outbounds": [
       {
