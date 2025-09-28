@@ -478,6 +478,12 @@ https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eterni
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/trojan.txt
 
+https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/refs/heads/main/Best-Results/proxies.txt [[F0?]]
+
+https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/vless.txt
+
+https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/shadowsocks.txt
+
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed [[SB?]]
 
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/python/hysteria2
@@ -1674,7 +1680,7 @@ https://raw.githubusercontent.com/DarknessShade/WoW/refs/heads/main/clash-wg.yml
 > Only for using in clients with Xray Core
 >
 > These configs are completely **Serverless** and are designed to work seamlessly with just a few DNS servers.  
-> You can enjoy lightning-fast loading speeds for YouTube videos, Twitter, and web browsing.
+> You can enjoy lightning-fast loading speeds for YouTube videos, Twitter, Grok, p-Hub, and web browsing.
 >
 > Just remember, because there's no server, **your IP address won't be changed!**
 >
@@ -1685,6 +1691,9 @@ https://raw.githubusercontent.com/DarknessShade/WoW/refs/heads/main/clash-wg.yml
 > <br/>
 
 <br/>
+
+**New Serverless [[PA?]]  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_patterniha.json
 
 **tlshello** [[GFW?]]  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/ServerLess_TLS_Fragment_xray_config.json
@@ -2049,6 +2058,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [EB?]: https://github.com/ebrasha/free-v2ray-public-list/
 [EVA?]: https://t.me/evavpn_bot
 [EP?]: https://github.com/Epodonios/v2ray-configs
+[F0?]: https://f0rc3run.github.io/F0rc3Run-panel/
 [FR?]: https://telegram.me/s/FREE2CONFIG
 [GE?]: https://telegram.me/s/gheychiamoozesh
 [GFW?]: https://github.com/GFW-knocker/
@@ -2064,6 +2074,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [LG?]: https://github.com/lagzian/
 [LK?]: https://github.com/liketolivefree
 [PI?]: https://t.me/firewebgroup
+[PA?]: https://github.com/patterniha/Serverless-for-Iran
 [MB?]: https://github.com/mahdibland/ShadowsocksAggregator/
 [ME?]: https://telegram.me/s/FreeVPNHomes/532
 [MG?]: https://github.com/MatinGhanbari/v2ray-configs/
