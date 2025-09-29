@@ -678,9 +678,34 @@ https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_l
 
 <br/>
 
-**A0 🇳🇱 NL** [[VZ?]]
+**A 🇮🇳 IN**
 
 ```Elixir
+[Interface]
+PrivateKey = sDP/ERkFYTFqXiPXx4kXqrQ4EIywAEQoGuAYkm1vJns=
+Address = 10.136.0.200/32
+DNS = 1.1.1.1, 8.8.4.4
+MTU = 1380
+Jc = 43
+Jmin = 50
+Jmax = 70
+S1 = 110
+S2 = 120
+H1 = 1593635057
+H2 = 430880481
+H3 = 1214405368
+H4 = 1739253821
+[Peer]
+PublicKey = HC7/K0hhG3Eyv0glUt4MinT4N3bS4cyqxU5+/jwWQ2Q=
+PresharedKey = +YvAUpdLOzFEL91Nk2+lKVHFZ7HyIsQ80VC9LPKyaL4=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 25
+Endpoint = ind01awg.kcufwfgnkr.net:60136
+```
+
+**A1 🇳🇱 NL** [[VZ?]]
+
+```elixir
 [Interface]
 PrivateKey = 4DzhwkvPIDyt9n6Jsy7gZ0tt6Xo9oP8ZBNfkse51IlQ=
 Address = 10.136.4.52/32
@@ -703,9 +728,9 @@ PersistentKeepalive = 30
 Endpoint = nl02awg.kcufwfgnkr.net:60136
 ```
 
-**A1 🇳🇱 NL**
+**A2 🇳🇱 NL**
 
-```Ballerina
+```ballerina
 [Interface]
 PrivateKey = sCrICobPbEukaBKKYE1CO4a/vh08a5fl54ps5a9rl2w=
 Address = 10.201.12.164/32
@@ -728,9 +753,9 @@ PersistentKeepalive = 30
 Endpoint = nl01a.kcufwfgnkr.net:62931
 ```
 
-**A2 🇰🇿 KZ**
+**A3 🇰🇿 KZ**
 
-```Ballerina
+```ballerina
 [Interface]
 PrivateKey = eCuJMxzhjESh13AuZABQnD484969ZKUerZmZgzzRKXY=
 Address = 10.136.0.180/32
@@ -753,9 +778,9 @@ PersistentKeepalive = 30
 Endpoint = kz01awg.kcufwfgnkr.net:60136
 ```
 
-**A3 🇦🇪 AE**
+**A4 🇦🇪 AE**
 
-```Elixir
+```elixir
 [Interface]
 PrivateKey = 4HRk7bt3WhdxZzKqiXNeT41xTZhAPYTVpji8sxweX0c=
 Address = 10.136.1.137/32
@@ -778,9 +803,9 @@ PersistentKeepalive = 30
 Endpoint = ae01awg.kcufwfgnkr.net:60136
 ```
 
-**A4 🇬🇧 UK**
+**A5 🇬🇧 UK**
 
-```Elixir
+```elixir
 [Interface]
 PrivateKey = gJGh5oDmSfsIjFoipAhH9VrXGndgm81M74WfqA5JDn4=
 Address = 10.221.23.9/32
@@ -803,9 +828,9 @@ PersistentKeepalive = 30
 Endpoint = gb01a.kcufwfgnkr.net:62931
 ```
 
-**A5 🇫🇷 FR**
+**A6 🇫🇷 FR**
 
-```Ballerina
+```ballerina
 [Interface]
 PrivateKey = 2DwqSLnw/z80XsyI3fkg8XDc2YS+phxIBuwxm+u2oV4=
 Address = 10.201.5.49/32
@@ -828,9 +853,9 @@ PersistentKeepalive = 30
 Endpoint = fr01a.kcufwfgnkr.net:62931
 ```
 
-**A6 🇰🇷 KR**
+**A7 🇰🇷 KR**
 
-```Elixir
+```elixir
 [Interface]
 PrivateKey = CId0mgqhuZBJs7uotRXOgK1oB+wJWtO278w0ve6rnXM=
 Address = 10.136.0.43/32
@@ -853,9 +878,9 @@ PersistentKeepalive = 30
 Endpoint = kr01awg.kcufwfgnkr.net:60136
 ```
 
-**A7 🇫🇮 FN**
+**A8 🇫🇮 FN**
 
-```Elixir
+```elixir
 [Interface]
 PrivateKey = +NINvwWX6DQ82zqC3pKPSh01UNlBw+n1JGPD9Bzr01o=
 Address = 10.146.0.94/32
@@ -876,31 +901,6 @@ PresharedKey = 2uq120k3ihWXIAPrQTY/mk1M8yGxKTxIWC7nCNGx6DE=
 AllowedIPs = 0.0.0.0/0, ::/0
 PersistentKeepalive = 30
 Endpoint = fin01wg.kcufwfgnkr.net:50146
-```
-
-**A8 🇱🇹 LT**
-
-```Elixir
-[Interface]
-PrivateKey = 2LOm982JgOqYlHwBcCAyXi5FJt1NbO1xa0n+XuhdUEs=
-Address = 10.136.1.102/32
-DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-[Peer]
-PublicKey = 4csd4T5lqPKX4tot3YQ7PWLviNzl8XgZ00JMsLuCywg=
-PresharedKey = Skih2QLnkuG4DwymdakKF612tlFg1UQuXBLqojGiUXU=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = ltu01awg.kcufwfgnkr.net:60136
 ```
 
 ### Amnezia free configurations
