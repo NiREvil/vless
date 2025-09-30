@@ -87,13 +87,10 @@
       "outbounds": [
         "auto",
         "direct",
+        "🇦🇲 Armenia",
         "🇫🇷 France",
         "🇫🇷 France-2",
-        "🇫🇷 France-3",
-        "🇹🇷 Turkey",
-        "🇳🇱 Netherlands",
-        "🇩🇪 Germany",
-        "🇺🇸 USA"
+        "🇫🇷 France-3"
       ],
       "default": "auto"
     },
@@ -101,17 +98,29 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇦🇲 Armenia",
         "🇫🇷 France",
         "🇫🇷 France-2",
-        "🇫🇷 France-3",
-        "🇹🇷 Turkey",
-        "🇳🇱 Netherlands",
-        "🇩🇪 Germany",
-        "🇺🇸 USA"
+        "🇫🇷 France-3"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m0s",
       "tolerance": 50
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇦🇲 Armenia",
+      "server": "kevin.vpny.online",
+      "server_port": 22002,
+      "obfs": {
+        "type": "salamander",
+        "password": "KevinZakarian"
+      },
+      "password": "@KevinZakarian",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
     },
     {
       "type": "hysteria2",
@@ -158,67 +167,6 @@
       "tls": {
         "enabled": true,
         "server_name": "www.bing.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇩🇪 Germany",
-      "server": "45.138.99.213",
-      "server_port": 8443,
-      "obfs": {
-        "type": "salamander",
-        "password": "FarzanehDreams"
-      },
-      "password": "5oITDYnNW7",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇹🇷 Turkey",
-      "server": "kevin.vpny.online",
-      "server_port": 11001,
-      "obfs": {
-        "type": "salamander",
-        "password": "KevinZakarian"
-      },
-      "password": "@KevinZakarian",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.google.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇳🇱 Netherlands",
-      "server": "kevin.vpny.online",
-      "server_port": 11004,
-      "obfs": {
-        "type": "salamander",
-        "password": "@KevinZakarian"
-      },
-      "password": "@KevinZakarian",
-      "tls": {
-        "enabled": true,
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇺🇸 USA",
-      "server": "129.212.182.3",
-      "server_port": 8443,
-      "obfs": {
-        "type": "salamander",
-        "password": "KevinZakarian"
-      },
-      "password": "@KevinZakarian",
-      "tls": {
-        "enabled": true,
         "insecure": true
       }
     },
