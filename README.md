@@ -455,13 +455,15 @@ https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions
 
 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt
 
+https://raw.githubusercontent.com/arshiacomplus/robinhood-v1-v2-v3ray/refs/heads/main/conf.txt [[AR?]]
+
 https://robin.victoriacross.ir [[Ni?]]
 
 https://raw.githubusercontent.com/STR97/STRUGOV/refs/heads/main/Vless
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
 
-https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/index.html
+https://raw.githubusercontent.com/darkvpnapp/CloudflarePlus/refs/heads/main/proxy [[PI?]]
 
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/ss.txt [[BR?]]
 
@@ -469,11 +471,7 @@ https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protoc
 
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/vless.txt
 
-https://dev1.irdevs.sbs [[PI?]]
-
 https://v2.alicivil.workers.dev [[GE?]]
-
-https://v2.alicivil.workers.dev/?list=us&count=300&shuffle=true&unique=false
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity [[MB?]]
 
@@ -492,8 +490,6 @@ https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed [[S
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/python/hysteria2
 
 https://shadowmere.xyz/api/b64sub [[SW?]]
-
-https://openproxylist.com/v2ray/
 
 https://openproxylist.com/v2ray/
 
