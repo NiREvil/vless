@@ -1,237 +1,141 @@
-const maxConfigItems = 2000
-const maxPerType = 300
-const includeOriginalConfigs = 0
-
-const subLinks = [
-]
-const cnfLinks = [
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.txt",
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.txt"
-]
-const cleanIPLink = "https://raw.githubusercontent.com/coldwater-10/clash_rules/main/List%20of%20clean%20IPs.txt"
-const operatorList = ["AST", "HWB", "IRC", "MBT", "MCI", "MKB", "PRS", "RTL", "SHT", "ZTL", "PIS", "DAT", "SAB", "ASR", "FAN", "ZTL", "SFR", "DID", "LAY", "MAH", "TAK", "PET", "AND", "RES", "AFR", "ARA", "SAM", "APT", "ALL", "PLUS", "TEST", "ENG", "FA", "IPV6", "IRCF", "ANTY"]
-const addressList = ['www.ipchicken.com','www.udacity.com', 'edtunnel-dgp.pages.dev', 'iplocation.io', 'time.is', 'ip.sb', 'www.wto.org', 'icook.hk', 'skk.moe', 'fbi.gov', 'www.12377.cn']
-const fpList = ["chrome", "firefox", "edge", "safari", "random"]
-const alpnList = ["http/1.1", "h2,http/1.1", "h2,http/1.1"]
-var cleanIPs = []
-
-export default {
-  async fetch(request) {
-    var url = new URL(request.url)
-    var pathParts = url.pathname.replace(/^\/|\/$/g, "").split("/")
-    var type = pathParts[0].toLowerCase()
-    if (["sub", "clash"].includes(type)) {
-      if (pathParts[1] !== undefined) {
-        var operator = pathParts[1].toUpperCase()
-        if (operatorList.includes(operator)) {
-          cleanIPs = await fetch(cleanIPLink).then(r => r.text()).then(t => t.split("\n"))
-          cleanIPs = cleanIPs.filter(line => (line.search(operator) > 0))
-          cleanIPs = cleanIPs.map(line => line.split(" ")[0].trim())
-        } else {
-          cleanIPs = [operator.toLowerCase()]
+addEventListener('fetch', event => {
+    event.respondWith(handleRequest(event.request))
+  })
+  
+  async function handleRequest(request) {
+    const subscriptionUrls = [ 
+        'https://raw.githubusercontent.com/Rayan-Config/C-Sub/refs/heads/main/configs/proxy.txt',
+        'https://raw.githubusercontent.com/arshiacomplus/robinhood-v1-v2-v3ray/refs/heads/main/conf.txt',
+        'https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt',
+        'https://raw.githubusercontent.com/NiREvil/vless/main/sub/SSTime',
+        'https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/vless.html'
+    ]
+  
+    try {
+        const fetchWithTimeout = async (url, timeout = 15000) => {
+            const controller = new AbortController()
+            const timeoutId = setTimeout(() => controller.abort(), timeout)
+            
+            try {
+                const response = await fetch(url, { 
+                    signal: controller.signal,
+                    headers: {
+                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                        'Accept': 'text/plain,*/*',
+                        'Cache-Control': 'no-cache'
+                    }
+                })
+                clearTimeout(timeoutId)
+                
+                if (!response.ok) {
+                    console.log(`${url} returned status: ${response.status}`)
+                    return { content: '', error: `HTTP ${response.status}`, url }
+                }
+                
+                const content = await response.text()
+                return { content, error: null, url }
+            } catch (error) {
+                clearTimeout(timeoutId)
+                console.error(`Error fetching ${url}:`, error.message)
+                return { content: '', error: error.message, url }
+            }
         }
-      }
-
-      var configList = []
-      for (var subLink of subLinks) {
-        try {
-          configList = configList.concat(await fetch(subLink).then(r => r.text()).then(a => atob(a)).then(t => t.split("\n")))
-        } catch (e) { }
-      }
-      for (var cnfLink of cnfLinks) {
-        try {
-          configList = configList.concat(await fetch(cnfLink).then(r => r.text()).then(t => t.split("\n")))
-        } catch (e) { }
-      }
-      
-      var vmessConfigList = configList.filter(cnf => (cnf.search("vmess://") == 0))
-      var trojanConfigList = configList.filter(cnf => (cnf.search("trojan://") == 0))
-      var ssConfigList = configList.filter(cnf => (cnf.search("ss://") == 0))
-      var mergedConfigList = []
-      
-      if (type == "sub") {
-        if (includeOriginalConfigs) {
-          mergedConfigList = mergedConfigList.concat(getMultipleRandomElements(vmessConfigList, maxPerType))
-        }
-        mergedConfigList = mergedConfigList.concat(
-          getMultipleRandomElements(
-            vmessConfigList.map(decodeVmess).map(cnf => mixConfig(cnf, url, "vmess")).filter(cnf => (!!cnf && cnf.id)).map(encodeVmess).filter(cnf => !!cnf),
-            maxPerType
-          )
+  
+        const responses = await Promise.all(
+            subscriptionUrls.map(url => fetchWithTimeout(url))
         )
-
-        if (includeOriginalConfigs) {
-          mergedConfigList = mergedConfigList.concat(getMultipleRandomElements(trojanConfigList, maxPerType))
-          mergedConfigList = mergedConfigList.concat(getMultipleRandomElements(ssConfigList, maxPerType))
+  
+        let debugInfo = '=== DEBUG INFO ===\n'
+        let combinedConfigs = ''
+        
+        for (let i = 0; i < responses.length; i++) {
+            const { content, error, url } = responses[i]
+            
+            debugInfo += `\nURL ${i+1}: ${url}\n`
+            debugInfo += `Status: ${error ? 'ERROR - ' + error : 'SUCCESS'}\n`
+            debugInfo += `Content Length: ${content.length} characters\n`
+            
+            if (content && content.trim()) {
+                // Checking whether the content is base64 or not.
+                const trimmedContent = content.trim()
+                let decodedContent = ''
+                let isBase64Content = false
+                
+                try {
+                    // Testing if it is base64.
+                    if (trimmedContent.length % 4 === 0 && /^[A-Za-z0-9+/]*={0,2}$/.test(trimmedContent)) {
+                        // To decode base64 with UTF-8 support.
+                        const decoded = decodeURIComponent(escape(atob(trimmedContent)))
+                        if (decoded && decoded.length > 0) {
+                            decodedContent = decoded
+                            isBase64Content = true
+                        }
+                    }
+                } catch (e) {
+                    // If it was not base64 or had UTF-8 error.
+                }
+                
+                if (!isBase64Content) {
+                    // The content is plain text.
+                    decodedContent = trimmedContent
+                }
+                
+                debugInfo += `Format: ${isBase64Content ? 'BASE64' : 'PLAIN TEXT'}\n`
+                debugInfo += `Decoded Length: ${decodedContent.length} characters\n`
+                debugInfo += `Lines Count: ${decodedContent.split('\n').length}\n`
+                debugInfo += `First 200 chars: ${decodedContent.substring(0, 200)}...\n`
+                
+                if (decodedContent) {
+                    combinedConfigs += decodedContent + '\n'
+                }
+            } else {
+                debugInfo += `Content: EMPTY\n`
+            }
+            debugInfo += '---\n'
         }
-
-        return new Response(btoa(getMultipleRandomElements(mergedConfigList, maxConfigItems).join("\n")));
-      } else { // clash
-        if (includeOriginalConfigs) {
-          mergedConfigList = mergedConfigList.concat(
-            getMultipleRandomElements(
-              vmessConfigList.map(decodeVmess).filter(cnf => (cnf && cnf.id)).map(cnf => toClash(cnf, "vmess")).filter(cnf => (cnf && cnf.uuid)),
-              maxPerType
-            )
-          )
+  
+        // Remove blank and duplicate lines.
+        const lines = combinedConfigs.split('\n')
+        const nonEmptyLines = lines.filter(line => line.trim().length > 0)
+        const uniqueLines = [...new Set(nonEmptyLines)]
+        const finalContent = uniqueLines.join('\n')
+        
+        debugInfo += `\n=== FINAL RESULT ===\n`
+        debugInfo += `Total unique configs: ${uniqueLines.length}\n`
+        debugInfo += `Final content length: ${finalContent.length} characters\n`
+  
+        // If the URL has ?debug=1, return debug information.
+        const url = new URL(request.url)
+        if (url.searchParams.get('debug') === '1') {
+            return new Response(debugInfo, {
+                headers: {
+                    'Content-Type': 'text/plain; charset=utf-8',
+                    'Access-Control-Allow-Origin': '*'
+                }
+            })
         }
-        mergedConfigList = mergedConfigList.concat(
-          getMultipleRandomElements(
-            vmessConfigList.map(decodeVmess).map(cnf => mixConfig(cnf, url, "vmess")).filter(cnf => (cnf && cnf.id)).map(cnf => toClash(cnf, "vmess")),
-            maxPerType
-          )
-        )
-        return new Response(toYaml(mergedConfigList));
-      }
-    } else {
-      var url = new URL(request.url)
-      var newUrl = new URL("https://" + url.pathname.replace(/^\/|\/$/g, ""))
-      return fetch(new Request(newUrl, request));
+  
+        // Return the final result as base64 with UTF-8 support.
+        const finalBase64 = btoa(unescape(encodeURIComponent(finalContent)))
+  
+        return new Response(finalBase64, {
+            headers: {
+                'Content-Type': 'text/plain',
+                'Access-Control-Allow-Origin': '*',
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
+                'X-Total-Configs': uniqueLines.length.toString(),
+                'X-Content-Length': finalContent.length.toString()
+            }
+        })
+  
+    } catch (error) {
+        console.error('Main error:', error)
+        return new Response('Error: ' + error.message, {
+            status: 500,
+            headers: {
+                'Content-Type': 'text/plain',
+                'Access-Control-Allow-Origin': '*'
+            }
+        })
     }
   }
-}
-
-function encodeVmess(conf) {
-  try {
-    return "vmess://" + btoa(JSON.stringify(conf))
-  } catch {
-    return null
-  }
-}
-
-function decodeVmess(conf) {
-  try {
-    return JSON.parse(atob(conf.substr(8)))
-  } catch {
-    return {}
-  }
-}
-
-function mixConfig(conf, url, protocol) {
-  try {
-    if (conf.tls != "tls") {
-      return {}
-    }
-    var addr = conf.sni
-    if (!addr) {
-      if (conf.add && !isIp(conf.add)) {
-        addr = conf.add
-      } else if (conf.host && !isIp(conf.host)) {
-        addr = conf.host
-      }
-    }
-    if (!addr) {
-      return conf
-    }
-    conf.name = (conf.name ? conf.name : conf.ps) + '-Worker'
-    conf.sni = url.hostname
-    if (cleanIPs.length) {
-      conf.add = cleanIPs[Math.floor(Math.random() * cleanIPs.length)]
-    } else {
-      conf.add = addressList[Math.floor(Math.random() * addressList.length)]
-    }
-    
-    if (protocol == "vmess") {
-      conf.sni = url.hostname
-      conf.host = url.hostname
-      if (conf.path == undefined) {
-        conf.path = ""
-      }
-      conf.path = "/" + addr + ":" + conf.port + "/" + conf.path.replace(/^\//g, "")
-      conf.fp = fpList[Math.floor(Math.random() * fpList.length)]
-      conf.alpn = alpnList[Math.floor(Math.random() * alpnList.length)]
-      conf.port = 443
-    }
-    return conf
-  } catch (e) {
-    return {}
-  }
-}
-
-function getMultipleRandomElements(arr, num) {
-  var shuffled = arr //[...arr].sort(() => 0.5 - Math.random())
-  return shuffled.slice(0, num)
-}
-
-function isIp(str) {
-  try {
-    if (str == "" || str == undefined) return false
-    if (!/^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])(\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])){2}\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-4])$/.test(str)) {
-      return false
-    }
-    var ls = str.split('.')
-    if (ls == null || ls.length != 4 || ls[3] == "0" || parseInt(ls[3]) === 0) {
-      return false
-    }
-    return true
-  } catch (e) { }
-  return false
-}
-
-function toClash(conf, protocol) {
-  const regexUUID = /^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$/gi
-  var config = {}
-  try {
-    config = {
-      name: conf.name ? conf.name : conf.ps,
-      type: protocol,
-      server: conf.add,
-      port: conf.port,
-      uuid: conf.id,
-      alterId: 0,
-      tls: true,
-      cipher: conf.cipher ? conf.cipher : "auto",
-      "skip-cert-verify": true,
-      servername: conf.sni,
-      network: conf.net,
-      "ws-opts": {
-        path: conf.path,
-        headers: {
-          host: conf.host
-        }
-      }
-    }
-    config.name = config.name.replace(/[^\x20-\x7E]/g, "").replace(/[\s\/:|\[\]@\(\)\.]/g, "") + "-" + Math.floor(Math.random() * 10000)
-    if (!regexUUID.test(config.uuid)) {
-      return {}
-    }
-    return config
-  } catch (e) {
-    return {}
-  }
-}
-
-function toYaml(configList) {
-  var yaml = 
-`
-`
-   return yaml
-}
