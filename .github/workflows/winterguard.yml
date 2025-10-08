@@ -1,14 +1,47 @@
+# ✖️✖️✖️ Temporarily disabled: automatic configuration updates ✖️✖️✖️
+# ------------------------------------------------------
+# Reason:
+#   Cloudflare Warp configurations are currently blocked in certain regions
+#   (notably Iran and China). The automatic update process in this workflow
+#   replaces not only endpoints, but also critical fields such as
+#   private_key, reserved, mtu, and address — which breaks connectivity
+#   when regionally restricted.
+#
+# Action:
+#   This workflow is intentionally commented out (disabled) to prevent
+#   overwriting the manually working configuration. I will manually set
+#   the following IPs/domains, Private Keys, Addresses and related parameters
+#   until the restrictions are lifted.
+#
+# Working configuration (manually applied):
+#   • IPv4 range: 162.159.195.1 — 162.159.195.10
+#   • IPv6 range: 2606:4700:d0::a29f:c001 — 2606:4700:d0::a29f:c014
+#   • Custom domain: wire.nscl.ir
+#
+# Important:
+#   ⚠️ Do NOT re-enable or edit this workflow to auto-replace configs
+#   while these regional blocks remain active.
+#
+# Re-enable procedure:
+#   You can still run it manually from actions, But if you want to re-enable:
+#   1. Verify that Cloudflare/Warp endpoints are accessible again
+#      from affected regions (Iran/China).
+#   2. Uncomment this section to restore the workflow:
+#      lines 38, 39 ... and 44.
+#   3. Test connectivity in staging before pushing to production.
+#
+# Disabled on: 18 October, 2025 — Freedom to Dream 🩶
+
 name: Clash config generator
 
 on:
-  push:
-    branches: 'main'
-    paths:
-      - '**/winterguard.*'
-      - 'sub/*.yml'
-      - 'edge/assets/*.yml'
-  schedule:
-    - cron: '0 14 * * *'
+#  push:
+#    branches: 'main'
+#    paths:
+#      - '**/winterguard.*'
+#      - 'edge/assets/*.yml'
+#  schedule:
+#    - cron: '0 8 * * *'
   workflow_dispatch:
 
 jobs:
@@ -48,7 +81,6 @@ jobs:
           python -m pip install --upgrade pip || exit 1
           pip install -r edge/requirements.txt || exit 1
        
-      # Run 💀
       - name: Run config generation script
         run: |
           python edge/winterguard.py 2>&1 || { echo "Script failed with exit code $?"; exit 1; }
@@ -61,7 +93,7 @@ jobs:
           if git status --porcelain | grep -q "sub/clash-meta-wg.yml" || git status --porcelain; then
             echo "Changes detected. Committing and pushing."
             git add sub/clash-meta-wg.yml
-            git commit -m "Auto: Update clash-wireGuard configurations at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" -m "Wireguard private key, addresses, reserved, and all IPs have been renewed" --author="Diana-Cl <135276904+Diana-Cl@users.noreply.github.com>"
+            git commit -m "Auto: Update clash-wireGuard configurations at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" -m "Wireguard private key, reserved, addresses and all IPs have been renewed" --author="Diana-Cl <135276904+Diana-Cl@users.noreply.github.com>"
             git push
           else
             echo "No changes detected in config files."
