@@ -5,9 +5,9 @@ on:
     branches: ['main']
     paths:
       - '**/preprocessor.*'
-      - 'sub/*.json'
+#     - 'sub/*.json'
   schedule:
-    - cron: '0 16 * * *'
+    - cron: '0 6 * * *'
   workflow_dispatch:
 
 jobs:
@@ -39,7 +39,7 @@ jobs:
       - name: Configure git
         run: |
           git config --local user.name "BotFather"
-          git config --local user.email "botfather.rev@proton.me"
+          git config --local user.email "botfather@proton.me"
 
       - name: Commit and push changes
         run: |
