@@ -1,4 +1,4 @@
-# Temporarily disabled: automatic condig updates
+# ✖️✖️✖️✖️✖️ Temporarily disabled: automatic condig updates ✖️✖️✖️✖️✖️
 # -------------------------------------------------
 # Reason:
 #   Cloudflare Warp endpoints are currently blocked in certain regions
@@ -21,16 +21,17 @@
 #   while these regional blocks remain active.
 #
 # Re-enable procedure:
+#   You can still run it manually from actions, But if you want to re-enable:
 #   1. Verify that Cloudflare/Warp endpoints are accessible again
 #      from affected regions (Iran/China).
-#   2. Uncomment this section to restore the workflow.
+#   2. Uncomment this section to restore the workflow, lines 36, 37 ... and 42.
 #   3. Test connectivity in staging before pushing to production.
 #
-# Disabled on: <add current date>
+# Disabled on: 18 October, 2025
 
 
 name: Spring
-# But you can still run it manually from actions. And to re-enable it, uncomment lines 35, 36 ... and 41.
+
 on:
 #  push:
 #    branches: 'main'
