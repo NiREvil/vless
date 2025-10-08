@@ -1,13 +1,44 @@
+# ✖️✖️✖️✖️✖️ Temporarily disabled: automatic condig updates ✖️✖️✖️✖️✖️
+# -------------------------------------------------
+# Reason:
+#   Cloudflare Warp endpoints are currently blocked in certain regions
+#   (notably Iran and China), which causes connection failures when
+#   automatic endpoint replacement runs inside this workflow.
+#
+# Action:
+#   This workflow is intentionally commented out (disabled) to prevent
+#   overwriting the manually working addresses.
+#   I will manually insert the following IPs/domains in configurations
+#   until the regional restrictions are lifted.
+#
+# Working addresses (manually configured):
+#   • IPv4 range: 162.159.195.1 — 162.159.195.10
+#   • IPv6 range: 2606:4700:d0::a29f:c001 — 2606:4700:d0::a29f:c014
+#   • Custom domain: wire.nscl.ir
+#
+# Important:
+#   ⚠️ Do NOT re-enable or edit this workflow to auto-replace endpoints
+#   while these regional blocks remain active.
+#
+# Re-enable procedure:
+#   You can still run it manually from actions, But if you want to re-enable:
+#   1. Verify that Cloudflare/Warp endpoints are accessible again
+#      from affected regions (Iran/China).
+#   2. Uncomment this section to restore the workflow, lines 35, 36 ... and 41.
+#   3. Test connectivity in staging before pushing to production.
+#
+# Disabled on: 18 October, 2025
+
 name: SummerTime
 
 on:
-  push:
-    branches: 'main'
-    paths:
-      - '**/summer.*'
-      - 'sub/*.txt'
-  schedule:
-    - cron: '0 16 * * *'
+#  push:
+#    branches: 'main'
+#    paths:
+#      - '**/summer.*'
+#      - 'sub/*.txt'
+#  schedule:
+#    - cron: '0 12 * * *'
   workflow_dispatch:
 
 permissions:
