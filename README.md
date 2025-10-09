@@ -15,33 +15,20 @@
 >
 > من موقتا همه workflow هارو غیرفعال کردم که انومات چیزی جایگزین نکنن چون خودم دستی از آی‌پی‌هایی که فعال شدن گذاشتم داخل چندتا ساب‌اسکریپشن وارپ.
 >
-> 
 > <details>
 > <summary> مشاهده لینک‌ها</summary><br/>
 >
-> 
-> **Warp for Clash-Meta:**
-> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml
+> **Warp for Clash-Meta:** > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml
 >
-> 
-> **Warp for Exclave:**
-> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/exclave-wg.txt
+> **Warp for Exclave:** > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/exclave-wg.txt
 >
-> 
-> **Warp for Hiddify:**
-> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
+> **Warp for Hiddify:** > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
 >
-> 
-> **Warp for Singbox:**
-> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/singbox.json
+> **Warp for Singbox:** > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/singbox.json
 >
-> 
-> **Warp for Nekobox:**
-> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/nekobox-wg.txt
+> **Warp for Nekobox:** > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/nekobox-wg.txt
 >
-> 
-> **Warp for v2rayNG, MahsaNG:**
-> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/v2rayng-wg.txt
+> **Warp for v2rayNG, MahsaNG:** > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/v2rayng-wg.txt
 >
 > </details>
 >
@@ -1480,19 +1467,18 @@ https://raw.githubusercontent.com/4n0nymou3/ss-config-updater/refs/heads/main/co
 
 <br><br/>
 
-
 ### Warp for [v2rayNG] and [MahsaNG]
 
 > [!NOTE]
 >
 > Configs are from telegram channels of — [Arshia] and [The Darkness].
 >
-> It is also applicable within the  [NikaNG]
-> 
+> It is also applicable within the [NikaNG]
+>
 > [🗺 **Go Back**](#table-of-contents)
 >
 > <br/>
-<br/>
+> <br/>
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/v2rayng-wg.txt
 
