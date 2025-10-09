@@ -368,7 +368,7 @@
   - [Warp for Clash Meta](#warp-for-clashmeta)
   - [Warp for Hiddify](#warp-for-hiddify)
   - [Warp for NekoBox](#warp-for-nekobox)
-  - [Warp for MahsaNG](#warp-for-mahsang-and-nikang)
+  - [Warp for MahsaNG](#warp-for-v2rayng-and-mahsang)
 - [Cloudflare IP's](#cloudflare-ips)
   - [Daily Scanned CF IP's](#all-ips)
   - [Daily Scanned Proxy IP's](./sub/ProxyIP.md#daily-scanned-proxies)
