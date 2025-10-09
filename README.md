@@ -5,6 +5,24 @@
 
 > [!CAUTION]
 >
+> ‏[![MahsaAmini](https://img.shields.io/badge/فعال_شدن_دورنج_از_آیپی_های_وارپ-darkred)](https://t.me/NiREvil_GP)
+>
+> <br/>
+>
+> از دیروز برای من **دوتا رنج‌ از اندپوینت‌های وارپ فعال شدن.** اینجا نوشتم دربارش:
+>
+> 
+> https://github.com/NiREvil/vless/wiki
+>
+> من موقتا همه workflow هارو غیرفعال کردم که انومات چیزی جایگزین نکنن چون خودم دستی از آی‌پی‌هایی که فعال شدن گذاشتم داخل چندتا ساب وارپ.
+> 
+> <br/>
+> 
+
+<br><br/>
+
+> [!CAUTION]
+>
 > ‏[![MahsaAmini](https://img.shields.io/badge/وضعیت_نابسامان_وارپ-darkred)](https://t.me/NiREvil_GP)
 >
 > <br/>
@@ -244,8 +262,29 @@
 >
 > [github.com/NiREvil/zizifn][Zizifn]
 >
+> </details>
+> 
 > <br/>
 >
+> <details>
+> <summary>❗ توضیحات مربوط به 1.1.1.1 </summary><br/>
+> 
+> برای من و چند نفر از بچه‌ها اپلیکیشن رسمی وارپ کلادفلر شروع به کار کرده. با نت‌ ایرانس و مخابرات و شاتل و حتی نت همراه اول
+> 
+> برای راه‌اندازی هیچکاری نیاز نیست انجام بدید مطلقا هیچ‌کاری، فقط از مارکت گوگل یا اپل اونو نصب کرده و با یه وی‌پی‌ان فعال دیگه (فقط برای اولین ورود لازمه که vpn روشن برید داخلش تا client configuration رو درست انجام بده و ID برای دستگاه تعلق بگیره) وارد شده و هیچی دیگه کلیک کنید روی دکمه کانکت.
+> 
+> [لینک دانلود وارپ نسخه Android][WarpAndroid]
+> 
+> [لینک دانلود وارپ نسخه IOS][WarpIOS]
+> 
+> **نکته:**
+  > 
+> اگه از نت سیم‌کارت همراه استفاده می‌کنید حتما چک کنید تنظیمات APN دستگاه خودتون رو که APN Protocol باید روی IPv4/IPv6 قرار داشته باشه، اگه اصلا نفهمیدید چی می‌گم [اینجارو بخونید][APN].
+>
+>
+> واسه‌ی بعضیا حتی Zero Trust کلادفلر هم کار می‌کنه، یه روش غیرقانونی هست واسه فعال کردنش و یه روش قانونی، هردو رو می‌تونید از [این پست][ZeroTrust] داخل تلگرام بخونید.
+>
+> 
 > در نهایت اگه خیلی معطل موندید بیاید گروه شاید بچه‌ها تونستن کمکی بکنن.  
 > همراه اولی‌ها نیان ✋🏿🤣
 >
@@ -902,6 +941,35 @@ PersistentKeepalive = 30
 Endpoint = fin01wg.kcufwfgnkr.net:50146
 ```
 
+**A9 🇳🇱 NL**
+
+```elixir
+[Interface]
+# Key for n-113
+# Bouncing = 3
+# NAT-PMP (Port Forwarding) = off
+# VPN Accelerator = on
+PrivateKey = +FbhPVXVXNUan1wB9u0/2MILStT24LyGoLT+Ksnfr3Q=
+Address = 10.2.0.2/32,2002:a02:2::/128
+DNS = 10.2.0.1,2002:a02:1::
+MTU = 1420
+Jc = 4
+Jmin = 40
+Jmax = 70
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+
+[Peer]
+#🇳🇱NL-Proton-Free
+PublicKey = nsQBMSreq3f0B/BvRRL2aZtuvFAahf7TECaKpbooZVw=
+PersistentKeepalive = 30
+AllowedIPs = 0.0.0.0/0, ::/0
+Endpoint = 149.34.244.134:51820
+```
+<br/> 
+
 ### Amnezia free configurations
 
 **A**
@@ -1365,8 +1433,6 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 
 > [!NOTE]
 >
-> ❌ Unfortunately, Warp configs do not currently work **in Iran.**
->
 > [🗺 **Go Back**](#table-of-contents)
 >
 > <br/>
@@ -1375,12 +1441,12 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 
 **Custom Warp—Hiddify [[GA?]]**
 
+**Auto generate in workflows - warp ON warp [[Ni?]]**  
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
+
 https://v2.alicivil.workers.dev/?protocol=wireguard&ip=188.114.99.137&output=hiddify
 
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/warp/config [[YB?]]
-
-**Auto generate in workflows - warp ON warp [[Ni?]]**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
 
 **Warp in M1,M2, ... ,h04FA0A mode with random ip:port**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/rand-ip
@@ -1498,149 +1564,48 @@ https://raw.githubusercontent.com/arshiacomplus/WoW-fix/main/Xray-WoW.json
 
 <br/>
 
-**for NikaNG**
+**for v2rayNG, Mahsa and NikaNG**
 
 ```json
-{
-  "remarks": "🇹🇷TR-wow",
-  "log": { "loglevel": "warning" },
-  "dns": {
-    "hosts": {},
-    "servers": [
-      "https://94.140.14.14/dns-query",
-      {
-        "address": "8.8.8.8",
-        "domains": ["geosite:category-ir", "domain:.ir"],
-        "expectIPs": ["geoip:ir"],
-        "port": 53
-      }
-    ],
-    "tag": "dns"
-  },
-  "inbounds": [
-    {
-      "port": 10808,
-      "protocol": "socks",
-      "settings": { "auth": "noauth", "udp": true, "userLevel": 8 },
-      "sniffing": { "destOverride": ["http", "tls"], "enabled": true, "routeOnly": true },
-      "tag": "socks-in"
-    },
-    {
-      "port": 10809,
-      "protocol": "http",
-      "settings": { "auth": "noauth", "udp": true, "userLevel": 8 },
-      "sniffing": { "destOverride": ["http", "tls"], "enabled": true, "routeOnly": true },
-      "tag": "http-in"
-    },
-    {
-      "listen": "127.0.0.1",
-      "port": 10853,
-      "protocol": "dokodemo-door",
-      "settings": { "address": "1.1.1.1", "network": "tcp,udp", "port": 53 },
-      "tag": "dns-in"
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "wireguard",
-      "settings": {
-        "address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"],
-        "mtu": 1330,
-        "peers": [
-          {
-            "endpoint": "8.39.214.12:1701",
-            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
-          }
-        ],
-        "reserved": [88, 72, 74],
-        "secretKey": "MF+TsNC4bLugY6S9djyo0KCYtITtAlZiLamgFfm603U=",
-        "keepAlive": 10,
-        "wnoise": "quic",
-        "wnoisecount": "15",
-        "wpayloadsize": "1-8",
-        "wnoisedelay": "1-3"
-      },
-      "streamSettings": { "sockopt": { "dialerProxy": "proxy" } },
-      "tag": "chain"
-    },
-    {
-      "protocol": "wireguard",
-      "settings": {
-        "address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"],
-        "mtu": 1330,
-        "peers": [
-          {
-            "endpoint": "8.39.214.0:1387",
-            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
-          }
-        ],
-        "reserved": [1, 121, 35],
-        "secretKey": "iGYP9x6sdaOA5fk5aMRuVfKkWTIkyp5ZMfrudW1IJlQ=",
-        "keepAlive": 10,
-        "wnoise": "quic",
-        "wnoisecount": "15",
-        "wpayloadsize": "1-5",
-        "wnoisedelay": "1-2"
-      },
-      "tag": "proxy"
-    },
-    { "protocol": "dns", "tag": "dns-out" },
-    { "protocol": "freedom", "settings": {}, "tag": "direct" },
-    { "protocol": "blackhole", "settings": { "response": { "type": "http" } }, "tag": "block" }
-  ],
-  "policy": {
-    "levels": { "8": { "connIdle": 300, "downlinkOnly": 1, "handshake": 4, "uplinkOnly": 1 } },
-    "system": { "statsOutboundUplink": true, "statsOutboundDownlink": true }
-  },
-  "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
-      { "inboundTag": ["dns-in"], "outboundTag": "dns-out", "type": "field" },
-      { "ip": ["8.8.8.8"], "outboundTag": "direct", "port": "53", "type": "field" },
-      { "domain": ["geosite:category-ir", "domain:.ir"], "outboundTag": "direct", "type": "field" },
-      { "ip": ["geoip:ir", "geoip:private"], "outboundTag": "direct", "type": "field" },
-      {
-        "domain": ["geosite:category-ads-all", "geosite:category-ads-ir"],
-        "outboundTag": "block",
-        "type": "field"
-      },
-      { "outboundTag": "chain", "type": "field", "network": "tcp,udp" }
-    ]
-  },
-  "stats": {}
-}
+{"remarks": "Warp on Warp", "log": {"loglevel": "none"}, "dns": {"hosts": {"one.one.one.one":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"]}, "servers": ["https://1.1.1.1/dns-query", {"address": "1.1.1.1", "domains": ["geosite:category-ir", "domain:.ir"], "expectIPs": ["geoip:ir"], "port": 53}], "tag": "dns"}, "inbounds": [{"port": 10808, "protocol": "socks", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": false}, "tag": "socks-in"}, {"port": 10809, "protocol": "http", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": false}, "tag": "http-in"}, {"listen": "127.0.0.1", "port": 10853, "protocol": "dokodemo-door", "settings": {"address": "1.1.1.1", "network": "tcp,udp", "port": 53}, "tag": "dns-in"}], "outbounds": [{"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:81ec:2a68:559d:ab39:22b4/128"], "mtu": 1330, "peers": [{"endpoint": "162.159.192.1:878", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [114,123,123], "secretKey": "UG8l/RlQzwOcnfTVKtApKrGFUJDMz2lJ8Idv8/kVLEA=", "keepAlive": 30,"wnoise": "quic", "wnoisecount": "10", "wpayloadsize": "1-5", "wnoisedelay": "1-2"}, "streamSettings": {"sockopt": {"dialerProxy": "proxy"}}, "tag": "chain"}, {"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:80b2:77e6:6275:cfa3:ffd0/128"], "mtu": 1420, "peers": [{"endpoint": "[2606:4700:d0::a29f:c004]:878", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [143,98,212], "secretKey": "ADL66p2mpJ2zp5CKRwUL0WCXpi7Y70M5hRSj3/ourXU=", "keepAlive": 30, "wnoise": "quic", "wnoisecount": "10", "wpayloadsize": "1-5", "wnoisedelay": "1-2"}, "tag": "proxy"}, {"protocol": "dns", "tag": "dns-out"}, {"protocol": "freedom", "settings": {}, "tag": "direct"}, {"protocol": "blackhole", "settings": {"response": {"type": "http"}}, "tag": "block"}], "policy": {"levels": {"8": {"connIdle": 300, "downlinkOnly": 1, "handshake": 4, "uplinkOnly": 1}}, "system": {"statsOutboundUplink": true, "statsOutboundDownlink": true}}, "routing": {"domainStrategy": "IPIfNonMatch", "rules": [{"inboundTag": ["dns-in"], "outboundTag": "dns-out", "type": "field"}, {"ip": ["1.1.1.1"], "outboundTag": "direct", "port": "53", "type": "field"}, {"domain": ["geosite:category-ir", "domain:.ir"], "outboundTag": "direct", "type": "field"}, {"ip": ["geoip:ir", "geoip:private"], "outboundTag": "direct", "type": "field"}, {"domain": ["geosite:category-ads-all", "geosite:category-ads-ir"], "outboundTag": "block", "type": "field"}, {"outboundTag": "chain", "type": "field", "network": "tcp,udp"}]}, "stats": {}}
+```
+
+**Same too**
+
+```json
+{"remarks": "WoW_MahsaNG", "log": {"loglevel": "none"}, "dns": {"hosts": {"protective.joindns4.eu":["86.54.11.1","86.54.11.201","2a13:1001::86:54:11:201","2a13:1001::86:54:11:1"]}, "servers": ["https://protective.joindns4.eu/dns-query","https://1.1.1.1/dns-query", {"address": "https://1.1.1.1/dns-query", "domains": ["geosite:category-ir", "domain:.ir"], "expectIPs": ["geoip:ir"], "port": 53}], "tag": "dns"}, "inbounds": [{"port": 10808, "protocol": "socks", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": false}, "tag": "socks-in"}, {"port": 10809, "protocol": "http", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": false}, "tag": "http-in"}, {"listen": "127.0.0.1", "port": 10853, "protocol": "dokodemo-door", "settings": {"address": "86.54.11.201", "network": "tcp,udp", "port": 53}, "tag": "dns-in"}], "outbounds": [{"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:81ec:2a68:559d:ab39:22b4/128"], "mtu": 1310, "peers": [{"endpoint": "162.159.195.1:1701", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [114,123,123], "secretKey": "UG8l/RlQzwOcnfTVKtApKrGFUJDMz2lJ8Idv8/kVLEA=", "keepAlive": 10,"wnoise": "quic", "wnoisecount": "15", "wpayloadsize": "1-5", "wnoisedelay": "1-2"}, "streamSettings": {"sockopt": {"dialerProxy": "proxy"}}, "tag": "chain"}, {"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:80b2:77e6:6275:cfa3:ffd0/128"], "mtu": 1330, "peers": [{"endpoint": "[2606:4700:d0::a29f:c007]:2408", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [143,98,212], "secretKey": "ADL66p2mpJ2zp5CKRwUL0WCXpi7Y70M5hRSj3/ourXU=", "keepAlive": 30, "wnoise": "quic", "wnoisecount": "15", "wpayloadsize": "5-10", "wnoisedelay": "1-3"}, "tag": "proxy"}, {"protocol": "dns", "tag": "dns-out"}, {"protocol": "freedom", "settings": {}, "tag": "direct"}, {"protocol": "blackhole", "settings": {"response": {"type": "http"}}, "tag": "block"}], "policy": {"levels": {"8": {"connIdle": 300, "downlinkOnly": 1, "handshake": 4, "uplinkOnly": 1}}, "system": {"statsOutboundUplink": true, "statsOutboundDownlink": true}}, "routing": {"domainStrategy": "IPIfNonMatch", "rules": [{"inboundTag": ["dns-in"], "outboundTag": "dns-out", "type": "field"}, {"ip": ["1.1.1.1"], "outboundTag": "direct", "port": "53", "type": "field"}, {"domain": ["geosite:category-ir", "domain:.ir"], "outboundTag": "direct", "type": "field"}, {"ip": ["geoip:ir", "geoip:private"], "outboundTag": "direct", "type": "field"}, {"domain": ["geosite:category-ads-all", "geosite:category-ads-ir"], "outboundTag": "block", "type": "field"}, {"outboundTag": "chain", "type": "field", "network": "tcp,udp"}]}, "stats": {}}
 ```
 
 **For NikaNG** [[TD?]]
 
 ```YAML
-wireguard://oP4D2HXriimhBqk%2Bw4CpI41OEQd5p2rJV8MtbeV7eUs%3D@188.114.98.224:955?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1280&reserved=195%2C216%2C199#@darkness_427
+wireguard://oP4D2HXriimhBqk%2Bw4CpI41OEQd5p2rJV8MtbeV7eUs%3D@162.159.192.2:2371?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1280&reserved=195%2C216%2C199#@darkness_427
 ```
 
 ```YAML
-wireguard://yHmk7qZA48yn%2FPCgMV%2F95lazmj2JgXBxk5MoUjsSwEo%3D@188.114.99.137:998?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1280&reserved=229%2C4%2C12#@arshiacomplus
+wireguard://yHmk7qZA48yn%2FPCgMV%2F95lazmj2JgXBxk5MoUjsSwEo%3D@162.159.195.4:998?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1280&reserved=229%2C4%2C12#@arshiacomplus
 ```
 
 **Ex for MahsaNG**
 
 ```YAML
-wireguard://oP4D2HXriimhBqk%2Bw4CpI41OEQd5p2rJV8MtbeV7eUs%3D@188.114.98.224:3476?address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=195%2C216%2C199#@darkness_427
+wireguard://oP4D2HXriimhBqk%2Bw4CpI41OEQd5p2rJV8MtbeV7eUs%3D@162.159.192.8:3476?address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=195%2C216%2C199#@darkness_427
 ```
 
 ```YAML
-wireguard://yHmk7qZA48yn%2FPCgMV%2F95lazmj2JgXBxk5MoUjsSwEo%3D@188.114.99.137:2371?address=172.16.0.2/32, 2606:4700:110:846c:e510:bfa1:ea9f:5247/128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=229%2C4%2C12#@arshiacomplus
+wireguard://yHmk7qZA48yn%2FPCgMV%2F95lazmj2JgXBxk5MoUjsSwEo%3D@162.159.195.2:878?address=172.16.0.2/32, 2606:4700:110:846c:e510:bfa1:ea9f:5247/128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=229%2C4%2C12#@arshiacomplus
 ```
 
 **Ex for Mahsa/NikaNG**
 
 ```JSON
- {"remarks": "ArshiaComPlus - WoW", "log": {"loglevel": "warning"}, "dns": {"hosts": {}, "servers": ["https://94.140.14.14/dns-query", {"address": "8.8.8.8", "domains": ["geosite:category-ir", "domain:.ir"], "expectIPs": ["geoip:ir"], "port": 53}], "tag": "dns"}, "inbounds": [{"port": 10808, "protocol": "socks", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": true}, "tag": "socks-in"}, {"port": 10809, "protocol": "http", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": true}, "tag": "http-in"}, {"listen": "127.0.0.1", "port": 10853, "protocol": "dokodemo-door", "settings": {"address": "1.1.1.1", "network": "tcp,udp", "port": 53}, "tag": "dns-in"}], "outbounds": [{"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "mtu": 1280, "peers": [{"endpoint": "188.114.98.224:878", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [228, 173, 88], "secretKey": "IIyOyrR8UpHgotd7U/Vi1hm12IkWKOML7bm5OmlD23g=", "keepAlive": 10, "wnoise": "quic", "wnoisecount": "10-15", "wpayloadsize": "1-5", "wnoisedelay": "1-3"}, "streamSettings": {"sockopt": {"dialerProxy": "warp-ir"}}, "tag": "warp-out"}, {"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "mtu": 1280, "peers": [{"endpoint": "188.114.99.138:942", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [8, 29, 217], "secretKey": "IDXG9mb1NMz6fgENEvSO2TlVDU8BIf/absJLAm3hJlM=", "keepAlive": 10, "wnoise": "quic", "wnoisecount": "10-15", "wpayloadsize": "1-8", "wnoisedelay": "1-3"}, "tag": "warp-ir"}, {"protocol": "dns", "tag": "dns-out"}, {"protocol": "freedom", "settings": {}, "tag": "direct"}, {"protocol": "blackhole", "settings": {"response": {"type": "http"}}, "tag": "block"}], "policy": {"levels": {"8": {"connIdle": 300, "downlinkOnly": 1, "handshake": 4, "uplinkOnly": 1}}, "system": {"statsOutboundUplink": true, "statsOutboundDownlink": true}}, "routing": {"domainStrategy": "IPIfNonMatch", "rules": [{"inboundTag": ["dns-in"], "outboundTag": "dns-out", "type": "field"}, {"ip": ["8.8.8.8"], "outboundTag": "direct", "port": "53", "type": "field"}, {"domain": ["geosite:category-ir", "domain:.ir"], "outboundTag": "direct", "type": "field"}, {"ip": ["geoip:ir", "geoip:private"], "outboundTag": "direct", "type": "field"}, {"outboundTag": "warp-out", "type": "field", "network": "tcp,udp"}]}, "stats": {}}
+ {"remarks": "ArshiaComPlus - WoW", "log": {"loglevel": "warning"}, "dns": {"hosts": {}, "servers": ["https://94.140.14.14/dns-query", {"address": "8.8.8.8", "domains": ["geosite:category-ir", "domain:.ir"], "expectIPs": ["geoip:ir"], "port": 53}], "tag": "dns"}, "inbounds": [{"port": 10808, "protocol": "socks", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": true}, "tag": "socks-in"}, {"port": 10809, "protocol": "http", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": true}, "tag": "http-in"}, {"listen": "127.0.0.1", "port": 10853, "protocol": "dokodemo-door", "settings": {"address": "1.1.1.1", "network": "tcp,udp", "port": 53}, "tag": "dns-in"}], "outbounds": [{"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "mtu": 1280, "peers": [{"endpoint": "162.159.192.8:878", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [156, 62, 221], "secretKey": "SDeDZQJ5nmPBFR/284ske2JyVcPKNtsiUe0IOdkl8Ek=", "keepAlive": 30, "wnoise": "quic", "wnoisecount": "10-15", "wpayloadsize": "1-5", "wnoisedelay": "1-3"}, "streamSettings": {"sockopt": {"dialerProxy": "warp-ir"}}, "tag": "warp-out"}, {"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "mtu": 1280, "peers": [{"endpoint": "162.159.195.4:942", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [8, 29, 217], "secretKey": "IDXG9mb1NMz6fgENEvSO2TlVDU8BIf/absJLAm3hJlM=", "keepAlive": 10, "wnoise": "quic", "wnoisecount": "10-15", "wpayloadsize": "1-8", "wnoisedelay": "1-3"}, "tag": "warp-ir"}, {"protocol": "dns", "tag": "dns-out"}, {"protocol": "freedom", "settings": {}, "tag": "direct"}, {"protocol": "blackhole", "settings": {"response": {"type": "http"}}, "tag": "block"}], "policy": {"levels": {"8": {"connIdle": 300, "downlinkOnly": 1, "handshake": 4, "uplinkOnly": 1}}, "system": {"statsOutboundUplink": true, "statsOutboundDownlink": true}}, "routing": {"domainStrategy": "IPIfNonMatch", "rules": [{"inboundTag": ["dns-in"], "outboundTag": "dns-out", "type": "field"}, {"ip": ["8.8.8.8"], "outboundTag": "direct", "port": "53", "type": "field"}, {"domain": ["geosite:category-ir", "domain:.ir"], "outboundTag": "direct", "type": "field"}, {"ip": ["geoip:ir", "geoip:private"], "outboundTag": "direct", "type": "field"}, {"outboundTag": "warp-out", "type": "field", "network": "tcp,udp"}]}, "stats": {}}
 ```
 
 **Ex for Hiddify**
 
 ```JSON
-{"outbounds": [{"type": "wireguard", "tag": "@darkness_427 Warp-IR1", "local_address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "private_key": "oP4D2HXriimhBqk+w4CpI41OEQd5p2rJV8MtbeV7eUs=", "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=", "server": "188.114.98.224", "server_port": 878, "reserved": [195, 216, 199], "mtu": 1280, "fake_packets": "1-3", "fake_packets_size": "10-30", "fake_packets_delay": "10-30", "fake_packets_mode": "m4"}, {"type": "wireguard", "tag": "@darkness_427 Warp-Main1", "detour": "@darkness_427 Warp-IR1", "local_address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "private_key": "ODd0kPser1fJ/Zupag1h1fNxoj7YCc0hOjYEgWs2CkU=", "server": "188.114.99.118", "server_port": 955, "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=", "reserved": [69, 191, 86], "mtu": 1300, "fake_packets_mode": "m4"}]}
+{"outbounds": [{"type": "wireguard", "tag": "@darkness_427 Warp-IR1", "local_address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "private_key": "oP4D2HXriimhBqk+w4CpI41OEQd5p2rJV8MtbeV7eUs=", "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=", "server": "162.159.195.1", "server_port": 878, "reserved": [195, 216, 199], "mtu": 1280, "fake_packets": "1-3", "fake_packets_size": "10-30", "fake_packets_delay": "10-30", "fake_packets_mode": "m4"}, {"type": "wireguard", "tag": "@darkness_427 Warp-Main1", "detour": "@darkness_427 Warp-IR1", "local_address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "private_key": "ODd0kPser1fJ/Zupag1h1fNxoj7YCc0hOjYEgWs2CkU=", "server": "162.159.192.1", "server_port": 955, "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=", "reserved": [69, 191, 86], "mtu": 1300, "fake_packets_mode": "m4"}]}
 ```
 
 </details>
@@ -2091,6 +2056,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [WE?]: https://telegram.me/s/IranRamona
 [YA?]: https://github.com/youfoundamin/V2rayCollector
 [Ainita?]: https://ainita.net/vpn.html
+[APN]: https://t.me/F_NiREvil/3554
 [Arshia]: https://telegram.me/s/warpscanner
 [any information]: https://telegram.me/s/F_NiREvil/6292
 [Amnezia]: https://github.com/amnezia-vpn/amnezia-client/releases
@@ -2168,3 +2134,6 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [M22]: https://telegram.me/F_NiREvil/6672
 [M23]: https://telegram.me/+YIlqV-fl9y4zMmRk
 [MMarkPash]: https://twitter.com/markpash/
+[WarpAndroid]: https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone
+[WarpIOS]: https://itunes.apple.com/us/app/1-1-1-1-faster-internet/id1423538627
+[ZeroTrust]: https://t.me/F_NiREvil/4985
