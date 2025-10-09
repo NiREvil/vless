@@ -14,6 +14,7 @@
 #   until the restrictions are lifted.
 #
 # Working configuration (manually applied):
+#   • IPv4 range: 162.159.192.1 — 162.159.192.20
 #   • IPv4 range: 162.159.195.1 — 162.159.195.10
 #   • IPv6 range: 2606:4700:d0::a29f:c001 — 2606:4700:d0::a29f:c014
 #   • Custom domain: wire.nscl.ir
@@ -27,7 +28,7 @@
 #   1. Verify that Cloudflare/Warp endpoints are accessible again
 #      from affected regions (Iran/China).
 #   2. Uncomment this section to restore the workflow:
-#      lines 38, 39 ... and 44.
+#      lines 39, 40 ... and 45.
 #   3. Test connectivity in staging before pushing to production.
 #
 # Disabled on: 18 October, 2025 — Freedom to Dream 🩶
