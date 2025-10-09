@@ -16,29 +16,29 @@
 > من موقتا همه workflow هارو غیرفعال کردم که انومات چیزی جایگزین نکنن چون خودم دستی از آی‌پی‌هایی که فعال شدن گذاشتم داخل چندتا ساب‌اسکریپشن وارپ.
 >
 > <details>
-> <summary> مشاهده لینک‌ها</summary><br/>  
+> <summary> مشاهده لینک‌ها</summary><br/>
 >
-> **Warp for Clash-Meta:**  
+> **Warp for Clash-Meta:**
 >
 > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml
 >
-> **Warp for Exclave:**  
+> **Warp for Exclave:**
 >
 > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/exclave-wg.txt
 >
-> **Warp for Hiddify:**  
+> **Warp for Hiddify:**
 >
 > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
 >
-> **Warp for Singbox:**  
+> **Warp for Singbox:**
 >
 > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
-> 
-> **Warp for Nekobox:**  
+>
+> **Warp for Nekobox:**
 >
 > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/nekobox-wg.txt
 >
-> **Warp for v2rayNG, MahsaNG:**  
+> **Warp for v2rayNG, MahsaNG:**
 >
 > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/v2rayng-wg.txt
 >
