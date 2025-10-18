@@ -1759,7 +1759,7 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
 
 ```Elixir
 {
-  "remarks": "warp_mmm_noise",
+  "remarks": "warp-xray",
   "log": {
     "loglevel": "debug"
   },
@@ -1811,8 +1811,8 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
         "wnoise": "none",
         "peers": [
           {
-            "endpoint": "wire.nscl.ir:878",
-            "keepAlive": 1,
+            "endpoint": "162.159.92.12:878",
+            "keepAlive": 30,
             "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
           }
         ],
@@ -1907,7 +1907,7 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
 
 ```json
 {
-  "remarks": "Warp on Warp",
+  "remarks": "warp-on-warp-ipv4",
   "log": { "loglevel": "none" },
   "dns": {
     "hosts": {
@@ -1955,7 +1955,7 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
         "mtu": 1330,
         "peers": [
           {
-            "endpoint": "162.159.192.1:878",
+            "endpoint": "162.159.192.6:878",
             "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
           }
         ],
@@ -1974,10 +1974,10 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
       "protocol": "wireguard",
       "settings": {
         "address": ["172.16.0.2/32", "2606:4700:110:80b2:77e6:6275:cfa3:ffd0/128"],
-        "mtu": 1420,
+        "mtu": 1280,
         "peers": [
           {
-            "endpoint": "[2606:4700:d0::a29f:c004]:878",
+            "endpoint": "162.159.195.8:955",
             "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
           }
         ],
@@ -2018,11 +2018,11 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
 }
 ```
 
-**This is the same.**
+**This is the same but IPv6.**
 
 ```json
 {
-  "remarks": "WoW_MahsaNG",
+  "remarks": "warp-on-warp-ipv6",
   "log": { "loglevel": "none" },
   "dns": {
     "hosts": {
@@ -2073,16 +2073,16 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
       "protocol": "wireguard",
       "settings": {
         "address": ["172.16.0.2/32", "2606:4700:110:81ec:2a68:559d:ab39:22b4/128"],
-        "mtu": 1310,
+        "mtu": 1300,
         "peers": [
           {
-            "endpoint": "162.159.195.1:1701",
+            "endpoint": "162.159.195.8:1002",
             "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
           }
         ],
         "reserved": [114, 123, 123],
         "secretKey": "UG8l/RlQzwOcnfTVKtApKrGFUJDMz2lJ8Idv8/kVLEA=",
-        "keepAlive": 10,
+        "keepAlive": 30,
         "wnoise": "quic",
         "wnoisecount": "15",
         "wpayloadsize": "1-5",
@@ -2095,10 +2095,10 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
       "protocol": "wireguard",
       "settings": {
         "address": ["172.16.0.2/32", "2606:4700:110:80b2:77e6:6275:cfa3:ffd0/128"],
-        "mtu": 1330,
+        "mtu": 1280,
         "peers": [
           {
-            "endpoint": "[2606:4700:d0::a29f:c007]:2408",
+            "endpoint": "[2606:4700:d0::a29f:c008]:7559",
             "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
           }
         ],
