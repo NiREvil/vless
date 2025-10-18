@@ -120,13 +120,15 @@
 >  
 > <details>
 > <summary>❗ توضیحات مربوط به پنل BPB </summary><br/>
->
+>  
 > یه پنل BPB بالا آوردم به کمک ویزارد 90 ثانیه بیشتر طول نکشید (اکانت کلادفلر داشتم از قبل).  
+>
 > بعد از اینکه پنل رو ایجاد کردید (ترجیحا نوع وورکر بسازید که برای این شرایط بهتره، چون میشه از پورت‌های فاقد tls مثل پورت 80 هم استفاده کرد)، داخل پنل می‌تونید به عنوان تنظیمات و چندتا آی‌پی تمیز از این فایل بکاپ من استفاده کنید. کافیه [[این فایل]](edge/assets/BPB-settings.dat.txt) رو از گزینه مشخص شده در پنل [^6] آپلود کنید تا تنظیمات من اعمال بشه براتون.
 >
 > از داخل پنل لینک ساب نرمال رو اضافه کنید داخل v2rayNG یا Hiddify و URL Test بگیرید می‌بینید که نصف بیشترشون پینگ دادن مخصوصا اوتایی که دامین خود وورکر رو دارن یا دامین `www.speedtest.net` و `creativecommons.org` پینگ عالی میدن. تست شده با ابرانسل و شاتل و همراه و مخابرات و آسیاتک. [^7] [^8]
 >
 > نحوه ساخت پنل واقعا ساده‌است مخصوصا که اگه از ابزار ویزارد استفاده کنید و دستی نرید سراغش. یه خط دستور رو کپی پست می‌کنید داخل ترمینال لینوکس یا CMD ویدوز یا ترماکس اندروید و به چندتا دونه سوال پاسخ می‌دید و تمام. پنل ساخته می‌شه.  
+> 
 > از طریق [[این لینک]][WIZ] می‌تونید توضیحات کامل درباره این پروژه رو مطالعه کنید، توسط توسعه دهنده BPB نوشته شده.
 >
 > <details>
@@ -247,11 +249,11 @@
 > <br/>
 >
 > <details>
-> <summary>❗ چرا نباید از MahsaNG استفاده کرد </summary><br/>
+> <summary>❗ چرا نباید از MahsaNG استفاده کرد </summary><br/>    
 >
 > فقط دو دسته از آدم‌ها از MahsaNG استفاده نمی‌کنن:
 >
-> 1. **کصخل‌ها**
+> 1. **کصخل‌ها**  
 > 2. **عرزشی‌عای شل‌مغز**
 >
 > هر فرد آگاه و عاقلی می‌دونه که پروژه مهسا یه شاهکار واقعیه! این پروژه به خاطر اوپن‌سورس بودن، عملکرد فوق‌العاده و به‌روزرسانی‌های بی‌نظیری که تیم توسعه‌دهنده روی کلاینت و هسته‌اش انجام داده، کاملا با شرایط فیلترینگ کشور ما سازگار شده.
@@ -270,8 +272,7 @@
 >
 > https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
 >
-> پایان
-> .
+> پایان.  
 >
 > </details>
 >
@@ -296,22 +297,122 @@
 > <details>
 > <summary>❗ توضیحات مربوط به 1.1.1.1 </summary><br/>
 >
+> 
 > برای من و چند نفر از بچه‌ها اپلیکیشن رسمی وارپ کلادفلر شروع به کار کرده. با نت‌ ایرانس و مخابرات و شاتل و حتی نت همراه اول
 >
 > برای راه‌اندازی هیچکاری نیاز نیست انجام بدید مطلقا هیچ‌کاری، فقط از مارکت گوگل یا اپل اونو نصب کرده و با یه وی‌پی‌ان فعال دیگه (فقط برای اولین ورود لازمه که vpn روشن برید داخلش تا client configuration رو درست انجام بده و ID برای دستگاه تعلق بگیره) وارد شده و هیچی دیگه کلیک کنید روی دکمه کانکت.
 >
-> [لینک دانلود وارپ نسخه Android][WarpAndroid]
+> - [لینک دانلود وارپ نسخه Android][WarpAndroid]
 >
-> [لینک دانلود وارپ نسخه IOS][WarpIOS]
+> - [لینک دانلود وارپ نسخه IOS][WarpIOS]
 >
 > **نکته:**
 >
-> اگه از نت سیم‌کارت همراه استفاده می‌کنید حتما چک کنید تنظیمات APN دستگاه خودتون رو که APN Protocol باید روی IPv4/IPv6 قرار داشته باشه، اگه اصلا نفهمیدید چی می‌گم [اینجارو بخونید][APN].
+> اگه از اینترنت سیم‌کارت استفاده می‌کنید حتما چک کنید تنظیمات APN دستگاه خودتون رو که APN Protocol باید روی IPv4/IPv6 قرار داشته باشه. [^10]  
+> 
+> اگه اصلا نفهمیدید چی می‌گم [اینجارو بخونید][APN].
 >
 > واسه‌ی بعضیا حتی Zero Trust کلادفلر هم کار می‌کنه، یه روش غیرقانونی هست واسه فعال کردنش و یه روش قانونی، هردو رو می‌تونید از [این پست][ZeroTrust] داخل تلگرام بخونید.
 >
-> در نهایت اگه خیلی معطل موندید بیاید گروه شاید بچه‌ها تونستن کمکی بکنن.  
-> همراه اولی‌ها نیان ✋🏿🤣
+> </details>
+>
+> <br/>
+>
+> <details>
+> <summary>❗ توضیحات مربوط به Proton </summary><br/>  
+>
+> طبق چیزهایی که شنیدم کانفیگ‌های وایرگارد سرویس رایگان [ProtonVPN] در داخل [Amnezia] و [WgTunnel] خیلی خوب کار می‌کنن. دریافت کانفیگ از اون اصلا کار سختی نیست. 
+>
+> <br/> 
+> 
+> قبل از هرچیزی بگم که احتمالا می‌تونید از سرویس [ProtonVPN] در 
+اپلیکیشن رسمی خودش چه در [Android][ProtonGoogle] و چه در [IOS][ProtonIOS] استفاده کنید.  
+>
+> پس پیشنهاد می‌کنم اول اپلیکیشن خودشو تست کنید اگه جواب نداد یا کانکشن خوبی نداشتید بیاید سراغ دانلود کانفیگ‌های اون‌. فقط کافیه یک حساب کاربری رایگان در [وب‌سایت پروتون][ProtonVPN] ایجاد کنید، سپس از منوی سمت چپ  به بخش Downloads برید. یکم که برید پایین صفحه، بخش مربوط به دانلود کانفیگ‌های WireGuard رو پیدا می‌کنید. فایل کانفیگ مورد نظر خودتون رو ایجاد کنید (لهستان و هلند ظاهرا بهترن).
+>
+> حالا چندتا روش هست برای وارد کردنشون به Amnezia. از ساده ترین شروع می‌کنم.
+>
+> <br/>
+> 
+> - **روش اول وارد کردن کانفیگ‌ها:**
+>
+> از همون سایت پروتون کانفیگ رو کامل کپی کنید و برید سراغ amnezia. اونجا آیکون + رو می‌زنید و تو کادر اول کانفیگ رو جای‌گذاری کرده و روی insert می‌زنید، قسمت مهم کار این‌جاست، تو صفحه بعدی این اعلان رو بهتون نشون میده: "Enable WireGuard's obfuscation" که حتما باید تیک بزنید فعال بشه تا پارامترهای اضافی آمنزیا یا همون نویز وایرگارد رو به کانفیگ اضافه کنه وگرنه ممکنه اصلا کانکت نشه.
+>
+> <br/>
+>
+> - **روش دوم وارد کردن کانفیگ‌ها:**
+>
+> توی سایت پروتون بعد از ایجاد کانفیگ روی گزینه دانلود کلیک کنید، کانفیگ دانلود شده رو تو پوشه Downloads گوشیتون پیدا کنید، عموما اسم فایل‌ها با wg- شروع میشه.  
+> فایل رو باز کنید و این چندتا پارامتری که می‌نویسم رو بعد از لاین هفتم اضافه کنید، (یعنی زیر DNS قرار میگیرن).
+> 
+> ```Elixir
+> MTU = 1280
+> H1 = 1
+> H2 = 2
+> H3 = 3
+> H4 = 4
+> Jc = 3
+> Jmin = 10
+> Jmax = 50
+> S1 = 0
+> S2 = 0
+> ```
+> 
+> یه جا هم بالای Endpoint باز کنید و اینو قرار بدید:  
+>
+> ```yaml
+> PersistentKeepalive = 30
+> ```
+>
+> این پارامتر واسه این بود که کلاینت هر سی ثانیه یک‌بار یه پکت خالی به سرور بفرسته که بفهمه هنوز زنده‌ایم و کانکشن رو قطع نکنه و هم‌چنین اعلانات روی دستگاه مرتب دریافت بشن.  
+>
+> **نکته:** اون سطرهایی که با # شروع شدن یعنی کامنت هستن و می‌تونید همه رو پاک کنید، کانفیگ نهایی میشه یه چیزی شبیه به این [^11].  
+>
+> بعد می‌تونید کل کانفیگ رو کپی کنید و از داخل کلاینت از آیکون + و insert به amnezia اضافه کنید.
+>
+> <br/>
+>
+> - **روش سوم وارد کردن کانفیگ‌ها:**
+>
+> روش سوم به این شکله که شما کانفیگ پروتون رو از سایت دانلود می‌کنی بعد تحویلش میدی به این ابزار شخص ثالث که بلا سرش بیاره، ابزار روسیه ولی با مترجم مرورگر اوکی میشه و قابل فهم، به زودی فارسیش می‌کنم یکم که سرم خلوت شد. تو این وب‌سایت [مبدل کانفیگ پروتون به Amnezia][ProtonToAmnezia] می‌تونید کانفیگ پروتون رو هم برای amnezia و wg-tunnel و هم برای کلش و هیدیفای تبدیل کنید. توضیح خاصی نداره، خودتون بازی کنید باهاش. آها، اگه بعد از تبدیل حس کردین کانقیگ جون نداره سایز MTU رو بیارید پایین رو 1280 بذارید، این مبدل گیر داده به 1420 تو این سایز سرعت آپلود تقریبا نصف می‌شه.
+>
+> <br/> 
+>
+> هم‌چنین می‌تونید از **ربات تلگرام** [**YeBeKhe**][UWG?] برای ایجاد کانفیگ‌های WireGuard استفاده کنید. فقط باید قبل از استفاده  Endpoint اون رو به یکی از آی‌‌پی‌های این دوتا رنج تغییر بدید چون تو ایران الان فقط این دو رنج کار می‌کنن.  
+>
+> ```ruby
+> 162.159.192.5 —— 162.159.192.20
+> ```
+>  
+> OR
+>  
+> ```ruby
+> 162.159.195.1 —— 162.159.195.10
+> ```
+>  
+> - برای مثال: `162.159.192.10`
+> 
+> پورت خیلی مهم نیست اینجا، تاثیری هم ذوی سرعت کانکشن شما نداره، یکی از پورت‌های زیر رو انتخاب کنید:  
+>
+> ```Elixir
+> 500-854-859-864-878-880
+> 890-891-894-903-908-928
+> 934-939-942-943-945-946
+> 955-968-987-988-1002-1010
+> 1014-1018-1070-1074-1180-1387
+> 1701-1843-2371-2408-2506-3138
+> 3476-3581-3854-4177-4198-4233
+> 4500-5279-5956-7103-7152-7156
+> 7281-7559-8319-8742-8854-8886
+> ```
+>
+> پایان.  
+
+> <br/>
+>
+> در نهایت اگه توی قسمتی از توضیحات سوالی داشتید یا تو مرحله‌ای گیر افتادید، معطل نمونید بیاید گروه همیشه بچه‌ها هستن برای راهنمایی کردن، اگر موذب میشید و نمی‌خواید جوین بشید هیچ مشکلی نیست، پیشنهاد می‌کنم از بخش جستجوی داخل گروه تلگرام استفاده کنید قطعا کلی پیام درباره موضوع مورد نظرتون بالا میاد.
+>
+> راستی، همراه اولی‌ها نیان 🤣🤪✋🏿
 >
 > </details>
 >
@@ -331,7 +432,7 @@
 
 </div>
 
-- Some subscription links are available for [v2rayNG], [Singbox], [Hiddify], [MahsaNG], [NikaNG], [NekoBox], [Exclave], [Karing], [Husi], [Amnezia], [WgTunnel], [ProxyCloud], [ClashMeta], [FiClash], [ClashMI], [Nekoray], [Outline], [Happ], [v2rayTun] and other clients.
+- Some subscription links are available for [v2rayNG], [Singbox], [Hiddify], [MahsaNG], [NikaNG], [NekoBox], [Exclave], [Karing], [Husi], [Amnezia], [WgTunnel], [ProxyCloud], [ZedSecure], [ClashMeta], [FiClash], [ClashMI], [Nekoray], [Outline], [Happ], [v2rayTun] and other clients.
 
 - **Несколько ссылок для подписки на** v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Outline, Clash-Meta и ... Вернуть результат только
 
@@ -357,7 +458,7 @@
 >
 > همچنین اگر لینک عمومی و مفیدی دارید که خوب کار می‌کنه، می‌تونید بفرستید تا اضافه بشه و بقیه هم استفاده کنن.
 >
-> متأسفانه از مرداد ماه سال 403 نیما دیگه بین ما نیست، و من به همراه چند دوست دیگه در حد توان این اکانت گیت رو هندل می‌کنیم.
+> متأسفانه از مرداد ماه سال 1403 نیما دیگه بین ما نیست، و من به همراه چند دوست دیگه در حد توان این اکانت گیت‌هاب رو هندل می‌کنیم.
 >
 > - به امید آزادی 🤍
 > - تلگرام من: [[Di4Diana]]
@@ -438,7 +539,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 > - [diana-cl.github.io/Diana-Cl]
 >
 > Best DNS testing tool, just start it.  
-> Tip — use xstack DoH to bypass restrictions on YouTube, Instagram, and more.
+> Tip — use DoH to bypass restrictions on YouTube, Instagram, and more.
 >
 > - [darknessshade.github.io/DNS-Tester]
 > - Read more about DNS Tester in [iran-core]
@@ -458,7 +559,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 >
 > <br/>
 >
-> This is a magical command line for activating Microsoft products including Windows and Office.
+> This is a magical command line for activating Microsoft products including Windows and Office (All versions).
 >
 > - [github.com/NiREvil/windows-activation]
 >
@@ -473,6 +574,8 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 > Ultimate WARP Generator for any client in just 2 seconds.
 >
 > - [itsyebekhe.github.io/warp]
+>
+> - [Telegram.me/UWarpGenBot][UWG?]
 >
 > <br/>
 >
@@ -546,6 +649,8 @@ https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/refs/heads/main/Best-Results
 https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/vless.txt
 
 https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/shadowsocks.txt
+
+https://raw.githubusercontent.com/parvinxs/Submahsanetxsparvin/refs/heads/main/Sub.mahsa.xsparvin [[PN?]]
 
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed [[SB?]]
 
@@ -725,13 +830,13 @@ https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_l
 
 <br/>
 
-## [Amnezia]
+## Amnezia
 
 > [!NOTE]
 >
-> Do you have [[any information]] on amnezia ?
->
-> Also can using configs in [WgTunnel] Client.
+> In addition to [Amnezia], you can also use most of these warp configurations within the [WgTunnel] client. 
+> 
+> Some details about using the free [ProtonVPN] service in Amnezia are written at the beginning of this Readme file.  
 >
 > [🗺 Go Back to Contents](#table-of-contents)
 >
@@ -739,12 +844,303 @@ https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_l
 
 <br/>
 
-**A 🇮🇳 IN**
-
+**🇮🇷FREE#0**  
 ```Elixir
 [Interface]
-PrivateKey = sDP/ERkFYTFqXiPXx4kXqrQ4EIywAEQoGuAYkm1vJns=
-Address = 10.136.0.200/32
+PrivateKey = 8IREz0wjTHPwDBkz1oQAxqJLjgRszWvDudTHfHJQ91c=
+Address = 172.16.0.2/32,2606:4700:110:8a8e:f20a:b5e4:9718:e5f4/128
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1280
+Jc = 3
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+Jc = 3
+
+[Peer]
+PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = wire.nscl.ir:878
+```
+
+**🇮🇷FREE#1** [[UWG?]]  
+```Elixir
+[Interface]
+PrivateKey = kFrCW3gU8ssg2jsa0IMlcw8U1sjrR4FyHfZvFMrtIlo=
+Address = 172.16.0.2/32,2606:4700:110:8017:5ef1:e186:5169:1ae2/128
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1280
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+Jc = 3
+
+[Peer]
+PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = 162.159.195.8:1014
+```
+
+**🇮🇷FREE#2**  
+```Elixir
+[Interface]
+PrivateKey = EP6iZgOR+z8e/O+O1kWUe0fnH9Ixy2O/yfe5W+qqinA=
+Address = 172.16.0.2/32,2606:4700:110:856e:2592:8983:d2f3:bf31/128
+DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
+MTU = 1280
+Jc = 3
+Jmin = 20
+Jmax = 60
+S1 = 0
+S2 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+Jc = 3
+
+[Peer]
+PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = 162.159.192.10:2506
+```
+
+**🇵🇱PROTON#17** [[ProtonVPN]]  
+```Elixir
+[Interface]
+PrivateKey = kIKrW5+ts3ePkPTKB+kxhmGadHwxonelWnDQ/edC8nk=
+Address = 10.2.0.2/32
+DNS = 10.2.0.1
+MTU = 1280
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+Jc = 3
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+
+[Peer]
+PublicKey = IcOIsjkT7d0j4B72tWN2umTTj49q6cs4X3wgTHUSLjE=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = 149.102.244.67:51820
+```
+
+**🇨🇦PROTON#7**  
+```elixir
+[Interface]
+PrivateKey = aAWi+kcdpKFETLybHjeiy46LJbg4anEvSaCFvXougl0=
+Address = 10.2.0.2/32
+DNS = 10.2.0.1
+MTU = 1280
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+Jc = 3
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+
+[Peer]
+PublicKey = 32BouQp7QBFlZTBW8goSEE+kDnyEqbjYGKWNOdqx4DM=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = 149.22.82.55:51820
+```
+
+**🇳🇱PROTON#144**  
+```Elixir
+[Interface]
+PrivateKey = SAQnzqQeqpj2k92AR4KI3pl7jSIam31MRdZvR8NOUF8=
+Address = 10.2.0.2
+DNS = 10.2.0.1
+MTU = 1280
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+Jc = 3
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+
+[Peer]
+PublicKey = BMVFYo1dYKoCWl6QJzrGjWzRxQVD5ZQ3D4/L331J52s=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = 169.150.218.31:51820
+```
+
+**🇳🇱PROTON#149**  
+```ballerina
+[Interface]
+PrivateKey = AP2kkapRQVtbMU7znjNFtiInN+vmMW8YZ6JcnFuVmns=
+Address = 10.2.0.2/32
+DNS = 10.2.0.1
+MTU = 1280
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+Jc = 3
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+
+[Peer]
+PublicKey = p3GNfkhyld5v3cODG9SVHjYCgFAzXfF4717xTxs6n3o=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = 169.150.218.137:51820
+```
+
+**🇺🇸PROTON#105**  
+```ballerina
+[Interface]
+[Interface]
+PrivateKey = YBK2yQjs4datZO0vEGWQSgRkMELY/+swxJhr5HQL0nc=
+Address = 10.2.0.2/32
+DNS = 10.2.0.1
+MTU = 1280
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+Jc = 3
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+
+[Peer]
+PublicKey = +nfuVNp0Pevo7gksdbUCpgcNa+oowtZI/m031Ww3Iy0=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = 79.127.147.88:51820
+```
+
+**🇳🇴PROTON#9**  
+```elixir
+[Interface]
+PrivateKey = +Df0DFhtTlJES1TLNOvnflgNEgOk3NXfm+MiOCi78G0=
+Address = 10.2.0.2/32
+DNS = 10.2.0.1
+MTU = 1280
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+Jc = 3
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+
+[Peer]
+PublicKey = oiEljFqMNxeF9xsYdDQyItsFGDRw8wPmfnhh/h+Fi1g=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = 95.173.205.168:51820
+```
+
+**🇷🇴PROTON#27**  
+```ballerina
+[Interface]
+PrivateKey = MCoDkuaIKbR0NmYni18HxbkxLFsTkFsIwk/4z2c9wWM=
+Address = 10.2.0.2/32
+DNS = 10.2.0.1
+MTU = 1280
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+Jc = 3
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+
+[Peer]
+PublicKey = M5oNbocDNjsEwPdPjvf0nSJbnlcRQ+yl49T5y/9rDgo=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = 31.14.252.2:51820
+```
+
+**🇳🇱PROTON#115**  
+```Elixir
+[Interface]
+PrivateKey =  +FbhPVXVXNUan1wB9u0/2MILStT24LyGoLT+Ksnfr3Q=
+Address = 10.2.0.2
+DNS = 10.2.0.1, 2002:a02:1::
+MTU = 1280
+S1 = 0
+S2 = 0
+Jc = 3
+Jmin = 10
+Jmax = 50
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0xc6000000010843290a47ba8ba2ed000044d0e3efd9326adb60561baa3bc4b52471b2d459ddcc9a508dffddc97e4d40d811d3de7bc98cf06ea85902361ca3ae66b2a99c7de96f0ace4ba4710658aefde6dec6837bc1a48f47bbd63c6e60ff494d3e1bea5f13927922401c40b0f4570d26be6806b506a9ff5f75ca86fae5f8175d4b6bfd418df9b922cdff8e60b06decfe66f2b07da61a47b5c8b32fa999d8feac21c8878b6e15ee03b8388b2afd9ffd3b46753b0284907b10747e526eebf287ff08735929c4c5e4784a5e2ad3dd8ac8200d0e99ad1219e54060ddc72813e8a3e2291ac713c5f3251c5d748fd68782a2e8eb0c021e437a79aafb253efae3ee72e1051b647c45b676d3b9e474d4f60c7bf7d328106cb94f67eaf2c991cd7043371debbf2b4159b8f80f5da0e1b18f4da35fca0a88026b375f1082731d1cbbe9ba3ae2bfefec250ee328ded7f8330d4cda38f74a7fe10b58ace936fc83cfcb3e1ebed520f7559549a8f20568a248e16949611057a3dd9952bae9b7be518c2b5b2568b8582c165c73a6e8f9b042ec9702704a94dd99893421310d43ffc9caf003ff5fc7bcd718f3fa99d663a8bbad6b595ec1d4cf3c0ed1668d0541c4e5b7e5ded40c6628eb64b29f514424d08d8522ddf7b856e9b820441907177a3dbd9b958172173be8c45c8c7b1816fe4d24927f9b12778153fc118194786c6cf49bc5cf09177f73be27917a239592f9acd9a21150abbd1ca93b1e305dc64d9883429a032c3179e0639592c248cbacec00c90bfb5d5eaf8920bf80c47085a490ead8d0af45f6754e8ae5692f86be02c480ca2a1e6156dccf1bcb5c911c05e3c3a946ca23461669c57d287dcfa9dd187fc6a58394f0b2878c07e1d8cb6be41725d49c118e9ddbe1ae6e5d1a04b36ad98a24f0378deea84febb60b22dc81d8377fb3f21069d83e90b9eba2b6b0ea95acf5fd0482a00d064a9b73e0b3732fde45404e22349a514151381fc6095a8204234359c28765e360a57eb222418b11be704651e4da1b52b135d31ba63a7f06a0f7b8b6177f9bd02fb517877a1340e59d8dbe52ea8135bc80b2aa1959539803a31720ac949c7bf0785c2e413e8b83dd4fd40d8a63fbd832ecb727d0c0df04ce10dac6a7d6d75e264aaf856e7485cc2c4e1749f169e5ad4de6f89a2333e362910dd0d962e3bf59a353df5760fd15956fe32e40f863ea020e9709aa9a9ebeffc885e64231dc6fc384bc6a9e7e5c64c0eaf39f9f14a13658883ee8dd94737cb3a8c2f7020bfacb80f0122866635873e248e22b5a5abc84d507e1720d3fb5f827d75c1d39235a361a217eb0587d1639b0b31aef1fe91958220fcf934c2517dea2f1afe51cd63ac31b5f9323a427c36a5442f8a89b7494f1592666f62be0d8cf67fdf5ef38fafc55b7b4f569a105dfa9925f0a41913c6ee13064d4b83f9ee1c3231c402d68a624e2388e357144be99197dcafb92118d9a9ec6fe832771e12448a146fb5b9620a4718070b368aab646b03cce41ec4d5d9a9c880a9cff06aba991cc0845030abbac87c67255f0373eb38444a51d0958e57c7a33042697465c84abe6791cb8f28e484c4cd04f10791ad911b0dcc217f66cb3aa5fcdbb1e2be88139c4ac2652e469122408feba59ad04f66eb8ab8c80aaf10c2ec1f80b5be111d3ccc832df2395a947e335e7908fda5dcdaa14a61f0fa7156c94b1c96e5c191d850e341adc2e22c8f69fcfa5c3e403eadc933f18be3734bc345def4f40ea3e12>
+
+[Peer]
+PublicKey = nsQBMSreq3f0B/BvRRL2aZtuvFAahf7TECaKpbooZVw=
+AllowedIPs = 0.0.0.0/0, ::/0
+Endpoint = 149.34.244.134:51820
+```
+
+**🇯🇵PROTON#31**  
+```elixir
+[Interface]
+PrivateKey = 2AUvpVKpLDZWVpfKDc5ZiYgmboGFgnau8sUp8LddqWg=
+Address = 10.2.0.2/32
+DNS = 10.2.0.1
+MTU = 1280
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+Jc = 3
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+
+[Peer]
+PublicKey = A51GuD3kVrG+bw0ZYnmFvCpRDI6VktCHGRCTfLVf1jw=
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+Endpoint = 149.88.103.33:51820
+```
+
+**🇳🇱Amsterdam#Vz** [[VZ?]]  
+```yaml
+[Interface]
+PrivateKey = QFlaWTq8z5XM4wm9Z0DvmIEsV3eXxKHmd+ihACDmknk=
+Address = 10.136.38.50/32
 DNS = 1.1.1.1, 8.8.4.4
 MTU = 1380
 Jc = 43
@@ -757,271 +1153,38 @@ H2 = 430880481
 H3 = 1214405368
 H4 = 1739253821
 [Peer]
-PublicKey = HC7/K0hhG3Eyv0glUt4MinT4N3bS4cyqxU5+/jwWQ2Q=
-PresharedKey = +YvAUpdLOzFEL91Nk2+lKVHFZ7HyIsQ80VC9LPKyaL4=
+PublicKey = gbUPMNfaxgRSGD3xcnnbAJSclxfnOyh4U1qqmYMWmCI=
+PresharedKey = G7qzjJmlQZfsVM8AKM1mI2NcZubpT3awN1k4j4HsQ/0=
 AllowedIPs = 0.0.0.0/0, ::/0
 PersistentKeepalive = 25
-Endpoint = ind01awg.kcufwfgnkr.net:60136
-```
-
-**A1 🇳🇱 NL** [[VZ?]]
-
-```elixir
-[Interface]
-PrivateKey = 4DzhwkvPIDyt9n6Jsy7gZ0tt6Xo9oP8ZBNfkse51IlQ=
-Address = 10.136.4.52/32
-DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-[Peer]
-PublicKey = gbUPMNfaxgRSGD3xcnnbAJSclxfnOyh4U1qqmYMWmCI=
-PresharedKey = gRYXRdp5bE26cbnOLPFuXh8GlWpIPZjv1ZQs0ymgvGo=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
 Endpoint = nl02awg.kcufwfgnkr.net:60136
-```
-
-**A2 🇳🇱 NL**
-
-```ballerina
-[Interface]
-PrivateKey = sCrICobPbEukaBKKYE1CO4a/vh08a5fl54ps5a9rl2w=
-Address = 10.201.12.164/32
-DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-[Peer]
-PublicKey = n0z+oioqL8meQmsU1aPx0fXiMPzStqM3VwkVSmAqzG0=
-PresharedKey = a2Rmv35eo1I60q/45KtdQ55OPhVt6iFQWWYShI5sNe4=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = nl01a.kcufwfgnkr.net:62931
-```
-
-**A3 🇰🇿 KZ**
-
-```ballerina
-[Interface]
-PrivateKey = eCuJMxzhjESh13AuZABQnD484969ZKUerZmZgzzRKXY=
-Address = 10.136.0.180/32
-DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-[Peer]
-PublicKey = NyiezkT2pv7jPVbosAbaWE5t/1U65LVrA84Z2U3EWTw=
-PresharedKey = OeEyckrhhs24gsb6KFX5+aDbURhSG4R8SnzamT6vwhA=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = kz01awg.kcufwfgnkr.net:60136
-```
-
-**A4 🇦🇪 AE**
-
-```elixir
-[Interface]
-PrivateKey = 4HRk7bt3WhdxZzKqiXNeT41xTZhAPYTVpji8sxweX0c=
-Address = 10.136.1.137/32
-DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-[Peer]
-PublicKey = 9mn11Gs4ouOhlLdkh1HKfV3zlAZGON9iv4L94dsPmi4=
-PresharedKey = cDxnBAIBEvXstPFAk8NFWOyRvAxHZVCDISyd/T2j4v0=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = ae01awg.kcufwfgnkr.net:60136
-```
-
-**A5 🇬🇧 UK**
-
-```elixir
-[Interface]
-PrivateKey = gJGh5oDmSfsIjFoipAhH9VrXGndgm81M74WfqA5JDn4=
-Address = 10.221.23.9/32
-DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-[Peer]
-PublicKey = jJgnoLdV8w94rWI0gbXWhhcY8dFA3SuBdD0Fng3u/xo=
-PresharedKey = gJYLQ1Wlj5iq34S1t7IjsLx5tvxr+431SW9rgg/oEFI=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = gb01a.kcufwfgnkr.net:62931
-```
-
-**A6 🇫🇷 FR**
-
-```ballerina
-[Interface]
-PrivateKey = 2DwqSLnw/z80XsyI3fkg8XDc2YS+phxIBuwxm+u2oV4=
-Address = 10.201.5.49/32
-DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-[Peer]
-PublicKey = 6jIt22KMxyN3Hm62/8I4/M54gNsUJD4P8AqOWaGR7F4=
-PresharedKey = LseW8c+Tplmio8JfNSENGHetoF9bEm8zuizeEU6/TkA=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = fr01a.kcufwfgnkr.net:62931
-```
-
-**A7 🇰🇷 KR**
-
-```elixir
-[Interface]
-PrivateKey = CId0mgqhuZBJs7uotRXOgK1oB+wJWtO278w0ve6rnXM=
-Address = 10.136.0.43/32
-DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-[Peer]
-PublicKey = D9GXNxSpDKWNj8OWnU1qs7IdBuFdlrX0vBNzOfN77XQ=
-PresharedKey = mx5PwEY+MSFoOb3C1HpVsY+80WBmsrHQ0bNcBRF2VNY=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = kr01awg.kcufwfgnkr.net:60136
-```
-
-**A8 🇫🇮 FN**
-
-```elixir
-[Interface]
-PrivateKey = +NINvwWX6DQ82zqC3pKPSh01UNlBw+n1JGPD9Bzr01o=
-Address = 10.146.0.94/32
-DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
-[Peer]
-PublicKey = fjcBbSCl00At7hkm/h8uVlfITrq3k6twlbICtXMael4=
-PresharedKey = 2uq120k3ihWXIAPrQTY/mk1M8yGxKTxIWC7nCNGx6DE=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = fin01wg.kcufwfgnkr.net:50146
-```
-
-**A9 🇳🇱 NL**
-
-```elixir
-[Interface]
-# Key for n-113
-# Bouncing = 3
-# NAT-PMP (Port Forwarding) = off
-# VPN Accelerator = on
-PrivateKey = +FbhPVXVXNUan1wB9u0/2MILStT24LyGoLT+Ksnfr3Q=
-Address = 10.2.0.2/32,2002:a02:2::/128
-DNS = 10.2.0.1,2002:a02:1::
-MTU = 1420
-Jc = 4
-Jmin = 40
-Jmax = 70
-H1 = 1
-H2 = 2
-H3 = 3
-H4 = 4
-
-[Peer]
-#🇳🇱NL-Proton-Free
-PublicKey = nsQBMSreq3f0B/BvRRL2aZtuvFAahf7TECaKpbooZVw=
-PersistentKeepalive = 30
-AllowedIPs = 0.0.0.0/0, ::/0
-Endpoint = 149.34.244.134:51820
 ```
 
 <br/>
 
-### Amnezia free configurations
+### Amnezia local free 🇳🇱 configurations
 
-**A**
-
+**A**  
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWEgRnJlZSBJUiIsICJkZXNjcmlwdGlvbiI6ICJBbW5lemlhIEZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJYbWtoWjhTay5UaTY0NENQTnBnTnQydW12ektUSGJRY1NSY2hpRXhlWSJ9
 ```
 
-**B**
-
+**B**  
 ```Elixir
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWEgRnJlZSBJUiIsICJkZXNjcmlwdGlvbiI6ICJBbW5lemlhIEZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJCSmE1R0FlVy44ZzFXOXl6Q3VGZXMwQzFJREdhM2k3VGE0MDNuSU02NiJ9
 ```
 
-**C**
-
+**C**  
 ```CSS
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJxcjV5elZsYi5sSnVwY3hVVlc3TTBmY2k0TzdCMVFDdVJpS0ZBdjkxaiJ9
 ```
 
-**D**
-
+**D**  
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAidlZxckZIa3guZ0V6M0tKTk44YWlwaFU0MjNGS2Roc2R6MUVXbnNZZ1cifQ==
 ```
 
-**E**
-
+**E**  
 ```mupad
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJRNE9YYkdaei4wUTJDN1NoMEM1UXBGcURyenBtcktaYmZtMU00ZE1SSyJ9
 ```
@@ -1029,178 +1192,149 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 <br/>
 
 <details>
-<summary> MORE CONTENT</summary>
+<summary> ➕MORE CONTENT</summary>
 
-**1**
-
+**F**  
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiT2hSZHVRbU0uWlRZV05LRW5lSGdhV3lURmFwNjJrbWpscGRxSXZZRlIifQ==
 ```
 
-**2-**
-
+**G**  
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiTE1QTjRJalEuMkZ2R3N0U0NaRnhVVVVsbUt3V044bHdDektjMmlIRVEifQ==
 ```
 
-**3-**
-
+**H**  
 ```mupad
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVVBQWEN3eVkuRDRzZ0I1RUk3eTNvdHJDWFBtZmpCZ0pCazhnSUs0c3gifQ==
 ```
 
-**4-**
-
+**I**  
 ```mupad
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAic0pBbEhEbGwuaWtodXg0Mjg4R2ZqakdZUGhMVHExdkhmMVB2NWVUckMifQ==
 ```
 
-**5-**
-
+**G**  
 ```CSS
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiODA0OENnNGcucDNXaUF2b2hVSExhSGlJanhVak9sQnlPaHBSREIxWEcifQ==
 ```
 
-**6-**
-
+**K**  
 ```CSS
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiNmdLdnB1YnkuZUl1Q3k4SVpwUDJLU3FmV2FJMVNTWnlrYkl5RDVsNlEifQ==
 ```
 
-**7-**
-
+**L**  
 ```robots.txt
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiWjNnZmZncEMuUkpZUnhrcGNRWW9NWU0wZDBoUDl5eEVqZkJ0WjcxQ1cifQ==
 ```
 
-**8-**
-
+**M**  
 ```robots.txt
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiSnNMUllUNGMua25QVkhReEpmWlJOb0xkcUJrd1NFQlVlUTQxQU1GbWoifQ==
 ```
 
-**9-**
-
+**N**  
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAibUQ2dXBkMTUuUmRTb2o4czZLMTJTaUIxemRLaEx4bFBPdnp0MnVRU3QifQ==
 ```
 
-**10-**
-
+**O**  
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAicXZVZHFzVlQuRTJIZWZtc1FuZkR6bTJXZTZSd0tncEF1eTZrb0t6N1MifQ==
 ```
 
-**11-**
-
+**P**  
 ```mupad
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJWRTAyZnhVUi5XU0EzMmtQUkJ6QVlSc3FFbFA2VmZ5dE1yUklrWDAwbiJ9ifQ==
 ```
 
-**12-**
-
+**Q**  
 ```mupad
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVkUwMmZ4VVIuV1NBMzJrUFJCekFZUnNxRWxQNlZmeXRNclJJa1gwMG4ifQ==
 ```
 
-**13-**
-
+**R**  
 ```CSS
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJNd2NIYmNHMi5reWI2UTlRUjdNT0YxQjNRUUJabkV2bmJlU2RZU1ZPWCJ9
 ```
 
-**14-**
-
+**S**  
 ```CSS
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiTXdjSGJjRzIua3liNlE5UVI3TU9GMUIzUVFCWm5Fdm5iZVNkWVNWT1gifQ==
 ```
 
-**15-**
-
+**T**  
 ```robots.txt
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAianhPNmI4d0guZHVwZExaV290OVdFdjd0ZDBvM0NxWUsxZWU0ZVFTMzUifQ==
 ```
 
-**16-**
-
+**U**  
 ```robots.txt
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiRTRVYWR5N3cuSlpJbllDekFCRHBqeElGa0kxM21EM0k1MTd4MVhVVjEifQ==
 ```
 
-**17-**
-
+**W**  
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiSGpzNUo0dkouS2VXemRib3dxM01ZRzlwYTQwRUlGMDE5aW9UcllhYloifQ==
 ```
 
-**18-**
-
+**W**  
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiUUNSR05DelcuNnJNbDQzVzhBbDFrMzk3Y0NiTkQ2QTVRMEVwQjJwSUQifQ==
 ```
 
-**19-**
-
+**X**  
 ```mupad
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAieDVhN1c5Z0cuanpINUh4aTQwNHdJOGRwNmRWY3Bwd1lqSXZNMnpFTG4ifQ==
 ```
 
-**20-**
-
+**Y**  
 ```mupad
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiY25lYjJSRGsuUFMwMHhzQ1VmMGlLZVFRZzZFVG42elJlZm15QXoyb24ifQ==
 ```
 
-**21-**
-
+**Z-1**  
 ```CSS
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiRnFOb1hZNmguTGJUZmxnRXZIdTNaNlFnR2VrVFB6c0NlWEJxeXBhMmsifQ==
 ```
 
-**22-**
-
+**Z-2**  
 ```CSS
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiRXRSTFZVQzIuZmd3Y0I2cEZHMWV2ZTl5TW40UjJFa1haZm9EVkgyaHYifQ==
 ```
 
-**23-**
-
+**Z-3**  
 ```robots.txt
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVldKaElZQm0uQ1pFUGp6M2JUQ0plOTd3cVZSZlNxMUFjVTdpVFR3dHoifQ==
 ```
 
-**24-**
-
+**Z-4**  
 ```robots.txt
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVFRNazlBY1YuSE5DQWN0d3lYTWhibDRSeXI0WGFoTzB5SE1UUmdQU1EifQ==
 ```
 
-**25-**
-
+**Z-5**  
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiNjkwZ3o0TVYubVRWeXh0TFVtQ05DckZjakVXWWM1UDd3WFJDTFRrSUgifQ==
 ```
 
-**26-**
-
+**Z-6**  
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVVoxRnRPOU4uaFc0M1dDaGZWR0FXanpOcFN1VXlNNUk2RGpnVkU1S3cifQ==
 ```
 
-**27-**
-
+**Z-7**  
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiQkphNUdBZVcuOGcxVzl5ekN1RmVzMEMxSURHYTNpN1RhNDAzbklNNjYifQ==
 ```
 
-**28-**
-
+**Z-8**  
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElSIiwgImRlc2NyaXB0aW9uIjogIkFtbmV6aWFGcmVlIGZvciBJcmFuIiwgImFwaV9rZXkiOiAiVVoxRnRPOU4uaFc0M1dDaGZWR0FXanpOcFN1VXlNNUk2RGpnVkU1S3cifQ==
 ```
 
-**29-**
-
+**Z-9**  
 ```POV-Ray SDL
 vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYzAxZWExODJmOWJkLmF3c2dsb2JhbGFjY2VsZXJhdG9yLmNvbS9hcGkvdjEvcmVxdWVzdC9hd2cvIiwgInByb3RvY29sIjogImF3ZyIsICJuYW1lIjogIkFtbmV6aWFGcmVlIElyYW4iLCAiZGVzY3JpcHRpb24iOiAiQW1uZXppYUZyZWUgZm9yIElyYW4iLCAiYXBpX2tleSI6ICJxcjV5elZsYi5sSnVwY3hVVlc3TTBmY2k0TzdCMVFDdVJpS0ZBdjkxaiJ9
 ```
@@ -1514,40 +1648,40 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 
 #### GIFT CODES
 
-| **MahsaNG**           | **🎁 codes**                     |
-| --------------------- | -------------------------------- |
+|     **MahsaNG**     |   **🎁 codes**   |
+| :---------------------------------- | :--------------------------: |
 | [Bia pain bache][M2]  | <pre><code>b64ba903</code></pre> |
-| [MMarkPash]           | <pre><code>29b5a39f</code></pre> |
-| [VPN Homes][M3]       | <pre><code>93a2251d</code></pre> |
+| [MMarkPash]          | <pre><code>29b5a39f</code></pre> |
+| [VPN Homes][M3]     | <pre><code>93a2251d</code></pre> |
 | [IRGFW][M4]           | <pre><code>2fc077ba</code></pre> |
 | [Amin anvari][M5]     | <pre><code>6ec95cf7</code></pre> |
 | [Godot][M6]           | <pre><code>5b02fc7b</code></pre> |
-| JavidNaman            | <pre><code>f4164d08</code></pre> |
-| MahsaProject's        | <pre><code>a375e9b0</code></pre> |
+| [JavidNaman][JN?]    | <pre><code>f4164d08</code></pre> |
+| MahsaProject's       | <pre><code>a375e9b0</code></pre> |
 | Edvard                | <pre><code>74cb57cc</code></pre> |
-| [Khosrow][M7]         | <pre><code>e5a0540c</code></pre> |
+| [Khosrow][M7]        | <pre><code>e5a0540c</code></pre> |
 | [Rayan][M8]           | <pre><code>05038d1f</code></pre> |
 | Dani                  | <pre><code>fd3200bb</code></pre> |
-| [King AriaMehr][M9]   | <pre><code>4b458075</code></pre> |
-| Dino                  | <pre><code>d4c2bd62</code></pre> |
-| Pouran                | <pre><code>f57b1b8a</code></pre> |
-| [MoryVPN][M10]        | <pre><code>1265fa68</code></pre> |
-| Sunny                 | <pre><code>865dea8c</code></pre> |
-| [v2sayFree][M11]      | <pre><code>a2d8281d</code></pre> |
-| [North Xray][M12]     | <pre><code>29b5a39f</code></pre> |
+| [King AriaMehr][M9]  | <pre><code>4b458075</code></pre> |
+| Dino                 | <pre><code>d4c2bd62</code></pre> |
+| Pouran               | <pre><code>f57b1b8a</code></pre> |
+| [MoryVPN][M10]      | <pre><code>1265fa68</code></pre> |
+| Sunny                | <pre><code>865dea8c</code></pre> |
+| [v2sayFree][M11]     | <pre><code>a2d8281d</code></pre> |
+| [North Xray][M12]    | <pre><code>29b5a39f</code></pre> |
 | Free internet         | <pre><code>2c023e3a</code></pre> |
 | [Unlocked world][M13] | <pre><code>fd3200bb</code></pre> |
-| [NasNet][M14]         | <pre><code>110d9bdc</code></pre> |
+| [NasNet][M14]       | <pre><code>110d9bdc</code></pre> |
 | [NiREvil][M15]        | <pre><code>fa40a984</code></pre> |
-| 2rayFree              | <pre><code>f4bcea09</code></pre> |
+| 2rayFree             | <pre><code>f4bcea09</code></pre> |
 | IR Starlink           | <pre><code>110d9bdc</code></pre> |
-| [SinaB][M16]          | <pre><code>f4164d08</code></pre> |
-| [Irancpi vpn][M17]    | <pre><code>3c722b01</code></pre> |
-| Omid VPN              | <pre><code>e85ea88d</code></pre> |
-| TP VPN                | <pre><code>5cddfe78</code></pre> |
-| B VPN                 | <pre><code>e679c099</code></pre> |
-| Pars VPN              | <pre><code>440a8897</code></pre> |
-| Xru                   | <pre><code>30d3ccab</code></pre> |
+| [SinaB][M16]         | <pre><code>f4164d08</code></pre> |
+| [Irancpi vpn][M17]   | <pre><code>3c722b01</code></pre> |
+| Omid VPN          | <pre><code>e85ea88d</code></pre> |
+| TP VPN             | <pre><code>5cddfe78</code></pre> |
+| B VPN              | <pre><code>e679c099</code></pre> |
+| Pars VPN           | <pre><code>440a8897</code></pre> |
+| Xru                  | <pre><code>30d3ccab</code></pre> |
 
 <br/>
 
@@ -1578,6 +1712,154 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
 <br/>
 
 **for v2rayNG, Mahsa and NikaNG**
+
+```Elixir
+{
+  "remarks": "warp_mmm_noise",
+  "log": {
+    "loglevel": "debug"
+  },
+  "dns": {
+    "hosts": {
+      "domain:googleapis.cn": "googleapis.com"
+    },
+    "servers": [
+      "1.1.1.1"
+    ]
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true
+      },
+      "tag": "socks"
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": 10809,
+      "protocol": "http",
+      "settings": {
+        "userLevel": 8
+      },
+      "tag": "http"
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "wireguard",
+      "settings": {
+        "address": [
+          "172.16.0.2/32"
+        ],
+        "mtu": 1280,
+        "wnoise": "none",
+        "peers": [
+          {
+            "endpoint": "wire.nscl.ir:878",
+            "keepAlive": 1,
+            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+          }
+        ],
+        "reserved": [
+          168,
+          149,
+          225
+        ],
+        "secretKey": "8IREz0wjTHPwDBkz1oQAxqJLjgRszWvDudTHfHJQ91c="
+      },
+      "streamSettings": {
+        "sockopt": {
+          "dialerProxy": "MMMnoise"
+        }
+      },
+      "tag": "warpMain"
+    },
+    {
+      "tag": "MMMnoise",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "AsIs",
+        "noiseKeepAlive": 30,
+        "noises": [
+          {
+            "type": "hex",
+            "packet": "ee0000000108aaaaaaaaaaaaaaaa000044d0",
+            "delay": "0-16",
+            "count": "2"
+          },
+          {
+            "type": "hex",
+            "packet": "ee0000000108aaaa",
+            "delay": "10-16",
+            "count": "10"
+          },
+          {
+            "type": "str",
+            "packet": "ee0000000108aaaa",
+            "delay": "10-16"
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    }
+  ],
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "enabled": true
+      },
+      {
+        "ip": [
+          "1.1.1.1"
+        ],
+        "outboundTag": "warpMain",
+        "port": "53",
+        "type": "field"
+      },
+      {
+        "id": "5627785659655799759",
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "warpMain",
+        "enabled": true
+      }
+    ]
+  }
+}
+```
+
+**This is the same**
 
 ```json
 {
@@ -2230,19 +2512,29 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
     <img src="https://github.com/user-attachments/assets/acec4283-cf3d-415a-82ed-1ad39229a32b" alt="PsiphonIsConnected" width="360"/>
 
 [^5]:
-    <img src="https://github.com/user-attachments/assets/c83a1677-595b-472c-b50a-d40b6e08d197" alt="warpONwarp" width="360"/>
+    <img src="https://github.com/user-attachments/assets/c83a1677-595b-472c-b50a-d40b6e08d197" alt="BPB-1" width="360"/>
 
 [^6]:
-    <img src="https://github.com/user-attachments/assets/31a485b8-6168-4521-a379-c24c2181e5df" alt="warpONwarp" width="360"/>
+    <img src="https://github.com/user-attachments/assets/31a485b8-6168-4521-a379-c24c2181e5df" alt="BPB-2" width="360"/>
 
 [^7]:
-    <img src="https://github.com/user-attachments/assets/3956e479-f814-4998-baf3-0fe7360e1bac" alt="warpONwarp" width="360"/>
+    <img src="https://github.com/user-attachments/assets/3956e479-f814-4998-baf3-0fe7360e1bac" alt="BPB-3" width="360"/>
 
 [^8]:
-    <img src="https://github.com/user-attachments/assets/3e3bbece-19f3-4524-9153-16f3bf0d38cd" alt="warpONwarp" width="320"/>
+    <img src="https://github.com/user-attachments/assets/3e3bbece-19f3-4524-9153-16f3bf0d38cd" alt="BPB-4" width="320"/>
 
 [^9]:
-    <img src="https://github.com/user-attachments/assets/33b7bd75-f543-4446-a2b2-11ac0565e73a" alt="WarpInClash" width="360"/>
+    <img src="https://github.com/user-attachments/assets/33b7bd75-f543-4446-a2b2-11ac0565e73a" alt="BPB-5" width="360"/>
+
+[^10]:
+    <img src="https://github.com/user-attachments/assets/2282b22f-7475-459d-8bda-a321d00c845f" alt="APN" width="1920"/>
+
+[^11]:
+    <img src="https://github.com/user-attachments/assets/c4aeb4c6-9209-4f36-b61d-37f6ad662ba7" alt="ProtonWG" width="1080"/>
+
+![1000193084](https://github.com/user-attachments/assets/2282b22f-7475-459d-8bda-a321d00c845f)
+
+---
 
 [00]: https://t.me/NiREvil_GP/106699
 [10i?]: https://github.com/10ium
@@ -2276,8 +2568,9 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [L5?]: https://github.com/nscl5/5/
 [LG?]: https://github.com/lagzian/
 [LK?]: https://github.com/liketolivefree
-[PI?]: https://t.me/firewebgroup
 [PA?]: https://github.com/patterniha/Serverless-for-Iran
+[PI?]: https://t.me/firewebgroup
+[PN?]: https://telegram.me/s/xsfilternet
 [MB?]: https://github.com/mahdibland/ShadowsocksAggregator/
 [ME?]: https://telegram.me/s/FreeVPNHomes/532
 [MG?]: https://github.com/MatinGhanbari/v2ray-configs/
@@ -2327,6 +2620,10 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [New-Folder]: https://telegram.me/new_folder_revil/3437
 [NikaNG]: https://github.com/mahsanet/NikaNG/releases
 [Outline]: https://getoutline.org/get-started/#step-3
+[ProtonVPN]: https://account.protonvpn.com/downloads
+[ProtonGoogle]: https://play.google.com/store/apps/details?id=ch.protonvpn.android
+[ProtonIOS]: https://apps.apple.com/us/app/proton-vpn-fast-secure/id1437005085
+[ProtonToAmnezia]: https://protontestguide.github.io/ProtonVPN-Converter
 [ProxyCloud]: https://github.com/code3-dev/ProxyCloud/releases
 [proxyip.victoriacross.workers.dev]: https://proxyip.victoriacross.workers.dev/
 [psiphon.ca/download]: https://psiphon.ca/en/download-store.html?psiphonca
@@ -2341,6 +2638,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [The Darkness]: https://telegram.me/s/ConfigWireguard
 [TERMUX]: https://github.com/termux/termux-app/releases
 [UUID]: https://www.uuidgenerator.net/
+[UWG?]: https://telegram.me/UWarpGenBot
 [v2rayNG]: https://github.com/2dust/v2rayng/releases
 [v2rayTun]: https://play.google.com/store/apps/details?id=com.v2raytun.android
 [WgTunnel]: https://github.com/wgtunnel/wgtunnel/releases
