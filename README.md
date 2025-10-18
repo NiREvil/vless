@@ -1729,6 +1729,9 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 
 <br/>
 
+<details>
+<summary> مشاهده توضیحات بیشتر </summary><br/>
+
 کافیه وارد اپلیکیشن مهسا بشید، از بالای صفحه روی آیکون باکس هدیه کلیک کنید و کد هدیه دلخواهتون رو وارد کنید. به همین سادگی!  
 البته اگه این کار رو هم نکردید، اشکالی نداره. فقط کافیه پایین صفحه روی گزینه Get Config کلیک کنید تا کانفیگ‌های جدید و سالم به دستتون برسه. ✋🏿
 
@@ -1741,8 +1744,7 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
 
 <br/>
 
-<details>
-<summary>برای مشاهده لینک‌های دانلود کلیک کنید  </summary><br/>
+#### لینک‌های دانلود
 
 ● [دریافت فایل نصبی برنامه از کانال تلگرام][M18]  
 ● [دریافت فایل نصبی برنامه از گیت‌هاب پروژه][M19]  
@@ -1755,9 +1757,12 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
 
 <br/>
 
+#### Free WireGuards  
 **for v2rayNG, Mahsa and NikaNG**
 
-```Elixir
+> Recommended: MahsaNG Client
+
+```css
 {
   "remarks": "warp-xray",
   "log": {
@@ -1811,7 +1816,7 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
         "wnoise": "none",
         "peers": [
           {
-            "endpoint": "162.159.92.12:878",
+            "endpoint": "162.159.192.12:878",
             "keepAlive": 30,
             "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
           }
@@ -2142,7 +2147,7 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
 **For NikaNG** [[TD?]]
 
 ```YAML
-wireguard://oP4D2HXriimhBqk%2Bw4CpI41OEQd5p2rJV8MtbeV7eUs%3D@162.159.192.6:2371?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1280&reserved=195%2C216%2C199#@darkness_427
+wireguard://oP4D2HXriimhBqk%2Bw4CpI41OEQd5p2rJV8MtbeV7eUs%3D@162.159.192.6:2371?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1280&reserved=195%2C216%2C199#@ConfigWireguard
 ```
 
 ```YAML
@@ -2152,7 +2157,7 @@ wireguard://yHmk7qZA48yn%2FPCgMV%2F95lazmj2JgXBxk5MoUjsSwEo%3D@162.159.195.4:998
 **Ex for MahsaNG**
 
 ```YAML
-wireguard://oP4D2HXriimhBqk%2Bw4CpI41OEQd5p2rJV8MtbeV7eUs%3D@162.159.192.8:3476?address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=195%2C216%2C199#@darkness_427
+wireguard://oP4D2HXriimhBqk%2Bw4CpI41OEQd5p2rJV8MtbeV7eUs%3D@162.159.192.8:3476?address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=195%2C216%2C199#@ConfigWireguard
 ```
 
 ```YAML
@@ -2162,20 +2167,18 @@ wireguard://yHmk7qZA48yn%2FPCgMV%2F95lazmj2JgXBxk5MoUjsSwEo%3D@162.159.195.2:878
 **Ex for Mahsa/NikaNG**
 
 ```JSON
- {"remarks": "ArshiaComPlus - WoW", "log": {"loglevel": "warning"}, "dns": {"hosts": {}, "servers": ["https://94.140.14.14/dns-query", {"address": "8.8.8.8", "domains": ["geosite:category-ir", "domain:.ir"], "expectIPs": ["geoip:ir"], "port": 53}], "tag": "dns"}, "inbounds": [{"port": 10808, "protocol": "socks", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": true}, "tag": "socks-in"}, {"port": 10809, "protocol": "http", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": true}, "tag": "http-in"}, {"listen": "127.0.0.1", "port": 10853, "protocol": "dokodemo-door", "settings": {"address": "1.1.1.1", "network": "tcp,udp", "port": 53}, "tag": "dns-in"}], "outbounds": [{"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "mtu": 1280, "peers": [{"endpoint": "162.159.192.18:878", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [156, 62, 221], "secretKey": "SDeDZQJ5nmPBFR/284ske2JyVcPKNtsiUe0IOdkl8Ek=", "keepAlive": 30, "wnoise": "quic", "wnoisecount": "10-15", "wpayloadsize": "1-5", "wnoisedelay": "1-3"}, "streamSettings": {"sockopt": {"dialerProxy": "warp-ir"}}, "tag": "warp-out"}, {"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "mtu": 1280, "peers": [{"endpoint": "162.159.195.10:942", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [8, 29, 217], "secretKey": "IDXG9mb1NMz6fgENEvSO2TlVDU8BIf/absJLAm3hJlM=", "keepAlive": 10, "wnoise": "quic", "wnoisecount": "10-15", "wpayloadsize": "1-8", "wnoisedelay": "1-3"}, "tag": "warp-ir"}, {"protocol": "dns", "tag": "dns-out"}, {"protocol": "freedom", "settings": {}, "tag": "direct"}, {"protocol": "blackhole", "settings": {"response": {"type": "http"}}, "tag": "block"}], "policy": {"levels": {"8": {"connIdle": 300, "downlinkOnly": 1, "handshake": 4, "uplinkOnly": 1}}, "system": {"statsOutboundUplink": true, "statsOutboundDownlink": true}}, "routing": {"domainStrategy": "IPIfNonMatch", "rules": [{"inboundTag": ["dns-in"], "outboundTag": "dns-out", "type": "field"}, {"ip": ["8.8.8.8"], "outboundTag": "direct", "port": "53", "type": "field"}, {"domain": ["geosite:category-ir", "domain:.ir"], "outboundTag": "direct", "type": "field"}, {"ip": ["geoip:ir", "geoip:private"], "outboundTag": "direct", "type": "field"}, {"outboundTag": "warp-out", "type": "field", "network": "tcp,udp"}]}, "stats": {}}
+ {"remarks": "ArshiaComPlus - WoW", "log": {"loglevel": "warning"}, "dns": {"hosts": {}, "servers": ["https://94.140.14.14/dns-query", {"address": "1.1.1.1", "domains": ["geosite:category-ir", "domain:.ir"], "expectIPs": ["geoip:ir"], "port": 53}], "tag": "dns"}, "inbounds": [{"port": 10808, "protocol": "socks", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": true}, "tag": "socks-in"}, {"port": 10809, "protocol": "http", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": true}, "tag": "http-in"}, {"listen": "127.0.0.1", "port": 10853, "protocol": "dokodemo-door", "settings": {"address": "1.1.1.1", "network": "tcp,udp", "port": 53}, "tag": "dns-in"}], "outbounds": [{"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "mtu": 1280, "peers": [{"endpoint": "162.159.192.18:878", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [156, 62, 221], "secretKey": "SDeDZQJ5nmPBFR/284ske2JyVcPKNtsiUe0IOdkl8Ek=", "keepAlive": 30, "wnoise": "quic", "wnoisecount": "10-15", "wpayloadsize": "1-5", "wnoisedelay": "1-3"}, "streamSettings": {"sockopt": {"dialerProxy": "warp-ir"}}, "tag": "warp-out"}, {"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "mtu": 1280, "peers": [{"endpoint": "162.159.195.10:942", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [8, 29, 217], "secretKey": "IDXG9mb1NMz6fgENEvSO2TlVDU8BIf/absJLAm3hJlM=", "keepAlive": 30, "wnoise": "quic", "wnoisecount": "10-15", "wpayloadsize": "1-5", "wnoisedelay": "1-2"}, "tag": "warp-ir"}, {"protocol": "dns", "tag": "dns-out"}, {"protocol": "freedom", "settings": {}, "tag": "direct"}, {"protocol": "blackhole", "settings": {"response": {"type": "http"}}, "tag": "block"}], "policy": {"levels": {"8": {"connIdle": 300, "downlinkOnly": 1, "handshake": 4, "uplinkOnly": 1}}, "system": {"statsOutboundUplink": true, "statsOutboundDownlink": true}}, "routing": {"domainStrategy": "IPIfNonMatch", "rules": [{"inboundTag": ["dns-in"], "outboundTag": "dns-out", "type": "field"}, {"ip": ["8.8.8.8"], "outboundTag": "direct", "port": "53", "type": "field"}, {"domain": ["geosite:category-ir", "domain:.ir"], "outboundTag": "direct", "type": "field"}, {"ip": ["geoip:ir", "geoip:private"], "outboundTag": "direct", "type": "field"}, {"outboundTag": "warp-out", "type": "field", "network": "tcp,udp"}]}, "stats": {}}
 ```
 
 **Ex for Hiddify**
 
 ```JSON
-{"outbounds": [{"type": "wireguard", "tag": "@darkness_427 Warp-IR1", "local_address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "private_key": "oP4D2HXriimhBqk+w4CpI41OEQd5p2rJV8MtbeV7eUs=", "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=", "server": "162.159.195.1", "server_port": 878, "reserved": [195, 216, 199], "mtu": 1280, "fake_packets": "1-3", "fake_packets_size": "10-30", "fake_packets_delay": "10-30", "fake_packets_mode": "m4"}, {"type": "wireguard", "tag": "@darkness_427 Warp-Main1", "detour": "@darkness_427 Warp-IR1", "local_address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "private_key": "ODd0kPser1fJ/Zupag1h1fNxoj7YCc0hOjYEgWs2CkU=", "server": "162.159.192.16", "server_port": 955, "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=", "reserved": [69, 191, 86], "mtu": 1300, "fake_packets_mode": "m4"}]}
+{"outbounds": [{"type": "wireguard", "tag": "@darkness_427 Warp-IR1", "local_address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "private_key": "oP4D2HXriimhBqk+w4CpI41OEQd5p2rJV8MtbeV7eUs=", "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=", "server": "162.159.195.1", "server_port": 878, "reserved": [195, 216, 199], "mtu": 1280, "fake_packets": "1-3", "fake_packets_size": "10-30", "fake_packets_delay": "10-30", "fake_packets_mode": "m4"}, {"type": "wireguard", "tag": "@darkness_427 Warp-Main1", "detour": "@darkness_427 Warp-IR1", "local_address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "private_key": "ODd0kPser1fJ/Zupag1h1fNxoj7YCc0hOjYEgWs2CkU=", "server": "162.159.192.10", "server_port": 955, "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=", "reserved": [69, 191, 86], "mtu": 1280, "fake_packets_mode": "m4"}]}
 ```
-
-</details>
 
 ![rainbow]
 
-<br/>
+<br><br/>
 
 ### Warp for [ClashMeta]
 
