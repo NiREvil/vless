@@ -673,6 +673,14 @@ https://raw.githubusercontent.com/Mahdi0024/ProxyCollector/master/sub/proxies.tx
 
 https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/HighSpeed.txt [[10i?]]
 
+https://github.com/4n0nymou3/multi-proxy-config-fetcher/raw/refs/heads/main/configs/proxy_configs.txt
+
+https://sub.amiralter.com/config-lite
+
+https://sub.amiralter.com/config
+
+https://raw.githubusercontent.com/Created-By/Telegram-Eag1e_YT/refs/heads/main/%40Eag1e_YT
+
 https://raw.githubusercontent.com/DarknessShade/Sub/main/V2mix [[DS?]]
 
 https://raw.githubusercontent.com/DarknessShade/Sub/main/Ss
@@ -818,8 +826,6 @@ https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub8.txt
 https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub9.txt
 
 https://azadnet05.pages.dev/sub/4d794980-54c0-4fcb-8def-c2beaecadbad#EN-Normal
-
-https://raw.githubusercontent.com/amirparsaxs/Vip-s/refs/heads/main/Sub.vip [[XS?]]
 
 https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_links.txt
 
@@ -1417,6 +1423,12 @@ https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/free-mihomo-
 
 https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/free-mihomo-sub/roosterkid.yaml
 
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/4n0nymou3/multi-proxy-config-fetcher.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/amiralter_config_lite.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/arshiacomplus/v2rayExtractor_vless.yaml
+
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/mix [[YB?]]
 
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/reality
@@ -1716,7 +1728,7 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 | Free internet         | <pre><code>2c023e3a</code></pre> |
 | [Unlocked world][M13] | <pre><code>fd3200bb</code></pre> |
 | [NasNet][M14]         | <pre><code>110d9bdc</code></pre> |
-| [NiREvil][M15]        | <pre><code>fa40a984</code></pre> |
+<!--  | [NiREvil][M15]        | <pre><code>fa40a984</code></pre> | -->
 | 2rayFree              | <pre><code>f4bcea09</code></pre> |
 | IR Starlink           | <pre><code>110d9bdc</code></pre> |
 | [SinaB][M16]          | <pre><code>f4164d08</code></pre> |
@@ -1726,6 +1738,7 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 | B VPN                 | <pre><code>e679c099</code></pre> |
 | Pars VPN              | <pre><code>440a8897</code></pre> |
 | Xru                   | <pre><code>30d3ccab</code></pre> |
+| v2FreeHub             | <pre><code>45ef057b</code></pre> |
 
 <br/>
 
@@ -2692,32 +2705,32 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [WgTunnel]: https://github.com/wgtunnel/wgtunnel/releases
 [WIZ]: https://bia-pain-bache.github.io/BPB-Worker-Panel/fa/installation/wizard/
 [WTF?]: https://github.com/NiREvil/vless/blob/main/sub/clash-meta-wg.yml#L40
-[XS?]: https://telegram.me/s/xs_filternet
 [YB?]: https://telegram.me/s/YeBeKhe/527
 [Zizifn]: https://github.com/NiREvil/zizifn
 [M1]: https://telegram.me/Di4Diana
 [M2]: https://x.com/bia_pain_bache
-[M3]: https://telegram.me/FreeVPNHomes
-[M4]: https://telegram.me/irgfw
+[M3]: https://telegram.me/s/FreeVPNHomes
+[M4]: https://telegram.me/s/irgfw
 [M5]: https://x.com/AminAnvary
-[M6]: https://telegram.me/godot404/16
-[M7]: https://telegram.me/Khosrow_vpn
-[M8]: https://telegram.me/Rayan_Config/8
-[M9]: https://telegram.me/VPN_KING_V2RAY
-[M10]: https://telegram.me/MoryVPN
-[M11]: https://telegram.me/V2SayFree
-[M12]: https://telegram.me/NorthXRAY
-[M13]: https://telegram.me/unlocked_worlld
-[M14]: https://telegram.me/joinNASNET
-[M15]: https://telegram.me/F_NiREvil
-[M16]: https://telegram.me/sinavm
-[M17]: https://telegram.me/irancpi_vpn
-[M18]: https://telegram.me/mahsa_net
+[M6]: https://telegram.me/s/godot404/16
+[M7]: https://telegram.me/s/Khosrow_vpn
+[M8]: https://telegram.me/s/Rayan_Config/8
+[M9]: https://telegram.me/s/VPN_KING_V2RAY
+[M10]: https://telegram.me/s/MoryVPN
+[M11]: https://telegram.me/s/V2SayFree
+[M12]: https://telegram.me/s/NorthXRAY
+[M13]: https://telegram.me/s/unlocked_worlld
+[M14]: https://telegram.me/s/joinNASNET
+[M15]: https://telegram.me/s/F_NiREvil
+[M16]: https://telegram.me/s/sinavm
+[M17]: https://telegram.me/s/irancpi_vpn
+[M18]: https://telegram.me/s/mahsa_net
 [M19]: https://github.com/GFW-knocker/MahsaNG/releases/
 [M20]: https://play.google.com/store/apps/details?id=com.MahsaNet.MahsaNG
 [M21]: https://github.com/NiREvil/vless?tab=readme-ov-file#Xray
 [M22]: https://telegram.me/F_NiREvil/6672
 [M23]: https://telegram.me/+YIlqV-fl9y4zMmRk
+[M24]: https://telegram.me/s/v2FreeHub
 [MMarkPash]: https://twitter.com/markpash/
 [WarpAndroid]: https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone
 [WarpIOS]: https://itunes.apple.com/us/app/1-1-1-1-faster-internet/id1423538627
