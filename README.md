@@ -1704,7 +1704,7 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 
 #### GIFT CODES
 
-| **MahsaNG**           |           **🎁 codes**           |
+| **MahsaNG**           | **🎁 codes**                     |
 | --------------------- | -------------------------------- |
 | [Bia pain bache][M2]  | <pre><code>b64ba903</code></pre> |
 | [MMarkPash]           | <pre><code>29b5a39f</code></pre> |
