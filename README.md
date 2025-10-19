@@ -613,7 +613,6 @@ https://raw.githubusercontent.com/Firmfox/Proxify/refs/heads/main/v2ray_configs/
 
 https://raw.githubusercontent.com/Firmfox/Proxify/refs/heads/main/v2ray_configs/seperated_by_protocol/shadowsocks.txt
 
-
 https://raw.githubusercontent.com/LalatinaHub/Mineral/refs/heads/master/result/nodes
 
 https://raw.githubusercontent.com/Farid-Karimi/Config-Collector/refs/heads/main/mixed_iran.txt
