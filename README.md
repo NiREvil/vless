@@ -3,17 +3,17 @@
 
 <br><br/>
 
-> [!CAUTION]
->
-> ‏[![MahsaAmini](https://img.shields.io/badge/فعال_شدن_دورنج_از_آیپی_های_وارپ-darkred)](https://t.me/NiREvil_GP)
+> [!NOTE]
 >
 > <br/>
+> 
+> **فعال شدن دو رنج از آی‌پی‌/اندپوینت‌های وارپ**
 >
 > از دیروز برای من دوتا رنج‌ از اندپوینت‌های وارپ فعال شدن. اینجا نوشتم دربارش:
 >
-> https://github.com/NiREvil/vless/wiki
+> [NiREvil/vless/wiki][WIKI]
 >
-> من موقتا همه workflow هارو غیرفعال کردم که اتومات چیزی رو جایگزین نکنن چون خودم دستی از آی‌پی‌هایی که فعال شدن گذاشتم داخل چندتا ساب‌اسکریپشن وارپ.
+> من موقتا همه workflow هارو غیرفعال کردم که اتومات چیزی رو جایگزین نکنن، چون خودم دستی از آی‌پی‌هایی که فعال بودن گذاشتم داخل چندتا ساب‌اسکریپشن وارپ.
 >
 > <details>
 > <summary> مشاهده لینک‌ها</summary><br/>
@@ -203,7 +203,7 @@
 > nima.nscl.ir
 > ```
 >
-> یا هر پروکسی دیگه‌ای که می‌خواستید اینجا پیدا میشه:  
+> یا هر پروکسی دیگه‌ای که می‌خواستید اینجا پیدا میشه:   
 > [[SOURCE OF PROXYIP]][ProxyIP]
 >
 > - **مرحله هشتم**
@@ -2757,4 +2757,5 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [MMarkPash]: https://twitter.com/markpash/
 [WarpAndroid]: https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone
 [WarpIOS]: https://itunes.apple.com/us/app/1-1-1-1-faster-internet/id1423538627
+[WIKI]: https://github.com/NiREvil/vless/wiki
 [ZeroTrust]: https://t.me/F_NiREvil/4985
