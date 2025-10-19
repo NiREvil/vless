@@ -203,7 +203,7 @@
 > nima.nscl.ir
 > ```
 >
-> یا هر پروکسی دیگه‌ای که می‌خواستید اینجا پیدا میشه:  
+> یا هر پروکسی دیگه‌ای که می‌خواستید اینجا پیدا میشه:   
 > [[SOURCE OF PROXYIP]][ProxyIP]
 >
 > - **مرحله هشتم**
@@ -671,6 +671,12 @@ https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed [[S
 
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/python/hysteria2
 
+https://raw.githubusercontent.com/Pawdroid/Free-servers/main/static/sub_en
+
+https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector/refs/heads/main/category/httpupgrade.txt
+
+https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector/refs/heads/main/category/xhttp.txt
+
 https://shadowmere.xyz/api/b64sub [[SW?]]
 
 https://openproxylist.com/v2ray/
@@ -703,9 +709,11 @@ https://raw.githubusercontent.com/DarknessShade/Sub/main/V2mix [[DS?]]
 
 https://raw.githubusercontent.com/DarknessShade/Sub/main/Ss
 
-https://raw.githubusercontent.com/nscl5/5/refs/heads/main/configs/all.txt [[L5?]]
+https://raw.githubusercontent.com/nscl5/4/refs/heads/main/Splitted-By-Protocol/ss.txt [[L5?]]
 
 https://raw.githubusercontent.com/nscl5/5/refs/heads/main/configs/vmess.txt
+
+https://raw.githubusercontent.com/nscl5/5/refs/heads/main/configs/all.txt
 
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/hy2 [[YB?]]
 
@@ -2607,8 +2615,6 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 
 [^11]:
     <img src="https://github.com/user-attachments/assets/c4aeb4c6-9209-4f36-b61d-37f6ad662ba7" alt="ProtonWG" width="1080"/>
-
-![1000193084](https://github.com/user-attachments/assets/2282b22f-7475-459d-8bda-a321d00c845f)
 
 ---
 
