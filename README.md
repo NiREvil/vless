@@ -1705,7 +1705,7 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 #### GIFT CODES
 
 | **MahsaNG**           |           **🎁 codes**           |
-| :-------------------- | :------------------------------: | -------------------------------- | --- |
+| --------------------- | -------------------------------- |
 | [Bia pain bache][M2]  | <pre><code>b64ba903</code></pre> |
 | [MMarkPash]           | <pre><code>29b5a39f</code></pre> |
 | [VPN Homes][M3]       | <pre><code>93a2251d</code></pre> |
@@ -1728,7 +1728,6 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 | Free internet         | <pre><code>2c023e3a</code></pre> |
 | [Unlocked world][M13] | <pre><code>fd3200bb</code></pre> |
 | [NasNet][M14]         | <pre><code>110d9bdc</code></pre> |
-| <!--                  |          [NiREvil][M15]          | <pre><code>fa40a984</code></pre> | --> |
 | 2rayFree              | <pre><code>f4bcea09</code></pre> |
 | IR Starlink           | <pre><code>110d9bdc</code></pre> |
 | [SinaB][M16]          | <pre><code>f4164d08</code></pre> |
