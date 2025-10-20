@@ -24,42 +24,54 @@ const REQUEST_DELAY_MS: u64 = 800;
 const GOOD_ISPS: &[&str] = &[
     "OVH",
     "M247",
-    "gmbh",
+    "Vultr",
     "GCore",
     "IONOS",
     "Google",
     "Amazon",
     "NetLab",
     "Akamai",
-    "G-Core",
     "Turunc",
     "Linode",
-    "HostLAB",
+    "Contabo",
+    "UpCloud",
     "Tencent",
-    "MULTACOM",
+    "Hetzner",
+    "Multacom",
     "HostPapa",
     "Ultahost",
     "DataCamp",
-    "Zenlayer",
+    "Bluehost",
+    "Scaleway",
+    "DO Space",
+    "Leaseweb",
+    "Hostinger",
     "Hypercore",
     "ByteDance",
     "Rackspace",
-    "Amazoncom",
-    "TradeZone",
+    "SiteGround",
     "Online Ltd",
     "The Empire",
     "Cloudflare",
+    "Relink LTD",
     "PQ Hosting",
+    "Gigahost AS",
     "White Label",
-    "The Constant",
+    "G-Core Labs",
+    "3HCLOUD LLC",
+    "DigitalOcean",
     "3NT SOLUTION",
+    "HOSTKEY B.V.",
+    "Zenlayer Inc",
+    "RackNerd LLC",
     "Plant Holding",
     "WorkTitans BV",
     "IROKO Networks",
-    "Stark Industries",
-    "Private Customer",
+    "WorldStream B.V.",
+    "Cluster Logic Inc",
+    "The Constant Company,",
     "Cogent Communications",
-    "Microsoft Corporation",
+    "metropolis networks inc",
     "Total Uptime Technologies",
 ];
 
@@ -249,22 +261,22 @@ let next_update_str = tehran_next.format("%a, %d %b %Y %H:%M").to_string();
 >
 > <p><b>Daily Fresh Proxies</b></p>
 >
-> Only <b>high-quality</b>, tested proxies from <b>premier Internet Service Providers</b> (ISPs) and data centers worldwide, including but not limited to <b>Google</b>, <b>Amazon</b>, Cloudflare, Tencent, OVH, and DataCamp, etc
+> Only <b>High-quality</b>, tested proxies from <b>premier Internet Service Providers</b> (ISPs) and data centers worldwide, including but not limited to <b>Google</b>, <b>Amazon</b>, Cloudflare, Tencent, OVH, and DataCamp, etc
 >
 > <Br/>
 >
 > <p><b>Auto-updated Daily</b></p>
 >
-> <b>Last updated:</b> {}–IRN <br/>
-> <b>Next update:</b> {}-IRN
+> Last updated: <b>{}–IRN</b></br>
+> Next update: <b>{}-IRN</b>
 >
 > <br/>
 > 
 > <p><b>Overview</b></p>
 >
-> Total Active Proxies: <b>{}<br/>
-> Countries Covered: <b>{}<b/><br/> 
-> Average latency: <b>{} ms<b/>
+> Total Active Proxies: <b>{}</br>
+> Countries Covered: <b>{}</b></br> 
+> Average latency: <b>{} ms</b>
 >
 > <br><br/>
 
