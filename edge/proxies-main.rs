@@ -15,7 +15,7 @@ use tokio::net::TcpStream;
 use tokio_native_tls::TlsConnector;
 use native_tls::TlsConnector as NativeTlsConnector;
 
-const DEFAULT_PROXY_FILE: &str = "edge/assets/list-september-lite.txt";
+const DEFAULT_PROXY_FILE: &str = "edge/assets/list-october-lite.txt";
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
 const DEFAULT_MAX_CONCURRENT: usize = 40;
 const DEFAULT_TIMEOUT_SECONDS: u64 = 9;
@@ -32,7 +32,6 @@ const GOOD_ISPS: &[&str] = &[
     "NetLab",
     "Akamai",
     "Turunc",
-    "Linode",
     "Contabo",
     "UpCloud",
     "Tencent",
