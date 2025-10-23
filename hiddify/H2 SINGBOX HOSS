@@ -90,7 +90,8 @@
         "🇹🇷 Turkey",
         "🇫🇮 Finland",
         "🇫🇷 France",
-        "🇳🇱 Netherlands"
+        "🇳🇱 Netherlands",
+        "🇳🇱 Netherlands-2"
       ],
       "default": "auto"
     },
@@ -101,7 +102,8 @@
         "🇹🇷 Turkey",
         "🇫🇮 Finland",
         "🇫🇷 France",
-        "🇳🇱 Netherlands"
+        "🇳🇱 Netherlands",
+        "🇳🇱 Netherlands-2"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m0s",
@@ -167,6 +169,22 @@
       "tls": {
         "enabled": true,
         "server_name": "www.bing.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇳🇱 Netherlands-2",
+      "server": "206.71.158.23",
+      "server_port": 45000,
+      "obfs": {
+        "type": "salamander",
+        "password": "Telegram-->@Ln2Ray"
+      },
+      "password": "Telegram-->@Ln2Ray",
+      "tls": {
+        "enabled": true,
+        "server_name": "gavazn.55994421.xyz",
         "insecure": true
       }
     },
