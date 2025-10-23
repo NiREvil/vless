@@ -2,7 +2,7 @@
 //profile-update-interval: 9
 //subscription-userinfo: upload=64424500944; download=45097156608; total=1073741824000; expire=1762646400
 //support-url: https://F_NiREvil.t.me
-//profile-web-page-url: https:NiREvil_GP.t.me
+//profile-web-page-url: https://telegram.me/NiREvil_GP
 
 {
   "dns": {
@@ -87,10 +87,10 @@
       "outbounds": [
         "auto",
         "direct",
-        "🇦🇲 Armenia",
+        "🇹🇷 Turkey",
+        "🇫🇮 Finland",
         "🇫🇷 France",
-        "🇫🇷 France-2",
-        "🇫🇷 France-3"
+        "🇳🇱 Netherlands"
       ],
       "default": "auto"
     },
@@ -98,10 +98,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇲 Armenia",
+        "🇹🇷 Turkey",
+        "🇫🇮 Finland",
         "🇫🇷 France",
-        "🇫🇷 France-2",
-        "🇫🇷 France-3"
+        "🇳🇱 Netherlands"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m0s",
@@ -109,7 +109,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇦🇲 Armenia",
+      "tag": "🇹🇷 Turkey",
       "server": "kevin.vpny.online",
       "server_port": 22002,
       "obfs": {
@@ -124,7 +124,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇫🇷 France",
+      "tag": "🇫🇮 Finland",
       "server": "channel1.saghetalaie.homes",
       "server_port": 46914,
       "obfs": {
@@ -140,7 +140,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇫🇷 France-2",
+      "tag": "🇫🇷 France",
       "server": "channel2.saghetalaie.homes",
       "server_port": 46914,
       "obfs": {
@@ -156,7 +156,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇫🇷 France-3",
+      "tag": "🇳🇱 Netherlands",
       "server": "channel3.saghetalaie.homes",
       "server_port": 46914,
       "obfs": {
