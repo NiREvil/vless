@@ -201,18 +201,18 @@ Set-Alias -Name test -Value Test-DnsServer -Scope Global
 
 Write-Host "`n  Quick Start:" -ForegroundColor Cyan
 Write-Host "  ────────────" -ForegroundColor DarkGray
-Write-Host "    test" -NoNewline -ForegroundColor Yellow
-Write-Host "            # Test default DNS (Electro)" -ForegroundColor Gray
-Write-Host "    test 1.1.1.1" -NoNewline -ForegroundColor Yellow
-Write-Host "            # Test Cloudflare DNS" -ForegroundColor Gray
-Write-Host "    test 8.8.8.8" -NoNewline -ForegroundColor Yellow
-Write-Host "            # Test Google DNS" -ForegroundColor Gray
-Write-Host "    test 178.22.122.100" -NoNewline -ForegroundColor Yellow
-Write-Host "            # Test Shecan DNS" -ForegroundColor Gray
-Write-Host "    test 10.202.10.10" -NoNewline -ForegroundColor Yellow
-Write-Host "           # Test Radar DNS" -ForegroundColor Gray
-Write-Host "    test 208.67.222.222" -NoNewline -ForegroundColor Yellow
-Write-Host "           # Test Open DNS" -ForegroundColor Gray
-Write-Host "    test 76.76.2.0" -NoNewline -ForegroundColor Yellow
-Write-Host "           # Test controlD DNS" -ForegroundColor Gray
+Write-Host "    test                     " -NoNewline -ForegroundColor Yellow
+Write-Host "# Test default DNS (Electro)" -ForegroundColor Gray
+Write-Host "    test 1.1.1.1             " -NoNewline -ForegroundColor Yellow
+Write-Host "# Test Cloudflare DNS" -ForegroundColor Gray
+Write-Host "    test 8.8.8.8             " -NoNewline -ForegroundColor Yellow
+Write-Host "# Test Google DNS" -ForegroundColor Gray
+Write-Host "    test 178.22.122.100      " -NoNewline -ForegroundColor Yellow
+Write-Host "# Test Shecan DNS" -ForegroundColor Gray
+Write-Host "    test 10.202.10.10        " -NoNewline -ForegroundColor Yellow
+Write-Host "# Test Radar DNS" -ForegroundColor Gray
+Write-Host "    test 208.67.222.222      " -NoNewline -ForegroundColor Yellow
+Write-Host "# Test OpenDNS" -ForegroundColor Gray
+Write-Host "    test 76.76.2.0           " -NoNewline -ForegroundColor Yellow
+Write-Host "# Test ControlD DNS" -ForegroundColor Gray
 Write-Host ""
