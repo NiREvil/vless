@@ -15,13 +15,24 @@
 # ═══════════════════════════════════════════════════════════════
 
 function Show-Banner {
+    $title = "Dns resolver & Speed tester"
+    $version = "V0.1.2"
+    $width = 51
+    
+    $titlePadding = [math]::Floor(($width - $title.Length) / 2)
+    $versionPadding = [math]::Floor(($width - $version.Length) / 2)
+    
     Write-Host "`n" -NoNewline
     Write-Host "╔═══════════════════════════════════════════════════╗" -ForegroundColor Cyan
     Write-Host "║" -ForegroundColor Cyan -NoNewline
-    Write-Host "                 Dns resolver & Speed tester                 " -ForegroundColor White -NoNewline
+    Write-Host (" " * $titlePadding) -NoNewline
+    Write-Host $title -ForegroundColor White -NoNewline
+    Write-Host (" " * ($width - $title.Length - $titlePadding)) -NoNewline
     Write-Host "║" -ForegroundColor Cyan
     Write-Host "║" -ForegroundColor Cyan -NoNewline
-    Write-Host "                            V0.1.2                           " -ForegroundColor Yellow -NoNewline
+    Write-Host (" " * $versionPadding) -NoNewline
+    Write-Host $version -ForegroundColor Yellow -NoNewline
+    Write-Host (" " * ($width - $version.Length - $versionPadding)) -NoNewline
     Write-Host "║" -ForegroundColor Cyan
     Write-Host "╚═══════════════════════════════════════════════════╝" -ForegroundColor Cyan
     Write-Host ""
