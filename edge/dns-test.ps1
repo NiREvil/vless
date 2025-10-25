@@ -1,15 +1,16 @@
 # ═══════════════════════════════════════════════════════════════
-#  DNS SPEED TESTER | تست سرعت و کارایی DNS
+#                         DNS RESOLVER & SPEED TESTER
 # ═══════════════════════════════════════════════════════════════
 #
-# نحوه استفاده:
-#   این دستور را در PowerShell اجرا کنید:
+# Usage:
+#   این دستور را در PowerShell ویندوز اجرا کنید:
 #   irm https://raw.githubusercontent.com/NiREvil/vless/main/edge/dns-test.ps1 | iex
 #
 # تست DNS دلخواه:
-#   test 8.8.8.8          # Google DNS
-#   test 1.1.1.1          # Cloudflare DNS
-#   test 78.157.42.101    # Shecan DNS
+#   test 8.8.8.8           # Google DNS
+#   test 1.1.1.1           # Cloudflare DNS
+#   test 178.22.122.100    # Shecan DNS
+#   test 78.157.42.100     # Electro DNS
 #
 # ═══════════════════════════════════════════════════════════════
 
@@ -17,10 +18,10 @@ function Show-Banner {
     Write-Host "`n" -NoNewline
     Write-Host "╔═══════════════════════════════════════════════════╗" -ForegroundColor Cyan
     Write-Host "║" -ForegroundColor Cyan -NoNewline
-    Write-Host "          DNS SPEED & CONNECTIVITY TEST           " -ForegroundColor White -NoNewline
+    Write-Host "                 Dns resolver & Speed tester                 " -ForegroundColor White -NoNewline
     Write-Host "║" -ForegroundColor Cyan
     Write-Host "║" -ForegroundColor Cyan -NoNewline
-    Write-Host "              تست سرعت و دسترسی DNS              " -ForegroundColor Yellow -NoNewline
+    Write-Host "                            V0.1.2                           " -ForegroundColor Yellow -NoNewline
     Write-Host "║" -ForegroundColor Cyan
     Write-Host "╚═══════════════════════════════════════════════════╝" -ForegroundColor Cyan
     Write-Host ""
@@ -56,7 +57,6 @@ function Test-DnsServer {
         "t.me",
         "openai.com",
         "cloudflare.com",
-        "github.com",
         "raw.githubusercontent.com",
         "bing.com",
         "brawlstars.com",
@@ -182,19 +182,15 @@ function Test-DnsServer {
     Write-Host "`n  VERDICT: " -NoNewline -ForegroundColor Cyan
     if ($successRate -eq 100 -and $avgTime -lt 100) {
         Write-Host "Excellent! This DNS is fast and reliable." -ForegroundColor Green
-        Write-Host "           این DNS عالی و قابل اعتماد است." -ForegroundColor Green
     }
     elseif ($successRate -ge 80) {
         Write-Host "Good performance with minor issues." -ForegroundColor Yellow
-        Write-Host "           عملکرد خوب با مشکلات جزئی." -ForegroundColor Yellow
     }
     elseif ($successRate -ge 50) {
         Write-Host "Poor performance. Consider switching DNS." -ForegroundColor Red
-        Write-Host "           عملکرد ضعیف، تغییر DNS توصیه می‌شود." -ForegroundColor Red
     }
     else {
         Write-Host "Critical! DNS is unreachable or heavily filtered." -ForegroundColor Red
-        Write-Host "           بحرانی! DNS در دسترس نیست یا فیلتر شده." -ForegroundColor Red
     }
 
     Write-Host "`n" + ("═" * 55) -ForegroundColor Cyan
@@ -206,11 +202,17 @@ Set-Alias -Name test -Value Test-DnsServer -Scope Global
 Write-Host "`n  Quick Start:" -ForegroundColor Cyan
 Write-Host "  ────────────" -ForegroundColor DarkGray
 Write-Host "    test" -NoNewline -ForegroundColor Yellow
-Write-Host "                    # Test default DNS (Shecan)" -ForegroundColor Gray
+Write-Host "            # Test default DNS (Electro)" -ForegroundColor Gray
 Write-Host "    test 1.1.1.1" -NoNewline -ForegroundColor Yellow
 Write-Host "            # Test Cloudflare DNS" -ForegroundColor Gray
 Write-Host "    test 8.8.8.8" -NoNewline -ForegroundColor Yellow
 Write-Host "            # Test Google DNS" -ForegroundColor Gray
-Write-Host "    test 78.157.42.101" -NoNewline -ForegroundColor Yellow
-Write-Host "      # Test Shecan DNS" -ForegroundColor Gray
+Write-Host "    test 178.22.122.100" -NoNewline -ForegroundColor Yellow
+Write-Host "            # Test Shecan DNS" -ForegroundColor Gray
+Write-Host "    test 10.202.10.10" -NoNewline -ForegroundColor Yellow
+Write-Host "           # Test Radar DNS" -ForegroundColor Gray
+Write-Host "    test 208.67.222.222" -NoNewline -ForegroundColor Yellow
+Write-Host "           # Test Open DNS" -ForegroundColor Gray
+Write-Host "    test 76.76.2.0" -NoNewline -ForegroundColor Yellow
+Write-Host "           # Test controlD DNS" -ForegroundColor Gray
 Write-Host ""
