@@ -18,8 +18,8 @@
 > 
 > <p><b>Overview</b></p>
 >
-> Total Active Proxies: <b>1862</br>
-> Countries Covered: <b>51</b></br> 
+> Total Active Proxies: <b>1867</br>
+> Countries Covered: <b>52</b></br> 
 > Average latency: <b>1634 ms</b>
 >
 > <br><br/>
@@ -1293,6 +1293,22 @@
 |:-------|:------------|:-------:|:--------:|
 | <pre><code>91.225.218.230</code></pre> | Central District, Petaẖ Tiqva | WorkTitans B.V. | 1752 ms 🐇 |
 | <pre><code>77.91.74.6</code></pre> | Central District, Petaẖ Tiqva | WorkTitans B.V. | 1824 ms 🐌 |
+
+</details>
+
+---
+
+## 🇮🇷 IR (5 proxies)
+<details open>
+<summary>Click to collapse</summary>
+
+|   IP   |  Location   |   ISP   |   Ping   |
+|:-------|:------------|:-------:|:--------:|
+| <pre><code>193.105.6.84</code></pre> | Tehran, Iran | Toesegaran Shabakeh Arseh Novin Ltd | 816 ms ⚡ |
+| <pre><code>46.245.66.90</code></pre> | Tehran, Iran | Asiatech Data Transmission company | 1525 ms 🐌 |
+| <pre><code>85.9.101.37</code></pre> | Tehran, Iran | Pishgaman Toseeh Ertebatat Company (Private Joint Stock) | 734 ms ⚡ |
+| <pre><code>45.94.213.24</code></pre> | Tehran, Iran | FanAvaran Mihan Mizban PJSC | 1936 ms 🐌 |
+| <pre><code>94.183.156.142</code></pre> | Tehran, Iran | Mizban Gostar Dade Alvand Ltd | 734 ms ⚡|
 
 </details>
 
