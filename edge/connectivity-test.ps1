@@ -4,7 +4,7 @@
 # ═══════════════════════════════════════════════════════════════
 #
 # Usage:
-#   این دستور را در PowerShell ویندوز اجرا کنید:
+#   Run this command in Windows PowerShell:
 #   irm https://raw.githubusercontent.com/NiREvil/vless/main/edge/connectivity-test.ps1 | iex
 #
 # Commands:
@@ -12,6 +12,7 @@
 #   test -Quick       # Test only essential sites (faster)
 #   test -Detailed    # Show detailed response info
 #
+# Author: @sahar-km and @Diana-Cl
 # ═══════════════════════════════════════════════════════════════
 
 function Show-Banner {
@@ -53,44 +54,45 @@ function Test-WebsiteConnectivity {
 
     $allSites = @(
         @{ Name = "Google"; URL = "https://www.google.com"; Essential = $true },
+        @{ Name = "Bing"; URL = "https://bing.com"; Essential = $true },
         @{ Name = "YouTube"; URL = "https://www.youtube.com"; Essential = $true },
         @{ Name = "Instagram"; URL = "https://www.instagram.com"; Essential = $true },
-        @{ Name = "X (Twitter)"; URL = "https://x.com"; Essential = $true },
+        @{ Name = "X - Twitter"; URL = "https://x.com"; Essential = $true },
         @{ Name = "Reddit"; URL = "https://www.reddit.com"; Essential = $true },
         @{ Name = "Telegram"; URL = "https://telegram.org"; Essential = $true },
         @{ Name = "OpenAI"; URL = "https://chat.openai.com"; Essential = $true },
         @{ Name = "Gemini"; URL = "https://gemini.google.com"; Essential = $true },
         @{ Name = "Cloudflare"; URL = "https://www.cloudflare.com"; Essential = $true },
         @{ Name = "GitHub"; URL = "https://github.com"; Essential = $false },
-        @{ Name = "GitHubRaw"; URL = "https://raw.githubusercontent.com"; Essential = $false },
+        @{ Name = "RawGithub"; URL = "https://raw.githubusercontent.com"; Essential = $false },
         @{ Name = "Discord"; URL = "https://discord.com"; Essential = $false },
         @{ Name = "WhatsApp"; URL = "https://web.whatsapp.com"; Essential = $true },
         @{ Name = "TikTok"; URL = "https://www.tiktok.com"; Essential = $false },
-        @{ Name = "Grok Ai"; URL = "https://grok.com/"; Essential = $true },
-        @{ Name = "Google Studio"; URL = "https://aistudio.google.com/"; Essential = $true },
-        @{ Name = "Google Jules"; URL = "https://jules.google.com/"; Essential = $true },
-        @{ Name = "ImageURL"; URL = "https://imgur.com/"; Essential = $false },
-        @{ Name = "JetBrains"; URL = "https://datalore.jetbrains.com/"; Essential = $false },
-        @{ Name = "Microsoft Copilot"; URL = "https://www.microsoft.com/en-us/microsoft-copilot/"; Essential = $false },
-        @{ Name = "Notebook LM"; URL = "https://notebooklm.google.com/"; Essential = $false },
-        @{ Name = "Notion"; URL = "https://www.notion.com/"; Essential = $false },
-        @{ Name = "Parsec"; URL = "https://parsec.app/"; Essential = $false },
-        @{ Name = "Spotify"; URL = "https://spotify.com/"; Essential = $true },
-        @{ Name = "True Social"; URL = "https://truthsocial.com/"; Essential = $false },
-        @{ Name = "Xbox"; URL = "https://www.xbox.com/"; Essential = $false },
+        @{ Name = "Grok Ai"; URL = "https://grok.com"; Essential = $true },
+        @{ Name = "Google Studio"; URL = "https://aistudio.google.com"; Essential = $true },
+        @{ Name = "Google Jules"; URL = "https://jules.google.com"; Essential = $true },
+        @{ Name = "Google Store"; URL = "https://store.google.com"; Essential = $false },
+        @{ Name = "Imgur"; URL = "https://imgur.com"; Essential = $false },
+        @{ Name = "JetBrains"; URL = "https://datalore.jetbrains.com"; Essential = $false },
+        @{ Name = "Microsoft Copilot"; URL = "https://www.microsoft.com/en-us/microsoft-copilot"; Essential = $false },
+        @{ Name = "Notebook LM"; URL = "https://notebooklm.google.com"; Essential = $false },
+        @{ Name = "Notion"; URL = "https://www.notion.com"; Essential = $false },
+        @{ Name = "Parsec"; URL = "https://parsec.app"; Essential = $false },
+        @{ Name = "Spotify"; URL = "https://spotify.com"; Essential = $true },
+        @{ Name = "True Social"; URL = "https://truthsocial.com"; Essential = $false },
+        @{ Name = "Xbox"; URL = "https://www.xbox.com"; Essential = $false },
         @{ Name = "Xbox Cloud Gaming"; URL = "https://www.xbox.com/en-US/xbox-cloud-gaming"; Essential = $false },
-        @{ Name = "Twitch"; URL = "https://m.twitch.tv/"; Essential = $false },
-        @{ Name = "Brawlstars"; URL = "https://supercell.com/en/games/brawlstars/"; Essential = $false },
-        @{ Name = "Canva"; URL = "https://www.canva.com/en_in/"; Essential = $false },
-        @{ Name = "Supercell"; URL = "https://supercell.com/en/"; Essential = $false },
-        @{ Name = "Clashroyal"; URL = "https://supercell.com/en/games/clashroyale/"; Essential = $false },
-        @{ Name = "Claude"; URL = "https://claude.ai/login?returnTo=%2F%3F"; Essential = $false },
-        @{ Name = "Deepl"; URL = "https://www.deepl.com/en/translator"; Essential = $false },
-        @{ Name = "Deezer"; URL = "https://www.deezer.com/us/"; Essential = $false },
-        @{ Name = "Elevenlbs"; URL = "https://elevenlabs.io/"; Essential = $false },
-        @{ Name = "Google Store"; URL = "https://store.google.com/category/watches_trackers?hl=de&utm_source=fitbit_redirect&utm_medium=google_ooo&utm_campaign=category&pli=1"; Essential = $true },
-        @{ Name = "Nvidia"; URL = "https://www.nvidia.com/de-de/"; Essential = $false },
-        @{ Name = "Github Copilot Studio"; URL = "https://github.com/features/copilot"; Essential = $false }
+        @{ Name = "Twitch"; URL = "https://m.twitch.tv"; Essential = $false },
+        @{ Name = "BrawlStars"; URL = "https://supercell.com/en/games/brawlstars"; Essential = $false },
+        @{ Name = "Canva"; URL = "https://www.canva.com/en_in"; Essential = $false },
+        @{ Name = "Supercell"; URL = "https://supercell.com/en"; Essential = $false },
+        @{ Name = "ClashRoyal"; URL = "https://supercell.com/en/games/clashroyale"; Essential = $false },
+        @{ Name = "Claude"; URL = "https://claude.ai"; Essential = $false },
+        @{ Name = "DeepL"; URL = "https://www.deepl.com/en/translator"; Essential = $false },
+        @{ Name = "Deezer"; URL = "https://www.deezer.com"; Essential = $false },
+        @{ Name = "ElevenLabs"; URL = "https://elevenlabs.io"; Essential = $false },
+        @{ Name = "Nvidia"; URL = "https://www.nvidia.com"; Essential = $false },
+        @{ Name = "GitHub Copilot"; URL = "https://github.com/features/copilot"; Essential = $false }
     )
 
     # Filter sites based on Quick mode
