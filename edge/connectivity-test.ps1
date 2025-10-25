@@ -3,15 +3,17 @@
 #      Real HTTP/HTTPS Connection Testing - No DNS Tricks!
 # ═══════════════════════════════════════════════════════════════
 #
-# Usage:
-#   Run this command in Windows PowerShell:
-#   irm https://raw.githubusercontent.com/NiREvil/vless/main/edge/connectivity-test.ps1 | iex
+# Usage: Run in PowerShell:
+# irm https://raw.githubusercontent.com/NiREvil/vless/main/edge/connectivity-test.ps1 | iex
 #
 # Commands:
-#   test              # Test all websites
-#   test -Quick       # Test only essential sites (faster)
-#   test -Detailed    # Show detailed response info
+# test                      # Check all sites (system DNS)
+# test -Quick               # Check essential sites only  
+# test -Detailed            # Show detailed info
+# test -DNS 1.1.1.1         # Test with Cloudflare DNS
+# test -DNS 8.8.8.8 -Quick  # Combine parameters
 #
+# Note: Commands with custom DNS need "admin PowerShell.
 # Author: @sahar-km and @Diana-Cl
 # ═══════════════════════════════════════════════════════════════
 
@@ -54,10 +56,10 @@ function Test-WebsiteConnectivity {
 
     $allSites = @(
         @{ Name = "Google"; URL = "https://www.google.com"; Essential = $true },
-        @{ Name = "Bing"; URL = "https://bing.com"; Essential = $true },
+        @{ Name = "Bing"; URL = "https://bing.com"; Essential = $false },
         @{ Name = "YouTube"; URL = "https://www.youtube.com"; Essential = $true },
         @{ Name = "Instagram"; URL = "https://www.instagram.com"; Essential = $true },
-        @{ Name = "X - Twitter"; URL = "https://x.com"; Essential = $true },
+        @{ Name = "X-Twitter"; URL = "https://x.com"; Essential = $true },
         @{ Name = "Reddit"; URL = "https://www.reddit.com"; Essential = $true },
         @{ Name = "Telegram"; URL = "https://telegram.org"; Essential = $true },
         @{ Name = "OpenAI"; URL = "https://chat.openai.com"; Essential = $true },
@@ -74,7 +76,7 @@ function Test-WebsiteConnectivity {
         @{ Name = "Google Store"; URL = "https://store.google.com"; Essential = $false },
         @{ Name = "Imgur"; URL = "https://imgur.com"; Essential = $false },
         @{ Name = "JetBrains"; URL = "https://datalore.jetbrains.com"; Essential = $false },
-        @{ Name = "Microsoft Copilot"; URL = "https://www.microsoft.com/en-us/microsoft-copilot"; Essential = $false },
+        @{ Name = "Microsoft Copilot"; URL = "https://www.microsoft.com/en-us/microsoft-copilot"; Essential = $true },
         @{ Name = "Notebook LM"; URL = "https://notebooklm.google.com"; Essential = $false },
         @{ Name = "Notion"; URL = "https://www.notion.com"; Essential = $false },
         @{ Name = "Parsec"; URL = "https://parsec.app"; Essential = $false },
