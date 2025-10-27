@@ -88,6 +88,7 @@
         "auto",
         "direct",
         "🇹🇷 Turkey",
+        "🇺🇸 USA",
         "🇫🇮 Finland",
         "🇫🇷 France",
         "🇳🇱 Netherlands",
@@ -100,6 +101,7 @@
       "tag": "auto",
       "outbounds": [
         "🇹🇷 Turkey",
+        "🇺🇸 USA",
         "🇫🇮 Finland",
         "🇫🇷 France",
         "🇳🇱 Netherlands",
@@ -119,6 +121,21 @@
         "password": "KevinZakarian"
       },
       "password": "@KevinZakarian",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 USA",
+      "server": "89.116.64.211",
+      "server_port": 11001,
+      "obfs": {
+        "type": "salamander",
+        "password": "KevinZakarian"
+      },
+      "password": "4TImZd9aiT",
       "tls": {
         "enabled": true,
         "insecure": true
