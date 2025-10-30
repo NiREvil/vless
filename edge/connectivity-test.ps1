@@ -58,6 +58,7 @@ function Test-WebsiteConnectivity {
         @{ Name = "Google"; URL = "https://www.google.com"; Essential = $true },
         @{ Name = "Bing"; URL = "https://bing.com"; Essential = $false },
         @{ Name = "YouTube"; URL = "https://www.youtube.com"; Essential = $true },
+        @{ Name = "Spotify"; URL = "https://spotify.com"; Essential = $true },
         @{ Name = "Instagram"; URL = "https://www.instagram.com"; Essential = $true },
         @{ Name = "X-Twitter"; URL = "https://x.com"; Essential = $true },
         @{ Name = "Reddit"; URL = "https://www.reddit.com"; Essential = $true },
@@ -80,7 +81,6 @@ function Test-WebsiteConnectivity {
         @{ Name = "Notebook LM"; URL = "https://notebooklm.google.com"; Essential = $false },
         @{ Name = "Notion"; URL = "https://www.notion.com"; Essential = $false },
         @{ Name = "Parsec"; URL = "https://parsec.app"; Essential = $false },
-        @{ Name = "Spotify"; URL = "https://spotify.com"; Essential = $true },
         @{ Name = "True Social"; URL = "https://truthsocial.com"; Essential = $false },
         @{ Name = "Xbox"; URL = "https://www.xbox.com"; Essential = $false },
         @{ Name = "Xbox Cloud Gaming"; URL = "https://www.xbox.com/en-US/xbox-cloud-gaming"; Essential = $false },
@@ -322,8 +322,12 @@ Write-Host "    test -Detailed           " -NoNewline -ForegroundColor Yellow
 Write-Host "# Show detailed information" -ForegroundColor Gray
 Write-Host "    test -DNS 78.157.42.100  " -NoNewline -ForegroundColor Yellow
 Write-Host "# Test with Electro DNS" -ForegroundColor Gray
+Write-Host "    test -DNS 178.22.122.100 " -NoNewline -ForegroundColor Yellow
+Write-Host "# Test with Shekan DNS" -ForegroundColor Gray
 Write-Host "    test -DNS 1.1.1.1        " -NoNewline -ForegroundColor Yellow
 Write-Host "# Test with Cloudflare DNS" -ForegroundColor Gray
+Write-Host "    test -DNS 8.8.8.8        " -NoNewline -ForegroundColor Yellow
+Write-Host "# Test with Google DNS" -ForegroundColor Gray
 Write-Host "    test -DNS 8.8.8.8 -Quick " -NoNewline -ForegroundColor Yellow
 Write-Host "# Combine parameters" -ForegroundColor Gray
 Write-Host ""
