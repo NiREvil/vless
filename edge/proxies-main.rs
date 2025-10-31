@@ -15,7 +15,7 @@ use tokio::net::TcpStream;
 use tokio_native_tls::TlsConnector;
 use native_tls::TlsConnector as NativeTlsConnector;
 
-const DEFAULT_PROXY_FILE: &str = "edge/assets/list-october-lite.txt";
+const DEFAULT_PROXY_FILE: &str = "edge/assets/p-list-november.txt";
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
 const DEFAULT_MAX_CONCURRENT: usize = 40;
 const DEFAULT_TIMEOUT_SECONDS: u64 = 9;
@@ -66,9 +66,9 @@ const GOOD_ISPS: &[&str] = &[
     "Plant Holding",
     "WorkTitans BV",
     "IROKO Networks",
-    "WorldStream B.V.",
+    "WorldStream B.V",
     "Cluster Logic Inc",
-    "The Constant Company,",
+    "The Constant Company",
     "Cogent Communications",
     "metropolis networks inc",
     "Total Uptime Technologies",
@@ -298,7 +298,7 @@ let next_update_str = tehran_next.format("%a, %d %b %Y %H:%M").to_string();
 
         for (info, ping) in proxies.iter() {
             let location = format!("{}, {}", info.region, info.city);
-            let emoji = if *ping < 1299 { "⚡" } else if *ping < 1799 { "🐇" } else { "🐌" };
+            let emoji = if *ping < 1099 { "⚡" } else if *ping < 1599 { "🐇" } else { "🐌" };
             writeln!(
                 file,
                 "| <pre><code>{}</code></pre> | {} | {} | {} ms {} |",
