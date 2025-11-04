@@ -21,6 +21,9 @@ jobs:
     - name: Install Rust Toolchain
       uses: dtolnay/rust-toolchain@stable
 
+    - name: Cache Rust dependencies
+      uses: Swatinem/rust-cache@v2
+
     - name: Build Rust Project (Release)
       run: cargo build --release
 
@@ -40,3 +43,4 @@ jobs:
         git -c committer.name="Diana-Cl" -c committer.email="135276904+Diana-Cl@users.noreply.github.com" commit --amend --no-edit
         git push origin main --force
       shell: bash
+      
