@@ -11,15 +11,13 @@ use chrono::{Duration as ChronoDuration, Utc};
 use chrono_tz::Asia::Tehran;
 use colored::*;
 use futures::StreamExt;
-use tokio::net::TcpStream;
-use tokio_native_tls::TlsConnector;
-use native_tls::TlsConnector as NativeTlsConnector;
+use reqwest::{Client};
 
 const DEFAULT_PROXY_FILE: &str = "edge/assets/p-list-november.txt";
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
-const DEFAULT_MAX_CONCURRENT: usize = 40;
-const DEFAULT_TIMEOUT_SECONDS: u64 = 9;
-const REQUEST_DELAY_MS: u64 = 800;
+const DEFAULT_MAX_CONCURRENT: usize = 60;
+const DEFAULT_TIMEOUT_SECONDS: u64 = 6;
+const REQUEST_DELAY_MS: u64 = 40;
 
 const GOOD_ISPS: &[&str] = &[
     "OVH",
@@ -47,7 +45,7 @@ const GOOD_ISPS: &[&str] = &[
     "Hostinger",
     "Hypercore",
     "ByteDance",
-    "Rackspace",
+    "RackSpace",
     "SiteGround",
     "Online Ltd",
     "The Empire",
@@ -58,9 +56,9 @@ const GOOD_ISPS: &[&str] = &[
     "White Label",
     "G-Core Labs",
     "3HCLOUD LLC",
+    "HOSTKEY B.V",
     "DigitalOcean",
     "3NT SOLUTION",
-    "HOSTKEY B.V.",
     "Zenlayer Inc",
     "RackNerd LLC",
     "Plant Holding",
@@ -70,7 +68,7 @@ const GOOD_ISPS: &[&str] = &[
     "Cluster Logic Inc",
     "The Constant Company",
     "Cogent Communications",
-    "metropolis networks inc",
+    "Metropolis networks inc",
     "Total Uptime Technologies",
 ];
 
@@ -93,8 +91,12 @@ struct Args {
 
 #[derive(Debug, Clone, Deserialize)]
 struct CfMeta {
-    clientIp: String,
-    asOrganization: Option<String>,
+    #[serde(rename = "clientIp")]
+    client_ip: String,
+
+    #[serde(rename = "asOrganization")]
+    as_organization: Option<String>,
+
     country: Option<String>,
     region: Option<String>,
     city: Option<String>,
@@ -138,18 +140,17 @@ async fn main() -> Result<()> {
     println!("Filtered to {} good proxies (port 443 + ISP whitelist)", proxies.len());
 
     let self_meta = fetch_cf_meta(None).await?;
-    println!("Your real IP: {}", self_meta.clientIp);
+    println!("Your real IP: {}", self_meta.client_ip);
 
     let active_proxies = Arc::new(Mutex::new(BTreeMap::<String, Vec<(ProxyInfo, u128)>>::new()));
 
     let tasks = futures::stream::iter(
         proxies.into_iter().map(|proxy_line| {
             let active_proxies = Arc::clone(&active_proxies);
-            let args = args.clone();
-            let self_ip = self_meta.clientIp.clone();
+            let self_ip = self_meta.client_ip.clone();
             async move {
                 tokio::time::sleep(Duration::from_millis(REQUEST_DELAY_MS)).await;
-                process_proxy(proxy_line, &active_proxies, &args, &self_ip).await;
+                process_proxy(proxy_line, &active_proxies, &self_ip).await;
             }
         })
     )
@@ -158,7 +159,8 @@ async fn main() -> Result<()> {
 
     tasks.await;
 
-    write_markdown_file(&active_proxies.lock().unwrap(), &args.output_file)
+    let locked_proxies = active_proxies.lock().unwrap_or_else(|e| e.into_inner());
+    write_markdown_file(&locked_proxies, &args.output_file)
         .context("Failed to write Markdown file")?;
 
     println!("Proxy checking completed.");
@@ -167,35 +169,42 @@ async fn main() -> Result<()> {
 
 async fn fetch_cf_meta(proxy: Option<(String, u16)>) -> Result<CfMeta> {
     let host = "speed.cloudflare.com";
-    let path = "/meta";
-    let payload = format!(
-        "GET {} HTTP/1.1\r\nHost: {}\r\nUser-Agent: RustProxyChecker\r\nConnection: close\r\n\r\n",
-        path, host
-    );
+    let url = format!("https://{}/meta", host);
 
-    let (ip, port) = proxy.unwrap_or((host.to_string(), 443));
+    let timeout_duration = Duration::from_secs(DEFAULT_TIMEOUT_SECONDS);
 
-    let stream = tokio::time::timeout(Duration::from_secs(DEFAULT_TIMEOUT_SECONDS), TcpStream::connect((ip.as_str(), port))).await??;
+    let mut client_builder = Client::builder()
+        .timeout(timeout_duration)
+        .user_agent("RustProxyChecker");
 
-    let tls = TlsConnector::from(NativeTlsConnector::new()?);
-    let mut stream = tls.connect(host, stream).await?;
+    if let Some((ip, port)) = proxy {
+        let addr_str = format!("{}:{}", ip, port);
+        let addr: std::net::SocketAddr = addr_str
+            .parse()
+            .context(format!("Invalid IP/port combination: {}", addr_str))?;
+        
+        client_builder = client_builder.resolve(host, addr);
+    }
 
-    use tokio::io::{AsyncReadExt, AsyncWriteExt};
-    stream.write_all(payload.as_bytes()).await?;
+    let client = client_builder
+        .build()
+        .context("Failed to build reqwest client")?;
 
-    let mut resp = Vec::new();
-    stream.read_to_end(&mut resp).await?;
+    let meta = client.get(&url)
+        .header("Host", host)
+        .send()
+        .await
+        .context("Failed to send request")?
+        .json::<CfMeta>()
+        .await
+        .context("Failed to parse JSON response")?;
 
-    let text = String::from_utf8_lossy(&resp);
-    let body = text.split("\r\n\r\n").nth(1).unwrap_or("");
-    let meta: CfMeta = serde_json::from_str(body)?;
     Ok(meta)
 }
 
 async fn process_proxy(
     proxy_line: String,
     active_proxies: &Arc<Mutex<BTreeMap<String, Vec<(ProxyInfo, u128)>>>>,
-    args: &Args,
     self_ip: &str,
 ) {
     let parts: Vec<&str> = proxy_line.split(',').collect();
@@ -208,17 +217,18 @@ async fn process_proxy(
     let start = Instant::now();
     match fetch_cf_meta(Some((ip.to_string(), port))).await {
         Ok(meta) => {
-            if meta.clientIp != self_ip {
+            if meta.client_ip != self_ip {
                 let ping = start.elapsed().as_millis();
                 let info = ProxyInfo {
-                    ip: meta.clientIp.clone(),
-                    isp: meta.asOrganization.unwrap_or_else(|| "Unknown".to_string()),
+                    ip: meta.client_ip.clone(),
+                    isp: meta.as_organization.unwrap_or_else(|| "Unknown".to_string()),
                     country: meta.country.unwrap_or_else(|| "Unknown".to_string()),
                     region: meta.region.unwrap_or_else(|| "Unknown".to_string()),
                     city: meta.city.unwrap_or_else(|| "Unknown".to_string()),
                 };
                 println!("{}", format!("PROXY LIVE 🟩: {} ({} ms)", ip, ping).green());
-                let mut active_proxies_locked = active_proxies.lock().unwrap();
+                let mut active_proxies_locked = active_proxies.lock().unwrap_or_else(|e| e.into_inner());
+
                 active_proxies_locked
                     .entry(info.country.clone())
                     .or_default()
@@ -289,19 +299,21 @@ let next_update_str = tehran_next.format("%a, %d %b %Y %H:%M").to_string();
     )?;
 
     for (country, proxies) in proxies_by_country.iter() {
+        let mut sorted_proxies = proxies.clone();
+        sorted_proxies.sort_by_key(|&(_, ping)| ping);
         let flag = country_flag(country);
-        writeln!(file, "## {} {} ({} proxies)", flag, country, proxies.len())?;
+        writeln!(file, "## {} {} ({} proxies)", flag, country, sorted_proxies.len())?;
         writeln!(file, "<details open>")?;
         writeln!(file, "<summary>Click to collapse</summary>\n")?;
         writeln!(file, "|   IP   |  Location   |   ISP   |   Ping   |")?;
         writeln!(file, "|:-------|:------------|:-------:|:--------:|")?;
 
-        for (info, ping) in proxies.iter() {
+        for (info, ping) in sorted_proxies.iter() {
             let location = format!("{}, {}", info.region, info.city);
             let emoji = if *ping < 1099 { "⚡" } else if *ping < 1599 { "🐇" } else { "🐌" };
             writeln!(
                 file,
-                "| <pre><code>{}</code></pre> | {} | {} | {} ms {} |",
+                "| `{}` | {} | {} | {} ms {} |",
                 info.ip, location, info.isp, ping, emoji
             )?;
         }
