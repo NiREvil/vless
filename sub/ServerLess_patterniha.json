@@ -14,7 +14,7 @@
             "geosite:private",
             "geosite:ir",
             "full:www.cloudflare.com",
-            "domain:rustdns.devefun.org",
+            "domain:dns.malw.link",
             "geosite:sanctioned",
             "geosite:telegram",
             "geosite:meta",
@@ -50,12 +50,12 @@
             "geosite:private",
             "geosite:ir",
             "full:www.cloudflare.com",
-            "domain:rustdns.devefun.org"
+            "domain:dns.malw.link"
           ],
           "finalQuery": true
         },
         {
-          "address": "https://rustdns.devefun.org/dns-query",
+          "address": "https://dns.malw.link/dns-query",
           "domains": ["geosite:sanctioned"],
           "finalQuery": false,
           "tag": "anti-sanction-dns",
@@ -281,7 +281,7 @@
         { "inboundTag": ["anti-sanction-dns"], "outboundTag": "direct-out" },
         { "inboundTag": ["no-filter-dns"], "outboundTag": "full-fragment" },
         {
-          "domain": ["domain:ir", "geosite:private", "geosite:ir", "domain:rustdns.devefun.org"],
+          "domain": ["domain:ir", "geosite:private", "geosite:ir", "domain:dns.malw.link"],
           "outboundTag": "direct-out"
         },
         { "ip": ["geoip:private", "geoip:ir"], "outboundTag": "direct-out" },
