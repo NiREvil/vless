@@ -1,13 +1,5 @@
 {
-  "remarks": "ServLess-fragment-1-1",
-  "log": {
-    "access": "",
-    "error": "",
-    "loglevel": "none",
-    "dnsLog": false
-  },
   "dns": {
-    "tag": "dns",
     "hosts": {
       "cloudflare-dns.com": [
         "172.67.73.38",
@@ -21,72 +13,82 @@
       ],
       "domain:youtube.com": ["google.com"]
     },
-    "servers": ["https://cloudflare-dns.com/dns-query"]
+    "servers": ["https://cloudflare-dns.com/dns-query"],
+    "tag": "dns"
   },
   "inbounds": [
     {
       "domainOverride": ["http", "tls"],
-      "protocol": "socks",
-      "tag": "socks-in",
       "listen": "127.0.0.1",
       "port": 10808,
+      "protocol": "socks",
       "settings": {
         "auth": "noauth",
         "udp": true,
         "userLevel": 8
       },
       "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
-      }
+        "destOverride": ["http", "tls"],
+        "enabled": true
+      },
+      "tag": "socks-in"
     },
     {
-      "protocol": "http",
-      "tag": "http-in",
       "listen": "127.0.0.1",
       "port": 10809,
+      "protocol": "http",
       "settings": {
         "userLevel": 8
       },
       "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
-      }
+        "destOverride": ["http", "tls"],
+        "enabled": true
+      },
+      "tag": "http-in"
     }
   ],
+  "log": {
+    "access": "",
+    "dnsLog": false,
+    "error": "",
+    "loglevel": "none"
+  },
   "outbounds": [
     {
-      "protocol": "freedom",
-      "tag": "fragment-out",
       "domainStrategy": "UseIP",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
-      },
+      "protocol": "freedom",
       "settings": {
         "fragment": {
-          "packets": "1-1",
+          "interval": "1-2",
           "length": "1403",
-          "interval": "1-2"
+          "packets": "1-1"
         }
+      },
+      "sniffing": {
+        "destOverride": ["http", "tls"],
+        "enabled": true
       },
       "streamSettings": {
         "sockopt": {
-          "tcpNoDelay": true,
-          "tcpKeepAliveIdle": 100,
+          "domainStrategy": "UseIP",
           "mark": 255,
-          "domainStrategy": "UseIP"
+          "tcpKeepAliveIdle": 100,
+          "tcpNoDelay": true
         }
-      }
+      },
+      "tag": "fragment-out"
     },
     {
       "protocol": "dns",
       "tag": "dns-out"
     },
     {
-      "protocol": "vless",
-      "tag": "fakeproxy-out",
       "domainStrategy": "",
+      "mux": {
+        "concurrency": 8,
+        "enabled": false
+      },
+      "protocol": "vless",
       "settings": {
         "vnext": [
           {
@@ -124,10 +126,7 @@
           "path": "/"
         }
       },
-      "mux": {
-        "concurrency": 8,
-        "enabled": false
-      }
+      "tag": "fakeproxy-out"
     }
   ],
   "policy": {
@@ -140,26 +139,27 @@
       }
     },
     "system": {
-      "statsOutboundUplink": true,
-      "statsOutboundDownlink": true
+      "statsOutboundDownlink": true,
+      "statsOutboundUplink": true
     }
   },
+  "remarks": "ServLess-fragment-1-1",
   "routing": {
     "domainStrategy": "IPIfNonMatch",
     "rules": [
       {
+        "enabled": true,
         "inboundTag": ["socks-in", "http-in"],
-        "type": "field",
-        "port": "53",
         "outboundTag": "dns-out",
-        "enabled": true
+        "port": "53",
+        "type": "field"
       },
       {
+        "enabled": true,
         "inboundTag": ["socks-in", "http-in"],
-        "type": "field",
-        "port": "0-65535",
         "outboundTag": "fragment-out",
-        "enabled": true
+        "port": "0-65535",
+        "type": "field"
       }
     ],
     "strategy": "rules"
