@@ -1,5 +1,13 @@
 {
+  "remarks": "ServLess-fragment-tlshello",
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "none",
+    "dnsLog": false
+  },
   "dns": {
+    "tag": "dns",
     "hosts": {
       "cloudflare-dns.com": [
         "172.67.73.38",
@@ -13,82 +21,72 @@
       ],
       "domain:youtube.com": ["google.com"]
     },
-    "servers": ["https://cloudflare-dns.com/dns-query"],
-    "tag": "dns"
+    "servers": ["https://cloudflare-dns.com/dns-query"]
   },
   "inbounds": [
     {
       "domainOverride": ["http", "tls"],
+      "protocol": "socks",
+      "tag": "socks-in",
       "listen": "127.0.0.1",
       "port": 10808,
-      "protocol": "socks",
       "settings": {
         "auth": "noauth",
         "udp": true,
         "userLevel": 8
       },
       "sniffing": {
-        "destOverride": ["http", "tls"],
-        "enabled": true
-      },
-      "tag": "socks-in"
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      }
     },
     {
+      "protocol": "http",
+      "tag": "http-in",
       "listen": "127.0.0.1",
       "port": 10809,
-      "protocol": "http",
       "settings": {
         "userLevel": 8
       },
       "sniffing": {
-        "destOverride": ["http", "tls"],
-        "enabled": true
-      },
-      "tag": "http-in"
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      }
     }
   ],
-  "log": {
-    "access": "",
-    "dnsLog": false,
-    "error": "",
-    "loglevel": "none"
-  },
   "outbounds": [
     {
-      "domainStrategy": "UseIP",
       "protocol": "freedom",
+      "tag": "fragment-out",
+      "domainStrategy": "UseIP",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      },
       "settings": {
         "fragment": {
-          "interval": "1-2",
+          "packets": "tlshello",
           "length": "10-30",
-          "packets": "tlshello"
+          "interval": "1-2"
         }
-      },
-      "sniffing": {
-        "destOverride": ["http", "tls"],
-        "enabled": true
       },
       "streamSettings": {
         "sockopt": {
-          "domainStrategy": "UseIP",
-          "mark": 255,
+          "tcpNoDelay": true,
           "tcpKeepAliveIdle": 100,
-          "tcpNoDelay": true
+          "mark": 255,
+          "domainStrategy": "UseIP"
         }
-      },
-      "tag": "fragment-out"
+      }
     },
     {
       "protocol": "dns",
       "tag": "dns-out"
     },
     {
-      "domainStrategy": "",
-      "mux": {
-        "concurrency": 8,
-        "enabled": false
-      },
       "protocol": "vless",
+      "tag": "fakeproxy-out",
+      "domainStrategy": "",
       "settings": {
         "vnext": [
           {
@@ -111,8 +109,8 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "alpn": ["h2", "http/1.1"],
-          "fingerprint": "randomized",
+          "alpn": ["h3", "h2", "http/1.1"],
+          "fingerprint": "chrome",
           "publicKey": "",
           "serverName": "google.com",
           "shortId": "",
@@ -126,7 +124,10 @@
           "path": "/"
         }
       },
-      "tag": "fakeproxy-out"
+      "mux": {
+        "concurrency": 8,
+        "enabled": false
+      }
     }
   ],
   "policy": {
@@ -139,27 +140,26 @@
       }
     },
     "system": {
-      "statsOutboundDownlink": true,
-      "statsOutboundUplink": true
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
     }
   },
-  "remarks": "ServLess-fragment-tlshello",
   "routing": {
     "domainStrategy": "IPIfNonMatch",
     "rules": [
       {
-        "enabled": true,
         "inboundTag": ["socks-in", "http-in"],
-        "outboundTag": "dns-out",
+        "type": "field",
         "port": "53",
-        "type": "field"
+        "outboundTag": "dns-out",
+        "enabled": true
       },
       {
-        "enabled": true,
         "inboundTag": ["socks-in", "http-in"],
-        "outboundTag": "fragment-out",
+        "type": "field",
         "port": "0-65535",
-        "type": "field"
+        "outboundTag": "fragment-out",
+        "enabled": true
       }
     ],
     "strategy": "rules"
