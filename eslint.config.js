@@ -65,8 +65,6 @@ export default [
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'off',
-      semi: ['error', 'always'],
-      quotes: ['error', 'single'],
       'no-irregular-whitespace': [
         'error',
         {
@@ -77,6 +75,8 @@ export default [
         },
       ],
       ...eslintConfigPrettier.rules,
+      eqeqeq': ['error', 'always'],
+      'no-undef': 'error',
     },
   },
 
@@ -114,6 +114,9 @@ export default [
       ...tseslint.configs.recommended.rules,
       ...eslintConfigPrettier.rules,
       '@typescript-eslint/no-unused-vars': 'warn',
+      'eqeqeq': ['error', 'always'],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/explicit-function-return-type': 'warn',
       semi: ['error', 'always'],
       quotes: ['error', 'single'],
     },
