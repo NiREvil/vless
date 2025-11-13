@@ -90,7 +90,8 @@
         "🇹🇷 Turkey",
         "🇺🇸 USA",
         "🇫🇮 Finland",
-        "🇫🇷 France",
+        "🇦🇹 Austria",
+        "🇱🇻 Latvia",
         "🇳🇱 Netherlands",
         "🇳🇱 Netherlands-2"
       ],
@@ -103,7 +104,8 @@
         "🇹🇷 Turkey",
         "🇺🇸 USA",
         "🇫🇮 Finland",
-        "🇫🇷 France",
+        "🇦🇹 Austria",
+        "🇱🇻 Latvia",
         "🇳🇱 Netherlands",
         "🇳🇱 Netherlands-2"
       ],
@@ -159,7 +161,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇫🇷 France",
+      "tag": "🇦🇹 Austria",
       "server": "channel2.saghetalaie.homes",
       "server_port": 46914,
       "obfs": {
@@ -167,6 +169,22 @@
         "password": "\u0026O#28YB5qK!5t#U"
       },
       "password": "freehomesvpnchannel3",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇱🇻 Latvia",
+      "server": "channel4.saghetalaie.homes",
+      "server_port": 46914,
+      "obfs": {
+        "type": "salamander",
+        "password": "&O#28YB5qK!5t#U"
+      },
+      "password": "yhqy5AHofQq",
       "tls": {
         "enabled": true,
         "server_name": "www.google.com",
