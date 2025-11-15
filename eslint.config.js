@@ -32,11 +32,11 @@ export default [
       'edge/LoadBalance.js',
       'sub/ProxyIP-Daily.md',
       'real address generator/**',
-      'boringtun-boringtun-cli-0.5.2/**',
-    ],
+      'boringtun-boringtun-cli-0.5.2/**'
+    ]
   },
 
-  // ⚙️ JavaScript
+  // ➕ JavaScript
   {
     files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
     languageOptions: {
@@ -59,28 +59,29 @@ export default [
         WebSocketPair: 'readonly',
         addEventListener: 'readonly',
         console: 'readonly',
-        URL: 'readonly',
-      },
+        URL: 'readonly'
+      }
     },
     rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'off',
+      curly: ['error', 'all'],
+      eqeqeq: ['error', 'always'],
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-irregular-whitespace': [
         'error',
         {
           skipStrings: true,
           skipComments: false,
           skipRegExps: true,
-          skipTemplates: true,
-        },
+          skipTemplates: true
+        }
       ],
-      ...eslintConfigPrettier.rules,
-      eqeqeq': ['error', 'always'],
       'no-undef': 'error',
-    },
+      'no-unused-vars': 'warn',
+      ...eslintConfigPrettier.rules
+    }
   },
 
-  // ⚙️ TypeScript
+  // ➕ TypeScript
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
@@ -104,63 +105,67 @@ export default [
         WebSocketPair: 'readonly',
         addEventListener: 'readonly',
         console: 'readonly',
-        URL: 'readonly',
-      },
+        URL: 'readonly'
+      }
     },
     plugins: {
-      '@typescript-eslint': tseslint,
+      '@typescript-eslint': tseslint
     },
     rules: {
-      ...tseslint.configs.recommended.rules,
-      ...eslintConfigPrettier.rules,
+      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
-      'eqeqeq': ['error', 'always'],
+      ...tseslint.configs.recommended.rules,
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/explicit-function-return-type': 'warn',
-      semi: ['error', 'always'],
-      quotes: ['error', 'single'],
-    },
+      eqeqeq: ['error', 'always'],
+      'no-undef': 'off',
+      ...eslintConfigPrettier.rules
+    }
   },
 
-  // ⚙️ JSON, JSONC, JSON5
+  // ➕ JSON — JSONC — JSON5
   {
     files: ['**/*.json', '**/*.jsonc', '**/*.json5'],
     plugins: {
-      jsonc: eslintPluginJsonc,
+      jsonc: eslintPluginJsonc
     },
     languageOptions: {
-      parser: jsoncParser,
+      parser: jsoncParser
     },
     rules: {
       ...eslintPluginJsonc.configs['recommended-with-jsonc'].rules,
       'jsonc/sort-keys': 'error',
-    },
+      ...eslintConfigPrettier.rules
+    }
   },
 
-  // ⚙️ YAML
+  // ➕ YAML
   {
     files: ['**/*.yaml', '**/*.yml'],
     plugins: {
-      yml: eslintPluginYml,
+      yml: eslintPluginYml
     },
     languageOptions: {
-      parser: ymlParser,
+      parser: ymlParser
     },
     rules: {
       ...eslintPluginYml.configs.standard.rules,
       ...eslintPluginYml.configs.prettier.rules,
-    },
+      ...eslintConfigPrettier.rules
+    }
   },
 
-  // ⚙️ HTML – For linting <script> blocks
+  // ➕ HTML — For linting <script> blocks
   {
     files: ['**/*.html'],
     plugins: {
-      html: eslintPluginHtml,
+      html: eslintPluginHtml
     },
     languageOptions: {
-      globals: { ...globals.browser },
+      globals: { ...globals.browser }
     },
-    rules: {},
-  },
+    rules: {
+      ...eslintConfigPrettier.rules
+    }
+  }
 ];
