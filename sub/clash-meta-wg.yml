@@ -18,7 +18,7 @@ external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-p
 external-ui: ui
 external-controller-cors:
   allow-origins:
-    - '*'
+    - "*"
   allow-private-network: true
 profile:
   store-selected: true
@@ -108,9 +108,9 @@ proxies:
     udp: true
     mtu: 1330
     amnezia-wg-option:
-      jc: '33'
-      jmin: '50'
-      jmax: '70'
+      jc: "33"
+      jmin: "50"
+      jmax: "70"
   - name: SW-DIALER-02
     type: wireguard
     ip: 172.16.0.3/32
@@ -143,9 +143,9 @@ proxies:
     udp: true
     mtu: 1330
     amnezia-wg-option:
-      jc: '33'
-      jmin: '50'
-      jmax: '70'
+      jc: "33"
+      jmin: "50"
+      jmax: "70"
   - name: SW-DIALER-03
     type: wireguard
     ip: 172.16.0.3/32
@@ -178,9 +178,9 @@ proxies:
     udp: true
     mtu: 1330
     amnezia-wg-option:
-      jc: '33'
-      jmin: '50'
-      jmax: '70'
+      jc: "33"
+      jmin: "50"
+      jmax: "70"
   - name: SW-DIALER-04
     type: wireguard
     ip: 172.16.0.3/32
@@ -213,9 +213,9 @@ proxies:
     udp: true
     mtu: 1330
     amnezia-wg-option:
-      jc: '33'
-      jmin: '50'
-      jmax: '70'
+      jc: "33"
+      jmin: "50"
+      jmax: "70"
   - name: SW-DIALER-05
     type: wireguard
     ip: 172.16.0.3/32
@@ -248,9 +248,9 @@ proxies:
     udp: true
     mtu: 1330
     amnezia-wg-option:
-      jc: '33'
-      jmin: '50'
-      jmax: '70'
+      jc: "33"
+      jmin: "50"
+      jmax: "70"
   - name: SW-DIALER-06
     type: wireguard
     ip: 172.16.0.3/32
@@ -283,9 +283,9 @@ proxies:
     udp: true
     mtu: 1330
     amnezia-wg-option:
-      jc: '33'
-      jmin: '50'
-      jmax: '70'
+      jc: "33"
+      jmin: "50"
+      jmax: "70"
   - name: SW-DIALER-07
     type: wireguard
     ip: 172.16.0.3/32
@@ -318,9 +318,9 @@ proxies:
     udp: true
     mtu: 1330
     amnezia-wg-option:
-      jc: '33'
-      jmin: '50'
-      jmax: '7'
+      jc: "33"
+      jmin: "50"
+      jmax: "7"
   - name: SW-DIALER-08
     type: wireguard
     ip: 172.16.0.3/32
@@ -353,9 +353,9 @@ proxies:
     udp: true
     mtu: 1330
     amnezia-wg-option:
-      jc: '33'
-      jmin: '50'
-      jmax: '70'
+      jc: "33"
+      jmin: "50"
+      jmax: "70"
 proxy-groups:
   - name: 🔰 PROXIES
     type: select

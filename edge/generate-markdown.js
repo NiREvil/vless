@@ -1,79 +1,79 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const projectRoot = path.resolve(__dirname, '..');
+const projectRoot = path.resolve(__dirname, "..");
 
-const resultsPath = path.join(projectRoot, 'all_working_proxies.txt');
-const outputPath = path.join(projectRoot, 'sub', 'ProxyIP-Daily.md');
+const resultsPath = path.join(projectRoot, "all_working_proxies.txt");
+const outputPath = path.join(projectRoot, "sub", "ProxyIP-Daily.md");
 const outputDir = path.dirname(outputPath);
 
 const countryFlags = {
-  'United States': '🇺🇸',
-  'United Kingdom': '🇬🇧',
-  Germany: '🇩🇪',
-  France: '🇫🇷',
-  Netherlands: '🇳🇱',
-  Canada: '🇨🇦',
-  Australia: '🇦🇺',
-  Japan: '🇯🇵',
-  Singapore: '🇸🇬',
-  'South Korea': '🇰🇷',
-  India: '🇮🇳',
-  China: '🇨🇳',
-  Russia: '🇷🇺',
-  Brazil: '🇧🇷',
-  Turkey: '🇹🇷',
-  Türkiye: '🇹🇷',
-  Spain: '🇪🇸',
-  Iran: '🇮🇷',
-  Italy: '🇮🇹',
-  Poland: '🇵🇱',
-  Ukraine: '🇺🇦',
-  Sweden: '🇸🇪',
-  Norway: '🇳🇴',
-  Denmark: '🇩🇰',
-  Finland: '🇫🇮',
-  Switzerland: '🇨🇭',
-  Austria: '🇦🇹',
-  Belgium: '🇧🇪',
-  'Czech Republic': '🇨🇿',
-  Hungary: '🇭🇺',
-  Romania: '🇷🇴',
-  Bulgaria: '🇧🇬',
-  Greece: '🇬🇷',
-  Portugal: '🇵🇹',
-  Ireland: '🇮🇪',
-  Israel: '🇮🇱',
-  'United Arab Emirates': '🇦🇪',
-  'Saudi Arabia': '🇸🇦',
-  'Hong Kong': '🇭🇰',
-  Taiwan: '🇹🇼',
-  'The Netherlands': '🇳🇱',
-  Thailand: '🇹🇭',
-  Vietnam: '🇻🇳',
-  Malaysia: '🇲🇾',
-  Indonesia: '🇮🇩',
-  Philippines: '🇵🇭',
-  'South Africa': '🇿🇦',
-  Egypt: '🇪🇬',
-  Morocco: '🇲🇦',
-  Argentina: '🇦🇷',
-  Chile: '🇨🇱',
-  Mexico: '🇲🇽',
-  Colombia: '🇨🇴',
-  Peru: '🇵🇪',
-  'New Zealand': '🇳🇿',
+  "United States": "🇺🇸",
+  "United Kingdom": "🇬🇧",
+  Germany: "🇩🇪",
+  France: "🇫🇷",
+  Netherlands: "🇳🇱",
+  Canada: "🇨🇦",
+  Australia: "🇦🇺",
+  Japan: "🇯🇵",
+  Singapore: "🇸🇬",
+  "South Korea": "🇰🇷",
+  India: "🇮🇳",
+  China: "🇨🇳",
+  Russia: "🇷🇺",
+  Brazil: "🇧🇷",
+  Turkey: "🇹🇷",
+  Türkiye: "🇹🇷",
+  Spain: "🇪🇸",
+  Iran: "🇮🇷",
+  Italy: "🇮🇹",
+  Poland: "🇵🇱",
+  Ukraine: "🇺🇦",
+  Sweden: "🇸🇪",
+  Norway: "🇳🇴",
+  Denmark: "🇩🇰",
+  Finland: "🇫🇮",
+  Switzerland: "🇨🇭",
+  Austria: "🇦🇹",
+  Belgium: "🇧🇪",
+  "Czech Republic": "🇨🇿",
+  Hungary: "🇭🇺",
+  Romania: "🇷🇴",
+  Bulgaria: "🇧🇬",
+  Greece: "🇬🇷",
+  Portugal: "🇵🇹",
+  Ireland: "🇮🇪",
+  Israel: "🇮🇱",
+  "United Arab Emirates": "🇦🇪",
+  "Saudi Arabia": "🇸🇦",
+  "Hong Kong": "🇭🇰",
+  Taiwan: "🇹🇼",
+  "The Netherlands": "🇳🇱",
+  Thailand: "🇹🇭",
+  Vietnam: "🇻🇳",
+  Malaysia: "🇲🇾",
+  Indonesia: "🇮🇩",
+  Philippines: "🇵🇭",
+  "South Africa": "🇿🇦",
+  Egypt: "🇪🇬",
+  Morocco: "🇲🇦",
+  Argentina: "🇦🇷",
+  Chile: "🇨🇱",
+  Mexico: "🇲🇽",
+  Colombia: "🇨🇴",
+  Peru: "🇵🇪",
+  "New Zealand": "🇳🇿",
 };
 
 function groupProxiesByCountry(proxies) {
   const grouped = {};
 
-  proxies.forEach(proxy => {
-    const country = proxy.country || 'Unknown';
+  proxies.forEach((proxy) => {
+    const country = proxy.country || "Unknown";
     if (!grouped[country]) {
       grouped[country] = [];
     }
@@ -84,11 +84,11 @@ function groupProxiesByCountry(proxies) {
 }
 
 function generateStats(proxies) {
-  const countries = new Set(proxies.map(p => p.country)).size;
+  const countries = new Set(proxies.map((p) => p.country)).size;
   const methods = {};
 
-  proxies.forEach(proxy => {
-    const method = proxy.method || 'Unknown';
+  proxies.forEach((proxy) => {
+    const method = proxy.method || "Unknown";
     methods[method] = (methods[method] || 0) + 1;
   });
 
@@ -103,14 +103,14 @@ async function enrichProxyData(proxies) {
       const response = await fetch(
         `http://ip-api.com/json/${proxy.ip}?fields=status,country,city,as,proxy,timezone,isp,org`,
         {
-          headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ProxyTester/1.0)' },
+          headers: { "User-Agent": "Mozilla/5.0 (compatible; ProxyTester/1.0)" },
           signal: AbortSignal.timeout(10000),
         },
       );
 
       if (response.ok) {
         const data = await response.json();
-        if (data.status === 'success') {
+        if (data.status === "success") {
           enrichedProxies.push({
             ...proxy,
             country: data.country || proxy.country,
@@ -118,7 +118,7 @@ async function enrichProxyData(proxies) {
             as: data.as || proxy.as,
             isp: data.isp || data.org || proxy.as,
             timezone: data.timezone,
-            proxy: data.proxy || 'unknown',
+            proxy: data.proxy || "unknown",
           });
         } else {
           enrichedProxies.push(proxy);
@@ -127,7 +127,7 @@ async function enrichProxyData(proxies) {
         enrichedProxies.push(proxy);
       }
 
-      await new Promise(res => setTimeout(res, 100));
+      await new Promise((res) => setTimeout(res, 100));
     } catch (error) {
       enrichedProxies.push(proxy);
     }
@@ -143,11 +143,11 @@ try {
 
   let proxies = [];
   if (fs.existsSync(resultsPath)) {
-    const rawContent = fs.readFileSync(resultsPath, 'utf-8');
-    if (rawContent.trim() !== '') {
-      const lines = rawContent.split(/\r?\n/).filter(line => line.trim() !== '');
+    const rawContent = fs.readFileSync(resultsPath, "utf-8");
+    if (rawContent.trim() !== "") {
+      const lines = rawContent.split(/\r?\n/).filter((line) => line.trim() !== "");
       proxies = lines
-        .map(line => {
+        .map((line) => {
           try {
             return JSON.parse(line);
           } catch (e) {
@@ -155,17 +155,17 @@ try {
             return null;
           }
         })
-        .filter(proxy => proxy !== null);
+        .filter((proxy) => proxy !== null);
     }
   }
 
-  console.log('Enriching proxy data...');
+  console.log("Enriching proxy data...");
   // proxies = await enrichProxyData(proxies);
 
   proxies.sort((a, b) => {
-    const countryCompare = (a.country || '').localeCompare(b.country || '');
+    const countryCompare = (a.country || "").localeCompare(b.country || "");
     if (countryCompare !== 0) return countryCompare;
-    return (a.ip || '').localeCompare(b.ip || '');
+    return (a.ip || "").localeCompare(b.ip || "");
   });
 
   const stats = generateStats(proxies);
@@ -192,7 +192,7 @@ try {
   markdownContent += `**🔹 Different ports:** 1  \n`;
   markdownContent += `**🔹 Success methods:** ${Object.entries(stats.methods)
     .map(([method, count]) => `${method} (${count})`)
-    .join(', ')}\n\n`;
+    .join(", ")}\n\n`;
 
   markdownContent += `<br/>\n\n`;
 
@@ -212,16 +212,16 @@ try {
     );
 
     sortedCountries.forEach(([country, countryProxies]) => {
-      const flag = countryFlags[country] || '🌍';
+      const flag = countryFlags[country] || "🌍";
       markdownContent += `### ${flag} ${country} (${countryProxies.length} proxies)\n\n`;
       markdownContent += `| Proxy IP | City | ISP / Organization | Method |\n`;
       markdownContent += `|----------|------|--------------------|--------|\n`;
 
-      countryProxies.forEach(proxy => {
-        const ip = proxy.ip || 'N/A';
-        const city = proxy.city || 'N/A';
-        const method = proxy.method || 'N/A';
-        const isp = (proxy.isp || proxy.as || 'N/A').substring(0, 50);
+      countryProxies.forEach((proxy) => {
+        const ip = proxy.ip || "N/A";
+        const city = proxy.city || "N/A";
+        const method = proxy.method || "N/A";
+        const isp = (proxy.isp || proxy.as || "N/A").substring(0, 50);
 
         markdownContent += `| \`${ip}\` | ${city} | ${isp} | ${method} |\n`;
       });
@@ -234,7 +234,7 @@ try {
     markdownContent += `## 📋 All Working Proxies (Copy-Friendly Format)\n\n`;
     markdownContent += `<details>\n<summary>Click to expand RAW data</summary>\n\n`;
     markdownContent += `\`\`\`\n`;
-    proxies.forEach(proxy => {
+    proxies.forEach((proxy) => {
       markdownContent += `${proxy.ip}\n`;
     });
     markdownContent += `\`\`\`\n\n`;
@@ -261,7 +261,7 @@ try {
     `Successfully generated ${path.basename(outputPath)} with ${proxies.length} proxies.`,
   );
 
-  const statsFile = path.join(projectRoot, 'proxy-stats.json');
+  const statsFile = path.join(projectRoot, "proxy-stats.json");
   const statsData = {
     lastUpdate: new Date().toISOString(),
     nextUpdate: nextUpdateDate.toISOString(),
@@ -273,13 +273,13 @@ try {
       .slice(0, 10)
       .map(([country, proxiesInCountry]) => ({
         country,
-        flag: countryFlags[country] || '🌍',
+        flag: countryFlags[country] || "🌍",
         count: proxiesInCountry.length,
       })),
   };
 
   fs.writeFileSync(statsFile, JSON.stringify(statsData, null, 2));
 } catch (error) {
-  console.error('An error occurred in generate-markdown.js:', error);
+  console.error("An error occurred in generate-markdown.js:", error);
   process.exit(1);
 }

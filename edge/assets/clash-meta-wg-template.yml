@@ -16,7 +16,7 @@ external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-p
 external-ui: ui
 external-controller-cors:
   allow-origins:
-    - '*'
+    - "*"
   allow-private-network: true
 profile:
   store-selected: true
@@ -40,7 +40,7 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16 # Standard fake IP range
   fake-ip-filter:
-    - 'geosite:private'
+    - "geosite:private"
 
 # TUN Settings
 tun:

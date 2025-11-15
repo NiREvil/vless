@@ -5,108 +5,108 @@
  * - Fragment values can be changed from (151-152-153).
  */
 
-addEventListener('fetch', event => {
+addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request));
 });
 
 // Utility functions
-const selectRandomItem = items => items[Math.floor(Math.random() * items.length)];
+const selectRandomItem = (items) => items[Math.floor(Math.random() * items.length)];
 const generateRandomString = (
   length,
-  characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
+  characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
 ) => {
-  let result = '';
+  let result = "";
   for (let i = 0; i < length; i++) {
     result += characters.charAt(Math.floor(Math.random() * characters.length));
   }
   return result;
 };
 
-const randomizeCase = str =>
+const randomizeCase = (str) =>
   str
-    .split('')
-    .map(char => (Math.random() > 0.5 ? char.toUpperCase() : char.toLowerCase()))
-    .join('');
+    .split("")
+    .map((char) => (Math.random() > 0.5 ? char.toUpperCase() : char.toLowerCase()))
+    .join("");
 
 // Main handler function
 async function handleRequest(request) {
   // Constants
   const portsList = [443, 8443, 2053, 2096, 2087, 2083]; // Preferred TLS Ports of cloudflare.
-  const domain = 'rr-ff.pages.dev'; // Specify the hostname of your VLESS configuration.
-  const userUUID = '048ce287-6a7b-4dad-98fe-b5f3f6789b57'; // Specify the UUID of your VLESS configuration.
-  const bestip = 'creativecommons.org'; // Preferred cloudflare clean IPv4/IPv6 addresses.
+  const domain = "rr-ff.pages.dev"; // Specify the hostname of your VLESS configuration.
+  const userUUID = "048ce287-6a7b-4dad-98fe-b5f3f6789b57"; // Specify the UUID of your VLESS configuration.
+  const bestip = "creativecommons.org"; // Preferred cloudflare clean IPv4/IPv6 addresses.
 
   // Randomized constants
   const randomPort = selectRandomItem(portsList);
   const randomizedDomain = randomizeCase(domain);
-  const randomPath = '/assets/' + generateRandomString(24) + '?ed=2560'; // Preferred path
+  const randomPath = "/assets/" + generateRandomString(24) + "?ed=2560"; // Preferred path
 
   // Configuration object
   const config = {
-    remarks: 'rnd fragment', // Specify the config name
+    remarks: "rnd fragment", // Specify the config name
     log: {
-      loglevel: 'warning',
+      loglevel: "warning",
     },
     dns: {
       hosts: {
-        'domain:googleapis.cn': ['googleapis.com'],
-        'dns.google': ['8.8.4.4', '8.8.8.8', '2001:4860:4860::8888', '2001:4860:4860::8844'],
+        "domain:googleapis.cn": ["googleapis.com"],
+        "dns.google": ["8.8.4.4", "8.8.8.8", "2001:4860:4860::8888", "2001:4860:4860::8844"],
       },
       servers: [
-        'https://dns.google/dns-query',
+        "https://dns.google/dns-query",
         {
-          address: '8.8.8.8',
-          domains: ['full:www.speedtest.net'],
+          address: "8.8.8.8",
+          domains: ["full:www.speedtest.net"],
         },
       ],
-      tag: 'dns',
+      tag: "dns",
     },
     inbounds: [
       {
         port: 10808,
-        protocol: 'socks',
+        protocol: "socks",
         settings: {
-          auth: 'noauth',
+          auth: "noauth",
           udp: true,
           userLevel: 8,
         },
         sniffing: {
-          destOverride: ['http', 'tls'],
+          destOverride: ["http", "tls"],
           enabled: true,
           routeOnly: true,
         },
-        tag: 'socks-in',
+        tag: "socks-in",
       },
       {
         port: 10809,
-        protocol: 'http',
+        protocol: "http",
         settings: {
-          auth: 'noauth',
+          auth: "noauth",
           udp: true,
           userLevel: 8,
         },
         sniffing: {
-          destOverride: ['http', 'tls'],
+          destOverride: ["http", "tls"],
           enabled: true,
           routeOnly: true,
         },
-        tag: 'http-in',
+        tag: "http-in",
       },
       {
-        listen: '127.0.0.1',
+        listen: "127.0.0.1",
         port: 10853,
-        protocol: 'dokodemo-door',
+        protocol: "dokodemo-door",
         settings: {
-          address: '1.1.1.1',
-          network: 'tcp,udp',
+          address: "1.1.1.1",
+          network: "tcp,udp",
           port: 53,
         },
-        tag: 'dns-in',
+        tag: "dns-in",
       },
     ],
     outbounds: [
       {
-        protocol: 'vless',
+        protocol: "vless",
         settings: {
           vnext: [
             {
@@ -115,7 +115,7 @@ async function handleRequest(request) {
               users: [
                 {
                   id: userUUID,
-                  encryption: 'none',
+                  encryption: "none",
                   level: 8,
                 },
               ],
@@ -123,36 +123,36 @@ async function handleRequest(request) {
           ],
         },
         streamSettings: {
-          network: 'ws',
-          security: 'tls',
+          network: "ws",
+          security: "tls",
           sockopt: {
-            dialerProxy: 'fragment',
+            dialerProxy: "fragment",
           },
           wsSettings: {
             headers: {
               Host: randomizedDomain,
-              'User-Agent':
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
+              "User-Agent":
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
             },
             path: randomPath,
           },
           tlsSettings: {
             allowInsecure: false,
-            fingerprint: 'chrome', // Preferred fingeprint, is better to use chrome, firefox, safari.
-            alpn: ['h2', 'http/1.1'],
+            fingerprint: "chrome", // Preferred fingeprint, is better to use chrome, firefox, safari.
+            alpn: ["h2", "http/1.1"],
             serverName: randomizedDomain,
           },
         },
-        tag: 'proxy',
+        tag: "proxy",
       },
       {
-        tag: 'fragment',
-        protocol: 'freedom',
+        tag: "fragment",
+        protocol: "freedom",
         settings: {
           fragment: {
-            packets: '1-1', // "1-2"      Or  "1-5"    Or  "tlshello"
-            length: '1403', // "100-200"  Or  "10-30"  Or  "100-200"
-            interval: '1', // "1-2"      Or  "1-3"    Or  "2-4"
+            packets: "1-1", // "1-2"      Or  "1-5"    Or  "tlshello"
+            length: "1403", // "100-200"  Or  "10-30"  Or  "100-200"
+            interval: "1", // "1-2"      Or  "1-3"    Or  "2-4"
           },
         },
         streamSettings: {
@@ -163,22 +163,22 @@ async function handleRequest(request) {
         },
       },
       {
-        protocol: 'dns',
-        tag: 'dns-out',
+        protocol: "dns",
+        tag: "dns-out",
       },
       {
-        protocol: 'freedom',
+        protocol: "freedom",
         settings: {},
-        tag: 'direct',
+        tag: "direct",
       },
       {
-        protocol: 'blackhole',
+        protocol: "blackhole",
         settings: {
           response: {
-            type: 'http',
+            type: "http",
           },
         },
-        tag: 'block',
+        tag: "block",
       },
     ],
     policy: {
@@ -196,25 +196,25 @@ async function handleRequest(request) {
       },
     },
     routing: {
-      domainStrategy: 'IPIfNonMatch',
+      domainStrategy: "IPIfNonMatch",
       rules: [
         {
-          ip: ['8.8.8.8'],
-          outboundTag: 'direct',
-          port: '53',
-          type: 'field',
+          ip: ["8.8.8.8"],
+          outboundTag: "direct",
+          port: "53",
+          type: "field",
         },
         {
-          inboundTag: ['socks-in', 'http-in'],
-          type: 'field',
-          port: '53',
-          outboundTag: 'dns-out',
+          inboundTag: ["socks-in", "http-in"],
+          type: "field",
+          port: "53",
+          outboundTag: "dns-out",
           enabled: true,
         },
         {
-          outboundTag: 'proxy',
-          type: 'field',
-          network: 'tcp,udp',
+          outboundTag: "proxy",
+          type: "field",
+          network: "tcp,udp",
         },
       ],
     },
@@ -224,7 +224,7 @@ async function handleRequest(request) {
   return new Response(JSON.stringify(config, null, 2), {
     status: 200,
     headers: {
-      'Content-Type': 'application/json;charset=utf-8',
+      "Content-Type": "application/json;charset=utf-8",
     },
   });
 }

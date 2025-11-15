@@ -53,37 +53,37 @@ async function handleRequest(request) {
   function getCountryFlag(countryCode) {
     if (!countryCode || countryCode.length !== 2) return null;
     return countryCode
-      .split('')
-      .map(char => String.fromCodePoint(127397 + char.charCodeAt()))
-      .join('');
+      .split("")
+      .map((char) => String.fromCodePoint(127397 + char.charCodeAt()))
+      .join("");
   }
 
   // Enhanced connection type detection
   function getConnectionType(asOrganization, asn) {
-    if (!asOrganization) return 'Unknown';
+    if (!asOrganization) return "Unknown";
     const org = asOrganization.toLowerCase();
 
     // Common VPN/Proxy ASNs and patterns
-    const vpnPatterns = ['private customer', 'vpn', 'proxy', 'privacy', 'anonymous'];
+    const vpnPatterns = ["private customer", "vpn", "proxy", "privacy", "anonymous"];
     const hostingPatterns = [
-      'hosting',
-      'server',
-      'cloud',
-      'datacenter',
-      'digital ocean',
-      'amazon',
-      'google',
-      'microsoft',
+      "hosting",
+      "server",
+      "cloud",
+      "datacenter",
+      "digital ocean",
+      "amazon",
+      "google",
+      "microsoft",
     ];
-    const mobilePatterns = ['mobile', 'cellular', 'wireless', 'telecom'];
-    const ispPatterns = ['broadband', 'cable', 'fiber', 'fibre', 'internet', 'communications'];
+    const mobilePatterns = ["mobile", "cellular", "wireless", "telecom"];
+    const ispPatterns = ["broadband", "cable", "fiber", "fibre", "internet", "communications"];
 
-    if (vpnPatterns.some(pattern => org.includes(pattern))) return 'VPN/Proxy';
-    if (hostingPatterns.some(pattern => org.includes(pattern))) return 'Hosting/Datacenter';
-    if (mobilePatterns.some(pattern => org.includes(pattern))) return 'Mobile/Cellular';
-    if (ispPatterns.some(pattern => org.includes(pattern))) return 'ISP/Residential';
+    if (vpnPatterns.some((pattern) => org.includes(pattern))) return "VPN/Proxy";
+    if (hostingPatterns.some((pattern) => org.includes(pattern))) return "Hosting/Datacenter";
+    if (mobilePatterns.some((pattern) => org.includes(pattern))) return "Mobile/Cellular";
+    if (ispPatterns.some((pattern) => org.includes(pattern))) return "ISP/Residential";
 
-    return 'Unknown';
+    return "Unknown";
   }
 
   // Device detection from User Agent
@@ -91,27 +91,27 @@ async function handleRequest(request) {
     if (!userAgent) return {};
 
     const ua = userAgent.toLowerCase();
-    let device = 'Unknown';
-    let os = 'Unknown';
-    let browser = 'Unknown';
+    let device = "Unknown";
+    let os = "Unknown";
+    let browser = "Unknown";
 
     // Device detection
-    if (ua.includes('mobile')) device = 'Mobile';
-    else if (ua.includes('tablet')) device = 'Tablet';
-    else device = 'Desktop';
+    if (ua.includes("mobile")) device = "Mobile";
+    else if (ua.includes("tablet")) device = "Tablet";
+    else device = "Desktop";
 
     // OS detection
-    if (ua.includes('android')) os = 'Android';
-    else if (ua.includes('iphone') || ua.includes('ipad')) os = 'iOS';
-    else if (ua.includes('windows')) os = 'Windows';
-    else if (ua.includes('macintosh') || ua.includes('mac os')) os = 'macOS';
-    else if (ua.includes('linux')) os = 'Linux';
+    if (ua.includes("android")) os = "Android";
+    else if (ua.includes("iphone") || ua.includes("ipad")) os = "iOS";
+    else if (ua.includes("windows")) os = "Windows";
+    else if (ua.includes("macintosh") || ua.includes("mac os")) os = "macOS";
+    else if (ua.includes("linux")) os = "Linux";
 
     // Browser detection
-    if (ua.includes('chrome') && !ua.includes('edge')) browser = 'Chrome';
-    else if (ua.includes('firefox')) browser = 'Firefox';
-    else if (ua.includes('safari') && !ua.includes('chrome')) browser = 'Safari';
-    else if (ua.includes('edge')) browser = 'Edge';
+    if (ua.includes("chrome") && !ua.includes("edge")) browser = "Chrome";
+    else if (ua.includes("firefox")) browser = "Firefox";
+    else if (ua.includes("safari") && !ua.includes("chrome")) browser = "Safari";
+    else if (ua.includes("edge")) browser = "Edge";
 
     return { device, os, browser };
   }
@@ -122,56 +122,56 @@ async function handleRequest(request) {
     let riskFactors = [];
 
     // VPN/Proxy detection
-    if (cf?.asOrganization?.toLowerCase().includes('private customer')) {
+    if (cf?.asOrganization?.toLowerCase().includes("private customer")) {
       riskScore += 30;
-      riskFactors.push('Possible VPN/Proxy');
+      riskFactors.push("Possible VPN/Proxy");
     }
 
     // No User Agent
     if (!userAgent) {
       riskScore += 50;
-      riskFactors.push('Missing User Agent');
+      riskFactors.push("Missing User Agent");
     }
 
     // Suspicious headers
-    if (!headers.get('Accept-Language')) {
+    if (!headers.get("Accept-Language")) {
       riskScore += 20;
-      riskFactors.push('Missing Accept-Language');
+      riskFactors.push("Missing Accept-Language");
     }
 
     // Very low RTT (might indicate datacenter)
     if (cf?.clientTcpRtt && cf.clientTcpRtt < 5) {
       riskScore += 10;
-      riskFactors.push('Very low latency');
+      riskFactors.push("Very low latency");
     }
 
     // Missing common headers
-    if (!headers.get('Accept')) {
+    if (!headers.get("Accept")) {
       riskScore += 25;
-      riskFactors.push('Missing Accept header');
+      riskFactors.push("Missing Accept header");
     }
 
-    let riskLevel = 'Low';
-    if (riskScore >= 70) riskLevel = 'High';
-    else if (riskScore >= 40) riskLevel = 'Medium';
+    let riskLevel = "Low";
+    if (riskScore >= 70) riskLevel = "High";
+    else if (riskScore >= 40) riskLevel = "Medium";
 
     return { riskScore, riskLevel, riskFactors };
   }
 
-  const userAgentAnalysis = analyzeUserAgent(headers.get('User-Agent'));
-  const riskAssessment = assessRisk(request.cf, headers, headers.get('User-Agent'));
+  const userAgentAnalysis = analyzeUserAgent(headers.get("User-Agent"));
+  const riskAssessment = assessRisk(request.cf, headers, headers.get("User-Agent"));
 
   const data = {
     // Basic Info
-    ip: headers.get('CF-Connecting-IP') || headers.get('X-Forwarded-For') || null,
-    userAgent: headers.get('User-Agent') || null,
+    ip: headers.get("CF-Connecting-IP") || headers.get("X-Forwarded-For") || null,
+    userAgent: headers.get("User-Agent") || null,
 
     // Request Info
     method: request.method,
     url: request.url,
     protocol: url.protocol,
-    host: headers.get('Host') || null,
-    referer: headers.get('Referer') || null,
+    host: headers.get("Host") || null,
+    referer: headers.get("Referer") || null,
 
     // Geo Information
     cf: {
@@ -220,26 +220,26 @@ async function handleRequest(request) {
 
     // Headers Analysis
     headers: {
-      acceptLanguage: headers.get('Accept-Language') || null,
-      acceptEncoding: headers.get('Accept-Encoding') || null,
-      accept: headers.get('Accept') || null,
-      dnt: headers.get('DNT') || null,
-      upgradeInsecureRequests: headers.get('Upgrade-Insecure-Requests') || null,
-      secFetchSite: headers.get('Sec-Fetch-Site') || null,
-      secFetchMode: headers.get('Sec-Fetch-Mode') || null,
-      secFetchUser: headers.get('Sec-Fetch-User') || null,
-      secFetchDest: headers.get('Sec-Fetch-Dest') || null,
+      acceptLanguage: headers.get("Accept-Language") || null,
+      acceptEncoding: headers.get("Accept-Encoding") || null,
+      accept: headers.get("Accept") || null,
+      dnt: headers.get("DNT") || null,
+      upgradeInsecureRequests: headers.get("Upgrade-Insecure-Requests") || null,
+      secFetchSite: headers.get("Sec-Fetch-Site") || null,
+      secFetchMode: headers.get("Sec-Fetch-Mode") || null,
+      secFetchUser: headers.get("Sec-Fetch-User") || null,
+      secFetchDest: headers.get("Sec-Fetch-Dest") || null,
 
       // Cloudflare specific
-      cfRay: headers.get('CF-RAY') || null,
-      cfVisitor: headers.get('CF-Visitor') || null,
-      cfIpCountry: headers.get('CF-IPCountry') || null,
+      cfRay: headers.get("CF-RAY") || null,
+      cfVisitor: headers.get("CF-Visitor") || null,
+      cfIpCountry: headers.get("CF-IPCountry") || null,
     },
 
     // Additional Info
     isBot: !!request.cf?.botManagement?.score,
-    isMobile: userAgentAnalysis.device === 'Mobile',
-    isVPN: getConnectionType(request.cf?.asOrganization).includes('VPN'),
+    isMobile: userAgentAnalysis.device === "Mobile",
+    isVPN: getConnectionType(request.cf?.asOrganization).includes("VPN"),
 
     // Timestamps
     timestamp: new Date().toISOString(),
@@ -248,14 +248,14 @@ async function handleRequest(request) {
 
   return new Response(JSON.stringify(data, null, 2), {
     headers: {
-      'content-type': 'application/json;charset=UTF-8',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET,HEAD,POST,OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
+      "content-type": "application/json;charset=UTF-8",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET,HEAD,POST,OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
     },
   });
 }
 
-addEventListener('fetch', event => {
+addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request));
 });

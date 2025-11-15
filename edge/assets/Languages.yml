@@ -37,7 +37,7 @@
 ---
 1C Enterprise:
   type: programming
-  color: '#814CCC'
+  color: "#814CCC"
   extensions:
     - .bsl
     - .os
@@ -46,7 +46,7 @@
   language_id: 0
 2-Dimensional Array:
   type: data
-  color: '#38761D'
+  color: "#38761D"
   extensions:
     - .2da
   tm_scope: source.2da
@@ -54,7 +54,7 @@
   language_id: 387204628
 4D:
   type: programming
-  color: '#004289'
+  color: "#004289"
   extensions:
     - .4dm
   tm_scope: source.4dm
@@ -62,7 +62,7 @@
   language_id: 577529595
 ABAP:
   type: programming
-  color: '#E8274B'
+  color: "#E8274B"
   extensions:
     - .abap
   tm_scope: source.abap
@@ -70,7 +70,7 @@ ABAP:
   language_id: 1
 ABAP CDS:
   type: programming
-  color: '#555e25'
+  color: "#555e25"
   extensions:
     - .asddls
   tm_scope: source.abapcds
@@ -85,7 +85,7 @@ ABNF:
   language_id: 429
 AGS Script:
   type: programming
-  color: '#B9D9FF'
+  color: "#B9D9FF"
   aliases:
     - ags
   extensions:
@@ -98,7 +98,7 @@ AGS Script:
   language_id: 2
 AIDL:
   type: programming
-  color: '#34EB6B'
+  color: "#34EB6B"
   tm_scope: source.aidl
   extensions:
     - .aidl
@@ -108,7 +108,7 @@ AIDL:
   language_id: 451700185
 AL:
   type: programming
-  color: '#3AA2B5'
+  color: "#3AA2B5"
   extensions:
     - .al
   tm_scope: source.al
@@ -116,7 +116,7 @@ AL:
   language_id: 658971832
 AMPL:
   type: programming
-  color: '#E6EFBB'
+  color: "#E6EFBB"
   extensions:
     - .ampl
     - .mod
@@ -125,7 +125,7 @@ AMPL:
   language_id: 3
 ANTLR:
   type: programming
-  color: '#9DC3FF'
+  color: "#9DC3FF"
   extensions:
     - .g4
   tm_scope: source.antlr
@@ -133,7 +133,7 @@ ANTLR:
   language_id: 4
 API Blueprint:
   type: markup
-  color: '#2ACCA8'
+  color: "#2ACCA8"
   ace_mode: markdown
   extensions:
     - .apib
@@ -141,7 +141,7 @@ API Blueprint:
   language_id: 5
 APL:
   type: programming
-  color: '#5A8164'
+  color: "#5A8164"
   extensions:
     - .apl
     - .dyalog
@@ -175,7 +175,7 @@ ASN.1:
 ASP.NET:
   type: programming
   tm_scope: text.html.asp
-  color: '#9400ff'
+  color: "#9400ff"
   aliases:
     - aspx
     - aspx-vb
@@ -192,7 +192,7 @@ ASP.NET:
   language_id: 564186416
 ATS:
   type: programming
-  color: '#1ac620'
+  color: "#1ac620"
   aliases:
     - ats2
   extensions:
@@ -205,7 +205,7 @@ ATS:
 ActionScript:
   type: programming
   tm_scope: source.actionscript.3
-  color: '#882B0F'
+  color: "#882B0F"
   aliases:
     - actionscript 3
     - actionscript3
@@ -216,7 +216,7 @@ ActionScript:
   language_id: 10
 Ada:
   type: programming
-  color: '#02f88c'
+  color: "#02f88c"
   extensions:
     - .adb
     - .ada
@@ -229,7 +229,7 @@ Ada:
   language_id: 11
 Adblock Filter List:
   type: data
-  color: '#800000'
+  color: "#800000"
   ace_mode: text
   extensions:
     - .txt
@@ -242,7 +242,7 @@ Adblock Filter List:
   language_id: 884614762
 Adobe Font Metrics:
   type: data
-  color: '#fa0f00'
+  color: "#fa0f00"
   tm_scope: source.afm
   extensions:
     - .afm
@@ -255,7 +255,7 @@ Adobe Font Metrics:
   language_id: 147198098
 Agda:
   type: programming
-  color: '#315665'
+  color: "#315665"
   extensions:
     - .agda
   tm_scope: source.agda
@@ -263,7 +263,7 @@ Agda:
   language_id: 12
 Aiken:
   type: programming
-  color: '#640ff8'
+  color: "#640ff8"
   ace_mode: text
   extensions:
     - .ak
@@ -271,7 +271,7 @@ Aiken:
   language_id: 899409497
 Alloy:
   type: programming
-  color: '#64C800'
+  color: "#64C800"
   extensions:
     - .als
   tm_scope: source.alloy
@@ -279,7 +279,7 @@ Alloy:
   language_id: 13
 Alpine Abuild:
   type: programming
-  color: '#0D597F'
+  color: "#0D597F"
   group: Shell
   aliases:
     - abuild
@@ -293,7 +293,7 @@ Alpine Abuild:
   language_id: 14
 Altium Designer:
   type: data
-  color: '#A89663'
+  color: "#A89663"
   aliases:
     - altium
   extensions:
@@ -306,7 +306,7 @@ Altium Designer:
   language_id: 187772328
 AngelScript:
   type: programming
-  color: '#C7D7DC'
+  color: "#C7D7DC"
   extensions:
     - .as
     - .angelscript
@@ -317,7 +317,7 @@ AngelScript:
   language_id: 389477596
 Answer Set Programming:
   type: programming
-  color: '#A9CC29'
+  color: "#A9CC29"
   extensions:
     - .lp
   interpreters:
@@ -327,7 +327,7 @@ Answer Set Programming:
   language_id: 433009171
 Ant Build System:
   type: data
-  color: '#A9157E'
+  color: "#A9157E"
   tm_scope: text.xml.ant
   filenames:
     - ant.xml
@@ -338,7 +338,7 @@ Ant Build System:
   language_id: 15
 Antlers:
   type: markup
-  color: '#ff269e'
+  color: "#ff269e"
   extensions:
     - .antlers.html
     - .antlers.php
@@ -348,7 +348,7 @@ Antlers:
   language_id: 1067292663
 ApacheConf:
   type: data
-  color: '#d12127'
+  color: "#d12127"
   aliases:
     - aconf
     - apache
@@ -364,7 +364,7 @@ ApacheConf:
   language_id: 16
 Apex:
   type: programming
-  color: '#1797c0'
+  color: "#1797c0"
   extensions:
     - .cls
     - .apex
@@ -376,7 +376,7 @@ Apex:
   language_id: 17
 Apollo Guidance Computer:
   type: programming
-  color: '#0B3D91'
+  color: "#0B3D91"
   group: Assembly
   extensions:
     - .agc
@@ -394,11 +394,11 @@ AppleScript:
     - osascript
   tm_scope: source.applescript
   ace_mode: applescript
-  color: '#101F1F'
+  color: "#101F1F"
   language_id: 19
 Arc:
   type: programming
-  color: '#aa2afe'
+  color: "#aa2afe"
   extensions:
     - .arc
   tm_scope: none
@@ -406,7 +406,7 @@ Arc:
   language_id: 20
 AsciiDoc:
   type: prose
-  color: '#73a0c5'
+  color: "#73a0c5"
   ace_mode: asciidoc
   wrap: true
   extensions:
@@ -417,7 +417,7 @@ AsciiDoc:
   language_id: 22
 AspectJ:
   type: programming
-  color: '#a957b0'
+  color: "#a957b0"
   extensions:
     - .aj
   tm_scope: source.aspectj
@@ -425,7 +425,7 @@ AspectJ:
   language_id: 23
 Assembly:
   type: programming
-  color: '#6E4C13'
+  color: "#6E4C13"
   aliases:
     - asm
     - nasm
@@ -442,7 +442,7 @@ Assembly:
   language_id: 24
 Astro:
   type: markup
-  color: '#ff5a03'
+  color: "#ff5a03"
   extensions:
     - .astro
   tm_scope: source.astro
@@ -452,7 +452,7 @@ Astro:
   language_id: 578209015
 Asymptote:
   type: programming
-  color: '#ff0000'
+  color: "#ff0000"
   extensions:
     - .asy
   interpreters:
@@ -464,7 +464,7 @@ Asymptote:
   language_id: 591605007
 Augeas:
   type: programming
-  color: '#9CC134'
+  color: "#9CC134"
   extensions:
     - .aug
   tm_scope: none
@@ -472,7 +472,7 @@ Augeas:
   language_id: 25
 AutoHotkey:
   type: programming
-  color: '#6594b9'
+  color: "#6594b9"
   aliases:
     - ahk
   extensions:
@@ -483,7 +483,7 @@ AutoHotkey:
   language_id: 26
 AutoIt:
   type: programming
-  color: '#1C3552'
+  color: "#1C3552"
   aliases:
     - au3
     - AutoIt3
@@ -495,7 +495,7 @@ AutoIt:
   language_id: 27
 Avro IDL:
   type: data
-  color: '#0040FF'
+  color: "#0040FF"
   extensions:
     - .avdl
   tm_scope: source.avro
@@ -503,7 +503,7 @@ Avro IDL:
   language_id: 785497837
 Awk:
   type: programming
-  color: '#c30e9b'
+  color: "#c30e9b"
   extensions:
     - .awk
     - .auk
@@ -520,7 +520,7 @@ Awk:
   language_id: 28
 B4X:
   type: programming
-  color: '#00e4ff'
+  color: "#00e4ff"
   extensions:
     - .bas
   tm_scope: source.vba
@@ -536,11 +536,11 @@ BASIC:
     - .bas
   tm_scope: source.basic
   ace_mode: text
-  color: '#ff0000'
+  color: "#ff0000"
   language_id: 28923963
 BQN:
   type: programming
-  color: '#2b7067'
+  color: "#2b7067"
   extensions:
     - .bqn
   tm_scope: source.bqn
@@ -552,7 +552,7 @@ Ballerina:
     - .bal
   tm_scope: source.ballerina
   ace_mode: text
-  color: '#FF5000'
+  color: "#FF5000"
   language_id: 720859680
 Batchfile:
   type: programming
@@ -566,11 +566,11 @@ Batchfile:
     - .cmd
   tm_scope: source.batchfile
   ace_mode: batchfile
-  color: '#C1F12E'
+  color: "#C1F12E"
   language_id: 29
 Beef:
   type: programming
-  color: '#a52f4e'
+  color: "#a52f4e"
   extensions:
     - .bf
   tm_scope: source.cs
@@ -592,13 +592,13 @@ Berry:
     - .be
   tm_scope: source.berry
   ace_mode: text
-  color: '#15A13C'
+  color: "#15A13C"
   aliases:
     - be
   language_id: 121855308
 BibTeX:
   type: markup
-  color: '#778899'
+  color: "#778899"
   group: TeX
   extensions:
     - .bib
@@ -617,7 +617,7 @@ BibTeX Style:
   language_id: 909569041
 Bicep:
   type: programming
-  color: '#519aba'
+  color: "#519aba"
   extensions:
     - .bicep
     - .bicepparam
@@ -626,7 +626,7 @@ Bicep:
   language_id: 321200902
 Bikeshed:
   type: markup
-  color: '#5562ac'
+  color: "#5562ac"
   extensions:
     - .bs
   tm_scope: source.csswg
@@ -636,7 +636,7 @@ Bikeshed:
   language_id: 1055528081
 Bison:
   type: programming
-  color: '#6A463F'
+  color: "#6A463F"
   group: Yacc
   tm_scope: source.yacc
   extensions:
@@ -645,7 +645,7 @@ Bison:
   language_id: 31
 BitBake:
   type: programming
-  color: '#00bce4'
+  color: "#00bce4"
   tm_scope: source.bb
   extensions:
     - .bb
@@ -656,7 +656,7 @@ BitBake:
   language_id: 32
 Blade:
   type: markup
-  color: '#f7523f'
+  color: "#f7523f"
   extensions:
     - .blade
     - .blade.php
@@ -665,7 +665,7 @@ Blade:
   language_id: 33
 BlitzBasic:
   type: programming
-  color: '#00FFAE'
+  color: "#00FFAE"
   aliases:
     - b3d
     - blitz3d
@@ -679,7 +679,7 @@ BlitzBasic:
   language_id: 34
 BlitzMax:
   type: programming
-  color: '#cd6400'
+  color: "#cd6400"
   extensions:
     - .bmx
   aliases:
@@ -689,7 +689,7 @@ BlitzMax:
   language_id: 35
 Bluespec:
   type: programming
-  color: '#12223c'
+  color: "#12223c"
   extensions:
     - .bsv
   aliases:
@@ -703,7 +703,7 @@ Bluespec:
 Bluespec BH:
   type: programming
   group: Bluespec
-  color: '#12223c'
+  color: "#12223c"
   extensions:
     - .bs
   aliases:
@@ -716,7 +716,7 @@ Bluespec BH:
   language_id: 641580358
 Boo:
   type: programming
-  color: '#d4bec1'
+  color: "#d4bec1"
   extensions:
     - .boo
   ace_mode: text
@@ -724,7 +724,7 @@ Boo:
   language_id: 37
 Boogie:
   type: programming
-  color: '#c80fa0'
+  color: "#c80fa0"
   extensions:
     - .bpl
   interpreters:
@@ -734,7 +734,7 @@ Boogie:
   language_id: 955017407
 Brainfuck:
   type: programming
-  color: '#2F2530'
+  color: "#2F2530"
   extensions:
     - .b
     - .bf
@@ -745,7 +745,7 @@ Brainfuck:
   language_id: 38
 BrighterScript:
   type: programming
-  color: '#66AABB'
+  color: "#66AABB"
   extensions:
     - .bs
   tm_scope: source.brs
@@ -753,7 +753,7 @@ BrighterScript:
   language_id: 943571030
 Brightscript:
   type: programming
-  color: '#662D91'
+  color: "#662D91"
   extensions:
     - .brs
   tm_scope: source.brs
@@ -761,7 +761,7 @@ Brightscript:
   language_id: 39
 Browserslist:
   type: data
-  color: '#ffd539'
+  color: "#ffd539"
   filenames:
     - .browserslistrc
     - browserslist
@@ -770,7 +770,7 @@ Browserslist:
   language_id: 153503348
 BuildStream:
   type: data
-  color: '#006bff'
+  color: "#006bff"
   extensions:
     - .bst
   tm_scope: source.yaml
@@ -778,7 +778,7 @@ BuildStream:
   language_id: 84359046
 C:
   type: programming
-  color: '#555555'
+  color: "#555555"
   extensions:
     - .c
     - .cats
@@ -798,7 +798,7 @@ C#:
   codemirror_mode: clike
   codemirror_mime_type: text/x-csharp
   tm_scope: source.cs
-  color: '#178600'
+  color: "#178600"
   aliases:
     - csharp
     - cake
@@ -816,18 +816,18 @@ C++:
   ace_mode: c_cpp
   codemirror_mode: clike
   codemirror_mime_type: text/x-c++src
-  color: '#f34b7d'
+  color: "#f34b7d"
   aliases:
     - cpp
   extensions:
     - .cpp
-    - '.c++'
+    - ".c++"
     - .cc
     - .cp
     - .cppm
     - .cxx
     - .h
-    - '.h++'
+    - ".h++"
     - .hh
     - .hpp
     - .hxx
@@ -863,7 +863,7 @@ C2hs Haskell:
 CAP CDS:
   type: programming
   tm_scope: source.cds
-  color: '#0092d1'
+  color: "#0092d1"
   aliases:
     - cds
   extensions:
@@ -879,7 +879,7 @@ CIL:
   language_id: 29176339
 CLIPS:
   type: programming
-  color: '#00A300'
+  color: "#00A300"
   extensions:
     - .clp
   tm_scope: source.clips
@@ -887,7 +887,7 @@ CLIPS:
   language_id: 46
 CMake:
   type: programming
-  color: '#DA3434'
+  color: "#DA3434"
   extensions:
     - .cmake
     - .cmake.in
@@ -920,7 +920,7 @@ CODEOWNERS:
   language_id: 321684729
 COLLADA:
   type: data
-  color: '#F1A42B'
+  color: "#F1A42B"
   extensions:
     - .dae
   tm_scope: text.xml
@@ -930,7 +930,7 @@ COLLADA:
   language_id: 49
 CSON:
   type: data
-  color: '#244776'
+  color: "#244776"
   tm_scope: source.coffee
   ace_mode: coffee
   codemirror_mode: coffeescript
@@ -944,13 +944,13 @@ CSS:
   ace_mode: css
   codemirror_mode: css
   codemirror_mime_type: text/css
-  color: '#663399'
+  color: "#663399"
   extensions:
     - .css
   language_id: 50
 CSV:
   type: data
-  color: '#237346'
+  color: "#237346"
   ace_mode: text
   tm_scope: none
   extensions:
@@ -962,11 +962,11 @@ CUE:
     - .cue
   tm_scope: source.cue
   ace_mode: text
-  color: '#5886E1'
+  color: "#5886E1"
   language_id: 356063509
 CWeb:
   type: programming
-  color: '#00007a'
+  color: "#00007a"
   extensions:
     - .w
   tm_scope: none
@@ -974,7 +974,7 @@ CWeb:
   language_id: 657332628
 Cabal Config:
   type: data
-  color: '#483465'
+  color: "#483465"
   aliases:
     - Cabal
   extensions:
@@ -989,7 +989,7 @@ Cabal Config:
   language_id: 677095381
 Caddyfile:
   type: data
-  color: '#22b638'
+  color: "#22b638"
   aliases:
     - Caddy
   extensions:
@@ -1001,7 +1001,7 @@ Caddyfile:
   language_id: 615465151
 Cadence:
   type: programming
-  color: '#00ef8b'
+  color: "#00ef8b"
   ace_mode: text
   tm_scope: source.cadence
   extensions:
@@ -1009,7 +1009,7 @@ Cadence:
   language_id: 270184138
 Cairo:
   type: programming
-  color: '#ff4a48'
+  color: "#ff4a48"
   ace_mode: text
   tm_scope: source.cairo
   extensions:
@@ -1018,7 +1018,7 @@ Cairo:
   language_id: 620599567
 Cairo Zero:
   type: programming
-  color: '#ff4a48'
+  color: "#ff4a48"
   ace_mode: text
   tm_scope: source.cairo0
   extensions:
@@ -1027,7 +1027,7 @@ Cairo Zero:
   language_id: 891399890
 CameLIGO:
   type: programming
-  color: '#3be133'
+  color: "#3be133"
   extensions:
     - .mligo
   tm_scope: source.mligo
@@ -1038,7 +1038,7 @@ CameLIGO:
   language_id: 829207807
 Cap'n Proto:
   type: programming
-  color: '#c42727'
+  color: "#c42727"
   tm_scope: source.capnp
   extensions:
     - .capnp
@@ -1046,7 +1046,7 @@ Cap'n Proto:
   language_id: 52
 Carbon:
   type: programming
-  color: '#222222'
+  color: "#222222"
   extensions:
     - .carbon
   ace_mode: golang
@@ -1065,7 +1065,7 @@ CartoCSS:
   language_id: 53
 Ceylon:
   type: programming
-  color: '#dfa535'
+  color: "#dfa535"
   extensions:
     - .ceylon
   tm_scope: source.ceylon
@@ -1073,7 +1073,7 @@ Ceylon:
   language_id: 54
 Chapel:
   type: programming
-  color: '#8dc63f'
+  color: "#8dc63f"
   aliases:
     - chpl
   extensions:
@@ -1123,7 +1123,7 @@ Checksums:
   language_id: 372063053
 ChucK:
   type: programming
-  color: '#3f8000'
+  color: "#3f8000"
   extensions:
     - .ck
   tm_scope: source.java
@@ -1136,12 +1136,12 @@ Circom:
   ace_mode: text
   extensions:
     - .circom
-  color: '#707575'
+  color: "#707575"
   tm_scope: source.circom
   language_id: 1042332086
 Cirru:
   type: programming
-  color: '#ccccff'
+  color: "#ccccff"
   tm_scope: source.cirru
   ace_mode: cirru
   extensions:
@@ -1149,7 +1149,7 @@ Cirru:
   language_id: 58
 Clarion:
   type: programming
-  color: '#db901e'
+  color: "#db901e"
   ace_mode: text
   extensions:
     - .clw
@@ -1157,7 +1157,7 @@ Clarion:
   language_id: 59
 Clarity:
   type: programming
-  color: '#5546ff'
+  color: "#5546ff"
   ace_mode: lisp
   extensions:
     - .clar
@@ -1165,7 +1165,7 @@ Clarity:
   language_id: 91493841
 Classic ASP:
   type: programming
-  color: '#6a40fd'
+  color: "#6a40fd"
   tm_scope: text.html.asp
   aliases:
     - asp
@@ -1175,7 +1175,7 @@ Classic ASP:
   language_id: 8
 Clean:
   type: programming
-  color: '#3F85AF'
+  color: "#3F85AF"
   extensions:
     - .icl
     - .dcl
@@ -1184,7 +1184,7 @@ Clean:
   language_id: 60
 Click:
   type: programming
-  color: '#E4E6F3'
+  color: "#E4E6F3"
   extensions:
     - .click
   tm_scope: source.click
@@ -1196,7 +1196,7 @@ Clojure:
   ace_mode: clojure
   codemirror_mode: clojure
   codemirror_mime_type: text/x-clojure
-  color: '#db5855'
+  color: "#db5855"
   extensions:
     - .clj
     - .bb
@@ -1215,7 +1215,7 @@ Clojure:
   language_id: 62
 Closure Templates:
   type: markup
-  color: '#0d948f'
+  color: "#0d948f"
   ace_mode: soy_template
   codemirror_mode: soy
   codemirror_mime_type: text/x-soy
@@ -1227,7 +1227,7 @@ Closure Templates:
   language_id: 357046146
 Cloud Firestore Security Rules:
   type: data
-  color: '#FFA000'
+  color: "#FFA000"
   ace_mode: less
   codemirror_mode: css
   codemirror_mime_type: text/css
@@ -1237,7 +1237,7 @@ Cloud Firestore Security Rules:
   language_id: 407996372
 Clue:
   type: programming
-  color: '#0009b5'
+  color: "#0009b5"
   extensions:
     - .clue
   tm_scope: source.clue
@@ -1256,7 +1256,7 @@ CoNLL-U:
   language_id: 421026389
 CodeQL:
   type: programming
-  color: '#140f46'
+  color: "#140f46"
   extensions:
     - .ql
     - .qll
@@ -1271,7 +1271,7 @@ CoffeeScript:
   ace_mode: coffee
   codemirror_mode: coffeescript
   codemirror_mime_type: text/x-coffeescript
-  color: '#244776'
+  color: "#244776"
   aliases:
     - coffee
     - coffee-script
@@ -1289,7 +1289,7 @@ CoffeeScript:
 ColdFusion:
   type: programming
   ace_mode: coldfusion
-  color: '#ed2cd6'
+  color: "#ed2cd6"
   aliases:
     - cfm
     - cfml
@@ -1301,7 +1301,7 @@ ColdFusion:
   language_id: 64
 ColdFusion CFC:
   type: programming
-  color: '#ed2cd6'
+  color: "#ed2cd6"
   group: ColdFusion
   ace_mode: coldfusion
   aliases:
@@ -1313,7 +1313,7 @@ ColdFusion CFC:
 Common Lisp:
   type: programming
   tm_scope: source.commonlisp
-  color: '#3fb68b'
+  color: "#3fb68b"
   aliases:
     - lisp
   extensions:
@@ -1346,12 +1346,12 @@ Common Workflow Language:
     - .cwl
   interpreters:
     - cwl-runner
-  color: '#B5314C'
+  color: "#B5314C"
   tm_scope: source.cwl
   language_id: 988547172
 Component Pascal:
   type: programming
-  color: '#B0CE4E'
+  color: "#B0CE4E"
   extensions:
     - .cp
     - .cps
@@ -1371,8 +1371,8 @@ Cpp-ObjDump:
   type: data
   extensions:
     - .cppobjdump
-    - '.c++-objdump'
-    - '.c++objdump'
+    - ".c++-objdump"
+    - ".c++objdump"
     - .cpp-objdump
     - .cxx-objdump
   tm_scope: objdump.x86asm
@@ -1390,7 +1390,7 @@ Creole:
   language_id: 71
 Crystal:
   type: programming
-  color: '#000100'
+  color: "#000100"
   extensions:
     - .cr
   ace_mode: ruby
@@ -1402,7 +1402,7 @@ Crystal:
   language_id: 72
 Csound:
   type: programming
-  color: '#1a1a1a'
+  color: "#1a1a1a"
   aliases:
     - csound-orc
   extensions:
@@ -1413,7 +1413,7 @@ Csound:
   language_id: 73
 Csound Document:
   type: programming
-  color: '#1a1a1a'
+  color: "#1a1a1a"
   aliases:
     - csound-csd
   extensions:
@@ -1423,7 +1423,7 @@ Csound Document:
   language_id: 74
 Csound Score:
   type: programming
-  color: '#1a1a1a'
+  color: "#1a1a1a"
   aliases:
     - csound-sco
   extensions:
@@ -1440,7 +1440,7 @@ Cuda:
   ace_mode: c_cpp
   codemirror_mode: clike
   codemirror_mime_type: text/x-c++src
-  color: '#3A4E3A'
+  color: "#3A4E3A"
   language_id: 77
 Cue Sheet:
   type: data
@@ -1451,7 +1451,7 @@ Cue Sheet:
   language_id: 942714150
 Curry:
   type: programming
-  color: '#531242'
+  color: "#531242"
   extensions:
     - .curry
   tm_scope: source.curry
@@ -1468,7 +1468,7 @@ Cycript:
   language_id: 78
 Cylc:
   type: data
-  color: '#00b3fd'
+  color: "#00b3fd"
   extensions:
     - .cylc
   filenames:
@@ -1479,7 +1479,7 @@ Cylc:
   language_id: 476447814
 Cypher:
   type: programming
-  color: '#34c0eb'
+  color: "#34c0eb"
   extensions:
     - .cyp
     - .cypher
@@ -1488,7 +1488,7 @@ Cypher:
   language_id: 850806976
 Cython:
   type: programming
-  color: '#fedf5b'
+  color: "#fedf5b"
   extensions:
     - .pyx
     - .pxd
@@ -1502,7 +1502,7 @@ Cython:
   language_id: 79
 D:
   type: programming
-  color: '#ba595e'
+  color: "#ba595e"
   aliases:
     - Dlang
   extensions:
@@ -1522,7 +1522,7 @@ D-ObjDump:
   language_id: 81
 D2:
   type: markup
-  color: '#526ee8'
+  color: "#526ee8"
   extensions:
     - .d2
   aliases:
@@ -1541,7 +1541,7 @@ DIGITAL Command Language:
   language_id: 82
 DM:
   type: programming
-  color: '#447265'
+  color: "#447265"
   extensions:
     - .dm
   aliases:
@@ -1572,7 +1572,7 @@ DTrace:
   language_id: 85
 Dafny:
   type: programming
-  color: '#FFEC25'
+  color: "#FFEC25"
   extensions:
     - .dfy
   interpreters:
@@ -1582,7 +1582,7 @@ Dafny:
   language_id: 969323346
 Darcs Patch:
   type: data
-  color: '#8eff23'
+  color: "#8eff23"
   aliases:
     - dpatch
   extensions:
@@ -1593,7 +1593,7 @@ Darcs Patch:
   language_id: 86
 Dart:
   type: programming
-  color: '#00B4AB'
+  color: "#00B4AB"
   extensions:
     - .dart
   interpreters:
@@ -1605,7 +1605,7 @@ Dart:
   language_id: 87
 Daslang:
   type: programming
-  color: '#d3d3d3'
+  color: "#d3d3d3"
   extensions:
     - .das
   tm_scope: source.daslang
@@ -1613,7 +1613,7 @@ Daslang:
   language_id: 648759486
 DataWeave:
   type: programming
-  color: '#003a52'
+  color: "#003a52"
   extensions:
     - .dwl
   ace_mode: text
@@ -1621,7 +1621,7 @@ DataWeave:
   language_id: 974514097
 Debian Package Control File:
   type: data
-  color: '#D70751'
+  color: "#D70751"
   extensions:
     - .dsc
   tm_scope: source.deb-control
@@ -1629,7 +1629,7 @@ Debian Package Control File:
   language_id: 527438264
 DenizenScript:
   type: programming
-  color: '#FBEE96'
+  color: "#FBEE96"
   ace_mode: yaml
   codemirror_mode: yaml
   codemirror_mime_type: text/x-yaml
@@ -1639,7 +1639,7 @@ DenizenScript:
   language_id: 435000929
 Dhall:
   type: programming
-  color: '#dfafff'
+  color: "#dfafff"
   extensions:
     - .dhall
   tm_scope: source.haskell
@@ -1661,7 +1661,7 @@ Diff:
   language_id: 88
 DirectX 3D File:
   type: data
-  color: '#aace60'
+  color: "#aace60"
   extensions:
     - .x
   ace_mode: text
@@ -1671,7 +1671,7 @@ Dockerfile:
   type: programming
   aliases:
     - Containerfile
-  color: '#384d54'
+  color: "#384d54"
   tm_scope: source.dockerfile
   extensions:
     - .dockerfile
@@ -1685,7 +1685,7 @@ Dockerfile:
   language_id: 89
 Dogescript:
   type: programming
-  color: '#cca760'
+  color: "#cca760"
   extensions:
     - .djs
   tm_scope: none
@@ -1693,7 +1693,7 @@ Dogescript:
   language_id: 90
 Dotenv:
   type: data
-  color: '#e5d559'
+  color: "#e5d559"
   extensions:
     - .env
   filenames:
@@ -1719,11 +1719,11 @@ Dune:
   filenames:
     - dune-project
   tm_scope: source.dune
-  color: '#89421e'
+  color: "#89421e"
   language_id: 754574151
 Dylan:
   type: programming
-  color: '#6c616e'
+  color: "#6c616e"
   extensions:
     - .dylan
     - .dyl
@@ -1736,7 +1736,7 @@ Dylan:
   language_id: 91
 E:
   type: programming
-  color: '#ccce35'
+  color: "#ccce35"
   extensions:
     - .e
   interpreters:
@@ -1770,7 +1770,7 @@ EBNF:
   language_id: 430
 ECL:
   type: programming
-  color: '#8a1267'
+  color: "#8a1267"
   extensions:
     - .ecl
     - .eclxml
@@ -1781,7 +1781,7 @@ ECL:
   language_id: 93
 ECLiPSe:
   type: programming
-  color: '#001d9d'
+  color: "#001d9d"
   group: Prolog
   extensions:
     - .ecl
@@ -1790,7 +1790,7 @@ ECLiPSe:
   language_id: 94
 EJS:
   type: markup
-  color: '#a91e50'
+  color: "#a91e50"
   extensions:
     - .ejs
     - .ect
@@ -1801,7 +1801,7 @@ EJS:
   language_id: 95
 EQ:
   type: programming
-  color: '#a78649'
+  color: "#a78649"
   extensions:
     - .eq
   tm_scope: source.cs
@@ -1823,7 +1823,7 @@ Earthly:
   type: programming
   aliases:
     - Earthfile
-  color: '#2af0ff'
+  color: "#2af0ff"
   tm_scope: source.earthfile
   ace_mode: text
   filenames:
@@ -1831,7 +1831,7 @@ Earthly:
   language_id: 963512632
 Easybuild:
   type: data
-  color: '#069406'
+  color: "#069406"
   group: Python
   ace_mode: python
   codemirror_mode: python
@@ -1842,7 +1842,7 @@ Easybuild:
   language_id: 342840477
 Ecere Projects:
   type: data
-  color: '#913960'
+  color: "#913960"
   group: JavaScript
   extensions:
     - .epj
@@ -1853,7 +1853,7 @@ Ecere Projects:
   language_id: 98
 Ecmarkup:
   type: markup
-  color: '#eb8131'
+  color: "#eb8131"
   group: HTML
   extensions:
     - .html
@@ -1866,7 +1866,7 @@ Ecmarkup:
   language_id: 844766630
 Edge:
   type: markup
-  color: '#0dffe0'
+  color: "#0dffe0"
   extensions:
     - .edge
   tm_scope: text.html.edge
@@ -1874,7 +1874,7 @@ Edge:
   language_id: 460509620
 EdgeQL:
   type: programming
-  color: '#31A7FF'
+  color: "#31A7FF"
   aliases:
     - esdl
   extensions:
@@ -1885,7 +1885,7 @@ EdgeQL:
   language_id: 925235833
 EditorConfig:
   type: data
-  color: '#fff1f2'
+  color: "#fff1f2"
   group: INI
   extensions:
     - .editorconfig
@@ -1909,7 +1909,7 @@ Edje Data Collection:
   language_id: 342840478
 Eiffel:
   type: programming
-  color: '#4d6977'
+  color: "#4d6977"
   extensions:
     - .e
   tm_scope: source.eiffel
@@ -1919,7 +1919,7 @@ Eiffel:
   language_id: 99
 Elixir:
   type: programming
-  color: '#6e4a7e'
+  color: "#6e4a7e"
   extensions:
     - .ex
     - .exs
@@ -1932,7 +1932,7 @@ Elixir:
   language_id: 100
 Elm:
   type: programming
-  color: '#60B5CC'
+  color: "#60B5CC"
   extensions:
     - .elm
   tm_scope: source.elm
@@ -1948,19 +1948,19 @@ Elvish:
   interpreters:
     - elvish
   tm_scope: source.elvish
-  color: '#55BB55'
+  color: "#55BB55"
   language_id: 570996448
 Elvish Transcript:
   type: programming
   group: Elvish
   ace_mode: text
   tm_scope: source.elvish-transcript
-  color: '#55BB55'
+  color: "#55BB55"
   language_id: 452025714
 Emacs Lisp:
   type: programming
   tm_scope: source.emacs.lisp
-  color: '#c065db'
+  color: "#c065db"
   aliases:
     - elisp
     - emacs
@@ -1985,7 +1985,7 @@ Emacs Lisp:
   language_id: 102
 EmberScript:
   type: programming
-  color: '#FFF4F3'
+  color: "#FFF4F3"
   extensions:
     - .em
     - .emberscript
@@ -1996,7 +1996,7 @@ EmberScript:
   language_id: 103
 Erlang:
   type: programming
-  color: '#B83998'
+  color: "#B83998"
   extensions:
     - .erl
     - .app
@@ -2020,7 +2020,7 @@ Erlang:
   language_id: 104
 Euphoria:
   type: programming
-  color: '#FF790B'
+  color: "#FF790B"
   extensions:
     - .e
     - .ex
@@ -2032,7 +2032,7 @@ Euphoria:
   language_id: 880693982
 F#:
   type: programming
-  color: '#b845fc'
+  color: "#b845fc"
   aliases:
     - fsharp
   extensions:
@@ -2047,7 +2047,7 @@ F#:
 F*:
   fs_name: Fstar
   type: programming
-  color: '#572e30'
+  color: "#572e30"
   aliases:
     - fstar
   extensions:
@@ -2058,7 +2058,7 @@ F*:
   language_id: 336943375
 FIGlet Font:
   type: data
-  color: '#FFDDBB'
+  color: "#FFDDBB"
   aliases:
     - FIGfont
   extensions:
@@ -2068,7 +2068,7 @@ FIGlet Font:
   language_id: 686129783
 FIRRTL:
   type: programming
-  color: '#2f632f'
+  color: "#2f632f"
   extensions:
     - .fir
   tm_scope: source.firrtl
@@ -2076,7 +2076,7 @@ FIRRTL:
   language_id: 906694254
 FLUX:
   type: programming
-  color: '#88ccff'
+  color: "#88ccff"
   extensions:
     - .fx
     - .flux
@@ -2085,7 +2085,7 @@ FLUX:
   language_id: 106
 Factor:
   type: programming
-  color: '#636746'
+  color: "#636746"
   extensions:
     - .factor
   filenames:
@@ -2098,7 +2098,7 @@ Factor:
   language_id: 108
 Fancy:
   type: programming
-  color: '#7b9db4'
+  color: "#7b9db4"
   extensions:
     - .fy
     - .fancypack
@@ -2109,7 +2109,7 @@ Fancy:
   language_id: 109
 Fantom:
   type: programming
-  color: '#14253c'
+  color: "#14253c"
   extensions:
     - .fan
   tm_scope: source.fan
@@ -2117,7 +2117,7 @@ Fantom:
   language_id: 110
 Faust:
   type: programming
-  color: '#c37240'
+  color: "#c37240"
   extensions:
     - .dsp
   tm_scope: source.faust
@@ -2127,7 +2127,7 @@ Fennel:
   type: programming
   tm_scope: source.fnl
   ace_mode: text
-  color: '#fff3d7'
+  color: "#fff3d7"
   interpreters:
     - fennel
   extensions:
@@ -2135,7 +2135,7 @@ Fennel:
   language_id: 239946126
 Filebench WML:
   type: programming
-  color: '#F6B900'
+  color: "#F6B900"
   extensions:
     - .f
   tm_scope: none
@@ -2151,7 +2151,7 @@ Filterscript:
   language_id: 112
 Fluent:
   type: programming
-  color: '#ffcc33'
+  color: "#ffcc33"
   extensions:
     - .ftl
   tm_scope: source.ftl
@@ -2167,7 +2167,7 @@ Formatted:
   language_id: 113
 Forth:
   type: programming
-  color: '#341708'
+  color: "#341708"
   extensions:
     - .fth
     - .4th
@@ -2185,7 +2185,7 @@ Forth:
 Fortran:
   group: Fortran
   type: programming
-  color: '#4d41b1'
+  color: "#4d41b1"
   extensions:
     - .f
     - .f77
@@ -2198,7 +2198,7 @@ Fortran:
   language_id: 107
 Fortran Free Form:
   group: Fortran
-  color: '#4d41b1'
+  color: "#4d41b1"
   type: programming
   extensions:
     - .f90
@@ -2212,7 +2212,7 @@ Fortran Free Form:
   language_id: 761352333
 FreeBASIC:
   type: programming
-  color: '#141AC9'
+  color: "#141AC9"
   extensions:
     - .bi
     - .bas
@@ -2225,7 +2225,7 @@ FreeBASIC:
   language_id: 472896659
 FreeMarker:
   type: programming
-  color: '#0050b2'
+  color: "#0050b2"
   aliases:
     - ftl
   extensions:
@@ -2235,7 +2235,7 @@ FreeMarker:
   language_id: 115
 Frege:
   type: programming
-  color: '#00cafe'
+  color: "#00cafe"
   extensions:
     - .fr
   tm_scope: source.haskell
@@ -2243,7 +2243,7 @@ Frege:
   language_id: 116
 Futhark:
   type: programming
-  color: '#5f021f'
+  color: "#5f021f"
   extensions:
     - .fut
   tm_scope: source.futhark
@@ -2251,7 +2251,7 @@ Futhark:
   language_id: 97358117
 G-code:
   type: programming
-  color: '#D08CF2'
+  color: "#D08CF2"
   extensions:
     - .g
     - .cnc
@@ -2262,7 +2262,7 @@ G-code:
   language_id: 117
 GAML:
   type: programming
-  color: '#FFC766'
+  color: "#FFC766"
   extensions:
     - .gaml
   tm_scope: none
@@ -2270,7 +2270,7 @@ GAML:
   language_id: 290345951
 GAMS:
   type: programming
-  color: '#f49a22'
+  color: "#f49a22"
   extensions:
     - .gms
   tm_scope: none
@@ -2278,7 +2278,7 @@ GAMS:
   language_id: 118
 GAP:
   type: programming
-  color: '#0000cc'
+  color: "#0000cc"
   extensions:
     - .g
     - .gap
@@ -2290,7 +2290,7 @@ GAP:
   language_id: 119
 GCC Machine Description:
   type: programming
-  color: '#FFCFAB'
+  color: "#FFCFAB"
   extensions:
     - .md
   tm_scope: source.lisp
@@ -2308,7 +2308,7 @@ GDB:
   language_id: 122
 GDScript:
   type: programming
-  color: '#355570'
+  color: "#355570"
   extensions:
     - .gd
   tm_scope: source.gdscript
@@ -2316,7 +2316,7 @@ GDScript:
   language_id: 123
 GDShader:
   type: programming
-  color: '#478CBF'
+  color: "#478CBF"
   extensions:
     - .gdshader
     - .gdshaderinc
@@ -2325,7 +2325,7 @@ GDShader:
   language_id: 694638086
 GEDCOM:
   type: data
-  color: '#003058'
+  color: "#003058"
   ace_mode: text
   extensions:
     - .ged
@@ -2333,7 +2333,7 @@ GEDCOM:
   language_id: 459577965
 GLSL:
   type: programming
-  color: '#5686a5'
+  color: "#5686a5"
   extensions:
     - .glsl
     - .fp
@@ -2377,7 +2377,7 @@ GN:
   language_id: 302957008
 GSC:
   type: programming
-  color: '#FF6800'
+  color: "#FF6800"
   extensions:
     - .gsc
     - .csc
@@ -2389,7 +2389,7 @@ GSC:
   language_id: 257856279
 Game Maker Language:
   type: programming
-  color: '#71b417'
+  color: "#71b417"
   extensions:
     - .gml
   tm_scope: source.c++
@@ -2399,7 +2399,7 @@ Game Maker Language:
   language_id: 125
 Gemfile.lock:
   type: data
-  color: '#701516'
+  color: "#701516"
   searchable: false
   tm_scope: source.gemfile-lock
   ace_mode: text
@@ -2408,7 +2408,7 @@ Gemfile.lock:
   language_id: 907065713
 Gemini:
   type: prose
-  color: '#ff6900'
+  color: "#ff6900"
   ace_mode: text
   extensions:
     - .gmi
@@ -2419,7 +2419,7 @@ Gemini:
   language_id: 310828396
 Genero 4gl:
   type: programming
-  color: '#63408e'
+  color: "#63408e"
   extensions:
     - .4gl
   tm_scope: source.genero-4gl
@@ -2427,7 +2427,7 @@ Genero 4gl:
   language_id: 986054050
 Genero per:
   type: markup
-  color: '#d8df39'
+  color: "#d8df39"
   extensions:
     - .per
   tm_scope: source.genero-per
@@ -2438,12 +2438,12 @@ Genie:
   ace_mode: text
   extensions:
     - .gs
-  color: '#fb855d'
+  color: "#fb855d"
   tm_scope: none
   language_id: 792408528
 Genshi:
   type: programming
-  color: '#951531'
+  color: "#951531"
   extensions:
     - .kid
   tm_scope: text.xml.genshi
@@ -2456,7 +2456,7 @@ Genshi:
   language_id: 126
 Gentoo Ebuild:
   type: programming
-  color: '#9400ff'
+  color: "#9400ff"
   group: Shell
   extensions:
     - .ebuild
@@ -2467,7 +2467,7 @@ Gentoo Ebuild:
   language_id: 127
 Gentoo Eclass:
   type: programming
-  color: '#9400ff'
+  color: "#9400ff"
   group: Shell
   extensions:
     - .eclass
@@ -2478,7 +2478,7 @@ Gentoo Eclass:
   language_id: 128
 Gerber Image:
   type: data
-  color: '#d20b00'
+  color: "#d20b00"
   aliases:
     - rs-274x
   extensions:
@@ -2523,11 +2523,11 @@ Gherkin:
   aliases:
     - cucumber
   ace_mode: text
-  color: '#5B2063'
+  color: "#5B2063"
   language_id: 76
 Git Attributes:
   type: data
-  color: '#F44D27'
+  color: "#F44D27"
   aliases:
     - gitattributes
   filenames:
@@ -2539,7 +2539,7 @@ Git Attributes:
   language_id: 956324166
 Git Config:
   type: data
-  color: '#F44D27'
+  color: "#F44D27"
   group: INI
   aliases:
     - gitconfig
@@ -2556,7 +2556,7 @@ Git Config:
   language_id: 807968997
 Git Revision List:
   type: data
-  color: '#F44D27'
+  color: "#F44D27"
   aliases:
     - Git Blame Ignore Revs
   filenames:
@@ -2566,7 +2566,7 @@ Git Revision List:
   language_id: 461881235
 Gleam:
   type: programming
-  color: '#ffaff3'
+  color: "#ffaff3"
   ace_mode: text
   extensions:
     - .gleam
@@ -2577,7 +2577,7 @@ Glimmer JS:
   extensions:
     - .gjs
   ace_mode: javascript
-  color: '#F5835F'
+  color: "#F5835F"
   tm_scope: source.gjs
   group: JavaScript
   language_id: 5523150
@@ -2586,13 +2586,13 @@ Glimmer TS:
   extensions:
     - .gts
   ace_mode: typescript
-  color: '#3178c6'
+  color: "#3178c6"
   tm_scope: source.gts
   group: TypeScript
   language_id: 95110458
 Glyph:
   type: programming
-  color: '#c1ac7f'
+  color: "#c1ac7f"
   extensions:
     - .glf
   tm_scope: source.tcl
@@ -2609,7 +2609,7 @@ Glyph Bitmap Distribution Format:
   language_id: 997665271
 Gnuplot:
   type: programming
-  color: '#f0a9f0'
+  color: "#f0a9f0"
   extensions:
     - .gp
     - .gnu
@@ -2624,7 +2624,7 @@ Gnuplot:
   language_id: 131
 Go:
   type: programming
-  color: '#00ADD8'
+  color: "#00ADD8"
   aliases:
     - golang
   extensions:
@@ -2636,7 +2636,7 @@ Go:
   language_id: 132
 Go Checksums:
   type: data
-  color: '#00ADD8'
+  color: "#00ADD8"
   aliases:
     - go.sum
     - go sum
@@ -2650,7 +2650,7 @@ Go Checksums:
   language_id: 1054391671
 Go Module:
   type: data
-  color: '#00ADD8'
+  color: "#00ADD8"
   aliases:
     - go.mod
     - go mod
@@ -2661,7 +2661,7 @@ Go Module:
   language_id: 947461016
 Go Workspace:
   type: data
-  color: '#00ADD8'
+  color: "#00ADD8"
   aliases:
     - go.work
     - go work
@@ -2672,7 +2672,7 @@ Go Workspace:
   language_id: 934546256
 Godot Resource:
   type: data
-  color: '#355570'
+  color: "#355570"
   extensions:
     - .gdnlib
     - .gdns
@@ -2685,7 +2685,7 @@ Godot Resource:
   language_id: 738107771
 Golo:
   type: programming
-  color: '#88562A'
+  color: "#88562A"
   extensions:
     - .golo
   tm_scope: source.golo
@@ -2693,7 +2693,7 @@ Golo:
   language_id: 133
 Gosu:
   type: programming
-  color: '#82937f'
+  color: "#82937f"
   extensions:
     - .gs
     - .gst
@@ -2704,7 +2704,7 @@ Gosu:
   language_id: 134
 Grace:
   type: programming
-  color: '#615f8b'
+  color: "#615f8b"
   extensions:
     - .grace
   tm_scope: source.grace
@@ -2712,7 +2712,7 @@ Grace:
   language_id: 135
 Gradle:
   type: data
-  color: '#02303a'
+  color: "#02303a"
   extensions:
     - .gradle
   tm_scope: source.groovy.gradle
@@ -2721,7 +2721,7 @@ Gradle:
 Gradle Kotlin DSL:
   group: Gradle
   type: data
-  color: '#02303a'
+  color: "#02303a"
   extensions:
     - .gradle.kts
   ace_mode: text
@@ -2733,7 +2733,7 @@ Grammatical Framework:
     - gf
   extensions:
     - .gf
-  color: '#ff0000'
+  color: "#ff0000"
   tm_scope: source.gf
   ace_mode: haskell
   codemirror_mode: haskell
@@ -2748,7 +2748,7 @@ Graph Modeling Language:
   language_id: 138
 GraphQL:
   type: data
-  color: '#e10098'
+  color: "#e10098"
   extensions:
     - .graphql
     - .gql
@@ -2758,7 +2758,7 @@ GraphQL:
   language_id: 139
 Graphviz (DOT):
   type: data
-  color: '#2596be'
+  color: "#2596be"
   tm_scope: source.dot
   extensions:
     - .dot
@@ -2771,7 +2771,7 @@ Groovy:
   ace_mode: groovy
   codemirror_mode: groovy
   codemirror_mime_type: text/x-groovy
-  color: '#4298b8'
+  color: "#4298b8"
   extensions:
     - .groovy
     - .grt
@@ -2784,7 +2784,7 @@ Groovy:
   language_id: 142
 Groovy Server Pages:
   type: programming
-  color: '#4298b8'
+  color: "#4298b8"
   group: Groovy
   aliases:
     - gsp
@@ -2798,7 +2798,7 @@ Groovy Server Pages:
   language_id: 143
 HAProxy:
   type: data
-  color: '#106da9'
+  color: "#106da9"
   extensions:
     - .cfg
   filenames:
@@ -2808,7 +2808,7 @@ HAProxy:
   language_id: 366607477
 HCL:
   type: programming
-  color: '#844FBA'
+  color: "#844FBA"
   extensions:
     - .hcl
     - .nomad
@@ -2825,7 +2825,7 @@ HCL:
   language_id: 144
 HIP:
   type: programming
-  color: '#4F3A4F'
+  color: "#4F3A4F"
   extensions:
     - .hip
   tm_scope: source.c++
@@ -2835,7 +2835,7 @@ HIP:
   language_id: 674379998
 HLSL:
   type: programming
-  color: '#aace60'
+  color: "#aace60"
   extensions:
     - .hlsl
     - .cginc
@@ -2847,7 +2847,7 @@ HLSL:
   language_id: 145
 HOCON:
   type: data
-  color: '#9ff8ee'
+  color: "#9ff8ee"
   extensions:
     - .hocon
   filenames:
@@ -2862,7 +2862,7 @@ HTML:
   ace_mode: html
   codemirror_mode: htmlmixed
   codemirror_mime_type: text/html
-  color: '#e34c26'
+  color: "#e34c26"
   aliases:
     - xhtml
   extensions:
@@ -2876,7 +2876,7 @@ HTML:
   language_id: 146
 HTML+ECR:
   type: markup
-  color: '#2e1052'
+  color: "#2e1052"
   tm_scope: text.html.ecr
   group: HTML
   aliases:
@@ -2889,7 +2889,7 @@ HTML+ECR:
   language_id: 148
 HTML+EEX:
   type: markup
-  color: '#6e4a7e'
+  color: "#6e4a7e"
   tm_scope: text.html.elixir
   group: HTML
   aliases:
@@ -2906,7 +2906,7 @@ HTML+EEX:
   language_id: 149
 HTML+ERB:
   type: markup
-  color: '#701516'
+  color: "#701516"
   tm_scope: text.html.erb
   group: HTML
   aliases:
@@ -2923,7 +2923,7 @@ HTML+ERB:
   language_id: 150
 HTML+PHP:
   type: markup
-  color: '#4f5d95'
+  color: "#4f5d95"
   tm_scope: text.html.php
   group: HTML
   extensions:
@@ -2934,7 +2934,7 @@ HTML+PHP:
   language_id: 151
 HTML+Razor:
   type: markup
-  color: '#512be4'
+  color: "#512be4"
   tm_scope: text.html.cshtml
   group: HTML
   aliases:
@@ -2948,7 +2948,7 @@ HTML+Razor:
   language_id: 479039817
 HTTP:
   type: data
-  color: '#005C9C'
+  color: "#005C9C"
   extensions:
     - .http
   tm_scope: source.httpspec
@@ -2958,7 +2958,7 @@ HTTP:
   language_id: 152
 HXML:
   type: data
-  color: '#f68712'
+  color: "#f68712"
   ace_mode: text
   extensions:
     - .hxml
@@ -2975,11 +2975,11 @@ Hack:
     - .hhi
     - .php
   tm_scope: source.hack
-  color: '#878787'
+  color: "#878787"
   language_id: 153
 Haml:
   type: markup
-  color: '#ece2a9'
+  color: "#ece2a9"
   extensions:
     - .haml
     - .haml.deface
@@ -2990,7 +2990,7 @@ Haml:
   language_id: 154
 Handlebars:
   type: markup
-  color: '#f7931e'
+  color: "#f7931e"
   aliases:
     - hbs
     - htmlbars
@@ -3002,7 +3002,7 @@ Handlebars:
   language_id: 155
 Harbour:
   type: programming
-  color: '#0e60e3'
+  color: "#0e60e3"
   extensions:
     - .hb
   tm_scope: source.harbour
@@ -3010,7 +3010,7 @@ Harbour:
   language_id: 156
 Hare:
   type: programming
-  color: '#9d7424'
+  color: "#9d7424"
   extensions:
     - .ha
   ace_mode: text
@@ -3018,7 +3018,7 @@ Hare:
   tm_scope: none
 Haskell:
   type: programming
-  color: '#5e5086'
+  color: "#5e5086"
   extensions:
     - .hs
     - .hs-boot
@@ -3037,7 +3037,7 @@ Haxe:
   ace_mode: haxe
   codemirror_mode: haxe
   codemirror_mime_type: text/x-haxe
-  color: '#df7900'
+  color: "#df7900"
   extensions:
     - .hx
     - .hxsl
@@ -3048,13 +3048,13 @@ HiveQL:
   extensions:
     - .q
     - .hql
-  color: '#dce200'
+  color: "#dce200"
   tm_scope: source.hql
   ace_mode: sql
   language_id: 931814087
 HolyC:
   type: programming
-  color: '#ffefaf'
+  color: "#ffefaf"
   extensions:
     - .hc
   tm_scope: source.hc
@@ -3064,7 +3064,7 @@ HolyC:
   language_id: 928121743
 Hosts File:
   type: data
-  color: '#308888'
+  color: "#308888"
   filenames:
     - HOSTS
     - hosts
@@ -3077,7 +3077,7 @@ Hosts File:
 Hy:
   type: programming
   ace_mode: text
-  color: '#7790B2'
+  color: "#7790B2"
   extensions:
     - .hy
   interpreters:
@@ -3095,7 +3095,7 @@ HyPhy:
   language_id: 160
 IDL:
   type: programming
-  color: '#a3522f'
+  color: "#a3522f"
   extensions:
     - .pro
     - .dlm
@@ -3106,7 +3106,7 @@ IDL:
   language_id: 161
 IGOR Pro:
   type: programming
-  color: '#0000cc'
+  color: "#0000cc"
   extensions:
     - .ipf
   aliases:
@@ -3117,7 +3117,7 @@ IGOR Pro:
   language_id: 162
 INI:
   type: data
-  color: '#d1dbe0'
+  color: "#d1dbe0"
   extensions:
     - .ini
     - .cfg
@@ -3161,7 +3161,7 @@ IRC log:
   language_id: 164
 ISPC:
   type: programming
-  color: '#2D68B1'
+  color: "#2D68B1"
   extensions:
     - .ispc
   tm_scope: source.ispc
@@ -3171,7 +3171,7 @@ ISPC:
   language_id: 327071
 Idris:
   type: programming
-  color: '#b30000'
+  color: "#b30000"
   extensions:
     - .idr
     - .lidr
@@ -3180,7 +3180,7 @@ Idris:
   language_id: 165
 Ignore List:
   type: data
-  color: '#000000'
+  color: "#000000"
   aliases:
     - ignore
     - gitignore
@@ -3215,7 +3215,7 @@ Ignore List:
   language_id: 74444240
 ImageJ Macro:
   type: programming
-  color: '#99AAFF'
+  color: "#99AAFF"
   aliases:
     - ijm
   extensions:
@@ -3225,7 +3225,7 @@ ImageJ Macro:
   language_id: 575143428
 Imba:
   type: programming
-  color: '#16cec6'
+  color: "#16cec6"
   extensions:
     - .imba
   ace_mode: text
@@ -3253,7 +3253,7 @@ Ink:
   language_id: 838252715
 Inno Setup:
   type: programming
-  color: '#264b99'
+  color: "#264b99"
   extensions:
     - .iss
     - .isl
@@ -3262,7 +3262,7 @@ Inno Setup:
   language_id: 167
 Io:
   type: programming
-  color: '#a9188d'
+  color: "#a9188d"
   extensions:
     - .io
   interpreters:
@@ -3272,7 +3272,7 @@ Io:
   language_id: 168
 Ioke:
   type: programming
-  color: '#078193'
+  color: "#078193"
   extensions:
     - .ik
   interpreters:
@@ -3282,7 +3282,7 @@ Ioke:
   language_id: 169
 Isabelle:
   type: programming
-  color: '#FEFE00'
+  color: "#FEFE00"
   extensions:
     - .thy
   tm_scope: source.isabelle.theory
@@ -3290,7 +3290,7 @@ Isabelle:
   language_id: 170
 Isabelle ROOT:
   type: programming
-  color: '#FEFE00'
+  color: "#FEFE00"
   group: Isabelle
   filenames:
     - ROOT
@@ -3299,7 +3299,7 @@ Isabelle ROOT:
   language_id: 171
 J:
   type: programming
-  color: '#9EEDFF'
+  color: "#9EEDFF"
   extensions:
     - .ijs
   interpreters:
@@ -3309,7 +3309,7 @@ J:
   language_id: 172
 JAR Manifest:
   type: data
-  color: '#b07219'
+  color: "#b07219"
   filenames:
     - MANIFEST.MF
   tm_scope: source.yaml
@@ -3317,7 +3317,7 @@ JAR Manifest:
   language_id: 447261135
 JCL:
   type: programming
-  color: '#d90e09'
+  color: "#d90e09"
   extensions:
     - .jcl
   tm_scope: source.jcl
@@ -3325,7 +3325,7 @@ JCL:
   language_id: 316620079
 JFlex:
   type: programming
-  color: '#DBCA00'
+  color: "#DBCA00"
   group: Lex
   extensions:
     - .flex
@@ -3335,7 +3335,7 @@ JFlex:
   language_id: 173
 JSON:
   type: data
-  color: '#292929'
+  color: "#292929"
   tm_scope: source.json
   ace_mode: json
   codemirror_mode: javascript
@@ -3389,7 +3389,7 @@ JSON:
   language_id: 174
 JSON with Comments:
   type: data
-  color: '#292929'
+  color: "#292929"
   group: JSON
   tm_scope: source.json.comments
   ace_mode: javascript
@@ -3432,7 +3432,7 @@ JSON with Comments:
   language_id: 423
 JSON5:
   type: data
-  color: '#267CB9'
+  color: "#267CB9"
   extensions:
     - .json5
   tm_scope: source.js
@@ -3442,7 +3442,7 @@ JSON5:
   language_id: 175
 JSONLD:
   type: data
-  color: '#0c479c'
+  color: "#0c479c"
   extensions:
     - .jsonld
   tm_scope: source.js
@@ -3451,7 +3451,7 @@ JSONLD:
   codemirror_mime_type: application/json
   language_id: 176
 JSONiq:
-  color: '#40d47e'
+  color: "#40d47e"
   type: programming
   ace_mode: jsoniq
   codemirror_mode: javascript
@@ -3462,7 +3462,7 @@ JSONiq:
   language_id: 177
 Jai:
   type: programming
-  color: '#ab8b4b'
+  color: "#ab8b4b"
   ace_mode: text
   tm_scope: source.jai
   extensions:
@@ -3470,7 +3470,7 @@ Jai:
   language_id: 70127133
 Janet:
   type: programming
-  color: '#0886a5'
+  color: "#0886a5"
   extensions:
     - .janet
   tm_scope: source.janet
@@ -3482,7 +3482,7 @@ Janet:
   language_id: 1028705371
 Jasmin:
   type: programming
-  color: '#d03600'
+  color: "#d03600"
   ace_mode: java
   extensions:
     - .j
@@ -3494,7 +3494,7 @@ Java:
   ace_mode: java
   codemirror_mode: clike
   codemirror_mime_type: text/x-java
-  color: '#b07219'
+  color: "#b07219"
   extensions:
     - .java
     - .jav
@@ -3502,7 +3502,7 @@ Java:
   language_id: 181
 Java Properties:
   type: data
-  color: '#2A6277'
+  color: "#2A6277"
   extensions:
     - .properties
   tm_scope: source.java-properties
@@ -3512,7 +3512,7 @@ Java Properties:
   language_id: 519377561
 Java Server Pages:
   type: programming
-  color: '#2A6277'
+  color: "#2A6277"
   group: Java
   aliases:
     - jsp
@@ -3526,7 +3526,7 @@ Java Server Pages:
   language_id: 182
 Java Template Engine:
   type: programming
-  color: '#2A6277'
+  color: "#2A6277"
   group: Java
   aliases:
     - jte
@@ -3541,7 +3541,7 @@ JavaScript:
   ace_mode: javascript
   codemirror_mode: javascript
   codemirror_mime_type: text/javascript
-  color: '#f1e05a'
+  color: "#f1e05a"
   aliases:
     - js
     - node
@@ -3587,7 +3587,7 @@ JavaScript:
   language_id: 183
 JavaScript+ERB:
   type: programming
-  color: '#f1e05a'
+  color: "#f1e05a"
   tm_scope: source.js
   group: JavaScript
   extensions:
@@ -3598,7 +3598,7 @@ JavaScript+ERB:
   language_id: 914318960
 Jest Snapshot:
   type: data
-  color: '#15c213'
+  color: "#15c213"
   tm_scope: source.jest.snap
   extensions:
     - .snap
@@ -3610,7 +3610,7 @@ JetBrains MPS:
   type: programming
   aliases:
     - mps
-  color: '#21D789'
+  color: "#21D789"
   extensions:
     - .mps
     - .mpl
@@ -3622,7 +3622,7 @@ JetBrains MPS:
   language_id: 465165328
 Jinja:
   type: markup
-  color: '#a52a22'
+  color: "#a52a22"
   aliases:
     - django
     - html+django
@@ -3639,7 +3639,7 @@ Jinja:
   language_id: 147
 Jison:
   type: programming
-  color: '#56b3cb'
+  color: "#56b3cb"
   group: Yacc
   extensions:
     - .jison
@@ -3648,7 +3648,7 @@ Jison:
   language_id: 284531423
 Jison Lex:
   type: programming
-  color: '#56b3cb'
+  color: "#56b3cb"
   group: Lex
   extensions:
     - .jisonlex
@@ -3662,12 +3662,12 @@ Jolie:
     - .iol
   interpreters:
     - jolie
-  color: '#843179'
+  color: "#843179"
   ace_mode: text
   tm_scope: source.jolie
   language_id: 998078858
 Jsonnet:
-  color: '#0064bd'
+  color: "#0064bd"
   type: programming
   ace_mode: text
   extensions:
@@ -3681,7 +3681,7 @@ Julia:
     - .jl
   interpreters:
     - julia
-  color: '#a270ba'
+  color: "#a270ba"
   tm_scope: source.julia
   ace_mode: julia
   codemirror_mode: julia
@@ -3689,7 +3689,7 @@ Julia:
   language_id: 184
 Julia REPL:
   type: programming
-  color: '#a270ba'
+  color: "#a270ba"
   tm_scope: source.julia.console
   group: Julia
   ace_mode: text
@@ -3700,7 +3700,7 @@ Jupyter Notebook:
   codemirror_mode: javascript
   codemirror_mime_type: application/json
   tm_scope: source.json
-  color: '#DA5B0B'
+  color: "#DA5B0B"
   extensions:
     - .ipynb
   filenames:
@@ -3712,7 +3712,7 @@ Just:
   type: programming
   aliases:
     - Justfile
-  color: '#384d54'
+  color: "#384d54"
   tm_scope: source.just
   filenames:
     - .JUSTFILE
@@ -3727,7 +3727,7 @@ Just:
   language_id: 128447695
 KDL:
   type: data
-  color: '#ffb3b3'
+  color: "#ffb3b3"
   extensions:
     - .kdl
   tm_scope: source.kdl
@@ -3737,7 +3737,7 @@ KDL:
   language_id: 931123626
 KRL:
   type: programming
-  color: '#28430A'
+  color: "#28430A"
   extensions:
     - .krl
   tm_scope: none
@@ -3750,14 +3750,14 @@ Kaitai Struct:
   ace_mode: yaml
   codemirror_mode: yaml
   codemirror_mime_type: text/x-yaml
-  color: '#773b37'
+  color: "#773b37"
   extensions:
     - .ksy
   tm_scope: source.yaml
   language_id: 818804755
 KakouneScript:
   type: programming
-  color: '#6f8042'
+  color: "#6f8042"
   tm_scope: source.kakscript
   aliases:
     - kak
@@ -3773,12 +3773,12 @@ KerboScript:
   ace_mode: text
   extensions:
     - .ks
-  color: '#41adf0'
+  color: "#41adf0"
   tm_scope: source.kerboscript
   language_id: 59716426
 KiCad Layout:
   type: data
-  color: '#2f4aab'
+  color: "#2f4aab"
   aliases:
     - pcbnew
   extensions:
@@ -3794,7 +3794,7 @@ KiCad Layout:
   language_id: 187
 KiCad Legacy Layout:
   type: data
-  color: '#2f4aab'
+  color: "#2f4aab"
   extensions:
     - .brd
   tm_scope: source.pcb.board
@@ -3802,7 +3802,7 @@ KiCad Legacy Layout:
   language_id: 140848857
 KiCad Schematic:
   type: data
-  color: '#2f4aab'
+  color: "#2f4aab"
   aliases:
     - eeschema schematic
   extensions:
@@ -3835,12 +3835,12 @@ Koka:
     - .kk
   interpreters:
     - koka
-  color: '#215166'
+  color: "#215166"
   tm_scope: source.koka
   language_id: 597930447
 Kotlin:
   type: programming
-  color: '#A97BFF'
+  color: "#A97BFF"
   extensions:
     - .kt
     - .ktm
@@ -3860,7 +3860,7 @@ Kusto:
   language_id: 225697190
 LFE:
   type: programming
-  color: '#4C3023'
+  color: "#4C3023"
   extensions:
     - .lfe
   tm_scope: source.lisp
@@ -3874,13 +3874,13 @@ LLVM:
     - .ll
   tm_scope: source.llvm
   ace_mode: text
-  color: '#185619'
+  color: "#185619"
   language_id: 191
 LOLCODE:
   type: programming
   extensions:
     - .lol
-  color: '#cc9900'
+  color: "#cc9900"
   tm_scope: source.lolcode
   ace_mode: text
   language_id: 192
@@ -3893,7 +3893,7 @@ LSL:
     - .lslp
   interpreters:
     - lsl
-  color: '#3d9970'
+  color: "#3d9970"
   language_id: 193
 LTspice Symbol:
   type: data
@@ -3906,7 +3906,7 @@ LTspice Symbol:
   language_id: 1013566805
 LabVIEW:
   type: programming
-  color: '#fede06'
+  color: "#fede06"
   extensions:
     - .lvproj
     - .lvclass
@@ -3918,7 +3918,7 @@ LabVIEW:
   language_id: 194
 Lark:
   type: data
-  color: '#2980B9'
+  color: "#2980B9"
   extensions:
     - .lark
   tm_scope: source.lark
@@ -3928,7 +3928,7 @@ Lark:
   language_id: 758480799
 Lasso:
   type: programming
-  color: '#999999'
+  color: "#999999"
   extensions:
     - .lasso
     - .las
@@ -3941,7 +3941,7 @@ Lasso:
   language_id: 195
 Latte:
   type: markup
-  color: '#f2a542'
+  color: "#f2a542"
   extensions:
     - .latte
   tm_scope: text.html.smarty
@@ -3967,7 +3967,7 @@ Lean 4:
   language_id: 455147478
 Leo:
   type: programming
-  color: '#C4FFC2'
+  color: "#C4FFC2"
   extensions:
     - .leo
   tm_scope: source.leo
@@ -3976,7 +3976,7 @@ Leo:
   language_id: 916034822
 Less:
   type: markup
-  color: '#1d365d'
+  color: "#1d365d"
   aliases:
     - less-css
   extensions:
@@ -3988,7 +3988,7 @@ Less:
   language_id: 198
 Lex:
   type: programming
-  color: '#DBCA00'
+  color: "#DBCA00"
   aliases:
     - flex
   extensions:
@@ -4002,7 +4002,7 @@ Lex:
   language_id: 199
 LigoLANG:
   type: programming
-  color: '#0e74ff'
+  color: "#0e74ff"
   extensions:
     - .ligo
   tm_scope: source.ligo
@@ -4013,7 +4013,7 @@ LigoLANG:
   language_id: 1040646257
 LilyPond:
   type: programming
-  color: '#9ccc7c'
+  color: "#9ccc7c"
   extensions:
     - .ly
     - .ily
@@ -4055,7 +4055,7 @@ Linux Kernel Module:
   language_id: 203
 Liquid:
   type: markup
-  color: '#67b8de'
+  color: "#67b8de"
   extensions:
     - .liquid
   tm_scope: text.html.liquid
@@ -4063,7 +4063,7 @@ Liquid:
   language_id: 204
 Literate Agda:
   type: programming
-  color: '#315665'
+  color: "#315665"
   group: Agda
   extensions:
     - .lagda
@@ -4072,7 +4072,7 @@ Literate Agda:
   language_id: 205
 Literate CoffeeScript:
   type: programming
-  color: '#244776'
+  color: "#244776"
   tm_scope: source.litcoffee
   group: CoffeeScript
   ace_mode: text
@@ -4085,7 +4085,7 @@ Literate CoffeeScript:
   language_id: 206
 Literate Haskell:
   type: programming
-  color: '#5e5086'
+  color: "#5e5086"
   group: Haskell
   aliases:
     - lhaskell
@@ -4099,7 +4099,7 @@ Literate Haskell:
   language_id: 207
 LiveCode Script:
   type: programming
-  color: '#0c5ba5'
+  color: "#0c5ba5"
   extensions:
     - .livecodescript
   tm_scope: source.livecodescript
@@ -4107,7 +4107,7 @@ LiveCode Script:
   language_id: 891017
 LiveScript:
   type: programming
-  color: '#499886'
+  color: "#499886"
   aliases:
     - live-script
     - ls
@@ -4132,7 +4132,7 @@ Logos:
   language_id: 209
 Logtalk:
   type: programming
-  color: '#295b9a'
+  color: "#295b9a"
   extensions:
     - .lgt
     - .logtalk
@@ -4144,7 +4144,7 @@ LookML:
   ace_mode: yaml
   codemirror_mode: yaml
   codemirror_mime_type: text/x-yaml
-  color: '#652B81'
+  color: "#652B81"
   extensions:
     - .lkml
     - .lookml
@@ -4163,7 +4163,7 @@ Lua:
   ace_mode: lua
   codemirror_mode: lua
   codemirror_mime_type: text/x-lua
-  color: '#000080'
+  color: "#000080"
   extensions:
     - .lua
     - .fcgi
@@ -4184,7 +4184,7 @@ Luau:
   ace_mode: lua
   codemirror_mode: lua
   codemirror_mime_type: text/x-lua
-  color: '#00A2FF'
+  color: "#00A2FF"
   extensions:
     - .luau
   interpreters:
@@ -4210,7 +4210,7 @@ M3U:
   extensions:
     - .m3u
     - .m3u8
-  color: '#179C7D'
+  color: "#179C7D"
   tm_scope: source.m3u
   ace_mode: text
   language_id: 89638692
@@ -4236,7 +4236,7 @@ M4Sugar:
   language_id: 216
 MATLAB:
   type: programming
-  color: '#e16737'
+  color: "#e16737"
   aliases:
     - octave
   extensions:
@@ -4249,7 +4249,7 @@ MATLAB:
   language_id: 225
 MAXScript:
   type: programming
-  color: '#00a6a6'
+  color: "#00a6a6"
   extensions:
     - .ms
     - .mcr
@@ -4258,7 +4258,7 @@ MAXScript:
   language_id: 217
 MDX:
   type: markup
-  color: '#fcb32c'
+  color: "#fcb32c"
   ace_mode: markdown
   codemirror_mode: gfm
   codemirror_mime_type: text/x-gfm
@@ -4269,7 +4269,7 @@ MDX:
   language_id: 512838272
 MLIR:
   type: programming
-  color: '#5EC8DB'
+  color: "#5EC8DB"
   extensions:
     - .mlir
   tm_scope: source.mlir
@@ -4277,7 +4277,7 @@ MLIR:
   language_id: 448253929
 MQL4:
   type: programming
-  color: '#62A8D6'
+  color: "#62A8D6"
   extensions:
     - .mq4
     - .mqh
@@ -4286,7 +4286,7 @@ MQL4:
   language_id: 426
 MQL5:
   type: programming
-  color: '#4A76B8'
+  color: "#4A76B8"
   extensions:
     - .mq5
     - .mqh
@@ -4295,7 +4295,7 @@ MQL5:
   language_id: 427
 MTML:
   type: markup
-  color: '#b7e1f4'
+  color: "#b7e1f4"
   extensions:
     - .mtml
   tm_scope: text.html.basic
@@ -4324,11 +4324,11 @@ Macaulay2:
     - M2
   ace_mode: text
   tm_scope: source.m2
-  color: '#d8ffff'
+  color: "#d8ffff"
   language_id: 34167825
 Makefile:
   type: programming
-  color: '#427819'
+  color: "#427819"
   aliases:
     - bsdmake
     - make
@@ -4363,7 +4363,7 @@ Makefile:
   language_id: 220
 Mako:
   type: programming
-  color: '#7e858d'
+  color: "#7e858d"
   extensions:
     - .mako
     - .mao
@@ -4372,7 +4372,7 @@ Mako:
   language_id: 221
 Markdown:
   type: prose
-  color: '#083fa1'
+  color: "#083fa1"
   aliases:
     - md
     - pandoc
@@ -4398,7 +4398,7 @@ Markdown:
   language_id: 222
 Marko:
   type: markup
-  color: '#42bff2'
+  color: "#42bff2"
   tm_scope: text.marko
   extensions:
     - .marko
@@ -4410,7 +4410,7 @@ Marko:
   language_id: 932782397
 Mask:
   type: markup
-  color: '#f97732'
+  color: "#f97732"
   ace_mode: mask
   extensions:
     - .mask
@@ -4418,7 +4418,7 @@ Mask:
   language_id: 223
 Mathematica:
   type: programming
-  color: '#dd1100'
+  color: "#dd1100"
   extensions:
     - .mathematica
     - .cdf
@@ -4452,7 +4452,7 @@ Maven POM:
   language_id: 226
 Max:
   type: programming
-  color: '#c4a79c'
+  color: "#c4a79c"
   aliases:
     - max/msp
     - maxmsp
@@ -4469,7 +4469,7 @@ Max:
   language_id: 227
 Mercury:
   type: programming
-  color: '#ff2b2b'
+  color: "#ff2b2b"
   ace_mode: prolog
   interpreters:
     - mmi
@@ -4480,7 +4480,7 @@ Mercury:
   language_id: 229
 Mermaid:
   type: markup
-  color: '#ff3670'
+  color: "#ff3670"
   aliases:
     - mermaid example
   extensions:
@@ -4491,7 +4491,7 @@ Mermaid:
   language_id: 385992043
 Meson:
   type: programming
-  color: '#007800'
+  color: "#007800"
   filenames:
     - meson.build
     - meson_options.txt
@@ -4500,7 +4500,7 @@ Meson:
   language_id: 799141244
 Metal:
   type: programming
-  color: '#8f14e9'
+  color: "#8f14e9"
   extensions:
     - .metal
   tm_scope: source.c++
@@ -4531,7 +4531,7 @@ MiniD:
   language_id: 231
 MiniYAML:
   type: data
-  color: '#ff1111'
+  color: "#ff1111"
   tm_scope: source.miniyaml
   extensions:
     - .yaml
@@ -4542,7 +4542,7 @@ MiniYAML:
   language_id: 4896465
 MiniZinc:
   type: programming
-  color: '#06a9e6'
+  color: "#06a9e6"
   extensions:
     - .mzn
   tm_scope: source.mzn
@@ -4560,12 +4560,12 @@ Mint:
   extensions:
     - .mint
   ace_mode: text
-  color: '#02b046'
+  color: "#02b046"
   tm_scope: source.mint
   language_id: 968740319
 Mirah:
   type: programming
-  color: '#c7a938'
+  color: "#c7a938"
   extensions:
     - .druby
     - .duby
@@ -4577,7 +4577,7 @@ Mirah:
   language_id: 232
 Modelica:
   type: programming
-  color: '#de1d31'
+  color: "#de1d31"
   extensions:
     - .mo
   tm_scope: source.modelica
@@ -4587,7 +4587,7 @@ Modelica:
   language_id: 233
 Modula-2:
   type: programming
-  color: '#10253f'
+  color: "#10253f"
   extensions:
     - .mod
   tm_scope: source.modula2
@@ -4600,7 +4600,7 @@ Modula-3:
     - .ig
     - .m3
     - .mg
-  color: '#223388'
+  color: "#223388"
   ace_mode: text
   tm_scope: source.modula-3
   language_id: 564743864
@@ -4617,7 +4617,7 @@ Module Management System:
   language_id: 235
 Mojo:
   type: programming
-  color: '#ff4c1f'
+  color: "#ff4c1f"
   extensions:
     - .mojo
   ace_mode: python
@@ -4635,7 +4635,7 @@ Monkey:
   language_id: 236
 Monkey C:
   type: programming
-  color: '#8D6747'
+  color: "#8D6747"
   extensions:
     - .mc
   tm_scope: source.mc
@@ -4652,7 +4652,7 @@ Moocode:
   language_id: 237
 MoonBit:
   type: programming
-  color: '#b92381'
+  color: "#b92381"
   extensions:
     - .mbt
   tm_scope: source.moonbit
@@ -4660,7 +4660,7 @@ MoonBit:
   language_id: 181453007
 MoonScript:
   type: programming
-  color: '#ff4585'
+  color: "#ff4585"
   extensions:
     - .moon
   interpreters:
@@ -4670,7 +4670,7 @@ MoonScript:
   language_id: 238
 Motoko:
   type: programming
-  color: '#fbb03b'
+  color: "#fbb03b"
   extensions:
     - .mo
   tm_scope: source.mo
@@ -4678,7 +4678,7 @@ Motoko:
   language_id: 202937027
 Motorola 68K Assembly:
   type: programming
-  color: '#005daa'
+  color: "#005daa"
   group: Assembly
   aliases:
     - m68k
@@ -4693,7 +4693,7 @@ Motorola 68K Assembly:
   language_id: 477582706
 Move:
   type: programming
-  color: '#4a137a'
+  color: "#4a137a"
   extensions:
     - .move
   tm_scope: source.move
@@ -4712,7 +4712,7 @@ Muse:
     - emacs muse
 Mustache:
   type: markup
-  color: '#724b3b'
+  color: "#724b3b"
   extensions:
     - .mustache
   tm_scope: text.html.smarty
@@ -4737,7 +4737,7 @@ NASL:
   language_id: 171666519
 NCL:
   type: programming
-  color: '#28431f'
+  color: "#28431f"
   extensions:
     - .ncl
   tm_scope: source.ncl
@@ -4762,7 +4762,7 @@ NL:
   language_id: 241
 NMODL:
   type: programming
-  color: '#00356B'
+  color: "#00356B"
   extensions:
     - .mod
   tm_scope: none
@@ -4770,7 +4770,7 @@ NMODL:
   language_id: 136456478
 NPM Config:
   type: data
-  color: '#cb3837'
+  color: "#cb3837"
   group: INI
   aliases:
     - npmrc
@@ -4791,7 +4791,7 @@ NSIS:
   language_id: 242
 NWScript:
   type: programming
-  color: '#111522'
+  color: "#111522"
   extensions:
     - .nss
   tm_scope: source.c.nwscript
@@ -4801,7 +4801,7 @@ NWScript:
   language_id: 731233819
 Nasal:
   type: programming
-  color: '#1d2c4e'
+  color: "#1d2c4e"
   extensions:
     - .nas
   tm_scope: source.nasal
@@ -4810,7 +4810,7 @@ Nasal:
 Nearley:
   type: programming
   ace_mode: text
-  color: '#990000'
+  color: "#990000"
   extensions:
     - .ne
     - .nearley
@@ -4818,7 +4818,7 @@ Nearley:
   language_id: 521429430
 Nemerle:
   type: programming
-  color: '#3d3c6e'
+  color: "#3d3c6e"
   extensions:
     - .n
   tm_scope: source.nemerle
@@ -4826,7 +4826,7 @@ Nemerle:
   language_id: 243
 NetLinx:
   type: programming
-  color: '#0aa0ff'
+  color: "#0aa0ff"
   extensions:
     - .axs
     - .axi
@@ -4835,7 +4835,7 @@ NetLinx:
   language_id: 244
 NetLinx+ERB:
   type: programming
-  color: '#747faa'
+  color: "#747faa"
   extensions:
     - .axs.erb
     - .axi.erb
@@ -4844,7 +4844,7 @@ NetLinx+ERB:
   language_id: 245
 NetLogo:
   type: programming
-  color: '#ff6375'
+  color: "#ff6375"
   extensions:
     - .nlogo
   tm_scope: source.lisp
@@ -4854,7 +4854,7 @@ NetLogo:
   language_id: 246
 NewLisp:
   type: programming
-  color: '#87AED7'
+  color: "#87AED7"
   extensions:
     - .nl
     - .lisp
@@ -4870,7 +4870,7 @@ Nextflow:
   type: programming
   ace_mode: groovy
   tm_scope: source.nextflow
-  color: '#3ac486'
+  color: "#3ac486"
   extensions:
     - .nf
   filenames:
@@ -4880,7 +4880,7 @@ Nextflow:
   language_id: 506780613
 Nginx:
   type: data
-  color: '#009639'
+  color: "#009639"
   extensions:
     - .nginx
     - .nginxconf
@@ -4896,7 +4896,7 @@ Nginx:
   language_id: 248
 Nickel:
   type: programming
-  color: '#E0C3FC'
+  color: "#E0C3FC"
   extensions:
     - .ncl
   tm_scope: source.nickel
@@ -4904,7 +4904,7 @@ Nickel:
   language_id: 1067292664
 Nim:
   type: programming
-  color: '#ffc200'
+  color: "#ffc200"
   extensions:
     - .nim
     - .nim.cfg
@@ -4925,7 +4925,7 @@ Ninja:
   language_id: 250
 Nit:
   type: programming
-  color: '#009917'
+  color: "#009917"
   extensions:
     - .nit
   tm_scope: source.nit
@@ -4933,7 +4933,7 @@ Nit:
   language_id: 251
 Nix:
   type: programming
-  color: '#7e7eff'
+  color: "#7e7eff"
   extensions:
     - .nix
   aliases:
@@ -4950,12 +4950,12 @@ Noir:
   codemirror_mime_type: text/x-rustsrc
   extensions:
     - .nr
-  color: '#2f1f49'
+  color: "#2f1f49"
   tm_scope: source.nr
   language_id: 813068465
 Nu:
   type: programming
-  color: '#c9df40'
+  color: "#c9df40"
   aliases:
     - nush
   extensions:
@@ -4971,7 +4971,7 @@ Nu:
   language_id: 253
 NumPy:
   type: programming
-  color: '#9C8AF9'
+  color: "#9C8AF9"
   group: Python
   extensions:
     - .numpy
@@ -4984,7 +4984,7 @@ NumPy:
   language_id: 254
 Nunjucks:
   type: markup
-  color: '#3d8137'
+  color: "#3d8137"
   extensions:
     - .njk
   aliases:
@@ -4994,7 +4994,7 @@ Nunjucks:
   language_id: 461856962
 Nushell:
   type: programming
-  color: '#4E9906'
+  color: "#4E9906"
   extensions:
     - .nu
   interpreters:
@@ -5009,7 +5009,7 @@ Nushell:
   language_id: 446573572
 OASv2-json:
   type: data
-  color: '#85ea2d'
+  color: "#85ea2d"
   extensions:
     - .json
   group: OpenAPI Specification v2
@@ -5020,7 +5020,7 @@ OASv2-json:
   language_id: 834374816
 OASv2-yaml:
   type: data
-  color: '#85ea2d'
+  color: "#85ea2d"
   extensions:
     - .yaml
     - .yml
@@ -5032,7 +5032,7 @@ OASv2-yaml:
   language_id: 105187618
 OASv3-json:
   type: data
-  color: '#85ea2d'
+  color: "#85ea2d"
   extensions:
     - .json
   group: OpenAPI Specification v3
@@ -5043,7 +5043,7 @@ OASv3-json:
   language_id: 980062566
 OASv3-yaml:
   type: data
-  color: '#85ea2d'
+  color: "#85ea2d"
   extensions:
     - .yaml
     - .yml
@@ -5058,7 +5058,7 @@ OCaml:
   ace_mode: ocaml
   codemirror_mode: mllike
   codemirror_mime_type: text/x-ocaml
-  color: '#ef7a08'
+  color: "#ef7a08"
   extensions:
     - .ml
     - .eliom
@@ -5077,7 +5077,7 @@ OMNeT++ MSG:
   type: programming
   extensions:
     - .msg
-  color: '#a0e0a0'
+  color: "#a0e0a0"
   tm_scope: source.msg
   ace_mode: text
   aliases:
@@ -5087,7 +5087,7 @@ OMNeT++ NED:
   type: programming
   extensions:
     - .ned
-  color: '#08607c'
+  color: "#08607c"
   tm_scope: source.ned
   ace_mode: text
   aliases:
@@ -5120,12 +5120,12 @@ ObjectScript:
     - .cls
   language_id: 202735509
   tm_scope: source.objectscript
-  color: '#424893'
+  color: "#424893"
   ace_mode: text
 Objective-C:
   type: programming
   tm_scope: source.objc
-  color: '#438eff'
+  color: "#438eff"
   aliases:
     - obj-c
     - objc
@@ -5140,7 +5140,7 @@ Objective-C:
 Objective-C++:
   type: programming
   tm_scope: source.objc++
-  color: '#6866fb'
+  color: "#6866fb"
   aliases:
     - obj-c++
     - objc++
@@ -5153,7 +5153,7 @@ Objective-C++:
   language_id: 258
 Objective-J:
   type: programming
-  color: '#ff0c5a'
+  color: "#ff0c5a"
   aliases:
     - obj-j
     - objectivej
@@ -5166,7 +5166,7 @@ Objective-J:
   language_id: 259
 Odin:
   type: programming
-  color: '#60AFFE'
+  color: "#60AFFE"
   aliases:
     - odinlang
     - odin-lang
@@ -5179,7 +5179,7 @@ Omgrofl:
   type: programming
   extensions:
     - .omgrofl
-  color: '#cabbff'
+  color: "#cabbff"
   tm_scope: none
   ace_mode: text
   language_id: 260
@@ -5192,7 +5192,7 @@ Opa:
   language_id: 261
 Opal:
   type: programming
-  color: '#f7ede0'
+  color: "#f7ede0"
   extensions:
     - .opal
   tm_scope: source.opal
@@ -5200,7 +5200,7 @@ Opal:
   language_id: 262
 Open Policy Agent:
   type: programming
-  color: '#7d9199'
+  color: "#7d9199"
   ace_mode: text
   extensions:
     - .rego
@@ -5210,7 +5210,7 @@ OpenAPI Specification v2:
   aliases:
     - oasv2
   type: data
-  color: '#85ea2d'
+  color: "#85ea2d"
   tm_scope: none
   ace_mode: text
   language_id: 848295328
@@ -5218,13 +5218,13 @@ OpenAPI Specification v3:
   aliases:
     - oasv3
   type: data
-  color: '#85ea2d'
+  color: "#85ea2d"
   tm_scope: none
   ace_mode: text
   language_id: 557959099
 OpenCL:
   type: programming
-  color: '#ed2e2d'
+  color: "#ed2e2d"
   group: C
   extensions:
     - .cl
@@ -5236,7 +5236,7 @@ OpenCL:
   language_id: 263
 OpenEdge ABL:
   type: programming
-  color: '#5ce600'
+  color: "#5ce600"
   aliases:
     - progress
     - openedge
@@ -5252,7 +5252,7 @@ OpenQASM:
   type: programming
   extensions:
     - .qasm
-  color: '#AA70FF'
+  color: "#AA70FF"
   tm_scope: source.qasm
   ace_mode: text
   language_id: 153739399
@@ -5270,7 +5270,7 @@ OpenRC runscript:
   language_id: 265
 OpenSCAD:
   type: programming
-  color: '#e5cd45'
+  color: "#e5cd45"
   extensions:
     - .scad
   tm_scope: source.scad
@@ -5295,7 +5295,7 @@ OpenType Feature File:
   language_id: 374317347
 Option List:
   type: data
-  color: '#476732'
+  color: "#476732"
   aliases:
     - opts
     - ackrc
@@ -5312,7 +5312,7 @@ Option List:
   language_id: 723589315
 Org:
   type: prose
-  color: '#77aa99'
+  color: "#77aa99"
   wrap: true
   extensions:
     - .org
@@ -5321,7 +5321,7 @@ Org:
   language_id: 267
 OverpassQL:
   type: programming
-  color: '#cce2aa'
+  color: "#cce2aa"
   wrap: true
   extensions:
     - .overpassql
@@ -5339,7 +5339,7 @@ Ox:
   language_id: 268
 Oxygene:
   type: programming
-  color: '#cdd0e3'
+  color: "#cdd0e3"
   extensions:
     - .oxygene
   tm_scope: none
@@ -5347,7 +5347,7 @@ Oxygene:
   language_id: 269
 Oz:
   type: programming
-  color: '#fab738'
+  color: "#fab738"
   extensions:
     - .oz
   tm_scope: source.oz
@@ -5357,7 +5357,7 @@ Oz:
   language_id: 270
 P4:
   type: programming
-  color: '#7055b5'
+  color: "#7055b5"
   extensions:
     - .p4
   tm_scope: source.p4
@@ -5365,7 +5365,7 @@ P4:
   language_id: 348895984
 PDDL:
   type: programming
-  color: '#0d00ff'
+  color: "#0d00ff"
   extensions:
     - .pddl
   tm_scope: source.pddl
@@ -5373,7 +5373,7 @@ PDDL:
   language_id: 736235603
 PEG.js:
   type: programming
-  color: '#234d6b'
+  color: "#234d6b"
   extensions:
     - .pegjs
     - .peggy
@@ -5388,7 +5388,7 @@ PHP:
   ace_mode: php
   codemirror_mode: php
   codemirror_mime_type: application/x-httpd-php
-  color: '#4F5D95'
+  color: "#4F5D95"
   extensions:
     - .php
     - .aw
@@ -5416,7 +5416,7 @@ PLSQL:
   codemirror_mode: sql
   codemirror_mime_type: text/x-plsql
   tm_scope: none
-  color: '#dad8d8'
+  color: "#dad8d8"
   extensions:
     - .pls
     - .bdy
@@ -5437,7 +5437,7 @@ PLSQL:
   language_id: 273
 PLpgSQL:
   type: programming
-  color: '#336790'
+  color: "#336790"
   ace_mode: pgsql
   codemirror_mode: sql
   codemirror_mime_type: text/x-sql
@@ -5448,7 +5448,7 @@ PLpgSQL:
   language_id: 274
 POV-Ray SDL:
   type: programming
-  color: '#6bac65'
+  color: "#6bac65"
   aliases:
     - pov-ray
     - povray
@@ -5460,7 +5460,7 @@ POV-Ray SDL:
   language_id: 275
 Pact:
   type: programming
-  color: '#F7A8B8'
+  color: "#F7A8B8"
   ace_mode: text
   tm_scope: source.pact
   extensions:
@@ -5468,7 +5468,7 @@ Pact:
   language_id: 756774415
 Pan:
   type: programming
-  color: '#cc0000'
+  color: "#cc0000"
   extensions:
     - .pan
   tm_scope: source.pan
@@ -5476,7 +5476,7 @@ Pan:
   language_id: 276
 Papyrus:
   type: programming
-  color: '#6600cc'
+  color: "#6600cc"
   extensions:
     - .psc
   tm_scope: source.papyrus.skyrim
@@ -5484,7 +5484,7 @@ Papyrus:
   language_id: 277
 Parrot:
   type: programming
-  color: '#f3ca0a'
+  color: "#f3ca0a"
   extensions:
     - .parrot
   tm_scope: none
@@ -5516,7 +5516,7 @@ Parrot Internal Representation:
   language_id: 280
 Pascal:
   type: programming
-  color: '#E3F171'
+  color: "#E3F171"
   aliases:
     - delphi
     - objectpascal
@@ -5537,7 +5537,7 @@ Pascal:
   language_id: 281
 Pawn:
   type: programming
-  color: '#dbb284'
+  color: "#dbb284"
   extensions:
     - .pwn
     - .inc
@@ -5547,7 +5547,7 @@ Pawn:
   language_id: 271
 Pep8:
   type: programming
-  color: '#C76F5B'
+  color: "#C76F5B"
   extensions:
     - .pep
   ace_mode: text
@@ -5559,7 +5559,7 @@ Perl:
   ace_mode: perl
   codemirror_mode: perl
   codemirror_mime_type: text/x-perl
-  color: '#0298c3'
+  color: "#0298c3"
   extensions:
     - .pl
     - .al
@@ -5606,7 +5606,7 @@ Pickle:
   language_id: 284
 PicoLisp:
   type: programming
-  color: '#6067af'
+  color: "#6067af"
   extensions:
     - .l
   interpreters:
@@ -5617,7 +5617,7 @@ PicoLisp:
   language_id: 285
 PigLatin:
   type: programming
-  color: '#fcd7de'
+  color: "#fcd7de"
   extensions:
     - .pig
   tm_scope: source.pig_latin
@@ -5625,7 +5625,7 @@ PigLatin:
   language_id: 286
 Pike:
   type: programming
-  color: '#005390'
+  color: "#005390"
   extensions:
     - .pike
     - .pmod
@@ -5636,7 +5636,7 @@ Pike:
   language_id: 287
 Pip Requirements:
   type: data
-  color: '#FFD343'
+  color: "#FFD343"
   filenames:
     - requirements-dev.txt
     - requirements.txt
@@ -5645,7 +5645,7 @@ Pip Requirements:
   language_id: 684385621
 Pkl:
   type: programming
-  color: '#6b9543'
+  color: "#6b9543"
   extensions:
     - .pkl
   interpreters:
@@ -5655,7 +5655,7 @@ Pkl:
   language_id: 288822799
 PlantUML:
   type: data
-  color: '#fbbd16'
+  color: "#fbbd16"
   extensions:
     - .puml
     - .iuml
@@ -5688,7 +5688,7 @@ Pod 6:
   language_id: 155357471
 PogoScript:
   type: programming
-  color: '#d80074'
+  color: "#d80074"
   extensions:
     - .pogo
   tm_scope: source.pogoscript
@@ -5696,7 +5696,7 @@ PogoScript:
   language_id: 289
 Polar:
   type: programming
-  color: '#ae81ff'
+  color: "#ae81ff"
   extensions:
     - .polar
   tm_scope: source.polar
@@ -5711,7 +5711,7 @@ Pony:
   language_id: 290
 Portugol:
   type: programming
-  color: '#f8bd00'
+  color: "#f8bd00"
   extensions:
     - .por
   tm_scope: source.portugol
@@ -5719,7 +5719,7 @@ Portugol:
   language_id: 832391833
 PostCSS:
   type: markup
-  color: '#dc3a0c'
+  color: "#dc3a0c"
   tm_scope: source.postcss
   group: CSS
   extensions:
@@ -5729,7 +5729,7 @@ PostCSS:
   language_id: 262764437
 PostScript:
   type: markup
-  color: '#da291c'
+  color: "#da291c"
   extensions:
     - .ps
     - .eps
@@ -5742,7 +5742,7 @@ PostScript:
   language_id: 291
 PowerBuilder:
   type: programming
-  color: '#8f0f8d'
+  color: "#8f0f8d"
   extensions:
     - .pbt
     - .sra
@@ -5753,7 +5753,7 @@ PowerBuilder:
   language_id: 292
 PowerShell:
   type: programming
-  color: '#012456'
+  color: "#012456"
   tm_scope: source.powershell
   ace_mode: powershell
   codemirror_mode: powershell
@@ -5770,7 +5770,7 @@ PowerShell:
   language_id: 293
 Praat:
   type: programming
-  color: '#c8506d'
+  color: "#c8506d"
   tm_scope: source.praat
   ace_mode: praat
   extensions:
@@ -5778,7 +5778,7 @@ Praat:
   language_id: 106029007
 Prisma:
   type: data
-  color: '#0c344b'
+  color: "#0c344b"
   extensions:
     - .prisma
   tm_scope: source.prisma
@@ -5786,7 +5786,7 @@ Prisma:
   language_id: 499933428
 Processing:
   type: programming
-  color: '#0096D8'
+  color: "#0096D8"
   extensions:
     - .pde
   tm_scope: source.processing
@@ -5794,7 +5794,7 @@ Processing:
   language_id: 294
 Procfile:
   type: programming
-  color: '#3B2F63'
+  color: "#3B2F63"
   filenames:
     - Procfile
   tm_scope: source.procfile
@@ -5809,7 +5809,7 @@ Proguard:
   language_id: 716513858
 Prolog:
   type: programming
-  color: '#74283c'
+  color: "#74283c"
   extensions:
     - .pl
     - .plt
@@ -5824,7 +5824,7 @@ Prolog:
   language_id: 295
 Promela:
   type: programming
-  color: '#de0000'
+  color: "#de0000"
   tm_scope: source.promela
   ace_mode: text
   extensions:
@@ -5832,7 +5832,7 @@ Promela:
   language_id: 441858312
 Propeller Spin:
   type: programming
-  color: '#7fa2a7'
+  color: "#7fa2a7"
   extensions:
     - .spin
   tm_scope: source.spin
@@ -5875,7 +5875,7 @@ Public Key:
   language_id: 298
 Pug:
   type: markup
-  color: '#a86454'
+  color: "#a86454"
   extensions:
     - .jade
     - .pug
@@ -5886,7 +5886,7 @@ Pug:
   language_id: 179
 Puppet:
   type: programming
-  color: '#302B6D'
+  color: "#302B6D"
   extensions:
     - .pp
   filenames:
@@ -5905,7 +5905,7 @@ Pure Data:
   language_id: 300
 PureBasic:
   type: programming
-  color: '#5a6986'
+  color: "#5a6986"
   extensions:
     - .pb
     - .pbi
@@ -5914,7 +5914,7 @@ PureBasic:
   language_id: 301
 PureScript:
   type: programming
-  color: '#1D222D'
+  color: "#1D222D"
   extensions:
     - .purs
   tm_scope: source.purescript
@@ -5924,7 +5924,7 @@ PureScript:
   language_id: 302
 Pyret:
   type: programming
-  color: '#ee1e10'
+  color: "#ee1e10"
   extensions:
     - .arr
   ace_mode: python
@@ -5936,7 +5936,7 @@ Python:
   ace_mode: python
   codemirror_mode: python
   codemirror_mime_type: text/x-python
-  color: '#3572A5'
+  color: "#3572A5"
   extensions:
     - .py
     - .cgi
@@ -5975,7 +5975,7 @@ Python:
   language_id: 303
 Python console:
   type: programming
-  color: '#3572A5'
+  color: "#3572A5"
   group: Python
   aliases:
     - pycon
@@ -5984,7 +5984,7 @@ Python console:
   language_id: 428
 Python traceback:
   type: data
-  color: '#3572A5'
+  color: "#3572A5"
   group: Python
   extensions:
     - .pytb
@@ -5997,13 +5997,13 @@ Q#:
     - .qs
   aliases:
     - qsharp
-  color: '#fed659'
+  color: "#fed659"
   ace_mode: text
   tm_scope: source.qsharp
   language_id: 697448245
 QML:
   type: programming
-  color: '#44a51c'
+  color: "#44a51c"
   extensions:
     - .qml
     - .qbs
@@ -6030,7 +6030,7 @@ Qt Script:
   filenames:
     - installscript.qs
     - toolchain_installscript.qs
-  color: '#00b841'
+  color: "#00b841"
   tm_scope: source.js
   language_id: 558193693
 Quake:
@@ -6038,13 +6038,13 @@ Quake:
   filenames:
     - m3makefile
     - m3overrides
-  color: '#882233'
+  color: "#882233"
   ace_mode: text
   tm_scope: source.quake
   language_id: 375265331
 QuickBASIC:
   type: programming
-  color: '#008080'
+  color: "#008080"
   extensions:
     - .bas
   tm_scope: source.QB64
@@ -6060,7 +6060,7 @@ QuickBASIC:
   language_id: 593107205
 R:
   type: programming
-  color: '#198CE7'
+  color: "#198CE7"
   aliases:
     - Rscript
     - splus
@@ -6084,7 +6084,7 @@ RAML:
   codemirror_mode: yaml
   codemirror_mime_type: text/x-yaml
   tm_scope: source.yaml
-  color: '#77d9fb'
+  color: "#77d9fb"
   extensions:
     - .raml
   language_id: 308
@@ -6095,13 +6095,13 @@ RBS:
   codemirror_mime_type: text/x-ruby
   extensions:
     - .rbs
-  color: '#701516'
+  color: "#701516"
   tm_scope: source.rbs
   group: Ruby
   language_id: 899227493
 RDoc:
   type: prose
-  color: '#701516'
+  color: "#701516"
   ace_mode: rdoc
   wrap: true
   extensions:
@@ -6122,7 +6122,7 @@ REALbasic:
   language_id: 310
 REXX:
   type: programming
-  color: '#d90e09'
+  color: "#d90e09"
   aliases:
     - arexx
   extensions:
@@ -6137,7 +6137,7 @@ REXX:
   language_id: 311
 RMarkdown:
   type: prose
-  color: '#198ce7'
+  color: "#198ce7"
   wrap: true
   ace_mode: markdown
   codemirror_mode: gfm
@@ -6149,7 +6149,7 @@ RMarkdown:
   language_id: 313
 RON:
   type: data
-  color: '#a62c00'
+  color: "#a62c00"
   extensions:
     - .ron
   ace_mode: rust
@@ -6169,7 +6169,7 @@ RPC:
 RPGLE:
   type: programming
   ace_mode: text
-  color: '#2BDE21'
+  color: "#2BDE21"
   aliases:
     - ile rpg
     - sqlrpgle
@@ -6191,7 +6191,7 @@ RPM Spec:
   language_id: 314
 RUNOFF:
   type: markup
-  color: '#665a4e'
+  color: "#665a4e"
   extensions:
     - .rnh
     - .rno
@@ -6201,7 +6201,7 @@ RUNOFF:
   language_id: 315
 Racket:
   type: programming
-  color: '#3c5caa'
+  color: "#3c5caa"
   extensions:
     - .rkt
     - .rktd
@@ -6214,7 +6214,7 @@ Racket:
   language_id: 316
 Ragel:
   type: programming
-  color: '#9d5200'
+  color: "#9d5200"
   extensions:
     - .rl
   aliases:
@@ -6225,7 +6225,7 @@ Ragel:
   language_id: 317
 Raku:
   type: programming
-  color: '#0000fb'
+  color: "#0000fb"
   extensions:
     - .6pl
     - .6pm
@@ -6254,7 +6254,7 @@ Raku:
   language_id: 283
 Rascal:
   type: programming
-  color: '#fffaa0'
+  color: "#fffaa0"
   extensions:
     - .rsc
   tm_scope: source.rascal
@@ -6271,7 +6271,7 @@ Raw token data:
   language_id: 318
 ReScript:
   type: programming
-  color: '#ed5051'
+  color: "#ed5051"
   ace_mode: rust
   codemirror_mode: rust
   codemirror_mime_type: text/x-rustsrc
@@ -6296,7 +6296,7 @@ Readline Config:
   language_id: 538732839
 Reason:
   type: programming
-  color: '#ff5847'
+  color: "#ff5847"
   ace_mode: rust
   codemirror_mode: rust
   codemirror_mime_type: text/x-rustsrc
@@ -6307,7 +6307,7 @@ Reason:
   language_id: 869538413
 ReasonLIGO:
   type: programming
-  color: '#ff5847'
+  color: "#ff5847"
   ace_mode: rust
   codemirror_mode: rust
   codemirror_mime_type: text/x-rustsrc
@@ -6318,7 +6318,7 @@ ReasonLIGO:
   language_id: 319002153
 Rebol:
   type: programming
-  color: '#358a5b'
+  color: "#358a5b"
   extensions:
     - .reb
     - .r
@@ -6336,11 +6336,11 @@ Record Jar:
   codemirror_mode: properties
   codemirror_mime_type: text/x-properties
   ace_mode: text
-  color: '#0673ba'
+  color: "#0673ba"
   language_id: 865765202
 Red:
   type: programming
-  color: '#f50000'
+  color: "#f50000"
   extensions:
     - .red
     - .reds
@@ -6367,7 +6367,7 @@ Redirect Rules:
   language_id: 1020148948
 Regular Expression:
   type: data
-  color: '#009a00'
+  color: "#009a00"
   extensions:
     - .regexp
     - .regex
@@ -6381,7 +6381,7 @@ Ren'Py:
   type: programming
   aliases:
     - renpy
-  color: '#ff7f7f'
+  color: "#ff7f7f"
   extensions:
     - .rpy
   tm_scope: source.renpy
@@ -6401,7 +6401,7 @@ Rez:
     - .r
   tm_scope: source.rez
   ace_mode: text
-  color: '#FFDAB3'
+  color: "#FFDAB3"
   language_id: 498022874
 Rich Text Format:
   type: markup
@@ -6412,7 +6412,7 @@ Rich Text Format:
   language_id: 51601661
 Ring:
   type: programming
-  color: '#2D54CB'
+  color: "#2D54CB"
   extensions:
     - .ring
   tm_scope: source.ring
@@ -6420,7 +6420,7 @@ Ring:
   language_id: 431
 Riot:
   type: markup
-  color: '#A71E49'
+  color: "#A71E49"
   ace_mode: html
   extensions:
     - .riot
@@ -6428,7 +6428,7 @@ Riot:
   language_id: 878396783
 RobotFramework:
   type: programming
-  color: '#00c0b5'
+  color: "#00c0b5"
   extensions:
     - .robot
     - .resource
@@ -6437,7 +6437,7 @@ RobotFramework:
   language_id: 324
 Roc:
   type: programming
-  color: '#7c38f5'
+  color: "#7c38f5"
   extensions:
     - .roc
   tm_scope: source.roc
@@ -6445,7 +6445,7 @@ Roc:
   language_id: 440182480
 Rocq Prover:
   type: programming
-  color: '#d0b68c'
+  color: "#d0b68c"
   extensions:
     - .v
     - .coq
@@ -6457,27 +6457,27 @@ Rocq Prover:
   language_id: 69
 Roff:
   type: markup
-  color: '#ecdebe'
+  color: "#ecdebe"
   extensions:
     - .roff
-    - '.1'
+    - ".1"
     - .1in
     - .1m
     - .1x
-    - '.2'
-    - '.3'
+    - ".2"
+    - ".3"
     - .3in
     - .3m
     - .3p
     - .3pm
     - .3qt
     - .3x
-    - '.4'
-    - '.5'
-    - '.6'
-    - '.7'
-    - '.8'
-    - '.9'
+    - ".4"
+    - ".5"
+    - ".6"
+    - ".7"
+    - ".8"
+    - ".9"
     - .l
     - .man
     - .mdoc
@@ -6510,27 +6510,27 @@ Roff:
   language_id: 141
 Roff Manpage:
   type: markup
-  color: '#ecdebe'
+  color: "#ecdebe"
   group: Roff
   extensions:
-    - '.1'
+    - ".1"
     - .1in
     - .1m
     - .1x
-    - '.2'
-    - '.3'
+    - ".2"
+    - ".3"
     - .3in
     - .3m
     - .3p
     - .3pm
     - .3qt
     - .3x
-    - '.4'
-    - '.5'
-    - '.6'
-    - '.7'
-    - '.8'
-    - '.9'
+    - ".4"
+    - ".5"
+    - ".6"
+    - ".7"
+    - ".8"
+    - ".9"
     - .man
     - .mdoc
   wrap: true
@@ -6544,7 +6544,7 @@ Rouge:
   ace_mode: clojure
   codemirror_mode: clojure
   codemirror_mime_type: text/x-clojure
-  color: '#cc0088'
+  color: "#cc0088"
   extensions:
     - .rg
   tm_scope: source.clojure
@@ -6556,7 +6556,7 @@ RouterOS Script:
     - .rsc
   interpreters:
     - RouterOS
-  color: '#DE3941'
+  color: "#DE3941"
   tm_scope: none
   language_id: 592853203
 Ruby:
@@ -6565,7 +6565,7 @@ Ruby:
   ace_mode: ruby
   codemirror_mode: ruby
   codemirror_mime_type: text/x-ruby
-  color: '#701516'
+  color: "#701516"
   aliases:
     - jruby
     - macruby
@@ -6630,7 +6630,7 @@ Rust:
   type: programming
   aliases:
     - rs
-  color: '#dea584'
+  color: "#dea584"
   extensions:
     - .rs
     - .rs.in
@@ -6643,7 +6643,7 @@ Rust:
   language_id: 327
 SAS:
   type: programming
-  color: '#B34936'
+  color: "#B34936"
   extensions:
     - .sas
   tm_scope: source.sas
@@ -6653,7 +6653,7 @@ SAS:
   language_id: 328
 SCSS:
   type: markup
-  color: '#c6538c'
+  color: "#c6538c"
   tm_scope: source.css.scss
   ace_mode: scss
   codemirror_mode: css
@@ -6699,7 +6699,7 @@ SMT:
   language_id: 330
 SPARQL:
   type: data
-  color: '#0C4597'
+  color: "#0C4597"
   tm_scope: source.sparql
   ace_mode: text
   codemirror_mode: sparql
@@ -6710,7 +6710,7 @@ SPARQL:
   language_id: 331
 SQF:
   type: programming
-  color: '#3F3F3F'
+  color: "#3F3F3F"
   extensions:
     - .sqf
     - .hqf
@@ -6719,7 +6719,7 @@ SQF:
   language_id: 332
 SQL:
   type: data
-  color: '#e38c00'
+  color: "#e38c00"
   tm_scope: source.sql
   ace_mode: sql
   codemirror_mode: sql
@@ -6737,7 +6737,7 @@ SQL:
   language_id: 333
 SQLPL:
   type: programming
-  color: '#e38c00'
+  color: "#e38c00"
   ace_mode: sql
   codemirror_mode: sql
   codemirror_mime_type: text/x-sql
@@ -6748,7 +6748,7 @@ SQLPL:
   language_id: 334
 SRecode Template:
   type: markup
-  color: '#348a34'
+  color: "#348a34"
   tm_scope: source.lisp
   ace_mode: lisp
   codemirror_mode: commonlisp
@@ -6783,7 +6783,7 @@ STAR:
   language_id: 424510560
 STL:
   type: data
-  color: '#373b5e'
+  color: "#373b5e"
   aliases:
     - ascii stl
     - stla
@@ -6802,7 +6802,7 @@ STON:
   language_id: 336
 SVG:
   type: data
-  color: '#ff9900'
+  color: "#ff9900"
   extensions:
     - .svg
   tm_scope: text.xml.svg
@@ -6833,7 +6833,7 @@ Sage:
   language_id: 338
 Sail:
   type: programming
-  color: '#259dd5'
+  color: "#259dd5"
   ace_mode: text
   extensions:
     - .sail
@@ -6841,7 +6841,7 @@ Sail:
   language_id: 1029438153
 SaltStack:
   type: programming
-  color: '#646464'
+  color: "#646464"
   aliases:
     - saltstate
     - salt
@@ -6854,7 +6854,7 @@ SaltStack:
   language_id: 339
 Sass:
   type: markup
-  color: '#a53b70'
+  color: "#a53b70"
   tm_scope: source.sass
   extensions:
     - .sass
@@ -6868,7 +6868,7 @@ Scala:
   ace_mode: scala
   codemirror_mode: clike
   codemirror_mime_type: text/x-scala
-  color: '#c22d40'
+  color: "#c22d40"
   extensions:
     - .scala
     - .kojo
@@ -6879,7 +6879,7 @@ Scala:
   language_id: 341
 Scaml:
   type: markup
-  color: '#bd181a'
+  color: "#bd181a"
   extensions:
     - .scaml
   tm_scope: source.scaml
@@ -6887,7 +6887,7 @@ Scaml:
   language_id: 342
 Scenic:
   type: programming
-  color: '#fdc700'
+  color: "#fdc700"
   extensions:
     - .scenic
   tm_scope: source.scenic
@@ -6897,7 +6897,7 @@ Scenic:
   language_id: 619814037
 Scheme:
   type: programming
-  color: '#1e4aec'
+  color: "#1e4aec"
   extensions:
     - .scm
     - .sch
@@ -6920,7 +6920,7 @@ Scheme:
   language_id: 343
 Scilab:
   type: programming
-  color: '#ca0f21'
+  color: "#ca0f21"
   extensions:
     - .sci
     - .sce
@@ -6930,7 +6930,7 @@ Scilab:
   language_id: 344
 Self:
   type: programming
-  color: '#0579aa'
+  color: "#0579aa"
   extensions:
     - .self
   tm_scope: none
@@ -6938,7 +6938,7 @@ Self:
   language_id: 345
 ShaderLab:
   type: programming
-  color: '#222c37'
+  color: "#222c37"
   extensions:
     - .shader
   ace_mode: text
@@ -6946,7 +6946,7 @@ ShaderLab:
   language_id: 664257356
 Shell:
   type: programming
-  color: '#89e051'
+  color: "#89e051"
   aliases:
     - sh
     - shell-script
@@ -7021,7 +7021,7 @@ Shell:
   language_id: 346
 ShellCheck Config:
   type: data
-  color: '#cecfcb'
+  color: "#cecfcb"
   filenames:
     - .shellcheckrc
   aliases:
@@ -7045,7 +7045,7 @@ ShellSession:
   language_id: 347
 Shen:
   type: programming
-  color: '#120F14'
+  color: "#120F14"
   extensions:
     - .shen
   tm_scope: source.shen
@@ -7063,7 +7063,7 @@ Sieve:
 Simple File Verification:
   type: data
   group: Checksums
-  color: '#C9BFED'
+  color: "#C9BFED"
   extensions:
     - .sfv
   aliases:
@@ -7075,7 +7075,7 @@ Simple File Verification:
   language_id: 735623761
 Singularity:
   type: programming
-  color: '#64E6AD'
+  color: "#64E6AD"
   tm_scope: source.singularity
   filenames:
     - Singularity
@@ -7083,7 +7083,7 @@ Singularity:
   language_id: 987024632
 Slang:
   type: programming
-  color: '#1fbec9'
+  color: "#1fbec9"
   extensions:
     - .slang
   tm_scope: source.slang
@@ -7091,7 +7091,7 @@ Slang:
   language_id: 239357863
 Slash:
   type: programming
-  color: '#007eff'
+  color: "#007eff"
   extensions:
     - .sl
   tm_scope: text.html.slash
@@ -7099,7 +7099,7 @@ Slash:
   language_id: 349
 Slice:
   type: programming
-  color: '#003fa2'
+  color: "#003fa2"
   tm_scope: source.ice
   ace_mode: text
   extensions:
@@ -7107,7 +7107,7 @@ Slice:
   language_id: 894641667
 Slim:
   type: markup
-  color: '#2b2b2b'
+  color: "#2b2b2b"
   extensions:
     - .slim
   tm_scope: text.slim
@@ -7117,7 +7117,7 @@ Slim:
   language_id: 350
 Slint:
   type: markup
-  color: '#2379F4'
+  color: "#2379F4"
   extensions:
     - .slint
   tm_scope: source.slint
@@ -7131,7 +7131,7 @@ SmPL:
     - coccinelle
   ace_mode: text
   tm_scope: source.smpl
-  color: '#c94949'
+  color: "#c94949"
   language_id: 164123055
 Smali:
   type: programming
@@ -7142,7 +7142,7 @@ Smali:
   language_id: 351
 Smalltalk:
   type: programming
-  color: '#596706'
+  color: "#596706"
   extensions:
     - .st
     - .cs
@@ -7155,7 +7155,7 @@ Smalltalk:
   language_id: 352
 Smarty:
   type: programming
-  color: '#f0c040'
+  color: "#f0c040"
   extensions:
     - .tpl
   ace_mode: smarty
@@ -7169,7 +7169,7 @@ Smithy:
   codemirror_mode: clike
   codemirror_mime_type: text/x-csrc
   tm_scope: source.smithy
-  color: '#c44536'
+  color: "#c44536"
   extensions:
     - .smithy
   language_id: 1027892786
@@ -7180,7 +7180,7 @@ Snakemake:
   ace_mode: python
   codemirror_mode: python
   codemirror_mime_type: text/x-python
-  color: '#419179'
+  color: "#419179"
   extensions:
     - .smk
     - .snakefile
@@ -7191,7 +7191,7 @@ Snakemake:
   language_id: 151241392
 Solidity:
   type: programming
-  color: '#AA6746'
+  color: "#AA6746"
   ace_mode: text
   tm_scope: source.solidity
   extensions:
@@ -7206,7 +7206,7 @@ Soong:
   language_id: 222900098
 SourcePawn:
   type: programming
-  color: '#f69e1d'
+  color: "#f69e1d"
   aliases:
     - sourcemod
   extensions:
@@ -7224,7 +7224,7 @@ Spline Font Database:
   language_id: 767169629
 Squirrel:
   type: programming
-  color: '#800000'
+  color: "#800000"
   extensions:
     - .nut
   tm_scope: source.nut
@@ -7234,7 +7234,7 @@ Squirrel:
   language_id: 355
 Stan:
   type: programming
-  color: '#b2011d'
+  color: "#b2011d"
   extensions:
     - .stan
   ace_mode: text
@@ -7242,7 +7242,7 @@ Stan:
   language_id: 356
 Standard ML:
   type: programming
-  color: '#dc566d'
+  color: "#dc566d"
   aliases:
     - sml
   extensions:
@@ -7261,7 +7261,7 @@ Starlark:
   ace_mode: python
   codemirror_mode: python
   codemirror_mime_type: text/x-python
-  color: '#76d275'
+  color: "#76d275"
   extensions:
     - .bzl
     - .star
@@ -7280,7 +7280,7 @@ Starlark:
   language_id: 960266174
 Stata:
   type: programming
-  color: '#1a5f91'
+  color: "#1a5f91"
   extensions:
     - .do
     - .ado
@@ -7294,7 +7294,7 @@ Stata:
   language_id: 358
 StringTemplate:
   type: markup
-  color: '#3fb34f'
+  color: "#3fb34f"
   extensions:
     - .st
   tm_scope: source.string-template
@@ -7304,7 +7304,7 @@ StringTemplate:
   language_id: 89855901
 Stylus:
   type: markup
-  color: '#ff6347'
+  color: "#ff6347"
   extensions:
     - .styl
   tm_scope: source.stylus
@@ -7312,7 +7312,7 @@ Stylus:
   language_id: 359
 SubRip Text:
   type: data
-  color: '#9e0101'
+  color: "#9e0101"
   extensions:
     - .srt
   ace_mode: text
@@ -7320,7 +7320,7 @@ SubRip Text:
   language_id: 360
 SugarSS:
   type: markup
-  color: '#2fcc9f'
+  color: "#2fcc9f"
   tm_scope: source.css.postcss.sugarss
   extensions:
     - .sss
@@ -7328,7 +7328,7 @@ SugarSS:
   language_id: 826404698
 SuperCollider:
   type: programming
-  color: '#46390b'
+  color: "#46390b"
   extensions:
     - .sc
     - .scd
@@ -7340,7 +7340,7 @@ SuperCollider:
   language_id: 361
 Survex data:
   type: data
-  color: '#ffcc99'
+  color: "#ffcc99"
   tm_scope: none
   ace_mode: text
   extensions:
@@ -7348,7 +7348,7 @@ Survex data:
   language_id: 24470517
 Svelte:
   type: markup
-  color: '#ff3e00'
+  color: "#ff3e00"
   tm_scope: source.svelte
   ace_mode: html
   codemirror_mode: htmlmixed
@@ -7358,7 +7358,7 @@ Svelte:
   language_id: 928734530
 Sway:
   type: programming
-  color: '#00F58C'
+  color: "#00F58C"
   extensions:
     - .sw
   tm_scope: source.sway
@@ -7368,7 +7368,7 @@ Sway:
   language_id: 271471144
 Sweave:
   type: prose
-  color: '#198ce7'
+  color: "#198ce7"
   extensions:
     - .rnw
   tm_scope: text.tex.latex.sweave
@@ -7376,7 +7376,7 @@ Sweave:
   language_id: 558779190
 Swift:
   type: programming
-  color: '#F05138'
+  color: "#F05138"
   extensions:
     - .swift
   tm_scope: source.swift
@@ -7386,7 +7386,7 @@ Swift:
   language_id: 362
 SystemVerilog:
   type: programming
-  color: '#DAE1C2'
+  color: "#DAE1C2"
   extensions:
     - .sv
     - .svh
@@ -7399,7 +7399,7 @@ SystemVerilog:
 TI Program:
   type: programming
   ace_mode: text
-  color: '#A0AA87'
+  color: "#A0AA87"
   extensions:
     - .8xp
     - .8xp.txt
@@ -7411,11 +7411,11 @@ TL-Verilog:
     - .tlv
   tm_scope: source.tlverilog
   ace_mode: verilog
-  color: '#C40023'
+  color: "#C40023"
   language_id: 118656070
 TLA:
   type: programming
-  color: '#4b0079'
+  color: "#4b0079"
   extensions:
     - .tla
   tm_scope: source.tla
@@ -7423,7 +7423,7 @@ TLA:
   language_id: 364
 TOML:
   type: data
-  color: '#9c4221'
+  color: "#9c4221"
   extensions:
     - .toml
   filenames:
@@ -7451,7 +7451,7 @@ TSPLIB data:
   language_id: 89289301
 TSQL:
   type: programming
-  color: '#e38c00'
+  color: "#e38c00"
   extensions:
     - .sql
   ace_mode: sql
@@ -7459,7 +7459,7 @@ TSQL:
   language_id: 918334941
 TSV:
   type: data
-  color: '#237346'
+  color: "#237346"
   ace_mode: text
   tm_scope: source.generic-db
   extensions:
@@ -7470,7 +7470,7 @@ TSV:
   language_id: 1035892117
 TSX:
   type: programming
-  color: '#3178c6'
+  color: "#3178c6"
   group: TypeScript
   extensions:
     - .tsx
@@ -7481,7 +7481,7 @@ TSX:
   language_id: 94901924
 TXL:
   type: programming
-  color: '#0178b8'
+  color: "#0178b8"
   extensions:
     - .txl
   tm_scope: source.txl
@@ -7489,7 +7489,7 @@ TXL:
   language_id: 366
 Tact:
   type: programming
-  color: '#48b5ff'
+  color: "#48b5ff"
   extensions:
     - .tact
   ace_mode: text
@@ -7498,14 +7498,14 @@ Tact:
 Talon:
   type: programming
   ace_mode: text
-  color: '#333333'
+  color: "#333333"
   extensions:
     - .talon
   tm_scope: source.talon
   language_id: 959889508
 Tcl:
   type: programming
-  color: '#e4cc98'
+  color: "#e4cc98"
   extensions:
     - .tcl
     - .adp
@@ -7543,7 +7543,7 @@ Tcsh:
   language_id: 368
 TeX:
   type: markup
-  color: '#3D6117'
+  color: "#3D6117"
   ace_mode: tex
   codemirror_mode: stex
   codemirror_mime_type: text/x-stex
@@ -7578,7 +7578,7 @@ Terra:
   type: programming
   extensions:
     - .t
-  color: '#00004c'
+  color: "#00004c"
   tm_scope: source.terra
   ace_mode: lua
   codemirror_mode: lua
@@ -7590,7 +7590,7 @@ Terraform Template:
   type: markup
   extensions:
     - .tftpl
-  color: '#7b42bb'
+  color: "#7b42bb"
   tm_scope: source.hcl.terraform
   ace_mode: ruby
   codemirror_mode: ruby
@@ -7652,7 +7652,7 @@ Text:
   language_id: 372
 TextGrid:
   type: data
-  color: '#c8506d'
+  color: "#c8506d"
   tm_scope: source.textgrid
   ace_mode: text
   extensions:
@@ -7660,7 +7660,7 @@ TextGrid:
   language_id: 965696054
 TextMate Properties:
   type: data
-  color: '#df66e4'
+  color: "#df66e4"
   aliases:
     - tm-properties
   filenames:
@@ -7672,7 +7672,7 @@ TextMate Properties:
   language_id: 981795023
 Textile:
   type: prose
-  color: '#ffe7ac'
+  color: "#ffe7ac"
   ace_mode: textile
   codemirror_mode: textile
   codemirror_mime_type: text/x-textile
@@ -7683,7 +7683,7 @@ Textile:
   language_id: 373
 Thrift:
   type: programming
-  color: '#D12127'
+  color: "#D12127"
   tm_scope: source.thrift
   extensions:
     - .thrift
@@ -7691,7 +7691,7 @@ Thrift:
   language_id: 374
 Toit:
   type: programming
-  color: '#c2c9fb'
+  color: "#c2c9fb"
   extensions:
     - .toit
   tm_scope: source.toit
@@ -7699,7 +7699,7 @@ Toit:
   language_id: 356554395
 Tor Config:
   type: data
-  color: '#59316b'
+  color: "#59316b"
   filenames:
     - torrc
   tm_scope: source.torrc
@@ -7709,7 +7709,7 @@ Tor Config:
   language_id: 1016912802
 Tree-sitter Query:
   type: programming
-  color: '#8ea64c'
+  color: "#8ea64c"
   aliases:
     - tsq
   extensions:
@@ -7719,7 +7719,7 @@ Tree-sitter Query:
   language_id: 436081647
 Turing:
   type: programming
-  color: '#cf142b'
+  color: "#cf142b"
   extensions:
     - .t
     - .tu
@@ -7737,7 +7737,7 @@ Turtle:
   language_id: 376
 Twig:
   type: markup
-  color: '#c1d026'
+  color: "#c1d026"
   extensions:
     - .twig
   tm_scope: text.html.twig
@@ -7756,7 +7756,7 @@ Type Language:
   language_id: 632765617
 TypeScript:
   type: programming
-  color: '#3178c6'
+  color: "#3178c6"
   aliases:
     - ts
   interpreters:
@@ -7775,7 +7775,7 @@ TypeScript:
   language_id: 378
 TypeSpec:
   type: programming
-  color: '#4A3665'
+  color: "#4A3665"
   aliases:
     - tsp
   extensions:
@@ -7785,7 +7785,7 @@ TypeSpec:
   language_id: 952272597
 Typst:
   type: programming
-  color: '#239dad'
+  color: "#239dad"
   aliases:
     - typ
   extensions:
@@ -7795,7 +7795,7 @@ Typst:
   language_id: 704730682
 Unified Parallel C:
   type: programming
-  color: '#4e3617'
+  color: "#4e3617"
   group: C
   ace_mode: c_cpp
   codemirror_mode: clike
@@ -7806,7 +7806,7 @@ Unified Parallel C:
   language_id: 379
 Unity3D Asset:
   type: data
-  color: '#222c37'
+  color: "#222c37"
   ace_mode: yaml
   codemirror_mode: yaml
   codemirror_mime_type: text/x-yaml
@@ -7835,7 +7835,7 @@ Unix Assembly:
   language_id: 120
 Uno:
   type: programming
-  color: '#9933cc'
+  color: "#9933cc"
   extensions:
     - .uno
   ace_mode: csharp
@@ -7845,7 +7845,7 @@ Uno:
   language_id: 381
 UnrealScript:
   type: programming
-  color: '#a54c4d'
+  color: "#a54c4d"
   extensions:
     - .uc
   tm_scope: source.java
@@ -7855,7 +7855,7 @@ UnrealScript:
   language_id: 382
 Untyped Plutus Core:
   type: programming
-  color: '#36adbd'
+  color: "#36adbd"
   ace_mode: text
   extensions:
     - .uplc
@@ -7863,7 +7863,7 @@ Untyped Plutus Core:
   language_id: 1061635506
 UrWeb:
   type: programming
-  color: '#ccccee'
+  color: "#ccccee"
   aliases:
     - Ur/Web
     - Ur
@@ -7875,7 +7875,7 @@ UrWeb:
   language_id: 383
 V:
   type: programming
-  color: '#4f87c4'
+  color: "#4f87c4"
   aliases:
     - vlang
   extensions:
@@ -7887,7 +7887,7 @@ V:
   language_id: 603371597
 VBA:
   type: programming
-  color: '#867db1'
+  color: "#867db1"
   extensions:
     - .bas
     - .cls
@@ -7902,7 +7902,7 @@ VBA:
   language_id: 399230729
 VBScript:
   type: programming
-  color: '#15dcdc'
+  color: "#15dcdc"
   extensions:
     - .vbs
   tm_scope: source.vbnet
@@ -7912,7 +7912,7 @@ VBScript:
   language_id: 408016005
 VCL:
   type: programming
-  color: '#148AA8'
+  color: "#148AA8"
   extensions:
     - .vcl
   tm_scope: source.varnish.vcl
@@ -7920,7 +7920,7 @@ VCL:
   language_id: 384
 VHDL:
   type: programming
-  color: '#adb2cb'
+  color: "#adb2cb"
   extensions:
     - .vhdl
     - .vhd
@@ -7937,7 +7937,7 @@ VHDL:
   language_id: 385
 Vala:
   type: programming
-  color: '#a56de2'
+  color: "#a56de2"
   extensions:
     - .vala
     - .vapi
@@ -7946,7 +7946,7 @@ Vala:
   language_id: 386
 Valve Data Format:
   type: data
-  color: '#f26025'
+  color: "#f26025"
   aliases:
     - keyvalues
     - vdf
@@ -7957,7 +7957,7 @@ Valve Data Format:
   language_id: 544060961
 Velocity Template Language:
   type: markup
-  color: '#507cff'
+  color: "#507cff"
   aliases:
     - vtl
     - velocity
@@ -7970,7 +7970,7 @@ Velocity Template Language:
   language_id: 292377326
 Vento:
   type: markup
-  color: '#ff0080'
+  color: "#ff0080"
   extensions:
     - .vto
   tm_scope: source.vento
@@ -7978,7 +7978,7 @@ Vento:
   language_id: 757053899
 Verilog:
   type: programming
-  color: '#b2b7f8'
+  color: "#b2b7f8"
   extensions:
     - .v
     - .veo
@@ -7989,7 +7989,7 @@ Verilog:
   language_id: 387
 Vim Help File:
   type: prose
-  color: '#199f4b'
+  color: "#199f4b"
   aliases:
     - help
     - vimhelp
@@ -8000,7 +8000,7 @@ Vim Help File:
   language_id: 508563686
 Vim Script:
   type: programming
-  color: '#199f4b'
+  color: "#199f4b"
   tm_scope: source.viml
   aliases:
     - vim
@@ -8025,7 +8025,7 @@ Vim Script:
   language_id: 388
 Vim Snippet:
   type: markup
-  color: '#199f4b'
+  color: "#199f4b"
   aliases:
     - SnipMate
     - UltiSnip
@@ -8040,7 +8040,7 @@ Vim Snippet:
   language_id: 81265970
 Visual Basic .NET:
   type: programming
-  color: '#945db7'
+  color: "#945db7"
   extensions:
     - .vb
     - .vbhtml
@@ -8056,7 +8056,7 @@ Visual Basic .NET:
   language_id: 389
 Visual Basic 6.0:
   type: programming
-  color: '#2c6353'
+  color: "#2c6353"
   extensions:
     - .bas
     - .cls
@@ -8076,7 +8076,7 @@ Visual Basic 6.0:
   language_id: 679594952
 Volt:
   type: programming
-  color: '#1F1F1F'
+  color: "#1F1F1F"
   extensions:
     - .volt
   tm_scope: source.d
@@ -8086,7 +8086,7 @@ Volt:
   language_id: 390
 Vue:
   type: markup
-  color: '#41b883'
+  color: "#41b883"
   extensions:
     - .vue
   tm_scope: source.vue
@@ -8096,7 +8096,7 @@ Vyper:
   type: programming
   extensions:
     - .vy
-  color: '#9F4CF2'
+  color: "#9F4CF2"
   ace_mode: text
   tm_scope: source.vyper
   language_id: 1055641948
@@ -8104,7 +8104,7 @@ WDL:
   aliases:
     - Workflow Description Language
   type: programming
-  color: '#42f1f4'
+  color: "#42f1f4"
   extensions:
     - .wdl
   tm_scope: source.wdl
@@ -8112,7 +8112,7 @@ WDL:
   language_id: 374521672
 WGSL:
   type: programming
-  color: '#1a5e9a'
+  color: "#1a5e9a"
   extensions:
     - .wgsl
   tm_scope: source.wgsl
@@ -8134,7 +8134,7 @@ Wavefront Object:
   language_id: 393
 Web Ontology Language:
   type: data
-  color: '#5b70bd'
+  color: "#5b70bd"
   extensions:
     - .owl
   tm_scope: text.xml
@@ -8142,7 +8142,7 @@ Web Ontology Language:
   language_id: 394
 WebAssembly:
   type: programming
-  color: '#04133b'
+  color: "#04133b"
   extensions:
     - .wast
     - .wat
@@ -8156,7 +8156,7 @@ WebAssembly:
   language_id: 956556503
 WebAssembly Interface Type:
   type: data
-  color: '#6250e7'
+  color: "#6250e7"
   extensions:
     - .wit
   aliases:
@@ -8197,7 +8197,7 @@ Wget Config:
   language_id: 668457123
 Whiley:
   type: programming
-  color: '#d5c397'
+  color: "#d5c397"
   extensions:
     - .whiley
   tm_scope: source.whiley
@@ -8205,7 +8205,7 @@ Whiley:
   language_id: 888779559
 Wikitext:
   type: prose
-  color: '#fc5757'
+  color: "#fc5757"
   wrap: true
   aliases:
     - mediawiki
@@ -8228,7 +8228,7 @@ Win32 Message File:
   language_id: 950967261
 Windows Registry Entries:
   type: data
-  color: '#52d5ff'
+  color: "#52d5ff"
   extensions:
     - .reg
   tm_scope: source.reg
@@ -8238,7 +8238,7 @@ Windows Registry Entries:
   language_id: 969674868
 Witcher Script:
   type: programming
-  color: '#ff0000'
+  color: "#ff0000"
   extensions:
     - .ws
   ace_mode: text
@@ -8246,7 +8246,7 @@ Witcher Script:
   language_id: 686821385
 Wollok:
   type: programming
-  color: '#a23738'
+  color: "#a23738"
   extensions:
     - .wlk
   ace_mode: text
@@ -8254,7 +8254,7 @@ Wollok:
   language_id: 632745969
 World of Warcraft Addon Data:
   type: data
-  color: '#f7e43f'
+  color: "#f7e43f"
   extensions:
     - .toc
   tm_scope: source.toc
@@ -8262,7 +8262,7 @@ World of Warcraft Addon Data:
   language_id: 396
 Wren:
   type: programming
-  color: '#383838'
+  color: "#383838"
   aliases:
     - wrenlang
   extensions:
@@ -8312,12 +8312,12 @@ X10:
   ace_mode: text
   extensions:
     - .x10
-  color: '#4B6BEF'
+  color: "#4B6BEF"
   tm_scope: source.x10
   language_id: 397
 XC:
   type: programming
-  color: '#99DA07'
+  color: "#99DA07"
   extensions:
     - .xc
   tm_scope: source.xc
@@ -8336,7 +8336,7 @@ XCompose:
   language_id: 225167241
 XML:
   type: data
-  color: '#0060ac'
+  color: "#0060ac"
   tm_scope: text.xml
   ace_mode: xml
   codemirror_mode: xml
@@ -8468,7 +8468,7 @@ XML:
   language_id: 399
 XML Property List:
   type: data
-  color: '#0060ac'
+  color: "#0060ac"
   group: XML
   extensions:
     - .plist
@@ -8505,7 +8505,7 @@ XProc:
   language_id: 401
 XQuery:
   type: programming
-  color: '#5232e7'
+  color: "#5232e7"
   extensions:
     - .xquery
     - .xq
@@ -8537,11 +8537,11 @@ XSLT:
   ace_mode: xml
   codemirror_mode: xml
   codemirror_mime_type: text/xml
-  color: '#EB8CEB'
+  color: "#EB8CEB"
   language_id: 404
 Xmake:
   type: programming
-  color: '#22a079'
+  color: "#22a079"
   filenames:
     - xmake.lua
   tm_scope: source.xmake
@@ -8549,7 +8549,7 @@ Xmake:
   language_id: 225223071
 Xojo:
   type: programming
-  color: '#81bd41'
+  color: "#81bd41"
   extensions:
     - .xojo_code
     - .xojo_menu
@@ -8562,7 +8562,7 @@ Xojo:
   language_id: 405
 Xonsh:
   type: programming
-  color: '#285EEF'
+  color: "#285EEF"
   extensions:
     - .xsh
   tm_scope: source.python
@@ -8572,7 +8572,7 @@ Xonsh:
   language_id: 614078284
 Xtend:
   type: programming
-  color: '#24255d'
+  color: "#24255d"
   extensions:
     - .xtend
   tm_scope: source.xtend
@@ -8580,7 +8580,7 @@ Xtend:
   language_id: 406
 YAML:
   type: data
-  color: '#cb171e'
+  color: "#cb171e"
   tm_scope: source.yaml
   aliases:
     - yml
@@ -8617,7 +8617,7 @@ YANG:
   language_id: 408
 YARA:
   type: programming
-  color: '#220000'
+  color: "#220000"
   ace_mode: text
   extensions:
     - .yar
@@ -8629,7 +8629,7 @@ YASnippet:
   aliases:
     - snippet
     - yas
-  color: '#32AB90'
+  color: "#32AB90"
   extensions:
     - .yasnippet
   tm_scope: source.yasnippet
@@ -8643,11 +8643,11 @@ Yacc:
     - .yy
   tm_scope: source.yacc
   ace_mode: text
-  color: '#4B6C4B'
+  color: "#4B6C4B"
   language_id: 409
 Yul:
   type: programming
-  color: '#794932'
+  color: "#794932"
   ace_mode: text
   tm_scope: source.yul
   extensions:
@@ -8655,7 +8655,7 @@ Yul:
   language_id: 237469033
 ZAP:
   type: programming
-  color: '#0d665e'
+  color: "#0d665e"
   extensions:
     - .zap
     - .xzap
@@ -8664,7 +8664,7 @@ ZAP:
   language_id: 952972794
 ZIL:
   type: programming
-  color: '#dc75e5'
+  color: "#dc75e5"
   extensions:
     - .zil
     - .mud
@@ -8683,7 +8683,7 @@ Zeek:
   language_id: 40
 ZenScript:
   type: programming
-  color: '#00BCD1'
+  color: "#00BCD1"
   extensions:
     - .zs
   tm_scope: source.zenscript
@@ -8691,7 +8691,7 @@ ZenScript:
   language_id: 494938890
 Zephir:
   type: programming
-  color: '#118f9e'
+  color: "#118f9e"
   extensions:
     - .zep
   tm_scope: source.php.zephir
@@ -8699,7 +8699,7 @@ Zephir:
   language_id: 410
 Zig:
   type: programming
-  color: '#ec915c'
+  color: "#ec915c"
   extensions:
     - .zig
     - .zig.zon
@@ -8708,7 +8708,7 @@ Zig:
   language_id: 646424281
 Zimpl:
   type: programming
-  color: '#d67711'
+  color: "#d67711"
   extensions:
     - .zimpl
     - .zmpl
@@ -8718,7 +8718,7 @@ Zimpl:
   language_id: 411
 Zmodel:
   type: data
-  color: '#ff7100'
+  color: "#ff7100"
   extensions:
     - .zmodel
   tm_scope: source.zmodel
@@ -8737,7 +8737,7 @@ cURL Config:
   language_id: 992375436
 crontab:
   type: data
-  color: '#ead7ac'
+  color: "#ead7ac"
   aliases:
     - cron
     - cron table
@@ -8771,7 +8771,7 @@ dircolors:
   language_id: 691605112
 eC:
   type: programming
-  color: '#913960'
+  color: "#913960"
   extensions:
     - .ec
     - .eh
@@ -8789,7 +8789,7 @@ edn:
   language_id: 414
 fish:
   type: programming
-  color: '#4aae47'
+  color: "#4aae47"
   group: Shell
   interpreters:
     - fish
@@ -8800,7 +8800,7 @@ fish:
   language_id: 415
 hoon:
   type: programming
-  color: '#00b171'
+  color: "#00b171"
   tm_scope: source.hoon
   ace_mode: text
   extensions:
@@ -8808,7 +8808,7 @@ hoon:
   language_id: 560883276
 iCalendar:
   type: data
-  color: '#ec564c'
+  color: "#ec564c"
   extensions:
     - .ics
     - .ical
@@ -8820,7 +8820,7 @@ iCalendar:
   codemirror_mime_type: text/x-properties
   language_id: 98384424
 jq:
-  color: '#c7254e'
+  color: "#c7254e"
   ace_mode: text
   type: programming
   extensions:
@@ -8839,12 +8839,12 @@ kvlang:
   ace_mode: text
   extensions:
     - .kv
-  color: '#1da6e0'
+  color: "#1da6e0"
   tm_scope: source.python.kivy
   language_id: 970675279
 mIRC Script:
   type: programming
-  color: '#3d57c3'
+  color: "#3d57c3"
   extensions:
     - .mrc
   tm_scope: source.msl
@@ -8852,7 +8852,7 @@ mIRC Script:
   language_id: 517654727
 mcfunction:
   type: programming
-  color: '#E22837'
+  color: "#E22837"
   extensions:
     - .mcfunction
   tm_scope: source.mcfunction
@@ -8860,7 +8860,7 @@ mcfunction:
   language_id: 462488745
 mdsvex:
   type: markup
-  color: '#5f9ea0'
+  color: "#5f9ea0"
   tm_scope: none
   ace_mode: markdown
   codemirror_mode: gfm
@@ -8871,7 +8871,7 @@ mdsvex:
   language_id: 566198445
 mupad:
   type: programming
-  color: '#244963'
+  color: "#244963"
   extensions:
     - .mu
   tm_scope: source.mupad
@@ -8879,7 +8879,7 @@ mupad:
   language_id: 416
 nanorc:
   type: data
-  color: '#2d004d'
+  color: "#2d004d"
   group: INI
   extensions:
     - .nanorc
@@ -8891,7 +8891,7 @@ nanorc:
   language_id: 775996197
 nesC:
   type: programming
-  color: '#94B0C7'
+  color: "#94B0C7"
   extensions:
     - .nc
   ace_mode: text
@@ -8899,7 +8899,7 @@ nesC:
   language_id: 417
 ooc:
   type: programming
-  color: '#b0b77e'
+  color: "#b0b77e"
   extensions:
     - .ooc
   tm_scope: source.ooc
@@ -8911,11 +8911,11 @@ q:
     - .q
   tm_scope: source.q
   ace_mode: text
-  color: '#0040cd'
+  color: "#0040cd"
   language_id: 970539067
 reStructuredText:
   type: prose
-  color: '#141414'
+  color: "#141414"
   wrap: true
   aliases:
     - rst
@@ -8941,7 +8941,7 @@ robots.txt:
   language_id: 674736065
 sed:
   type: programming
-  color: '#64b970'
+  color: "#64b970"
   extensions:
     - .sed
   interpreters:
@@ -8954,7 +8954,7 @@ sed:
   language_id: 847830017
 templ:
   type: markup
-  color: '#66D0DD'
+  color: "#66D0DD"
   extensions:
     - .templ
   ace_mode: text
@@ -8962,7 +8962,7 @@ templ:
   language_id: 795579337
 vCard:
   type: data
-  color: '#ee2647'
+  color: "#ee2647"
   extensions:
     - .vcf
   tm_scope: source.vcard
@@ -8978,14 +8978,14 @@ wisp:
   ace_mode: clojure
   codemirror_mode: clojure
   codemirror_mime_type: text/x-clojure
-  color: '#7582D1'
+  color: "#7582D1"
   extensions:
     - .wisp
   tm_scope: source.clojure
   language_id: 420
 xBase:
   type: programming
-  color: '#403a40'
+  color: "#403a40"
   aliases:
     - advpl
     - clipper
