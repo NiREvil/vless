@@ -1,11 +1,11 @@
 /**
  * Harmony - VLESS Subscription Generator for Cloudflare Workers
- * - Last Update: Mon, November 11, 2025, 04:20 UTC.
+ * - Last Update: Sun, November 16, 2025, 04:20 UTC.
  * - https://github.com/NiREvil/Harmony
- *
- * This worker builds a V2Ray subscription link with the ability to automatically add
+ * 
+ * This worker builds a V2Ray subscription link with the ability to automatically add 
  * Cloudflare clean IPs to your VLESS configurations.
- *
+ * 
  * HOW IT WORKS:
  * 1. Create one VLESS config using any method/tool you prefer
  * 2. Extract the UUID and hostname from your config
@@ -15,34 +15,34 @@
  *    - SNI in each group's "sni" parameter (lines 56 70, 84)
  * 4. Deploy this worker and use the worker URL as your subscription link
  * 5. Every time you click "Update" in your client, fresh clean IPs are automatically injected
- *
+ * 
  * FEATURES:
  * - Generates 30 VLESS configs (10 per group by default, customizable via ipCount line 35.)
  * - Supports both TLS and non-TLS configurations
  * - Auto-fetches clean Cloudflare IPs from multiple sources
  * - Fake subscription info for client compatibility
  * - Randomizable paths and SNI for better censorship resistance
- *
+ * 
  * We are all REvil
  */
 
 // ——— USER CONFIGURATION SECTION ———
 const USER_SETTINGS = {
   // Your UUID - Replace with your own UUID
-  uuid: '2210f3f0-513d-4d17-9ce2-c094d2f54580',
+  uuid: "2210f3f0-513d-4d17-9ce2-c094d2f54580",
 
   // Number of configs (IPs) per group
   ipCount: 10,
 
   // Early Data settings (optional) - Advanced feature for performance optimization
-  ed: '2560',
-  eh: 'Sec-WebSocket-Protocol',
+  ed: "2560",
+  eh: "Sec-WebSocket-Protocol",
 
-  // ——— Configuration Groups ———
-  /**
+   // ——— Configuration Groups ———
+  /** 
    * - You can add, remove, or modify groups as needed
    * - Each group can have different settings for hosts, ports, TLS, etc.
-   *
+   * 
    * Available Clean IP Source options:
    *   - "static": Uses manually defined IPs from the staticIPs array
    *   - "dynamic1": Fetches IPs from NiREvil's GitHub repository
@@ -51,50 +51,50 @@ const USER_SETTINGS = {
   groups: [
     {
       // ——— Group 1: TLS Configuration ———
-      name: '| HAЯMOИY ᵀᴸˢ |',
-      host: 'index.forexample.workers.dev',
-      sni: 'index.forexample.workers.dev',
-      path: '/random:16', // Path with 16 random characters
+      name: "| HAЯMOИY ᵀᴸˢ |",
+      host: "index.forexample.workers.dev",
+      sni: "index.forexample.workers.dev",
+      path: "/random:16", // Path with 16 random characters
       tls: true,
       allowInsecure: true,
-      ports: ['443', '8443', '2053', '2083', '2087', '2096'], // Standard cloudflare TLS ports
-      alpn: 'http/1.1', // Application-layer protocol negotiation (websocket only support http/1.1)
-      fp: ['chrome'], // Client fingerprint (currently only chrome works reliably)
-      dataSource: 'static', // Use static IPs
-      randomizeSni: true, // Set to true to randomize SNI character casing
+      ports: ["443", "8443", "2053", "2083", "2087", "2096"], // Standard cloudflare TLS ports
+      alpn: "http/1.1", // Application-layer protocol negotiation (websocket only support http/1.1)
+      fp: ["chrome"], // Client fingerprint (currently only chrome works reliably)
+      dataSource: "static", // Use static IPs
+      randomizeSni: true // Set to true to randomize SNI character casing
     },
     {
       // ——— Group 2: Non-TLS Configuration (TCP), ONLY Workers, No pages.dev ———
-      name: '| HAЯMOИY ᵀᶜᴾ |',
-      host: 'index.forexample.workers.dev',
-      sni: '', // Must be empty for non-TLS
-      path: '/random:16',
+      name: "| HAЯMOИY ᵀᶜᴾ |",
+      host: "index.forexample.workers.dev",
+      sni: "", // Must be empty for non-TLS
+      path: "/random:16",
       tls: false,
       allowInsecure: false,
-      ports: ['80', '8080', '8880', '2052', '2082', '2086', '2095'], // Standard cloudflare HTTP ports
-      alpn: '', // Must be empty for non-TLS
-      fp: ['chrome'],
-      dataSource: 'dynamic1', // Use the first IP source
-      randomizeSni: false,
+      ports: ["80", "8080", "8880", "2052", "2082", "2086", "2095"], // Standard cloudflare HTTP ports
+      alpn: "", // Must be empty for non-TLS
+      fp: ["chrome"],
+      dataSource: "dynamic1", // Use the first IP source
+      randomizeSni: false
     },
     {
       // ——— Group 3: Alternative TLS Configuration ———
-      name: '| HAЯMOИY ᴱᴹˢ |',
-      host: 'index.forexample.workers.dev',
-      sni: 'index.forexample.workers.dev',
-      path: '/random:12?ed=2048', // Fixed path value optimized for xray core
+      name: "| HAЯMOИY ᴱᴹˢ |",
+      host: "index.forexample.workers.dev",
+      sni: "index.forexample.workers.dev",
+      path: "/random:12?ed=2048", // Fixed path value optimized for xray core
       tls: true,
       allowInsecure: true,
-      ports: ['443', '8443', '2053'],
-      alpn: 'http/1.1',
-      fp: ['chrome'],
-      dataSource: 'dynamic2', // Use the second IP source
-      randomizeSni: true,
-    },
-  ],
+      ports: ["443", "8443", "2053"],
+      alpn: "http/1.1",
+      fp: ["chrome"],
+      dataSource: "dynamic2", // Use the second IP source
+      randomizeSni: true
+    }
+  ]
 };
 
-// ——— IP DATA SOURCES ———
+ // ——— IP DATA SOURCES ———
 /**
  * Static IP list - Manually defined IPs and domains
  * You can add or remove IPs as needed
@@ -929,11 +929,11 @@ const staticIPs = [
 // Dynamic IP source URLs
 const ipSourceURLs = {
   // Cloudflare clean IPs are sourced from the NiREvil GitHub repository, updated every 3 hours.
-  dynamic1: 'https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/Cloudflare-IPs.json',
-  dynamic2: 'https://strawberry.victoriacross.ir',
+  dynamic1: "https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/Cloudflare-IPs.json",
+  dynamic2: "https://strawberry.victoriacross.ir"
 };
 
-// ——— CAKE SUBSCRIPTION INFO SETTINGS ———
+ // ——— CAKE SUBSCRIPTION INFO SETTINGS ———
 /**
  * These values create fake usage statistics for subscription clients
  * Customize these values to display desired traffic and expiry information
@@ -942,14 +942,14 @@ const CAKE_INFO = {
   total_TB: 382, // Total traffic quota in Terabytes
   base_GB: 88000, // Base usage that's always shown (in Gigabytes)
   daily_growth_GB: 250, // Daily traffic growth (in Gigabytes) - simulates gradual usage
-  expire_date: '2028-04-20', // Subscription expiry date (YYYY-MM-DD)
+  expire_date: "2028-04-20" // Subscription expiry date (YYYY-MM-DD)
 };
 
-addEventListener('fetch', event => {
+addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request));
 });
 
-// ——— MAIN REQUEST HANDLER ———
+ // ——— MAIN REQUEST HANDLER ———
 /**
  * Generates VLESS configurations and returns them as a base64-encoded subscription
  * @param {Request} _request - The incoming HTTP request
@@ -959,18 +959,18 @@ async function handleRequest(_request) {
   const url = new URL(_request.url);
   const subNameParam = url.searchParams.get('name');
   const subNameHash = url.hash ? decodeURIComponent(url.hash.substring(1)) : null;
-  const profileTitle = subNameParam || subNameHash || 'Harmony';
+  const profileTitle = subNameParam || subNameHash || "Harmony";
   const configsList = [];
 
   try {
     // Fetch dynamic IP lists from external sources
     const [ipv4listRE1, ipv4listRE2] = await Promise.all([
       fetch(ipSourceURLs.dynamic1)
-        .then(res => res.json())
+        .then((res) => res.json())
         .catch(() => ({ ipv4: [] })),
       fetch(ipSourceURLs.dynamic2)
-        .then(res => res.json())
-        .catch(() => ({ data: [] })),
+        .then((res) => res.json())
+        .catch(() => ({ data: [] }))
     ]);
 
     // Extract IP addresses from responses
@@ -985,7 +985,7 @@ async function handleRequest(_request) {
     const ipDataSources = {
       static: shuffleArray([...new Set(staticIPs)]),
       dynamic1: shuffleArray([...new Set(ipListRE1)]),
-      dynamic2: shuffleArray([...new Set(ipListRE2)]),
+      dynamic2: shuffleArray([...new Set(ipListRE2)])
     };
 
     // Generate configurations based on defined groups
@@ -1008,31 +1008,31 @@ async function handleRequest(_request) {
 
     // Return base64-encoded configuration list with subscription headers
     const headers = {
-      'Content-Type': 'text/plain; charset=utf-8',
-      'Profile-Update-Interval': '6', // Client should update every 6 hours
-      'Subscription-Userinfo': subInfo, // Cake usage statistics
+      "Content-Type": "text/plain; charset=utf-8",
+      "Profile-Update-Interval": "6", // Client should update every 6 hours
+      "Subscription-Userinfo": subInfo, // Cake usage statistics
     };
 
     if (profileTitle) {
-      headers['Profile-Title'] = profileTitle;
+      headers["Profile-Title"] = profileTitle;
     }
 
-    return new Response(btoa(configsList.join('\n')), {
+    return new Response(btoa(configsList.join("\n")), {
       status: 200,
-      headers: headers,
+      headers: headers
     });
   } catch (error) {
     // Error handling - return empty config list on failure
-    return new Response(btoa('# Error generating configurations'), {
+    return new Response(btoa("# Error generating configurations"), {
       status: 200,
       headers: {
-        'Content-Type': 'text/plain; charset=utf-8',
-      },
+        "Content-Type": "text/plain; charset=utf-8"
+      }
     });
   }
 }
 
-// ——— VLESS LINK GENERATION ———
+ // ——— VLESS LINK GENERATION ———
 /**
  * Creates a VLESS link based on group settings
  * @param {string} ip - The IP address or domain to use
@@ -1047,9 +1047,9 @@ function createVlessLink(ip, group, settings) {
 
   // Process path: replace "random:N" with N random characters
   let finalPath = group.path;
-  if (finalPath.includes('random:')) {
+  if (finalPath.includes("random:")) {
     try {
-      const length = parseInt(finalPath.match(/random:(\d+)/)?.[1] || '10');
+      const length = parseInt(finalPath.match(/random:(\d+)/)?.[1] || "10");
       const randomString = generateRandomPath(length);
       finalPath = finalPath.replace(/random:\d+/, randomString);
     } catch (e) {
@@ -1060,17 +1060,17 @@ function createVlessLink(ip, group, settings) {
   // Build query parameters for VLESS URL
   const queryParams = new URLSearchParams({
     path: finalPath,
-    encryption: 'none',
-    type: 'ws', // WebSocket transport
+    encryption: "none",
+    type: "ws", // WebSocket transport
     host: group.host,
     fp: randomFp,
     ed: settings.ed,
-    eh: settings.eh,
+    eh: settings.eh
   });
 
   // Apply TLS-specific settings if enabled
   if (group.tls) {
-    queryParams.set('security', 'tls');
+    queryParams.set("security", "tls");
 
     // Handle SNI (Server Name Indication)
     let sniValue = group.sni || group.host;
@@ -1080,13 +1080,13 @@ function createVlessLink(ip, group, settings) {
       sniValue = randomizeCase(sniValue);
     }
 
-    queryParams.set('sni', sniValue);
+    queryParams.set("sni", sniValue);
 
     if (group.alpn) {
-      queryParams.set('alpn', group.alpn);
+      queryParams.set("alpn", group.alpn);
     }
     if (group.allowInsecure) {
-      queryParams.set('allowInsecure', '1');
+      queryParams.set("allowInsecure", "1");
     }
   }
   // For non-TLS: security and sni parameters are automatically omitted
@@ -1094,15 +1094,15 @@ function createVlessLink(ip, group, settings) {
   return `vless://${settings.uuid}@${ip}:${randomPort}?${queryParams.toString()}#${ps}`;
 }
 
-// ——— UTILITY FUNCTIONS ———
+ // ——— UTILITY FUNCTIONS ———
 /**
  * Generates a random alphanumeric string for path obfuscation
  * @param {number} length - Desired length of random string
  * @returns {string} - Random string
  */
 function generateRandomPath(length) {
-  let result = '';
-  const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+  let result = "";
+  const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
   const charactersLength = characters.length;
 
   for (let i = 0; i < length; i++) {
@@ -1119,7 +1119,7 @@ function generateRandomPath(length) {
  * @returns {string} - String with randomized casing
  */
 function randomizeCase(str) {
-  let result = '';
+  let result = "";
   for (let i = 0; i < str.length; i++) {
     // 50% chance to uppercase each character
     result += Math.random() < 0.5 ? str[i].toUpperCase() : str[i].toLowerCase();
