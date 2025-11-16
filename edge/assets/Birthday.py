@@ -1,5 +1,5 @@
-# Implement a birthday greeting web application using Flask. 
-# It includes personalized messages for specific users and a festive HTML interface. 
+# Implement a birthday greeting web application using Flask.
+# It includes personalized messages for specific users and a festive HTML interface.
 # For Deploy on PythonAnywhere or Serv00.
 from flask import Flask, request, render_template_string, redirect, url_for
 
@@ -12,7 +12,7 @@ MESSAGES = {
         "message": """Happy Birthday, Fatemeh 🥳
 
 It's been so great getting to know you in our class. You're a wonderful friend. 
-I hope you have an amazing day and a fantastic year ahead, full of happiness, health, and success ✨💛"""
+I hope you have an amazing day and a fantastic year ahead, full of happiness, health, and success ✨💛""",
     },
     "mohammad_hassan": {
         "name": "Mohammad Hassan",
@@ -21,8 +21,8 @@ I hope you have an amazing day and a fantastic year ahead, full of happiness, he
 Man, it's been fun having you in class all this time. You're a great guy. 
 Wishing you a very happy birthday and an awesome year. Hope it's filled with good times and new achievements.
         
-Cheers 🤍🍻"""
-    }
+Cheers 🤍🍻""",
+    },
 }
 
 LOGIN_HTML = """
@@ -449,41 +449,52 @@ FINAL_HTML = """
 </html>
 """
 
-@app.route('/', methods=['GET'])
+
+@app.route("/", methods=["GET"])
 def index():
-    error = request.args.get('error')
+    error = request.args.get("error")
     return render_template_string(LOGIN_HTML, owner=OWNER, error=error)
 
-@app.route('/greet', methods=['POST'])
+
+@app.route("/greet", methods=["POST"])
 def greet():
-    name = (request.form.get('name') or '').strip()
+    name = (request.form.get("name") or "").strip()
     normalized_name = name.lower()
 
     person_key = None
 
-    if normalized_name in ['fatemeh', 'فاطمه', 'فاطی', 'fati', 'fatima']:
-        person_key = 'fatemeh'
-    elif normalized_name in ['mohammad hassan', 'محمد حسن', 'ممد', 'mmd hsn', 'mohamad', 'mmd']:
-        person_key = 'mohammad_hassan'
-        
+    if normalized_name in ["fatemeh", "فاطمه", "فاطی", "fati", "fatima"]:
+        person_key = "fatemeh"
+    elif normalized_name in [
+        "mohammad hassan",
+        "محمد حسن",
+        "ممد",
+        "mmd hsn",
+        "mohamad",
+        "mmd",
+    ]:
+        person_key = "mohammad_hassan"
+
     if person_key:
         person_data = MESSAGES[person_key]
         return render_template_string(
-            GREET_HTML, 
-            name=person_data['name'], 
-            message=person_data['message'], 
-            owner=OWNER
+            GREET_HTML,
+            name=person_data["name"],
+            message=person_data["message"],
+            owner=OWNER,
         )
     else:
         error_msg = "This page isn't for you 😏🤔"
-        return redirect(url_for('index', error=error_msg))
+        return redirect(url_for("index", error=error_msg))
 
-@app.route('/finale')
+
+@app.route("/finale")
 def finale():
-    name = request.args.get('name', 'Friend')
+    name = request.args.get("name", "Friend")
     return render_template_string(FINAL_HTML, name=name, owner=OWNER)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     # This block is for LOCAL TESTING only.
     # PythonAnywhere and Serv00 will IGNORE this.
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(host="0.0.0.0", port=8000, debug=True)
