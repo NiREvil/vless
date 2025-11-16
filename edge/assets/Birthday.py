@@ -1,6 +1,8 @@
 # Implement a birthday greeting web application using Flask.
 # It includes personalized messages for specific users and a festive HTML interface.
 # For Deploy on PythonAnywhere or Serv00.
+# - Demo: https://arshiastest.pythonanywhere.com
+
 from flask import Flask, request, render_template_string, redirect, url_for
 
 app = Flask(__name__)
@@ -53,7 +55,7 @@ LOGIN_HTML = """
       0%, 100% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
     }
-    .confetti { position: absolute; width: 12px; height: 12px; background: #f0f; opacity: 0.8; animation: fall linear infinite; top: 0; pointer-events: none; }
+    .confetti { position: absolute; width: 10px; height: 10px; background: #f0f; opacity: 0.8; animation: fall linear infinite; top: 0; pointer-events: none; }
     @keyframes fall { 
     from { transform: translateY(0) rotate(0deg); }
     to { transform: translateY(100vh) rotate(720deg); } 
@@ -293,15 +295,15 @@ GREET_HTML = """
 </style>
 </head>
 <body>
-  <div class="balloon" style="top:10%;left:5%;animation-delay:1s;">🎈</div>
+  <div class="balloon" style="top:15%;left:5%;animation-delay:1s;">🎈</div>
   <div class="balloon" style="top:20%;right:8%;animation-delay:2s;">🎈</div>
-  <div class="balloon" style="bottom:15%;left:10%;animation-delay:1.5s;">🎈</div>
-  <div class="balloon" style="bottom:25%;right:5%;animation-delay:2s;">🎈</div>
+  <div class="balloon" style="bottom:15%;left:10%;animation-delay:1s;">🎈</div>
+  <div class="balloon" style="bottom:25%;right:5%;animation-delay:1.5s;">🎈</div>
   
   <div class="box">
     <h2>Happy Birthday, {{ name }}</h2>
     <p>A special message from {{ owner }}:</p>
-    <div id="message-block" class="message-block"></div>
+    <div class="message-block">{{ message | safe }}</div>
     
     <div class="cake-area">
       <div class="candles">🕯️🕯️🕯️</div>
@@ -463,7 +465,13 @@ def greet():
 
     person_key = None
 
-    if normalized_name in ["fatemeh", "فاطمه", "فاطی", "fati", "fatima"]:
+    if normalized_name in [
+        "fatemeh", 
+        "فاطمه",
+        "فاطی",
+        "fati",
+        "fatima",
+    ]:
         person_key = "fatemeh"
     elif normalized_name in [
         "mohammad hassan",
