@@ -1,8 +1,7 @@
 # Implement a birthday greeting web application using Flask.
 # It includes personalized messages for specific users and a festive HTML interface.
-# For Deploy on PythonAnywhere or Serv00.
-# - Demo: https://arshiastest.pythonanywhere.com
-
+# It can be deployed on "PythonAnywhere" and "Serv00".
+# Demo: https://arshiastest.pythonanywhere.com
 from flask import Flask, request, render_template_string, redirect, url_for
 
 app = Flask(__name__)
@@ -466,7 +465,7 @@ def greet():
     person_key = None
 
     if normalized_name in [
-        "fatemeh",
+        "fatemeh", 
         "فاطمه",
         "فاطی",
         "fati",
