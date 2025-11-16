@@ -465,7 +465,7 @@ def greet():
     person_key = None
 
     if normalized_name in [
-        "fatemeh", 
+        "fatemeh",
         "فاطمه",
         "فاطی",
         "fati",
