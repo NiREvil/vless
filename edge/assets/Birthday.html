@@ -2,422 +2,566 @@
      Deployed on GitHub pages -->
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>A Message For You</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 25%, #ff9a9e 50%, #fad0c4 75%, #ffd1ff 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-    padding: 16px;
-  }
-  @keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
-  .card, .box, .wrap {
-    width: 100%;
-    max-width: 400px;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 32px 24px;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    backdrop-filter: blur(20px);
-    border: 2px solid rgba(255,255,255,0.3);
-    transition: opacity 0.5s, transform 0.5s;
-    opacity: 0;
-    transform: translateY(40px);
-    position: relative;
-    z-index: 1;
-  }
-  .active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .confetti { position: absolute; width: 10px; height: 10px; background: #f0f; opacity: 0.8; animation: fall linear infinite; top: 0; pointer-events: none; }
-  @keyframes fall { 
-    from { transform: translateY(0) rotate(0deg); }
-    to { transform: translateY(100vh) rotate(720deg); } 
-  }
-  .confetti-area { position: absolute; top: 0; left: 0; width: 100%; height: 100vh; pointer-events: none; z-index: 10; }
-  h1, h2 {
-    margin: 0 0 10px;
-    font-size: 26px;
-    font-weight: 700;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-align: center;
-  }
-  .intro-p {
-    margin: 0 0 20px;
-    line-height: 1.5;
-    color: #555;
-    text-align: center;
-    font-size: 14px;
-  }
-  label {
-    display: block;
-    margin-top: 8px;
-    font-size: 13px;
-    color: #666;
-    font-weight: 600;
-  }
-  input[type=text] {
-    width: 100%;
-    padding: 12px 14px;
-    border-radius: 12px;
-    border: 2px solid #e0e0e0;
-    background: #fff;
-    color: #333;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    transition: all 0.3s;
-  }
-  input[type=text]:focus {
-    outline: none;
-    border-color: #ff9a9e;
-    box-shadow: 0 0 0 4px rgba(255, 154, 158, 0.1);
-  }
-  .btn {
-    display: block;
-    width: 100%;
-    margin-top: 16px;
-    padding: 13px;
-    border-radius: 12px;
-    border: 0;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    color: white;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
-  }
-  .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 154, 158, 0.6);
-  }
-  .btn:active {
-    transform: translateY(0);
-  }
-  .error {
-    color: #e74c3c;
-    margin-top: 14px;
-    font-size: 13px;
-    text-align: center;
-    font-weight: 500;
-    display: none;
-  }
-  .emoji { font-size: 42px; text-align: center; margin-bottom: 14px; animation: bounce 2s infinite; }
-  @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>A Message For You</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          135deg,
+          #ffecd2 0%,
+          #fcb69f 25%,
+          #ff9a9e 50%,
+          #fad0c4 75%,
+          #ffd1ff 100%
+        );
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        padding: 16px;
+      }
+      @keyframes gradientShift {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+      .card,
+      .box,
+      .wrap {
+        width: 100%;
+        max-width: 400px;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 32px 24px;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(20px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        transition:
+          opacity 0.5s,
+          transform 0.5s;
+        opacity: 0;
+        transform: translateY(40px);
+        position: relative;
+        z-index: 1;
+      }
+      .active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #f0f;
+        opacity: 0.8;
+        animation: fall linear infinite;
+        top: 0;
+        pointer-events: none;
+      }
+      @keyframes fall {
+        from {
+          transform: translateY(0) rotate(0deg);
+        }
+        to {
+          transform: translateY(100vh) rotate(720deg);
+        }
+      }
+      .confetti-area {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 10;
+      }
+      h1,
+      h2 {
+        margin: 0 0 10px;
+        font-size: 26px;
+        font-weight: 700;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-align: center;
+      }
+      .intro-p {
+        margin: 0 0 20px;
+        line-height: 1.5;
+        color: #555;
+        text-align: center;
+        font-size: 14px;
+      }
+      label {
+        display: block;
+        margin-top: 8px;
+        font-size: 13px;
+        color: #666;
+        font-weight: 600;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 12px;
+        border: 2px solid #e0e0e0;
+        background: #fff;
+        color: #333;
+        font-size: 15px;
+        font-family: "Poppins", sans-serif;
+        transition: all 0.3s;
+      }
+      input[type="text"]:focus {
+        outline: none;
+        border-color: #ff9a9e;
+        box-shadow: 0 0 0 4px rgba(255, 154, 158, 0.1);
+      }
+      .btn {
+        display: block;
+        width: 100%;
+        margin-top: 16px;
+        padding: 13px;
+        border-radius: 12px;
+        border: 0;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        color: white;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s;
+        font-family: "Poppins", sans-serif;
+        box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 154, 158, 0.6);
+      }
+      .btn:active {
+        transform: translateY(0);
+      }
+      .error {
+        color: #e74c3c;
+        margin-top: 14px;
+        font-size: 13px;
+        text-align: center;
+        font-weight: 500;
+        display: none;
+      }
+      .emoji {
+        font-size: 42px;
+        text-align: center;
+        margin-bottom: 14px;
+        animation: bounce 2s infinite;
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
 
-  .box { max-width: 480px; padding: 28px 20px; }
-  .box h2 { font-size: 26px; margin: 0 0 8px; }
-  .box .intro-p { margin: 0 0 16px; direction: ltr; }
-  .message-block {
-    white-space: pre-wrap;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, rgba(255,154,158,0.1), rgba(250,208,196,0.1));
-    padding: 18px;
-    border-radius: 14px;
-    font-size: 14px;
-    line-height: 1.7;
-    color: #333;
-    border: 2px solid rgba(255,154,158,0.2);
-    min-height: 120px;
-    text-align: left;
-  }
-  .cake-area {
-    text-align: center;
-    margin: 20px 0 16px;
-  }
-  .cake { font-size: 5rem; animation: cakeBounce 2s infinite; }
-  @keyframes cakeBounce { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-  .candles {
-    font-size: 2.8rem;
-    letter-spacing: 6px;
-    margin-top: -20px;
-    animation: flicker 1.5s infinite alternate;
-  }
-  @keyframes flicker { 0% { opacity: 1; } 100% { opacity: 0.8; } }
-  .action {
-    margin-top: 20px;
-    text-align: center;
-  }
-  .btn.wide {
-    width: auto;
-    display: inline-block;
-    padding: 13px 18px;
-    border-radius: 14px;
-    box-shadow: 0 6px 20px rgba(255, 154, 158, 0.4);
-  }
-  .balloon { position: absolute; font-size: 2.5rem; animation: float 6s ease-in-out infinite; opacity: 0; transition: opacity 1.5s ease-out; }
-  @keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-30px) rotate(10deg); } }
+      .box {
+        max-width: 480px;
+        padding: 28px 20px;
+      }
+      .box h2 {
+        font-size: 26px;
+        margin: 0 0 8px;
+      }
+      .box .intro-p {
+        margin: 0 0 16px;
+        direction: ltr;
+      }
+      .message-block {
+        white-space: pre-wrap;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, rgba(255, 154, 158, 0.1), rgba(250, 208, 196, 0.1));
+        padding: 18px;
+        border-radius: 14px;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #333;
+        border: 2px solid rgba(255, 154, 158, 0.2);
+        min-height: 120px;
+        text-align: left;
+      }
+      .cake-area {
+        text-align: center;
+        margin: 20px 0 16px;
+      }
+      .cake {
+        font-size: 5rem;
+        animation: cakeBounce 2s infinite;
+      }
+      @keyframes cakeBounce {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+      .candles {
+        font-size: 2.8rem;
+        letter-spacing: 6px;
+        margin-top: -20px;
+        animation: flicker 1.5s infinite alternate;
+      }
+      @keyframes flicker {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.8;
+        }
+      }
+      .action {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .btn.wide {
+        width: auto;
+        display: inline-block;
+        padding: 13px 18px;
+        border-radius: 14px;
+        box-shadow: 0 6px 20px rgba(255, 154, 158, 0.4);
+      }
+      .balloon {
+        position: absolute;
+        font-size: 2.5rem;
+        animation: float 6s ease-in-out infinite;
+        opacity: 0;
+        transition: opacity 1.5s ease-out;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-30px) rotate(10deg);
+        }
+      }
 
-  .wrap { 
-    max-width: 480px; 
-    padding: 36px 28px;
-    text-align: center;
-  }
-  .final-title {
-    margin: 0 0 10px;
-    font-size: 30px;
-    font-weight: 700;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: titlePulse 2s infinite;
-  }
-  @keyframes titlePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-  .final-p {
-    margin: 0 0 16px;
-    font-size: 17px;
-    color: #555;
-    font-weight: 500;
-  }
-  .final-cake {
-    font-size: 6rem;
-    margin-top: 16px;
-    animation: cakeSpin 3s ease-in-out infinite;
-  }
-  @keyframes cakeSpin { 
-    0%, 100% { transform: rotate(0deg) scale(1); } 
-    25% { transform: rotate(-10deg) scale(1.1); }
-    75% { transform: rotate(10deg) scale(1.1); }
-  }
+      .wrap {
+        max-width: 480px;
+        padding: 36px 28px;
+        text-align: center;
+      }
+      .final-title {
+        margin: 0 0 10px;
+        font-size: 30px;
+        font-weight: 700;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: titlePulse 2s infinite;
+      }
+      @keyframes titlePulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+      .final-p {
+        margin: 0 0 16px;
+        font-size: 17px;
+        color: #555;
+        font-weight: 500;
+      }
+      .final-cake {
+        font-size: 6rem;
+        margin-top: 16px;
+        animation: cakeSpin 3s ease-in-out infinite;
+      }
+      @keyframes cakeSpin {
+        0%,
+        100% {
+          transform: rotate(0deg) scale(1);
+        }
+        25% {
+          transform: rotate(-10deg) scale(1.1);
+        }
+        75% {
+          transform: rotate(10deg) scale(1.1);
+        }
+      }
 
-  .hidden { display: none !important; }
-</style>
-</head>
-<body>
+      .hidden {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="confetti-area" class="confetti-area"></div>
+    <div class="balloon" id="b1" style="top: 15%; left: 5%; animation-delay: 1s">🎈</div>
+    <div class="balloon" id="b2" style="top: 20%; right: 8%; animation-delay: 2s">🎈</div>
+    <div class="balloon" id="b3" style="bottom: 15%; left: 10%; animation-delay: 1s">🎈</div>
+    <div class="balloon" id="b4" style="bottom: 25%; right: 5%; animation-delay: 1.5s">🎈</div>
 
-  <div id="confetti-area" class="confetti-area"></div>
-  <div class="balloon" id="b1" style="top:15%;left:5%;animation-delay:1s;">🎈</div>
-  <div class="balloon" id="b2" style="top:20%;right:8%;animation-delay:2s;">🎈</div>
-  <div class="balloon" id="b3" style="bottom:15%;left:10%;animation-delay:1s;">🎈</div>
-  <div class="balloon" id="b4" style="bottom:25%;right:5%;animation-delay:1.5s;">🎈</div>
-
-  <div class="card active" id="stage1">
-    <div class="emoji">🎁</div>
-    <h1>Hello dear</h1>
-    <p class="intro-p">This is a small birthday surprise prepared by Arshia. Please enter your first-name to continue.</p>
-    <div>
-      <label for="nameInput">Your name:</label>
-      <input id="nameInput" type="text" autocomplete="off" required>
-      <button class="btn" id="openBtn" type="button">Open Your Gift 🎉</button>
+    <div class="card active" id="stage1">
+      <div class="emoji">🎁</div>
+      <h1>Hello dear</h1>
+      <p class="intro-p">
+        This is a small birthday surprise prepared by Arshia. Please enter your first-name to
+        continue.
+      </p>
+      <div>
+        <label for="nameInput">Your name:</label>
+        <input id="nameInput" type="text" autocomplete="off" required />
+        <button class="btn" id="openBtn" type="button">Open Your Gift 🎉</button>
+      </div>
+      <div class="error" id="errorMsg">This page isn't for you 😏🤔</div>
     </div>
-    <div class="error" id="errorMsg">This page isn't for you 😏🤔</div>
-  </div>
 
-  <div class="box hidden" id="stage2">
-    <p class="intro-p">A special message from Arshia:</p>
-    <div class="message-block" id="messageBlock"></div>
-    
-    <div class="cake-area">
-      <div class="candles" id="candles">🕯️🕯️🕯️</div>
-      <div class="cake" id="cake">🎂</div>
-    </div>
-    
-    <div class="action">
-      <button class="btn wide" id="finaleBtn">Make a wish and blow out the candles</button>
-    </div>
-  </div>
+    <div class="box hidden" id="stage2">
+      <p class="intro-p">A special message from Arshia:</p>
+      <div class="message-block" id="messageBlock"></div>
 
-  <div class="wrap hidden" id="stage3">
-    <h1 class="final-title" id="finalTitle"></h1>
-    <p class="final-p">Congratulations on surviving another trip around the sun without being abducted by aliens 👽👾👻</p>
-    <p class="final-p">All the best wishes from <b>Arshia</b> 🤍</p>
-    <div class="final-cake">🎂</div>
-  </div>
-  
-<script>
-  const OWNER = "Arshia";
-  const MESSAGES = {
-    fatemeh: {
-      name: "Fatemeh",
-      message: `Happy Birthday, Fatemeh 🥳
+      <div class="cake-area">
+        <div class="candles" id="candles">🕯️🕯️🕯️</div>
+        <div class="cake" id="cake">🎂</div>
+      </div>
+
+      <div class="action">
+        <button class="btn wide" id="finaleBtn">Make a wish and blow out the candles</button>
+      </div>
+    </div>
+
+    <div class="wrap hidden" id="stage3">
+      <h1 class="final-title" id="finalTitle"></h1>
+      <p class="final-p">
+        Congratulations on surviving another trip around the sun without being abducted by aliens
+        👽👾👻
+      </p>
+      <p class="final-p">All the best wishes from <b>Arshia</b> 🤍</p>
+      <div class="final-cake">🎂</div>
+    </div>
+
+    <script>
+      const OWNER = "Arshia";
+      const MESSAGES = {
+        fatemeh: {
+          name: "Fatemeh",
+          message: `Happy Birthday, Fatemeh 🥳
 
 It's been so great getting to know you in our class. You're a wonderful friend. 
 I hope you have an amazing day and a fantastic year ahead, full of happiness, health, and success ✨💛`,
-    },
-    mohammad_hassan: {
-      name: "Mohammad Hassan",
-      message: `Happy Birthday, Mohammad Hassan 🎉
+        },
+        mohammad_hassan: {
+          name: "Mohammad Hassan",
+          message: `Happy Birthday, Mohammad Hassan 🎉
 
 Man, it's been fun having you in class all this time. You're a great guy. 
 Wishing you a very happy birthday and an awesome year. Hope it's filled with good times and new achievements.
       
 Cheers 🤍🍻`,
-    },
-  };
+        },
+      };
 
-  const ALIASES = {
-    "fatemeh": ["fatemeh", "فاطمه", "فاطی", "fati", "fatima", "fãtemeh", "fatma"],
-    "mohammad_hassan": ["mohammad hassan", "محمد حسن", "ممد", "mmd hsn", "mohamad", "mmd", "mohammad", "mohammadhasan", "moham", "محمد"],
-  };
+      const ALIASES = {
+        fatemeh: ["fatemeh", "فاطمه", "فاطی", "fati", "fatima", "fãtemeh", "fatma"],
+        mohammad_hassan: [
+          "mohammad hassan",
+          "محمد حسن",
+          "ممد",
+          "mmd hsn",
+          "mohamad",
+          "mmd",
+          "mohammad",
+          "mohammadhasan",
+          "moham",
+          "محمد",
+        ],
+      };
 
-  function q(id) { return document.getElementById(id); }
-
-  function normalizeName(raw) {
-    return String(raw || '').trim().toLowerCase().replace(/\u200c/g, ' ').replace(/\s+/g, ' ').normalize('NFKC');
-  }
-
-  function matchName(raw) {
-    const n = normalizeName(raw);
-    for (const key in ALIASES) {
-      if (ALIASES[key].includes(n)) {
-        return key;
+      function q(id) {
+        return document.getElementById(id);
       }
-    }
-    if (n.includes('fatemeh') || n.includes('فاطمه')) return 'fatemeh';
-    if (n.includes('mohammad') || n.includes('محمد')) return 'mohammad_hassan';
-    return null;
-  }
 
-  function typeWriter(element, text, speed = 40) {
-    let i = 0;
-    element.textContent = ''; 
-    return new Promise(resolve => {
-      function typing() {
-        if (i < text.length) {
-          element.textContent += text.charAt(i);
-          i++;
-          setTimeout(typing, speed);
-        } else {
-          resolve();
+      function normalizeName(raw) {
+        return String(raw || "")
+          .trim()
+          .toLowerCase()
+          .replace(/\u200c/g, " ")
+          .replace(/\s+/g, " ")
+          .normalize("NFKC");
+      }
+
+      function matchName(raw) {
+        const n = normalizeName(raw);
+        for (const key in ALIASES) {
+          if (ALIASES[key].includes(n)) {
+            return key;
+          }
+        }
+        if (n.includes("fatemeh") || n.includes("فاطمه")) return "fatemeh";
+        if (n.includes("mohammad") || n.includes("محمد")) return "mohammad_hassan";
+        return null;
+      }
+
+      function typeWriter(element, text, speed = 40) {
+        let i = 0;
+        element.textContent = "";
+        return new Promise((resolve) => {
+          function typing() {
+            if (i < text.length) {
+              element.textContent += text.charAt(i);
+              i++;
+              setTimeout(typing, speed);
+            } else {
+              resolve();
+            }
+          }
+          typing();
+        });
+      }
+
+      function initConfettiLogin() {
+        const confettiArea = q("confetti-area");
+        for (let i = 0; i < 70; i++) {
+          const c = document.createElement("div");
+          c.className = "confetti";
+          c.style.left = Math.random() * 100 + "%";
+          c.style.top = Math.random() * -20 + "px";
+          c.style.background = ["#ff6b6b", "#4ecdc4", "#ffe66d", "#a8e6cf", "#ffd3b6"][
+            Math.floor(Math.random() * 5)
+          ];
+          c.style.animationDuration = Math.random() * 4 + 3 + "s";
+          c.style.animationDelay = Math.random() * 3 + "s";
+          confettiArea.appendChild(c);
         }
       }
-      typing();
-    });
-  }
 
-  function initConfettiLogin() {
-    const confettiArea = q('confetti-area');
-    for(let i=0;i<70;i++){
-      const c=document.createElement('div');
-      c.className='confetti';
-      c.style.left=Math.random()*100+'%';
-      c.style.top = Math.random() * -20 + 'px';
-      c.style.background=['#ff6b6b','#4ecdc4','#ffe66d','#a8e6cf','#ffd3b6'][Math.floor(Math.random()*5)];
-      c.style.animationDuration=(Math.random()*4+3)+'s';
-      c.style.animationDelay=Math.random()*3+'s';
-      confettiArea.appendChild(c);
-    }
-  }
+      q("openBtn").addEventListener("click", () => {
+        const nameInput = q("nameInput").value;
+        const matchedKey = matchName(nameInput);
 
-  q('openBtn').addEventListener('click', () => {
-    const nameInput = q('nameInput').value;
-    const matchedKey = matchName(nameInput);
-    
-    if (matchedKey) {
-      q('errorMsg').style.display = 'none';
-      const data = MESSAGES[matchedKey];
-  
-      q('stage1').classList.remove('active');
-      q('stage1').classList.add('hidden');
-  
-      q('confetti-area').classList.add('hidden');
+        if (matchedKey) {
+          q("errorMsg").style.display = "none";
+          const data = MESSAGES[matchedKey];
 
-      q('stage2').dataset.name = data.name;
-      
-      q('stage2').classList.remove('hidden');
-      setTimeout(() => {
-        q('stage2').classList.add('active');
-        q('b1').style.opacity = q('b2').style.opacity = q('b3').style.opacity = q('b4').style.opacity = 1;
+          q("stage1").classList.remove("active");
+          q("stage1").classList.add("hidden");
 
-        typeWriter(q('messageBlock'), data.message);
-      }, 500); 
+          q("confetti-area").classList.add("hidden");
 
-    } else {
-      q('errorMsg').style.display = 'block';
-    }
-  });
+          q("stage2").dataset.name = data.name;
 
-  q('finaleBtn').addEventListener('click', () => {
-    const userName = q('stage2').dataset.name || "Friend";
+          q("stage2").classList.remove("hidden");
+          setTimeout(() => {
+            q("stage2").classList.add("active");
+            q("b1").style.opacity =
+              q("b2").style.opacity =
+              q("b3").style.opacity =
+              q("b4").style.opacity =
+                1;
 
-    q('stage2').classList.remove('active');
-    q('stage2').classList.add('hidden');
-
-    const balloons = ['b1', 'b2', 'b3', 'b4'];
-    balloons.forEach((id, index) => {
-      setTimeout(() => {
-        q(id).style.opacity = 0;
-      }, index * 400);
-    });
-
-    q('finalTitle').textContent = `Happy Birthday ${userName} 🎉`;
-    
-    q('stage3').classList.remove('hidden');
-    setTimeout(() => {
-      q('stage3').classList.add('active');
-      launchConfettiFinale();
-    }, 500);
-  });
-
-  function launchConfettiFinale() {
-    function shootConfetti() {
-      confetti({
-        particleCount: 200,
-        spread: 120,
-        origin: { y: 0.5 },
-        colors: ['#ff9a9e', '#fad0c4', '#ffecd2', '#fcb69f', '#ffd1ff', '#ff6b6b', '#ffe66d']
+            typeWriter(q("messageBlock"), data.message);
+          }, 500);
+        } else {
+          q("errorMsg").style.display = "block";
+        }
       });
-    }
-    
-    shootConfetti();
-    setTimeout(shootConfetti, 400);
-    setTimeout(shootConfetti, 800);
 
-    const continuous = setInterval(function() {
-      if (document.body.contains(q('stage3'))) {
-        confetti({
-          particleCount: 3,
-          angle: 60,
-          spread: 55,
-          origin: { x: 0 },
-          colors: ['#ff9a9e', '#fad0c4', '#ffecd2']
+      q("finaleBtn").addEventListener("click", () => {
+        const userName = q("stage2").dataset.name || "Friend";
+
+        q("stage2").classList.remove("active");
+        q("stage2").classList.add("hidden");
+
+        const balloons = ["b1", "b2", "b3", "b4"];
+        balloons.forEach((id, index) => {
+          setTimeout(() => {
+            q(id).style.opacity = 0;
+          }, index * 400);
         });
-        confetti({
-          particleCount: 3,
-          angle: 120,
-          spread: 55,
-          origin: { x: 1 },
-          colors: ['#fcb69f', '#ffd1ff', '#ff6b6b']
-        });
-      } else {
-        clearInterval(continuous);
+
+        q("finalTitle").textContent = `Happy Birthday ${userName} 🎉`;
+
+        q("stage3").classList.remove("hidden");
+        setTimeout(() => {
+          q("stage3").classList.add("active");
+          launchConfettiFinale();
+        }, 500);
+      });
+
+      function launchConfettiFinale() {
+        function shootConfetti() {
+          confetti({
+            particleCount: 200,
+            spread: 120,
+            origin: { y: 0.5 },
+            colors: ["#ff9a9e", "#fad0c4", "#ffecd2", "#fcb69f", "#ffd1ff", "#ff6b6b", "#ffe66d"],
+          });
+        }
+
+        shootConfetti();
+        setTimeout(shootConfetti, 400);
+        setTimeout(shootConfetti, 800);
+
+        const continuous = setInterval(function () {
+          if (document.body.contains(q("stage3"))) {
+            confetti({
+              particleCount: 3,
+              angle: 60,
+              spread: 55,
+              origin: { x: 0 },
+              colors: ["#ff9a9e", "#fad0c4", "#ffecd2"],
+            });
+            confetti({
+              particleCount: 3,
+              angle: 120,
+              spread: 55,
+              origin: { x: 1 },
+              colors: ["#fcb69f", "#ffd1ff", "#ff6b6b"],
+            });
+          } else {
+            clearInterval(continuous);
+          }
+        }, 250);
       }
-    }, 250);
-  }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    initConfettiLogin();
+      document.addEventListener("DOMContentLoaded", () => {
+        initConfettiLogin();
 
-    const params = new URLSearchParams(window.location.search);
-    const prefilledName = params.get('name');
-    if (prefilledName) {
-      q('nameInput').value = prefilledName;
-    }
-  });
-</script>
-</body>
+        const params = new URLSearchParams(window.location.search);
+        const prefilledName = params.get("name");
+        if (prefilledName) {
+          q("nameInput").value = prefilledName;
+        }
+      });
+    </script>
+  </body>
 </html>
