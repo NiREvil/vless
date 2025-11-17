@@ -6,10 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>A Message For You</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
       * {
@@ -112,7 +109,7 @@
         margin: 0 0 20px;
         line-height: 1.5;
         color: #555;
-        text-align: center;
+        text-align: left;
         font-size: 14px;
       }
       label {
@@ -142,13 +139,13 @@
         display: block;
         width: 100%;
         margin-top: 16px;
-        padding: 13px;
-        border-radius: 12px;
+        padding: 13px 24px;
+        border-radius: 14px;
         border: 0;
         background: linear-gradient(135deg, #ff9a9e, #fad0c4);
         color: white;
         cursor: pointer;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 600;
         text-decoration: none;
         transition: all 0.3s;
@@ -249,7 +246,7 @@
       .btn.wide {
         width: auto;
         display: inline-block;
-        padding: 13px 18px;
+        padding: 13px 24px;
         border-radius: 14px;
         box-shadow: 0 6px 20px rgba(255, 154, 158, 0.4);
       }
@@ -271,8 +268,11 @@
       }
 
       .wrap {
+        width: 100%;
         max-width: 480px;
         padding: 36px 28px;
+        border-radius: 20px;
+        border: 2px solid rgba(255,255,255,0.3);
         text-align: center;
       }
       .final-title {
@@ -296,7 +296,13 @@
       }
       .final-p {
         margin: 0 0 16px;
-        font-size: 17px;
+        font-size: 16px;
+        color: #555;
+        font-weight: 500;
+      }
+      .final-f {
+        margin: 0 0 16px;
+        font-size: 15px;
         color: #555;
         font-weight: 500;
       }
@@ -334,8 +340,7 @@
       <div class="emoji">🎁</div>
       <h1>Hello dear</h1>
       <p class="intro-p">
-        This is a small birthday surprise prepared by Arshia. Please enter your first-name to
-        continue.
+        This is a small birthday surprise prepared by arshia. Please enter your name to continue.
       </p>
       <div>
         <label for="nameInput">Your name:</label>
@@ -346,7 +351,7 @@
     </div>
 
     <div class="box hidden" id="stage2">
-      <p class="intro-p">A special message from Arshia:</p>
+      <p class="intro-p">From arshia:</p>
       <div class="message-block" id="messageBlock"></div>
 
       <div class="cake-area">
@@ -365,7 +370,9 @@
         Congratulations on surviving another trip around the sun without being abducted by aliens
         👽👾👻
       </p>
-      <p class="final-p">All the best wishes from <b>Arshia</b> 🤍</p>
+      <p class="final-f">
+        All the best wishes from <b>Arshia</b> 🤍
+      </p>
       <div class="final-cake">🎂</div>
     </div>
 
@@ -391,18 +398,24 @@ Cheers 🤍🍻`,
       };
 
       const ALIASES = {
-        fatemeh: ["fatemeh", "فاطمه", "فاطی", "fati", "fatima", "fãtemeh", "fatma"],
+        fatemeh: [
+          "fatemeh",
+          "fateme",
+          "fatima",
+          "fati",
+          "فاطمه",
+          "فاطی",
+          "ft",
+        ],
         mohammad_hassan: [
           "mohammad hassan",
-          "محمد حسن",
-          "ممد",
-          "mmd hsn",
+          "mohamad hasan",
+          "mohammad",
           "mohamad",
           "mmd",
-          "mohammad",
-          "mohammadhasan",
-          "moham",
+          "محمد حسن",
           "محمد",
+          "ممد",
         ],
       };
 
