@@ -1,7 +1,5 @@
-# Implement a birthday greeting web application using Flask.
-# It includes personalized messages for specific users and a festive HTML interface.
-# It can be deployed on "PythonAnywhere" and "Serv00".
 # Demo: https://arshiastest.pythonanywhere.com
+# It can be deployed on "PythonAnywhere" and "Serv00".
 from flask import Flask, request, render_template_string, redirect, url_for
 
 app = Flask(__name__)
@@ -12,16 +10,16 @@ MESSAGES = {
         "name": "Fatemeh",
         "message": """Happy Birthday, Fatemeh 🥳
 
-It's been so great getting to know you in our class. You're a wonderful friend. 
+It's been so great getting to know you in our class. You're a wonderful friend.
 I hope you have an amazing day and a fantastic year ahead, full of happiness, health, and success ✨💛""",
     },
     "mohammad_hassan": {
         "name": "Mohammad Hassan",
         "message": """Happy Birthday, Mohammad Hassan 🎉
 
-Man, it's been fun having you in class all this time. You're a great guy. 
+Man, it's been fun having you in class all this time. You're a great guy.
 Wishing you a very happy birthday and an awesome year. Hope it's filled with good times and new achievements.
-        
+
 Cheers 🤍🍻""",
     },
 }
@@ -55,9 +53,9 @@ LOGIN_HTML = """
       50% { background-position: 100% 50%; }
     }
     .confetti { position: absolute; width: 10px; height: 10px; background: #f0f; opacity: 0.8; animation: fall linear infinite; top: 0; pointer-events: none; }
-    @keyframes fall { 
+    @keyframes fall {
     from { transform: translateY(0) rotate(0deg); }
-    to { transform: translateY(100vh) rotate(720deg); } 
+    to { transform: translateY(100vh) rotate(720deg); }
     }
     .card {
       width: 100%;
@@ -69,9 +67,9 @@ LOGIN_HTML = """
       backdrop-filter: blur(20px);
       border: 2px solid rgba(255,255,255,0.3);
     }
-    @keyframes fadeInUp { 
-      from { opacity: 0; transform: translateY(40px) scale(0.95); } 
-      to { opacity: 1; transform: translateY(0) scale(1); } 
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
     }
     h1 {
       margin: 0 0 10px;
@@ -87,7 +85,7 @@ LOGIN_HTML = """
       margin: 0 0 20px;
       line-height: 1.5;
       color: #555;
-      text-align: center;
+      text-align: left;
       font-size: 14px;
     }
     label {
@@ -152,7 +150,7 @@ LOGIN_HTML = """
   <div class="card">
     <div class="emoji">🎁</div>
     <h1>Hello dear</h1>
-    <p>This is a small birthday surprise prepared by {{ owner }}. Please enter your first-name to continue.</p>
+    <p>This is a small birthday surprise prepared by {{ owner }}. Please enter your name to continue.</p>
     <form method="post" action="/greet">
       <label for="name">Your name:</label>
       <input id="name" name="name" type="text" autocomplete="off" required>
@@ -206,7 +204,7 @@ GREET_HTML = """
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
   }
-  .balloon { position: absolute; font-size: 2.5rem; animation: float 6s ease-in-out infinite; }
+  .balloon { position: absolute; font-size: 2.5rem; animation: float 6s ease-in-out infinite; opacity: 0; transition: opacity 1.5s ease-out; }
   @keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-30px) rotate(10deg); } }
   .box {
     width: 100%;
@@ -219,9 +217,9 @@ GREET_HTML = """
     backdrop-filter: blur(20px);
     border: 2px solid rgba(255,255,255,0.3);
   }
-  @keyframes fadeInUp { 
-    from { opacity: 0; transform: translateY(40px) scale(0.95); } 
-    to { opacity: 1; transform: translateY(0) scale(1); } 
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
   }
   h2 {
     margin: 0 0 8px;
@@ -234,10 +232,10 @@ GREET_HTML = """
     text-align: center;
   }
   p {
-    margin: 0 0 16px;
+    margin: 0 0 14px;
     line-height: 1.5;
     color: #555;
-    text-align: center;
+    text-align: left;
     font-size: 14px;
   }
   .message-block {
@@ -251,6 +249,7 @@ GREET_HTML = """
     color: #333;
     border: 2px solid rgba(255,154,158,0.2);
     min-height: 120px;
+    text-align: left;
   }
   .cake-area {
     text-align: center;
@@ -298,27 +297,30 @@ GREET_HTML = """
   <div class="balloon" style="top:20%;right:8%;animation-delay:2s;">🎈</div>
   <div class="balloon" style="bottom:15%;left:10%;animation-delay:1s;">🎈</div>
   <div class="balloon" style="bottom:25%;right:5%;animation-delay:1.5s;">🎈</div>
-  
+
   <div class="box">
-    <h2>Happy Birthday, {{ name }}</h2>
-    <p>A special message from {{ owner }}:</p>
-    <div class="message-block">{{ message | safe }}</div>
-    
+    <p>From {{ owner }}:</p>
+    <div class="message-block" id="message-block"></div>
+
     <div class="cake-area">
       <div class="candles">🕯️🕯️🕯️</div>
       <div class="cake">🎂</div>
     </div>
-    
+
     <div class="action">
       <a href="{{ url_for('finale', name=name) }}" class="btn">Make a wish and blow out the candles</a>
     </div>
   </div>
-  
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const message = `{{ message }}`;
+      const balloons = document.querySelectorAll('.balloon');
+      balloons.forEach(b => b.style.opacity = 1);
+
+      const message = {{ message | tojson }};
       const messageBlock = document.getElementById('message-block');
       let i = 0;
+      
       function typeWriter() {
         if (i < message.length) {
           messageBlock.innerHTML += message.charAt(i);
@@ -326,7 +328,10 @@ GREET_HTML = """
           setTimeout(typeWriter, 40);
         }
       }
-      typeWriter();
+      
+      if (messageBlock) {
+          typeWriter();
+      }
     });
   </script>
 </body>
@@ -372,9 +377,9 @@ FINAL_HTML = """
     backdrop-filter: blur(20px);
     border: 2px solid rgba(255,255,255,0.3);
   }
-  @keyframes fadeInScale { 
-    from { opacity: 0; transform: scale(0.8) rotate(-5deg); } 
-    to { opacity: 1; transform: scale(1) rotate(0deg); } 
+  @keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8) rotate(-5deg); }
+    to { opacity: 1; transform: scale(1) rotate(0deg); }
   }
   h1 {
     margin: 0 0 10px;
@@ -389,7 +394,13 @@ FINAL_HTML = """
   @keyframes titlePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
   p {
     margin: 0 0 16px;
-    font-size: 17px;
+    font-size: 16px;
+    color: #555;
+    font-weight: 500;
+  }
+  F {
+    margin: 0 0 16px;
+    font-size: 15px;
     color: #555;
     font-weight: 500;
   }
@@ -398,8 +409,8 @@ FINAL_HTML = """
     margin-top: 16px;
     animation: cakeSpin 3s ease-in-out infinite;
   }
-  @keyframes cakeSpin { 
-    0%, 100% { transform: rotate(0deg) scale(1); } 
+  @keyframes cakeSpin {
+    0%, 100% { transform: rotate(0deg) scale(1); }
     25% { transform: rotate(-10deg) scale(1.1); }
     75% { transform: rotate(10deg) scale(1.1); }
   }
@@ -409,10 +420,10 @@ FINAL_HTML = """
   <div class="wrap">
     <h1>Happy Birthday {{ name }} 🎉</h1>
     <p>Congratulations on surviving another trip around the sun without being abducted by aliens 👽👾👻<br><br></p>
-    <p>All the best wishes from <b>{{ owner }}</b> 🤍</p>
+    <f>All the best wishes from <b>{{ owner }}</b> 🤍</f>
     <div class="cake">🎂</div>
   </div>
-  
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       function shootConfetti() {
@@ -423,11 +434,11 @@ FINAL_HTML = """
           colors: ['#ff9a9e', '#fad0c4', '#ffecd2', '#fcb69f', '#ffd1ff', '#ff6b6b', '#ffe66d']
         });
       }
-      
+
       shootConfetti();
       setTimeout(shootConfetti, 400);
       setTimeout(shootConfetti, 800);
-      
+
       setInterval(function() {
         confetti({
           particleCount: 3,
@@ -466,19 +477,21 @@ def greet():
 
     if normalized_name in [
         "fatemeh",
+        "fateme",
+        "fatima",
+        "fati",
         "فاطمه",
         "فاطی",
-        "fati",
-        "fatima",
     ]:
         person_key = "fatemeh"
     elif normalized_name in [
         "mohammad hassan",
-        "محمد حسن",
-        "ممد",
-        "mmd hsn",
+        "mohamad hasan",
         "mohamad",
         "mmd",
+        "محمد حسن",
+        "محمد",
+        "ممد",
     ]:
         person_key = "mohammad_hassan"
 
