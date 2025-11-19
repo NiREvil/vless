@@ -1,5 +1,5 @@
 <script>
-		function copyToClipboard(button, text) {
+  function copyToClipboard(button, text) {
         const originalHTML = button.innerHTML;
         navigator.clipboard.writeText(text).then(() => {
           button.innerHTML = \`<svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copied!\`;
@@ -55,16 +55,16 @@
 
         const sa = data.scamalytics;
         const ext = data.external_datasources || {};
-        
+
         // Alternative sources for extracting information
         const ipinfo = ext.ipinfo || {};
         const maxmind = ext.maxmind_geolite2 || {};
         const dbip = ext.dbip || {};
 
         const elements = {
-          ip: document.getElementById(\`\${prefix}-ip\`), 
+          ip: document.getElementById(\`\${prefix}-ip\`),
           location: document.getElementById(\`\${prefix}-location\`),
-          isp: document.getElementById(\`\${prefix}-isp\`), 
+          isp: document.getElementById(\`\${prefix}-isp\`),
           proxy: document.getElementById(\`\${prefix}-proxy\`)
         };
 
@@ -80,7 +80,7 @@
         else if (isValid(maxmind.as_name)) ispName = maxmind.as_name;
         else if (isValid(sa.scamalytics_isp)) ispName = sa.scamalytics_isp;
         else if (isValid(dbip.isp_name)) ispName = dbip.isp_name;
-        
+
         if (elements.isp) elements.isp.textContent = ispName;
 
         // Show location (city and country)
@@ -106,10 +106,10 @@
           }
 
           countryCode = countryCode ? countryCode.toLowerCase() : '';
-          
+
           let flagElementHtml = countryCode ? \`<img src="https://flagcdn.com/w20/\${countryCode}.png" srcset="https://flagcdn.com/w40/\${countryCode}.png 2x" alt="\${countryCode}" class="country-flag"> \` : '';
           let textPart = [city, countryName].filter(Boolean).join(', ');
-          
+
           elements.location.innerHTML = (flagElementHtml || textPart) ? \`\${flagElementHtml}\${textPart}\`.trim() : "N/A";
         }
 
@@ -170,10 +170,10 @@
 
       function showError(prefix, message = "Could not load data", originalHostForProxy = null) {
         const errorMessage = "N/A";
-        const elements = (prefix === 'proxy') 
+        const elements = (prefix === 'proxy')
           ? ['host', 'ip', 'location', 'isp']
           : ['ip', 'location', 'isp', 'proxy'];
-        
+
         elements.forEach(key => {
           const el = document.getElementById(\`\${prefix}-\${key}\`);
           if (!el) return;
@@ -254,11 +254,11 @@
 
       document.addEventListener('DOMContentLoaded', () => {
         loadNetworkInfo();
-      
+
         const hiddifyBtn = document.getElementById('hiddify-import-btn');
         const modal = document.getElementById('hiddify-dns-modal');
         const continueBtn = document.getElementById('hiddify-modal-continue');
-        
+
         if (hiddifyBtn && modal && continueBtn) {
           hiddifyBtn.addEventListener('click', function(event) {
             event.preventDefault();
