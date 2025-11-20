@@ -15,15 +15,18 @@
  *   From lines 167, 168, and 169.
  */
 
-addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener("fetch", (event) => {
+  event.respondWith(handleRequest(event.request));
+});
 
 // Utility functions
 function selectRandomItem(/** @type {string | any[]} */ items) {
   return items[Math.floor(Math.random() * items.length)];
 }
-function generateRandomString(/** @type {number} */ length, characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789') {
+function generateRandomString(
+  /** @type {number} */ length,
+  characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+) {
   let result = "";
   for (let i = 0; i < length; i++) {
     result += characters.charAt(Math.floor(Math.random() * characters.length));
@@ -32,7 +35,12 @@ function generateRandomString(/** @type {number} */ length, characters = 'ABCDEF
 }
 
 function randomizeCase(/** @type {string} */ str) {
-  return str.split('').map((/** @type {string} */ char) => Math.random() > 0.5 ? char.toUpperCase() : char.toLowerCase()).join('');
+  return str
+    .split("")
+    .map((/** @type {string} */ char) =>
+      Math.random() > 0.5 ? char.toUpperCase() : char.toLowerCase(),
+    )
+    .join("");
 }
 
 /**
@@ -59,12 +67,7 @@ async function handleRequest(_request) {
     dns: {
       hosts: {
         "domain:googleapis.cn": ["googleapis.com"],
-        "dns.google": [
-          "8.8.4.4",
-          "8.8.8.8",
-          "2001:4860:4860::8888",
-          "2001:4860:4860::8844",
-        ],
+        "dns.google": ["8.8.4.4", "8.8.8.8", "2001:4860:4860::8888", "2001:4860:4860::8844"],
       },
       servers: [
         "https://dns.google/dns-query",
