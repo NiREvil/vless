@@ -1,7 +1,7 @@
 use anyhow::{Context, Result};
 use clap::Parser;
 use serde::Deserialize;
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, HashMap};
 use std::fs::{self, File};
 use std::io::{self, BufRead, BufReader, Write};
 use std::path::Path;
@@ -11,7 +11,7 @@ use chrono::{Duration as ChronoDuration, Utc};
 use chrono_tz::Asia::Tehran;
 use colored::*;
 use futures::StreamExt;
-use reqwest::{Client};
+use reqwest::Client;
 
 const DEFAULT_PROXY_FILE: &str = "edge/assets/p-list-november.txt";
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
@@ -20,55 +20,13 @@ const DEFAULT_TIMEOUT_SECONDS: u64 = 6;
 const REQUEST_DELAY_MS: u64 = 40;
 
 const GOOD_ISPS: &[&str] = &[
-    "OVH",
-    "M247",
-    "Vultr",
-    "GCore",
-    "IONOS",
-    "Google",
-    "Amazon",
-    "NetLab",
-    "Akamai",
-    "Turunc",
-    "Contabo",
-    "UpCloud",
-    "Tencent",
-    "Hetzner",
-    "Multacom",
-    "HostPapa",
-    "Ultahost",
-    "DataCamp",
-    "Bluehost",
-    "Scaleway",
-    "DO Space",
-    "Leaseweb",
-    "Hostinger",
-    "Hypercore",
-    "ByteDance",
-    "RackSpace",
-    "SiteGround",
-    "Online Ltd",
-    "The Empire",
-    "Cloudflare",
-    "Relink LTD",
-    "PQ Hosting",
-    "Gigahost AS",
-    "White Label",
-    "G-Core Labs",
-    "3HCLOUD LLC",
-    "HOSTKEY B.V",
-    "DigitalOcean",
-    "3NT SOLUTION",
-    "Zenlayer Inc",
-    "RackNerd LLC",
-    "Plant Holding",
-    "WorkTitans BV",
-    "IROKO Networks",
-    "WorldStream B.V",
-    "Cluster Logic Inc",
-    "The Constant Company",
-    "Cogent Communications",
-    "Metropolis networks inc",
+    "M247","Vultr","GCore","IONOS","Google","Amazon","NetLab","Akamai","Turunc","Contabo",
+    "UpCloud","Tencent","Hetzner","Multacom","HostPapa","Ultahost","DataCamp","Bluehost",
+    "Scaleway","DO Space","Leaseweb","Hostinger","Hypercore","ByteDance","RackSpace",
+    "SiteGround","Online Ltd","The Empire","Cloudflare","Relink LTD","PQ Hosting","Gigahost AS",
+    "White Label","G-Core Labs","3HCLOUD LLC","HOSTKEY B.V","DigitalOcean","3NT SOLUTION",
+    "Zenlayer Inc","RackNerd LLC","Plant Holding","WorkTitans BV","IROKO Networks","WorldStream B.V",
+    "Cluster Logic Inc","The Constant Company","Cogent Communications","Metropolis networks inc",
     "Total Uptime Technologies",
 ];
 
@@ -120,8 +78,7 @@ async fn main() -> Result<()> {
     }
     File::create(&args.output_file).context("Failed to create output file")?;
 
-    let proxies = read_proxy_file(&args.proxy_file)
-        .context("Failed to read proxy file")?;
+    let proxies = read_proxy_file(&args.proxy_file).context("Failed to read proxy file")?;
     println!("Loaded {} proxies from file", proxies.len());
 
     let proxies: Vec<String> = proxies
@@ -160,8 +117,7 @@ async fn main() -> Result<()> {
     tasks.await;
 
     let locked_proxies = active_proxies.lock().unwrap_or_else(|e| e.into_inner());
-    write_markdown_file(&locked_proxies, &args.output_file)
-        .context("Failed to write Markdown file")?;
+    write_markdown_file(&locked_proxies, &args.output_file).context("Failed to write Markdown file")?;
 
     println!("Proxy checking completed.");
     Ok(())
@@ -182,13 +138,10 @@ async fn fetch_cf_meta(proxy: Option<(String, u16)>) -> Result<CfMeta> {
         let addr: std::net::SocketAddr = addr_str
             .parse()
             .context(format!("Invalid IP/port combination: {}", addr_str))?;
-        
         client_builder = client_builder.resolve(host, addr);
     }
 
-    let client = client_builder
-        .build()
-        .context("Failed to build reqwest client")?;
+    let client = client_builder.build().context("Failed to build reqwest client")?;
 
     let meta = client.get(&url)
         .header("Host", host)
@@ -228,11 +181,7 @@ async fn process_proxy(
                 };
                 println!("{}", format!("PROXY LIVE 🟩: {} ({} ms)", ip, ping).green());
                 let mut active_proxies_locked = active_proxies.lock().unwrap_or_else(|e| e.into_inner());
-
-                active_proxies_locked
-                    .entry(info.country.clone())
-                    .or_default()
-                    .push((info, ping));
+                active_proxies_locked.entry(info.country.clone()).or_default().push((info, ping));
             } else {
                 println!("PROXY DEAD ❌: {} (did not change IP)", ip);
             }
@@ -255,73 +204,193 @@ fn write_markdown_file(proxies_by_country: &BTreeMap<String, Vec<(ProxyInfo, u12
         0
     };
 
-let now = Utc::now();
-let tehran_now = now.with_timezone(&Tehran);
-let tehran_next = tehran_now + ChronoDuration::days(1);
-let last_updated_str = tehran_now.format("%a, %d %b %Y %H:%M").to_string();
-let next_update_str = tehran_next.format("%a, %d %b %Y %H:%M").to_string();
+    let now = Utc::now();
+    let tehran_now = now.with_timezone(&Tehran);
+    let tehran_next = tehran_now + ChronoDuration::days(1);
+    let last_updated_str = tehran_now.format("%a, %d %b %Y %H:%M").to_string();
+    let next_update_str = tehran_next.format("%a, %d %b %Y %H:%M").to_string();
+
+    fn encode_badge_label(s: &str) -> String {
+        s.replace(' ', "%20")
+         .replace(':', "%3A")
+         .replace(',', "%2C")
+         .replace('+', "%2B")
+         .replace('(', "%28")
+         .replace(')', "%29")
+    }
+
+    let last_badge_label = encode_badge_label(&format!("{} (UTC+3:30)", last_updated_str));
+    let next_badge_label = encode_badge_label(&format!("{} (UTC+3:30)", next_update_str));
+
+    let last_badge = format!("<img src=\"https://img.shields.io/badge/Last_Update-{}-966600\" />", last_badge_label);
+    let next_badge = format!("<img src=\"https://img.shields.io/badge/Next_Update-{}-966600\" />", next_badge_label);
+    let active_badge = format!("<img src=\"https://img.shields.io/badge/Active_Proxies-{}-966600\" />", total_active);
+    let countries_badge = format!("<img src=\"https://img.shields.io/badge/Countries-{}-966600\" />", total_countries);
+    let latency_badge = format!("<img src=\"https://img.shields.io/badge/Avg_Latency-{}ms-darkred\" />", avg_ping);
+
 
     writeln!(
         file,
         r##"<p align="left">
- <img src="https://latex.codecogs.com/svg.image?\huge&space;{{\color{{Golden}}\mathrm{{PR{{\color{{black}}\O}}XY\;IP}}" width=200px" </p><br/>
+ <img src="https://latex.codecogs.com/svg.image?\huge&space;{{\color{{Golden}}\mathrm{{PR{{\color{{black}}\O}}XY\;IP}}" width=220px" </p><br/>
 
 > [!WARNING]
 >
 > <p><b>Daily Fresh Proxies</b></p>
 >
-> Only <b>High-quality</b>, tested proxies from <b>premier Internet Service Providers</b> (ISPs) and data centers worldwide, including but not limited to <b>Google</b>, <b>Amazon</b>, Cloudflare, Tencent, OVH, and DataCamp, etc
->
-> <Br/>
->
-> <p><b>Auto-updated Daily</b></p>
->
-> Last updated: <b>{}–IRN</b></br>
-> Next update: <b>{}-IRN</b>
+> A curated list of <b>high-quality</b>, fully-tested proxies sourced from reputable ISPs and major global data centers (e.g., Google, Amazon, Cloudflare, Tencent, Hetzner, and others)
 >
 > <br/>
-> 
-> <p><b>Overview</b></p>
 >
-> Total Active Proxies: <b>{}</br>
-> Countries Covered: <b>{}</b></br> 
-> Average latency: <b>{} ms</b>
+> <p><b>Auto-Updated Daily</b></p>
 >
-> <br><br/>
-
-</br>
-        "##,
-        last_updated_str,
-        next_update_str,
-        total_active,
-        total_countries,
-        avg_ping
+> {last}  
+> {next}
+>
+> <br/>
+>
+> <p><b>Overview</b></p>  
+>
+> {active}  
+> {countries}  
+> {latency}
+>
+> <br><br/>  
+"##,
+        last = last_badge,
+        next = next_badge,
+        active = active_badge,
+        countries = countries_badge,
+        latency = latency_badge,
     )?;
+
+    let top_providers = ["Google", "Amazon", "Cloudflare", "Tencent", "Hetzner"];
+
+    let mut provider_buckets: HashMap<&str, Vec<(ProxyInfo, u128)>> = HashMap::new();
+    for prov in top_providers.iter() {
+        provider_buckets.insert(prov, Vec::new());
+    }
+
+    let top_providers = ["Google", "Amazon", "Cloudflare", "Tencent", "Hetzner"];
+
+    let mut provider_buckets: HashMap<&str, Vec<(ProxyInfo, u128)>> = HashMap::new();
+    for prov in top_providers.iter() {
+        provider_buckets.insert(prov, Vec::new());
+    }
+
+    for (_country, proxies) in proxies_by_country.iter() {
+        for (info, ping) in proxies.iter() {
+            for prov in top_providers.iter() {
+                if info.isp.to_lowercase().contains(&prov.to_lowercase()) {
+                    if let Some(vec) = provider_buckets.get_mut(prov) {
+                        vec.push((info.clone(), *ping));
+                    }
+                }
+            }
+        }
+    }
+
+    for prov in top_providers.iter() {
+        if let Some(list) = provider_buckets.get(prov) {
+            if !list.is_empty() {
+                let prov_logo = provider_logo_html(prov);
+                let prov_title = match prov_logo {
+                    Some(ref html) => format!("{} {}", html, prov),
+                    None => prov.to_string(),
+                };
+                writeln!(file, "## {} ({})", prov_title, list.len())?;
+                writeln!(file, "<details>")?;
+                writeln!(file, "<summary>Click to expand</summary>\n")?;
+                writeln!(file, "|   IP   |   ISP    |   Location   |   Ping   |")?;
+                writeln!(file, "|:-------|:---------|:------------:|:--------:|")?;
+                let mut sorted = list.clone();
+                sorted.sort_by_key(|&(_, p)| p);
+                for (info, ping) in sorted.iter() {
+                    let location = format!("{}, {}", info.region, info.city);
+                    let emoji = if *ping < 1099 {
+                        "⚡"
+                    } else if *ping < 1599 {
+                        "🐇"
+                    } else {
+                        "🐌"
+                    };
+                    let isp_cell = info.isp.clone();
+
+                    writeln!(
+                        file,
+                        "| <pre><code>{}</code></pre> | {} | {} | {} ms {} |",
+                        info.ip, isp_cell, location, ping, emoji
+                    )?;
+                }
+                writeln!(file, "\n</details>\n\n---\n")?;
+            }
+        }
+    }
 
     for (country, proxies) in proxies_by_country.iter() {
         let mut sorted_proxies = proxies.clone();
         sorted_proxies.sort_by_key(|&(_, ping)| ping);
         let flag = country_flag(country);
-        writeln!(file, "## {} {} ({} proxies)", flag, country, sorted_proxies.len())?;
-        writeln!(file, "<details open>")?;
-        writeln!(file, "<summary>Click to collapse</summary>\n")?;
-        writeln!(file, "|   IP   |  Location   |   ISP   |   Ping   |")?;
-        writeln!(file, "|:-------|:------------|:-------:|:--------:|")?;
+
+        writeln!(
+            file,
+            "## {} {} ({} proxies)",
+            flag,
+            country,
+            sorted_proxies.len()
+        )?;
+        writeln!(file, "<details>")?;
+        writeln!(file, "<summary>Click to expand</summary>\n")?;
+        writeln!(file, "|   IP   |   ISP   |   Location   |   Ping   |")?;
+        writeln!(file, "|:-------|:--------|:------------:|:--------:|")?;
 
         for (info, ping) in sorted_proxies.iter() {
             let location = format!("{}, {}", info.region, info.city);
-            let emoji = if *ping < 1099 { "⚡" } else if *ping < 1599 { "🐇" } else { "🐌" };
+            let emoji = if *ping < 1099 {
+                "⚡"
+            } else if *ping < 1599 {
+                "🐇"
+            } else {
+                "🐌"
+            };
+            let isp_cell = info.isp.clone();
+
             writeln!(
                 file,
-                "| `{}` | {} | {} | {} ms {} |",
-                info.ip, location, info.isp, ping, emoji
+                "| <pre><code>{}</code></pre> | {} | {} | {} ms {} |",
+                info.ip, isp_cell, location, ping, emoji
             )?;
         }
+
         writeln!(file, "\n</details>\n\n---\n")?;
     }
 
     println!("All active proxies saved to {}", output_file);
     Ok(())
+}
+fn provider_logo_html(isp: &str) -> Option<String> {
+    let mapping = [
+        ("Google", "google.com"),
+        ("Amazon", "amazon.com"),
+        ("Cloudflare", "cloudflare.com"),
+        ("Hetzner", "hetzner.com"),
+        ("Hostinger", "hostinger.com"),
+        ("Tencent", "www.tencent.com"),
+        ("DigitalOcean", "digitalocean.com"),
+        ("Vultr", "vultr.com"),
+    ];
+
+    for (kw, domain) in mapping.iter() {
+        if isp.to_lowercase().contains(&kw.to_lowercase()) {
+            let html = format!(
+                "<img alt=\"{}\" src=\"https://www.google.com/s2/favicons?sz=18&domain_url={}\" />",
+                isp, domain
+            );
+            return Some(html);
+        }
+    }
+
+    None
 }
 
 fn country_flag(code: &str) -> String {
