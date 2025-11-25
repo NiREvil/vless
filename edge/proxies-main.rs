@@ -25,7 +25,7 @@ const GOOD_ISPS: &[&str] = &[
     "Scaleway","DO Space","Leaseweb","Hostinger","Hypercore","ByteDance","RackSpace",
     "SiteGround","Online Ltd","The Empire","Cloudflare","Relink LTD","PQ Hosting","Gigahost AS",
     "White Label","G-Core Labs","3HCLOUD LLC","HOSTKEY B.V","DigitalOcean","3NT SOLUTION",
-    "Zenlayer Inc","RackNerd LLC","Plant Holding","WorkTitans BV","IROKO Networks","WorldStream B.V",
+    "Zenlayer Inc","RackNerd LLC","Plant Holding","WorkTitans","IROKO Networks","WorldStream",
     "Cluster Logic Inc","The Constant Company","Cogent Communications","Metropolis networks inc",
     "Total Uptime Technologies",
 ];
@@ -232,7 +232,7 @@ fn write_markdown_file(proxies_by_country: &BTreeMap<String, Vec<(ProxyInfo, u12
     writeln!(
         file,
         r##"<p align="left">
- <img src="https://latex.codecogs.com/svg.image?\huge&space;{{\color{{Golden}}\mathrm{{PR{{\color{{black}}\O}}XY\;IP}}" width=220px" </p><br/>
+ <img src="https://latex.codecogs.com/svg.image?\huge&space;{{\color{{Golden}}\mathrm{{PR{{\color{{black}}\O}}XY\;IP}}" width=240px" </p><br/>
 
 > [!WARNING]
 >
@@ -383,7 +383,7 @@ fn provider_logo_html(isp: &str) -> Option<String> {
     for (kw, domain) in mapping.iter() {
         if isp.to_lowercase().contains(&kw.to_lowercase()) {
             let html = format!(
-                "<img alt=\"{}\" src=\"https://www.google.com/s2/favicons?sz=18&domain_url={}\" />",
+                "<img alt=\"{}\" src=\"https://www.google.com/s2/favicons?sz=22&domain_url={}\" />",
                 isp, domain
             );
             return Some(html);
