@@ -55,7 +55,8 @@ def get_hash(cfg: str) -> str:
 
 def b64d(s: str) -> Optional[str]:
     """Safe base64 decode with multiple methods"""
-    if not s: return None
+    if not s:
+        return None
     methods = [
         lambda x: base64.b64decode(x).decode('utf-8', 'ignore'),
         lambda x: base64.urlsafe_b64decode(x + '===').decode('utf-8', 'ignore'),
@@ -63,15 +64,19 @@ def b64d(s: str) -> Optional[str]:
     ]
     s = s.strip().replace('\n', '').replace('\r', '').replace(' ', '')
     for method in methods:
-        try: return method(s)
-        except: continue
+        try:
+            return method(s)
+        except:
+            continue
     return None
 
 def norm_proto(p: str) -> str:
     """Normalize protocol names"""
     p = p.lower().strip()
-    if p in ['shadowsocks']: return 'ss'
-    if p in ['hysteria2', 'hysteria']: return 'hy2'
+    if p in ['shadowsocks']:
+        return 'ss'
+    if p in ['hysteria2', 'hysteria']:
+        return 'hy2'
     return p
 
 def parse_tuic(cfg: str) -> Optional[Dict]:
@@ -190,7 +195,6 @@ def parse_ss(cfg: str) -> Optional[Dict]:
         }
     except:
         return None
-
 
 def parse_hy2(cfg: str) -> Optional[Dict]:
     """Hysteria2 parser"""
@@ -478,8 +482,6 @@ def test_conn(cfg: str) -> Optional[Tuple[str, int, str]]:
                 sock.close()
             except:
                 return None
-        
-        # در فایل scraper.py داخل تابع test_conn (حدود خط ۴۳۰ به بعد)
 
         else:
             try:
@@ -500,13 +502,22 @@ def test_conn(cfg: str) -> Optional[Tuple[str, int, str]]:
                         ssock.do_handshake()
                         ssock.close()
                     except ssl.SSLError:
-
                         sock.close()
                         return None
                 else:
                     sock.close()
             except:
                 return None
+        
+        lat = int((time.monotonic() - start) * 1000)
+        
+        if 0 < lat <= MAX_LATENCY:
+            return (cfg, lat, p)
+        
+        return None
+        
+    except:
+        return None
 
 def balance(tested: List[Tuple[str, int, str]], protocols: Set[str]) -> List[str]:
     """Balance protocols with priority for rare ones"""
@@ -552,7 +563,8 @@ def gen_clash(cfgs: List[str]) -> Optional[str]:
             p = norm_proto(u.scheme)
             h = get_hash(cfg)
             
-            if h in seen: continue
+            if h in seen:
+                continue
             seen.add(h)
             
             name = f"{p}-{h[:6]}"
@@ -568,7 +580,8 @@ def gen_clash(cfgs: List[str]) -> Optional[str]:
 
             if p == 'ss':
                 info = parse_ss(cfg)
-                if not info: continue
+                if not info:
+                    continue
                 proxy['cipher'] = info['method']
                 proxy['password'] = info['password']
                 proxy['type'] = 'ss'
@@ -600,13 +613,16 @@ def gen_clash(cfgs: List[str]) -> Optional[str]:
                 if q.get('security', [''])[0] == 'tls':
                     proxy['tls'] = True
                     proxy['servername'] = q.get('sni', [u.hostname])[0]
-                    if q.get('flow'): proxy['flow'] = q.get('flow')[0]
+                    if q.get('flow'):
+                        proxy['flow'] = q.get('flow')[0]
                 elif q.get('security', [''])[0] == 'reality':
                     proxy['tls'] = True
                     proxy['servername'] = q.get('sni', [u.hostname])[0]
                     proxy['reality-opts'] = {'public-key': q.get('pbk', [''])[0], 'short-id': q.get('sid', [''])[0]}
-                    if q.get('fp'): proxy['client-fingerprint'] = q.get('fp')[0]
-                    if q.get('flow'): proxy['flow'] = 'xtls-rprx-vision'
+                    if q.get('fp'):
+                        proxy['client-fingerprint'] = q.get('fp')[0]
+                    if q.get('flow'):
+                        proxy['flow'] = 'xtls-rprx-vision'
 
             elif p == 'trojan':
                 q = parse_qs(u.query)
@@ -618,7 +634,8 @@ def gen_clash(cfgs: List[str]) -> Optional[str]:
 
             elif p == 'hy2':
                 info = parse_hy2(cfg)
-                if not info: continue
+                if not info:
+                    continue
                 proxy['type'] = 'hysteria2'
                 proxy['password'] = info['password']
                 proxy['sni'] = info['sni']
@@ -628,14 +645,16 @@ def gen_clash(cfgs: List[str]) -> Optional[str]:
 
             elif p == 'tuic':
                 info = parse_tuic(cfg)
-                if not info: continue
+                if not info:
+                    continue
                 proxy['type'] = 'tuic'
                 proxy['uuid'] = info['uuid']
                 proxy['password'] = info['password']
                 proxy['server-name'] = info['sni']
                 proxy['congestion-controller'] = info['congestion']
                 proxy['udp-relay-mode'] = info['udp_relay_mode']
-                if info['alpn']: proxy['alpn'] = [info['alpn']]
+                if info['alpn']:
+                    proxy['alpn'] = [info['alpn']]
 
             proxies.append(proxy)
         except:
