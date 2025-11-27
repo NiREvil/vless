@@ -27,7 +27,7 @@ find-process-mode: strict
 
 mode: rule
 
-#自定义 geodata url
+# 自定义 geodata url
 geox-url:
   geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
   geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
@@ -115,7 +115,7 @@ experimental:
   # and they should disable it as soon as the issue is resolved.
   # This field will be removed when quic-go fixes all their issues in GSO.
   # This equivalent to the environment variable QUIC_GO_DISABLE_GSO=1.
-  #quic-go-disable-gso: true
+  # quic-go-disable-gso: true
 
 # 类似于 /etc/hosts, 仅支持配置单个 IP
 hosts:
@@ -173,7 +173,7 @@ tun:
   # include-uid-range: # 限制被路由的的用户范围
   # - 1000:9999
   # exclude-uid: # 排除路由的的用户
-  #- 1000
+  # - 1000
   # exclude-uid-range: # 排除路由的的用户范围
   # - 1000:9999
 
@@ -191,10 +191,10 @@ tun:
 # 嗅探域名 可选配置
 sniffer:
   enable: false
-  ## 对 redir-host 类型识别的流量进行强制嗅探
-  ## 如：Tun、Redir 和 TProxy 并 DNS 为 redir-host 皆属于
+  # # 对 redir-host 类型识别的流量进行强制嗅探
+  # # 如：Tun、Redir 和 TProxy 并 DNS 为 redir-host 皆属于
   # force-dns-mapping: false
-  ## 对所有未获取到域名的流量进行强制嗅探
+  # # 对所有未获取到域名的流量进行强制嗅探
   # parse-pure-ip: false
   # 是否使用嗅探结果作为实际访问，默认 true
   # 全局配置，优先级低于 sniffer.sniff 实际配置
@@ -216,7 +216,7 @@ sniffer:
   #   - 192.168.0.3/32
   # skip-dst-address: # 对于目标ip跳过嗅探
   #   - 192.168.0.3/32
-  ## 对嗅探结果进行跳过
+  # # 对嗅探结果进行跳过
   # skip-domain:
   #   - Mijia Cloud
   # 需要嗅探协议
@@ -265,7 +265,7 @@ dns:
 
   # 配置不使用 fake-ip 的域名
   fake-ip-filter:
-    - '*.lan'
+    - "*.lan"
     - localhost.ptlogin2.qq.com
     # fakeip-filter 为 rule-providers 中的名为 fakeip-filter 规则订阅，
     # 且 behavior 必须为 domain/classical，当为 classical 时仅会生效域名类规则
@@ -343,12 +343,12 @@ dns:
       - https://dns.alidns.com/dns-query
     "geosite:category-ads-all": rcode://success
     "www.baidu.com,+.google.cn": [223.5.5.5, https://dns.alidns.com/dns-query]
-    ## global，dns 为 rule-providers 中的名为 global 和 dns 规则订阅，
-    ## 且 behavior 必须为 domain/classical，当为 classical 时仅会生效域名类规则
+    # # global，dns 为 rule-providers 中的名为 global 和 dns 规则订阅，
+    # # 且 behavior 必须为 domain/classical，当为 classical 时仅会生效域名类规则
     # "rule-set:global,dns": 8.8.8.8
 
 proxies: # socks5
-  - name: "socks"
+  - name: socks
     type: socks5
     server: server
     port: 443
@@ -364,7 +364,7 @@ proxies: # socks5
     # ip-version: ipv6
 
   # http
-  - name: "http"
+  - name: http
     type: http
     server: server
     port: 443
@@ -381,7 +381,7 @@ proxies: # socks5
 
   # Snell
   # Beware that there's currently no UDP support yet
-  - name: "snell"
+  - name: snell
     type: snell
     server: server
     port: 44046
@@ -399,12 +399,12 @@ proxies: # socks5
   #   rc4-md5 chacha20-ietf xchacha20
   #   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
   #   2022-blake3-aes-128-gcm 2022-blake3-aes-256-gcm 2022-blake3-chacha20-poly1305
-  - name: "ss1"
+  - name: ss1
     type: ss
     server: server
     port: 443
     cipher: chacha20-ietf-poly1305
-    password: "password"
+    password: password
     # udp: true
     # udp-over-tcp: false
     # ip-version: ipv4 # 设置节点使用 IP 版本，可选：dual，ipv4，ipv6，ipv4-prefer，ipv6-prefer。默认使用 dual
@@ -423,23 +423,23 @@ proxies: # socks5
       # statistic: false # 控制是否将底层连接显示在面板中，方便打断底层连接
       # only-tcp: false # 如果设置为 true, smux 的设置将不会对 udp 生效，udp 连接会直接走底层协议
 
-  - name: "ss2"
+  - name: ss2
     type: ss
     server: server
     port: 443
     cipher: chacha20-ietf-poly1305
-    password: "password"
+    password: password
     plugin: obfs
     plugin-opts:
       mode: tls # or http
       # host: bing.com
 
-  - name: "ss3"
+  - name: ss3
     type: ss
     server: server
     port: 443
     cipher: chacha20-ietf-poly1305
-    password: "password"
+    password: password
     plugin: v2ray-plugin
     plugin-opts:
       mode: websocket # no QUIC now
@@ -461,26 +461,26 @@ proxies: # socks5
       # v2ray-http-upgrade: false
       # v2ray-http-upgrade-fast-open: false
 
-  - name: "ss4-shadow-tls"
+  - name: ss4-shadow-tls
     type: ss
     server: server
     port: 443
     cipher: chacha20-ietf-poly1305
-    password: "password"
+    password: password
     plugin: shadow-tls
     client-fingerprint: chrome
     plugin-opts:
-      host: "cloud.tencent.com"
-      password: "shadow_tls_password"
+      host: cloud.tencent.com
+      password: shadow_tls_password
       version: 2 # support 1/2/3
       # alpn: ["h2","http/1.1"]
 
-  - name: "ss5"
+  - name: ss5
     type: ss
     server: server
     port: 443
     cipher: chacha20-ietf-poly1305
-    password: "password"
+    password: password
     plugin: gost-plugin
     plugin-opts:
       mode: websocket
@@ -496,7 +496,7 @@ proxies: # socks5
       # headers:
       #   custom: value
 
-  - name: "ss-restls-tls13"
+  - name: ss-restls-tls13
     type: ss
     server: [YOUR_SERVER_IP]
     port: 443
@@ -508,10 +508,10 @@ proxies: # socks5
     plugin: restls
     plugin-opts:
       host:
-        "www.microsoft.com" # Must be a TLS 1.3 server
+        www.microsoft.com # Must be a TLS 1.3 server
         # 应当是一个 TLS 1.3 服务器
       password: [YOUR_RESTLS_PASSWORD]
-      version-hint: "tls13"
+      version-hint: tls13
       # Control your post-handshake traffic through restls-script
       # Hide proxy behaviors like "tls in tls".
       # see https://github.com/3andne/restls/blob/main/Restls-Script:%20Hide%20Your%20Proxy%20Traffic%20Behavior.md
@@ -519,7 +519,7 @@ proxies: # socks5
       # 详情：https://github.com/3andne/restls/blob/main/Restls-Script:%20%E9%9A%90%E8%97%8F%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%90%86%E8%A1%8C%E4%B8%BA.md
       restls-script: "300?100<1,400~100,350~100,600~100,300~200,300~100"
 
-  - name: "ss-restls-tls12"
+  - name: ss-restls-tls12
     type: ss
     server: [YOUR_SERVER_IP]
     port: 443
@@ -531,13 +531,13 @@ proxies: # socks5
     plugin: restls
     plugin-opts:
       host:
-        "vscode.dev" # Must be a TLS 1.2 server
+        vscode.dev # Must be a TLS 1.2 server
         # 应当是一个 TLS 1.2 服务器
       password: [YOUR_RESTLS_PASSWORD]
-      version-hint: "tls12"
+      version-hint: tls12
       restls-script: "1000?100<1,500~100,350~100,600~100,400~200"
 
-  - name: "ss-kcptun"
+  - name: ss-kcptun
     type: ss
     server: [YOUR_SERVER_IP]
     port: 443
@@ -570,7 +570,7 @@ proxies: # socks5
 
   # vmess
   # cipher 支持 auto/aes-128-gcm/chacha20-poly1305/none
-  - name: "vmess"
+  - name: vmess
     type: vmess
     server: server
     port: 443
@@ -592,15 +592,15 @@ proxies: # socks5
     #   # 如果config为空则通过dns解析，不为空则通过该值指定，格式为经过base64编码的ech参数（dig +short TYPE65 tls-ech.dev）
     #   config: AEn+DQBFKwAgACABWIHUGj4u+PIggYXcR5JF0gYk3dCRioBW8uJq9H4mKAAIAAEAAQABAANAEnB1YmxpYy50bHMtZWNoLmRldgAA
     # ws-opts:
-      # path: /path
-      # headers:
-      #   Host: v2ray.com
-      # max-early-data: 2048
-      # early-data-header-name: Sec-WebSocket-Protocol
-      # v2ray-http-upgrade: false
-      # v2ray-http-upgrade-fast-open: false
+    # path: /path
+    # headers:
+    #   Host: v2ray.com
+    # max-early-data: 2048
+    # early-data-header-name: Sec-WebSocket-Protocol
+    # v2ray-http-upgrade: false
+    # v2ray-http-upgrade-fast-open: false
 
-  - name: "vmess-h2"
+  - name: vmess-h2
     type: vmess
     server: server
     port: 443
@@ -619,7 +619,7 @@ proxies: # socks5
         - http-alt.example.com
       path: /
 
-  - name: "vmess-http"
+  - name: vmess-http
     type: vmess
     server: server
     port: 443
@@ -654,11 +654,11 @@ proxies: # socks5
     servername: example.com
     # skip-cert-verify: true
     grpc-opts:
-      grpc-service-name: "example"
+      grpc-service-name: example
     # ip-version: ipv4
 
   # vless
-  - name: "vless-tcp"
+  - name: vless-tcp
     type: vless
     server: server
     port: 443
@@ -676,7 +676,7 @@ proxies: # socks5
     #   # 如果config为空则通过dns解析，不为空则通过该值指定，格式为经过base64编码的ech参数（dig +short TYPE65 tls-ech.dev）
     #   config: AEn+DQBFKwAgACABWIHUGj4u+PIggYXcR5JF0gYk3dCRioBW8uJq9H4mKAAIAAEAAQABAANAEnB1YmxpYy50bHMtZWNoLmRldgAA
 
-  - name: "vless-vision"
+  - name: vless-vision
     type: vless
     server: server
     port: 443
@@ -692,7 +692,7 @@ proxies: # socks5
     # fingerprint: xxxx # 配置指纹将实现 SSL Pining 效果, 可使用 openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem 获取
     # skip-cert-verify: true
 
-  - name: "vless-encryption"
+  - name: vless-encryption
     type: vless
     server: server
     port: 443
@@ -709,11 +709,11 @@ proxies: # socks5
     # 再次以 50% 的概率发送随机 0 到 3333 字节的 padding（若为 0 则不 Write()）
     # 服务端、客户端可以设置不同的 padding 参数，按 len、gap 的顺序无限串联，第一个 padding 需概率 100%、至少 35 字节
     # -------------------------
-    encryption: "mlkem768x25519plus.native/xorpub/random.1rtt/0rtt.(padding len).(padding gap).(X25519 Password).(ML-KEM-768 Client)..."
-    tls: false #可以不开启tls
+    encryption: mlkem768x25519plus.native/xorpub/random.1rtt/0rtt.(padding len).(padding gap).(X25519 Password).(ML-KEM-768 Client)...
+    tls: false # 可以不开启tls
     udp: true
 
-  - name: "vless-reality-vision"
+  - name: vless-reality-vision
     type: vless
     server: server
     port: 443
@@ -729,7 +729,7 @@ proxies: # socks5
       support-x25519mlkem768: false # 如果服务端支持可手动设置为true
     client-fingerprint: chrome # cannot be empty
 
-  - name: "vless-reality-grpc"
+  - name: vless-reality-grpc
     type: vless
     server: server
     port: 443
@@ -742,13 +742,13 @@ proxies: # socks5
     client-fingerprint: chrome
     servername: testingcf.jsdelivr.net
     grpc-opts:
-      grpc-service-name: "grpc"
+      grpc-service-name: grpc
     reality-opts:
       public-key: CrrQSjAG_YkHLwvM2M-7XkKJilgL5upBKCp0od0tLhE
       short-id: 10f897e26c4b9478
       support-x25519mlkem768: false # 如果服务端支持可手动设置为true
 
-  - name: "vless-ws"
+  - name: vless-ws
     type: vless
     server: server
     port: 443
@@ -764,14 +764,14 @@ proxies: # socks5
     # certificate: ./client.crt # 证书 PEM 格式，或者 证书的路径
     # private-key: ./client.key # 证书对应的私钥 PEM 格式，或者私钥路径
     ws-opts:
-      path: "/"
+      path: /
       headers:
         Host: example.com
       # v2ray-http-upgrade: false
       # v2ray-http-upgrade-fast-open: false
 
   # Trojan
-  - name: "trojan"
+  - name: trojan
     type: trojan
     server: server
     port: 443
@@ -800,7 +800,7 @@ proxies: # socks5
     server: server
     port: 443
     type: trojan
-    password: "example"
+    password: example
     network: grpc
     sni: example.com
     # skip-cert-verify: true
@@ -810,13 +810,13 @@ proxies: # socks5
     # private-key: ./client.key # 证书对应的私钥 PEM 格式，或者私钥路径
     udp: true
     grpc-opts:
-      grpc-service-name: "example"
+      grpc-service-name: example
 
   - name: trojan-ws
     server: server
     port: 443
     type: trojan
-    password: "example"
+    password: example
     network: ws
     sni: example.com
     # skip-cert-verify: true
@@ -832,12 +832,12 @@ proxies: # socks5
     #   v2ray-http-upgrade: false
     #   v2ray-http-upgrade-fast-open: false
 
-  - name: "trojan-xtls"
+  - name: trojan-xtls
     type: trojan
     server: server
     port: 443
     password: yourpsk
-    flow: "xtls-rprx-direct" # xtls-rprx-origin xtls-rprx-direct
+    flow: xtls-rprx-direct # xtls-rprx-origin xtls-rprx-direct
     flow-show: true
     # udp: true
     # sni: example.com # aka server name
@@ -847,8 +847,8 @@ proxies: # socks5
     # certificate: ./client.crt # 证书 PEM 格式，或者 证书的路径
     # private-key: ./client.key # 证书对应的私钥 PEM 格式，或者私钥路径
 
-  #hysteria
-  - name: "hysteria"
+  # hysteria
+  - name: hysteria
     type: hysteria
     server: server.com
     port: 443
@@ -858,8 +858,8 @@ proxies: # socks5
     # alpn:
     #   - h3
     protocol: udp # 支持 udp/wechat-video/faketcp
-    up: "30 Mbps" # 若不写单位，默认为 Mbps
-    down: "200 Mbps" # 若不写单位，默认为 Mbps
+    up: 30 Mbps # 若不写单位，默认为 Mbps
+    down: 200 Mbps # 若不写单位，默认为 Mbps
     # sni: server.com
     # ech-opts:
     #   enable: true # 必须手动开启
@@ -875,8 +875,8 @@ proxies: # socks5
     # private-key: ./client.key # 证书对应的私钥 PEM 格式，或者私钥路径
     # fast-open: true # 支持 TCP 快速打开，默认为 false
 
-  #hysteria2
-  - name: "hysteria2"
+  # hysteria2
+  - name: hysteria2
     type: hysteria2
     server: server.com
     port: 443
@@ -900,14 +900,14 @@ proxies: # socks5
     # private-key: ./client.key # 证书对应的私钥 PEM 格式，或者私钥路径
     # alpn:
     #   - h3
-    ###quic-go特殊配置项，不要随意修改除非你知道你在干什么###
+    # ##quic-go特殊配置项，不要随意修改除非你知道你在干什么###
     # initial-stream-receive-window： 8388608
     # max-stream-receive-window： 8388608
     # initial-connection-receive-window： 20971520
     # max-connection-receive-window： 20971520
 
   # wireguard
-  - name: "wg"
+  - name: wg
     type: wireguard
     server: 162.159.192.1
     port: 2480
@@ -917,7 +917,7 @@ proxies: # socks5
     #    pre-shared-key: 31aIhAPwktDGpH4JDhA8GNvjFXEf/a6+UaQRyOAiyfM=
     private-key: eCtXsJZ27+4PbhDkHnB923tkUn2Gj59wZw5wFA75MnU=
     udp: true
-    reserved: "U4An"
+    reserved: U4An
     # 数组格式也是合法的
     # reserved: [209,98,59]
     # 一个出站代理的标识。当值不为空时，将使用指定的 proxy 发出连接
@@ -1002,19 +1002,19 @@ proxies: # socks5
   # The supported protocols:
   #   origin auth_sha1_v4 auth_aes128_md5
   #   auth_aes128_sha1 auth_chain_a auth_chain_b
-  - name: "ssr"
+  - name: ssr
     type: ssr
     server: server
     port: 443
     cipher: chacha20-ietf
-    password: "password"
+    password: password
     obfs: tls1.2_ticket_auth
     protocol: auth_sha1_v4
     # obfs-param: domain.tld
     # protocol-param: "#"
     # udp: true
 
-  - name: "ssh-out"
+  - name: ssh-out
     type: ssh
 
     server: 127.0.0.1
@@ -1043,7 +1043,7 @@ proxies: # socks5
     type: anytls
     server: 1.2.3.4
     port: 443
-    password: "<your password>"
+    password: <your password>
     # client-fingerprint: chrome
     udp: true
     # idle-session-check-interval: 30 # seconds
@@ -1055,8 +1055,8 @@ proxies: # socks5
     #   - http/1.1
     # skip-cert-verify: true
 
-# dns 出站会将请求劫持到内部 dns 模块，所有请求均在内部处理
-  - name: "dns-out"
+  # dns 出站会将请求劫持到内部 dns 模块，所有请求均在内部处理
+  - name: dns-out
     type: dns
 
   # 配置指定 interface-name 和 fwmark 的 DIRECT
@@ -1068,7 +1068,7 @@ proxy-groups:
   # 代理链，目前 relay 可以支持 udp 的只有 vmess/vless/trojan/ss/ssr/tuic
   # wireguard 目前不支持在 relay 中使用，请使用 proxy 中的 dialer-proxy 配置项
   # Traffic: mihomo <-> http <-> vmess <-> ss1 <-> ss2 <-> Internet
-  - name: "relay"
+  - name: relay
     type: relay
     proxies:
       - http
@@ -1077,7 +1077,7 @@ proxy-groups:
       - ss2
 
   # url-test 将按照 url 测试结果使用延迟最低节点
-  - name: "auto"
+  - name: auto
     type: url-test
     proxies:
       - ss1
@@ -1090,7 +1090,7 @@ proxy-groups:
     interval: 300
 
   # fallback 将按照 url 测试结果按照节点顺序选择
-  - name: "fallback-auto"
+  - name: fallback-auto
     type: fallback
     proxies:
       - ss1
@@ -1100,7 +1100,7 @@ proxy-groups:
     interval: 300
 
   # load-balance 将按照算法随机选择节点
-  - name: "load-balance"
+  - name: load-balance
     type: load-balance
     proxies:
       - ss1
@@ -1133,15 +1133,15 @@ proxy-groups:
 proxy-providers:
   provider1:
     type: http # http 的 path 可空置，默认储存路径为 homedir 的 proxies 文件夹，文件名为 url 的 md5
-    url: "url"
+    url: url
     interval: 3600
     path: ./provider1.yaml # 默认只允许存储在 mihomo 的 Home Dir，如果想存储到其他位置，请通过设置 SAFE_PATHS 环境变量指定额外的安全路径。该环境变量的语法同本操作系统的PATH环境变量解析规则（即Windows下以分号分割，其他系统下以冒号分割）
     proxy: DIRECT
     # size-limit: 10240 # 限制下载文件最大为10kb，默认为0即不限制文件大小
     header:
       User-Agent:
-      - "Clash/v1.18.0"
-      - "mihomo/1.18.3"
+        - Clash/v1.18.0
+        - mihomo/1.18.3
       # Accept:
       # - 'application/vnd.github.v3.raw'
       # Authorization:
@@ -1174,12 +1174,12 @@ proxy-providers:
     type: inline
     dialer-proxy: proxy
     payload:
-      - name: "ss1"
+      - name: ss1
         type: ss
         server: server
         port: 443
         cipher: chacha20-ietf-poly1305
-        password: "password"
+        password: password
 
   test:
     type: file
@@ -1194,7 +1194,7 @@ rule-providers:
     interval: 259200
     path: /path/to/save/file.yaml # 默认只允许存储在 mihomo 的 Home Dir，如果想存储到其他位置，请通过设置 SAFE_PATHS 环境变量指定额外的安全路径。该环境变量的语法同本操作系统的PATH环境变量解析规则（即Windows下以分号分割，其他系统下以冒号分割）
     type: http # http 的 path 可空置，默认储存路径为 homedir 的 rules 文件夹，文件名为 url 的 md5
-    url: "url"
+    url: url
     proxy: DIRECT
     # size-limit: 10240 # 限制下载文件最大为10kb，默认为0即不限制文件大小
   rule2:
@@ -1216,7 +1216,7 @@ rule-providers:
     #  - XXX.mrs 可以通过"mihomo convert-ruleset ipcidr mrs XXX.mrs XXX.text"转换回text格式（暂不支持转换回yaml格式）
     #
     type: http
-    url: "url"
+    url: url
     format: mrs
     behavior: domain
     path: /path/to/save/file.mrs
@@ -1224,9 +1224,9 @@ rule-providers:
     type: inline
     behavior: domain # classical / ipcidr
     payload:
-      - '.blogger.com'
-      - '*.*.microsoft.com'
-      - 'books.itunes.apple.com'
+      - .blogger.com
+      - "*.*.microsoft.com"
+      - books.itunes.apple.com
 
 rules:
   - RULE-SET,rule1,REJECT
@@ -1270,7 +1270,7 @@ listeners:
   - name: socks5-in-1
     type: socks
     port: 10808 # 支持使用ports格式，例如200,302 or 200,204,401-429,501-503
-    #listen: 0.0.0.0 # 默认监听 0.0.0.0
+    # listen: 0.0.0.0 # 默认监听 0.0.0.0
     # rule: sub-rule-name1 # 默认使用 rules，如果未找到 sub-rule 则直接使用 rules
     # proxy: proxy # 如果不为空则直接将该入站流量交由指定 proxy 处理
     # udp: false # 默认 true
@@ -1524,8 +1524,8 @@ listeners:
         - 0123456789abcdef
       server-names:
         - test.com
-      #下列两个 limit 为选填，可对未通过验证的回落连接限速，bytesPerSec 默认为 0 即不启用
-      #回落限速是一种特征，不建议启用，如果您是面板/一键脚本开发者，务必让这些参数随机化
+      # 下列两个 limit 为选填，可对未通过验证的回落连接限速，bytesPerSec 默认为 0 即不启用
+      # 回落限速是一种特征，不建议启用，如果您是面板/一键脚本开发者，务必让这些参数随机化
       limit-fallback-upload:
         after-bytes: 0 # 传输指定字节后开始限速
         bytes-per-sec: 0 # 基准速率（字节/秒）
@@ -1534,7 +1534,7 @@ listeners:
         after-bytes: 0 # 传输指定字节后开始限速
         bytes-per-sec: 0 # 基准速率（字节/秒）
         burst-bytes-per-sec: 0 # 突发速率（字节/秒），大于 bytesPerSec 时生效
-    ### 注意，对于vless listener, 至少需要填写 “certificate和private-key” 或 “reality-config” 或 “decryption” 的其中一项 ###
+    # ## 注意，对于vless listener, 至少需要填写 “certificate和private-key” 或 “reality-config” 或 “decryption” 的其中一项 ###
 
   - name: anytls-in-1
     type: anytls
@@ -1613,7 +1613,7 @@ listeners:
     #   enabled: false
     #   method: aes-128-gcm # aes-128-gcm/aes-256-gcm/chacha20-ietf-poly1305
     #   password: "example"
-    ### 注意，对于trojan listener, 至少需要填写 “certificate和private-key” 或 “reality-config” 或 “ss-option” 的其中一项 ###
+    # ## 注意，对于trojan listener, 至少需要填写 “certificate和private-key” 或 “reality-config” 或 “ss-option” 的其中一项 ###
 
   - name: hysteria2-in-1
     type: hysteria2
@@ -1636,7 +1636,7 @@ listeners:
     #    madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
     #    dC5jb20AAA==
     #    -----END ECH KEYS-----
-    ##  up 和 down 均不写或为 0 则使用 BBR 流控
+    # #  up 和 down 均不写或为 0 则使用 BBR 流控
     #  up: "30 Mbps" # 若不写单位，默认为 Mbps
     #  down: "200 Mbps" # 若不写单位，默认为 Mbps
     #  obfs: salamander # 默认为空，如果填写则开启 obfs，目前仅支持 salamander
@@ -1657,14 +1657,14 @@ listeners:
     # proxy: proxy # 如果不为空则直接将该入站流量交由指定 proxy 处理 (当 proxy 不为空时，这里的 proxy 名称必须合法，否则会出错)
     stack: system # gvisor / mixed
     dns-hijack:
-    - 0.0.0.0:53 # 需要劫持的 DNS
+      - 0.0.0.0:53 # 需要劫持的 DNS
     # auto-detect-interface: false # 自动识别出口网卡
     # auto-route: false # 配置路由表
     # mtu: 9000 # 最大传输单元
     inet4-address: # 必须手动设置 ipv4 地址段
-    - 198.19.0.1/30
+      - 198.19.0.1/30
     inet6-address: # 必须手动设置 ipv6 地址段
-    - "fdfe:dcba:9877::1/126"
+      - "fdfe:dcba:9877::1/126"
     # strict-route: true # 将所有连接路由到 tun 来防止泄漏，但你的设备将无法其他设备被访问
     # inet4-route-address: # 启用 auto-route 时使用自定义路由而不是默认路由
     # - 0.0.0.0/1
