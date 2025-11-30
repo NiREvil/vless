@@ -15,11 +15,9 @@ from typing import Set, List, Dict, Tuple, Optional
 from collections import defaultdict
 import signal
 
-
 def timeout_handler(signum, frame):
     print("⏰ TIMEOUT: Exceeded 48min")
     exit(1)
-
 
 signal.signal(signal.SIGALRM, timeout_handler)
 signal.alarm(48 * 60)
@@ -35,6 +33,7 @@ CACHE_VERSION = os.path.join(BASE_DIR, "cache_version.txt")
 XRAY_PROTOCOLS = {"vless", "vmess", "trojan", "ss"}
 SINGBOX_PROTOCOLS = {"vless", "vmess", "trojan", "ss", "hy2", "tuic"}
 
+UUID_RE = re.compile(r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
 GITHUB_PAT = os.environ.get("GH_PAT")
 MAX_CONFIGS_TO_TEST = 12000
@@ -157,7 +156,6 @@ VALID_SS_METHODS = {
     "2022-blake3-aes-256-gcm",
 }
 
-
 def parse_ss(cfg: str) -> Optional[Dict]:
     """★★★ Shadowsocks parser with Validation ★★★"""
     try:
@@ -253,7 +251,6 @@ def parse_hy2(cfg: str) -> Optional[Dict]:
 
 
 def is_valid(cfg: str) -> bool:
-    """Comprehensive config validation"""
     if not cfg or not isinstance(cfg, str):
         return False
 
@@ -294,7 +291,10 @@ def is_valid(cfg: str) -> bool:
             return False
 
         if p in ["vless", "trojan"]:
-            return bool(u.username)
+            if not u.username:
+                return False
+            if p == "vless" and not UUID_RE.match(u.username):
+                return False
 
         return True
 
@@ -722,19 +722,16 @@ def gen_clash(cfgs: List[str]) -> Optional[str]:
 
     proxy_names = [p["name"] for p in proxies]
 
-    y = """mixed-port: 7890
-http-port: 7891
-socks-port: 7892
-ipv6: true
-allow-lan: false
+    y = """port: 7890
+socks-port: 7891
+mixed-port: 7892
+allow-lan: true
 mode: rule
-log-level: warning
-disable-keep-alive: false
-keep-alive-idle: 10
-keep-alive-interval: 15
+log-level: info
 unified-delay: true
 geo-auto-update: true
-geo-update-interval: 168
+find-process-mode: strict
+global-client-fingerprint: chrome
 external-controller: 127.0.0.1:9090
 external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
 external-ui: ui
@@ -748,44 +745,49 @@ profile:
 dns:
   enable: true
   listen: 0.0.0.0:1053
-  ipv6: true
-  respect-rules: true
-  use-system-hosts: false
-  nameserver:
-    - https://8.8.8.8/dns-query#⚪ REvil
-    - https://208.67.222.222/dns-query
-    - https://dns.alidns.com/dns-query
+  ipv6: false
+  use-system-hosts: true
+  respect-rules: false
+  default-nameserver:
     - 223.5.5.5
-    - 8.8.8.8  
-    - 1.1.1.1 
-    - 119.29.29.29
+  nameserver:
+    - 114.114.114.114#⚪ V2V
+    - 223.5.5.5
+    - 8.8.8.8
+    - 9.9.9.9
+    - 1.1.1.1
+    - https://8.8.8.8/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   proxy-server-nameserver:
-    - 8.8.8.8#DIRECT
+    - 8.8.8.8
   nameserver-policy:
-    raw.githubusercontent.com: 8.8.8.8#DIRECT
-    time.apple.com: 8.8.8.8#DIRECT
+    raw.githubusercontent.com: 8.8.8.8
+    time.apple.com: 8.8.8.8
     www.gstatic.com: system
     rule-set:ir:
-      - 8.8.8.8#DIRECT
+      - 8.8.8.8
   fallback:
+    - tls://223.5.5.5
     - tls://1.1.1.1
-    - tcp://8.8.8.8
-    - tls://dns.quad9.net
+    - tls://8.8.8.8
+    - tls://dns.google:853
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - geosite:private
 tun:
   enable: true
-  stack: system
+  stack: mixed
   auto-route: true
-  strict-route: true
-  endpoint-independent-nat: false
   auto-detect-interface: true
   dns-hijack:
     - any:53
     - tcp://any:53
+  device: utun0
   mtu: 9000
+  strict-route: true
+  endpoint-independent-nat: false
 sniffer:
   enable: true
   force-dns-mapping: true
@@ -834,7 +836,7 @@ sniffer:
                     y += f"    {key}: {val}\n"
 
     y += "\nproxy-groups:\n"
-    y += "  - name: ⚪ REvil\n"
+    y += "  - name: ⚪ V2V\n"
     y += "    type: select\n"
     y += "    proxies:\n"
     y += "      - 🟢 AUTO\n"
@@ -844,9 +846,12 @@ sniffer:
 
     y += "\n  - name: 🟢 AUTO\n"
     y += "    type: url-test\n"
-    y += "    url: https://www.gstatic.com/generate_204\n"
-    y += "    interval: 180\n"
-    y += "    tolerance: 50\n"
+    y += "    url: http://clients3.google.com/generate_204\n"
+    y += "    interval: 300\n"
+    y += "    tolerance: 100\n"
+    y += "    lazy: true\n"
+    y += "    timeout: 5000\n"
+    y += "    max-failed-times: 5\n"
     y += "    proxies:\n"
     for name in proxy_names:
         y += f"      - {name}\n"
@@ -918,7 +923,7 @@ rules:
   - RULE-SET,private-cidr,DIRECT,no-resolve
   - RULE-SET,ir,DIRECT
   - RULE-SET,ir-cidr,DIRECT,no-resolve
-  - MATCH,⚪ REvil
+  - MATCH,⚪ V2V
 ntp:
   enable: true
   server: time.apple.com
