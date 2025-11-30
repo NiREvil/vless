@@ -871,7 +871,7 @@ proxy-groups:
     lazy: true
     timeout: 5000
     max-failed-times: 5
-    proxies
+    proxies:
 `;
   for (const name of names) y += `      - "${name}"\n`;
 
