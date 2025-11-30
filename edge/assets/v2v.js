@@ -850,7 +850,7 @@ proxies:
         y += `    ${key}: ${value}\n`;
       }
     }
-  }:
+  }
 
   y += `
 proxy-groups:
