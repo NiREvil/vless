@@ -73,6 +73,36 @@ const sanitize = (str) =>
         .trim()
     : "";
 
+const sanitizePath = (p) => {
+  let path = sanitize(p || "/");
+  const m = path.match(/\/[^\s?#]*/);
+  if (m) path = m[0];
+  if (!path.startsWith("/")) path = "/" + path;
+  return path;
+};
+
+const sanitizeHost = (h, fallback) => {
+  let host = sanitize(h || "");
+  host = host.split(/\s+/)[0];
+  return host || fallback;
+};
+
+const dumpYamlObject = (obj, indent) => {
+  let out = "";
+  const pad = " ".repeat(indent);
+  for (const [k, v] of Object.entries(obj)) {
+    if (v && typeof v === "object" && !Array.isArray(v)) {
+      out += `${pad}${k}:\n`;
+      out += dumpYamlObject(v, indent + 2);
+    } else if (Array.isArray(v)) {
+      out += `${pad}${k}: [${v.join(", ")}]\n`;
+    } else {
+      out += `${pad}${k}: ${v}\n`;
+    }
+  }
+  return out;
+};
+
 const parseVmess = (cfg) => {
   try {
     if (!cfg?.startsWith("vmess://")) return null;
@@ -148,9 +178,12 @@ const parseTrojan = (cfg) => {
 
 const VALID_SS_METHODS = [
   "aes-128-gcm",
+  "aes-192-gcm",
   "aes-256-gcm",
+  "2022-blake3-aes-128-gcm",
+  "2022-blake3-aes-256-gcm",
+  "2022-blake3-chacha20-poly1305",
   "chacha20-ietf-poly1305",
-  "chacha20-ietf",
   "xchacha20-ietf-poly1305",
   "aes-128-cfb",
   "aes-192-cfb",
@@ -167,8 +200,6 @@ const VALID_SS_METHODS = [
   "chacha20",
   "plain",
   "none",
-  "2022-blake3-aes-128-gcm",
-  "2022-blake3-aes-256-gcm",
 ];
 
 const parseSs = (cfg) => {
@@ -329,7 +360,7 @@ const genSingboxSubscription = (cfgs) => {
           transport: {},
         };
         if (v.n === "ws") {
-          o.transport = { type: "ws", path: sanitize(v.path), headers: { Host: sanitize(v.host) } };
+          o.transport = { type: "ws", path: sanitizePath(v.path), headers: { Host: sanitizeHost(v.host, v.s) } };
         } else if (v.n === "grpc") {
           o.transport = { type: "grpc", service_name: sanitize(v.path) };
         }
@@ -352,7 +383,7 @@ const genSingboxSubscription = (cfgs) => {
         };
 
         if (v.n === "ws") {
-          o.transport = { type: "ws", path: sanitize(v.path), headers: { Host: sanitize(v.host) } };
+          o.transport = { type: "ws", path: sanitizePath(v.path), headers: { Host: sanitizeHost(v.host, v.s) } };
         } else if (v.n === "grpc") {
           o.transport = { type: "grpc", service_name: sanitize(v.serviceName) };
         }
@@ -388,7 +419,7 @@ const genSingboxSubscription = (cfgs) => {
         };
 
         if (v.n === "ws") {
-          o.transport = { type: "ws", path: sanitize(v.path), headers: { Host: sanitize(v.host) } };
+          o.transport = { type: "ws", path: sanitizePath(v.path), headers: { Host: sanitizeHost(v.host, v.s) } };
         } else if (v.n === "grpc") {
           o.transport = { type: "grpc", service_name: sanitize(v.serviceName) };
         }
@@ -590,7 +621,7 @@ const genClashSub = (cfgs) => {
         };
         if (v.n === "ws") {
           p.network = "ws";
-          p["ws-opts"] = { path: sanitize(v.path), headers: { Host: sanitize(v.host) } };
+          p["ws-opts"] = { path: sanitizePath(v.path), headers: { Host: sanitizeHost(v.host, v.s) } };
         }
         if (v.t) {
           p.tls = true;
@@ -613,7 +644,7 @@ const genClashSub = (cfgs) => {
 
         if (v.n === "ws") {
           p.network = "ws";
-          p["ws-opts"] = { path: sanitize(v.path), headers: { Host: sanitize(v.host) } };
+          p["ws-opts"] = { path: sanitizePath(v.path), headers: { Host: sanitizeHost(v.host, v.s) } };
         } else if (v.n === "grpc") {
           p.network = "grpc";
           p["grpc-opts"] = { "grpc-service-name": sanitize(v.serviceName) };
@@ -708,18 +739,16 @@ const genClashSub = (cfgs) => {
   if (!prx.length) return null;
   const names = prx.map((x) => x.name);
 
-  let y = `mixed-port: 7890
-http-port: 7891
-socks-port: 7892
-ipv6: true
-allow-lan: false
+  let y = `port: 7890
+socks-port: 7891
+mixed-port: 7892
+allow-lan: true
 mode: rule
-log-level: warning
-disable-keep-alive: false
-keep-alive-idle: 10
-keep-alive-interval: 15
+log-level: info
 unified-delay: true
 geo-auto-update: true
+find-process-mode: strict
+global-client-fingerprint: chrome
 external-controller: 127.0.0.1:9090
 external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
 external-ui: ui
@@ -733,43 +762,49 @@ profile:
 dns:
   enable: true
   listen: 0.0.0.0:1053
-  ipv6: tru
-  respect-rules: true
-  use-system-hosts: false
-  nameserver:
-    - https://8.8.8.8/dns-query#⚪ REvil
-    - https://208.67.222.222/dns-query
-    - https://dns.alidns.com/dns-query
+  ipv6: false
+  use-system-hosts: true
+  respect-rules: false
+  default-nameserver:
     - 223.5.5.5
-    - 8.8.8.8  
-    - 1.1.1.1 
-    - 119.29.29.29
+  nameserver:
+    - 114.114.114.114#⚪ V2V
+    - 223.5.5.5
+    - 8.8.8.8
+    - 9.9.9.9
+    - 1.1.1.1
+    - https://8.8.8.8/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   proxy-server-nameserver:
-    - 8.8.8.8#DIRECT
+    - 8.8.8.8
   nameserver-policy:
-    raw.githubusercontent.com: 8.8.8.8#DIRECT
-    time.apple.com: 8.8.8.8#DIRECT
+    raw.githubusercontent.com: 8.8.8.8
+    time.apple.com: 8.8.8.8
     www.gstatic.com: system
     rule-set:ir:
-      - 8.8.8.8#DIRECT
+      - 8.8.8.8
   fallback:
+    - tls://223.5.5.5
     - tls://1.1.1.1
-    - tcp://8.8.8.8
-    - tls://dns.quad9.net
+    - tls://8.8.8.8
+    - tls://dns.google:853
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - geosite:private
 tun:
   enable: true
-  stack: system
+  stack: mixed
   auto-route: true
-  strict-route: true
   auto-detect-interface: true
   dns-hijack:
     - any:53
     - tcp://any:53
+  device: utun0
   mtu: 9000
+  strict-route: true
+  endpoint-independent-nat: false
 sniffer:
   enable: true
   force-dns-mapping: true
@@ -808,18 +843,18 @@ proxies:
       if (["name", "type", "server", "port", "udp", "skip-cert-verify"].includes(key)) continue;
       if (typeof value === "object" && !Array.isArray(value)) {
         y += `    ${key}:\n`;
-        for (const [k, v] of Object.entries(value)) y += `      ${k}: ${v}\n`;
+        y += dumpYamlObject(value, 6);
       } else if (Array.isArray(value)) {
         y += `    ${key}: [${value.join(", ")}]\n`;
       } else {
         y += `    ${key}: ${value}\n`;
       }
     }
-  }
+  }:
 
   y += `
 proxy-groups:
-  - name: ⚪ REvil
+  - name: ⚪ V2V
     type: select
     proxies:
       - 🟢 AUTO
@@ -830,10 +865,13 @@ proxy-groups:
   y += `
   - name: 🟢 AUTO
     type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 180
-    tolerance: 50
-    proxies:
+    url: http://clients3.google.com/generate_204
+    interval: 300
+    tolerance: 100
+    lazy: true
+    timeout: 5000
+    max-failed-times: 5
+    proxies
 `;
   for (const name of names) y += `      - "${name}"\n`;
 
@@ -904,7 +942,7 @@ rules:
   - RULE-SET,private-cidr,DIRECT,no-resolve
   - RULE-SET,ir,DIRECT
   - RULE-SET,ir-cidr,DIRECT,no-resolve
-  - MATCH,⚪ REvil
+  - MATCH,⚪ V2V
 ntp:
   enable: true
   server: time.apple.com
