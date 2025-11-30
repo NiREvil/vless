@@ -360,7 +360,11 @@ const genSingboxSubscription = (cfgs) => {
           transport: {},
         };
         if (v.n === "ws") {
-          o.transport = { type: "ws", path: sanitizePath(v.path), headers: { Host: sanitizeHost(v.host, v.s) } };
+          o.transport = {
+            type: "ws",
+            path: sanitizePath(v.path),
+            headers: { Host: sanitizeHost(v.host, v.s) },
+          };
         } else if (v.n === "grpc") {
           o.transport = { type: "grpc", service_name: sanitize(v.path) };
         }
@@ -383,7 +387,11 @@ const genSingboxSubscription = (cfgs) => {
         };
 
         if (v.n === "ws") {
-          o.transport = { type: "ws", path: sanitizePath(v.path), headers: { Host: sanitizeHost(v.host, v.s) } };
+          o.transport = {
+            type: "ws",
+            path: sanitizePath(v.path),
+            headers: { Host: sanitizeHost(v.host, v.s) },
+          };
         } else if (v.n === "grpc") {
           o.transport = { type: "grpc", service_name: sanitize(v.serviceName) };
         }
@@ -419,7 +427,11 @@ const genSingboxSubscription = (cfgs) => {
         };
 
         if (v.n === "ws") {
-          o.transport = { type: "ws", path: sanitizePath(v.path), headers: { Host: sanitizeHost(v.host, v.s) } };
+          o.transport = {
+            type: "ws",
+            path: sanitizePath(v.path),
+            headers: { Host: sanitizeHost(v.host, v.s) },
+          };
         } else if (v.n === "grpc") {
           o.transport = { type: "grpc", service_name: sanitize(v.serviceName) };
         }
@@ -621,7 +633,10 @@ const genClashSub = (cfgs) => {
         };
         if (v.n === "ws") {
           p.network = "ws";
-          p["ws-opts"] = { path: sanitizePath(v.path), headers: { Host: sanitizeHost(v.host, v.s) } };
+          p["ws-opts"] = {
+            path: sanitizePath(v.path),
+            headers: { Host: sanitizeHost(v.host, v.s) },
+          };
         }
         if (v.t) {
           p.tls = true;
@@ -644,7 +659,10 @@ const genClashSub = (cfgs) => {
 
         if (v.n === "ws") {
           p.network = "ws";
-          p["ws-opts"] = { path: sanitizePath(v.path), headers: { Host: sanitizeHost(v.host, v.s) } };
+          p["ws-opts"] = {
+            path: sanitizePath(v.path),
+            headers: { Host: sanitizeHost(v.host, v.s) },
+          };
         } else if (v.n === "grpc") {
           p.network = "grpc";
           p["grpc-opts"] = { "grpc-service-name": sanitize(v.serviceName) };
