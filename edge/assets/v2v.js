@@ -73,34 +73,48 @@ const sanitize = (str) =>
         .trim()
     : "";
 
-const sanitizePath = (p) => {
-  let path = sanitize(p || "/");
-  const m = path.match(/\/[^\s?#]*/);
-  if (m) path = m[0];
-  if (!path.startsWith("/")) path = "/" + path;
-  return path;
-};
-
-const sanitizeHost = (h, fallback) => {
-  let host = sanitize(h || "");
-  host = host.split(/\s+/)[0];
-  return host || fallback;
-};
-
-const dumpYamlObject = (obj, indent) => {
-  let out = "";
-  const pad = " ".repeat(indent);
-  for (const [k, v] of Object.entries(obj)) {
-    if (v && typeof v === "object" && !Array.isArray(v)) {
-      out += `${pad}${k}:\n`;
-      out += dumpYamlObject(v, indent + 2);
-    } else if (Array.isArray(v)) {
-      out += `${pad}${k}: [${v.join(", ")}]\n`;
-    } else {
-      out += `${pad}${k}: ${v}\n`;
-    }
+const yamlScalar = (v) => {
+  if (v === null || v === undefined) return "";
+  if (typeof v === "number" || typeof v === "boolean") return String(v);
+  const s = String(v);
+  if (
+    s === "" ||
+    s[0] === "@" ||
+    s[0] === "&" ||
+    s[0] === "*" ||
+    s[0] === "!" ||
+    s[0] === "|" ||
+    s[0] === ">" ||
+    s[0] === "%" ||
+    s[0] === `"` ||
+    s[0] === "'" ||
+    /\s/.test(s[0]) ||
+    s.includes(": ") ||
+    s.includes("\n") ||
+    s.includes("\r")
+  ) {
+    return `"${s.replace(/"/g, '\\"')}"`;
   }
-  return out;
+  return s;
+};
+
+const dumpYamlField = (key, value, indent) => {
+  const pad = " ".repeat(indent);
+
+  if (value && typeof value === "object" && !Array.isArray(value)) {
+    let out = `${pad}${key}:\n`;
+    for (const [k, v2] of Object.entries(value)) {
+      out += dumpYamlField(k, v2, indent + 2);
+    }
+    return out;
+  }
+
+  if (Array.isArray(value)) {
+    const arr = value.map((v2) => yamlScalar(v2)).join(", ");
+    return `${pad}${key}: [${arr}]\n`;
+  }
+
+  return `${pad}${key}: ${yamlScalar(value)}\n`;
 };
 
 const parseVmess = (cfg) => {
@@ -506,9 +520,9 @@ const genSingboxSubscription = (cfgs) => {
       log: { level: "error", timestamp: true },
       dns: {
         servers: [
-          { type: "tcp", tag: "direct-dns", server: "8.8.8.8" },
-          { type: "tcp", tag: "proxy-dns", detour: "select", server: "8.8.8.8" },
-          { type: "local", tag: "local-dns", detour: "direct" },
+          { tag: "direct-dns", type: "tcp", server: "8.8.8.8" },
+          { tag: "local-dns", type: "udp", server: "223.5.5.5" },
+          { tag: "proxy-dns", type: "udp", server: "8.8.8.8", detour: "select" },
         ],
         rules: [
           { clash_mode: "Global", server: "proxy-dns" },
@@ -528,7 +542,8 @@ const genSingboxSubscription = (cfgs) => {
           mtu: 9000,
           address: ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
           auto_route: true,
-          stack: "system",
+          strict_route: true,
+          stack: "gvisor",
           platform: { http_proxy: { enabled: true, server: "127.0.0.1", server_port: 2080 } },
         },
         { type: "mixed", listen: "127.0.0.1", listen_port: 2080 },
@@ -544,8 +559,8 @@ const genSingboxSubscription = (cfgs) => {
           type: "urltest",
           tag: "auto",
           outbounds: tags,
-          url: "http://www.gstatic.com/generate_204",
-          interval: "10m",
+          url: "http://clients3.google.com/generate_204",
+          interval: "5m",
           tolerance: 50,
         },
         ...out,
@@ -850,23 +865,17 @@ proxies:
 `;
 
   for (const x of prx) {
-    y += `  - name: "${x.name}"\n`;
-    y += `    type: ${x.type}\n`;
-    y += `    server: ${x.server}\n`;
-    y += `    port: ${x.port}\n`;
+  for (const x of prx) {
+    y += `  - name: ${yamlScalar(x.name)}\n`;
+    y += `    type: ${yamlScalar(x.type)}\n`;
+    y += `    server: ${yamlScalar(x.server)}\n`;
+    y += `    port: ${yamlScalar(x.port)}\n`;
     y += `    udp: true\n`;
     y += `    skip-cert-verify: true\n`;
 
     for (const [key, value] of Object.entries(x)) {
       if (["name", "type", "server", "port", "udp", "skip-cert-verify"].includes(key)) continue;
-      if (typeof value === "object" && !Array.isArray(value)) {
-        y += `    ${key}:\n`;
-        y += dumpYamlObject(value, 6);
-      } else if (Array.isArray(value)) {
-        y += `    ${key}: [${value.join(", ")}]\n`;
-      } else {
-        y += `    ${key}: ${value}\n`;
-      }
+      y += dumpYamlField(key, value, 4);
     }
   }
 
