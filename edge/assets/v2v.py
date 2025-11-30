@@ -15,9 +15,11 @@ from typing import Set, List, Dict, Tuple, Optional
 from collections import defaultdict
 import signal
 
+
 def timeout_handler(signum, frame):
     print("⏰ TIMEOUT: Exceeded 48min")
     exit(1)
+
 
 signal.signal(signal.SIGALRM, timeout_handler)
 signal.alarm(48 * 60)
@@ -33,7 +35,9 @@ CACHE_VERSION = os.path.join(BASE_DIR, "cache_version.txt")
 XRAY_PROTOCOLS = {"vless", "vmess", "trojan", "ss"}
 SINGBOX_PROTOCOLS = {"vless", "vmess", "trojan", "ss", "hy2", "tuic"}
 
-UUID_RE = re.compile(r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")
+UUID_RE = re.compile(
+    r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+)
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
 GITHUB_PAT = os.environ.get("GH_PAT")
 MAX_CONFIGS_TO_TEST = 12000
@@ -155,6 +159,7 @@ VALID_SS_METHODS = {
     "2022-blake3-aes-128-gcm",
     "2022-blake3-aes-256-gcm",
 }
+
 
 def parse_ss(cfg: str) -> Optional[Dict]:
     """★★★ Shadowsocks parser with Validation ★★★"""
