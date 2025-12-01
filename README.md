@@ -1,9 +1,9 @@
 <p align="center">
-<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="140x" </p>
+<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="220x" </p>
 
 <br><br/>
 
-> [!NOTE]
+> [!CAUTION]
 >
 > <br/>
 >
@@ -50,37 +50,142 @@
 
 > [!CAUTION]
 >
-> ‏[![MahsaAmini](https://img.shields.io/badge/وضعیت_نابسامان_وارپ-darkred)](https://t.me/NiREvil_GP)
+> ‏[![MahsaAmini](https://img.shields.io/badge/پیشنهادی-خفن-darkred)](https://t.me/NiREvil_GP)
 >
 > <br/>
 >
-> **پیرامون بسته‌شدن آی‌پی‌های وارپ**
->
-> نقل قول از گروه **IRCF**
->
-> طبق بررسی‌های انجام شده، دلیل مشکل اتصال وارپ در کشورهایی نظیر ایران و چین و عدم کارکرد کلاینت‌های کاستوم‌شده مانند Oblivion و بقیه برنامه‌هایی که از هسته اصلی وارپ استفاده نمی‌کنن، بسته‌شدن اندپوینت‌های کلودفلر برای دریافت دیتای وایرگارد کاستوم هست.
->
 > <details>
-> <summary>❗ خواندن ادامه‌ی گزارش </summary><br/>   
->  
-> این‌مورد یا به‌علت تغییر سیاست کلودفلر بوده، یا صرفا یک باگ هست که بعد از بروزرسانی‌های جدید وارپ به وجود اومده.  
-> اگرچه نباید نقش فیلترینگ رو در اختلال یا فیلتر کردن آی‌پی‌های وارپ نادیده گرفت، ولی فعلا مشکل اصلی از سمت خود کلودفلر هست.  
-> البته اپ رسمی کلودفلر برای اتصال از پروتکل مسک/ Masque استفاده می‌کنه، یا کاربران رو در وارپ به یک اندپوینت خاص وصل میکنه، که در ایران عمدتا به‌دلیل فیلترینگ استیبل نیست.
+> <summary>❗ توضیحات F-Secure Freedom </summary><br/>   
+> 
+> اکانت 91 روزه وی‌پی‌ان F-Secure Freedom  
+> یکی از قدیمی‌ترین سرویس‌های دنیا. اکانت با ارزشی داره خیلی ✋🏿  
+> 
+> فقط با آی‌پی سوئد می‌شه از این آفر استفاده کرد و اکانت ساخت، من با سوئد AVAST VPN انجام دادم به راحتی، و دومین بار با آی‌پی سوئد همین وی‌پی‌ان ساختم داخل تلگرام.
+> 
+> یه ایمیل فیک نیاز داری، از هر سایت و سرویسی که دلت میخواد استفاده کن، دوتا برای نمونه میذارم:
+> 
+> سایت:  
+> [mail.tm][MailTM]
+> 
+> و یا این ربات تلگرامی:  
+> [@TempMail_org_bot][TempMailBot]
+> 
+> از هرکدوم که خواستی ایمیلت رو کپی کن و برگرد.
+> 
+> این لینک‌رو باز کن و ثبت‌نام رو انجام بده:  
+> [F-Secure—Freedom VPN][F-Secure]
+> 
+> 
+> اسم و ایمیل و پسوورد تعیین کن و دوتا تیک پایین هم بزن بره. (ایمیل و پسووردی که تعیین کردی رو جایی یادداشت کن، مثلا بفرست سیو مسیج تلگرامت).  
+> 
+> اگه با موفقیت انجام بشه پایینش می‌نویسه:  
+> - Your account has been successfully created
+> 
+> زیرش یه گزینه آبی هست که نوشته:  
+> - Add subscription code
+> 
+> اونو بزن و این کد لایسنس رو وارد کن:  
+> 
+> ```Elixir
+> BNAUH-EFCTO-EQOCZ-RXHES
+> ```
+> 
+> و continue رو برن بره. اگه بعد چند ثانیه نوشت:  
+> - Your subscription code is valid  
+> 
+> یعنی اوکیه و بزن بره مرحله بعدی، اگه هرچی غیر از این نوشته بود یعنی آی‌پی سوئدت کیکه و واقعی نیست. می‌تونی از [اینجا چک کنی لوکیشنت رو]][BrowserLeaks] ببینی واقعا سوئد هست یانه.
+> 
+> حالا می‌تونی از منوی بالا Log out کنی‌ یا همینجوری عادی ببندی صفحه رو و برگردی سمت سایت یا رباتی که ازش ایمیل گرفتیم چون ایمیلی که فرستادن رو باید وریفای کنیم.
+> 
+> <br/>
+> 
+> روی آخرین ایمیلی اومده بزن و صبر کن، سایت ایمیل موقت که بالا اومد برو تا پایین صفحه تا محتوای صندوق ورودی رو ببینی، اون ایمیلی که روش اینجوری نوشته رو بازش کن:  
+> - Active your F Secure VPN account
+> 
+> بزن روش و تو صفحه جدید که باز می‌شه یه لینک آبی خیلی طولانی خواهی دید دوباره بزن روش و چند ثانیه بعد تایید شده و تمومه، اینم ببند بره.  
+> 
+> <br/> 
+> 
+> **و حالا نصب اپلیکیشن.**  
+> نسخه مناسب دستگاه خودت رو نصب کن:
+> 
+> - [ANDROID][F-Secure-Android]
+> - [IOS][F-Secure-IOS]
+> - [WINDOWS][F-Secure-Windows]
+> - [MAC][F-Secure-macOS]
+> 
+> 
+> پس از نصب و اجرای برنامه، روی گزینه Log-in کلیک کرده و در قسمت Select account گزینه اول یعنی **F-Secure** رو انتخاب می‌کنید، با ایمیل و پسووردی که ثبت‌نام کرده بودید وارد میشید، یه اسم الکی واسه دستگاه تعیین کنید. صفحه بعدی تیک بزنید تا قوانین رو تایید کرده باشید، و اکسپت.
+> 
+> حالا برنامه رو یه بار ببند (چون لاگین مجدد نشونت میده در خالی که انجامش دادی) ببند از اول وارد شو تا مستقیم بره صفحه اصلی، اگه پاپ‌آپ نشون داد تایید کنید، مثل همه ‌VPNها باید دسرسی به اینترنت داشته باشه، هیچ تنظیماتی براش نیاز نیست فقط بزنید رو دکمه وسط کانکت بشه یا لوکیشن انتخاب کنید و بعد بزنید کانکت شه.
+> 
+> من از منوی سمت چپ از داخل تنظیماتش تیک گزینه‌ی:  
+> - Automatic Kill switch & Usage Analytics
+> 
+> رو برداشتم که وقتی نت قطع میشه نت رو بلاک نکنه واسه بقیه برنامه‌ها و دومین تیک هم که واسه گزارش عملکرد برنامه به توسعه‌دهنده‌ برنامه‌ است که ~~کون لقش~~ نمی‌خوام گزارشی براش ارسال بشه.‌
+> 
+> ❕ **هر یوزر پسوورد برای پنج دستگاه همزمان قابل استفاده است.**
+> می‌تونید هرچندتا اکانت خواستید بسازید ولی اگه واقعا نیاز نداشتید نکنید این‌کارو که متود ~~جنده~~ نشه
+> 
+> <br/> 
+> 
+> **⚠️ نکته:** 
+> 
+> چند نفرو دیدم می‌گفتن ممکنه بعضیا داخل برنامه نتونن اشتراک فعالشون رو ببینن بعد از چندبار لاگین شدن و این حرفا، در این‌صورت [نسخه جایگزین برنامه][F-Secure-Android2] رو نصب کنید، یذره شلوغ پلوغ تره چون فقط وی‌پی‌ان نیست و آنتتی ویروس همین کمپانیه که داخلش وی‌پی‌ان هم داره ولی می‌گفتن انگار اونوقت مشکلشون حل میشه، ب هر حال، خودم که همون اپ اول و اصلی رو ترجیح می‌دم، ساده و سبک و سریعه.
+> 
+> گه مشکلی پاشتید یا نتونستید اکانت بسازید تو گروه بگید بچه‌ها براتون می‌سازن می‌فرستن.
 >
-> در مجموع، هسته اصلی وارپ به‌علت نمایه مشخص برای فایروال هنوز اتصال ثابتی در قسمت وارپ با پروتکل وایرگارد نداره و از قبل بسته شده بود؛ این باعث شده تا کاربران به این‌اشتباه بیفتن. (به‌صورت تخصصی کلاینت جوری نوشته شده که MITM یا همون ارور HAPPY EYEBALLS در خود برنامه شناسایی میشه و خودکار کانکشن رو می‌بنده؛ یعنی کلودفلر فکر میکنه کانکشن داره شنود میشه و درست‌هم فکر میکنه).
+> [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/x-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP)
+> 
+> <details>
+> <summary> اگه نیاز به اسکرین شات داشتید کلیک کنید</summary><br/>
+> 
+> <img src="https://github.com/user-attachments/assets/126a852f-aaf8-44ec-998b-7b421f420b7d" alt="F-Secure-VPN-1" width="360"/>
 >
-> مکاتبه‌ای برای حل این‌مشکل با کلودفلر انجام شده، تا شرایط فعلی کلاینت‌های کاستوم رو بررسی کنن. امیدوارم این مکاتبه نتیجه‌بخش باشه و این‌مورد به زودی برطرف بشه.
+> <img src="https://github.com/user-attachments/assets/b9060480-fb9d-4916-b06e-6b9b1f4a19af" alt="F-Secure-VPN-2" width="360"/>
+> 
+> <img src="https://github.com/user-attachments/assets/10e5257c-7f86-4385-922f-0db023ea2841" alt="F-Secure-VPN-3" width="360"/>
+> 
+> <img src="https://github.com/user-attachments/assets/22a160c9-dc40-421a-b7c6-d756eaa1d996" alt="F-Secure-VPN-4" width="360"/>
+> 
+> <img src="https://github.com/user-attachments/assets/f4ff68ea-5b33-4245-872d-379720a4c56d" alt="F-Secure-VPN-5" width="360"/>
 >
-> **بخش دوم گزارش:**
+> 
+> <img src="https://github.com/user-attachments/assets/bebb5385-e710-425a-9903-cd82e3963f22" alt="F-Secure-VPN-6" width="360"/>
+> 
+> 
+> <img src="https://github.com/user-attachments/assets/179083ed-1322-4e8f-9ac0-dd948a81ad79" alt="F-Secure-VPN-7" width="360"/>
+> 
+> <img src="https://github.com/user-attachments/assets/98d6e1ca-3619-4f5e-9d07-be38630fe887" alt="F-Secure-VPN-8" width="360"/>
+> 
+> 
+> <img src="https://github.com/user-attachments/assets/c12b95f7-2e14-4297-b140-23dba0dd8cd4" alt="F-Secure-VPN-9" width="360"/>
+> 
+> <img src="https://github.com/user-attachments/assets/fa4f92f1-7f80-4a07-9f5c-95ae90f37f4d" alt="F-Secure-VPN-10" width="360"/>
+> 
+> <img src="https://github.com/user-attachments/assets/0c4fc804-4c07-48d1-b524-e4476d433aa2" alt="F-Secure-VPN-11" width="360"/>
+> 
+> <img src="https://github.com/user-attachments/assets/eb573750-543a-48c2-b767-1f5e66967c82" alt="F-Secure-VPN-12" width="360"/>
+> 
+> <img src="https://github.com/user-attachments/assets/093d7f9f-7ca0-4b73-9752-0877789acc32" alt="F-Secure-VPN-13" width="360"/>
+> 
+> <img src="https://github.com/user-attachments/assets/753a2637-ee11-40a6-8fb5-c124c7f6c462" alt="F-Secure-VPN-14" width="360"/>
+> 
+> <img src="https://github.com/user-attachments/assets/b06a1d05-423f-4f84-ac85-3dadbaac6715" alt="F-Secure-VPN-15" width="360"/>
+> 
+> <img src="https://github.com/user-attachments/assets/ac57611b-24dc-4fdc-ae23-5fa350d8e943" alt="F-Secure-VPN-16" width="360"/>
+> 
+> 
+> <img src="https://github.com/user-attachments/assets/28b77533-83f8-4024-851c-0a63069b6de2" alt="F-Secure-VPN-16" width="360"/>
+> 
+> 
+> <img src="https://github.com/user-attachments/assets/85fe2b23-fd65-4f47-adc3-b306aac0c380" alt="F-Secure-VPN-16" width="360"/>
+> 
+> تامام
 >
-> توی گزارشی که امروز منتشر کردم، گفته شد علاوه بر فیلترینگ، خود کلودفلر هم خواسته یا ناخواسته باعث شده کلاینت‌های غیررسمی وارپ به مشکل بخورن.
->
-> اما پشت ماجرا یه چیز دیگه هم هست؛ یه منبع ناشناس نسخه‌ای از یک نامه بهم رسونده که شورای عالی فضای مجازی صراحتاً خواسته بود همه‌ی کانکشن‌های وارپ به کلودفلر کاملا مسدود بشه، آی‌پی‌های باز فیلتر بشن، و حتی گزارش فنی از این بستن‌ها به شورا ارسال بشه.
->
-> یعنی رسما دستور دادن که وارپ برای همیشه بسته بشه و نمیشه به سادگی از این قضیه عبور کرد.
->
-> 🔍 [ircf.space][IRCF] 🩶
->
+> 
+> </details>
+> 
 > </details>
 >
 > <br/>
@@ -136,32 +241,42 @@
 >
 > درسته که تو لینکی که دادم توضیحات کامل نوشته شده بود، ولی مرحله به مرحله ننوشتن، خودم می‌نویسم براتون.
 >
+> <br/> 
+>
 > بعد از اینکه ترماکس اندروید رو از [[مخزن گیت‌هاب]][TERMUX] دانلود و نصب (یا ترمینال ویندوز (CMD) یا لینوکس) رو باز کردید؛  
 > دستور زیر رو اجرا کنید:
 >
 > ```powershell
 > bash <(curl -fsSL https://raw.githubusercontent.com/bia-pain-bache/BPB-Wizard/main/install.sh)
 > ```
->
+> 
+> <br/> 
+> 
 > - **اولین مرحله**
 >
 > Please enter 1 to CREATE a new panel or 2 to MODIFY an existing panel:
 >
 > سوال اینه که می‌خواید یه پنل جدید بسازید؟ (عدد 1 رو وارد کنید) یا پنل‌های موجود توی اکانت کلادفلر خودتون رو ویرایش کنید؟ (عدد 2 را وارد کنید).  
 > ما عدد `1` رو وارد کرده و اینتر میزنیم.
->
+> 
+> <br/> 
+> 
 > - **مرحله دوم**
 >
 > بعدش مرحله وارد شدن به حساب کلادفلر (درصورت داشتن اکانت) یا ساخت اکانت هستش، اگه اکانت داشتید که لاگین می‌کنید اگه نداشتید با ایمیل خودتون یا هزاران فیک میل یکی می‌سازید، یادتون نره بعدش برید صندوق ورودی و وریفای کنید.
 >
 > درنهایت وارد حساب Cloudflare شما می‌شه و ازتون اجازه دسترسی می‌خواد، دسترسی رو دادید صفحه رو می‌بندید برمی‌گردید ب ترمینال.
->
+> 
+> <br/> 
+> 
 > - **مرحله سوم**  
 >   Please enter 1 for Workers or 2 for Pages deployment:
 >
 > میگه اگه می‌خوای `Worker` بسازی عدد یک و یا اگه میخای `Pages` بسازی عدد 2 رو وارد کن، به دلخواه خودت هرکدومو خواستی وارد کن.  
 > من پیشنهاد می‌کنم برای شرایط حال حاضر و وضعیت داغون اینترنت بهتره وورکر بسازی که بتونی از پورت‌های noTLS مثل 80 هم استفاده بکنی.
->
+> 
+> <br/> 
+> 
 > - **مرحله چهارم**
 >
 > The random generated name (Subdomain) is: 5th7sc483r2-q9
@@ -171,7 +286,9 @@
 > میگه ساب‌دامین شخصی شما رندوم انتخاب میشه و مقدارش فلانه، اگه می‌خوای سفارشی باشه مقدار دلخواهت رو وارد کن، می‌تونی هرچیزی بنویسی با در نظر داشتن این که باید از:
 >
 > حروف کوچک انکلیسی، بدون فاصله، بدون کاما و بدون نقطه استفاده کنی، فقط عدد و حروف کوچیک چسبیده بهم، ترجیحا فقط اینتر بزنید که مقدار رندومی که خودش تعیین کرده باقی بمونه.
->
+> 
+> <br/> 
+> 
 > - **مرحله پنجم**
 >
 > The random generated UUID is: xxxxx
@@ -184,13 +301,17 @@
 >
 > آیدی خودت رو بگیری و یا اینتر بزنی خودش انتخاب کنه، حتما اینتر بزنید، کم اهمیت ترین چیز همینه که از کجا بیاری آی‌دی رو.
 >
+> <br/> 
+> 
 > - **مرحله ششم**
 >
 > The random generated Trojan password is: xxxx  
 > Please enter a custom Trojan password or press ENTER to use generated one:
 >
 > بازم مثل قبلی‌ها، یه مقدار رندوم خودش میذاره اگه اینتر بزنی، پس بزن بره چون فاقد اهمیته.>
->
+> 
+> <br/> 
+> 
 > - **مرحله هفتم**
 >
 > The default Proxy IP is: `bpb.yousef.isegaro.com`
@@ -199,13 +320,23 @@
 >
 > انتخاب پروکسی آی‌پی، تقریبا مرحله مهم همینه، پروکسی پیش‌فرض خودشون اوکیه ولی نه خیلی، اولا همیشه نصف پروکسی‌ها از کار افتادن و دیر به دیر تغییر می‌کنن، دوما از جاهای بدرد نخور مثل oracle هستن که هر سایتی بری ده بار ازت می‌خواد کپچا حل کنی ربات‌های تلگرامی‌هم هیچ‌کدوم بالا نمیان. از روی یه یارو چینی کپی شدن واسه همین مناسب استفاده در ایران نیستن. پیشنهاد می‌کنم پروکسی خودمون رو بذارین که دائم آپدیت میشه و باکیفیت خوبی داره.
 >
-> ```POV-Ray SDL
+> پر از آی‌پی‌های خاص آمریکا:  
+> 
+> ```css
 > nima.nscl.ir
 > ```
 >
+> پر از آی‌پی‌های خاص ترکیه:  
+> 
+> ```css
+> turk.radicalization.ir
+> ```
+> 
 > یا هر پروکسی دیگه‌ای که می‌خواستید اینجا پیدا میشه:  
 > [[SOURCE OF PROXYIP]][ProxyIP]
->
+> 
+> <br/> 
+> 
 > - **مرحله هشتم**
 >
 > The default Fallback domain is: speed.cloudflare.com
@@ -213,7 +344,9 @@
 > Please enter a custom Fallback domain or press ENTER to use default:
 >
 > از روی بیکاری زیاد بود که اینو گذاشتن، اینتر بزنید بره فاقد اهمیت‌ترین همینه.
->
+> 
+> <br/> 
+> 
 > - **مرحله نهم**
 >
 > The random generated Subscription path is: 7b67Th1Rk$UX4aM@
@@ -221,7 +354,9 @@
 > Please enter a custom Subscription path or press ENTER to use generated one:
 >
 > این مرحله واسه امنیت بیشتره، قبلا جاشو uuid می‌گرفت ک میشد لو بره و سواستفاده شه از پنل، الان بهتر شده پس اینتر بزنید و بذارید که رندوم انتخاب شه.
->
+> 
+> <br/> 
+> 
 > - **مرحله دهم**
 >
 > You can set Custom domain ONLY if you registered domain on this cloudflare account.
@@ -229,7 +364,9 @@
 > Please enter a custom domain (if you have any) or press ENTER to ignore:
 >
 > اگه از قبل دامین خریدید که می‌تونید اینجا یه ساب دامین انتخاب کنید اگر نه اینتر بزنید بره.
->
+> 
+> <br/> 
+> 
 > - **مرحله یازدهم**
 >
 > سی ثانیه صبر کنید kv رو درست کنه و وصل کنه، متغییرهای منتخب رو اضافه کنه، فایل زیپ کد پروژه رو دانلود کنه، ایمپورت کنه، و بعد این اعلان رو نشون بده:
@@ -416,7 +553,7 @@
 >
 > [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/x-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP)
 >
-> <br><br/>
+> <br/>
 
 <br><br/>
 
@@ -487,38 +624,7 @@
   - [Warp Endpoints](#warp-endpoints)
 - [Clients](#clients)
 - [Some Sheets](#regardless-of-anything-else)
-
-![rainbow]
-
-<br/>
-
-##
-
-> 📦 This configuration is dynamically generated and continuously updated via GitHub Actions every 4 hours to ensure consistency and best practices. <br><br/>
-
-##
-
-### Hiddify URL <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>
-
-```POV-Ray SDL
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
-```
-
-<br/>
-
-### Sing-Box URL <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="20"/>
-
-```Elixir
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
-```
-
-<br/>
-
-### Scan with Hiddify
-
-<p align="center">
-     <img src="edge/assets/QRCode-Dog.png" alt="QR" width="420px">
-     </p>
+- [Subscription Panel Collection](#free-subscription-panel-collection)
 
 ![rainbow]
 
@@ -530,62 +636,89 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 > [!NOTE]
 >
-> **We've got a toolbox here that would make even a Swiss Army knife jealous! Let's see what treasures might come in handy for you.**
+> **We've got a toolbox here that would make even a Swiss Army knife jealous!** Let's see what treasures might come in handy for you.
 >
+> <br/> 
+> 
 > This article is your golden ticket to flip Gemini and Grok into advanced mode, unleashing them without any pesky censorship or restrictions.
 >
-> - [diana-cl.github.io/Diana-Cl]
+> - [Diana-Cl.github.io]
 >
-> Best DNS testing tool, just start it.  
+> <br/> 
+> 
+> **DNS Speed Test Benchmarks,** Find the Fastest DNS Server for Your Location
 > Tip — use DoH to bypass restrictions on YouTube, Instagram, and more.
 >
-> - [darknessshade.github.io/DNS-Tester]
-> - Read more about DNS Tester in [iran-core]
-> - Darkness Telegram proxies fetcher [proxy-fetcher.pages.dev]
+> - [Darkness DNS Tester][Darkness-Tester]
+> - [DNS SpeedTest]
+> - [Read more about DNS Test][iran-core]
+> - [Darkness Telegram proxies fetcher][Darkness-Fetcher]
 >
-> This is a fast and accurate **Proxy IP Checker** tool, capable of testing IP ranges that I'm sure you haven't seen anywhere like it.
+> <br/> 
+> 
+> **This is a fast and accurate Proxy IP Checker tool**, capable of testing IP ranges that I'm sure you haven't seen anywhere like it.
 >
-> - [checker-3j2.pages.dev]
-> - [Telegram ProxyIPChecker_Bot]
-> - [proxyip.victoriacross.workers.dev]
+> - [Checker-3j2.pages.dev]
+> - [ProxyIP.VictoriaCross]
+> - [ProxyIP Checker Bot]
+> - [Yumiproxy.Vercel.app]
 >
 > <br/>
 >
-> Have you ever seen our proxy IP pool? We add tons of new proxies every single day.
+> **Have you ever seen our proxy IP pool?** We add a shit-ton of new IP's every fucking day.
 >
 > - [Daily Scanned Proxy IP's](./sub/ProxyIP.md#daily-scanned-proxies)
 >
 > <br/>
 >
-> This is a magical command line for activating Microsoft products including Windows and Office (All versions).
+> **This is a magical command line for activating Microsoft products**, including Windows and Office (All versions).
 >
-> - [github.com/NiREvil/windows-activation]
+> - [NiREvil — Activating Windows & Office][NiREvil-Windows]
 >
 > <br/>
 >
-> This is a tool for receiving fake information, but at the same time, it's real.
+> **This is a tool for receiving fake information**, but at the same time, it's real.
 >
 > - [Real Fake Address Gen]
 >
-> <br/>
->
-> Ultimate WARP Generator for any client in just 2 seconds.
->
-> - [itsyebekhe.github.io/warp]
-> - [Telegram.me/UWarpGenBot][UWG?]
->
-> <br/>
->
-> v2ray config collector + Telegram proxy repository.
->
-> - [itsyebekhe.github.io/PSG]
-> - [itsyebekhe.github.io/tpro]
->
+> <br/> 
+> 
+> **Awesome ai directories**, including hundreds of practical AI links, organized according to application and type of use
+> 
+> - [Xpoury4.github.io/AI-Links]
+> 
+> <br/> 
+> 
+> **AI-powered coding tools:** AI code editors, code completion engines, review assistants, refactoring agents, LLMs for developers, and tools that turn natural language into code.
+> 
+> - [Diana-Cl.github.io/Ai]
+> 
 > <br/>
 >
 > <br><br/>
 
-<br><br/>
+<br/>
+
+## Free Subscription Panel Collection
+
+> [!NOTE]
+>  
+> No Bullshit, Just Links (Updated Hourly)
+>  
+> | 🌐 Providers  |  Links  |  
+> | :-------------- | :-------- |  
+> | 🟦 **Matin Ghanbari** | [•v2ray](Matin-Ghanbary) |  
+> | 🟨 **It's YeBeKhe** | [•v2ray](YeBeKhe-v2ray) <br/> [•T.Proxies](YeBeKhe-T-pro) <br/> [•warp](YeBeKhe-Warp) <br/> [•warp-bot](YeBeKhe-Warp-Bot) |  
+> | 🟩 **The Darkness** | [•v2ray](Darkness-Sub) <br/> [•warp](Darkness-Warp) |  
+> | 🟪 **Arshia-ComPlus** | [•v2ray](Arshia-Sub) |  
+> | 🟫 **10ium-Clashf** | [•v2ray](10ium-Sub) |  
+> | 🟥 **The OldMan** | [•v2ray](OldMan-Sub) |  
+> 
+> ![rainbow]
+>
+> <br/>  
+
+<br><br/> 
 
 ## XRAY
 
@@ -665,8 +798,6 @@ https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/vl
 
 https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/main/splitted-by-protocol/shadowsocks.txt
 
-https://raw.githubusercontent.com/parvinxs/Submahsanetxsparvin/refs/heads/main/Sub.mahsa.xsparvin [[PN?]]
-
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed [[SB?]]
 
 https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/python/hysteria2
@@ -702,8 +833,6 @@ https://github.com/4n0nymou3/multi-proxy-config-fetcher/raw/refs/heads/main/conf
 https://sub.amiralter.com/config-lite
 
 https://sub.amiralter.com/config
-
-https://raw.githubusercontent.com/Created-By/Telegram-Eag1e_YT/refs/heads/main/%40Eag1e_YT
 
 https://raw.githubusercontent.com/DarknessShade/Sub/main/V2mix [[DS?]]
 
@@ -840,6 +969,8 @@ https://raw.githubusercontent.com/AzadNetCH/Clash/refs/heads/main/AzadNet_iOS.tx
 https://raw.githubusercontent.com/Proxydaemitelegram/Proxydaemi44/refs/heads/main/Proxydaemi44 [[PR?]]
 
 https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/refs/heads/master/collected-proxies/xray-json-full/actives_all.json
+
+https://raw.githubusercontent.com/Created-By/Telegram-Eag1e_YT/refs/heads/main/%40Eag1e_YT
 
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub6.txt
 
@@ -1589,6 +1720,40 @@ https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 <br><br/>
 
 ## WIREGUARDS
+
+<br/>
+
+##
+
+> 📦 This configuration is dynamically generated and continuously updated via GitHub Actions every 4 hours to ensure consistency and best practices. <br><br/>
+
+##
+
+### Hiddify URL <img src="edge/assets/Hiddify-icon.png" alt="Hiddify" width="25"/>
+
+```POV-Ray SDL
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
+```
+
+<br/>
+
+### Sing-Box URL <img src="edge/assets/Singbox-icon.svg" alt="Sing-Box" width="20"/>
+
+```Elixir
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
+```
+
+<br/>
+
+### Scan with Hiddify
+
+<p align="center">
+     <img src="edge/assets/QRCode-Dog.png" alt="QR" width="420px">
+     </p>
+
+![rainbow]
+
+<br/> 
 
 ### Warp for [SFA] and [SFI]
 
@@ -2620,10 +2785,10 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 
 [00]: https://t.me/NiREvil_GP/106699
 [10i?]: https://github.com/10ium
-[AG?]: https://github.com/Argh94/V2RayAutoConfig/
+[AG?]: https://github.com/Argh94/V2RayAutoConfig
 [AIM?]: https://telegram.me/s/Azadi_az_inja_migzare
 [ALP?]: https://github.com/ALIILAPRO/v2rayNG-Config
-[ANO?]: https://github.com/4n0nymou3/
+[ANO?]: https://github.com/4n0nymou3
 [AR?]: https://telegram.me/s/arshia_mod_fun
 [AS?]: https://github.com/AvenCores/goida-vpn-configs
 [AZ?]: https://telegram.me/s/AzadNet
@@ -2633,31 +2798,30 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [CW?]: https://github.com/coldwater-10/Vpnclashfa
 [DS?]: https://github.com/Darknessshade
 [DN?]: https://telegram.me/s/DeamNet
-[EB?]: https://github.com/ebrasha/free-v2ray-public-list/
+[EB?]: https://github.com/ebrasha/free-v2ray-public-list
 [EVA?]: https://t.me/evavpn_bot
 [EP?]: https://github.com/Epodonios/v2ray-configs
-[F0?]: https://f0rc3run.github.io/F0rc3Run-panel/
+[F0?]: https://f0rc3run.github.io/F0rc3Run-panel
 [FR?]: https://telegram.me/s/FREE2CONFIG
 [FX?]: https://github.com/Firmfox/Proxify
 [GE?]: https://telegram.me/s/gheychiamoozesh
-[GFW?]: https://github.com/GFW-knocker/
+[GFW?]: https://github.com/GFW-knocker
 [GA?]: https://telegram.me/s/gheychiamoozesh/387
-[GZ?]: https://github.com/valid7996/
-[HK?]: https://github.com/HosseinKoofi/GO_V2rayCollector/
-[HP?]: https://github.com/hamedp-71/
+[GZ?]: https://github.com/valid7996
+[HK?]: https://github.com/HosseinKoofi/GO_V2rayCollector
+[HP?]: https://github.com/hamedp-71
 [HC?]: https://github.com/hamedcod
 [JN?]: https://telegram.me/s/JavidnamanIran
 [KB?]: https://github.com/liketolivefree
 [KV?]: https://telegram.me/s/KevinZakarian
-[L5?]: https://github.com/nscl5/5/
-[LG?]: https://github.com/lagzian/
+[L5?]: https://github.com/nscl5/5
+[LG?]: https://github.com/lagzian
 [LK?]: https://github.com/liketolivefree
 [PA?]: https://github.com/patterniha/Serverless-for-Iran
 [PI?]: https://t.me/firewebgroup
-[PN?]: https://telegram.me/s/xsfilternet
-[MB?]: https://github.com/mahdibland/ShadowsocksAggregator/
+[MB?]: https://github.com/mahdibland/ShadowsocksAggregator
 [ME?]: https://telegram.me/s/FreeVPNHomes/532
-[MG?]: https://github.com/MatinGhanbari/v2ray-configs/
+[MG?]: https://github.com/MatinGhanbari/v2ray-configs
 [MK?]: https://telegram.me/maviks_bot?start=680cff2cb34f9a1f3951470a
 [MS?]: https://github.com/mshojaei77
 [MT?]: https://github.com/MhdiTaheri
@@ -2671,45 +2835,58 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [VZ?]: https://telegram.me/VPNVezdehodBot
 [WE?]: https://telegram.me/s/IranRamona
 [YA?]: https://github.com/youfoundamin/V2rayCollector
+[10ium-Sub]: https://10ium.github.io/free-sub-link
 [Ainita?]: https://ainita.net/vpn.html
 [APN]: https://t.me/F_NiREvil/3554
 [Arshia]: https://telegram.me/s/warpscanner
-[any information]: https://telegram.me/s/F_NiREvil/6292
+[Arshia-Sub]: https://arshiacomplus.github.io/V2rayExtractor-page
+[any-information]: https://telegram.me/s/F_NiREvil/6292
 [Amnezia]: https://github.com/amnezia-vpn/amnezia-client/releases
 [Avast SecureLine]: https://play.google.com/store/apps/details?id=com.avast.android.vpn&pcampaignid=web_share
+[BrowserLeaks]: https://browserleaks.com/ip
 [ClashMeta]: https://github.com/MetaCubeX/ClashMetaForAndroid/releases
 [ClashMI]: https://github.com/KaringX/clashmi/releases
-[checker-3j2.pages.dev]: https://checker-3j2.pages.dev
-[darknessshade.github.io/DNS-Tester]: https://darknessshade.github.io/DNS-Tester/
-[proxy-fetcher.pages.dev]: https://telegram-proxy-fetcher.pages.dev/
+[Checker-3j2.pages.dev]: https://checker-3j2.pages.dev
+[Darkness-Tester]: https://darknessshade.github.io/DNS-Tester
+[Darkness-Sub]: https://darknessshade.github.io/Sub
+[Darkness-Warp]: https://darknessshade.github.io/Hiddify-warp
+[Darkness-Fetcher]: https://telegram-proxy-fetcher.pages.dev
 [Di4Diana]: https://telegram.me/Di4Diana
-[diana-cl.github.io/Diana-Cl]: https://diana-cl.github.io/Diana-Cl/
+[Diana-Cl.github.io]: https://diana-cl.github.io/Diana-Cl
+[Diana-Cl.github.io/Ai]: https://diana-cl.github.io/Diana-Cl/topics/ai
+[DNS SpeedTest]: http://dnsspeedtest.online
 [ESET CODES - VPN, ANTIVIRUS?]: https://telegram.me/F_NiREvil/2113
 [Exclave]: https://github.com/dyhkwong/Exclave/releases
+[F-Secure]: https://my.f-secure.com/embed/register/sodertaljesk
+[F-Secure-Android]: https://play.google.com/store/apps/details?id=com.fsecure.freedome.vpn.security.privacy.android
+[F-Secure-Android2]: https://play.google.com/store/apps/details?id=com.fsecure.ms.safe
+[F-Secure-IOS]: https://apps.apple.com/us/app/f-secure-freedome-vpn/id771791010
+[F-Secure-macOS]: https://www.f-secure.com/en/vpn
+[F-Secure-Windows]: https://www.f-secure.com/en/vpn
 [FiClash]: https://github.com/chen08209/FlClash/releases
-[github.com/NiREvil/windows-activation]: https://github.com/NiREvil/windows-activation/
+[NiREvil-Windows]: https://github.com/NiREvil/windows-activation
 [Happ]: https://play.google.com/store/apps/details?id=com.happproxy
 [Harmony]: https://github.com/NiREvil/Harmony/blob/b923d67dd5702886b0965de86182896373ade4e5/harmony.js#L892
 [Hiddify]: https://github.com/hiddify/hiddify-app/releases
 [Husi]: https://github.com/xchacha20-poly1305/husi/releases
 [iran-core]: https://diana-cl.github.io/Diana-Cl/topics/iran-core
 [IRCF]: https://t.me/ircfspace/1383
-[itsyebekhe.github.io/PSG]: https://itsyebekhe.github.io/PSG/
-[itsyebekhe.github.io/tpro]: https://itsyebekhe.github.io/tpro/
-[itsyebekhe.github.io/warp]: https://itsyebekhe.github.io/warp/
 [Karing]: https://github.com/KaringX/karing/releases
+[MailTM]: https://mail.tm
 [MahsaNG]: https://github.com/mahsanet/MahsaaNG/releases
+[Matin-Ghanbari]: https://matinghanbari.github.io/v2ray-configs/pages/supersub.html
 [Nekobox]: https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
 [Nekoray]: https://github.com/MRT-project/Neko-ray/releases
 [New-Folder]: https://telegram.me/new_folder_revil/3437
 [NikaNG]: https://github.com/mahsanet/NikaNG/releases
 [Outline]: https://getoutline.org/get-started/#step-3
+[OldMan-Sub]: https://smbcryp.github.io/V2V/
 [ProtonVPN]: https://account.protonvpn.com/downloads
 [ProtonGoogle]: https://play.google.com/store/apps/details?id=ch.protonvpn.android
 [ProtonIOS]: https://apps.apple.com/us/app/proton-vpn-fast-secure/id1437005085
 [ProtonToAmnezia]: https://protontestguide.github.io/ProtonVPN-Converter
 [ProxyCloud]: https://github.com/code3-dev/ProxyCloud/releases
-[proxyip.victoriacross.workers.dev]: https://proxyip.victoriacross.workers.dev/
+[ProxyIP.VictoriaCross]: https://proxyip.victoriacross.workers.dev
 [psiphon.ca/download]: https://psiphon.ca/en/download-store.html?psiphonca
 [proxyIP]: https://github.com/NiREvil/vless/blob/main/sub/ProxyIP.md
 [rainbow]: https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256
@@ -2718,17 +2895,23 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [SFI]: https://apps.apple.com/us/app/sing-box/id6451272673
 [Singbox]: https://github.com/SagerNet/sing-box/releases
 [Strawberry.js]: https://github.com/NiREvil/vless/blob/main/edge/strawberry.js
-[Telegram ProxyIPChecker_Bot]: https://telegram.me/ProxyIPChecker_Bot
+[TempMailBot]: https://t.me/TempMail_org_bot
+[ProxyIP Checker Bot]]: https://telegram.me/ProxyIPChecker_Bot
 [The Darkness]: https://telegram.me/s/ConfigWireguard
 [TERMUX]: https://github.com/termux/termux-app/releases
-[UUID]: https://www.uuidgenerator.net/
-[UWG?]: https://telegram.me/UWarpGenBot
+[UUID]: https://www.uuidgenerator.net
 [v2rayNG]: https://github.com/2dust/v2rayng/releases
 [v2rayTun]: https://play.google.com/store/apps/details?id=com.v2raytun.android
 [WgTunnel]: https://github.com/wgtunnel/wgtunnel/releases
-[WIZ]: https://bia-pain-bache.github.io/BPB-Worker-Panel/fa/installation/wizard/
+[WIZ]: https://bia-pain-bache.github.io/BPB-Worker-Panel/fa/installation/wizard
 [WTF?]: https://github.com/NiREvil/vless/blob/main/sub/clash-meta-wg.yml#L40
+[Xpoury4.github.io/AI-Links]: https://xpoury4.github.io/AI-Links
 [YB?]: https://telegram.me/s/YeBeKhe/527
+[YeBeKhe-v2ray]: https://itsyebekhe.github.io/PSG
+[YeBeKhe-T-pro]: https://itsyebekhe.github.io/tpro
+[YeBeKhe-Warp]: https://itsyebekhe.github.io/warp
+[YeBeKhe-Warp-Bot]]: https://telegram.me/UWarpGenBot
+[Yumiproxy.Vercel.app]: https://yumiproxy.vercel.app
 [Zizifn]: https://github.com/NiREvil/zizifn
 [M1]: https://telegram.me/Di4Diana
 [M2]: https://x.com/bia_pain_bache
@@ -2748,13 +2931,13 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [M16]: https://telegram.me/s/sinavm
 [M17]: https://telegram.me/s/irancpi_vpn
 [M18]: https://telegram.me/s/mahsa_net
-[M19]: https://github.com/GFW-knocker/MahsaNG/releases/
+[M19]: https://github.com/GFW-knocker/MahsaNG/releases
 [M20]: https://play.google.com/store/apps/details?id=com.MahsaNet.MahsaNG
 [M21]: https://github.com/NiREvil/vless?tab=readme-ov-file#Xray
 [M22]: https://telegram.me/F_NiREvil/6672
 [M23]: https://telegram.me/+YIlqV-fl9y4zMmRk
 [M24]: https://telegram.me/s/v2FreeHub
-[MMarkPash]: https://twitter.com/markpash/
+[MMarkPash]: https://twitter.com/markpash
 [WarpAndroid]: https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone
 [WarpIOS]: https://itunes.apple.com/us/app/1-1-1-1-faster-internet/id1423538627
 [WIKI]: https://github.com/NiREvil/vless/wiki
