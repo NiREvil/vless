@@ -1899,7 +1899,7 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 | **MahsaNG**           | **🎁 codes**                     |
 | --------------------- | -------------------------------- |
 | [Bia pain bache][M2]  | <pre><code>b64ba903</code></pre> |
-| [MarkPash]           | <pre><code>29b5a39f</code></pre> |
+| [MarkPash]            | <pre><code>29b5a39f</code></pre> |
 | [VPN Homes][M3]       | <pre><code>93a2251d</code></pre> |
 | [IRGFW][M4]           | <pre><code>2fc077ba</code></pre> |
 | [Amin anvari][M5]     | <pre><code>6ec95cf7</code></pre> |
@@ -2945,4 +2945,3 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [M22]: https://telegram.me/F_NiREvil/6672
 [M23]: https://telegram.me/+YIlqV-fl9y4zMmRk
 [M24]: https://telegram.me/s/v2FreeHub
-
