@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="180x" </p>
+<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="140x" </p>
 
 <br><br/>
 
@@ -180,7 +180,7 @@
 > <img src="https://github.com/user-attachments/assets/85fe2b23-fd65-4f47-adc3-b306aac0c380" alt="F-Secure-VPN-16" width="360"/>
 >
 > تامام
->
+  > 
 > </details>
 >
 > </details>
@@ -704,12 +704,12 @@
 >
 > | 🌐 Providers          | Links                                                                                                                     |
 > | :-------------------- | :------------------------------------------------------------------------------------------------------------------------ |
-> | 🟦 **Matin Ghanbari** | [•v2ray](Matin-Ghanbary)                                                                                                  |
-> | 🟨 **It's YeBeKhe**   | [•v2ray](YeBeKhe-v2ray) <br/> [•T.Proxies](YeBeKhe-T-pro) <br/> [•warp](YeBeKhe-Warp) <br/> [•warp-bot](YeBeKhe-Warp-Bot) |
-> | 🟩 **The Darkness**   | [•v2ray](Darkness-Sub) <br/> [•warp](Darkness-Warp)                                                                       |
-> | 🟪 **Arshia-ComPlus** | [•v2ray](Arshia-Sub)                                                                                                      |
-> | 🟫 **10ium-Clashf**   | [•v2ray](10ium-Sub)                                                                                                       |
-> | 🟥 **The OldMan**     | [•v2ray](OldMan-Sub)                                                                                                      |
+> | 🟦 **Matin Ghanbari** | [•v2ray][Matin-Ghanbary]                                                                                                  |
+> | 🟨 **It's YeBeKhe**   | [•v2ray][YeBeKhe-v2ray] <br/> [•T.Proxies][YeBeKhe-T-pro] <br/> [•warp][YeBeKhe-Warp] <br/> [•warp-bot][YeBeKhe-Warp-Bot] |
+> | 🟩 **The Darkness**   | [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp]                                                                       |
+> | 🟪 **Arshia-ComPlus** | [•v2ray][Arshia-Sub]                                                                                                      |
+> | 🟫 **10ium-Clashf**   | [•v2ray][10ium-Sub]                                                                                                       |
+> | 🟥 **The OldMan**     | [•v2ray][OldMan-Sub]                                                                                                      |
 >
 > ![rainbow]
 >
