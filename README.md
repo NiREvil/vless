@@ -50,7 +50,7 @@
 
 > [!CAUTION]
 >
-> ‏[![MahsaAmini](https://img.shields.io/badge/پیشنهادی-خفن-darkred)](https://t.me/NiREvil_GP)
+> ‏[![MahsaAmini](https://img.shields.io/badge/پیشنهادی-darkred)](https://t.me/NiREvil_GP)
 >
 > <br/>
 >
@@ -704,7 +704,7 @@
 >
 > | 🌐 Providers          | Links                                                                                                                     |
 > | :-------------------- | :------------------------------------------------------------------------------------------------------------------------ |
-> | 🟦 **Matin Ghanbari** | [•v2ray][Matin-Ghanbary]                                                                                                  |
+> | 🟦 **Matin Ghanbari** | [•v2ray][Matin-Ghanbari]                                                                                                  |
 > | 🟨 **It's YeBeKhe**   | [•v2ray][YeBeKhe-v2ray] <br/> [•T.Proxies][YeBeKhe-T-pro] <br/> [•warp][YeBeKhe-Warp] <br/> [•warp-bot][YeBeKhe-Warp-Bot] |
 > | 🟩 **The Darkness**   | [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp]                                                                       |
 > | 🟪 **Arshia-ComPlus** | [•v2ray][Arshia-Sub]                                                                                                      |
