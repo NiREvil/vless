@@ -1,82 +1,129 @@
-<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
-<map>
-    <int name="join_counter" value="1" />
-    <int name="sig_cnt" value="5" />
-    <int name="cat_id" value="0" />
-    <boolean name="first_run_3108" value="true" />
-    <int name="ads_full_proxies" value="0" />
-    <int name="ads_full_profile" value="0" />
-    <int name="ads_full_changes" value="0" />
-    <boolean name="ads_native_chat" value="false" />
-    <boolean name="ads_native_main" value="false" />
-    <boolean name="ads_native_profile" value="false" />
-    <boolean name="mini_alert_show" value="false" />
-    <long name="native_last_requesting" value="1764862966165" />
-    <int name="delay_app_open" value="9999" />
-    <int name="delay_native_req" value="9999" />
-    <int name="delay_full" value="9999" />
-    <int name="delay_native_seen" value="9999" />
-    <string name="url"></string>
-    <string name="remote_lnk">null</string>
-    <boolean name="iranian" value="true" />
-    <boolean name="editor_translator" value="false" />
-    <string name="mono_font_yolu">/data/user/0/ellipi.messengerr/files/rmono.ttf</string>
-    <string name="italic_font_path">/data/user/0/ellipi.messengerr/files/ritalic.ttf</string>
-    <int name="contact_type" value="0" />
-    <int name="medium_font_pos" value="8" />
-    <string name="medium_font_path">/data/user/0/ellipi.messengerr/files/vazir_bold-medium.ttf</string>
-    <boolean name="indonesian" value="false" />
-    <string name="normal_font_path">/data/user/0/ellipi.messengerr/files/vazir.ttf</string>
-    <int name="mono_font_pos" value="5" />
-    <boolean name="malaysian" value="false" />
-    <boolean name="uzbek" value="false" />
-    <int name="italic_font_pos" value="4" />
-    <boolean name="chat_unlocked" value="false" />
-    <boolean name="account_unlocked" value="false" />
-    <int name="normal_font_pos" value="7" />
-    <int name="member_long_touch" value="1" />
-    <boolean name="ios_chat" value="true" />
-    <string name="turbo_check_style">MaxLinesPro</string>
-    <boolean name="enable24HourFormat" value="true" />
-    <boolean name="keep_contacts" value="true" />
-    <boolean name="turbo_face_search" value="false" />
-    <boolean name="exact_count" value="true" />
-    <boolean name="downloads_icon" value="false" />
-    <boolean name="always_expand" value="true" />
-    <boolean name="copy_sender" value="false" />
-    <boolean name="add_to_dm" value="false" />
-    <boolean name="always_expand_bio" value="true" />
-    <boolean name="for_pro" value="true" />
-    <boolean name="bookmark" value="true" />
-    <boolean name="cancel_download_on_closing" value="true" />
-    <boolean name="confirm_join" value="true" />
-    <boolean name="back_basges" value="false" />
-    <boolean name="chatbar" value="true" />
-    <boolean name="confirm_forward" value="false" />
-    <int name="group_avatar_touch" value="3" />
-    <boolean name="bar_centerbtn" value="false" />
-    <boolean name="copy_part" value="false" />
-    <boolean name="hide_camera" value="false" />
-    <boolean name="name_title" value="true" />
-    <boolean name="show_dtm" value="true" />
-    <boolean name="acc_indicator" value="false" />
-    <int name="tabs_style" value="0" />
-    <boolean name="keep_selection" value="true" />
-    <boolean name="fast_edit" value="false" />
-    <boolean name="reactions_on_bottom" value="false" />
-    <boolean name="multi_for" value="true" />
-    <boolean name="auto_pause_video" value="true" />
-    <boolean name="disable_stories" value="false" />
-    <boolean name="sender_as_channel" value="true" />
-    <boolean name="dis_counters" value="false" />
-    <int name="sticker_size1" value="8" />
-    <boolean name="hide_anim_emoji_tabs" value="true" />
-    <int name="contact_avatar_touch" value="3" />
-    <int name="editor_font_size" value="15" />
-    <int name="turbo_bubble_style" value="1" />
-    <boolean name="add_to_save" value="true" />
-    <boolean name="persian_date" value="true" />
-    <boolean name="title_center" value="true" />
-    <boolean name="menu_context_blur" value="true" />
-    <boolean name="keep_opened_chats" value="true" />
-</map>
+{
+    "remote_link": "null",
+
+    "admob_id1": "",
+    "admob_app_open1": "",
+    "admob_interstitial1": "",
+    "admob_native1": "",
+
+    "ads_native_main": "false",
+    "ads_native_chat": "false",
+    "ads_native_profile": "false",
+
+    "ads_full_proxies": "0",
+    "ads_full_changes": "0",
+    "ads_full_profile": "0",
+
+    "delay_app_open": "9999",
+    "delay_native_req": "9999",
+    "delay_native_seen": "9999",
+    "delay_full": "9999",
+
+    "blacklist": "",
+    "force_join": "false",
+    "invisible": "true",
+    "show_deleted": "true",
+    "url": "",
+
+    "xmod": "false",
+    "xmod_c": "0",
+    "xmod_d": "0",
+    "test_number1": "0",
+    "test_number2": "0",
+
+    "iranian": "true",
+    "persian_date": "true",
+    "enable24HourFormat": "true",
+    "mini_alert": "false",
+    "mini_text": "",
+    "mini_link": "https://telegram.me/NiREvil_GP",
+
+    "confirm_video": "true",
+    "confirm_call": "true",
+    "confirm_gcall": "true",
+    "confirm_join": "true",
+    "confirm_audio": "true",
+
+    "avatar_as_drawerbg": "false",
+    "avatar_in_action": "true",
+    "cavatar_in_group": "true",
+    "oavatar_in_chat": "false",
+    "group_avatar_touch": "3",
+    "contact_avatar_touch": "3",
+    
+    "medium_font_pos": "8",
+    "mono_font_pos": "5",
+    "italic_font_pos": "4",
+    "normal_font_pos": "7",
+    "normal_font_path": "/data/user/0/ellipi.messengerr/files/vazir.ttf",
+    "mono_font_path": "/data/user/0/ellipi.messengerr/files/rmono.ttf",
+    "italic_font_path": "/data/user/0/ellipi.messengerr/files/ritalic.ttf",
+    "medium_font_path": "/data/user/0/ellipi.messengerr/files/vazir_bold-medium.ttf",
+
+    "keep_contacts": "true",
+    "hide_contacts_dialogs": "false",
+    "chat_contact_status": "true",
+    "mutual_contact": "true",
+    "contact_type": "0",
+    "contact_changes": "true",
+
+    "tab_title": "true",
+    "title_center": "true",
+    "name_title": "true",
+    "itabs_profile": "false",
+    "exact_count": "true",
+    "preview_sticker": "true",
+    "sticker_size1": "11",
+    "greeting_sticker": "true",
+    "sync_fav_sticker": "true",
+    "hide_anim_emoji_tabs": "true",
+    "always_expand": "true",
+    "always_expand_bio": "true",
+    "member_long_touch": "1",
+    "turbo_check_style": "MaxChecks",
+    "copy_sender": "false",
+    "add_to_dm": "false",
+    "cancel_download_on_closing": "true",
+
+    "show_dtm": "true",
+    "acc_indicator": "false",
+    "cat_id": "0",
+    "disable_stories": "false",
+    "reaction_animation": "true",
+    "reaction_menu": "true",
+    "inf_swipe": "true",
+    "editor_font_size": "15",
+    "menu_context_blur": "true",
+    "abuttons_profile": "true",
+    "swipe_reply": "true",
+    "move_tabs": "true",
+    "delete_animation": "true",
+    "start_main_camera": "true",
+    "editor_translator": "true",
+    "only_unmuted": "true",
+    "turbo_face_search": "false",
+    "reply_vibration": "true",
+    "for_pro": "true",
+    "bookmark": "true",
+    "inapp_player": "true",
+    "direct_forward_tabs": "true",
+    "copy_part": "false",
+    "preview_gif": "true",
+    "keep_selection": "true",
+    "jump_to_channel": "true",
+    "multi_for": "true",
+    "auto_pause_video": "true",
+    "sender_as_channel": "true",
+    "add_to_save": "true",
+    "swipe_voice": "true",
+    "indonesian": "false",
+    "malaysian": "false",
+    "uzbek": "false",
+    "account_unlocked": "false",
+    "tag_editor": "true",
+    "chatbar": "true",
+    "ios_chat": "true",
+    "chat_unlocked": "false",
+    "keep_chat_open": "true",
+    "keep_opened_chats": "true"
+}
