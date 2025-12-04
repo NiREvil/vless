@@ -13,7 +13,7 @@ use colored::*;
 use futures::StreamExt;
 use reqwest::Client;
 
-const DEFAULT_PROXY_FILE: &str = "edge/assets/p-list-november.txt";
+const DEFAULT_PROXY_FILE: &str = "edge/assets/p-list-december.txt";
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
 const DEFAULT_MAX_CONCURRENT: usize = 60;
 const DEFAULT_TIMEOUT_SECONDS: u64 = 6;
@@ -22,11 +22,11 @@ const REQUEST_DELAY_MS: u64 = 40;
 const GOOD_ISPS: &[&str] = &[
     "M247","Vultr","GCore","IONOS","Google","Amazon","NetLab","Akamai","Turunc","Contabo",
     "UpCloud","Tencent","Hetzner","Multacom","HostPapa","Ultahost","DataCamp","Bluehost",
-    "Scaleway","DO Space","Leaseweb","Hostinger","Hypercore","ByteDance","RackSpace",
+    "Scaleway","DO Space","Leaseweb","Hostinger","netcup GmbH","Protilab","ByteDance","RackSpace",
     "SiteGround","Online Ltd","The Empire","Cloudflare","Relink LTD","PQ Hosting","Gigahost AS",
     "White Label","G-Core Labs","3HCLOUD LLC","HOSTKEY B.V","DigitalOcean","3NT SOLUTION",
     "Zenlayer Inc","RackNerd LLC","Plant Holding","WorkTitans","IROKO Networks","WorldStream",
-    "Cluster Logic Inc","The Constant Company","Cogent Communications","Metropolis networks inc",
+    "Cluster","The Constant Company","Cogent Communications","Metropolis networks inc",
     "Total Uptime Technologies",
 ];
 
@@ -232,7 +232,7 @@ fn write_markdown_file(proxies_by_country: &BTreeMap<String, Vec<(ProxyInfo, u12
     writeln!(
         file,
         r##"<p align="left">
- <img src="https://latex.codecogs.com/svg.image?\huge&space;{{\color{{Golden}}\mathrm{{PR{{\color{{black}}\O}}XY\;IP}}" width=240px" </p><br/>
+ <img src="https://latex.codecogs.com/svg.image?\huge&space;{{\color{{Golden}}\mathrm{{PR{{\color{{black}}\O}}XY\;IP}}" width=220px" </p><br/>
 
 > [!WARNING]
 >
