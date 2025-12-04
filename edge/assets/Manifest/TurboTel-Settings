@@ -1,34 +1,49 @@
 <?xml version='1.0' encoding='utf-8' standalone='yes' ?>
 <map>
+    <int name="join_counter" value="1" />
+    <int name="sig_cnt" value="5" />
+    <int name="cat_id" value="0" />
+    <boolean name="first_run_3108" value="true" />
     <int name="ads_full_proxies" value="0" />
-    <boolean name="iranian" value="true" />
-    <int name="join_counter" value="4" />
-    <long name="native_last_requesting" value="1764867334442" />
-    <boolean name="start_main_camera" value="true" />
-    <boolean name="keep_contacts" value="true" />
-    <boolean name="hide_round_avatar" value="false" />
-    <boolean name="editor_translator" value="false" />
-    <string name="mono_font_path">/data/user/0/ellipi.messengerr/files/rmono.ttf</string>
-    <int name="sig_cnt" value="7" />
-    <boolean name="turbo_face_search" value="false" />
-    <boolean name="exact_count" value="true" />
-    <int name="delay_native_req" value="9999" />
-    <boolean name="downloads_icon" value="false" />
-    <string name="italic_font_path">/data/user/0/ellipi.messengerr/files/ritalic.ttf</string>
-    <boolean name="turbo_face" value="false" />
-    <int name="medium_font_pos" value="8" />
+    <int name="ads_full_profile" value="0" />
+    <int name="ads_full_changes" value="0" />
     <boolean name="ads_native_chat" value="false" />
-    <boolean name="always_expand" value="true" />
+    <boolean name="ads_native_main" value="false" />
+    <boolean name="ads_native_profile" value="false" />
+    <boolean name="mini_alert_show" value="false" />
+    <long name="native_last_requesting" value="1764862966165" />
+    <int name="delay_app_open" value="9999" />
+    <int name="delay_native_req" value="9999" />
     <int name="delay_full" value="9999" />
+    <int name="delay_native_seen" value="9999" />
+    <string name="url"></string>
+    <string name="remote_lnk">null</string>
+    <boolean name="iranian" value="true" />
+    <boolean name="editor_translator" value="false" />
+    <string name="mono_font_yolu">/data/user/0/ellipi.messengerr/files/rmono.ttf</string>
+    <string name="italic_font_path">/data/user/0/ellipi.messengerr/files/ritalic.ttf</string>
+    <int name="contact_type" value="0" />
+    <int name="medium_font_pos" value="8" />
+    <string name="medium_font_path">/data/user/0/ellipi.messengerr/files/vazir_bold-medium.ttf</string>
+    <boolean name="indonesian" value="false" />
+    <string name="normal_font_path">/data/user/0/ellipi.messengerr/files/vazir.ttf</string>
+    <int name="mono_font_pos" value="5" />
+    <boolean name="malaysian" value="false" />
+    <boolean name="uzbek" value="false" />
+    <int name="italic_font_pos" value="4" />
+    <boolean name="chat_unlocked" value="false" />
+    <boolean name="account_unlocked" value="false" />
+    <int name="normal_font_pos" value="7" />
     <int name="member_long_touch" value="1" />
     <boolean name="ios_chat" value="true" />
     <string name="turbo_check_style">MaxLinesPro</string>
     <boolean name="enable24HourFormat" value="true" />
-    <boolean name="avatar_as_drawerbg" value="false" />
-    <string name="normal_font_path">/data/user/0/ellipi.messengerr/files/vazir.ttf</string>
-    <string name="remote_lnk">null</string>
+    <boolean name="keep_contacts" value="true" />
+    <boolean name="turbo_face_search" value="false" />
+    <boolean name="exact_count" value="true" />
+    <boolean name="downloads_icon" value="false" />
+    <boolean name="always_expand" value="true" />
     <boolean name="copy_sender" value="false" />
-    <int name="ads_full_profile" value="0" />
     <boolean name="add_to_dm" value="false" />
     <boolean name="always_expand_bio" value="true" />
     <boolean name="for_pro" value="true" />
@@ -37,51 +52,31 @@
     <boolean name="confirm_join" value="true" />
     <boolean name="back_basges" value="false" />
     <boolean name="chatbar" value="true" />
-    <boolean name="mini_alert_show" value="false" />
     <boolean name="confirm_forward" value="false" />
     <int name="group_avatar_touch" value="3" />
-    <boolean name="ads_native_main" value="false" />
     <boolean name="bar_centerbtn" value="false" />
-    <boolean name="ads_native_profile" value="false" />
-    <int name="ads_full_changes" value="0" />
     <boolean name="copy_part" value="false" />
     <boolean name="hide_camera" value="false" />
     <boolean name="name_title" value="true" />
-    <int name="delay_app_open" value="9999" />
     <boolean name="show_dtm" value="true" />
     <boolean name="acc_indicator" value="false" />
-    <boolean name="gif_autod_profile" value="false" />
     <int name="tabs_style" value="0" />
     <boolean name="keep_selection" value="true" />
     <boolean name="fast_edit" value="false" />
     <boolean name="reactions_on_bottom" value="false" />
     <boolean name="multi_for" value="true" />
-    <string name="medium_font_path">/data/user/0/ellipi.messengerr/files/vazir_bold-medium.ttf</string>
-    <int name="cat_id" value="0" />
     <boolean name="auto_pause_video" value="true" />
-    <int name="delay_native_seen" value="9999" />
     <boolean name="disable_stories" value="false" />
     <boolean name="sender_as_channel" value="true" />
-    <boolean name="indonesian" value="false" />
     <boolean name="dis_counters" value="false" />
-    <int name="mono_font_pos" value="5" />
     <int name="sticker_size1" value="8" />
-    <boolean name="malaysian" value="false" />
-    <boolean name="uzbek" value="false" />
     <boolean name="hide_anim_emoji_tabs" value="true" />
-    <int name="italic_font_pos" value="4" />
-    <boolean name="first_run_3108" value="true" />
-    <string name="url"></string>
     <int name="contact_avatar_touch" value="3" />
-    <boolean name="deface_phone_number" value="true" />
     <int name="editor_font_size" value="15" />
-    <boolean name="chat_unlocked" value="false" />
     <int name="turbo_bubble_style" value="1" />
     <boolean name="add_to_save" value="true" />
     <boolean name="persian_date" value="true" />
-    <boolean name="account_unlocked" value="false" />
     <boolean name="title_center" value="true" />
     <boolean name="menu_context_blur" value="true" />
-    <int name="normal_font_pos" value="7" />
     <boolean name="keep_opened_chats" value="true" />
 </map>
