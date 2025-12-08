@@ -18,7 +18,7 @@
 > <details>
 > <summary> مشاهده لینک‌ها</summary><br/>
 >
-> **Warp for Clash-Meta:**
+> **Warp for Clash Meta:**
 >
 > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml
 >
@@ -38,7 +38,7 @@
 >
 > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/nekobox-wg.txt
 >
-> **Warp for v2rayNG, MahsaNG:**
+> **Warp for v2ray/MahsaNG:**
 >
 > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/v2rayng-wg.txt
 >
@@ -60,9 +60,9 @@
 > اکانت 91 روزه وی‌پی‌ان F-Secure Freedom  
 > یکی از قدیمی‌ترین سرویس‌های دنیا. اکانت با ارزشی داره خیلی ✋🏿
 >
-> فقط با آی‌پی سوئد می‌شه از این آفر استفاده کرد و اکانت ساخت، من با سوئد AVAST VPN انجام دادم به راحتی، و دومین بار با آی‌پی سوئد همین وی‌پی‌ان ساختم داخل تلگرام.
+> فقط با آی‌پی سوئد می‌شه از این آفر استفاده کرد و اکانت ساخت، من با سوئد [AVAST VPN][New-Folder] انجام دادم به راحتی، و دومین بار با آی‌پی سوئد همین وی‌پی‌ان ساختم داخل تلگرام.
 >
-> یه ایمیل فیک نیاز داری، از هر سایت و سرویسی که دلت میخواد استفاده کن، دوتا برای نمونه میذارم:
+> یه ایمیل فیک نیاز داری، از هر سایت و سرویسی که دلت می‌خواد استفاده کن، من دوتا برای نمونه میذارم:
 >
 > سایت:  
 > [mail.tm][MailTM]
@@ -75,7 +75,7 @@
 > این لینک‌رو باز کن و ثبت‌نام رو انجام بده:  
 > [F-Secure—Freedom VPN][F-Secure]
 >
-> اسم و ایمیل و پسوورد تعیین کن و دوتا تیک پایین هم بزن بره. (ایمیل و پسووردی که تعیین کردی رو جایی یادداشت کن، مثلا بفرست سیو مسیج تلگرامت).
+> اسم و ایمیل و پسوورد تعیین کن و دوتا تیک پایین صفحه رو بزن بره. (ایمیل و پسووردی که تعیین کردی رو جایی یادداشت کن، مثلا بفرست سیو مسیج تلگرامت).
 >
 > اگه با موفقیت انجام بشه پایینش می‌نویسه:
 >
@@ -91,17 +91,17 @@
 > BNAUH-EFCTO-EQOCZ-RXHES
 > ```
 >
-> و continue رو برن بره. اگه بعد چند ثانیه نوشت:
+> و بعدش continue رو برن بره. اگه بعد چند ثانیه نوشت:
 >
 > - Your subscription code is valid
 >
 > یعنی اوکیه و بزن بره مرحله بعدی، اگه هرچی غیر از این نوشته بود یعنی آی‌پی سوئدت کیکه و واقعی نیست. می‌تونی از [اینجا چک کنی لوکیشنت رو][BrowserLeaks] ببینی واقعا سوئد هست یانه.
 >
-> حالا می‌تونی از منوی بالا Log out کنی‌ یا همینجوری عادی ببندی صفحه رو و برگردی سمت سایت یا رباتی که ازش ایمیل گرفتیم چون ایمیلی که فرستادن رو باید وریفای کنیم.
+> حالا می‌تونی از منوی بالا Log out کنی‌ یا همین‌جوری عادی ببندی صفحه رو و برگردی سمت سایت یا رباتی که ازش ایمیل گرفتیم چون ایمیلی که فرستادن رو باید وریفای کنیم.
 >
 > <br/>
 >
-> روی آخرین ایمیلی اومده بزن و صبر کن، سایت ایمیل موقت که بالا اومد برو تا پایین صفحه تا محتوای صندوق ورودی رو ببینی، اون ایمیلی که روش اینجوری نوشته رو بازش کن:
+> روی آخرین ایمیلی که اومده بزن و صبر کن، سایت ایمیل موقت که بالا اومد برو تا پایین صفحه تا محتوای صندوق ورودی رو ببینی، اون ایمیلی که روش اینجوری نوشته رو بازش کن:
 >
 > - Active your F Secure VPN account
 >
@@ -109,7 +109,7 @@
 >
 > <br/>
 >
-> **و حالا نصب اپلیکیشن.**  
+> **و حالا نصب اپلیکیشن**  
 > نسخه مناسب دستگاه خودت رو نصب کن:
 >
 > - [ANDROID][F-Secure-Android]
@@ -119,7 +119,7 @@
 >
 > پس از نصب و اجرای برنامه، روی گزینه login کلیک کرده و در قسمت Select account گزینه اول یعنی **F-Secure** رو انتخاب می‌کنی، با ایمیل و پسووردی که ثبت‌نام رو انجام دادی وارد شو، یه اسم الکی واسه دستگاه تعیین کن، تو صفحه بعدی تیک رو بزن تا قوانین تایید شن و اکسپت.
 >
-> حالا برنامه رو یه بار ببند (چون لاگین مجدد نشونت میده در حالی که انجام دادی قبلا) ببند برنامه رو بعد از اول وارد شو تا مستقیم بره صفحه اصلی، اگه پاپ‌آپ نشون داد تایید کن، مثل همه ‌VPNها باید دسترسی به اینترنت داشته باشه، هیچ تنظیماتی براش نیاز نیست فقط بزن رو دکمه وسط کانکت شه یا لوکیشن انتخاب کن و بعد بزنید کانکت شه. لوکیشن پیشنهادی: آلمان.
+> حالا برنامه رو یه بار ببند (چون لاگین مجدد نشونت میده در حالی که انجام دادی قبلا) ببند برنامه رو بعد از اول وارد شو تا مستقیم بره صفحه اصلی، اگه پاپ‌آپ نشون داد تایید کن، مثل همه ‌VPNها باید دسترسی به اینترنت داشته باشه، هیچ تنظیماتی براش نیاز نیست فقط بزن رو دکمه وسط کانکت شه یا لوکیشن انتخاب کن و بعد بزنید کانکت شه. لوکیشن پیشنهادی: آلمان، ایتالیا، اتریش، انگلیس، چک و ...
 >
 > من از منوی سمت چپ از داخل تنظیمات تیک گزینه‌‌های:
 >
@@ -128,7 +128,8 @@
 >
 > رو برداشتم که وقتی نت قطع میشه نت رو بلاک نکنه واسه بقیه برنامه‌ها و دومین تیک هم که واسه گزارش عملکرد برنامه به توسعه‌دهنده‌ برنامه‌ است که ~~کون لقش~~ نمی‌خوام گزارشی براش ارسال بشه.‌
 >
-> ❕ **هر اکانت فقط برای پنج دستگاه همزمان قابل استفاده است به مدت ۹۱ روز.**
+> ❕ **هر اکانت فقط برای پنج دستگاه همزمان قابل استفاده است به مدت ۹۱ روز.**  
+>  
 > می‌تونید هرچندتا اکانت خواستید بسازید ولی اگه واقعا نیاز نداشتید این‌کارو نکنید که آفر ~~جنده~~ نشه!!
 >
 > <br/>
@@ -192,7 +193,7 @@
 > <summary>❗ توضیحات مربوط به Avast VPN </summary><br/>   
 >  
 > چند روزه وی‌پی‌ان [Avast SecureLine] خیلی خوب کار می‌کنه با اکثر نت ها مخصوصا همراه اول و ایرانسل و شاتل و مخابرات، تنها کاری که باید کرد اینه که پروتکل رو بذاریم روی Mimic و انتخاب سرور هم اتومات بمونه یا یکی از سرورهای آمریکا، آلمان، انگلیس، هلند، ترکیه و ...  
-> مسائل مربوط به لایسنس و فایل نصبی و غیره رو از [[انباری][New-Folder]] دنبال کنید.
+> مسائل مربوط به لایسنس و فایل نصبی و غیره رو از [انباری][New-Folder] دنبال کنید.
 >
 > </details>
 >
@@ -561,11 +562,11 @@
 
 ### Clients
 
-- تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، هیدیفای، نکوباکس، کلش‌متا، آمنزیا، آوت‌لاین، نیکا، مهسا، ویتوری‌ ان‌جی، نکوری و ...
+- تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، هیدیفای، نکوباکس، کلش‌متا، آمنزیا، آوت‌لاین، مهسا، ویتوری‌ و ...
 
 </div>
 
-- Some subscription links are available for [v2rayNG], [Singbox], [Hiddify], [MahsaNG], [NikaNG], [NekoBox], [Exclave], [Karing], [Husi], [Amnezia], [WgTunnel], [ProxyCloud], [ZedSecure], [ClashMeta], [FiClash], [ClashMI], [Nekoray], [Outline], [Happ], [v2rayTun] and other clients.
+- Some subscription links are available for [v2rayNG], [Singbox], [Hiddify], [MahsaNG], [NikaNG], [NekoBox], [Exclave], [Karing], [Husi], [Amnezia], [WgTunnel], [ProxyCloud], [ZedSecure], [ClashMeta], [FiClash], [ClashMI], [Nekoray], [Outline], [v2rayTun] and other clients.
 
 - **Несколько ссылок для подписки на** v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Outline, Clash-Meta и ... Вернуть результат только
 
@@ -579,13 +580,13 @@
 > سلام، امیدوارم حالتون عالی باشه 🌸
 >
 > این مخزن در ابتدای شروع کار خودش جایی بود برای نوشتن ایده‌ها مربوط به کانفیگ‌های کاستوم علی الخصوص کانفیگ‌های وایرگارد برای کلاینت‌هایی مثل هیدیفای و ویتوری و غیره، کانفیگ‌های کاستوم شده با تکنیک فرگمنت حالت‌های متغیر و ترکیب کانفیگ‌های پروتون و نورد و وارپ و اینا با همدیگه داخل مخزن قرار می‌گرفت تا بقیه از از اونا ایده بگیرن و نسخه شخصی خودشون رو بسازن.  
-> ولی به مرور زمان ناخوداگاه علاوه‌بر اون‌ها تبدیل شد به یک مخزن از لینک‌‌های ساب‌‌اسکریپشن‌های عمومی و یه سری ابزار‌هایی که روتین واسه خیلی‌ها لازمه مثل اسکنر و تستر های پروکسی آی‌پی برای استفاده داخل وورکرها به تفکیک کشور‌های مختلف و آی‌پی تمیزهای کلادفلر واسه پنل‌هایی مثل BPB و کد وورکر شخصی zizifn و هارمونی، ابزارهای ساخت DNS و جنریت اتومات وارپ و کلش و این‌جور چیز‌ها.
+> ولی به مرور زمان ناخوداگاه علاوه‌بر اون‌ها تبدیل شد به یک مخزن از لینک‌‌های ساب‌‌اسکریپشن‌های عمومی و یه سری ابزار‌هایی که روتین واسه خیلی‌ها لازمه مثل اسکنر و پروکسی آی‌پی تستر‌های مختلف برای استفاده داخل وورکرها به تفکیک کشور‌های مختلف و آی‌پی تمیزهای کلادفلر واسه پنل‌هایی مثل BPB و وورکر zizifn و هارمونی، ابزارهای ساخت DNS و جنریت اتومات وارپ و کلش و این‌جور چیز‌ها.
 >
-> اگه تازه با ما آشنا شدی پیشنهاد می‌کنم سمت مسیر /assets نری چون پر از خرت و پرت‌هایی هست که به درد هیچکس نمی‌خوره، تو مخزن prettier و linter اجرا شده واسه‌ی همین اگه جای دیگه هم کدی نوشته باشیم آخرسر اینجا آپلودش می‌کنیم که فرمتش کنه و کارای خوشگلاسیشون رو انجام بده و عیب‌و ایرادش رو بگه، برای همینه که می‌گم به چشم انباری باید بهش نگاه کرد پر از چیز‌های بی مصرف. اکثر چیزای بدرد بخور برای عموم داخل root یا مسیر sub هستن.
+> اگه تازه با ما آشنا شدی پیشنهاد می‌کنم سمت مسیر /assets نری چون پر از خرت و پرت‌هایی هست که به درد هیچ‌کس نمی‌خورن، تو مخزن prettier و linter اجرا شده واسه‌ی همین اگه جای دیگه هم کدی نوشته باشیم آخرسر اینجا آپلودش می‌کنیم که فرمتش کنه و کارای خوشگلاسیشون رو انجام بده و عیب‌و ایرادش رو بگه، برای همینه که می‌گم به چشم انباری باید بهش نگاه کرد پر از چیز‌های بی مصرف. اکثر چیزای بدرد بخور برای عموم داخل root یا مسیر sub هستن.
 >
 > لینک‌های [Singbox](#warp-for-sfa-and-sfi) عموما شامل ساب‌های مورد علاقه‌ی خودمون هستن. همچنین کانفیگ‌های [Amnezia](#amnezia) کلاینت بی دردسر و ساده ولی خفن و با ابهت، تا حد امکان سورس‌ لینک‌هارو مقابلشون با علامت `[?Who]` مشخص کردم.
 >
-> اگر لینک شما هم اونجا بود و مایل نبودید منتشر بشه، کافیه بگید؛ با عرض شرمندگی و در کمال احترام بلافاصله حذفش می‌کنم.
+> اگر لینک شما هم اونجا بود و مایل نبودید منتشر بشه، کافیه بگید؛ با شرمندگی در کمال احترام بلافاصله حذفش کنم.
 >
 > اگر منبع هرکدوم از لینک‌ها رو می‌دونید، لطفا اطلاع بدید تا اضافه کنم.
 >
@@ -593,7 +594,7 @@
 >
 > متأسفانه از مرداد ماه سال 1403 نیما دیگه بین ما نیست، و من به همراه چند دوست دیگه در حد توان این اکانت گیت‌هاب رو هندل می‌کنیم.
 >
-> - به امید آزادی 🤍
+> - به امید روز‌های خوب 🩶  
 > - تلگرام من: [[Di4Diana]]
 >
 > </details>
@@ -618,15 +619,40 @@
 - [Cloudflare IP's](#cloudflare-ips)
   - [Daily Scanned CF IP's](#all-ips)
   - [Daily Scanned Proxy IP's](./sub/ProxyIP.md#daily-scanned-proxies)
-  - [IP ranges by Country](./edge/assets/Cloudflare_IP_ranges_by_country.md)
   - [Warp Endpoints](#warp-endpoints)
-- [Clients](#clients)
 - [Some Sheets](#regardless-of-anything-else)
 - [Subscription Panel Collection](#free-subscription-panel-collection)
 
 ![rainbow]
 
 <br/>
+
+## Free Subscription Panel Collection
+
+> [!NOTE]
+>
+> No Bullshit, Just Links (Updated Hourly)
+>
+> <br/>
+> 
+> | 🌐 Providers       | 🔗 Links                                                                                                                     |
+> | :-------------------- | :------------------------------------------------------------------------------------------------------------------------ |
+> | ⬜ **Matin Ghanbari** | [•v2ray][Matin-Ghanbari]                                                                                                  |
+> | ⬛ **F0rc3Run**       | [•v2ray][F0rc3Run]                                                                                                        |
+> | 🟫 **AFR Cloud**      | [•v2ray][AFRCloud]                                                                                                        |
+> | 🟪 **ShatakVPN**      | [•v2ray][ShatakVPN]                                                                                                       |
+> | 🟧 **Xray v2Key**     | [•v2ray][Xray-v2Key]                                                                                                      |
+> | 🟦 **It's YeBeKhe**   | [•v2ray][YeBeKhe-v2ray] <br/> [•T.proxies][YeBeKhe-T-pro] <br/> [•warp][YeBeKhe-Warp] <br/> [•warp-bot][YeBeKhe-Warp-Bot] |
+> | 🟩 **The Darkness**   | [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp]                                                                       |
+> | 🟨 **Arshia-ComPlus** | [•v2ray][Arshia-Sub]                                                                                                      |
+> | 🟧 **10ium-Clashf**   | [•v2ray][10ium-Sub]                                                                                                       |
+> | 🟥 **The OldMan**     | [•v2ray][OldMan-Sub]                                                                                                      |
+>
+> ![rainbow]
+>
+> <br/>
+
+<br><br/>
 
 ##
 
@@ -697,27 +723,6 @@
 
 <br/>
 
-## Free Subscription Panel Collection
-
-> [!NOTE]
->
-> No Bullshit, Just Links (Updated Hourly)
->
-> | 🌐 Providers          | Links                                                                                                                     |
-> | :-------------------- | :------------------------------------------------------------------------------------------------------------------------ |
-> | 🟦 **Matin Ghanbari** | [•v2ray][Matin-Ghanbari]                                                                                                  |
-> | 🟨 **It's YeBeKhe**   | [•v2ray][YeBeKhe-v2ray] <br/> [•T.Proxies][YeBeKhe-T-pro] <br/> [•warp][YeBeKhe-Warp] <br/> [•warp-bot][YeBeKhe-Warp-Bot] |
-> | 🟩 **The Darkness**   | [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp]                                                                       |
-> | 🟪 **Arshia-ComPlus** | [•v2ray][Arshia-Sub]                                                                                                      |
-> | 🟫 **10ium-Clashf**   | [•v2ray][10ium-Sub]                                                                                                       |
-> | 🟥 **The OldMan**     | [•v2ray][OldMan-Sub]                                                                                                      |
->
-> ![rainbow]
->
-> <br/>
-
-<br><br/>
-
 ## XRAY
 
 > [!NOTE]
@@ -736,7 +741,9 @@ https://vpny.online/VPNy.json [[KV?]]
 
 https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/1.txt [[AS?]]
 
-https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/10.txt
+https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/4.txt
+
+https://raw.githubusercontent.com/STR97/STRUGOV/refs/heads/main/STR.BYPASS
 
 https://raw.githubusercontent.com/Danialsamadi/v2go/refs/heads/main/AllConfigsSub.txt
 
@@ -788,8 +795,6 @@ https://v2.alicivil.workers.dev [[GE?]]
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity [[MB?]]
 
-https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir
-
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/trojan.txt
 
 https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/refs/heads/main/Best-Results/proxies.txt [[F0?]]
@@ -822,6 +827,8 @@ https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/v
 
 https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/Protocols/vmess.txt
 
+https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/Protocols/ss.txt
+
 https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/Protocols/vless.txt
 
 https://raw.githubusercontent.com/Mahdi0024/ProxyCollector/master/sub/proxies.txt
@@ -830,7 +837,7 @@ https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/HighSpeed.tx
 
 https://github.com/4n0nymou3/multi-proxy-config-fetcher/raw/refs/heads/main/configs/proxy_configs.txt
 
-https://sub.amiralter.com/config-lite
+https://sub.amiralter.com/config-lite [[AL?]
 
 https://sub.amiralter.com/config
 
@@ -2792,6 +2799,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [AG?]: https://github.com/Argh94/V2RayAutoConfig
 [AIM?]: https://telegram.me/s/Azadi_az_inja_migzare
 [ALP?]: https://github.com/ALIILAPRO/v2rayNG-Config
+[AL?]: https://telegram.me/Amir_Alternative_Official/592
 [ANO?]: https://github.com/4n0nymou3
 [AR?]: https://telegram.me/s/arshia_mod_fun
 [AS?]: https://github.com/AvenCores/goida-vpn-configs
@@ -2841,6 +2849,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [YA?]: https://github.com/youfoundamin/V2rayCollector
 [10ium-Sub]: https://10ium.github.io/free-sub-link
 [Ainita?]: https://ainita.net/vpn.html
+[AFRCloud]: https://www.afrcloud.site
 [APN]: https://t.me/F_NiREvil/3554
 [Arshia]: https://telegram.me/s/warpscanner
 [Arshia-Sub]: https://arshiacomplus.github.io/V2rayExtractor-page
@@ -2861,6 +2870,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [DNS SpeedTest]: http://dnsspeedtest.online
 [ESET CODES - VPN, ANTIVIRUS?]: https://telegram.me/F_NiREvil/2113
 [Exclave]: https://github.com/dyhkwong/Exclave/releases
+[F0rc3Run]: https://f0rc3run.github.io/F0rc3Run-panel
 [F-Secure]: https://my.f-secure.com/embed/register/sodertaljesk
 [F-Secure-Android]: https://play.google.com/store/apps/details?id=com.fsecure.freedome.vpn.security.privacy.android
 [F-Secure-Android2]: https://play.google.com/store/apps/details?id=com.fsecure.ms.safe
@@ -2869,7 +2879,6 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [F-Secure-Windows]: https://www.f-secure.com/en/vpn
 [FiClash]: https://github.com/chen08209/FlClash/releases
 [NiREvil-Windows]: https://github.com/NiREvil/windows-activation
-[Happ]: https://play.google.com/store/apps/details?id=com.happproxy
 [Harmony]: https://github.com/NiREvil/Harmony/blob/b923d67dd5702886b0965de86182896373ade4e5/harmony.js#L892
 [Hiddify]: https://github.com/hiddify/hiddify-app/releases
 [Husi]: https://github.com/xchacha20-poly1305/husi/releases
@@ -2898,6 +2907,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Real Fake Address Gen]: https://github.com/NiREvil/vless/tree/main/real%20address%20generator
 [SFA]: https://github.com/SagerNet/sing-box/releases
 [SFI]: https://apps.apple.com/us/app/sing-box/id6451272673
+[ShatakVPN]: https://shatakvpn.github.io/ConfigForge-V2Ray
 [Singbox]: https://github.com/SagerNet/sing-box/releases
 [Strawberry.js]: https://github.com/NiREvil/vless/blob/main/edge/strawberry.js
 [TempMailBot]: https://t.me/TempMail_org_bot
@@ -2910,17 +2920,19 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [WarpAndroid]: https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone
 [WarpIOS]: https://itunes.apple.com/us/app/1-1-1-1-faster-internet/id1423538627
 [WIKI]: https://github.com/NiREvil/vless/wiki
-[ZeroTrust]: https://t.me/F_NiREvil/4985
 [WgTunnel]: https://github.com/wgtunnel/wgtunnel/releases
 [WIZ]: https://bia-pain-bache.github.io/BPB-Worker-Panel/fa/installation/wizard
 [WTF?]: https://github.com/NiREvil/vless/blob/main/sub/clash-meta-wg.yml#L40
 [Xpoury4.github.io/AI-Links]: https://xpoury4.github.io/AI-Links
+[Xray-v2Key]: https://xray.v2key.web.id
 [YB?]: https://telegram.me/s/YeBeKhe/527
 [YeBeKhe-v2ray]: https://itsyebekhe.github.io/PSG
 [YeBeKhe-T-pro]: https://itsyebekhe.github.io/tpro
 [YeBeKhe-Warp]: https://itsyebekhe.github.io/warp
 [YeBeKhe-Warp-Bot]: https://telegram.me/UWarpGenBot
 [YumProxy.Vercel]: https://yumiproxy.vercel.app
+[ZedSecure]: https://github.com/CluvexStudio/ZedSecure/releases
+[ZeroTrust]: https://t.me/F_NiREvil/4985
 [Zizifn]: https://github.com/NiREvil/zizifn
 [M1]: https://telegram.me/Di4Diana
 [M2]: https://x.com/bia_pain_bache
