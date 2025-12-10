@@ -49,8 +49,8 @@ struct Args {
 
 #[derive(Debug, Clone, Deserialize)]
 struct CfMeta {
-    #[serde(rename = "clientIp")]
-    client_ip: String,
+    #[serde(rename = "clientIp", alias = "ip")]
+    client_ip: Option<String>,
 
     #[serde(rename = "asOrganization")]
     as_organization: Option<String>,
@@ -96,15 +96,24 @@ async fn main() -> Result<()> {
         .collect();
     println!("Filtered to {} good proxies (port 443 + ISP whitelist)", proxies.len());
 
-    let self_meta = fetch_cf_meta(None).await?;
-    println!("Your real IP: {}", self_meta.client_ip);
+    let self_ip = match fetch_cf_meta(None).await {
+        Ok(meta) => {
+            let ip = meta.client_ip.unwrap_or_else(|| "0.0.0.0".to_string());
+            println!("Your real IP: {}", ip);
+            ip
+        },
+        Err(e) => {
+            eprintln!("Warning: Failed to fetch self IP: {}. Assuming 0.0.0.0", e);
+            "0.0.0.0".to_string()
+        }
+    };
 
     let active_proxies = Arc::new(Mutex::new(BTreeMap::<String, Vec<(ProxyInfo, u128)>>::new()));
 
     let tasks = futures::stream::iter(
         proxies.into_iter().map(|proxy_line| {
             let active_proxies = Arc::clone(&active_proxies);
-            let self_ip = self_meta.client_ip.clone();
+            let self_ip = self_ip.clone();
             async move {
                 tokio::time::sleep(Duration::from_millis(REQUEST_DELAY_MS)).await;
                 process_proxy(proxy_line, &active_proxies, &self_ip).await;
@@ -131,7 +140,7 @@ async fn fetch_cf_meta(proxy: Option<(String, u16)>) -> Result<CfMeta> {
 
     let mut client_builder = Client::builder()
         .timeout(timeout_duration)
-        .user_agent("RustProxyChecker");
+        .user_agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
 
     if let Some((ip, port)) = proxy {
         let addr_str = format!("{}:{}", ip, port);
@@ -143,14 +152,16 @@ async fn fetch_cf_meta(proxy: Option<(String, u16)>) -> Result<CfMeta> {
 
     let client = client_builder.build().context("Failed to build reqwest client")?;
 
-    let meta = client.get(&url)
+    let response = client.get(&url)
         .header("Host", host)
         .send()
         .await
-        .context("Failed to send request")?
-        .json::<CfMeta>()
-        .await
-        .context("Failed to parse JSON response")?;
+        .context("Failed to send request")?;
+
+    let text = response.text().await.context("Failed to read response body")?;
+
+    let meta: CfMeta = serde_json::from_str(&text)
+        .map_err(|e| anyhow::anyhow!("JSON Parse Error: {}. Body: {}", e, text))?;
 
     Ok(meta)
 }
@@ -170,20 +181,24 @@ async fn process_proxy(
     let start = Instant::now();
     match fetch_cf_meta(Some((ip.to_string(), port))).await {
         Ok(meta) => {
-            if meta.client_ip != self_ip {
-                let ping = start.elapsed().as_millis();
-                let info = ProxyInfo {
-                    ip: meta.client_ip.clone(),
-                    isp: meta.as_organization.unwrap_or_else(|| "Unknown".to_string()),
-                    country: meta.country.unwrap_or_else(|| "Unknown".to_string()),
-                    region: meta.region.unwrap_or_else(|| "Unknown".to_string()),
-                    city: meta.city.unwrap_or_else(|| "Unknown".to_string()),
-                };
-                println!("{}", format!("PROXY LIVE 🟩: {} ({} ms)", ip, ping).green());
-                let mut active_proxies_locked = active_proxies.lock().unwrap_or_else(|e| e.into_inner());
-                active_proxies_locked.entry(info.country.clone()).or_default().push((info, ping));
+            if let Some(remote_ip) = meta.client_ip {
+                if remote_ip != self_ip {
+                    let ping = start.elapsed().as_millis();
+                    let info = ProxyInfo {
+                        ip: remote_ip,
+                        isp: meta.as_organization.unwrap_or_else(|| "Unknown".to_string()),
+                        country: meta.country.unwrap_or_else(|| "Unknown".to_string()),
+                        region: meta.region.unwrap_or_else(|| "Unknown".to_string()),
+                        city: meta.city.unwrap_or_else(|| "Unknown".to_string()),
+                    };
+                    println!("{}", format!("PROXY LIVE 🟩: {} ({} ms)", ip, ping).green());
+                    let mut active_proxies_locked = active_proxies.lock().unwrap_or_else(|e| e.into_inner());
+                    active_proxies_locked.entry(info.country.clone()).or_default().push((info, ping));
+                } else {
+                    println!("PROXY DEAD ❌: {} (did not change IP)", ip);
+                }
             } else {
-                println!("PROXY DEAD ❌: {} (did not change IP)", ip);
+                println!("PROXY DEAD ❌: {} (No IP returned)", ip);
             }
         }
         Err(e) => {
@@ -263,13 +278,6 @@ fn write_markdown_file(proxies_by_country: &BTreeMap<String, Vec<(ProxyInfo, u12
         countries = countries_badge,
         latency = latency_badge,
     )?;
-
-    let top_providers = ["Google", "Amazon", "Cloudflare", "Tencent", "Hetzner"];
-
-    let mut provider_buckets: HashMap<&str, Vec<(ProxyInfo, u128)>> = HashMap::new();
-    for prov in top_providers.iter() {
-        provider_buckets.insert(prov, Vec::new());
-    }
 
     let top_providers = ["Google", "Amazon", "Cloudflare", "Tencent", "Hetzner"];
 
