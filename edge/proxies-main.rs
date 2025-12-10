@@ -1,6 +1,5 @@
 use anyhow::{Context, Result};
 use clap::Parser;
-use serde::Deserialize;
 use std::collections::{BTreeMap, HashMap};
 use std::fs::{self, File};
 use std::io::{self, BufRead, BufReader, Write};
@@ -15,9 +14,9 @@ use reqwest::Client;
 
 const DEFAULT_PROXY_FILE: &str = "edge/assets/p-list-december.txt";
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
-const DEFAULT_MAX_CONCURRENT: usize = 60;
-const DEFAULT_TIMEOUT_SECONDS: u64 = 6;
-const REQUEST_DELAY_MS: u64 = 40;
+const DEFAULT_MAX_CONCURRENT: usize = 50;
+const DEFAULT_TIMEOUT_SECONDS: u64 = 5;
+const REQUEST_DELAY_MS: u64 = 50;
 
 const GOOD_ISPS: &[&str] = &[
     "M247","Vultr","GCore","IONOS","Google","Amazon","NetLab","Akamai","Turunc","Contabo",
@@ -32,7 +31,6 @@ const GOOD_ISPS: &[&str] = &[
 
 #[derive(Parser, Clone)]
 #[command(name = "Proxy Checker")]
-#[command(about = "Checks proxies via Cloudflare /meta and outputs active ones")]
 struct Args {
     #[arg(short, long, default_value = DEFAULT_PROXY_FILE)]
     proxy_file: String,
@@ -47,17 +45,10 @@ struct Args {
     timeout: u64,
 }
 
-#[derive(Debug, Clone, Deserialize)]
-struct CfMeta {
-    #[serde(rename = "clientIp", alias = "ip")]
-    client_ip: Option<String>,
-
-    #[serde(rename = "asOrganization")]
-    as_organization: Option<String>,
-
-    country: Option<String>,
-    region: Option<String>,
-    city: Option<String>,
+#[derive(Debug, Clone)]
+struct TraceResponse {
+    ip: String,
+    loc: String, 
 }
 
 #[derive(Debug, Clone)]
@@ -96,17 +87,8 @@ async fn main() -> Result<()> {
         .collect();
     println!("Filtered to {} good proxies (port 443 + ISP whitelist)", proxies.len());
 
-    let self_ip = match fetch_cf_meta(None).await {
-        Ok(meta) => {
-            let ip = meta.client_ip.unwrap_or_else(|| "0.0.0.0".to_string());
-            println!("Your real IP: {}", ip);
-            ip
-        },
-        Err(e) => {
-            eprintln!("Warning: Failed to fetch self IP: {}. Assuming 0.0.0.0", e);
-            "0.0.0.0".to_string()
-        }
-    };
+    let self_ip = fetch_self_ip().await.unwrap_or_else(|_| "0.0.0.0".to_string());
+    println!("Your real IP: {}", self_ip);
 
     let active_proxies = Arc::new(Mutex::new(BTreeMap::<String, Vec<(ProxyInfo, u128)>>::new()));
 
@@ -132,38 +114,58 @@ async fn main() -> Result<()> {
     Ok(())
 }
 
-async fn fetch_cf_meta(proxy: Option<(String, u16)>) -> Result<CfMeta> {
-    let host = "speed.cloudflare.com";
-    let url = format!("https://{}/meta", host);
+async fn fetch_self_ip() -> Result<String> {
+    let client = Client::builder()
+        .timeout(Duration::from_secs(5))
+        .build()?;
+    
+    let resp = client.get("https://api.ipify.org").send().await?.text().await?;
+    Ok(resp.trim().to_string())
+}
 
+async fn check_proxy_trace(ip: &str, port: u16) -> Result<TraceResponse> {
+    let host = "speed.cloudflare.com";
+    let url = format!("https://{}/cdn-cgi/trace", host);
+    
     let timeout_duration = Duration::from_secs(DEFAULT_TIMEOUT_SECONDS);
 
-    let mut client_builder = Client::builder()
+    let addr_str = format!("{}:{}", ip, port);
+    let addr: std::net::SocketAddr = addr_str
+        .parse()
+        .context("Invalid IP/port")?;
+
+    let client = Client::builder()
         .timeout(timeout_duration)
-        .user_agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
-
-    if let Some((ip, port)) = proxy {
-        let addr_str = format!("{}:{}", ip, port);
-        let addr: std::net::SocketAddr = addr_str
-            .parse()
-            .context(format!("Invalid IP/port combination: {}", addr_str))?;
-        client_builder = client_builder.resolve(host, addr);
-    }
-
-    let client = client_builder.build().context("Failed to build reqwest client")?;
+        .resolve(host, addr)
+        .user_agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+        .build()?;
 
     let response = client.get(&url)
         .header("Host", host)
         .send()
-        .await
-        .context("Failed to send request")?;
+        .await?;
 
-    let text = response.text().await.context("Failed to read response body")?;
+    let text = response.text().await?;
 
-    let meta: CfMeta = serde_json::from_str(&text)
-        .map_err(|e| anyhow::anyhow!("JSON Parse Error: {}. Body: {}", e, text))?;
+    let mut found_ip = String::new();
+    let mut found_loc = String::new();
 
-    Ok(meta)
+    for line in text.lines() {
+        if line.starts_with("ip=") {
+            found_ip = line.trim_start_matches("ip=").to_string();
+        } else if line.starts_with("loc=") {
+            found_loc = line.trim_start_matches("loc=").to_string();
+        }
+    }
+
+    if found_ip.is_empty() {
+        return Err(anyhow::anyhow!("No IP found in trace response"));
+    }
+
+    Ok(TraceResponse {
+        ip: found_ip,
+        loc: found_loc,
+    })
 }
 
 async fn process_proxy(
@@ -172,33 +174,34 @@ async fn process_proxy(
     self_ip: &str,
 ) {
     let parts: Vec<&str> = proxy_line.split(',').collect();
-    if parts.len() < 2 {
+    if parts.len() < 4 {
         return;
     }
     let ip = parts[0];
     let port = parts[1].parse::<u16>().unwrap_or(443);
+    let csv_isp = parts[3].trim().to_string();
+    let csv_city = if parts.len() > 4 { parts[4].trim().to_string() } else { "Unknown".to_string() };
+    let csv_region = if parts.len() > 5 { parts[5].trim().to_string() } else { "Unknown".to_string() };
 
     let start = Instant::now();
-    match fetch_cf_meta(Some((ip.to_string(), port))).await {
-        Ok(meta) => {
-            if let Some(remote_ip) = meta.client_ip {
-                if remote_ip != self_ip {
-                    let ping = start.elapsed().as_millis();
-                    let info = ProxyInfo {
-                        ip: remote_ip,
-                        isp: meta.as_organization.unwrap_or_else(|| "Unknown".to_string()),
-                        country: meta.country.unwrap_or_else(|| "Unknown".to_string()),
-                        region: meta.region.unwrap_or_else(|| "Unknown".to_string()),
-                        city: meta.city.unwrap_or_else(|| "Unknown".to_string()),
-                    };
-                    println!("{}", format!("PROXY LIVE 🟩: {} ({} ms)", ip, ping).green());
-                    let mut active_proxies_locked = active_proxies.lock().unwrap_or_else(|e| e.into_inner());
-                    active_proxies_locked.entry(info.country.clone()).or_default().push((info, ping));
-                } else {
-                    println!("PROXY DEAD ❌: {} (did not change IP)", ip);
-                }
+    match check_proxy_trace(ip, port).await {
+        Ok(trace) => {
+            if trace.ip != self_ip && !trace.ip.is_empty() {
+                let ping = start.elapsed().as_millis();
+                
+                let info = ProxyInfo {
+                    ip: trace.ip,
+                    isp: csv_isp, 
+                    country: if !trace.loc.is_empty() { trace.loc } else { "XX".to_string() },
+                    region: csv_region,
+                    city: csv_city,
+                };
+
+                println!("{}", format!("PROXY LIVE 🟩: {} ({} ms)", ip, ping).green());
+                let mut active_proxies_locked = active_proxies.lock().unwrap_or_else(|e| e.into_inner());
+                active_proxies_locked.entry(info.country.clone()).or_default().push((info, ping));
             } else {
-                println!("PROXY DEAD ❌: {} (No IP returned)", ip);
+                println!("PROXY DEAD ❌: {} (IP match or empty)", ip);
             }
         }
         Err(e) => {
