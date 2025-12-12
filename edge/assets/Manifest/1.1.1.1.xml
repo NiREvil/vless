@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ⚙️ Dive into the related file in telegram: "https://telegram.me/new_folder_revil/3581  Custom 1.1.1.1 WARP–v6.3.apk" -->
+<manifest
+	package="com.cloudflare.onedotonedotonedotonem"
+	platformBuildVersionCode="29"
+	platformBuildVersionName="10"
+	android:versionCode="1922"
+	android:versionName="6.3"
+	android:compileSdkVersion="29"
+	android:compileSdkVersionCodename="10"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<uses-sdk
+		android:minSdkVersion="21"
+		android:targetSdkVersion="29" />
+  <!-- ✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️ PERMISSIONS ✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️ -->
+	<!-- Allows the app to create network sockets and use custom network protocols. The browser and other applications provide means to send data to the internet, so this permission is not required to send data to the internet. -->
+	<uses-permission
+		android:name="android.permission.INTERNET" />
+	<!-- Allows the app to view information about network connections such as which networks exist and are connected. -->
+	<uses-permission
+		android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<!-- Allows the app to write the contents of your shared storage. -->
+	<uses-permission
+		android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<!-- Allows the app to have itself started as soon as the system has finished booting. This can make it take longer to start the phone and allow the app to slow down the overall phone by always running. -->
+	<uses-permission
+		android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<!-- Allows the app to make use of foreground services. -->
+	<uses-permission
+		android:name="android.permission.FOREGROUND_SERVICE" />
+	<!-- This app can get your approximate location from location services while the app is in use. Location services for your device must be turned on for the app to get location. -->
+	<uses-permission
+		android:name="android.permission.ACCESS_COARSE_LOCATION"
+		android:maxSdkVersion="28" />
+	<uses-permission-sdk-23
+		android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<!-- Allows the app to read the contents of your shared storage. -->
+	<uses-permission
+		android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<!-- Allows the app to view information about Wi-Fi networking, such as whether Wi-Fi is enabled and name of connected Wi-Fi devices. -->
+	<uses-permission
+		android:name="android.permission.ACCESS_WIFI_STATE" />
+	<!-- Allows the app to prevent the phone from going to sleep. -->
+	<uses-permission
+		android:name="android.permission.WAKE_LOCK" />
+	<!-- Allows the user to purchase items through Google Play from within this app. -->
+	<uses-permission
+		android:name="com.android.vending.BILLING" />
+	<uses-permission
+		android:name="com.cloudflare.onedotonedotonedotonem_com.google.android.c2dm.permission.RECEIVE" />
+	<uses-permission
+		android:name="com.cloudflare.onedotonedotonedotonem_com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+	<!-- ✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️ PERMISSIONS ✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️ -->
+	<application
+		android:theme="@style/AppTheme.NoActionBar"
+		android:label="@string/app_name"
+		android:icon="@mipmap/ic_launcher"
+		android:name="com.cloudflare.app.App"
+		android:backupAgent="com.cloudflare.app.domain.backup.AppBackupAgent"
+		android:allowBackup="true"
+		android:supportsRtl="true"
+		android:usesCleartextTraffic="true"
+		android:networkSecurityConfig="@xml/network_security_config"
+		android:roundIcon="@mipmap/ic_launcher_round"
+		android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+		android:requestLegacyExternalStorage="true">
+		<activity
+			android:theme="@style/SplashTheme"
+			android:name="com.cloudflare.app.presentation.main.SplashActivity"
+			android:screenOrientation="sensorPortrait">
+			<intent-filter>
+				<action
+					android:name="android.intent.action.MAIN" />
+				<category
+					android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:theme="@style/NoStatusTheme"
+			android:name="com.cloudflare.app.presentation.main.MainActivity"
+			android:launchMode="singleTop"
+			android:screenOrientation="sensorPortrait">
+			<intent-filter
+				android:autoVerify="false">
+				<action
+					android:name="android.intent.action.VIEW" />
+				<category
+					android:name="android.intent.category.DEFAULT" />
+				<category
+					android:name="android.intent.category.BROWSABLE" />
+				<data
+					android:scheme="http"
+					android:host="warp.plus" />
+				<data
+					android:scheme="https"
+					android:host="warp.plus" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:theme="@style/AppTheme"
+			android:label="@string/manage_blocked_apps"
+			android:name="com.cloudflare.app.presentation.excludeapps.ManageBlockedAppsActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.main.MainActivity" />
+		<activity
+			android:theme="@style/OnboardingTheme"
+			android:name="com.cloudflare.app.presentation.onboarding.OnboardingActivity"
+			android:screenOrientation="sensorPortrait" />
+		<activity
+			android:theme="@style/AppTheme"
+			android:label="@string/more_settings"
+			android:name="com.cloudflare.app.presentation.settings.SettingsActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.main.MainActivity" />
+		<activity
+			android:theme="@style/AppTheme.Settings"
+			android:label="@string/settings"
+			android:name="com.cloudflare.app.presentation.settings.WarpSettingsActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.SettingsActivity" />
+		<activity
+			android:theme="@style/AppTheme"
+			android:label="@string/protocol_options"
+			android:name="com.cloudflare.app.presentation.settings.encryptiontype.DnsResolverOptionActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.dnssettings.DNSSettingsActivity" />
+		<activity
+			android:theme="@style/AppTheme"
+			android:label="@string/families_settings"
+			android:name="com.cloudflare.app.presentation.settings.dnssettings.FamiliesSettingsActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.dnssettings.DNSSettingsActivity" />
+		<activity
+			android:theme="@style/AppTheme"
+			android:label="@string/dns_settings"
+			android:name="com.cloudflare.app.presentation.settings.dnssettings.DNSSettingsActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.ConnectionOptionsActivity" />
+		<activity
+			android:theme="@style/AppTheme"
+			android:label="@string/warp_settings_legal"
+			android:name="com.cloudflare.app.presentation.settings.LegalSettingsActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.SettingsActivity" />
+		<activity
+			android:theme="@style/AppTheme.Settings"
+			android:label="@string/account"
+			android:name="com.cloudflare.app.presentation.settings.account.AccountActivity"
+			android:launchMode="singleTask"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.WarpSettingsActivity" />
+		<activity
+			android:theme="@style/AppTheme.Settings"
+			android:label="@string/license_key"
+			android:name="com.cloudflare.app.presentation.settings.account.LicenseKeyActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.account.AccountActivity" />
+		<activity
+			android:theme="@style/AppTheme.Settings"
+			android:label="@string/manage_devices"
+			android:name="com.cloudflare.app.presentation.settings.account.managedevices.ManageDevicesActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.account.AccountActivity" />
+		<activity
+			android:theme="@style/AppTheme"
+			android:label="@string/logger"
+			android:name="com.cloudflare.app.presentation.logs.consolelogs.ConsoleLogActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.diagnostics.DiagnosticsActivity" />
+		<activity
+			android:theme="@style/AppTheme.NoActionBar"
+			android:label="@string/dns_logs"
+			android:name="com.cloudflare.app.presentation.logs.dnslogs.DnsLogActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.diagnostics.DiagnosticsActivity" />
+		<activity
+			android:theme="@style/AppTheme"
+			android:label="@string/dns_logs"
+			android:name="com.cloudflare.app.presentation.logs.dnslogs.DnsLogDetailsActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.logs.dnslogs.DnsLogActivity" />
+		<activity
+			android:theme="@style/AppTheme"
+			android:label="@string/trusted_networks"
+			android:name="com.cloudflare.app.presentation.trustednetworks.TrustedNetworksActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.ConnectionOptionsActivity" />
+		<activity
+			android:theme="@style/AppTheme"
+			android:label="@string/third_party_licenses"
+			android:name="com.cloudflare.app.presentation.settings.thirdparty.ThirdPartyActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.LegalSettingsActivity" />
+		<activity
+			android:theme="@style/TermsAcceptanceTheme"
+			android:label="@string/privacy_policy"
+			android:name="com.cloudflare.app.presentation.onboarding.termsacceptance.TermsAcceptanceActivity"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.LegalSettingsActivity" />
+		<activity
+			android:theme="@style/NoStatusTheme"
+			android:name="com.cloudflare.app.presentation.warp.invite.WarpInviteActivity"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.SettingsActivity" />
+		<service
+			android:name="com.cloudflare.app.domain.fcm.CloudflareMessagingService">
+			<intent-filter>
+				<action
+					android:name="com.google.firebase.MESSAGING_EVENT" />
+			</intent-filter>
+		</service>
+		<activity
+			android:theme="@style/AppTheme"
+			android:label="@string/connection_options"
+			android:name="com.cloudflare.app.presentation.settings.ConnectionOptionsActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.SettingsActivity" />
+		<activity
+			android:theme="@style/AppTheme"
+			android:label="@string/diagnostics"
+			android:name="com.cloudflare.app.presentation.settings.diagnostics.DiagnosticsActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.SettingsActivity" />
+		<activity
+			android:theme="@style/NoStatusTheme"
+			android:label="@string/onboarding_title_2"
+			android:name="com.cloudflare.app.presentation.onboarding.vpnprofile.InstallVPNProfileActivity"
+			android:parentActivityName="com.cloudflare.app.presentation.main.MainActivity" />
+		<activity
+			android:theme="@style/AppTheme.Transparent"
+			android:label="@string/teams_sign_in"
+			android:name="com.cloudflare.app.presentation.settings.account.team.TeamSignInActivity"
+			android:screenOrientation="sensorPortrait"
+			android:parentActivityName="com.cloudflare.app.presentation.settings.account.AccountActivity">
+			<intent-filter>
+				<action
+					android:name="android.intent.action.VIEW" />
+				<category
+					android:name="android.intent.category.DEFAULT" />
+				<category
+					android:name="android.intent.category.BROWSABLE" />
+				<data
+					android:scheme="com.cloudflare.warp"
+					android:host="*.cloudflareaccess.com" />
+			</intent-filter>
+		</activity>
+		<service
+			android:name="com.cloudflare.app.vpnservice.CloudflareVpnService"
+			android:permission="android.permission.BIND_VPN_SERVICE"
+			android:enabled="true"
+			android:exported="true">
+			<intent-filter>
+				<action
+					android:name="android.net.VpnService" />
+			</intent-filter>
+		</service>
+		<meta-data
+			android:name="com.google.firebase.messaging.default_notification_icon"
+			android:resource="@drawable/ic_foreground_notification" />
+		<meta-data
+			android:name="android.content.APP_RESTRICTIONS"
+			android:resource="@xml/app_restrictions" />
+		<activity
+			android:theme="@style/AppTheme"
+			android:label="@string/app_name"
+			android:name="com.cloudflare.app.presentation.tasker.TaskerEditSettingsActivity"
+			android:exported="false"
+			android:screenOrientation="sensorPortrait"
+			android:windowSoftInputMode="adjustResize"
+			android:uiOptions="splitActionBarWhenNarrow" />
+		<activity-alias
+			android:theme="@style/AppTheme"
+			android:label="@string/app_name"
+			android:icon="@mipmap/ic_launcher"
+			android:name="com.cloudflare.app.ui.activity.PluginActivity"
+			android:exported="true"
+			android:targetActivity="com.cloudflare.app.presentation.tasker.TaskerEditSettingsActivity">
+			<intent-filter>
+				<action
+					android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+			</intent-filter>
+		</activity-alias>
+		<activity
+			android:theme="@style/SplashTheme"
+			android:name="com.cloudflare.app.presentation.settings.WarpUnlimitedInterstitialActivity" />
+		<receiver
+			android:name="com.cloudflare.app.presentation.tasker.TaskerSettingsReceiver"
+			android:exported="true">
+			<intent-filter>
+				<action
+					android:name="com.twofortyfouram.locale.intent.action.FIRE_SETTING" />
+			</intent-filter>
+		</receiver>
+		<receiver
+			android:name="com.cloudflare.app.vpnservice.autostart.BootCompletedReceiver">
+			<intent-filter>
+				<action
+					android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+		</receiver>
+		<service
+			android:name="com.cloudflare.app.vpnservice.autostart.AutostartService"
+			android:permission="android.permission.BIND_JOB_SERVICE" />
+		<service
+			android:name="com.cloudflare.app.vpnservice.servicepause.WifiPauseService"
+			android:foregroundServiceType="location" />
+		<provider
+			android:name="androidx.core.content.FileProvider"
+			android:exported="false"
+			android:authorities="com.cloudflare.onedotonedotonedotonem"
+			android:grantUriPermissions="true">
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/file_provider_paths" />
+		</provider>
+		<meta-data
+			android:name="io.fabric.ApiKey"
+			android:value="00ca9e57e2ed5e9918735683f3577dd346fda1ee" />
+		<service
+			android:label="@string/four_ones"
+			android:icon="@drawable/ic_foreground_notification"
+			android:name="com.cloudflare.app.domain.quicksettingstile.QuickSettingsTileService"
+			android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+			<intent-filter>
+				<action
+					android:name="android.service.quicksettings.action.QS_TILE" />
+			</intent-filter>
+		</service>
+		<meta-data
+			android:name="com.google.android.backup.api_key"
+			android:value="AEdPqrEAAAAIK91dusTIioUyh-AqwHadoukRb-Ub60dQy3tPfQ" />
+		<activity
+			android:theme="@style/InstabugTranslucentSdkTheme"
+			android:name="com.instabug.survey.ui.SurveyActivity"
+			android:launchMode="singleTask"
+			android:configChanges="orientation|screenSize"
+			android:windowSoftInputMode="adjustResize" />
+		<activity
+			android:theme="@style/InstabugTranslucentSdkTheme"
+			android:name="com.instabug.survey.announcements.ui.activity.AnnouncementActivity"
+			android:launchMode="singleTop"
+			android:configChanges="orientation|screenSize"
+			android:windowSoftInputMode="adjustResize" />
+		<service
+			android:name="com.instabug.survey.network.service.InstabugSurveysSubmitterService"
+			android:permission="android.permission.BIND_JOB_SERVICE" />
+		<service
+			android:name="com.instabug.survey.announcements.network.InstabugAnnouncementSubmitterService"
+			android:permission="android.permission.BIND_JOB_SERVICE" />
+		<service
+			android:name="com.instabug.crash.network.InstabugCrashesUploaderService"
+			android:permission="android.permission.BIND_JOB_SERVICE" />
+		<service
+			android:name="com.instabug.anr.network.InstabugAnrUploaderService"
+			android:permission="android.permission.BIND_JOB_SERVICE" />
+		<activity
+			android:theme="@style/InstabugSdkTheme"
+			android:name="com.instabug.bug.view.reporting.ReportingContainerActivity"
+			android:launchMode="singleTask"
+			android:configChanges="keyboardHidden|orientation|screenSize"
+			android:windowSoftInputMode="adjustResize">
+			<intent-filter>
+				<data
+					android:scheme="instabug-bug"
+					android:host="instabug-disclaimer.com" />
+				<data
+					android:scheme="repro-steps-disclaimer"
+					android:host="instabug-disclaimer.com" />
+				<category
+					android:name="android.intent.category.DEFAULT" />
+				<action
+					android:name="android.intent.action.VIEW" />
+			</intent-filter>
+		</activity>
+		<service
+			android:name="com.instabug.bug.network.InstabugBugsUploaderService"
+			android:permission="android.permission.BIND_JOB_SERVICE" />
+		<service
+			android:name="com.instabug.bug.view.actionList.service.ReportCategoriesService"
+			android:permission="android.permission.BIND_JOB_SERVICE" />
+		<activity
+			android:theme="@style/InstabugSdkTheme"
+			android:name="com.instabug.chat.ui.ChatActivity"
+			android:launchMode="singleTop"
+			android:configChanges="orientation|screenSize"
+			android:windowSoftInputMode="adjustResize" />
+		<service
+			android:name="com.instabug.chat.network.InstabugMessageUploaderService"
+			android:permission="android.permission.BIND_JOB_SERVICE" />
+		<service
+			android:name="com.instabug.chat.network.InstabugPushNotificationTokenService"
+			android:permission="android.permission.BIND_JOB_SERVICE" />
+		<activity
+			android:theme="@style/Theme.AppCompat"
+			android:name="com.instabug.featuresrequest.ui.FeaturesRequestActivity"
+			android:launchMode="singleTop"
+			android:configChanges="orientation|screenSize"
+			android:windowSoftInputMode="adjustResize" />
+		<service
+			android:name="com.instabug.featuresrequest.network.service.FeaturesRequestVoteService"
+			android:permission="android.permission.BIND_JOB_SERVICE" />
+		<provider
+			android:name="com.instabug.apm.contentprovider.APMContentProvider"
+			android:exported="false"
+			android:authorities="com.cloudflare.onedotonedotonedotonem.applaunch.contentprovider.AppLaunchContentProvider"
+			android:initOrder="2147483647" />
+		<service
+			android:name="com.instabug.library.analytics.network.InstabugAnalyticsUploaderService"
+			android:permission="android.permission.BIND_JOB_SERVICE" />
+		<activity
+			android:theme="@style/InstabugTranslucentSdkTheme"
+			android:name="com.instabug.library.internal.video.RequestPermissionActivity"
+			android:configChanges="orientation|screenSize" />
+		<activity
+			android:theme="@style/InstabugTranslucentSdkTheme"
+			android:name="com.instabug.library.invocation.invocationdialog.InstabugDialogActivity"
+			android:launchMode="singleTask" />
+		<activity
+			android:theme="@style/InstabugTranslucentSdkTheme"
+			android:name="com.instabug.library.ui.onboarding.OnboardingActivity"
+			android:launchMode="singleTask" />
+		<service
+			android:name="com.instabug.library.internal.video.ScreenRecordingService"
+			android:enabled="true"
+			android:exported="false"
+			android:foregroundServiceType="mediaProjection" />
+		<service
+			android:name="com.instabug.library.screenshot.ScreenshotCaptureService"
+			android:enabled="true"
+			android:exported="false"
+			android:foregroundServiceType="mediaProjection" />
+		<activity
+			android:name="zendesk.support.request.RequestActivity"
+			android:windowSoftInputMode="adjustResize" />
+		<activity
+			android:label="@string/request_list_activity_title"
+			android:name="zendesk.support.requestlist.RequestListActivity" />
+		<receiver
+			android:name="zendesk.support.DeepLinkingBroadcastReceiver"
+			android:exported="false">
+			<intent-filter>
+				<action
+					android:name="zendesk.support" />
+			</intent-filter>
+		</receiver>
+		<provider
+			android:name="zendesk.support.SupportSdkStartupProvider"
+			android:enabled="true"
+			android:exported="false"
+			android:authorities="com.cloudflare.onedotonedotonedotonem.zendesk.support.SupportSdkStartupProvider" />
+		<activity
+			android:label="@string/zs_view_article_loading_title"
+			android:name="zendesk.support.guide.ViewArticleActivity"
+			android:configChanges="orientation|screenSize" />
+		<activity
+			android:label="@string/support_activity_title"
+			android:name="zendesk.support.guide.HelpCenterActivity"
+			android:windowSoftInputMode="adjustResize" />
+		<provider
+			android:name="zendesk.support.guide.GuideSdkStartupProvider"
+			android:enabled="true"
+			android:exported="false"
+			android:authorities="com.cloudflare.onedotonedotonedotonem.zendesk.support.GuideSdkStartupProvider" />
+		<activity
+			android:name="zendesk.messaging.MessagingActivity"
+			android:windowSoftInputMode="adjustResize" />
+		<provider
+			android:name="androidx.work.impl.WorkManagerInitializer"
+			android:exported="false"
+			android:multiprocess="true"
+			android:authorities="com.cloudflare.onedotonedotonedotonem.workmanager-init"
+			android:directBootAware="false" />
+		<service
+			android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+			android:enabled="@bool/enable_system_alarm_service_default"
+			android:exported="false"
+			android:directBootAware="false" />
+		<service
+			android:name="androidx.work.impl.background.systemjob.SystemJobService"
+			android:permission="android.permission.BIND_JOB_SERVICE"
+			android:enabled="@bool/enable_system_job_service_default"
+			android:exported="true"
+			android:directBootAware="false" />
+		<receiver
+			android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+			android:enabled="true"
+			android:exported="false"
+			android:directBootAware="false" />
+		<receiver
+			android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+			android:enabled="false"
+			android:exported="false"
+			android:directBootAware="false">
+			<intent-filter>
+				<action
+					android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+				<action
+					android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+			</intent-filter>
+		</receiver>
+		<receiver
+			android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+			android:enabled="false"
+			android:exported="false"
+			android:directBootAware="false">
+			<intent-filter>
+				<action
+					android:name="android.intent.action.BATTERY_OKAY" />
+				<action
+					android:name="android.intent.action.BATTERY_LOW" />
+			</intent-filter>
+		</receiver>
+		<receiver
+			android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+			android:enabled="false"
+			android:exported="false"
+			android:directBootAware="false">
+			<intent-filter>
+				<action
+					android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+				<action
+					android:name="android.intent.action.DEVICE_STORAGE_OK" />
+			</intent-filter>
+		</receiver>
+		<receiver
+			android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+			android:enabled="false"
+			android:exported="false"
+			android:directBootAware="false">
+			<intent-filter>
+				<action
+					android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			</intent-filter>
+		</receiver>
+		<receiver
+			android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+			android:enabled="false"
+			android:exported="false"
+			android:directBootAware="false">
+			<intent-filter>
+				<action
+					android:name="android.intent.action.BOOT_COMPLETED" />
+				<action
+					android:name="android.intent.action.TIME_SET" />
+				<action
+					android:name="android.intent.action.TIMEZONE_CHANGED" />
+			</intent-filter>
+		</receiver>
+		<receiver
+			android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+			android:enabled="@bool/enable_system_alarm_service_default"
+			android:exported="false"
+			android:directBootAware="false">
+			<intent-filter>
+				<action
+					android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+			</intent-filter>
+		</receiver>
+		<service
+			android:name="com.google.firebase.components.ComponentDiscoveryService"
+			android:exported="false"
+			android:directBootAware="true">
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.crashlytics.ndk.CrashlyticsNdkRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+		</service>
+		<provider
+			android:name="com.squareup.picasso.PicassoProvider"
+			android:exported="false"
+			android:authorities="com.cloudflare.onedotonedotonedotonem.com.squareup.picasso" />
+		<service
+			android:name="com.google.firebase.messaging.FirebaseMessagingService"
+			android:exported="false"
+			android:directBootAware="true">
+			<intent-filter
+				android:priority="-500">
+				<action
+					android:name="com.google.firebase.MESSAGING_EVENT" />
+			</intent-filter>
+		</service>
+		<service
+			android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+			android:exported="false">
+			<meta-data
+				android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+				android:value="cct" />
+		</service>
+		<service
+			android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+			android:permission="android.permission.BIND_JOB_SERVICE"
+			android:exported="false" />
+		<receiver
+			android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+			android:exported="false" />
+		<activity
+			android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
+			android:enabled="false"
+			android:exported="false"
+			android:process=":playcore_missing_splits_activity"
+			android:stateNotNeeded="true"
+			android:launchMode="singleInstance" />
+		<activity
+			android:theme="@style/Theme.PlayCore.Transparent"
+			android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+			android:enabled="false"
+			android:exported="false"
+			android:stateNotNeeded="true" />
+		<service
+			android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
+			android:enabled="false"
+			android:exported="true" />
+		<meta-data
+			android:name="com.google.android.play.billingclient.version"
+			android:value="3.0.1" />
+		<activity
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:name="com.android.billingclient.api.ProxyBillingActivity"
+			android:exported="false"
+			android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
+		<receiver
+			android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+			android:permission="com.google.android.c2dm.permission.SEND"
+			android:exported="true">
+			<intent-filter>
+				<action
+					android:name="com.google.android.c2dm.intent.RECEIVE" />
+			</intent-filter>
+		</receiver>
+		<activity
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:name="com.google.android.gms.common.api.GoogleApiActivity"
+			android:exported="false" />
+		<provider
+			android:name="com.google.firebase.provider.FirebaseInitProvider"
+			android:exported="false"
+			android:authorities="com.cloudflare.onedotonedotonedotonem.firebaseinitprovider"
+			android:initOrder="100"
+			android:directBootAware="true" />
+		<receiver
+			android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+			android:enabled="true"
+			android:exported="false" />
+		<service
+			android:name="com.google.android.gms.measurement.AppMeasurementService"
+			android:enabled="true"
+			android:exported="false" />
+		<service
+			android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+			android:permission="android.permission.BIND_JOB_SERVICE"
+			android:enabled="true"
+			android:exported="false" />
+		<meta-data
+			android:name="com.google.android.gms.version"
+			android:value="@integer/google_play_services_version" />
+		<provider
+			android:name="zendesk.belvedere.BelvedereFileProvider"
+			android:readPermission="true"
+			android:exported="false"
+			android:authorities="com.cloudflare.onedotonedotonedotonem.belvedere2.attachments"
+			android:grantUriPermissions="true">
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/belvedere_attachment_storage_v2" />
+		</provider>
+		<provider
+			android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+			android:exported="false"
+			android:multiprocess="true"
+			android:authorities="com.cloudflare.onedotonedotonedotonem.lifecycle-process" />
+		<meta-data
+			android:name="com.android.dynamic.apk.fused.modules"
+			android:value="base" />
+		<meta-data
+			android:name="com.android.stamp.source"
+			android:value="https://play.google.com/store" />
+		<meta-data
+			android:name="com.android.stamp.type"
+			android:value="STAMP_TYPE_STANDALONE_APK" />
+		<meta-data
+			android:name="com.android.vending.splits"
+			android:value="@xml/splits0" />
+		<meta-data
+			android:name="com.android.vending.derived.apk.id"
+			android:value="1" />
+	</application>
+</manifest>
