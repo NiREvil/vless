@@ -38,9 +38,9 @@
       },
       {
         "detour": "select",
-        "server": "235.5.5.5",
+        "server": "8.8.8.8",
         "tag": "proxy-dns",
-        "type": "udp"
+        "type": "tcp"
       },
       {
         "detour": "direct",
@@ -54,6 +54,7 @@
     {
       "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
+      "endpoint_independent_nat": false,
       "mtu": 9000,
       "platform": {
         "http_proxy": {
@@ -63,6 +64,7 @@
         }
       },
       "stack": "system",
+      "strict_route": false,
       "type": "tun"
     },
     {
@@ -77,8 +79,9 @@
       "outbounds": [
         "auto",
         "direct",
-        "🇺🇸 USA",
-        "🇺🇸 USA-2",
+        "🇩🇪 Germany",
+        "🇨🇦 Canada",
+        "🇺🇸 United States",
         "🇫🇮 Finland",
         "🇦🇹 Austria",
         "🇫🇷 France",
@@ -91,8 +94,9 @@
     {
       "interval": "5m",
       "outbounds": [
-        "🇺🇸 USA",
-        "🇺🇸 USA-2",
+        "🇩🇪 Germany",
+        "🇨🇦 Canada",
+        "🇺🇸 United States",
         "🇫🇮 Finland",
         "🇦🇹 Austria",
         "🇫🇷 France",
@@ -110,14 +114,31 @@
         "type": "salamander"
       },
       "password": "@KevinZakarian",
-      "server": "kevin.vpny.online",
-      "server_port": 22002,
-      "tag": "🇺🇸 USA",
+      "server": "keviny.vpny.online",
+      "server_port": 33001,
+      "tag": "🇩🇪 Germany",
       "tls": {
         "enabled": true,
         "insecure": true
       },
       "type": "hysteria2"
+    },
+    {
+      "down_mbps": 50,
+      "obfs": {
+        "password": "KevinZakarian",
+        "type": "salamander"
+      },
+      "password": "@KevinZakarian",
+      "server": "kevin.vpny.online",
+      "server_port": 44001,
+      "tag": "🇨🇦 Canada",
+      "tls": {
+        "enabled": true,
+        "insecure": true
+      },
+      "type": "hysteria2",
+      "up_mbps": 100
     },
     {
       "down_mbps": 10,
@@ -128,7 +149,7 @@
       "password": "4TImZd9aiT",
       "server": "89.116.64.211",
       "server_port": 11001,
-      "tag": "🇺🇸 USA-2",
+      "tag": "🇺🇸 United States",
       "tls": {
         "enabled": true,
         "insecure": true
