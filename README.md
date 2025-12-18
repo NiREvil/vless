@@ -29,7 +29,10 @@
 > **Warp for Hiddify:**
 >
 > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
+> 
+> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/proton-wire.json  
 >
+> 
 > **Warp for Singbox:**
 >
 > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
@@ -737,7 +740,9 @@
 
 <br/>
 
-https://vpny.online/VPNy.json [[KV?]]
+https://vpny.net/Mobile [[KV?]]
+
+https://vpny.net/Home
 
 https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/1.txt [[AS?]]
 
@@ -1782,13 +1787,17 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
 
-https://vpny.online/VPNy.json [[KV?]]
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/proton-wire.json
+
+https://vpny.net/Mobile [[KV?]]
+
+https://vpny.net/Home
 
 https://channel-freevpnhomes-subscription.shampoosirsehat.homes [[ME?]]
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json [[Ni?]]
 
-https://raw.githubusercontent.com/bamdad23/xray/refs/heads/main/config#Javid-Naman-Iran [[JN?]]
+https://cp.iranhope.org/sub/jnir_pub_12_2b/77c48356c463da59bd68fe63b0725bc6 [[JN?]]
 
 https://raw.githubusercontent.com/4n0nymou3/Universal-Proxy-Finder/master/Output/singbox_subscription.json [[ANO?]]
 
@@ -1852,11 +1861,8 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/WarpOnWa
 **Warp On Warp [[TD?]]**  
 https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/subwarp/warp
 
-**Warp + Windscribe + Hysteria - Hiddify**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Windscribe%20on%20H2
-
 **Warp + Proton for Hiddify with DNS clean**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/Proton%20ON%20WARP%2B%20DNS%20Clean
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/proton-wire.json
 
 **Some warp configs for Hidify [[MS?]]**
 https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/warp
