@@ -29,10 +29,9 @@
 > **Warp for Hiddify:**
 >
 > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
-> 
-> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/proton-wire.json  
 >
-> 
+> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/proton-wire.json
+>
 > **Warp for Singbox:**
 >
 > https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
