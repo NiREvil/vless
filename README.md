@@ -1932,9 +1932,9 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 
 | **MahsaNG**           | **🎁 codes**                     |
 | --------------------- | -------------------------------- |
-| [GoVPN][M25]            | <pre><code>5bc2911c</code></pre> |
+| [GoVPN][M25]          | <pre><code>5bc2911c</code></pre> |
 | [North Xray][M12]     | <pre><code>29b5a39f</code></pre> |
-| [AmirAli][M26]            | <pre><code>ffc7a7e8</code></pre> |
+| [AmirAli][M26]        | <pre><code>ffc7a7e8</code></pre> |
 | [Bia pain bache][M2]  | <pre><code>b64ba903</code></pre> |
 | [MarkPash]            | <pre><code>29b5a39f</code></pre> |
 | [VPN Homes][M3]       | <pre><code>93a2251d</code></pre> |
