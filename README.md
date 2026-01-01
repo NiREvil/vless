@@ -1932,6 +1932,9 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 
 | **MahsaNG**           | **🎁 codes**                     |
 | --------------------- | -------------------------------- |
+| [GoVPN][M25]            | <pre><code>5bc2911c</code></pre> |
+| [North Xray][M12]     | <pre><code>29b5a39f</code></pre> |
+| [AmirAli][M26]            | <pre><code>ffc7a7e8</code></pre> |
 | [Bia pain bache][M2]  | <pre><code>b64ba903</code></pre> |
 | [MarkPash]            | <pre><code>29b5a39f</code></pre> |
 | [VPN Homes][M3]       | <pre><code>93a2251d</code></pre> |
@@ -1950,7 +1953,6 @@ https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/wire
 | [MoryVPN][M10]        | <pre><code>1265fa68</code></pre> |
 | Sunny                 | <pre><code>865dea8c</code></pre> |
 | [v2sayFree][M11]      | <pre><code>a2d8281d</code></pre> |
-| [North Xray][M12]     | <pre><code>29b5a39f</code></pre> |
 | Free internet         | <pre><code>2c023e3a</code></pre> |
 | [Unlocked world][M13] | <pre><code>fd3200bb</code></pre> |
 | [NasNet][M14]         | <pre><code>110d9bdc</code></pre> |
@@ -2547,7 +2549,7 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpyMGZySUFuTGVhbTFGcmhsYkM4bzlJ@176.124.207.10
 |  IS  |          Iceland          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/is/mixed) |  IN  |           India           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/in/mixed) |
 |  ID  |         Indonesia         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/id/mixed) |  IR  | Iran, Islamic Republic of | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ir/mixed) |
 |  IE  |          Ireland          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ie/mixed) |  IL  |          Israel           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/il/mixed) |
-|  IT  |           Italy           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/it/mixed) |  JP  |           Japan           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/jp/mixed) |
+|  IT  |           Itay           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/it/mixed) |  JP  |           Japan           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/jp/mixed) |
 |  JO  |          Jordan           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/jo/mixed) |  KZ  |        Kazakhstan         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/kz/mixed) |
 |  KE  |           Kenya           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ke/mixed) |  KR  |    Korea, Republic of     | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/kr/mixed) |
 |  LV  |          Latvia           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/lv/mixed) |  LT  |         Lithuania         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/lt/mixed) |
@@ -2984,3 +2986,5 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [M22]: https://telegram.me/F_NiREvil/6672
 [M23]: https://telegram.me/+YIlqV-fl9y4zMmRk
 [M24]: https://telegram.me/s/v2FreeHub
+[M25]: https://telegram.me/s/Go_vpns
+[M26]: https://telegram.me/s/habsiop
