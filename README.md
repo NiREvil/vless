@@ -1036,9 +1036,9 @@ https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_l
 ### Proton VPN WireGuards
 
 <details>
-<summary> ➕ Click here</summary><br/>   
+<summary> ➕ Click here</summary><br/>
 
-**🇵🇱PROTON#5** [[ProtonVPN]]  
+**🇵🇱PROTON#5** [[ProtonVPN]]
 
 ```Elixir
 [Interface]
@@ -1065,7 +1065,7 @@ Endpoint = 149.102.244.102:51820
 
 <br/>
 
-**🇵🇱PROTON#9**  
+**🇵🇱PROTON#9**
 
 ```Elixir
 [Interface]
@@ -1092,7 +1092,7 @@ Endpoint = 149.102.244.107:51820
 
 <br/>
 
-**🇨🇦PROTON#3**  
+**🇨🇦PROTON#3**
 
 ```ballerina
 [Interface]
@@ -1119,7 +1119,7 @@ Endpoint = 169.150.204.44:51820
 
 <br/>
 
-**🇯🇵PROTON#9**  
+**🇯🇵PROTON#9**
 
 ```ballerina
 [Interface]
@@ -1146,7 +1146,7 @@ Endpoint = 138.199.21.216:51820
 
 <br/>
 
-**🇲🇽PROTON#2**  
+**🇲🇽PROTON#2**
 
 ```elixir
 [Interface]
@@ -1173,8 +1173,7 @@ Endpoint = 103.88.234.229:51820
 
 <br/>
 
-
-**🇳🇱PROTON#96**  
+**🇳🇱PROTON#96**
 
 ```Elixir
 [Interface]
@@ -1201,8 +1200,7 @@ Endpoint = 138.199.7.235:51820
 
 <br/>
 
-
-**🇳🇴PROTON#3**  
+**🇳🇴PROTON#3**
 
 ```ballerina
 [Interface]
@@ -1229,8 +1227,7 @@ Endpoint = 95.173.205.162:51820
 
 <br/>
 
-
-**🇷🇴PROTON#29**  
+**🇷🇴PROTON#29**
 
 ```ballerina
 [Interface]
@@ -1257,8 +1254,7 @@ Endpoint = 146.70.246.146:51820
 
 <br/>
 
-
-**🇺🇸PROTON#26**  
+**🇺🇸PROTON#26**
 
 ```Elixir
 [Interface]
