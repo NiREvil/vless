@@ -11,8 +11,8 @@
 >
 > <p><b>Auto-Updated Daily</b></p>
 >
-> <img src="https://img.shields.io/badge/Last_Update-Sat%2C%2024%20Jan%202026%2005%3A21%20%28UTC%2B3%3A30%29-966600" />  
-> <img src="https://img.shields.io/badge/Next_Update-Sun%2C%2025%20Jan%202026%2005%3A21%20%28UTC%2B3%3A30%29-966600" />
+> <img src="https://img.shields.io/badge/Last_Update-Sun%2C%2025%20Jan%202026%2005%3A35%20%28UTC%2B3%3A30%29-966600" />  
+> <img src="https://img.shields.io/badge/Next_Update-Mon%2C%2026%20Jan%202026%2005%3A35%20%28UTC%2B3%3A30%29-966600" />
 >
 > <br/>
 >
