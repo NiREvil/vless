@@ -144,27 +144,89 @@ async fn fetch_self_ip() -> Result<String> {
     Ok(resp.trim().to_string())
 }
 
-async fn check_proxy_worker(ip: &str, port: u16) -> Result<WorkerResponse> {
-    let timeout_duration = Duration::from_secs(DEFAULT_TIMEOUT_SECONDS);
+async fn check_proxy_worker(
+    ip: &str,
+    port: u16,
+    self_ip: &str,
+) -> Result<(WorkerResponse, u128)> {
+    use anyhow::anyhow;
+    use tokio::net::TcpStream;
+    use tokio::io::{AsyncReadExt, AsyncWriteExt};
+    use native_tls::TlsConnector;
+    use tokio_native_tls::TlsConnector as TokioTlsConnector;
 
-    let addr_str = format!("{}:{}", ip, port);
-    let addr: std::net::SocketAddr = addr_str
-        .parse()
-        .context("Invalid IP/port")?;
+    let timeout = Duration::from_secs(DEFAULT_TIMEOUT_SECONDS);
 
-    let client = Client::builder()
-        .timeout(timeout_duration)
-        .resolve("ipp.nscl.ir", addr) 
-        .user_agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
-        .build()?;
+    let start_ping = Instant::now();
+    let tcp = tokio::time::timeout(
+        timeout,
+        TcpStream::connect(format!("{}:{}", ip, port))
+    ).await??;
 
-    let response = client.get(CHECK_URL)
-        .header("Host", "ipp.nscl.ir")
-        .send()
-        .await?;
+    let tls = TokioTlsConnector::from(
+        TlsConnector::builder().build()?
+    );
 
-    let result = response.json::<WorkerResponse>().await?;
-    Ok(result)
+    let mut stream = tokio::time::timeout(
+        timeout,
+        tls.connect("speed.cloudflare.com", tcp)
+    ).await??;
+
+    let ping = start_ping.elapsed().as_millis();
+
+    let req = concat!(
+        "GET /meta HTTP/1.1\r\n",
+        "Host: speed.cloudflare.com\r\n",
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)\r\n",
+        "Accept: */*\r\n",
+        "Accept-Encoding: identity\r\n",
+        "Referer: https://speed.cloudflare.com/\r\n",
+        "Origin: https://speed.cloudflare.com\r\n",
+        "Connection: close\r\n\r\n"
+    );
+
+    stream.write_all(req.as_bytes()).await?;
+
+    let mut buf = Vec::new();
+    let mut tmp = [0u8; 8192];
+    while let Ok(n) = stream.read(&mut tmp).await {
+        if n == 0 { break; }
+        buf.extend_from_slice(&tmp[..n]);
+    }
+
+    let text = String::from_utf8_lossy(&buf);
+
+    let body = if let Some(pos) = text.find("\r\n\r\n") {
+        &text[pos + 4..]
+    } else {
+        &text
+    };
+
+    let body = body.trim();
+
+    let v: serde_json::Value = serde_json::from_str(body)?;
+
+    let out_ip = v.get("clientIp")
+        .and_then(|v| v.as_str())
+        .unwrap_or("")
+        .to_string();
+
+    if out_ip.is_empty() || out_ip == self_ip {
+        return Err(anyhow!("IP match or empty"));
+    }
+
+    Ok((
+        WorkerResponse {
+            ip: out_ip,
+            cf: WorkerCf {
+                isp: v.get("asOrganization").and_then(|v| v.as_str()).map(String::from),
+                city: v.get("city").and_then(|v| v.as_str()).map(String::from),
+                region: v.get("region").and_then(|v| v.as_str()).map(String::from),
+                country: v.get("country").and_then(|v| v.as_str()).map(String::from),
+            },
+        },
+        ping
+    ))
 }
 
 async fn process_proxy(
@@ -176,31 +238,37 @@ async fn process_proxy(
     if parts.len() < 2 {
         return;
     }
+
     let ip = parts[0];
     let port = parts[1].parse::<u16>().unwrap_or(443);
-    
-    let csv_isp = if parts.len() > 3 { parts[3].trim().to_string() } else { "Unknown".to_string() };
+    let csv_isp = if parts.len() > 3 {
+        parts[3].trim().to_string()
+    } else {
+        "Unknown".to_string()
+    };
 
-    let start = Instant::now();
-    match check_proxy_worker(ip, port).await {
-        Ok(data) => {
-            if data.ip != self_ip && !data.ip.is_empty() {
-                let ping = start.elapsed().as_millis();
-                
-                let info = ProxyInfo {
-                    ip: data.ip,
-                    isp: data.cf.isp.unwrap_or(csv_isp), 
-                    country_code: data.cf.country.unwrap_or_else(|| "XX".to_string()),
-                    city: data.cf.city.unwrap_or_else(|| "Unknown".to_string()),
-                    region: data.cf.region.unwrap_or_else(|| "Unknown".to_string()),
-                };
+    match check_proxy_worker(ip, port, self_ip).await {
+        Ok((data, ping)) => {
+            let info = ProxyInfo {
+                ip: data.ip,
+                isp: data.cf.isp.unwrap_or(csv_isp),
+                country_code: data.cf.country.unwrap_or_else(|| "XX".to_string()),
+                city: data.cf.city.unwrap_or_else(|| "Unknown".to_string()),
+                region: data.cf.region.unwrap_or_else(|| "Unknown".to_string()),
+            };
 
-                println!("{}", format!("PROXY LIVE 🟩: {} ({} ms) - {}", ip, ping, info.city).green());
-                let mut active_proxies_locked = active_proxies.lock().unwrap_or_else(|e| e.into_inner());
-                active_proxies_locked.entry(info.country_code.clone()).or_default().push((info, ping));
-            } else {
-                println!("PROXY DEAD ❌: {} (IP match or empty)", ip);
-            }
+            println!(
+                "{}",
+                format!("PROXY LIVE 🟩: {} ({} ms) - {}", ip, ping, info.city).green()
+            );
+
+            let mut active_proxies_locked =
+                active_proxies.lock().unwrap_or_else(|e| e.into_inner());
+
+            active_proxies_locked
+                .entry(info.country_code.clone())
+                .or_default()
+                .push((info, ping));
         }
         Err(e) => {
             println!("PROXY DEAD ❌: {} ({})", ip, e);
