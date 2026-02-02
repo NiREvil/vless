@@ -13,7 +13,7 @@ use colored::*;
 use futures::StreamExt;
 use reqwest::Client;
 
-const DEFAULT_PROXY_FILE: &str = "edge/assets/p-list-january.txt";
+const DEFAULT_PROXY_FILE: &str = "edge/assets/p-list-february.txt";
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
 const DEFAULT_MAX_CONCURRENT: usize = 50;
 const DEFAULT_TIMEOUT_SECONDS: u64 = 6;
