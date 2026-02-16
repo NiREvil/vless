@@ -128,7 +128,7 @@ async fn main() -> Result<()> {
 async fn fetch_self_ip() -> Result<String> {
     let client = Client::builder()
         .timeout(Duration::from_secs(5))
-        .user_agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+        .user_agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/108.0.0.0")
         .build()?;
     
     match client.get(CHECK_URL).send().await {
