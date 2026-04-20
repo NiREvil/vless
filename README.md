@@ -3,6 +3,264 @@
   
 <br><br/>
 
+<div dir="rtl" align="right">
+
+## 📦 مخزن ابزارها، کلاینت‌ها و لینک‌های دانلود (اینترانت / اینترنت)
+
+<div align="right">
+  <img src="https://img.shields.io/badge/آخرین_بروزرسانی-سی‌و‌یکم_فروردین_۱۴۰۵-blue?style=for-the-badge&logo=github" alt="Update Date" />
+  <img src="https://img.shields.io/badge/وضعیت-فعال-success?style=for-the-badge" alt="Status" />
+</div>
+
+<br>
+
+این مخزن شامل مجموعه‌ای کامل از آخرین نسخه‌ی کلاینت‌ها، ابزارهای مدیریت فایل، دی‌ان‌اس‌ها، و اپلیکیشن‌های کاربردی است که قابلیت دانلود با **اینترنت داخلی (اینترانت)** را دارند.
+
+<hr/><br/>
+
+## 📑 فهرست محتوا
+- [🔄 آخرین تغییرات](#-آخرین-تغییرات)
+- [🔧 ابزار و مدیریت فایل](#-ابزار-و-مدیریت-فایل)
+- [📡 کلاینت‌ و وی‌پی‌ان (VPN)](#-کلاینت-و-ویپیان-vpn)
+- [🌐 سرویس‌های دی‌ان‌اس (DNS)](#-سرویسهای-دیاناس-dns)
+- [ ‏🇮🇷 اپلیکیشن‌های داخلی](#-اپلیکیشنهای-داخلی)
+- [🔗 اشتراک‌گذاری اینترنت و آموزش‌ها](#-اشتراکگذاری-اینترنت-و-آموزشها)
+- [🛠 ابزارهای آنلاین و ربات‌های تلگرامی](#-ابزارهای-آنلاین-و-رباتهای-تلگرامی)
+- [🤖 چت‌بات‌های هوش مصنوعی](#-چتباتهای-هوش-مصنوعی)
+- [🎭 اپلیکیشن‌ها و سایت‌های فیلم و سریال](#-اپلیکیشنها-و-سایتهای-فیلم-و-سریال)
+- [🗞 کانال‌های خبری تلگرام](#-کانالهای-خبری-تلگرام)
+
+<hr/><br/>
+
+## 🔄 آخرین تغییرات
+
+جدیدترین آپدیت‌های اضافه شده در این نسخه:
+
+- ✔️ کلاینت exclave نسخه v0.17.34
+- ✔️ کلاینت Happ نسخه‌ی v3.18.1 (اندروید و ویندوز)
+- ✔️ اسلیپ‌نت نسخه v2.5.2 (لایت، فول، کلون)
+- ✔️ کلاینت v2rayNG نسخه v2.1.1
+- ✔️ اپلیکیشن MahsaAlert آفلاین نسخه v10
+- ✔️ اپلیکیشن MahsaNG نسخه v15
+- ✔️ اپلیکیشن AM Lite نسخه v59
+- ✔️ ویندسکرایب نسخه v3.99.2132
+- ✔️ کلاینت v2rayN نسخه v7.20.2
+
+</div>
+
+<hr/><br/>
+
+## 🔧 ابزار و مدیریت فایل
+
+- MT Manager — [v2.26.3](https://c147793.parspack.net/c147793/MT-Manager_v2.26.3.apk)
+- MT Manager Mod — [v2.14.5-v6](https://c147793.parspack.net/c147793/MT-Manager_v2.14.5_clone_v6.apk)
+- SAI — [v4.5.1](https://c147793.parspack.net/c147793/SAI_v4.5.zip)
+- ApktoolM — v2.4.0 ([universal](https://c147793.parspack.net/c147793/ApktoolM_universal_v2.4.0-251127.apk))
+- ADM Mod — v14.0.38 ([universal](https://c147793.parspack.net/c147793/ADM_universal_v14.0.38.zip))
+- Acode — v1.9.0 ([universal](https://c147793.parspack.net/c147793/Acode_v1.9.0.apk))
+- Mahsa Alert — v10 ([universal](https://c224731.parspack.net/c224731/MahsaAlert_Offline_v10.zip)) 🆕
+
+<hr/><br/>
+
+## 📡 کلاینت‌ و وی‌پی‌ان (VPN)
+
+- AM Tunnel Lite — v59 Google ([armv8](https://c224731.parspack.net/c224731/AMTunnel_Lite_armv8_v59.apks)) 🆕
+- AM Tunnel Lite Mod — v57 ([universal](https://files.bokhary.ir/logique/pub/Clients/AM%20TUNNEL%20LITE%20VPN_AM%20%5BMOD%20Universal%5D.apk))
+- Amnezia — v4.8.12.9 ([armv8](https://c147793.parspack.net/c147793/Amnezia_arm64-v8a_v4.8.12.9.zip))
+- ClashMeta — v2.11.25 ([armv8](https://c147793.parspack.net/c147793/Clash-Meta_armv8_v2.11.25.apk))
+- Defyx — v4.2.1 ([armv8](https://files.bokhary.ir/logique/pub/Clients/deyfx5.1.apk) / [armv7](https://h4.linklick.ir/c8c0c7da22ca5e8b8485b126714b04e9/app-armeabi-v7a-release.apk) / [win](https://h4.linklick.ir/c8c0c7da22ca5e8b8485b126714b04e9/windows-release.zip))
+- DNSTT — v2.2.0 ([armv8](https://c147793.parspack.net/c147793/DNSTT_CLIENT/DNSTT_armv8_v2.2.0.apk) / [armv7](https://c147793.parspack.net/c147793/DNSTT_CLIENT/DNSTT_armv7_v2.2.0.apk) / [conf](https://c147793.parspack.net/c147793/DNSTT_CLIENT/dnstt_conf.txt))
+- Exclave — v1.17.34 ([armv8](https://c224731.parspack.net/c224731/ex/Exclave_armv8_v0.17.34.apk) / [armv7](https://c224731.parspack.net/c224731/ex/Exclave_armv7_v0.17.34.apk)) + ([full backup 18 april](https://c224731.parspack.net/c224731/ex/ExclaveFullBackup_18April_2026.zip))
+- Happ — v3.18.1 ([universal](https://c224731.parspack.net/c224731/happ/HappAndroid_universal_v3.18.1.apk) / [win-x64](https://c224731.parspack.net/c224731/happ/Happ_windows-x64_v2.9.0.zip))
+- Hiddify — v4.1.1 ([universal](https://files.bokhary.ir/logique/pub/Clients/Hiddify-Android-v8a-4.1.1.apk) / [macos](https://api.mirrorino.com/raw/amirhbuilds/hiddify-app/releases/v4.1.1/Hiddify-MacOS.dmg) / [win](https://api.mirrorino.com/raw/amirhbuilds/hiddify-app/releases/v4.1.1/Hiddify-Windows-Setup-x64.exe))
+- HTTP Injector — v6.5.0 ([universal](https://c147793.parspack.net/c147793/HTTP-Injector_universal_6.5.0.apk))
+- InviZible Pro — v7.4.0 ([armv8](https://c147793.parspack.net/c147793/InZ/InviZiblePro_armv8_v7.4.0.apk))
+- InviZible Lite — v7.4.0 ([armv8](https://c147793.parspack.net/c147793/InZ/InvizibleLite_armv8_v7.4.0.apk))
+- MahsaNG — v15 ([armv8](https://c224731.parspack.net/c224731/MahsaNG_armv8_v15.apk)) 🆕
+- Netmod — v3.2.9 ([armv8](https://c147793.parspack.net/c147793/Netmod/NetMod_armv8_v3.2.9.apks) / [universal](https://c147793.parspack.net/c147793/Netmod/NetMod_universal_v3.2.8.apk) / [conf](https://c147793.parspack.net/c147793/SLIPNET/netmod_conf.txt))
+- NPVT — v123.1 ([armv8](https://c147793.parspack.net/c147793/Npv-Tunnel_armv8_v123.1.apks) / [universal](https://c147793.parspack.net/c147793/NPV-Tunnel_universal_v123.1.zip) / [conf](https://c147793.parspack.net/c147793/SLIPNET/npv_latest_configs.zip))
+- OpenVPN — v3.7.1 ([armv8](https://c147793.parspack.net/c147793/OpenVPN_armv8_v3.7.1.apks))
+- OpenVPN for Android — v0.7.64 ([armv8](https://c147793.parspack.net/c147793/OpenVPN_for_Android_armv8_v0.7.64.apks))
+- Orbot — v17.9.1-RC-1 ([armv8](https://up.20script.ir/do.php?filename=2912-Orbot.zip))
+- Psiphon — ([v439](https://c147793.parspack.net/c147793/PSIPHON/Psiphon_v439.apk) / [win](https://files.bokhary.ir/logique/pub/Clients/psiphon3.exe))
+- Psiphon — [v453](https://c147793.parspack.net/c147793/PSIPHON/Psiphon_v453.apk)
+- PsiphonPro — [v449](https://files.bokhary.ir/logique/pub/Clients/Psiphon%20Pro_449.apk)
+- PsiphonPro — [v454](https://c147793.parspack.net/c147793/PSIPHON/PsiphonPro_v454.apk)
+- PsiphonPro — [v458](https://c147793.parspack.net/c147793/PSIPHON/PsiphonPro_v458.apk)
+- ShirOkhorshid — [v2026.03.17](https://c224731.parspack.net/c224731/psi/ShirOKhorshid_universal_v2026.03.17.apk)
+- Rostam VPN — [v5.0.0](https://c147793.parspack.net/c147793/ROSTAM/Rostam_armv8_v5.0.0.apk)
+- SlipNet Lite — v2.5.2 ([armv8](https://c224731.parspack.net/c224731/slp/SlipnetLite_armv8_v2.5.2.apk) / [armv7](https://c224731.parspack.net/c224731/slp/SlipnetLite_armv7_v2.5.2.apk) / [clone](https://c224731.parspack.net/c224731/slp/SlipnetLiteClone_armv8_v2.5.2.apk)) 🆕
+- SlipNet Full — v2.5.2 ([armv8](https://c224731.parspack.net/c224731/slp/SlipnetFull_armv8_v2.5.2.apk) / [armv7](https://c147793.parspack.net/c147793/SLIPNET/SlipnetLite_armv7_v2.5.0.apk) / [universal](http://kalbod-team.ir/f/c709ac71778b4839)) 🆕
+- v2rayNG — v2.1.1 ([armv8](https://c224731.parspack.net/c224731/v2/v2rayNG_armv8_2.1.1.apk) / [armv7](https://c224731.parspack.net/c224731/v2/v2rayNG_armv7_2.1.1.apk)) 🆕
+- v2rayN — v7.20.2 ([windows](https://c147793.parspack.net/c147793/v2rayN_windows64_v7.20.2.zip))
+- V2box — v5.3.4 ([armv8](https://c147793.parspack.net/c147793/V2/V2BOX_armv8_v5.3.4.apks))
+- WireGuard — v1.0.20 ([universal](https://c147793.parspack.net/c147793/WireGuard_universal_1.0.20.zip))
+- WG Tunnel — v4.3.1 ([armv8](https://c147793.parspack.net/c147793/wgtunnel_armv8_v4.3.1.zip))
+- Windscribe — v3.99.2132 ([armv8](https://punkpaste.ir/f/Windscribe-armv8-v3--mdw4da))
+
+<hr/><br/> 
+
+## 🌐 سرویس‌های دی‌ان‌اس (DNS)
+
+- IntraDNS — v1.4.1 ([armv8](https://c147793.parspack.net/c147793/Intra_armv8_v1.4.1.apks))
+- Network Checker — v0.5.0 ([armv8](https://c147793.parspack.net/c147793/Network-checker_armv8_v0.5.0.apk))
+- SanDNS — v7.8.0 ([universal](https://c147793.parspack.net/c147793/SanDNS_universal_v7.8.0.apk))
+- Shekan — v2.1.7 ([universal](https://c147793.parspack.net/c147793/IR/Shecan_universal_v2.1.7.apk))
+- Rethink DNS — v0.5.5-53 ([universal](https://c147793.parspack.net/c147793/Rethink_universal_v53.zip))
+- DNS Changer — v2.6.3 ([universal](https://c147793.parspack.net/c147793/DNS-Changer_universal_v2.6.3.apk))
+- MasterDNS — v1.1.4 ([armv7](https://c147793.parspack.net/c147793/MasterDNS_armv7_v1.1.4.apk) / [armv8](https://c147793.parspack.net/c147793/MasterDNS_armv8_v1.1.4.apk))
+- VayDNS — v1.2.1 ([armv8](https://c147793.parspack.net/c147793/VayDNS_armv8_v1.2.1.apk))
+- Find DNS — v0.2.2.2.1 ([win](https://c147793.parspack.net/c147793/findns-windows-amd64.zip))
+- SNI SpoofingByPatterniha — v1 ([win](https://c224731.parspack.net/c224731/sni/SNI_SpoofingByPatterniha_v1.zip)) 🆕
+- SNI Spoofing — Rust ([win](https://c224731.parspack.net/c224731/sni/SNISpoofing_rust.zip))
+
+<hr/><br/>
+
+## ‏🇮🇷 اپلیکیشن‌های داخلی
+*قابل دانلود با اینترنت ملی:*
+
+- Snapp — [v8.40.0.300](https://downloads.snapp.site/android/passenger/website-build/8.40.0-300/Snapp-300-ProdAuto.apk)
+- Blubank — [v3.8.1.1](https://click.adtrace.io/0b7vfp3)
+- Zarebin browser — [v11.57.0](https://abhm.ir/ZAREBIN)
+- Maktabkhune — [v2.4.3](https://statics.maktabkhooneh.org/front/app-2.4.3.apk)
+- BitPin — [v94](https://cdn.bitpin.ir/media/app/android/bitpin-v94.apk)
+- ElementX — v26.03.2 ([armv8](https://c147793.parspack.net/c147793/ElementX_armv8_v26.03.2.apks))
+- Fluffy Chat — v2.4.0 ([armv8](https://c147793.parspack.net/c147793/FluffyChat_armv8_v2.4.0.apks))
+- TurboTel — v12.4.2 ([armv8](https://c147793.parspack.net/c147793/TG/TurboTel_armv8_v12.4.2.zip))
+- Telegram (G-Play) — v12.6.4 ([armv8](https://c147793.parspack.net/c147793/TG/Telegram_G-Play_armv8_v12.6.4.apks))
+- Telegram (Direct) — v12.6.4 ([universal](https://c147793.parspack.net/c147793/TG/Telegram_Direct_v12.6.4.zip))
+
+<hr/><br/>
+
+## 🔗 اشتراک‌گذاری اینترنت و آموزش‌ها
+
+- EveryProxy — v15.5.0 ([armv8](https://c147793.parspack.net/c147793/EP/EveryProxy_armv8_v15.5.0.apks))
+- EveryProxy — v10.5.0 ([armv8](https://c147793.parspack.net/c147793/EP/EveryProxy_armv8_v10.5.0.apk))
+- PdaNet Android — [v5232](https://c147793.parspack.net/c147793/EP/PdaNet_android_v5232.apk)
+- PdaNet Windows — [v5232](https://c147793.parspack.net/c147793/EP/PdaNet_windows_A5232b.exe)
+- How to ? ([zip file](https://c147793.parspack.net/c147793/EP/How_to_using___EveryProxy.zip) / [text messages](https://t.me/NiREvil_GP/274552))
+
+<hr/><br/>
+
+## 🛠 ابزارهای آنلاین و ربات‌های تلگرامی
+
+### 🔍 موتورهای جستجوی داخلی
+> در شرایط محدودیت اینترنت، این موتورهای جستجو به خوبی نتایج گوگل را نمایش می‌دهند:
+- 🌐 [Search.bertina.ir](https://search.bertina.ir) - (مرورگر بسیار خوب، نمایش دقیق نتایج سرچ گوگل)
+- 🌐 [Zarebin.ir](https://zarebin.ir/) - (مرورگر ذره‌بین)
+
+### 📬 ارسال، دریافت و مدیریت کانفیگ
+- 📝 **اشتراک‌گذاری متن:** [ctext.ir](https://ctext.ir/)
+- 💱 **مبدل کانفیگ نت‌مود به اسلیپ و بالعکس:** [@WHITEIPCHECK_Bot](https://t.me/WHITEIPCHECK_Bot)
+- 🪏 **استخراج کانفیگ از لینک‌های ساب:** [@L2FRobot](https://t.me/L2FRobot) | [@URLExtractor_Bot](https://t.me/URLExtractor_Bot)
+- ☣️ **اسکمر یاب:** پیش از خرید کانفیگ، حتماً آیدی فروشنده را بررسی کنید: [@scameryab_bot](https://t.me/scameryab_bot) | [@VPNScamSearchBot](https://t.me/VPNScamSearchBot)
+- 🐈‍⬛ **مشاهده و دانلود از گیت‌هاب:** [@GithubGitlabDownloader_bot](https://t.me/GithubGitlabDownloader_bot) | [@GitExp_bot](https://t.me/GitExp_bot)
+
+<hr/><br/>
+
+## 🤖 چت‌بات‌های هوش مصنوعی
+
+با توجه به محدودیت‌های فعلی در دسترسی به سرویس‌هایی نظیر Gemini و Claude، ربات‌های تلگرامی زیر جایگزین‌های بسیار کارآمدی هستند:
+
+1. 🧠 **[@chatGPTwrapperbot](https://t.me/chatGPTwrapperbot):** مدل واقعی جمنای Flash 3. *(نکته: قابلیت تفکر عمیق را روشن نکنید تا پاسخ‌دهی سریع‌تر انجام شود).*
+2. ✨ **[@mira](https://t.me/mira):** بسیار مرتب و کاربردی، بر پایه مدل‌های GPT-3.5/4 با قابلیت جستجو در سطح وب.
+3. 💬 **[@syntxaibot](https://t.me/syntxaibot)**
+4. 🤖 **[@GPT4Telegrambot](https://t.me/GPT4Telegrambot)**
+
+<hr/><br/>
+
+## 🎭 اپلیکیشن‌ها و سایت‌های فیلم و سریال
+**(بدون نیاز به اینترنت بین‌الملل / دانلود پرسرعت با نت داخلی)**
+
+### 📱 اپلیکیشن‌ها (لینک داخلی)
+- [Next Movie](@)
+- [BaroMovieMod](@)
+- [FilmZi](@)
+- [FilmKio](@)
+- [Filmaz](@)
+- [FilmBox](@)
+- [Kia movie](@)
+- [Elmastv](@)
+- [High Film](@)
+- [Sigma movie](@)
+
+### 📂 آرشیوهای بزرگ
+- 🎬 [Top 5000 movies](https://dls2.iran-gamecenter-host.com/DonyayeSerial/top_5000_movies.html) (آرشیو ۵ هزار فیلم)
+- 📺 [Top 1000 series](https://dls2.iran-gamecenter-host.com/DonyayeSerial/top_1000_series.html) (آرشیو هزار سریال)
+- 🆕 [New version](https://dls6.iran-gamecenter-host.com/DonyayeSerial/10_thous.html)
+
+> 💡 **چگونه فیلم مدنظر را در لیست‌های طولانی پیدا کنیم؟**
+> لینک را در مرورگر باز کنید. اگر با گوشی هستید از منوی سه‌نقطه `Find in page` را بزنید. اگر با سیستم هستید روی کیبورد کلیدهای <kbd>Ctrl</kbd> + <kbd>F</kbd> را فشار دهید. بخشی از نام فیلم/سریال را جستجو کنید تا مستقیماً به آن برسید.
+
+### 🌐 وب‌سایت‌های دانلود (بدون سانسور / اوکی با نت داخلی)
+- [Serialblog.net](https://serialblog.net) - (همراه با خلاصه داستان)
+- [oldtowns.top](https://www.oldtowns.top) - (سایت زیبا و بدون سانسور)
+- [f2mc.top](https://f2mc.top) | [myf2m.org](https://myf2m.org) - (سایت جایگزین با دو دامین)
+- [azfilm.ir](http://azfilm.theazizi.ir)
+
+### 📝 سایت‌های دانلود زیرنویس
+- [subzone.ir](https://subzone.ir)
+- [subkade.ir](https://subkade.ir)
+
+<hr/><br/>
+
+## 🗞 کانال‌های خبری تلگرام
+برخی از کانال‌های خبری مهم:
+
+| | | |
+| :--- | :--- | :--- |
+| 1. [@mossi_zi](https://t.me/mossi_zi) | 6. [@iliaen](https://t.me/iliaen) | 11. [@iran_efsha_news](https://t.me/iran_efsha_news) |
+| 2. [@virauniversitycom](https://t.me/virauniversitycom) | 7. [@VahidOnline](https://t.me/VahidOnline) | 12. [@drtel](https://t.me/drtel) |
+| 3. [@hadafazadi2022](https://t.me/hadafazadi2022) | 8. [@idfinfarsi](https://t.me/idfinfarsi) | 13. [@mahsa_alert](https://t.me/mahsa_alert) |
+| 4. [@IranintlTV](https://t.me/IranintlTV) | 9. [@IraneAzad_News](https://t.me/IraneAzad_News) | 14. [@JavidnamanIran](https://t.me/JavidnamanIran) |
+| 5. [@mamlekate](https://t.me/mamlekate) | 10. [@drdat_ir](https://t.me/drdat_ir) | 15. [@withyashar](https://t.me/withyashar) |
+
+<hr/><br/> 
+
+## 🚨 سایت‌ها و سرویس‌های ضروری (موقع قطعی نت)
+- 🌐 [Zoomg.ir](https://www.zoomg.ir/learning/413289-websites-internet-blackout)
+- 🌐 [Zoomit.ir](https://www.zoomit.ir/websites/342552-websites-directory-internet-shutdown)
+- 🌐 [Blog.irancell.ir](https://blog.irancell.ir/b/17282/list-of-iranian-sites)
+
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+<br><br/>	 
+
+## نوشته‌های قبل از 1405
+
 > [!WARNING]
 >
 > <br/>
