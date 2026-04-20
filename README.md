@@ -19,6 +19,7 @@
 <hr/><br/>
 
 ## 📑 فهرست محتوا
+
 - [🔄 آخرین تغییرات](#-آخرین-تغییرات)
 - [🔧 ابزار و مدیریت فایل](#-ابزار-و-مدیریت-فایل)
 - [📡 کلاینت‌ و وی‌پی‌ان (VPN)](#-کلاینت-و-ویپیان-vpn)
@@ -98,7 +99,7 @@
 - WG Tunnel — v4.3.1 ([armv8](https://c147793.parspack.net/c147793/wgtunnel_armv8_v4.3.1.zip))
 - Windscribe — v3.99.2132 ([armv8](https://punkpaste.ir/f/Windscribe-armv8-v3--mdw4da))
 
-<hr/><br/> 
+<hr/><br/>
 
 ## 🌐 سرویس‌های دی‌ان‌اس (DNS)
 
@@ -117,7 +118,8 @@
 <hr/><br/>
 
 ## ‏🇮🇷 اپلیکیشن‌های داخلی
-*قابل دانلود با اینترنت ملی:*
+
+_قابل دانلود با اینترنت ملی:_
 
 - Snapp — [v8.40.0.300](https://downloads.snapp.site/android/passenger/website-build/8.40.0-300/Snapp-300-ProdAuto.apk)
 - Blubank — [v3.8.1.1](https://click.adtrace.io/0b7vfp3)
@@ -145,11 +147,14 @@
 ## 🛠 ابزارهای آنلاین و ربات‌های تلگرامی
 
 ### 🔍 موتورهای جستجوی داخلی
+
 > در شرایط محدودیت اینترنت، این موتورهای جستجو به خوبی نتایج گوگل را نمایش می‌دهند:
+
 - 🌐 [Search.bertina.ir](https://search.bertina.ir) - (مرورگر بسیار خوب، نمایش دقیق نتایج سرچ گوگل)
 - 🌐 [Zarebin.ir](https://zarebin.ir/) - (مرورگر ذره‌بین)
 
 ### 📬 ارسال، دریافت و مدیریت کانفیگ
+
 - 📝 **اشتراک‌گذاری متن:** [ctext.ir](https://ctext.ir/)
 - 💱 **مبدل کانفیگ نت‌مود به اسلیپ و بالعکس:** [@WHITEIPCHECK_Bot](https://t.me/WHITEIPCHECK_Bot)
 - 🪏 **استخراج کانفیگ از لینک‌های ساب:** [@L2FRobot](https://t.me/L2FRobot) | [@URLExtractor_Bot](https://t.me/URLExtractor_Bot)
@@ -162,7 +167,7 @@
 
 با توجه به محدودیت‌های فعلی در دسترسی به سرویس‌هایی نظیر Gemini و Claude، ربات‌های تلگرامی زیر جایگزین‌های بسیار کارآمدی هستند:
 
-1. 🧠 **[@chatGPTwrapperbot](https://t.me/chatGPTwrapperbot):** مدل واقعی جمنای Flash 3. *(نکته: قابلیت تفکر عمیق را روشن نکنید تا پاسخ‌دهی سریع‌تر انجام شود).*
+1. 🧠 **[@chatGPTwrapperbot](https://t.me/chatGPTwrapperbot):** مدل واقعی جمنای Flash 3. _(نکته: قابلیت تفکر عمیق را روشن نکنید تا پاسخ‌دهی سریع‌تر انجام شود)._
 2. ✨ **[@mira](https://t.me/mira):** بسیار مرتب و کاربردی، بر پایه مدل‌های GPT-3.5/4 با قابلیت جستجو در سطح وب.
 3. 💬 **[@syntxaibot](https://t.me/syntxaibot)**
 4. 🤖 **[@GPT4Telegrambot](https://t.me/GPT4Telegrambot)**
@@ -170,9 +175,11 @@
 <hr/><br/>
 
 ## 🎭 اپلیکیشن‌ها و سایت‌های فیلم و سریال
+
 **(بدون نیاز به اینترنت بین‌الملل / دانلود پرسرعت با نت داخلی)**
 
 ### 📱 اپلیکیشن‌ها (لینک داخلی)
+
 - [Next Movie](@)
 - [BaroMovieMod](@)
 - [FilmZi](@)
@@ -185,6 +192,7 @@
 - [Sigma movie](@)
 
 ### 📂 آرشیوهای بزرگ
+
 - 🎬 [Top 5000 movies](https://dls2.iran-gamecenter-host.com/DonyayeSerial/top_5000_movies.html) (آرشیو ۵ هزار فیلم)
 - 📺 [Top 1000 series](https://dls2.iran-gamecenter-host.com/DonyayeSerial/top_1000_series.html) (آرشیو هزار سریال)
 - 🆕 [New version](https://dls6.iran-gamecenter-host.com/DonyayeSerial/10_thous.html)
@@ -193,71 +201,74 @@
 > لینک را در مرورگر باز کنید. اگر با گوشی هستید از منوی سه‌نقطه `Find in page` را بزنید. اگر با سیستم هستید روی کیبورد کلیدهای <kbd>Ctrl</kbd> + <kbd>F</kbd> را فشار دهید. بخشی از نام فیلم/سریال را جستجو کنید تا مستقیماً به آن برسید.
 
 ### 🌐 وب‌سایت‌های دانلود (بدون سانسور / اوکی با نت داخلی)
+
 - [Serialblog.net](https://serialblog.net) - (همراه با خلاصه داستان)
 - [oldtowns.top](https://www.oldtowns.top) - (سایت زیبا و بدون سانسور)
 - [f2mc.top](https://f2mc.top) | [myf2m.org](https://myf2m.org) - (سایت جایگزین با دو دامین)
 - [azfilm.ir](http://azfilm.theazizi.ir)
 
 ### 📝 سایت‌های دانلود زیرنویس
+
 - [subzone.ir](https://subzone.ir)
 - [subkade.ir](https://subkade.ir)
 
 <hr/><br/>
 
 ## 🗞 کانال‌های خبری تلگرام
+
 برخی از کانال‌های خبری مهم:
 
-| | | |
-| :--- | :--- | :--- |
-| 1. [@mossi_zi](https://t.me/mossi_zi) | 6. [@iliaen](https://t.me/iliaen) | 11. [@iran_efsha_news](https://t.me/iran_efsha_news) |
-| 2. [@virauniversitycom](https://t.me/virauniversitycom) | 7. [@VahidOnline](https://t.me/VahidOnline) | 12. [@drtel](https://t.me/drtel) |
-| 3. [@hadafazadi2022](https://t.me/hadafazadi2022) | 8. [@idfinfarsi](https://t.me/idfinfarsi) | 13. [@mahsa_alert](https://t.me/mahsa_alert) |
-| 4. [@IranintlTV](https://t.me/IranintlTV) | 9. [@IraneAzad_News](https://t.me/IraneAzad_News) | 14. [@JavidnamanIran](https://t.me/JavidnamanIran) |
-| 5. [@mamlekate](https://t.me/mamlekate) | 10. [@drdat_ir](https://t.me/drdat_ir) | 15. [@withyashar](https://t.me/withyashar) |
+|                                                         |                                                   |                                                      |
+| :------------------------------------------------------ | :------------------------------------------------ | :--------------------------------------------------- |
+| 1. [@mossi_zi](https://t.me/mossi_zi)                   | 6. [@iliaen](https://t.me/iliaen)                 | 11. [@iran_efsha_news](https://t.me/iran_efsha_news) |
+| 2. [@virauniversitycom](https://t.me/virauniversitycom) | 7. [@VahidOnline](https://t.me/VahidOnline)       | 12. [@drtel](https://t.me/drtel)                     |
+| 3. [@hadafazadi2022](https://t.me/hadafazadi2022)       | 8. [@idfinfarsi](https://t.me/idfinfarsi)         | 13. [@mahsa_alert](https://t.me/mahsa_alert)         |
+| 4. [@IranintlTV](https://t.me/IranintlTV)               | 9. [@IraneAzad_News](https://t.me/IraneAzad_News) | 14. [@JavidnamanIran](https://t.me/JavidnamanIran)   |
+| 5. [@mamlekate](https://t.me/mamlekate)                 | 10. [@drdat_ir](https://t.me/drdat_ir)            | 15. [@withyashar](https://t.me/withyashar)           |
 
-<hr/><br/> 
+<hr/><br/>
 
 ## 🚨 سایت‌ها و سرویس‌های ضروری (موقع قطعی نت)
+
 - 🌐 [Zoomg.ir](https://www.zoomg.ir/learning/413289-websites-internet-blackout)
 - 🌐 [Zoomit.ir](https://www.zoomit.ir/websites/342552-websites-directory-internet-shutdown)
 - 🌐 [Blog.irancell.ir](https://blog.irancell.ir/b/17282/list-of-iranian-sites)
 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
+<br><br/>
 
-<br><br/>	 
-
-<br><br/>	 
+<br><br/>
 
 ## نوشته‌های قبل از 1405
 
