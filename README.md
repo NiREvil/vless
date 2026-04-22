@@ -8,7 +8,7 @@
 ## 📦 مخزن ابزارها، کلاینت‌ها و لینک‌های دانلود (اینترانت / اینترنت)
 
 <div align="right">
-  <img src="https://img.shields.io/badge/آخرین_بروزرسانی-سی‌و‌یکم_فروردین_۱۴۰۵-blue?style=for-the-badge&logo=github" alt="Update Date" />
+  <img src="https://img.shields.io/badge/آخرین_بروزرسانی_دوم_ازدیبهشت_۱۴۰۵-blue?style=for-the-badge&logo=github" alt="Update Date" />
   <img src="https://img.shields.io/badge/وضعیت-فعال-success?style=for-the-badge" alt="Status" />
 </div>
 
@@ -37,7 +37,9 @@
 
 جدیدترین آپدیت‌های اضافه شده در این نسخه:
 
-- ✔️ کلاینت exclave نسخه v0.17.34
+- ✔️ اپ DNS Changer نسخه مود v2.9.2
+- ✔️ کلاینت Master DNS GG نسخه v1.0.9
+- ✔️ کلاینت Exclave نسخه v0.17.34
 - ✔️ کلاینت Happ نسخه‌ی v3.18.1 (اندروید و ویندوز)
 - ✔️ اسلیپ‌نت نسخه v2.5.2 (لایت، فول، کلون)
 - ✔️ کلاینت v2rayNG نسخه v2.1.1
@@ -103,13 +105,13 @@
 
 ## 🌐 سرویس‌های دی‌ان‌اس (DNS)
 
+- DNS Changer — v2.9.2 ([universal](https://c224731.parspack.net/c224731/DNS-Changer_mod_universal_v2.9.2.apk) 🆕
 - IntraDNS — v1.4.1 ([armv8](https://c147793.parspack.net/c147793/Intra_armv8_v1.4.1.apks))
 - Network Checker — v0.5.0 ([armv8](https://c147793.parspack.net/c147793/Network-checker_armv8_v0.5.0.apk))
 - SanDNS — v7.8.0 ([universal](https://c147793.parspack.net/c147793/SanDNS_universal_v7.8.0.apk))
 - Shekan — v2.1.7 ([universal](https://c147793.parspack.net/c147793/IR/Shecan_universal_v2.1.7.apk))
 - Rethink DNS — v0.5.5-53 ([universal](https://c147793.parspack.net/c147793/Rethink_universal_v53.zip))
-- DNS Changer — v2.6.3 ([universal](https://c147793.parspack.net/c147793/DNS-Changer_universal_v2.6.3.apk))
-- MasterDNS — v1.1.4 ([armv7](https://c147793.parspack.net/c147793/MasterDNS_armv7_v1.1.4.apk) / [armv8](https://c147793.parspack.net/c147793/MasterDNS_armv8_v1.1.4.apk))
+- MasterDNS — v1.0.9 ([armv8](https://c224731.parspack.net/c224731/slp/MasterDnsVPN-GG_armv8_v1.0.9.apk) / [armv7](https://c224731.parspack.net/c224731/slp/MasterDnsVPN-GG_armv7_v1.0.9.apk)) 🆕
 - VayDNS — v1.2.1 ([armv8](https://c147793.parspack.net/c147793/VayDNS_armv8_v1.2.1.apk))
 - Find DNS — v0.2.2.2.1 ([win](https://c147793.parspack.net/c147793/findns-windows-amd64.zip))
 - SNI SpoofingByPatterniha — v1 ([win](https://c224731.parspack.net/c224731/sni/SNI_SpoofingByPatterniha_v1.zip)) 🆕
@@ -150,6 +152,7 @@ _قابل دانلود با اینترنت ملی:_
 
 > در شرایط محدودیت اینترنت، این موتورهای جستجو به خوبی نتایج گوگل را نمایش می‌دهند:
 
+- 🤖 [@Gooogleit_bot](https://t.me/@Gooogleit_bot) - (ربات جستجوگر گوگل در تلگرام(
 - 🌐 [Search.bertina.ir](https://search.bertina.ir) - (مرورگر بسیار خوب، نمایش دقیق نتایج سرچ گوگل)
 - 🌐 [Zarebin.ir](https://zarebin.ir/) - (مرورگر ذره‌بین)
 
@@ -167,10 +170,12 @@ _قابل دانلود با اینترنت ملی:_
 
 با توجه به محدودیت‌های فعلی در دسترسی به سرویس‌هایی نظیر Gemini و Claude، ربات‌های تلگرامی زیر جایگزین‌های بسیار کارآمدی هستند:
 
-1. 🧠 **[@chatGPTwrapperbot](https://t.me/chatGPTwrapperbot):** مدل واقعی جمنای Flash 3. _(نکته: قابلیت تفکر عمیق را روشن نکنید تا پاسخ‌دهی سریع‌تر انجام شود)._
-2. ✨ **[@mira](https://t.me/mira):** بسیار مرتب و کاربردی، بر پایه مدل‌های GPT-3.5/4 با قابلیت جستجو در سطح وب.
-3. 💬 **[@syntxaibot](https://t.me/syntxaibot)**
-4. 🤖 **[@GPT4Telegrambot](https://t.me/GPT4Telegrambot)**
+1. ✨ **[@mira](https://t.me/mira):** بسیار مرتب و کاربردی، بر پایه مدل‌های GPT-3.5/4 با قابلیت جستجو در سطح وب.
+2. 🧠 **[@chatGPTwrapperbot](https://t.me/chatGPTwrapperbot):** مدل واقعی جمنای Flash 3. _(نکته: قابلیت تفکر عمیق را روشن نکنید تا پاسخ‌دهی سریع‌تر انجام شود)._
+3. 🤖 **[@Gemini_PV_bot](https://t.me/Gemini_PV_bot):**
+4. ⚡ **[@TypespaceBot](https://t.me/TypespaceBot):**
+5. 💬 **[@syntxaibot](https://t.me/syntxaibot)**
+6. 🌟 **[@GPT4Telegrambot](https://t.me/GPT4Telegrambot)**
 
 <hr/><br/>
 
@@ -180,7 +185,7 @@ _قابل دانلود با اینترنت ملی:_
 
 ### 📱 اپلیکیشن‌ها (لینک داخلی)
 
-- [Next Movie](@)
+- [Next Movie](https://c224731.parspack.net/c224731/Next-Movie_Mod_v4.2.apk)
 - [BaroMovieMod](@)
 - [FilmZi](@)
 - [FilmKio](@)
@@ -230,6 +235,7 @@ _قابل دانلود با اینترنت ملی:_
 
 ## 🚨 سایت‌ها و سرویس‌های ضروری (موقع قطعی نت)
 
+- 🌐 [Linkdooni](https://linkdooni.site/)
 - 🌐 [Zoomg.ir](https://www.zoomg.ir/learning/413289-websites-internet-blackout)
 - 🌐 [Zoomit.ir](https://www.zoomit.ir/websites/342552-websites-directory-internet-shutdown)
 - 🌐 [Blog.irancell.ir](https://blog.irancell.ir/b/17282/list-of-iranian-sites)
