@@ -34,6 +34,7 @@
 <hr/><br/>
 
 ## 🔄 آخرین تغییرات
+
 <details>
 <summary> برای مشاهده لیست تغییرات اخیر کلیک کنید. </summary><br/>
 
@@ -195,7 +196,6 @@ _قابل دانلود با اینترنت ملی:_
 
 - 🎬 [Next Movie](https://c224731.parspack.net/c224731/Next-Movie_Mod_v4.2.apk)
 - 📽️ [FilmKio](https://c224731.parspack.net/c224731/FilmKio_universal_v3.8.1.apk)
-
 
 ### 📂 آرشیوهای بزرگ
 
