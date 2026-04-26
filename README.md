@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="150x" </p>
+<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="180x" </p>
   
 <br><br/>
 
@@ -8,7 +8,7 @@
 ## 📦 مخزن ابزارها، کلاینت‌ها و لینک‌های دانلود (اینترانت / اینترنت)
 
 <div align="right">
-  <img src="https://img.shields.io/badge/آخرین_بروزرسانی_دوم_ازدیبهشت_۱۴۰۵-blue?style=for-the-badge&logo=github" alt="Update Date" />
+  <img src="https://img.shields.io/badge/آخرین_بروزرسانی_هفتم_ازدیبهشت_۱۴۰۵-blue?style=for-the-badge&logo=github" alt="Update Date" />
   <img src="https://img.shields.io/badge/وضعیت-فعال-success?style=for-the-badge" alt="Status" />
 </div>
 
@@ -34,20 +34,25 @@
 <hr/><br/>
 
 ## 🔄 آخرین تغییرات
+<details>
+<summary> برای مشاهده لیست تغییرات اخیر کلیک کنید. </summary><br/>
 
-جدیدترین آپدیت‌های اضافه شده در این نسخه:
-
+- ✔️ کلاینت Exclave نسخه v0.17.35
+- ✔️کلاینت v2rayNG نسخه v2.1.2
+- ✔️کلاینت clash-meta نسخه v2.11.27
+- ✔️ کلاینت نکوباکس نسخه v1.4.2
+- ✔️ سایفون پرو گوگل‌پلی نسخه v460
+- ✔️ نسخه v5.32 اپ pdaNet
+- ✔️ کلاینت NetMod نسخه v4.0.0 بتا
+- ✔️ اپ every proxy نسخه v15.7.0
 - ✔️ اپ DNS Changer نسخه مود v2.9.2
 - ✔️ کلاینت Master DNS GG نسخه v1.0.9
-- ✔️ کلاینت Exclave نسخه v0.17.34
 - ✔️ کلاینت Happ نسخه‌ی v3.18.1 (اندروید و ویندوز)
 - ✔️ اسلیپ‌نت نسخه v2.5.2 (لایت، فول، کلون)
-- ✔️ کلاینت v2rayNG نسخه v2.1.1
-- ✔️ اپلیکیشن MahsaAlert آفلاین نسخه v10
-- ✔️ اپلیکیشن MahsaNG نسخه v15
-- ✔️ اپلیکیشن AM Lite نسخه v59
+- ✔️ اپ MahsaAlert آفلاین نسخه v10
 - ✔️ ویندسکرایب نسخه v3.99.2132
-- ✔️ کلاینت v2rayN نسخه v7.20.2
+
+</details>
 
 </div>
 
@@ -58,29 +63,30 @@
 - MT Manager — [v2.26.3](https://c147793.parspack.net/c147793/MT-Manager_v2.26.3.apk)
 - MT Manager Mod — [v2.14.5-v6](https://c147793.parspack.net/c147793/MT-Manager_v2.14.5_clone_v6.apk)
 - SAI — [v4.5.1](https://c147793.parspack.net/c147793/SAI_v4.5.zip)
-- ApktoolM — v2.4.0 ([universal](https://c147793.parspack.net/c147793/ApktoolM_universal_v2.4.0-251127.apk))
-- ADM Mod — v14.0.38 ([universal](https://c147793.parspack.net/c147793/ADM_universal_v14.0.38.zip))
-- Acode — v1.9.0 ([universal](https://c147793.parspack.net/c147793/Acode_v1.9.0.apk))
-- Mahsa Alert — v10 ([universal](https://c224731.parspack.net/c224731/MahsaAlert_Offline_v10.zip)) 🆕
+- ApktoolM — ([v2.4.0](https://c147793.parspack.net/c147793/ApktoolM_universal_v2.4.0-251127.apk))
+- Shizuku — ([v13.6.0](https://c224731.parspack.net/c224731/ep/Shizuku_v13.6.0.r1318.apk))
+- ADM Mod — ([v14.0.38](https://c147793.parspack.net/c147793/ADM_universal_v14.0.38.zip))
+- Acode — ([v1.9.0](https://c147793.parspack.net/c147793/Acode_v1.9.0.apk))
+- Mahsa Alert — ([v10.0](https://c224731.parspack.net/c224731/MahsaAlert_Offline_v10.zip))
 
 <hr/><br/>
 
 ## 📡 کلاینت‌ و وی‌پی‌ان (VPN)
 
-- AM Tunnel Lite — v59 Google ([armv8](https://c224731.parspack.net/c224731/AMTunnel_Lite_armv8_v59.apks)) 🆕
-- AM Tunnel Lite Mod — v57 ([universal](https://files.bokhary.ir/logique/pub/Clients/AM%20TUNNEL%20LITE%20VPN_AM%20%5BMOD%20Universal%5D.apk))
-- Amnezia — v4.8.12.9 ([armv8](https://c147793.parspack.net/c147793/Amnezia_arm64-v8a_v4.8.12.9.zip))
-- ClashMeta — v2.11.25 ([armv8](https://c147793.parspack.net/c147793/Clash-Meta_armv8_v2.11.25.apk))
-- Defyx — v4.2.1 ([armv8](https://files.bokhary.ir/logique/pub/Clients/deyfx5.1.apk) / [armv7](https://h4.linklick.ir/c8c0c7da22ca5e8b8485b126714b04e9/app-armeabi-v7a-release.apk) / [win](https://h4.linklick.ir/c8c0c7da22ca5e8b8485b126714b04e9/windows-release.zip))
+- AM Tunnel Lite — v59 Google ([armv8](https://c224731.parspack.net/c224731/AMTunnel_Lite_armv8_v59.apks))
+- Amnezia — v4.8.15.0 ([armv8](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/AmneziaVPN_4.8.15.0_android9+_arm64-v8a.apk))
+- ClashMeta — v2.11.27 ([armv8](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/cmfa-2.11.27-meta-arm64-v8a-release.apk) / [armv7](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/cmfa-2.11.27-meta-armeabi-v7a-release.apk) / [universal](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/cmfa-2.11.27-meta-universal-release.apk)) 🆕
+- Defyx — v5.2.8 ([armv8](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/app-arm64-v8a-release.apk) / [armv7](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/app-armeabi-v7a-release.apk) / [win](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/windows-release.zip))
 - DNSTT — v2.2.0 ([armv8](https://c147793.parspack.net/c147793/DNSTT_CLIENT/DNSTT_armv8_v2.2.0.apk) / [armv7](https://c147793.parspack.net/c147793/DNSTT_CLIENT/DNSTT_armv7_v2.2.0.apk) / [conf](https://c147793.parspack.net/c147793/DNSTT_CLIENT/dnstt_conf.txt))
-- Exclave — v1.17.34 ([armv8](https://c224731.parspack.net/c224731/ex/Exclave_armv8_v0.17.34.apk) / [armv7](https://c224731.parspack.net/c224731/ex/Exclave_armv7_v0.17.34.apk)) + ([full backup 18 april](https://c224731.parspack.net/c224731/ex/ExclaveFullBackup_18April_2026.zip))
+- Exclave — v1.17.34 ([armv8](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/Exclave-0.17.35-arm64-v8a.apk) / [armv7](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/Exclave-0.17.35-armeabi-v7a.apk)) + ([full backup 18 april](https://c224731.parspack.net/c224731/ex/ExclaveFullBackup_18April_2026.zip)) 🆕
 - Happ — v3.18.1 ([universal](https://c224731.parspack.net/c224731/happ/HappAndroid_universal_v3.18.1.apk) / [win-x64](https://c224731.parspack.net/c224731/happ/Happ_windows-x64_v2.9.0.zip))
 - Hiddify — v4.1.1 ([universal](https://files.bokhary.ir/logique/pub/Clients/Hiddify-Android-v8a-4.1.1.apk) / [macos](https://api.mirrorino.com/raw/amirhbuilds/hiddify-app/releases/v4.1.1/Hiddify-MacOS.dmg) / [win](https://api.mirrorino.com/raw/amirhbuilds/hiddify-app/releases/v4.1.1/Hiddify-Windows-Setup-x64.exe))
 - HTTP Injector — v6.5.0 ([universal](https://c147793.parspack.net/c147793/HTTP-Injector_universal_6.5.0.apk))
 - InviZible Pro — v7.4.0 ([armv8](https://c147793.parspack.net/c147793/InZ/InviZiblePro_armv8_v7.4.0.apk))
 - InviZible Lite — v7.4.0 ([armv8](https://c147793.parspack.net/c147793/InZ/InvizibleLite_armv8_v7.4.0.apk))
-- MahsaNG — v15 ([armv8](https://c224731.parspack.net/c224731/MahsaNG_armv8_v15.apk)) 🆕
-- Netmod — v3.2.9 ([armv8](https://c147793.parspack.net/c147793/Netmod/NetMod_armv8_v3.2.9.apks) / [universal](https://c147793.parspack.net/c147793/Netmod/NetMod_universal_v3.2.8.apk) / [conf](https://c147793.parspack.net/c147793/SLIPNET/netmod_conf.txt))
+- MahsaNG — v15 ([armv8](https://c224731.parspack.net/c224731/MahsaNG_armv8_v15.apk))
+- NekoBox — v1.4.2 ([armv8](https://c224731.parspack.net/c224731/ex/NekoBox_armv8_v1.4.2.apk) / [armv7](https://c224731.parspack.net/c224731/ex/NekoBox_armv7_v1.4.2.apk)) 🆕
+- Netmod — v4.0.0 ([armv8](https://c224731.parspack.net/c224731/NetMod_armv8_v4.0.0.apks) / [universal](https://c147793.parspack.net/c147793/Netmod/NetMod_universal_v3.2.8.apk) / [conf](https://c147793.parspack.net/c147793/SLIPNET/netmod_conf.txt))
 - NPVT — v123.1 ([armv8](https://c147793.parspack.net/c147793/Npv-Tunnel_armv8_v123.1.apks) / [universal](https://c147793.parspack.net/c147793/NPV-Tunnel_universal_v123.1.zip) / [conf](https://c147793.parspack.net/c147793/SLIPNET/npv_latest_configs.zip))
 - OpenVPN — v3.7.1 ([armv8](https://c147793.parspack.net/c147793/OpenVPN_armv8_v3.7.1.apks))
 - OpenVPN for Android — v0.7.64 ([armv8](https://c147793.parspack.net/c147793/OpenVPN_for_Android_armv8_v0.7.64.apks))
@@ -90,16 +96,17 @@
 - PsiphonPro — [v449](https://files.bokhary.ir/logique/pub/Clients/Psiphon%20Pro_449.apk)
 - PsiphonPro — [v454](https://c147793.parspack.net/c147793/PSIPHON/PsiphonPro_v454.apk)
 - PsiphonPro — [v458](https://c147793.parspack.net/c147793/PSIPHON/PsiphonPro_v458.apk)
+- PsiphonPro — [v460](https://c224731.parspack.net/c224731/psi/PsiphonPro_v460.apk) 🆕
 - ShirOkhorshid — [v2026.03.17](https://c224731.parspack.net/c224731/psi/ShirOKhorshid_universal_v2026.03.17.apk)
 - Rostam VPN — [v5.0.0](https://c147793.parspack.net/c147793/ROSTAM/Rostam_armv8_v5.0.0.apk)
-- SlipNet Lite — v2.5.2 ([armv8](https://c224731.parspack.net/c224731/slp/SlipnetLite_armv8_v2.5.2.apk) / [armv7](https://c224731.parspack.net/c224731/slp/SlipnetLite_armv7_v2.5.2.apk) / [clone](https://c224731.parspack.net/c224731/slp/SlipnetLiteClone_armv8_v2.5.2.apk)) 🆕
-- SlipNet Full — v2.5.2 ([armv8](https://c224731.parspack.net/c224731/slp/SlipnetFull_armv8_v2.5.2.apk) / [armv7](https://c147793.parspack.net/c147793/SLIPNET/SlipnetLite_armv7_v2.5.0.apk) / [universal](http://kalbod-team.ir/f/c709ac71778b4839)) 🆕
-- v2rayNG — v2.1.1 ([armv8](https://c224731.parspack.net/c224731/v2/v2rayNG_armv8_2.1.1.apk) / [armv7](https://c224731.parspack.net/c224731/v2/v2rayNG_armv7_2.1.1.apk)) 🆕
+- SlipNet Lite — v2.5.2 ([armv8](https://c224731.parspack.net/c224731/slp/SlipnetLite_armv8_v2.5.2.apk) / [armv7](https://c224731.parspack.net/c224731/slp/SlipnetLite_armv7_v2.5.2.apk) / [clone](https://c224731.parspack.net/c224731/slp/SlipnetLiteClone_armv8_v2.5.2.apk))
+- SlipNet Full — v2.5.2 ([armv8](https://c224731.parspack.net/c224731/slp/SlipnetFull_armv8_v2.5.2.apk) / [armv7](https://c147793.parspack.net/c147793/SLIPNET/SlipnetLite_armv7_v2.5.0.apk) / [universal](http://kalbod-team.ir/f/c709ac71778b4839))
+- v2rayNG — v2.1.2 ([armv8](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/v2rayNG_2.1.2_arm64-v8a.apk) / [armv7](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/v2rayNG_2.1.2_armeabi-v7a.apk)) 🆕
 - v2rayN — v7.20.2 ([windows](https://c147793.parspack.net/c147793/v2rayN_windows64_v7.20.2.zip))
 - V2box — v5.3.4 ([armv8](https://c147793.parspack.net/c147793/V2/V2BOX_armv8_v5.3.4.apks))
 - WireGuard — v1.0.20 ([universal](https://c147793.parspack.net/c147793/WireGuard_universal_1.0.20.zip))
 - WG Tunnel — v4.3.1 ([armv8](https://c147793.parspack.net/c147793/wgtunnel_armv8_v4.3.1.zip))
-- Windscribe — v3.99.2132 ([armv8](https://punkpaste.ir/f/Windscribe-armv8-v3--mdw4da))
+- Windscribe — v3.99.2132 ([armv8](https://c224731.parspack.net/c224731/Windscribe_armv8_v3.99.2132.apks)) 🆕
 
 <hr/><br/>
 
@@ -114,7 +121,7 @@
 - MasterDNS — v1.0.9 ([armv8](https://c224731.parspack.net/c224731/slp/MasterDnsVPN-GG_armv8_v1.0.9.apk) / [armv7](https://c224731.parspack.net/c224731/slp/MasterDnsVPN-GG_armv7_v1.0.9.apk)) 🆕
 - VayDNS — v1.2.1 ([armv8](https://c147793.parspack.net/c147793/VayDNS_armv8_v1.2.1.apk))
 - Find DNS — v0.2.2.2.1 ([win](https://c147793.parspack.net/c147793/findns-windows-amd64.zip))
-- SNI SpoofingByPatterniha — v1 ([win](https://c224731.parspack.net/c224731/sni/SNI_SpoofingByPatterniha_v1.zip)) 🆕
+- SNI SpoofingByPatterniha — v1 ([win](https://c224731.parspack.net/c224731/sni/SNI_SpoofingByPatterniha_v1.zip))
 - SNI Spoofing — Rust ([win](https://c224731.parspack.net/c224731/sni/SNISpoofing_rust.zip))
 
 <hr/><br/>
@@ -138,10 +145,10 @@ _قابل دانلود با اینترنت ملی:_
 
 ## 🔗 اشتراک‌گذاری اینترنت و آموزش‌ها
 
-- EveryProxy — v15.5.0 ([armv8](https://c147793.parspack.net/c147793/EP/EveryProxy_armv8_v15.5.0.apks))
+- EveryProxy — v15.7.0 ([armv8](https://c224731.parspack.net/c224731/ep/EveryProxy_armv8_v15.7.0.apks)) 🆕
 - EveryProxy — v10.5.0 ([armv8](https://c147793.parspack.net/c147793/EP/EveryProxy_armv8_v10.5.0.apk))
-- PdaNet Android — [v5232](https://c147793.parspack.net/c147793/EP/PdaNet_android_v5232.apk)
-- PdaNet Windows — [v5232](https://c147793.parspack.net/c147793/EP/PdaNet_windows_A5232b.exe)
+- PdaNet Android — [v5.32](https://c224731.parspack.net/c224731/ep/PdaNet%2B_android_v5.32.apk) 🆕
+- PdaNet Windows — [v5.32](https://c224731.parspack.net/c224731/ep/PdaNet_windows_v5.32.exe)
 - How to ? ([zip file](https://c147793.parspack.net/c147793/EP/How_to_using___EveryProxy.zip) / [text messages](https://t.me/NiREvil_GP/274552))
 
 <hr/><br/>
@@ -154,6 +161,7 @@ _قابل دانلود با اینترنت ملی:_
 
 - 🤖 [@Gooogleit_bot](https://t.me/@Gooogleit_bot) - (ربات جستجوگر گوگل در تلگرام(
 - 🌐 [Search.bertina.ir](https://search.bertina.ir) - (مرورگر بسیار خوب، نمایش دقیق نتایج سرچ گوگل)
+- 🐣 [llm.bertina.ir](https://llm.bertina.ir) - (مدل هوش مصنوعی برتینا)
 - 🌐 [Zarebin.ir](https://zarebin.ir/) - (مرورگر ذره‌بین)
 
 ### 📬 ارسال، دریافت و مدیریت کانفیگ
@@ -185,16 +193,9 @@ _قابل دانلود با اینترنت ملی:_
 
 ### 📱 اپلیکیشن‌ها (لینک داخلی)
 
-- [Next Movie](https://c224731.parspack.net/c224731/Next-Movie_Mod_v4.2.apk)
-- [BaroMovieMod](@)
-- [FilmZi](@)
-- [FilmKio](@)
-- [Filmaz](@)
-- [FilmBox](@)
-- [Kia movie](@)
-- [Elmastv](@)
-- [High Film](@)
-- [Sigma movie](@)
+- 🎬 [Next Movie](https://c224731.parspack.net/c224731/Next-Movie_Mod_v4.2.apk)
+- 📽️ [FilmKio](https://c224731.parspack.net/c224731/FilmKio_universal_v3.8.1.apk)
+
 
 ### 📂 آرشیوهای بزرگ
 
