@@ -107,14 +107,14 @@ jobs:
           fi
           cd ..
           
-          echo "✨ Formatting the new entry..."
+          echo "Formatting the new entry..."
           LICENSE_KEY=$(grep '^License Key:' "$TEMP_OUTPUT" | sed 's/^License Key: //' || true)
           LICENSE_OUT_DATE=$(grep '^License Out Date:' "$TEMP_OUTPUT" | sed 's/^License Out Date: //' || true)
           ACCOUNT_EMAIL=$(grep '^Account Email:' "$TEMP_OUTPUT" | sed 's/^Account Email: //' || true)
           ACCOUNT_PASSWORD=$(grep '^Account Password:' "$TEMP_OUTPUT" | sed 's/^Account Password: //' || true)
 
           NEW_ENTRY_FILE="new_entry.md.tmp"
-          CURRENT_DATETIME_IRAN=$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M IRN')
+          CURRENT_DATETIME_IRAN=$(TZ='Asia/Tehran' date '+%A, %d %B %Y, %H:%M')
 
           {
             echo "### Generated On: ${CURRENT_DATETIME_IRAN}"
@@ -163,7 +163,6 @@ jobs:
 
           {
             echo "Everything you need to know about ESET. [^1]"
-            echo "Credits [^2]"
           } >> "$NEW_ENTRY_FILE"
           
           OUTPUT_FILE="${{ env.OUTPUT_FILENAME }}"
@@ -195,7 +194,7 @@ jobs:
           {
               echo "## ESET Trial Accounts"
               cat "$NEW_ENTRY_FILE"
-              echo "<hr><br/>" # Using a horizontal rule for better separation
+              echo "<hr><br/>"
               echo ""
               cat "$OLD_CONTENT_BODY_TMP"
               echo -e "$FOOTNOTES"
