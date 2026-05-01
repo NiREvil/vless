@@ -34,6 +34,7 @@
 <br><br/>
 
 <a name="changelog"></a>
+
 ## 🔄 آخرین تغییرات
 
 <details>
@@ -58,6 +59,7 @@
 <hr/><br/>
 
 <a name="file-tools"></a>
+
 ## 🔧 ابزار و مدیریت فایل
 
 - MT Manager — [v2.26.3](https://c147793.parspack.net/c147793/MT-Manager_v2.26.3.apk)
@@ -72,6 +74,7 @@
 <hr/><br/>
 
 <a name="vpn-clients"></a>
+
 ## 📡 کلاینت‌ و وی‌پی‌ان (VPN)
 
 - AM Tunnel Lite — v59 Google ([armv8](https://c224731.parspack.net/c224731/AMTunnel_Lite_armv8_v59.apks))
@@ -112,6 +115,7 @@
 <hr/><br/>
 
 <a name="dns-services"></a>
+
 ## 🌐 سرویس‌های دی‌ان‌اس (DNS)
 
 - DNS Changer — v2.9.2 ([universal](https://c224731.parspack.net/c224731/DNS-Changer_mod_universal_v2.9.2.apk)) 🆕
@@ -129,6 +133,7 @@
 <hr/><br/>
 
 <a name="internal-apps"></a>
+
 ## ‏🇮🇷 اپلیکیشن‌های داخلی
 
 _قابل دانلود با اینترنت ملی:_
@@ -147,6 +152,7 @@ _قابل دانلود با اینترنت ملی:_
 <hr/><br/>
 
 <a name="internet-sharing"></a>
+
 ## 🔗 اشتراک‌گذاری اینترنت و آموزش‌ها
 
 - EveryProxy — v15.7.0 ([armv8](https://c224731.parspack.net/c224731/ep/EveryProxy_armv8_v15.7.0.apks))
@@ -158,6 +164,7 @@ _قابل دانلود با اینترنت ملی:_
 <hr/><br/>
 
 <a name="online-tools"></a>
+
 ## 🛠 ابزارهای آنلاین و ربات‌های تلگرامی
 
 ### 🔍 موتورهای جستجوی داخلی
@@ -180,6 +187,7 @@ _قابل دانلود با اینترنت ملی:_
 <hr/><br/>
 
 <a name="ai-chatbots"></a>
+
 ## 🤖 چت‌بات‌های هوش مصنوعی
 
 با توجه به محدودیت‌های فعلی در دسترسی به سرویس‌هایی نظیر Gemini و Claude، ربات‌های تلگرامی زیر جایگزین‌های بسیار کارآمدی هستند:
@@ -194,6 +202,7 @@ _قابل دانلود با اینترنت ملی:_
 <hr/><br/>
 
 <a name="movies-series"></a>
+
 ## 🎭 اپلیکیشن‌ها و سایت‌های فیلم و سریال
 
 **(بدون نیاز به اینترنت بین‌الملل / دانلود پرسرعت با نت داخلی)**
@@ -227,12 +236,13 @@ _قابل دانلود با اینترنت ملی:_
 <hr/><br/>
 
 <a name="news-channels"></a>
+
 ## 🗞 کانال‌های خبری تلگرام
 
 برخی از کانال‌های خبری مهم:
 
-|                                                         |                                                   |                                                    |
-| :------------------------------------------------------ | :------------------------------------------------ | :------------------------------------------------- |
+|                                                        |                                                  |                                                   |
+| :----------------------------------------------------- | :----------------------------------------------- | :------------------------------------------------ |
 | 1. [mossi_zi](https://t.me/mossi_zi)                   | 6. [iliaen](https://t.me/iliaen)                 | 11. [drtel](https://t.me/drtel)                   |
 | 2. [virauniversitycom](https://t.me/virauniversitycom) | 7. [VahidOnline](https://t.me/VahidOnline)       | 12. [mahsa_alert](https://t.me/mahsa_alert)       |
 | 3. [hadafazadi2022](https://t.me/hadafazadi2022)       | 8. [idfinfarsi](https://t.me/idfinfarsi)         | 13. [JavidnamanIran](https://t.me/JavidnamanIran) |
