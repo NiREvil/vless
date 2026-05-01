@@ -4,7 +4,6 @@
 <br><br/>
 
 <div dir="rtl" align="right">
-
 ## 📦 مخزن ابزارها، کلاینت‌ها و لینک‌های دانلود (اینترانت / اینترنت)
 
 <div align="right">
@@ -35,7 +34,6 @@
 <br><br/>
 
 <a name="changelog"></a>
-
 ## 🔄 آخرین تغییرات
 
 <details>
@@ -60,7 +58,6 @@
 <hr/><br/>
 
 <a name="file-tools"></a>
-
 ## 🔧 ابزار و مدیریت فایل
 
 - MT Manager — [v2.26.3](https://c147793.parspack.net/c147793/MT-Manager_v2.26.3.apk)
@@ -75,7 +72,6 @@
 <hr/><br/>
 
 <a name="vpn-clients"></a>
-
 ## 📡 کلاینت‌ و وی‌پی‌ان (VPN)
 
 - AM Tunnel Lite — v59 Google ([armv8](https://c224731.parspack.net/c224731/AMTunnel_Lite_armv8_v59.apks))
@@ -116,10 +112,9 @@
 <hr/><br/>
 
 <a name="dns-services"></a>
-
 ## 🌐 سرویس‌های دی‌ان‌اس (DNS)
 
-- DNS Changer — v2.9.2 ([universal](https://c224731.parspack.net/c224731/DNS-Changer_mod_universal_v2.9.2.apk) 🆕
+- DNS Changer — v2.9.2 ([universal](https://c224731.parspack.net/c224731/DNS-Changer_mod_universal_v2.9.2.apk)) 🆕
 - IntraDNS — v1.4.1 ([armv8](https://c147793.parspack.net/c147793/Intra_armv8_v1.4.1.apks))
 - Network Checker — v0.5.0 ([armv8](https://c147793.parspack.net/c147793/Network-checker_armv8_v0.5.0.apk))
 - SanDNS — v7.8.0 ([universal](https://c147793.parspack.net/c147793/SanDNS_universal_v7.8.0.apk))
@@ -134,7 +129,6 @@
 <hr/><br/>
 
 <a name="internal-apps"></a>
-
 ## ‏🇮🇷 اپلیکیشن‌های داخلی
 
 _قابل دانلود با اینترنت ملی:_
@@ -153,7 +147,6 @@ _قابل دانلود با اینترنت ملی:_
 <hr/><br/>
 
 <a name="internet-sharing"></a>
-
 ## 🔗 اشتراک‌گذاری اینترنت و آموزش‌ها
 
 - EveryProxy — v15.7.0 ([armv8](https://c224731.parspack.net/c224731/ep/EveryProxy_armv8_v15.7.0.apks))
@@ -165,7 +158,6 @@ _قابل دانلود با اینترنت ملی:_
 <hr/><br/>
 
 <a name="online-tools"></a>
-
 ## 🛠 ابزارهای آنلاین و ربات‌های تلگرامی
 
 ### 🔍 موتورهای جستجوی داخلی
@@ -188,7 +180,6 @@ _قابل دانلود با اینترنت ملی:_
 <hr/><br/>
 
 <a name="ai-chatbots"></a>
-
 ## 🤖 چت‌بات‌های هوش مصنوعی
 
 با توجه به محدودیت‌های فعلی در دسترسی به سرویس‌هایی نظیر Gemini و Claude، ربات‌های تلگرامی زیر جایگزین‌های بسیار کارآمدی هستند:
@@ -203,7 +194,6 @@ _قابل دانلود با اینترنت ملی:_
 <hr/><br/>
 
 <a name="movies-series"></a>
-
 ## 🎭 اپلیکیشن‌ها و سایت‌های فیلم و سریال
 
 **(بدون نیاز به اینترنت بین‌الملل / دانلود پرسرعت با نت داخلی)**
@@ -226,7 +216,7 @@ _قابل دانلود با اینترنت ملی:_
 
 - [Serialblog.net](https://serialblog.net) - (همراه با خلاصه داستان)
 - [oldtowns.top](https://www.oldtowns.top) - (سایت زیبا و بدون سانسور)
-- [f2mc.top](https://f2mc.top) | [myf2m.org](https://myf2m.org) - (سایت جایگزین با دو دامین)
+- [f2mc.top](https://f2mc.top) | [myf2m.org](https://myf2m.org) - (سایت جایگزین)
 - [azfilm.ir](http://azfilm.theazizi.ir)
 
 ### 📝 سایت‌های دانلود زیرنویس
@@ -237,18 +227,17 @@ _قابل دانلود با اینترنت ملی:_
 <hr/><br/>
 
 <a name="news-channels"></a>
-
 ## 🗞 کانال‌های خبری تلگرام
 
 برخی از کانال‌های خبری مهم:
 
 |                                                         |                                                   |                                                    |
 | :------------------------------------------------------ | :------------------------------------------------ | :------------------------------------------------- |
-| 1. [@mossi_zi](https://t.me/mossi_zi)                   | 6. [@iliaen](https://t.me/iliaen)                 | 11. [@drtel](https://t.me/drtel)                   |
-| 2. [@virauniversitycom](https://t.me/virauniversitycom) | 7. [@VahidOnline](https://t.me/VahidOnline)       | 12. [@mahsa_alert](https://t.me/mahsa_alert)       |
-| 3. [@hadafazadi2022](https://t.me/hadafazadi2022)       | 8. [@idfinfarsi](https://t.me/idfinfarsi)         | 13. [@JavidnamanIran](https://t.me/JavidnamanIran) |
-| 4. [@IranintlTV](https://t.me/IranintlTV)               | 9. [@IraneAzad_News](https://t.me/IraneAzad_News) | 14. [@withyashar](https://t.me/withyashar)         |
-| 5. [@mamlekate](https://t.me/mamlekate)                 | 10. [@drdat_ir](https://t.me/drdat_ir)            | 15. [@Indypersian](https://t.me/Indypersian)       |
+| 1. [mossi_zi](https://t.me/mossi_zi)                   | 6. [iliaen](https://t.me/iliaen)                 | 11. [drtel](https://t.me/drtel)                   |
+| 2. [virauniversitycom](https://t.me/virauniversitycom) | 7. [VahidOnline](https://t.me/VahidOnline)       | 12. [mahsa_alert](https://t.me/mahsa_alert)       |
+| 3. [hadafazadi2022](https://t.me/hadafazadi2022)       | 8. [idfinfarsi](https://t.me/idfinfarsi)         | 13. [JavidnamanIran](https://t.me/JavidnamanIran) |
+| 4. [IranintlTV](https://t.me/IranintlTV)               | 9. [IraneAzad_News](https://t.me/IraneAzad_News) | 14. [withyashar](https://t.me/withyashar)         |
+| 5. [mamlekate](https://t.me/mamlekate)                 | 10. [drdat_ir](https://t.me/drdat_ir)            | 15. [Indypersian](https://t.me/Indypersian)       |
 
 <hr/><br/>
 
