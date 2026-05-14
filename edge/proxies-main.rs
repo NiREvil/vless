@@ -21,7 +21,7 @@ const REQUEST_DELAY_MS: u64 = 50;
 const CHECK_URL: &str = "https://ipp.nscl.ir"; 
 
 const GOOD_ISPS: &[&str] = &[
-    "M247","OVH","Vultr","GCore","IONOS","Google","Amazon","NetLab","Akamai","Turunc","Contabo",
+    "M247","OVH","Vultr","GCore","IONOS","Google","Amazon","Akamai","NetLab","Akamai","Turunc","Contabo",
     "UpCloud","Tencent","Hetzner","Multacom","HostPapa","Ultahost","DataCamp","Bluehost",
     "Scaleway","DO Space","Leaseweb","Hostinger","netcup GmbH","Protilab","ByteDance","RackSpace",
     "SiteGround","Online Ltd","The Empire","Cloudflare","Relink LTD","PQ Hosting","Gigahost AS",
