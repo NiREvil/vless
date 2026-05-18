@@ -12,7 +12,7 @@
 
 <br/>
 
-<img src="https://img.shields.io/badge/Last_Updated-May_18,_2025-7857FF?style=for-the-badge&logo=gitbook&logoColor=white" alt="update date"/>
+<img src="https://img.shields.io/badge/Last_Updated-May_19,_2025-7857FF?style=for-the-badge&logo=gitbook&logoColor=white" alt="update date"/>
 &nbsp;
 <img src="https://img.shields.io/badge/Status-Active-00C853?style=for-the-badge&logo=statuspage&logoColor=white" alt="status"/>
 
@@ -47,6 +47,8 @@
 <details>
 <summary>● برای مشاهده لیست تغییرات اخیر کلیک کنید ●</summary><br/>
 
+● ✔️ اپلیکیشن Network checker نسخه v0.6.0
+● ✔️ اپلیکیشن White DNS نسخه v1.5.0
 ● ✔️ اپلیکیشن MahsaNG نسخه v16  
 ● ✔️ اپلیکیشن تلگرام دایرکت نسخه v12.7.3  
 ● ✔️ اپلیکیشن MT Manager نسخه v2.26.4  
@@ -54,9 +56,7 @@
 ● ✔️ اپلیکیشن Acode mod نسخه v1.11.7  
 ● ✔️ اپلیکیشن EveryProxy نسخه v16.2.1  
 ● ✔️ کلاینت v2rayNG نسخه v2.1.7
-
-- ✔️ سایفون گوگل پلی استور نسخه v464 بتا
-- ✔️ اپلیکیشن EveryProxy نسخه v16.2.1
+● ✔️ سایفون گوگل پلی استور نسخه v464 بتا
 
 </details>
 </div>
@@ -122,11 +122,11 @@
 
 - DNS Changer — v2.9.2 ([universal](https://c224731.parspack.net/c224731/DNS-Changer_mod_universal_v2.9.2.apk)) 🆕
 - IntraDNS — v1.4.1 ([armv8](https://github.com/nscl5/dl/raw/main/apks/app.intra_arm64.apks))
-- Network Checker — v0.5.0 ([armv8](https://github.com/nscl5/dl/raw/main/dl/app-arm64-v8a-release.apk) / [armv8](https://github.com/nscl5/dl/raw/main/dl/app-armeabi-v7a-release.apk))
-- MasterDNS-GG — v1.1.0 ([armv8](https://github.com/nscl5/dl/raw/main/dl/MasterDnsVPN-GG-1.1.0-arm64-v8a.apk) / [armv7](https://github.com/nscl5/dl/raw/main/dl/MasterDnsVPN-GG-1.1.0-armeabi-v7a.apk)) 🆕
+- Network Checker — v0.6.0 ([armv8](https://c224731.parspack.net/c224731/NetworkChecker_armv8_v0.6.0.apk) / [armv8](https://c224731.parspack.net/c224731/NetworkChecker_armv7_v0.6.0.apk)) 🆕
+- MasterDNS-GG — v1.1.0 ([armv8](https://github.com/nscl5/dl/raw/main/dl/MasterDnsVPN-GG-1.1.0-arm64-v8a.apk) / [armv7](https://github.com/nscl5/dl/raw/main/dl/MasterDnsVPN-GG-1.1.0-armeabi-v7a.apk))
 - Shekan — v2.2.0 ([universal](https://shecan.ir/shecan.apk))
 - Rethink DNS — v0.5.5-53 ([universal](https://github.com/nscl5/dl/raw/main/dl/rethink-53.zip))
-- WhiteDNS — v1.2.0 ([armv8](https://github.com/nscl5/dl/raw/main/dl/WhiteDNS-1.2.0-arm64-v8a.apk) / [armv7](https://github.com/nscl5/dl/raw/main/dl/WhiteDNS-1.2.0-armeabi-v7a.apk))
+- WhiteDNS — v1.5.0 ([armv8](https://c224731.parspack.net/c224731/dns/WhiteDNS_armv8_v1.5.0.apk) / [armv7](https://c224731.parspack.net/c224731/dns/WhiteDNS_armv7_v1.5.0.apk)) 🆕
 - SNI SpoofingByPatterniha — v1 ([win](https://c224731.parspack.net/c224731/sni/SNI_SpoofingByPatterniha_v1.zip))
 - SNI Spoofing — Rust ([win](https://c224731.parspack.net/c224731/sni/SNISpoofing_rust.zip))
 
