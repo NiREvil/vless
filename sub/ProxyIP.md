@@ -26,12 +26,6 @@
 nima.nscl.ir
 ```
 
-🇹🇷 **Turkey, Istanbul, Stark Industries, PQ Hosting**
-
-```POV-Ray SDL
-turk.radicalization.ir
-```
-
 🇮🇷 **Across Iran, BPB LTD**
 
 ```ruby
