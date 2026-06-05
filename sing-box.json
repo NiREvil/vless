@@ -47,58 +47,58 @@
     {
       "address": [
         "172.16.0.2/32",
-        "2606:4700:110:8836:f1c9:4393:9b37:3814/128"
+        "2606:4700:110:8155:fbc6:79c2:a4da:d1e7/128"
       ],
       "detour": "direct",
       "mtu": 1280,
       "peers": [
         {
-          "address": "8.39.204.47",
+          "address": "8.6.112.76",
           "allowed_ips": [
             "0.0.0.0/0",
             "::/0"
           ],
           "persistent_keepalive_interval": 30,
-          "port": 1002,
+          "port": 4500,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
           "reserved": [
-            98,
-            180,
-            135
+            111,
+            254,
+            133
           ]
         }
       ],
-      "private_key": "6ED6o/mxu0M09sgOCEzGEsTXekGs+/JGvF32eUF9b1I=",
-      "tag": "\u26aa\ufe0fTehran",
+      "private_key": "INIFI2D8r4mSL7+RZm4FjKvBzrGaIE5mbqInYkmobHc=",
+      "tag": "\u26aa\ufe0fIran",
       "type": "wireguard",
       "workers": 4
     },
     {
       "address": [
         "172.16.0.3/32",
-        "2606:4700:110:8867:3f4a:906:1933:43c5/128"
+        "2606:4700:110:881f:999d:2604:1c73:e2d2/128"
       ],
-      "detour": "\u26aa\ufe0fTehran",
+      "detour": "\u26aa\ufe0fIran",
       "mtu": 1280,
       "peers": [
         {
-          "address": "188.114.98.127",
+          "address": "8.6.112.49",
           "allowed_ips": [
             "0.0.0.0/0",
             "::/0"
           ],
           "persistent_keepalive_interval": 30,
-          "port": 2408,
+          "port": 2506,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
           "reserved": [
-            184,
-            1,
-            140
+            132,
+            179,
+            128
           ]
         }
       ],
-      "private_key": "gDhASzwQ/djLst8XCSXyXTAwegzTyH13s0DFUhRA0lw=",
-      "tag": "\ud83d\udfe2Somewhere",
+      "private_key": "2K4ibrXJRf9B8Gmts2omz/rqP8dJAiu+Ghvw7qfqZ2I=",
+      "tag": "\ud83d\udfe2Any",
       "type": "wireguard",
       "workers": 4
     }
@@ -143,8 +143,8 @@
       "default": "auto",
       "outbounds": [
         "auto",
-        "\u26aa\ufe0fTehran",
-        "\ud83d\udfe2Somewhere"
+        "\u26aa\ufe0fIran",
+        "\ud83d\udfe2Any"
       ],
       "tag": "proxy",
       "type": "selector"
@@ -153,8 +153,8 @@
       "interrupt_exist_connections": false,
       "interval": "5m0s",
       "outbounds": [
-        "\u26aa\ufe0fTehran",
-        "\ud83d\udfe2Somewhere"
+        "\u26aa\ufe0fIran",
+        "\ud83d\udfe2Any"
       ],
       "tag": "auto",
       "tolerance": 50,
