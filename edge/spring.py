@@ -20,18 +20,18 @@ SW_TAG = f"{FOREIGN_SYMBOL}Any"
 # IPv4 prefixes associated with the CloudFlare WARP service
 warp_cidr = [
     "8.6.112.0/24",
-#   "8.34.70.0/24",
-#   "8.34.146.0/24",
-#   "8.35.211.0/24",
-#   "8.39.125.0/24",
-#   "8.39.204.0/24",
-#   "8.47.69.0/24",
-#   "162.159.192.0/24",
-#   "162.159.195.0/24",
-#   "188.114.96.0/24",
+    #   "8.34.70.0/24",
+    #   "8.34.146.0/24",
+    #   "8.35.211.0/24",
+    #   "8.39.125.0/24",
+    #   "8.39.204.0/24",
+    #   "8.47.69.0/24",
+    #   "162.159.192.0/24",
+    #   "162.159.195.0/24",
+    #   "188.114.96.0/24",
     "188.114.97.0/24",
-#   "188.114.98.0/24",
-#   "188.114.99.0/24",
+    #   "188.114.98.0/24",
+    #   "188.114.99.0/24",
 ]
 
 # Available ports for endpoint generation
@@ -71,7 +71,7 @@ def export_Hiddify(t_ips):
     )
     formatted_time = datetime.datetime.now().strftime("%A, %d %b %Y, %H:%M")
     return config_prefix, formatted_time
-    
+
 
 # Function to generate Sing-box config
 def toSingBox(tag, clean_ip, detour, addresses):
