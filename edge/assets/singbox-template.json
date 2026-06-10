@@ -23,9 +23,9 @@
     "servers": [
       {
         "detour": "proxy",
-        "server": "185.228.168.9",
+        "server": "1.1.1.1",
         "tag": "proxy-dns",
-        "type": "tcp"
+        "type": "udp"
       },
       {
         "detour": "direct",
