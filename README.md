@@ -1,317 +1,8 @@
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="180x" </p>
-  
-<br><br/>
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=140&section=header" width="100%"/>
-
-<h2 dir="rtl">📦 مخزن ابزارها، کلاینت‌ها و لینک‌های دانلود</h2>
-<p dir="rtl"><sub>اینترانت &nbsp;|&nbsp; اینترنت</sub></p>
-
-<br/>
-
-<img src="https://img.shields.io/badge/Last_Updated-May_19,_2025-7857FF?style=for-the-badge&logo=gitbook&logoColor=white" alt="update date"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Status-Active-00C853?style=for-the-badge&logo=statuspage&logoColor=white" alt="status"/>
-
-<br/><br/>
-
-</div>
-
-این مخزن شامل مجموعه‌ای کامل از آخرین نسخه‌ی کلاینت‌ها، ابزارهای مدیریت فایل، دی‌ان‌اس‌ها، و اپلیکیشن‌های کاربردی است که قابلیت دانلود با **اینترنت داخلی (اینترانت)** را دارند.
-
-<hr/><br/>
-
-## 📑 فهرست محتوا
-
-- [🔄 آخرین تغییرات](#changelog)
-- [🔧 ابزار و مدیریت فایل](#file-tools)
-- [📡 کلاینت‌ و وی‌پی‌ان (VPN)](#vpn-clients)
-- [🌐 سرویس‌های دی‌ان‌اس (DNS)](#dns-services)
-- [ ‏🇮🇷 اپلیکیشن‌های داخلی](#internal-apps)
-- [🔗 اشتراک‌گذاری اینترنت و آموزش‌ها](#internet-sharing)
-- [🛠 ابزارهای آنلاین و ربات‌های تلگرامی](#online-tools)
-- [🤖 چت‌بات‌های هوش مصنوعی](#ai-chatbots)
-- [🎭 اپلیکیشن‌ها و سایت‌های فیلم و سریال](#movies-series)
-- [🗞 کانال‌های خبری تلگرام](#news-channels)
-- [🚨 سایت‌های ضروری](#emergency-sites)
 
 <br><br/>
-
-<a name="changelog"></a>
-
-## 🔄 آخرین تغییرات
-
-<details>
-<summary>● برای مشاهده لیست تغییرات اخیر کلیک کنید ●</summary><br/>
-
-● ✔️ اپلیکیشن Network checker نسخه v0.6.0
-● ✔️ اپلیکیشن White DNS نسخه v1.5.0
-● ✔️ اپلیکیشن MahsaNG نسخه v16  
-● ✔️ اپلیکیشن تلگرام دایرکت نسخه v12.7.3  
-● ✔️ اپلیکیشن MT Manager نسخه v2.26.4  
-● ✔️ اپلیکیشن ShirOKhorshid نسخه v2026.05.14  
-● ✔️ اپلیکیشن Acode mod نسخه v1.11.7  
-● ✔️ اپلیکیشن EveryProxy نسخه v16.2.1  
-● ✔️ کلاینت v2rayNG نسخه v2.1.7
-● ✔️ سایفون گوگل پلی استور نسخه v464 بتا
-
-</details>
-</div>
-
-<hr/><br/>
-
-<a name="file-tools"></a>
-
-## 🔧 ابزار و مدیریت فایل
-
-- MT Manager — ([v2.26.3](https://c224731.parspack.net/c224731/MT-Manager_v2.26.4.apk))
-- SAI — ([v4.5.1](https://c224731.parspack.net/c224731/SAI-4.5.apk))
-- ApktoolM — ([v2.4.0](https://c147793.parspack.net/c147793/ApktoolM_universal_v2.4.0-251127.apk))
-- Shizuku — ([v13.6.0](https://c224731.parspack.net/c224731/ep/Shizuku_v13.6.0.r1318.apk))
-- Shelter android — ([v445](https://c224731.parspack.net/c224731/shelter_android_v445.apk))
-- Acode — ([v1.9.0](https://github.com/nscl5/dl/raw/main/dl/Acode_Mod_universal_v1.11.7.apk))
-- Mahsa Alert — ([v10.0](https://c224731.parspack.net/c224731/MahsaAlert_Offline_v10.zip))
-
-<hr/><br/>
-
-<a name="vpn-clients"></a>
-
-## 📡 کلاینت‌ و وی‌پی‌ان (VPN)
-
-- AM Tunnel Lite — v59 Google ([armv8](https://c224731.parspack.net/c224731/AMTunnel_Lite_armv8_v59.apks))
-- Amnezia — v4.8.15.0 ([armv8](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/AmneziaVPN_4.8.15.0_android9+_arm64-v8a.apk))
-- ClashMeta — v2.11.27 ([armv8](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/cmfa-2.11.27-meta-arm64-v8a-release.apk) / [armv7](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/cmfa-2.11.27-meta-armeabi-v7a-release.apk) / [universal](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/cmfa-2.11.27-meta-universal-release.apk))
-- Defyx — v5.2.8 ([armv8](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/app-arm64-v8a-release.apk) / [armv7](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/app-armeabi-v7a-release.apk) / [win](https://github.com/nscl5/sandbox/raw/refs/heads/main/downloads/windows-release.zip))
-- DNSTT — v2.2.0 ([armv8](https://c147793.parspack.net/c147793/DNSTT_CLIENT/DNSTT_armv8_v2.2.0.apk) / [armv7](https://c147793.parspack.net/c147793/DNSTT_CLIENT/DNSTT_armv7_v2.2.0.apk) / [conf](https://c147793.parspack.net/c147793/DNSTT_CLIENT/dnstt_conf.txt))
-- Exclave — v1.17.39 ([armv8](https://github.com/nscl5/dl/raw/main/dl/Exclave-0.17.39-arm64-v8a.zip) / [armv7](https://github.com/nscl5/dl/raw/main/dl/Exclave-0.17.39-armeabi-v7a.zip)) + ([full backup 1 May](https://github.com/nscl5/dl/raw/main/dl/ExclaveFullBackup_1May_2026.zip))
-- Happ — v3.18.1 ([universal](https://c224731.parspack.net/c224731/happ/HappAndroid_universal_v3.18.1.apk) / [win-x64](https://c224731.parspack.net/c224731/happ/Happ_windows-x64_v2.9.0.zip))
-- Hiddify — v4.1.1 ([armv8](https://github.com/nscl5/dl/raw/main/dl/Hiddify-Android-arm64.zip) / [armv7](https://github.com/nscl5/dl/raw/main/dl/Hiddify-Android-arm7.zip) / [win](https://github.com/nscl5/dl/raw/main/dl/Hiddify-Windows-Setup-x64.exe))
-- HTTP Injector — v6.5.0 ([universal](https://c147793.parspack.net/c147793/HTTP-Injector_universal_6.5.0.apk))
-- InviZible Pro — v2.6.8 ([armv8](https://github.com/nscl5/dl/raw/main/dl/Invizible_Pro__beta_ver.2.6.8.apk))
-- MahsaNG — v16 ([armv8](https://c224731.parspack.net/c224731/MahsaNG_armv8_v16.apk) / [conf](https://t.me/NiREvil_GP/532445)) 🆕
-- NekoBox — v1.4.2 ([armv8](https://c224731.parspack.net/c224731/ex/NekoBox_armv8_v1.4.2.apk) / [armv7](https://c224731.parspack.net/c224731/ex/NekoBox_armv7_v1.4.2.apk))
-- Netmod — v4.0.2 ([armv8](https://c224731.parspack.net/c224731/NetMod_armv8_v4.0.2.apks) / [universal](https://c147793.parspack.net/c147793/Netmod/NetMod_universal_v3.2.8.apk) / [conf](https://c147793.parspack.net/c147793/SLIPNET/netmod_conf.txt))
-- NPVT — v123.1 ([armv8](https://github.com/nscl5/dl/raw/main/apks/com.napsternetlabs.napsternetv_arm64_vlatest.apks))
-- OpenVPN — v3.7.1 ([armv8](https://github.com/nscl5/dl/raw/main/dl/net.openvpn.openvpn_arm64-v8a_default.apks))
-- OpenVPN for Android — v0.7.43 ([armv8](https://github.com/nscl5/dl/raw/main/dl/OpenVPN_For_Android_Universal_v0.7.43.apk))
-- Orbot — v17.9.1-beta ([armv8](https://github.com/nscl5/dl/raw/main/dl/Orbot-17.9.4-BETA-1-tor-0.4.9.6.2-1-g84015e0a4-fullperm-arm64-v8a-release.apk) / [armv7](https://github.com/nscl5/dl/raw/main/dl/Orbot-17.9.4-BETA-1-tor-0.4.9.6.2-1-g84015e0a4-fullperm-armeabi-v7a-release.apk))
-- Psiphon — v425 ([android](https://github.com/nscl5/dl/raw/main/dl/PsiphonAndroid%20v425.apk))
-- Psiphon — v453 ([android](https://github.com/nscl5/dl/raw/main/dl/PsiphonAndroid.apk) / [win](https://github.com/nscl5/dl/raw/main/dl/psiphon3.exe))
-- PsiphonPro — v460 ([android](https://c224731.parspack.net/c224731/psi/PsiphonPro_v460.apk))
-- PsiphonPro — v462 ([android](https://c224731.parspack.net/c224731/psi/PsiphonPro_v462.apk))
-- PsiphonPro — v464 [android](https://github.com/nscl5/dl/raw/main/dl/PsiphonPro_v464.zip) 🆕
-- ShirOkhorshid — [v2026.05.14](https://c224731.parspack.net/c224731/psi/ShirOKhorshid_v2026.05.14.apk) 🆕
-- SingBox — v1.13.11 ([armv8](https://github.com/nscl5/dl/raw/main/dl/SFA-1.13.11-arm64-v8a.apk) / [armv7](https://github.com/nscl5/dl/raw/main/dl/SFA-1.13.11-armeabi-v7a.apk))
-- SlipNet Lite — v2.5.3 ([armv8](https://c224731.parspack.net/c224731/slp/SlipNet_lite_armv8_v2.5.3.apk) / [armv7](https://c224731.parspack.net/c224731/slp/SlipNet_lite_armv7_v2.5.3.apk) / [clone](https://c224731.parspack.net/c224731/slp/SlipNetLiteClone_armv8_v2.5.3.apk))
-- SlipNet Full — v2.5.3 ([armv8](https://github.com/nscl5/dl/raw/main/dl/SlipNet-v2.5.3-full-release-arm64-v8a.apk) / [armv7](https://github.com/nscl5/dl/raw/main/dl/SlipNet-v2.5.3-full-release-armeabi-v7a.apk) / [universal](https://github.com/nscl5/dl/raw/main/dl/SlipNet-v2.5.3-full-release-universal.apk))
-- v2rayNG — v2.1.7 ([armv8](https://c224731.parspack.net/c224731/v2/v2rayNG_arm64-v8a_v2.1.7.apk) / [armv7](https://github.com/nscl5/dl/raw/main/dl/v2rayNG_2.1.7_armeabi-v7a.apk)) 🆕
-- v2rayN — v7.20.2 ([windows](https://c147793.parspack.net/c147793/v2rayN_windows64_v7.20.2.zip))
-- V2box — v5.3.4 ([armv8](https://c224731.parspack.net/c224731/v2/V2BOX_armv8_v5.3.4.apks))
-- WireGuard — v1.0.2026 ([universal](https://github.com/nscl5/dl/raw/main/dl/com.wireguard.android-1.0.20260315.apk))
-- WG Tunnel — v4.3.1 ([armv8](https://github.com/nscl5/dl/raw/main/dl/wgtunnel-standalone-v4.3.1-arm64.apk) / [armv8](https://github.com/nscl5/dl/raw/main/dl/wgtunnel-standalone-v4.3.1-armv7.apk))
-- Windscribe — v4.0.2178 ([armv8](https://c224731.parspack.net/c224731/Windscribe_armv8_v4.0.2178.apks)) 🆕
-
-<hr/><br/>
-
-<a name="dns-services"></a>
-
-## 🌐 سرویس‌های دی‌ان‌اس (DNS)
-
-- DNS Changer — v2.9.2 ([universal](https://c224731.parspack.net/c224731/DNS-Changer_mod_universal_v2.9.2.apk)) 🆕
-- IntraDNS — v1.4.1 ([armv8](https://github.com/nscl5/dl/raw/main/apks/app.intra_arm64.apks))
-- Network Checker — v0.6.0 ([armv8](https://c224731.parspack.net/c224731/NetworkChecker_armv8_v0.6.0.apk) / [armv8](https://c224731.parspack.net/c224731/NetworkChecker_armv7_v0.6.0.apk)) 🆕
-- MasterDNS-GG — v1.1.0 ([armv8](https://github.com/nscl5/dl/raw/main/dl/MasterDnsVPN-GG-1.1.0-arm64-v8a.apk) / [armv7](https://github.com/nscl5/dl/raw/main/dl/MasterDnsVPN-GG-1.1.0-armeabi-v7a.apk))
-- Shekan — v2.2.0 ([universal](https://shecan.ir/shecan.apk))
-- Rethink DNS — v0.5.5-53 ([universal](https://github.com/nscl5/dl/raw/main/dl/rethink-53.zip))
-- WhiteDNS — v1.5.0 ([armv8](https://c224731.parspack.net/c224731/dns/WhiteDNS_armv8_v1.5.0.apk) / [armv7](https://c224731.parspack.net/c224731/dns/WhiteDNS_armv7_v1.5.0.apk)) 🆕
-- SNI SpoofingByPatterniha — v1 ([win](https://c224731.parspack.net/c224731/sni/SNI_SpoofingByPatterniha_v1.zip))
-- SNI Spoofing — Rust ([win](https://c224731.parspack.net/c224731/sni/SNISpoofing_rust.zip))
-
-<hr/><br/>
-
-<a name="internal-apps"></a>
-
-## ‏🇮🇷 اپلیکیشن‌های داخلی
-
-_قابل دانلود با اینترنت ملی:_
-
-- Snapp — ([v8.40.0.300](https://downloads.snapp.site/android/passenger/website-build/8.40.0-300/Snapp-300-ProdAuto.apk))
-- Blubank — ([v3.8.1.1](https://click.adtrace.io/0b7vfp3))
-- Zarebin browser — ([v11.57.0](https://abhm.ir/ZAREBIN))
-- Maktabkhune — ([v2.4.3](https://statics.maktabkhooneh.org/front/app-2.4.3.apk)(
-- BitPin — ([v94](https://cdn.bitpin.ir/media/app/android/bitpin-v94.apk))
-- TurboTel — v12.4.2 ([armv8](https://c147793.parspack.net/c147793/TG/TurboTel_armv8_v12.4.2.zip))
-- Telegram (G-Play) — v12.7.1 ([armv8](https://github.com/nscl5/dl/raw/main/dl/Telegram_G-Play_armv8_v12.7.1.apks))
-- Telegram (Direct) — v12.7.3 ([universal](https://c224731.parspack.net/c224731/tg/Telegram_direct_v12.7.3.zip))
-- Telegram desktop — v6.8.1 ([win]() / [linux](https://github.com/nscl5/dl/raw/main/dl/tsetup.6.8.1.tar.xz))
-
-<hr/><br/>
-
-<a name="internet-sharing"></a>
-
-## 🔗 اشتراک‌گذاری اینترنت و آموزش‌ها
-
-- EveryProxy — v16.2.1 ([armv8](https://c224731.parspack.net/c224731/ep/EveryProxy_armv8_v16.2.1.apks)) 🆕
-- EveryProxy — v10.5.0 ([armv8](https://c224731.parspack.net/c224731/ep/PdaNet_windows_v5.32.exe))
-- PdaNet v5.32 — ([android](https://c224731.parspack.net/c224731/ep/PdaNet%2B_android_v5.32.apk))
-- PdaNet v5.32 — ([windows](https://c224731.parspack.net/c224731/ep/PdaNet_windows_v5.32.exe))
-- How to ? ([zip file](https://github.com/nscl5/dl/raw/main/dl/EveryProxy_How_to.zip) / [text messages](https://t.me/NiREvil_GP/274552))
-
-<hr/><br/>
-
-<a name="online-tools"></a>
-
-## 🛠 ابزارهای آنلاین و ربات‌های تلگرامی
-
-### 🔍 موتورهای جستجوی داخلی
-
-> در شرایط محدودیت اینترنت، این موتورهای جستجو به خوبی نتایج گوگل را نمایش می‌دهند:
-
-- 🤖 [@Gooogleit_bot](https://t.me/Gooogleit_bot) - (ربات جستجوگر گوگل در تلگرام)
-- 🤖 [@WebSearchAiBot](https://t.me/WebSearchAiBot) - (یک ربات جستجوگر گوگل تلگرامی دیگر)
-- 🌐 [Search.bertina.ir](https://search.bertina.ir) - (مرورگر بسیار خوب، نمایش دقیق نتایج سرچ گوگل)
-- 🐣 [llm.bertina.ir](https://llm.bertina.ir) - (مدل هوش مصنوعی برتینا)
-- 🌐 [Zarebin.ir](https://zarebin.ir/) - (مرورگر ذره‌بین)
-
-### 📬 ارسال، دریافت و مدیریت کانفیگ
-
-- 📝 **اشتراک‌گذاری متن:** [ctext.ir](https://ctext.ir/)
-- 💱 **مبدل کانفیگ نت‌مود به اسلیپ و بالعکس:** [@WHITEIPCHECK_Bot](https://t.me/WHITEIPCHECK_Bot)
-- 🪏 **استخراج کانفیگ از لینک‌های ساب:** [@L2FRobot](https://t.me/L2FRobot) | [@URLExtractor_Bot](https://t.me/URLExtractor_Bot)
-- ☣️ **اسکمر یاب:** پیش از خرید کانفیگ، حتماً آیدی فروشنده را بررسی کنید: [@scameryab_bot](https://t.me/scameryab_bot) | [@VPNScamSearchBot](https://t.me/VPNScamSearchBot)
-- 🐈‍⬛ **مشاهده و دانلود از گیت‌هاب:** [@GithubGitlabDownloader_bot](https://t.me/GithubGitlabDownloader_bot) | [@GitExp_bot](https://t.me/GitExp_bot)
-
-<hr/><br/>
-
-<a name="ai-chatbots"></a>
-
-## 🤖 چت‌بات‌های هوش مصنوعی
-
-با توجه به محدودیت‌های فعلی در دسترسی به سرویس‌هایی نظیر Gemini و Claude، ربات‌های تلگرامی زیر جایگزین‌های بسیار کارآمدی هستند:
-
-1. ✨ **[@mira](https://t.me/mira):** بسیار مرتب و کاربردی، بر پایه مدل‌های GPT-3.5/4 با قابلیت جستجو در سطح وب.
-2. 🧠 **[@chatGPTwrapperbot](https://t.me/chatGPTwrapperbot):** مدل واقعی جمنای Flash 3. _(نکته: قابلیت تفکر عمیق را روشن نکنید تا پاسخ‌دهی سریع‌تر انجام شود)._
-3. 🤖 **[@Gemini_PV_bot](https://t.me/Gemini_PV_bot):**
-4. ⚡ **[@TypespaceBot](https://t.me/TypespaceBot):**
-5. 💬 **[@Javidiran_bot](https://t.me/Javidiran_bot)**
-6. 💬 **[@Gemini_PV_bot](https://t.me/Gemini_PV_bot)**
-7. 🌟 **[@GPT4Telegrambot](https://t.me/GPT4Telegrambot)**
-
-<hr/><br/>
-
-<a name="movies-series"></a>
-
-## 🎭 اپلیکیشن‌ها و سایت‌های فیلم و سریال
-
-**(بدون نیاز به اینترنت بین‌الملل / دانلود پرسرعت با نت داخلی)**
-
-### 📱 اپلیکیشن‌ها (لینک داخلی)
-
-- 🎬 [Next Movie](https://c224731.parspack.net/c224731/Next-Movie_Mod_v4.2.apk)
-- 📽️ [FilmKio](https://c224731.parspack.net/c224731/FilmKio_universal_v3.8.1.apk)
-
-### 📂 آرشیوهای بزرگ
-
-- 🎬 [Top 5000 movies](https://dls2.iran-gamecenter-host.com/DonyayeSerial/top_5000_movies.html) (آرشیو ۵ هزار فیلم)
-- 📺 [Top 1000 series](https://dls2.iran-gamecenter-host.com/DonyayeSerial/top_1000_series.html) (آرشیو هزار سریال)
-- 🆕 [New version](https://dls6.iran-gamecenter-host.com/DonyayeSerial/10_thous.html)
-
-> 💡 **چگونه فیلم مدنظر را در لیست‌های طولانی پیدا کنیم؟**
-> لینک را در مرورگر باز کنید. اگر با گوشی هستید از منوی سه‌نقطه `Find in page` را بزنید. اگر با سیستم هستید روی کیبورد کلیدهای <kbd>Ctrl</kbd> + <kbd>F</kbd> را فشار دهید. بخشی از نام فیلم/سریال را جستجو کنید تا مستقیماً به آن برسید.
-
-### 🌐 وب‌سایت‌های دانلود (بدون سانسور / اوکی با نت داخلی)
-
-- [Serialblog.net](https://serialblog.net) - (همراه با خلاصه داستان)
-- [oldtowns.top](https://www.oldtowns.top) - (سایت زیبا و بدون سانسور)
-- [f2mc.top](https://f2mc.top) | [myf2m.org](https://myf2m.org) - (سایت جایگزین)
-- [azfilm.ir](http://azfilm.theazizi.ir)
-
-### 📝 سایت‌های دانلود زیرنویس
-
-- [subzone.ir](https://subzone.ir)
-- [subkade.ir](https://subkade.ir)
-
-<hr/><br/>
-
-<a name="news-channels"></a>
-
-## 🗞 کانال‌های خبری تلگرام
-
-برخی از کانال‌های خبری مهم:
-
-|                                                        |                                                  |                                                   |
-| :----------------------------------------------------- | :----------------------------------------------- | :------------------------------------------------ |
-| 1. [musssa_i](https://t.me/musssa_i)                   | 6. [iliaen](https://t.me/iliaen)                 | 11. [drtel](https://t.me/drtel)                   |
-| 2. [virauniversitycom](https://t.me/virauniversitycom) | 7. [VahidOnline](https://t.me/VahidOnline)       | 12. [mahsa_alert](https://t.me/mahsa_alert)       |
-| 3. [hadafazadi2022](https://t.me/hadafazadi2022)       | 8. [idfinfarsi](https://t.me/idfinfarsi)         | 13. [JavidnamanIran](https://t.me/JavidnamanIran) |
-| 4. [IranintlTV](https://t.me/IranintlTV)               | 9. [IraneAzad_News](https://t.me/IraneAzad_News) | 14. [Indypersian](https://t.me/Indypersian)       |
-| 5. [mamlekate](https://t.me/mamlekate)                 | 10. [drdat_ir](https://t.me/drdat_ir)            | 15. [news_hut](https://t.me/news_hut)             |
-
-<hr/><br/>
-
-<a name="emergency-sites"></a>
-
-## 🚨 سایت‌ها و سرویس‌های ضروری (موقع قطعی نت)
-
-- 🌐 [Linkdooni](https://linkdooni.site/)
-- 🌐 [Zoomg.ir](https://www.zoomg.ir/learning/413289-websites-internet-blackout)
-- 🌐 [Zoomit.ir](https://www.zoomit.ir/websites/342552-websites-directory-internet-shutdown)
-- 🌐 [Blog.irancell.ir](https://blog.irancell.ir/b/17282/list-of-iranian-sites)
-
-<br><br/>
-
-<br><br/>
-
-<br><br/>
-
-<br><br/>
-
-<br><br/>
-
-<br><br/>
-
-<br><br/>
-
-<br><br/>
-
-<br><br/>
-
-<br><br/>
-
-<br><br/>
-
-<br><br/>
-
-<br><br/>
-
-<br><br/>
-
-<br><br/>
-
-<br><br/>
-
-<br><br/>
-
-## نوشته‌های قبل از عید 1405
-
-> [!WARNING]
->
-> <br/>
->
-> **بوی قطعی سراسری میاد**
->
-> از من می‌شنوید هرچی کانفیگ دارید بریزید دور، اینا تا وقتی تونل نباشن (اونم نه هر تونلی، فقط بعضی دیتاسنترهای خاص وایت لیست شده) به درد لای جرز دیوار می‌خورن.
->
-> تو شرایط جنگی مثل دفعه گذشته احتمالا سایفون به دادمون می‌رسه. چند سطر پایین‌تر **توضیحات مربوط به سایفون** نوشته شده، نصب کنید تنظیمات لازمه رو انجام بدید آماده باشه توی گوشیتون.
->
-> و اینکه خسیس بازی درنیارید، به اطرافیانتون هم کمک کنید به اینترنت آزاد دسترسی داشته باشن. مبارزه بدون اینترنت آزاد اصلا راحت نیست.
->
-> <br/>
-
-<br/>
+ 
 
 > [!CAUTION]
 >
@@ -322,8 +13,6 @@ _قابل دانلود با اینترنت ملی:_
 > از دیروز برای من دوتا رنج‌ از اندپوینت‌های وارپ فعال شدن. اینجا نوشتم دربارش:
 >
 > [NiREvil/vless/wiki][WIKI]
->
-> من موقتا همه workflow هارو غیرفعال کردم که اتومات چیزی رو جایگزین نکنن، چون خودم دستی از آی‌پی‌هایی که فعال بودن گذاشتم داخل چندتا ساب‌اسکریپشن وارپ.
 >
 > <details>
 > <summary> مشاهده لینک‌ها</summary><br/>
@@ -725,23 +414,7 @@ _قابل دانلود با اینترنت ملی:_
 > </details>
 >
 > <br/>
->
-> <details>
-> <summary>❗ توضیحات مربوط به پنل zizifn </summary><br/>
->
-> این پنل راستش واسه استفاده شخصی خودمونه و جایی ازش حرفی نزدیم و تبلیغی نشده ولی بازم با این حال یه سریا ازش استفاده می‌کنن، الان که کد‌های وورکر اکثرشون استیبل نیستن و به محض ساخت وورکر یا pages خطای 1101 کلودفلر رو می‌گیرن خواستم این‌یکی رو معرفی کنم بهتون، تو سال اخیر حتی یک‌بار هم خطای 1101 نگرفتیم باهاش، چه وقتایی که 100K رکوئست داشته، و چه وقتایی که 14 میلیارد رکوئست روزانه داشته.
->
-> محض اطلاع بگم که این کد حتی یک مرحله هم مبهم نشده!!
->
-> داخل رپو دوتا فایل هست یکیش index.js کد اصلی و عادی برای ساخت وورکر و فایل \_worker.js فشرده شده (مبهم نه) برای ساخت pages کلودفلر، می‌تونید فورک بزنید و باقی مراحل، می‌تونید از روش آپلود پیش برید هیچ‌فرقی نداره. توضیحات بیشتر داخل رپو نوشته شده.  
-> تنها متغیر UUID رو ایجاد کنید کفایت می‌کنه.
->
-> [github.com/NiREvil/zizifn][Zizifn]
->
-> </details>
->
-> <br/>
->
+> 
 > <details>
 > <summary>❗ توضیحات مربوط به 1.1.1.1 </summary><br/>
 >
@@ -789,19 +462,22 @@ _قابل دانلود با اینترنت ملی:_
 > - **روش دوم وارد کردن کانفیگ‌ها:**
 >
 > توی سایت پروتون بعد از ایجاد کانفیگ روی گزینه دانلود کلیک کنید، کانفیگ دانلود شده رو تو پوشه Downloads گوشیتون پیدا کنید، عموما اسم فایل‌ها با wg- شروع میشه.  
-> فایل رو باز کنید و این چندتا پارامتری که می‌نویسم رو بعد از لاین هفتم اضافه کنید، (یعنی زیر DNS قرار میگیرن).
+> فایل رو باز کنید و این چندتا پارامتری که می‌نویسم رو بعد از لاین DNS اضافه کنید، (درستزیر لاینی که DNS هست قرار میگیرن).
 >
 > ```Elixir
 > MTU = 1280
+> Jc = 4
+> Jmin = 40
+> Jmax = 70
+> S1 = 0
+> S2 = 0
+> S3 = 0
+> S4 = 0
 > H1 = 1
 > H2 = 2
 > H3 = 3
 > H4 = 4
-> Jc = 3
-> Jmin = 10
-> Jmax = 50
-> S1 = 0
-> S2 = 0
+> I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
 > ```
 >
 > یه جا هم بالای Endpoint باز کنید و اینو قرار بدید:
@@ -827,16 +503,16 @@ _قابل دانلود با اینترنت ملی:_
 > هم‌چنین می‌تونید از **ربات تلگرام** [**YeBeKhe**][UWG?] برای ایجاد کانفیگ‌های WireGuard استفاده کنید. فقط باید قبل از استفاده Endpoint اون رو به یکی از آی‌‌پی‌های این دوتا رنج تغییر بدید چون تو ایران الان فقط این دو رنج کار می‌کنن.
 >
 > ```ruby
-> 162.159.192.5 —— 162.159.192.20
+> 8.6.112.0 —— 8.6.112.256
 > ```
 >
 > OR
 >
 > ```ruby
-> 162.159.195.1 —— 162.159.195.10
+> 188.114.97.0 —— 188.114.97.256
 > ```
 >
-> - برای مثال: `162.159.192.10`
+> - برای مثال: `8.6.112.7`
 >
 > پورت خیلی مهم نیست اینجا، تاثیری هم روی سرعت کانکشن شما نداره، یکی از پورت‌های زیر رو انتخاب کنید:
 >
@@ -874,13 +550,13 @@ _قابل دانلود با اینترنت ملی:_
 
 ### Clients
 
-- تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، هیدیفای، نکوباکس، کلش‌متا، آمنزیا، آوت‌لاین، مهسا، ویتوری‌ و ...
+- تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، اکسکلیو، هیدیفای، نکوباکس، کلش‌متا، آمنزیا، آوت‌لاین، مهسا، ویتوری‌ و ...
 
 </div>
 
-- Some subscription links are available for [v2rayNG], [Singbox], [Hiddify], [MahsaNG], [NikaNG], [NekoBox], [Exclave], [Karing], [Husi], [Amnezia], [WgTunnel], [ProxyCloud], [ZedSecure], [ClashMeta], [FiClash], [ClashMI], [Nekoray], [Outline], [v2rayTun] and other clients.
+- Some subscription links are available for [v2rayNG], [Exclave], [Singbox], [Hiddify], [MahsaNG], [Inci], [NekoBox], [Karing], [Husi], [Amnezia], [WgTunnel], [ProxyCloud], [ZedSecure], [ClashMeta], [FiClash], [ClashMI], [Nekoray], [Outline], [v2rayTun] and other clients.
 
-- **Несколько ссылок для подписки на** v2rayNG, Sing-Box, Hiddify, NikaNG, MahsaNG, NekoBox, Husi, Exclave, Amnezia, Outline, Clash-Meta и ... Вернуть результат только
+- **Несколько ссылок для подписки на** v2rayNG, Exclave, Sing-Box, Hiddify, Incy, MahsaNG, NekoBox, Husi, Amnezia, Outline, Clash-Meta и ... Вернуть результат только
 
 <br/>
 
@@ -1019,12 +695,6 @@ _قابل دانلود با اینترنت ملی:_
 >
 > <br/>
 >
-> **Awesome ai directories**, including hundreds of practical AI links, organized according to application and type of use
->
-> - [Xpoury4.github.io/AI-Links]
->
-> <br/>
->
 > **AI-powered coding tools:** AI code editors, code completion engines, review assistants, refactoring agents, LLMs for developers, and tools that turn natural language into code.
 >
 > - [Diana-Cl.github.io/Ai]
@@ -1049,11 +719,94 @@ _قابل دانلود با اینترنت ملی:_
 
 <br/>
 
-https://vpny.net/Mobile [[KV?]]
+https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/base64.txt
 
-https://vpny.net/Home
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS%2BAll_RUS.txt
+
+https://robin.victoriacross.ir [[Ni?]]
+
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
+
+https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/1.txt
+
+https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/iran_top100_checked.txt
+
+https://github.com/sakha1370/OpenRay/raw/refs/heads/main/output/all_valid_proxies.txt
+
+https://github.com/Argh94/Proxy-List/raw/refs/heads/main/All_Config.txt
+
+https://raw.githubusercontent.com/Argh94/V2RayAutoConfig/refs/heads/main/configs/Hysteria2.txt
+
+https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/refs/heads/main/Best-Results/sub.txt
+
+https://raw.githubusercontent.com/ShadowException/VPN/refs/heads/main/configs/VPN-cat
+
+https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt
+
+https://etoneya.su/1
+
+https://gitverse.ru/api/repos/flaafix/AetrisVPN_Black_list/raw/branch/master/configs.txt
+
+
+https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/all
+
+https://raw.githubusercontent.com/wuqb2i4f/xray-config-toolkit/refs/heads/main/output/base64/mix-uri
+
+https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/v2ray
+
+https://raw.githubusercontent.com/CidVpn/cid-vpn-config/refs/heads/main/general.txt
+
+https://raw.githubusercontent.com/teknovpnhub/v2ray-subscription/refs/heads/main/servers.txt
+
+https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub
+
+https://gitverse.ru/api/repos/ru-wbl/wl/raw/branch/master/KvRuVPN%2FKvRuVPN.txt
+
+https://raw.githubusercontent.com/therealaleph/Iran-configs/refs/heads/main/ir_configs.txt
+
+http://66.42.50.118:12580/clash/proxies
+
+http://www.xrayvip.com/free.txt
+
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Movaghat
+
+https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/mix.txt
+
+https://raw.githubusercontent.com/aqayerez/MatnOfficial-VPN/refs/heads/main/MatnOfficial
+
+https://gh-proxy.com/raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/yudou66.txt
+
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality
+
+https://raw.githubusercontent.com/hamedp-71/Sub_Checker_Creator/refs/heads/main/final.txt
+
+https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_links.txt
+
+https://raw.githubusercontent.com/MrBihal/Hddify/refs/heads/main/HDDIFY
+
+https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector/refs/heads/main/category/vless.txt
+
+https://github.com/LalatinaHub/Mineral/raw/refs/heads/master/result/nodes
+
+https://sub.irys.dpdns.org/auto
+
+https://gist.githubusercontent.com/senatorpersian/a6502622143da9e4ce80775a6b56ccf2/raw/0181d8f569be0a864398d5e6c72b41e5df40a3bf/subscription.txt
+
+https://rahi-eq3.pages.dev/api/configs?limit=all
+
+https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
+
+https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector/refs/heads/main/category/vless.txt
+
+https://github.com/LalatinaHub/Mineral/raw/refs/heads/master/result/nodes
+
+https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/refs/heads/main/Config/vless.txt
+
+https://raw.githubusercontent.com/shabane/kamaji/master/hub/merged.txt
 
 https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/1.txt [[AS?]]
+
+https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/26.txt
 
 https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/githubmirror/4.txt
 
@@ -1094,10 +847,6 @@ https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions
 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt
 
 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt
-
-https://robin.victoriacross.ir [[Ni?]]
-
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
 
 https://raw.githubusercontent.com/barry-far/V2ray-config/main/Splitted-By-Protocol/ss.txt [[BR?]]
 
@@ -1332,285 +1081,215 @@ https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_l
 <details>
 <summary> ➕ Click here</summary><br/>
 
-**🇵🇱PROTON#5** [[ProtonVPN]]
+**🇨🇭PROTON#8** [[ProtonVPN]]
 
 ```Elixir
 [Interface]
-PrivateKey = aKjVs0WjLd/6pbZNLQzbN/1M0qFQXZb9wjKAMxJyLUM=
-Address = 10.2.0.2/32
-DNS = 10.2.0.1
-MTU = 1280
+PrivateKey = SH+1s4RNpEdrrvQPj+i3jkPGQ9lKSCmdU/wyftusW3c=
+Address = 10.2.0.2/32, 2a07:b944::2:2/128
+DNS = 10.2.0.1, 2a07:b944::2:1
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
 H1 = 1
 H2 = 2
 H3 = 3
 H4 = 4
-Jc = 3
-Jmin = 10
-Jmax = 50
-S1 = 0
-S2 = 0
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
 
 [Peer]
-PublicKey = mU0t5IV523kxJXweVJGTHLlB6lkOZ/H4jGB6O5np7gk=
+PublicKey = n+45suXZtI1+TuZWtCnzGkXNBCgJB3wFZYIlBltpORM=
+Endpoint = 149.88.27.235:51820
 AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = 149.102.244.102:51820
+PersistentKeepalive = 25
 ```
 
 <br/>
 
-**🇵🇱PROTON#9**
+**🇳🇴PROTON#8**
 
 ```Elixir
 [Interface]
-PrivateKey = 4KLomc/0jr8UYqYyf0bZelK9C35DMn9sSc+rchd+JGg=
-Address = 10.2.0.2/32
-DNS = 10.2.0.1
-MTU = 1280
+PrivateKey = cBBgdN9rEzwBub89yuw7cXmoVySgdAW2xjEPx5xOmEc=
+Address = 10.2.0.2/32, 2a07:b944::2:2/128
+DNS = 10.2.0.1, 2a07:b944::2:1
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
 H1 = 1
 H2 = 2
 H3 = 3
 H4 = 4
-Jc = 3
-Jmin = 10
-Jmax = 50
-S1 = 0
-S2 = 0
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
 
 [Peer]
-PublicKey = o455QbnfkfVmAIvv+PSSaynSHURK41FafOAF6ue+gRM=
+PublicKey = Ij0q4D/YkXhxpK4p9sCeRxM6BmWGgkywRlFELLwW9xQ=
+Endpoint = 95.173.205.160:51820
 AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = 149.102.244.107:51820
+PersistentKeepalive = 25
 ```
 
 <br/>
 
-**🇨🇦PROTON#3**
+**🇨🇦PROTON#31**
 
 ```ballerina
 [Interface]
-PrivateKey = mOjk08vOizJks8wPbxX4N3E/Vjz4G9o62ykYMBZynGE=
-Address = 10.2.0.2/32
-DNS = 10.2.0.1
-MTU = 1280
+PrivateKey = ICir51EPUF8Gzi1QaPiOFPXo3uM/2M1NHc3TeI6njFA=
+Address = 10.2.0.2/32, 2a07:b944::2:2/128
+DNS = 10.2.0.1, 2a07:b944::2:1
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
 H1 = 1
 H2 = 2
 H3 = 3
 H4 = 4
-Jc = 3
-Jmin = 10
-Jmax = 50
-S1 = 0
-S2 = 0
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
 
 [Peer]
-PublicKey = bXjH25gkRdWvXKahKY4iJNE+v/TVdT0uXE6WQJrX51Q=
+PublicKey = 358uOGHHss6pUT5v2enBtybHCun3iyH/l7g1t9BVfgo=
+Endpoint = 195.242.214.162:51820
 AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = 169.150.204.44:51820
+PersistentKeepalive = 25
 ```
 
 <br/>
 
-**🇯🇵PROTON#9**
+**🇨🇦PROTON#8**
 
 ```ballerina
 [Interface]
-PrivateKey = 0P+Z9K5SGX80/5/cX/xGqfFY58xqf6fvtUi4Yhe1HmQ=
-Address = 10.2.0.2/32
-DNS = 10.2.0.1
-MTU = 1280
+PrivateKey = qNv1T8m0Xsf1dD8LHkWmQ92qGV3j5mdfXTYT934FW2Q=
+Address = 10.2.0.2/32, 2a07:b944::2:2/128
+DNS = 10.2.0.1, 2a07:b944::2:1
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
 H1 = 1
 H2 = 2
 H3 = 3
 H4 = 4
-Jc = 3
-Jmin = 10
-Jmax = 50
-S1 = 0
-S2 = 0
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
 
 [Peer]
-PublicKey = 9T76/iy7U1loVTPaREbDPqS3PhHOe+zrwsdrS4WleSo=
+PublicKey = xw17Os6trr64hGzsWUPLYEkfDVcqxhAjp1xZ+RTSUnA=
+Endpoint = 149.22.82.28:51820
 AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = 138.199.21.216:51820
+PersistentKeepalive = 25
 ```
 
 <br/>
 
-**🇲🇽PROTON#2**
+**🇲🇽PROTON#16**
 
 ```elixir
 [Interface]
-PrivateKey = 6FxPg7iTjVhU6573AIz80F9ndw5Vvk0SHVr2iXXqPE4=
+PrivateKey = GNzjEb98dCnbjUMaSnhR5UzIl+AUdwRf47HdRYr1H2w=
 Address = 10.2.0.2/32
 DNS = 10.2.0.1
-MTU = 1280
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
 H1 = 1
 H2 = 2
 H3 = 3
 H4 = 4
-Jc = 3
-Jmin = 10
-Jmax = 50
-S1 = 0
-S2 = 0
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
 
 [Peer]
-PublicKey = GU2c5lP3YlUDXt0S+R2BLJXSbLSO76JtqaF7jZSJzDc=
+PublicKey = mkI+cC9ggzfMdZy1cl3Fl01gPJJxsLXjshXAN8EedQ8=
+Endpoint = 84.20.27.53:51820
 AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = 103.88.234.229:51820
+PersistentKeepalive = 25
 ```
 
 <br/>
 
-**🇳🇱PROTON#96**
+**🇺🇸PROTON#4**
 
 ```Elixir
 [Interface]
-PrivateKey = eB72HJxoT3QNnfKmyGTsNEKJVZ8GHEiy0U/Dt5SPhVU=
-Address = 10.2.0.2/32
-DNS = 10.2.0.1
-MTU = 1280
+PrivateKey = gBAy3+3kvvlIIddbFBNB+CxJa+oYv3Z2TAMkArD+bVk=
+Address = 10.2.0.2/32, 2a07:b944::2:2/128
+DNS = 10.2.0.1, 2a07:b944::2:1
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
 H1 = 1
 H2 = 2
 H3 = 3
 H4 = 4
-Jc = 3
-Jmin = 10
-Jmax = 50
-S1 = 0
-S2 = 0
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
 
 [Peer]
-PublicKey = m9OaV5cN8eM33EX5sZpQc23F4oIUoaPHQtGzeZtBgEU=
+PublicKey = g0gQj1lhsEuyJcJlzVyjq7aQmtC+/ca05vqOqvCQ/zI=
+Endpoint = 146.70.230.130:51820
 AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = 138.199.7.235:51820
+PersistentKeepalive = 25
 ```
 
 <br/>
 
-**🇳🇴PROTON#3**
+**🇸🇬PROTON#15**
 
 ```ballerina
 [Interface]
-PrivateKey = INs0fl9dfq4OdZgW06GsL/eldY1odepDxMXjU+RGDlg=
+PrivateKey = 0Nua7l5PfsUNwPxkwyjcFOvUN5lQxilHRCFGDLSFwm0=
 Address = 10.2.0.2/32
 DNS = 10.2.0.1
-MTU = 1280
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
 H1 = 1
 H2 = 2
 H3 = 3
 H4 = 4
-Jc = 3
-Jmin = 10
-Jmax = 50
-S1 = 0
-S2 = 0
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
 
 [Peer]
-PublicKey = jZ4R9rB/aiurfhPqm9XFyS9Euzdpwec//0rEz/bUPU0=
+PublicKey = LzDybSqRbDLpmigYBYbCHyh9fMfphvcEYpV39GvTgE4=
+Endpoint = 103.216.221.69:51820
 AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = 95.173.205.162:51820
+PersistentKeepalive = 25
 ```
 
 <br/>
 
-**🇷🇴PROTON#29**
-
-```ballerina
-[Interface]
-PrivateKey = oPqRqs65M2A3wqvu58EEiBBs6dFRbIlndRPF438LL1Y=
-Address = 10.2.0.2/32
-DNS = 10.2.0.1
-MTU = 1280
-H1 = 1
-H2 = 2
-H3 = 3
-H4 = 4
-Jc = 3
-Jmin = 10
-Jmax = 50
-S1 = 0
-S2 = 0
-
-[Peer]
-PublicKey = Hn/oz255qtOjckrUeoA3Gi/UbX/sLSCZPfKXH4lXhjc=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = 146.70.246.146:51820
-```
-
-<br/>
-
-**🇺🇸PROTON#26**
+**🇮🇷FREEWARP#1** [[UWG?]]
 
 ```Elixir
 [Interface]
-PrivateKey = EN+yJwnfsqT/Ndcw/ms4dFg0FcyIwBVap0wl4JnILmY=
-Address = 10.2.0.2/32
-DNS = 10.2.0.1
-MTU = 1280
-H1 = 1
-H2 = 2
-H3 = 3
-H4 = 4
-Jc = 3
-Jmin = 10
-Jmax = 50
-S1 = 0
-S2 = 0
-
-[Peer]
-PublicKey = u8TqDmhDMeQcMJbMbi8uRcFfXEm5RdOGHygvuEesV0Y=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = 149.40.62.56:51820
-```
-
-<br/>
-
-**They may not work now 👇**
-
-**🇮🇷FREE#0**
-
-```Elixir
-[Interface]
-PrivateKey = 8IREz0wjTHPwDBkz1oQAxqJLjgRszWvDudTHfHJQ91c=
+PrivateKey = ICNoc3nF9fYofJG05tF1EigojRlaDJZHLD+vdan3/2U=
 Address = 172.16.0.2/32,2606:4700:110:8a8e:f20a:b5e4:9718:e5f4/128
-DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
-MTU = 1280
-Jc = 3
-Jmin = 10
-Jmax = 50
-S1 = 0
-S2 = 0
-H1 = 1
-H2 = 2
-H3 = 3
-H4 = 4
-Jc = 3
-
-[Peer]
-PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 30
-Endpoint = wire.nscl.ir:878
-```
-
-<br/>
-
-**🇮🇷FREE#1** [[UWG?]]
-
-```Elixir
-[Interface]
-PrivateKey = kFrCW3gU8ssg2jsa0IMlcw8U1sjrR4FyHfZvFMrtIlo=
-Address = 172.16.0.2/32,2606:4700:110:8017:5ef1:e186:5169:1ae2/128
 DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
 MTU = 1280
 Jc = 4
@@ -1618,17 +1297,19 @@ Jmin = 40
 Jmax = 70
 S1 = 0
 S2 = 0
+S3 = 0
+S4 = 0
 H1 = 1
 H2 = 2
 H3 = 3
 H4 = 4
-Jc = 3
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
 
 [Peer]
 PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+Endpoint = wire.nscl.ir:878
 AllowedIPs = 0.0.0.0/0, ::/0
 PersistentKeepalive = 30
-Endpoint = 162.159.195.8:1014
 ```
 
 <br/>
@@ -1637,53 +1318,297 @@ Endpoint = 162.159.195.8:1014
 
 ```Elixir
 [Interface]
-PrivateKey = EP6iZgOR+z8e/O+O1kWUe0fnH9Ixy2O/yfe5W+qqinA=
-Address = 172.16.0.2/32,2606:4700:110:856e:2592:8983:d2f3:bf31/128
-DNS = 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 208.67.222.222, 2606:4700:4700::1111
+PrivateKey = IFAQ7p23h6BtKAdeNzgTlwL9z/CU3gkCwKCHrC+Tbm8=
+Address = 172.16.0.2/32, 2606:4700:110:860b:d2c5:3724:cbd3:a49c/128
+DNS = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001
 MTU = 1280
-Jc = 3
-Jmin = 20
-Jmax = 60
+Jc = 4
+Jmin = 40
+Jmax = 70
 S1 = 0
 S2 = 0
+S3 = 0
+S4 = 0
 H1 = 1
 H2 = 2
 H3 = 3
 H4 = 4
-Jc = 3
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
 
 [Peer]
 PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+Endpoint = 8.6.112.234:859
 AllowedIPs = 0.0.0.0/0, ::/0
 PersistentKeepalive = 30
-Endpoint = 162.159.192.10:2506
 ```
 
 <br/>
 
-**🇳🇱Amsterdam#Vz** [[VZ?]]
+**🇮🇷FREE#3**
+
+```Elixir
+[Interface]
+PrivateKey = EJft/sa5Qp9QlzxbCbQp8Dv4uuEmHuT8VHUF+xVDBWg=
+Address = 172.16.0.2/32, 2606:4700:110:8613:9b6a:2d5f:c394:7170/128
+DNS = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001
+MTU = 1280
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
+
+[Peer]
+PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+Endpoint = 8.6.112.228:1843
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+```
+
+<br/>
+
+<br/>
+
+**🇮🇷FREE#4**
+
+```Elixir
+[Interface]
+PrivateKey = KNOyCvJdN4OrgWjcGyyuGcF+3zNBuZKn2xGnmPhViEM=
+Address = 172.16.0.2/32, 2606:4700:110:8547:ad6a:a8c2:9d64:ced7/128
+DNS = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001
+MTU = 1280
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
+
+[Peer]
+PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+Endpoint = 8.6.112.224:8886
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+```
+
+<br/>
+
+**🇮🇷FREE#5**
+
+```Elixir
+[Interface]
+PrivateKey = YGRLyk7kvdEaSHCtC4l5Kftv3G0r/GjTUTnvjbX+HHw=
+Address = 172.16.0.2/32, 2606:4700:110:85a2:e6f:5959:16a2:fb15/128
+DNS = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001
+MTU = 1280
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
+
+[Peer]
+PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+Endpoint = 188.114.97.5:3581
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+```
+
+<br/>
+
+**🇮🇷FREE#6**
+
+```Elixir
+# Name = wbnet/warp12-wbnet
+[Interface]
+PrivateKey = 0NTro6gZRH9GbymtmBT5i+MYbVIeR6Gr6AaaAyEzeWs=
+Address = 172.16.0.2/32, 2606:4700:110:84be:e544:8f1a:7bc1:b606/128
+DNS = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001
+MTU = 1280
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
+
+[Peer]
+PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+Endpoint = 188.114.97.3:500
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+```
+
+<br/>
+
+**🇮🇷FREE#7**
+
+```Elixir
+[Interface]
+PrivateKey = YInaP0Hiqmck/cw8SBS10u9lRllschkRVHUueMKXHHs=
+Address = 172.16.0.2/32, 2606:4700:110:8b97:3e35:240d:810f:567e/128
+DNS = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001
+MTU = 1280
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
+
+[Peer]
+PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+Endpoint = 188.114.97.6:894
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+```
+
+<br/>
+
+**🇮🇷FREE#8**
+
+```Elixir
+[Interface]
+PrivateKey = uMrKnWNg+LPS9KT8JqFoWpeWsSrb4y87tNLuZxaoKGA=
+Address = 172.16.0.2/32, 2606:4700:110:8bf1:1bbd:4223:44a1:eff6/128
+DNS = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001
+MTU = 1280
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
+
+[Peer]
+PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+Endpoint = 188.114.97.64:859
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+```
+
+<br/>
+
+**🇮🇷FREE#9**
+
+```Elixir
+[Interface]
+PrivateKey = KNOyCvJdN4OrgWjcGyyuGcF+3zNBuZKn2xGnmPhViEM=
+Address = 172.16.0.2/32, 2606:4700:110:8547:ad6a:a8c2:9d64:ced7/128
+DNS = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001
+MTU = 1280
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
+
+[Peer]
+PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+Endpoint = 8.6.112.253:854
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+```
+
+<br/>	 
+
+**🇮🇷FREE#10**
+
+```Elixir
+[Interface]
+PrivateKey = cLa+KXAoSz7/TLB+MfSK8HIrWA4npfVjOyLrSnnHT3c=
+Address = 172.16.0.2/32, 2606:4700:110:86b8:11c6:dfd6:102f:c44d/128
+DNS = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001
+MTU = 1280
+Jc = 4
+Jmin = 40
+Jmax = 70
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
+
+[Peer]
+PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+Endpoint = 8.6.112.128:1070
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 30
+```
+
+**🇳🇱Amsterdam#MMKZ**
 
 ```yaml
 [Interface]
-PrivateKey = QFlaWTq8z5XM4wm9Z0DvmIEsV3eXxKHmd+ihACDmknk=
-Address = 10.136.38.50/32
-DNS = 1.1.1.1, 8.8.4.4
-MTU = 1380
-Jc = 43
-Jmin = 50
-Jmax = 70
-S1 = 110
-S2 = 120
-H1 = 1593635057
-H2 = 430880481
-H3 = 1214405368
-H4 = 1739253821
+PrivateKey = KP56/mob9FJqpLIN2XNzmQBCyKeAPkhni9Te+ZS7OlI=
+Address = 10.2.0.2/32, 2a07:b944::2:2/128
+DNS = 10.2.0.1, 2a07:b944::2:1
+MTU = 1476
+Jc = 4
+Jmin = 40
+Jmax = 70 
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x494e56495445207369703a626f624062696c6f78692e636f6d205349502f322e300d0a5669613a205349502f322e302f55445020706333332e61746c616e74612e636f6d3b6272616e63683d7a39684734624b3737366173646864730d0a4d61782d466f7277617264733a2037300d0a546f3a20426f62203c7369703a626f624062696c6f78692e636f6d3e0d0a46726f6d3a20416c696365203c7369703a616c6963654061746c616e74612e636f6d3e3b7461673d313932383330313737340d0a43616c6c2d49443a20613834623463373665363637313040706333332e61746c616e74612e636f6d0d0a435365713a2033313431353920494e564954450d0a436f6e746163743a203c7369703a616c69636540706333332e61746c616e74612e636f6d3e0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f7364700d0a436f6e74656e742d4c656e6774683a20300d0a0d0a>
+I2 = <b 0x5349502f322e302031303020547279696e670d0a5669613a205349502f322e302f55445020706333332e61746c616e74612e636f6d3b6272616e63683d7a39684734624b3737366173646864730d0a546f3a20426f62203c7369703a626f624062696c6f78692e636f6d3e0d0a46726f6d3a20416c696365203c7369703a616c6963654061746c616e74612e636f6d3e3b7461673d313932383330313737340d0a43616c6c2d49443a20613834623463373665363637313040706333332e61746c616e74612e636f6d0d0a435365713a2033313431353920494e564954450d0a436f6e74656e742d4c656e6774683a20300d0a0d0a>
+
 [Peer]
-PublicKey = gbUPMNfaxgRSGD3xcnnbAJSclxfnOyh4U1qqmYMWmCI=
-PresharedKey = G7qzjJmlQZfsVM8AKM1mI2NcZubpT3awN1k4j4HsQ/0=
+#🇳🇱NLro90#proton
+PublicKey = LrxxTiPJjKy7MUJw3S9HOh1qL0Qpi/fD1KrsBwn+gT0=
 AllowedIPs = 0.0.0.0/0, ::/0
 PersistentKeepalive = 25
-Endpoint = nl02awg.kcufwfgnkr.net:60136
+Endpoint = 89.39.107.156:51820
 ```
 
 </details>
@@ -1988,6 +1913,16 @@ https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eterni
 https://cdn.jsdelivr.net/gh/mahdibland/V2RayAggregator@master/update/provider/provider-meta-others.yml
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.yml
+
+https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/converted/iran_top100_clash_config.yaml
+
+https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml
+
+https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/mihomo.yaml
+
+https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/free-mihomo-sub/host.yaml
+
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Movaghat
 
 https://raw.githubusercontent.com/lagzian/TVC/main/lite/subscriptions/meta/mix [[LG?]]
 
@@ -2384,51 +2319,56 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
 
 #### Free WireGuards
 
-**for v2rayNG, Mahsa and NikaNG**
+**for v2rayNG/MahsaNG**  
+**🇮🇷 Warp**
 
-> Recommended: MahsaNG Client
-
-```css
+```json
 {
-  "remarks": "warp-xray",
+  "remarks": "🇮🇷 Warp-Xray",
   "log": {
-    "loglevel": "debug"
+    "loglevel": "none"
   },
   "dns": {
-    "hosts": {
-      "domain:googleapis.cn": "googleapis.com"
-    },
     "servers": [
-      "1.1.1.1"
-    ]
+      "fakedns",
+      {
+        "address": "1.1.1.1",
+        "tag": "remote-dns"
+      }
+    ],
+    "queryStrategy": "UseIPv4",
+    "tag": "dns"
   },
   "inbounds": [
     {
       "listen": "127.0.0.1",
       "port": 10808,
-      "protocol": "socks",
+      "protocol": "mixed",
       "settings": {
         "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
+        "udp": true
       },
       "sniffing": {
         "destOverride": [
           "http",
-          "tls"
+          "tls",
+          "fakedns"
         ],
-        "enabled": true
+        "enabled": true,
+        "routeOnly": true
       },
-      "tag": "socks"
+      "tag": "mixed-in"
     },
     {
       "listen": "127.0.0.1",
-      "port": 10809,
-      "protocol": "http",
+      "port": 10853,
+      "protocol": "dokodemo-door",
       "settings": {
-        "userLevel": 8
+        "address": "1.1.1.1",
+        "network": "tcp,udp",
+        "port": 53
       },
-      "tag": "http"
+      "tag": "dns-in"
     }
   ],
   "outbounds": [
@@ -2436,61 +2376,42 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
       "protocol": "wireguard",
       "settings": {
         "address": [
-          "172.16.0.2/32"
+          "172.16.0.2/32",
+          "2606:4700:110:83c7:4760:54fd:11a:ce32/128"
         ],
         "mtu": 1280,
-        "wnoise": "none",
         "peers": [
           {
-            "endpoint": "162.159.192.12:878",
-            "keepAlive": 30,
-            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+            "endpoint": "8.6.112.128:1070",
+            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "keepAlive": 25
           }
         ],
         "reserved": [
           168,
-          149,
-          225
+          245,
+          160
         ],
-        "secretKey": "8IREz0wjTHPwDBkz1oQAxqJLjgRszWvDudTHfHJQ91c="
+        "secretKey": "dxNthrZtdevvvKZI5lfX9Kyk1OWaN06TmvF4VQJoSZk="
       },
-      "streamSettings": {
-        "sockopt": {
-          "dialerProxy": "MMMnoise"
-        }
-      },
-      "tag": "warpMain"
+      "tag": "freedom"
     },
     {
-      "tag": "MMMnoise",
-      "protocol": "freedom",
+      "protocol": "dns",
       "settings": {
-        "domainStrategy": "AsIs",
-        "noiseKeepAlive": 30,
-        "noises": [
+        "rules": [
           {
-            "type": "hex",
-            "packet": "ee0000000108aaaaaaaaaaaaaaaa000044d0",
-            "delay": "0-16",
-            "count": "2"
-          },
-          {
-            "type": "hex",
-            "packet": "ee0000000108aaaa",
-            "delay": "10-16",
-            "count": "10"
-          },
-          {
-            "type": "str",
-            "packet": "ee0000000108aaaa",
-            "delay": "10-16"
+            "action": "hijack"
           }
         ]
-      }
+      },
+      "tag": "dns-out"
     },
     {
       "protocol": "freedom",
-      "settings": {},
+      "settings": {
+        "domainStrategy": "UseIP"
+      },
       "tag": "direct"
     },
     {
@@ -2507,74 +2428,121 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
     "domainStrategy": "IPIfNonMatch",
     "rules": [
       {
-        "type": "field",
         "inboundTag": [
-          "api"
+          "mixed-in"
         ],
-        "outboundTag": "api",
-        "enabled": true
+        "port": 53,
+        "outboundTag": "dns-out",
+        "type": "field"
+      },
+      {
+        "inboundTag": [
+          "dns-in"
+        ],
+        "outboundTag": "dns-out",
+        "type": "field"
+      },
+      {
+        "inboundTag": [
+          "remote-dns"
+        ],
+        "outboundTag": "freedom",
+        "type": "field"
+      },
+      {
+        "inboundTag": [
+          "dns"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "geosite:private"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
       },
       {
         "ip": [
-          "1.1.1.1"
+          "geoip:private"
         ],
-        "outboundTag": "warpMain",
-        "port": "53",
+        "outboundTag": "direct",
         "type": "field"
       },
       {
-        "id": "5627785659655799759",
-        "type": "field",
-        "port": "0-65535",
-        "outboundTag": "warpMain",
-        "enabled": true
+        "network": "tcp,udp",
+        "outboundTag": "freedom",
+        "type": "field"
       }
     ]
-  }
+  },
+  "policy": {
+    "levels": {
+      "0": {
+        "connIdle": 300,
+        "handshake": 4,
+        "uplinkOnly": 1,
+        "downlinkOnly": 1
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
+  "stats": {}
 }
 ```
 
-**This is the same**
+**🇩🇪 Warp ON Warp**
 
 ```json
 {
-  "remarks": "warp-on-warp-ipv4",
-  "log": { "loglevel": "none" },
+  "remarks": "🇩🇪 WoW-Xray",
+  "log": {
+    "loglevel": "none"
+  },
   "dns": {
-    "hosts": {
-      "one.one.one.one": ["1.1.1.1", "1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001"]
-    },
     "servers": [
-      "https://1.1.1.1/dns-query",
+      "fakedns",
       {
         "address": "1.1.1.1",
-        "domains": ["geosite:category-ir", "domain:.ir"],
-        "expectIPs": ["geoip:ir"],
-        "port": 53
+        "tag": "remote-dns"
       }
     ],
+    "queryStrategy": "UseIPv4",
     "tag": "dns"
   },
   "inbounds": [
     {
+      "listen": "127.0.0.1",
       "port": 10808,
-      "protocol": "socks",
-      "settings": { "auth": "noauth", "udp": true, "userLevel": 8 },
-      "sniffing": { "destOverride": ["http", "tls"], "enabled": true, "routeOnly": false },
-      "tag": "socks-in"
-    },
-    {
-      "port": 10809,
-      "protocol": "http",
-      "settings": { "auth": "noauth", "udp": true, "userLevel": 8 },
-      "sniffing": { "destOverride": ["http", "tls"], "enabled": true, "routeOnly": false },
-      "tag": "http-in"
+      "protocol": "mixed",
+      "settings": {
+        "auth": "noauth",
+        "udp": true
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls",
+          "fakedns"
+        ],
+        "enabled": true,
+        "routeOnly": true
+      },
+      "tag": "mixed-in"
     },
     {
       "listen": "127.0.0.1",
       "port": 10853,
       "protocol": "dokodemo-door",
-      "settings": { "address": "1.1.1.1", "network": "tcp,udp", "port": 53 },
+      "settings": {
+        "address": "1.1.1.1",
+        "network": "tcp,udp",
+        "port": 53
+      },
       "tag": "dns-in"
     }
   ],
@@ -2582,224 +2550,153 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
     {
       "protocol": "wireguard",
       "settings": {
-        "address": ["172.16.0.2/32", "2606:4700:110:81ec:2a68:559d:ab39:22b4/128"],
-        "mtu": 1330,
+        "address": [
+          "172.16.0.2/32",
+          "2606:4700:110:884b:c7ad:a6f4:14b4:7d4a/128"
+        ],
+        "mtu": 1280,
         "peers": [
           {
-            "endpoint": "162.159.192.6:878",
-            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+            "endpoint": "162.159.192.1:2408",
+            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "keepAlive": 25
           }
         ],
-        "reserved": [114, 123, 123],
-        "secretKey": "UG8l/RlQzwOcnfTVKtApKrGFUJDMz2lJ8Idv8/kVLEA=",
-        "keepAlive": 30,
-        "wnoise": "quic",
-        "wnoisecount": "10",
-        "wpayloadsize": "1-5",
-        "wnoisedelay": "1-2"
+        "reserved": [
+          246,
+          9,
+          206
+        ],
+        "secretKey": "/6LBwoph6z3u/W2v5Xer6PNIR3XnGATLUHdlZ4VEBZY="
       },
-      "streamSettings": { "sockopt": { "dialerProxy": "proxy" } },
+      "streamSettings": {
+        "sockopt": {
+          "dialerProxy": "freedom"
+        }
+      },
       "tag": "chain"
     },
     {
       "protocol": "wireguard",
       "settings": {
-        "address": ["172.16.0.2/32", "2606:4700:110:80b2:77e6:6275:cfa3:ffd0/128"],
+        "address": [
+          "172.16.0.2/32",
+          "2606:4700:110:83c7:4760:54fd:11a:ce32/128"
+        ],
         "mtu": 1280,
         "peers": [
           {
-            "endpoint": "162.159.195.8:955",
-            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
+            "endpoint": "188.114.97.4:878",
+            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "keepAlive": 25
           }
         ],
-        "reserved": [143, 98, 212],
-        "secretKey": "ADL66p2mpJ2zp5CKRwUL0WCXpi7Y70M5hRSj3/ourXU=",
-        "keepAlive": 30,
-        "wnoise": "quic",
-        "wnoisecount": "10",
-        "wpayloadsize": "1-5",
-        "wnoisedelay": "1-2"
+        "reserved": [
+          119,
+          52,
+          94
+        ],
+        "secretKey": "p6yN9dRtJF0ECUy47hAAOcuBFEdUSiyvCJqoQPw+0Js="
       },
-      "tag": "proxy"
+      "tag": "freedom"
     },
-    { "protocol": "dns", "tag": "dns-out" },
-    { "protocol": "freedom", "settings": {}, "tag": "direct" },
-    { "protocol": "blackhole", "settings": { "response": { "type": "http" } }, "tag": "block" }
-  ],
-  "policy": {
-    "levels": { "8": { "connIdle": 300, "downlinkOnly": 1, "handshake": 4, "uplinkOnly": 1 } },
-    "system": { "statsOutboundUplink": true, "statsOutboundDownlink": true }
-  },
-  "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
-      { "inboundTag": ["dns-in"], "outboundTag": "dns-out", "type": "field" },
-      { "ip": ["1.1.1.1"], "outboundTag": "direct", "port": "53", "type": "field" },
-      { "domain": ["geosite:category-ir", "domain:.ir"], "outboundTag": "direct", "type": "field" },
-      { "ip": ["geoip:ir", "geoip:private"], "outboundTag": "direct", "type": "field" },
-      {
-        "domain": ["geosite:category-ads-all", "geosite:category-ads-ir"],
-        "outboundTag": "block",
-        "type": "field"
+    {
+      "protocol": "dns",
+      "settings": {
+        "rules": [
+          {
+            "action": "hijack"
+          }
+        ]
       },
-      { "outboundTag": "chain", "type": "field", "network": "tcp,udp" }
-    ]
-  },
-  "stats": {}
-}
-```
-
-**This is the same but IPv6.**
-
-```json
-{
-  "remarks": "warp-on-warp-ipv6",
-  "log": { "loglevel": "none" },
-  "dns": {
-    "hosts": {
-      "protective.joindns4.eu": [
-        "86.54.11.1",
-        "86.54.11.201",
-        "2a13:1001::86:54:11:201",
-        "2a13:1001::86:54:11:1"
-      ]
-    },
-    "servers": [
-      "https://protective.joindns4.eu/dns-query",
-      "https://1.1.1.1/dns-query",
-      {
-        "address": "https://1.1.1.1/dns-query",
-        "domains": ["geosite:category-ir", "domain:.ir"],
-        "expectIPs": ["geoip:ir"],
-        "port": 53
-      }
-    ],
-    "tag": "dns"
-  },
-  "inbounds": [
-    {
-      "port": 10808,
-      "protocol": "socks",
-      "settings": { "auth": "noauth", "udp": true, "userLevel": 8 },
-      "sniffing": { "destOverride": ["http", "tls"], "enabled": true, "routeOnly": false },
-      "tag": "socks-in"
+      "tag": "dns-out"
     },
     {
-      "port": 10809,
-      "protocol": "http",
-      "settings": { "auth": "noauth", "udp": true, "userLevel": 8 },
-      "sniffing": { "destOverride": ["http", "tls"], "enabled": true, "routeOnly": false },
-      "tag": "http-in"
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIP"
+      },
+      "tag": "direct"
     },
     {
-      "listen": "127.0.0.1",
-      "port": 10853,
-      "protocol": "dokodemo-door",
-      "settings": { "address": "86.54.11.201", "network": "tcp,udp", "port": 53 },
-      "tag": "dns-in"
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
     }
   ],
-  "outbounds": [
-    {
-      "protocol": "wireguard",
-      "settings": {
-        "address": ["172.16.0.2/32", "2606:4700:110:81ec:2a68:559d:ab39:22b4/128"],
-        "mtu": 1300,
-        "peers": [
-          {
-            "endpoint": "162.159.195.8:1002",
-            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
-          }
-        ],
-        "reserved": [114, 123, 123],
-        "secretKey": "UG8l/RlQzwOcnfTVKtApKrGFUJDMz2lJ8Idv8/kVLEA=",
-        "keepAlive": 30,
-        "wnoise": "quic",
-        "wnoisecount": "15",
-        "wpayloadsize": "1-5",
-        "wnoisedelay": "1-2"
-      },
-      "streamSettings": { "sockopt": { "dialerProxy": "proxy" } },
-      "tag": "chain"
-    },
-    {
-      "protocol": "wireguard",
-      "settings": {
-        "address": ["172.16.0.2/32", "2606:4700:110:80b2:77e6:6275:cfa3:ffd0/128"],
-        "mtu": 1280,
-        "peers": [
-          {
-            "endpoint": "[2606:4700:d0::a29f:c008]:7559",
-            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
-          }
-        ],
-        "reserved": [143, 98, 212],
-        "secretKey": "ADL66p2mpJ2zp5CKRwUL0WCXpi7Y70M5hRSj3/ourXU=",
-        "keepAlive": 30,
-        "wnoise": "quic",
-        "wnoisecount": "15",
-        "wpayloadsize": "5-10",
-        "wnoisedelay": "1-3"
-      },
-      "tag": "proxy"
-    },
-    { "protocol": "dns", "tag": "dns-out" },
-    { "protocol": "freedom", "settings": {}, "tag": "direct" },
-    { "protocol": "blackhole", "settings": { "response": { "type": "http" } }, "tag": "block" }
-  ],
-  "policy": {
-    "levels": { "8": { "connIdle": 300, "downlinkOnly": 1, "handshake": 4, "uplinkOnly": 1 } },
-    "system": { "statsOutboundUplink": true, "statsOutboundDownlink": true }
-  },
   "routing": {
     "domainStrategy": "IPIfNonMatch",
     "rules": [
-      { "inboundTag": ["dns-in"], "outboundTag": "dns-out", "type": "field" },
-      { "ip": ["1.1.1.1"], "outboundTag": "direct", "port": "53", "type": "field" },
-      { "domain": ["geosite:category-ir", "domain:.ir"], "outboundTag": "direct", "type": "field" },
-      { "ip": ["geoip:ir", "geoip:private"], "outboundTag": "direct", "type": "field" },
       {
-        "domain": ["geosite:category-ads-all", "geosite:category-ads-ir"],
-        "outboundTag": "block",
+        "inboundTag": [
+          "mixed-in"
+        ],
+        "port": 53,
+        "outboundTag": "dns-out",
         "type": "field"
       },
-      { "outboundTag": "chain", "type": "field", "network": "tcp,udp" }
+      {
+        "inboundTag": [
+          "dns-in"
+        ],
+        "outboundTag": "dns-out",
+        "type": "field"
+      },
+      {
+        "inboundTag": [
+          "remote-dns"
+        ],
+        "outboundTag": "freedom",
+        "type": "field"
+      },
+      {
+        "inboundTag": [
+          "dns"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "geosite:private"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "network": "tcp,udp",
+        "outboundTag": "chain",
+        "type": "field"
+      }
     ]
+  },
+  "policy": {
+    "levels": {
+      "0": {
+        "connIdle": 300,
+        "handshake": 4,
+        "uplinkOnly": 1,
+        "downlinkOnly": 1
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
   },
   "stats": {}
 }
-```
-
-**For NikaNG** [[TD?]]
-
-```YAML
-wireguard://oP4D2HXriimhBqk%2Bw4CpI41OEQd5p2rJV8MtbeV7eUs%3D@162.159.192.6:2371?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1280&reserved=195%2C216%2C199#@ConfigWireguard
-```
-
-```YAML
-wireguard://yHmk7qZA48yn%2FPCgMV%2F95lazmj2JgXBxk5MoUjsSwEo%3D@162.159.195.4:998?wnoise=quic&address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&keepalive=10&wpayloadsize=1-8&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&wnoisedelay=1-3&wnoisecount=15&mtu=1280&reserved=229%2C4%2C12#@arshiacomplus
-```
-
-**Ex for MahsaNG**
-
-```YAML
-wireguard://oP4D2HXriimhBqk%2Bw4CpI41OEQd5p2rJV8MtbeV7eUs%3D@162.159.192.8:3476?address=172.16.0.2/32,2606%3A4700%3A110%3A846c%3Ae510%3Abfa1%3Aea9f%3A5247%2F128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=195%2C216%2C199#@ConfigWireguard
-```
-
-```YAML
-wireguard://yHmk7qZA48yn%2FPCgMV%2F95lazmj2JgXBxk5MoUjsSwEo%3D@162.159.195.2:878?address=172.16.0.2/32, 2606:4700:110:846c:e510:bfa1:ea9f:5247/128&publickey=bmXOC%2BF1FxEMF9dyiK2H5%2F1SUtzH0JuVo51h2wPfgyo%3D&reserved=229%2C4%2C12#@arshiacomplus
-```
-
-**Ex for Mahsa/NikaNG**
-
-```JSON
- {"remarks": "ArshiaComPlus - WoW", "log": {"loglevel": "warning"}, "dns": {"hosts": {}, "servers": ["https://94.140.14.14/dns-query", {"address": "1.1.1.1", "domains": ["geosite:category-ir", "domain:.ir"], "expectIPs": ["geoip:ir"], "port": 53}], "tag": "dns"}, "inbounds": [{"port": 10808, "protocol": "socks", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": true}, "tag": "socks-in"}, {"port": 10809, "protocol": "http", "settings": {"auth": "noauth", "udp": true, "userLevel": 8}, "sniffing": {"destOverride": ["http", "tls"], "enabled": true, "routeOnly": true}, "tag": "http-in"}, {"listen": "127.0.0.1", "port": 10853, "protocol": "dokodemo-door", "settings": {"address": "1.1.1.1", "network": "tcp,udp", "port": 53}, "tag": "dns-in"}], "outbounds": [{"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "mtu": 1280, "peers": [{"endpoint": "162.159.192.18:878", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [156, 62, 221], "secretKey": "SDeDZQJ5nmPBFR/284ske2JyVcPKNtsiUe0IOdkl8Ek=", "keepAlive": 30, "wnoise": "quic", "wnoisecount": "10-15", "wpayloadsize": "1-5", "wnoisedelay": "1-3"}, "streamSettings": {"sockopt": {"dialerProxy": "warp-ir"}}, "tag": "warp-out"}, {"protocol": "wireguard", "settings": {"address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "mtu": 1280, "peers": [{"endpoint": "162.159.195.10:942", "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="}], "reserved": [8, 29, 217], "secretKey": "IDXG9mb1NMz6fgENEvSO2TlVDU8BIf/absJLAm3hJlM=", "keepAlive": 30, "wnoise": "quic", "wnoisecount": "10-15", "wpayloadsize": "1-5", "wnoisedelay": "1-2"}, "tag": "warp-ir"}, {"protocol": "dns", "tag": "dns-out"}, {"protocol": "freedom", "settings": {}, "tag": "direct"}, {"protocol": "blackhole", "settings": {"response": {"type": "http"}}, "tag": "block"}], "policy": {"levels": {"8": {"connIdle": 300, "downlinkOnly": 1, "handshake": 4, "uplinkOnly": 1}}, "system": {"statsOutboundUplink": true, "statsOutboundDownlink": true}}, "routing": {"domainStrategy": "IPIfNonMatch", "rules": [{"inboundTag": ["dns-in"], "outboundTag": "dns-out", "type": "field"}, {"ip": ["8.8.8.8"], "outboundTag": "direct", "port": "53", "type": "field"}, {"domain": ["geosite:category-ir", "domain:.ir"], "outboundTag": "direct", "type": "field"}, {"ip": ["geoip:ir", "geoip:private"], "outboundTag": "direct", "type": "field"}, {"outboundTag": "warp-out", "type": "field", "network": "tcp,udp"}]}, "stats": {}}
-```
-
-**Ex for Hiddify**
-
-```JSON
-{"outbounds": [{"type": "wireguard", "tag": "@darkness_427 Warp-IR1", "local_address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "private_key": "oP4D2HXriimhBqk+w4CpI41OEQd5p2rJV8MtbeV7eUs=", "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=", "server": "162.159.195.1", "server_port": 878, "reserved": [195, 216, 199], "mtu": 1280, "fake_packets": "1-3", "fake_packets_size": "10-30", "fake_packets_delay": "10-30", "fake_packets_mode": "m4"}, {"type": "wireguard", "tag": "@darkness_427 Warp-Main1", "detour": "@darkness_427 Warp-IR1", "local_address": ["172.16.0.2/32", "2606:4700:110:846c:e510:bfa1:ea9f:5247/128"], "private_key": "ODd0kPser1fJ/Zupag1h1fNxoj7YCc0hOjYEgWs2CkU=", "server": "162.159.192.10", "server_port": 955, "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=", "reserved": [69, 191, 86], "mtu": 1280, "fake_packets_mode": "m4"}]}
 ```
 
 ![rainbow]
@@ -3295,6 +3192,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Harmony]: https://github.com/NiREvil/Harmony/blob/b923d67dd5702886b0965de86182896373ade4e5/harmony.js#L892
 [Hiddify]: https://github.com/hiddify/hiddify-app/releases
 [Husi]: https://github.com/xchacha20-poly1305/husi/releases
+[Inci]: https://github.com/INCY-DEV/incy-platforms
 [iran-core]: https://diana-cl.github.io/Diana-Cl/topics/iran-core
 [IRCF]: https://t.me/ircfspace/1383
 [Karing]: https://github.com/KaringX/karing/releases
