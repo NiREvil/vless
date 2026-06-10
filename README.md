@@ -495,11 +495,11 @@
 >
 > - **روش سوم وارد کردن کانفیگ‌ها:**
 >
-> روش سوم به این شکله که شما کانفیگ پروتون رو از سایت دانلود می‌کنی بعد تحویلش میدی به این ابزار شخص ثالث که بلا سرش بیاره، ابزار روسیه ولی با مترجم مرورگر اوکی میشه و قابل فهم، به زودی فارسیش می‌کنم یکم که سرم خلوت شد. تو این وب‌سایت [مبدل کانفیگ پروتون به Amnezia][ProtonToAmnezia] می‌تونید کانفیگ پروتون رو هم برای amnezia و wg-tunnel و هم برای کلش و هیدیفای تبدیل کنید. توضیح خاصی نداره، خودتون بازی کنید باهاش. آها، اگه بعد از تبدیل حس کردین کانقیگ جون نداره سایز MTU رو بیارید پایین رو 1280 بذارید، این مبدل گیر داده به 1420 تو این سایز سرعت آپلود تقریبا نصف می‌شه.
+> روش سوم به این شکله که شما کانفیگ پروتون رو از سایت دانلود می‌کنی بعد تحویلش میدی به این ابزار شخص ثالث که بلا سرش بیاره، ابزار روسیه ولی با مترجم مرورگر اوکی میشه و قابل فهم، به زودی فارسیش می‌کنم یکم که سرم خلوت شد. تو این وب‌سایت [مبدل کانفیگ پروتون به Amnezia][ProtonToAmnezia] می‌تونید کانفیگ پروتون رو هم برای amnezia و wg-tunnel و هم برای کلش و هیدیفای تبدیل کنید. توضیح خاصی نداره، خودتون بازی کنید باهاش. آها، اگه بعد از تبدیل حس کردین کانقیگ جون نداره سایز MTU رو بیارید پایین رو 1280 بذارید، این مبدل گیر داده به 1420 تو این سایز سرعت آپلود تقریبا یک‌سوم می‌شه.
 >
 > <br/>
 >
-> هم‌چنین می‌تونید از **ربات تلگرام** [**YeBeKhe**][UWG?] برای ایجاد کانفیگ‌های WireGuard استفاده کنید. فقط باید قبل از استفاده Endpoint اون رو به یکی از آی‌‌پی‌های این دوتا رنج تغییر بدید چون تو ایران الان فقط این دو رنج کار می‌کنن.
+> هم‌چنین می‌تونید از **وب‌اپ** [**YeBeKhe**][UWG?] برای ایجاد کانفیگ‌های WireGuard استفاده کنید. فقط باید قبل از استفاده Endpoint اون رو به یکی از آی‌‌پی‌های این دوتا رنج تغییر بدید چون تو ایران الان فقط این دو رنج کار می‌کنن.
 >
 > ```ruby
 > 8.6.112.0 —— 8.6.112.256
@@ -1076,12 +1076,10 @@ https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_l
 
 ### Proton VPN WireGuards
 
-<details>
-<summary> ➕ Click here</summary><br/>
-
 **🇨🇭PROTON#8** [[ProtonVPN]]
 
-```Elixir
+```ballerina
+# Name = 🇨🇭Switzerland8
 [Interface]
 PrivateKey = SH+1s4RNpEdrrvQPj+i3jkPGQ9lKSCmdU/wyftusW3c=
 Address = 10.2.0.2/32, 2a07:b944::2:2/128
@@ -1103,14 +1101,15 @@ I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
 PublicKey = n+45suXZtI1+TuZWtCnzGkXNBCgJB3wFZYIlBltpORM=
 Endpoint = 149.88.27.235:51820
 AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 25
+PersistentKeepalive = 30
 ```
 
 <br/>
 
 **🇳🇴PROTON#8**
 
-```Elixir
+```ballerina
+# Name = 🇳🇴Norway8
 [Interface]
 PrivateKey = cBBgdN9rEzwBub89yuw7cXmoVySgdAW2xjEPx5xOmEc=
 Address = 10.2.0.2/32, 2a07:b944::2:2/128
@@ -1132,7 +1131,7 @@ I1 = <b 0x123401000001000000000000076578616d706c6503636f6d0000010001>
 PublicKey = Ij0q4D/YkXhxpK4p9sCeRxM6BmWGgkywRlFELLwW9xQ=
 Endpoint = 95.173.205.160:51820
 AllowedIPs = 0.0.0.0/0, ::/0
-PersistentKeepalive = 25
+PersistentKeepalive = 30
 ```
 
 <br/>
@@ -1140,6 +1139,7 @@ PersistentKeepalive = 25
 **🇨🇦PROTON#31**
 
 ```ballerina
+# Name = 🇨🇦Canada31
 [Interface]
 PrivateKey = ICir51EPUF8Gzi1QaPiOFPXo3uM/2M1NHc3TeI6njFA=
 Address = 10.2.0.2/32, 2a07:b944::2:2/128
@@ -1169,6 +1169,7 @@ PersistentKeepalive = 25
 **🇨🇦PROTON#8**
 
 ```ballerina
+# Name = 🇨🇦Canada8
 [Interface]
 PrivateKey = qNv1T8m0Xsf1dD8LHkWmQ92qGV3j5mdfXTYT934FW2Q=
 Address = 10.2.0.2/32, 2a07:b944::2:2/128
@@ -1197,7 +1198,8 @@ PersistentKeepalive = 25
 
 **🇲🇽PROTON#16**
 
-```elixir
+```ballerina
+# Name = 🇲🇽Mexico16
 [Interface]
 PrivateKey = GNzjEb98dCnbjUMaSnhR5UzIl+AUdwRf47HdRYr1H2w=
 Address = 10.2.0.2/32
@@ -1226,7 +1228,8 @@ PersistentKeepalive = 25
 
 **🇺🇸PROTON#4**
 
-```Elixir
+```ballerina
+# Name = 🇺🇸USA4
 [Interface]
 PrivateKey = gBAy3+3kvvlIIddbFBNB+CxJa+oYv3Z2TAMkArD+bVk=
 Address = 10.2.0.2/32, 2a07:b944::2:2/128
@@ -1256,6 +1259,7 @@ PersistentKeepalive = 25
 **🇸🇬PROTON#15**
 
 ```ballerina
+# Name = 🇸🇬Singapore15
 [Interface]
 PrivateKey = 0Nua7l5PfsUNwPxkwyjcFOvUN5lQxilHRCFGDLSFwm0=
 Address = 10.2.0.2/32
@@ -1285,6 +1289,7 @@ PersistentKeepalive = 25
 **🇮🇷FREEWARP#1** [[UWG?]]
 
 ```Elixir
+# Name = 🇮🇷NSCL
 [Interface]
 PrivateKey = ICNoc3nF9fYofJG05tF1EigojRlaDJZHLD+vdan3/2U=
 Address = 172.16.0.2/32,2606:4700:110:8a8e:f20a:b5e4:9718:e5f4/128
@@ -1315,6 +1320,7 @@ PersistentKeepalive = 30
 **🇮🇷FREE#2**
 
 ```Elixir
+# Name = 🇮🇷Iran2
 [Interface]
 PrivateKey = IFAQ7p23h6BtKAdeNzgTlwL9z/CU3gkCwKCHrC+Tbm8=
 Address = 172.16.0.2/32, 2606:4700:110:860b:d2c5:3724:cbd3:a49c/128
@@ -1345,6 +1351,7 @@ PersistentKeepalive = 30
 **🇮🇷FREE#3**
 
 ```Elixir
+# Name = 🇮🇷Iran3
 [Interface]
 PrivateKey = EJft/sa5Qp9QlzxbCbQp8Dv4uuEmHuT8VHUF+xVDBWg=
 Address = 172.16.0.2/32, 2606:4700:110:8613:9b6a:2d5f:c394:7170/128
@@ -1377,6 +1384,7 @@ PersistentKeepalive = 30
 **🇮🇷FREE#4**
 
 ```Elixir
+# Name = 🇮🇷Iran4
 [Interface]
 PrivateKey = KNOyCvJdN4OrgWjcGyyuGcF+3zNBuZKn2xGnmPhViEM=
 Address = 172.16.0.2/32, 2606:4700:110:8547:ad6a:a8c2:9d64:ced7/128
@@ -1407,6 +1415,7 @@ PersistentKeepalive = 30
 **🇮🇷FREE#5**
 
 ```Elixir
+# Name = 🇮🇷Iran5
 [Interface]
 PrivateKey = YGRLyk7kvdEaSHCtC4l5Kftv3G0r/GjTUTnvjbX+HHw=
 Address = 172.16.0.2/32, 2606:4700:110:85a2:e6f:5959:16a2:fb15/128
@@ -1437,7 +1446,7 @@ PersistentKeepalive = 30
 **🇮🇷FREE#6**
 
 ```Elixir
-# Name = wbnet/warp12-wbnet
+# Name = 🇮🇷Iran6
 [Interface]
 PrivateKey = 0NTro6gZRH9GbymtmBT5i+MYbVIeR6Gr6AaaAyEzeWs=
 Address = 172.16.0.2/32, 2606:4700:110:84be:e544:8f1a:7bc1:b606/128
@@ -1468,6 +1477,7 @@ PersistentKeepalive = 30
 **🇮🇷FREE#7**
 
 ```Elixir
+# Name = 🇮🇷Iran7
 [Interface]
 PrivateKey = YInaP0Hiqmck/cw8SBS10u9lRllschkRVHUueMKXHHs=
 Address = 172.16.0.2/32, 2606:4700:110:8b97:3e35:240d:810f:567e/128
@@ -1498,6 +1508,7 @@ PersistentKeepalive = 30
 **🇮🇷FREE#8**
 
 ```Elixir
+# Name = 🇮🇷Iran8
 [Interface]
 PrivateKey = uMrKnWNg+LPS9KT8JqFoWpeWsSrb4y87tNLuZxaoKGA=
 Address = 172.16.0.2/32, 2606:4700:110:8bf1:1bbd:4223:44a1:eff6/128
@@ -1528,6 +1539,7 @@ PersistentKeepalive = 30
 **🇮🇷FREE#9**
 
 ```Elixir
+# Name = 🇮🇷Iran9
 [Interface]
 PrivateKey = KNOyCvJdN4OrgWjcGyyuGcF+3zNBuZKn2xGnmPhViEM=
 Address = 172.16.0.2/32, 2606:4700:110:8547:ad6a:a8c2:9d64:ced7/128
@@ -1558,6 +1570,7 @@ PersistentKeepalive = 30
 **🇮🇷FREE#10**
 
 ```Elixir
+# Name = 🇮🇷Iran10
 [Interface]
 PrivateKey = cLa+KXAoSz7/TLB+MfSK8HIrWA4npfVjOyLrSnnHT3c=
 Address = 172.16.0.2/32, 2606:4700:110:86b8:11c6:dfd6:102f:c44d/128
@@ -1586,6 +1599,7 @@ PersistentKeepalive = 30
 **🇳🇱Amsterdam#MMKZ**
 
 ```yaml
+# Name = 🇳🇱MMKz
 [Interface]
 PrivateKey = KP56/mob9FJqpLIN2XNzmQBCyKeAPkhni9Te+ZS7OlI=
 Address = 10.2.0.2/32, 2a07:b944::2:2/128
@@ -1602,16 +1616,13 @@ I1 = <b 0x494e56495445207369703a626f624062696c6f78692e636f6d205349502f322e300d0a
 I2 = <b 0x5349502f322e302031303020547279696e670d0a5669613a205349502f322e302f55445020706333332e61746c616e74612e636f6d3b6272616e63683d7a39684734624b3737366173646864730d0a546f3a20426f62203c7369703a626f624062696c6f78692e636f6d3e0d0a46726f6d3a20416c696365203c7369703a616c6963654061746c616e74612e636f6d3e3b7461673d313932383330313737340d0a43616c6c2d49443a20613834623463373665363637313040706333332e61746c616e74612e636f6d0d0a435365713a2033313431353920494e564954450d0a436f6e74656e742d4c656e6774683a20300d0a0d0a>
 
 [Peer]
-#🇳🇱NLro90#proton
 PublicKey = LrxxTiPJjKy7MUJw3S9HOh1qL0Qpi/fD1KrsBwn+gT0=
 AllowedIPs = 0.0.0.0/0, ::/0
 PersistentKeepalive = 25
 Endpoint = 89.39.107.156:51820
 ```
 
-</details>
-
-<br/>
+<br><br/>
 
 ### Amnezia local free 🇳🇱 configurations
 
@@ -3171,6 +3182,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [The Darkness]: https://telegram.me/s/ConfigWireguard
 [TERMUX]: https://github.com/termux/termux-app/releases
 [UUID]: https://www.uuidgenerator.net
+[UWG?]: https://itsyebekhe.github.io/warp/
 [v2rayNG]: https://github.com/2dust/v2rayng/releases
 [v2rayTun]: https://play.google.com/store/apps/details?id=com.v2raytun.android
 [WarpAndroid]: https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone
