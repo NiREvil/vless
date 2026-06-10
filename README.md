@@ -2,7 +2,6 @@
 <img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="180x" </p>
 
 <br><br/>
- 
 
 > [!CAUTION]
 >
@@ -414,7 +413,7 @@
 > </details>
 >
 > <br/>
-> 
+>
 > <details>
 > <summary>❗ توضیحات مربوط به 1.1.1.1 </summary><br/>
 >
@@ -746,7 +745,6 @@ https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/head
 https://etoneya.su/1
 
 https://gitverse.ru/api/repos/flaafix/AetrisVPN_Black_list/raw/branch/master/configs.txt
-
 
 https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/all
 
@@ -1555,7 +1553,7 @@ AllowedIPs = 0.0.0.0/0, ::/0
 PersistentKeepalive = 30
 ```
 
-<br/>	 
+<br/>
 
 **🇮🇷FREE#10**
 
@@ -1595,7 +1593,7 @@ DNS = 10.2.0.1, 2a07:b944::2:1
 MTU = 1476
 Jc = 4
 Jmin = 40
-Jmax = 70 
+Jmax = 70
 H1 = 1
 H2 = 2
 H3 = 3
@@ -2349,11 +2347,7 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
         "udp": true
       },
       "sniffing": {
-        "destOverride": [
-          "http",
-          "tls",
-          "fakedns"
-        ],
+        "destOverride": ["http", "tls", "fakedns"],
         "enabled": true,
         "routeOnly": true
       },
@@ -2375,10 +2369,7 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
     {
       "protocol": "wireguard",
       "settings": {
-        "address": [
-          "172.16.0.2/32",
-          "2606:4700:110:83c7:4760:54fd:11a:ce32/128"
-        ],
+        "address": ["172.16.0.2/32", "2606:4700:110:83c7:4760:54fd:11a:ce32/128"],
         "mtu": 1280,
         "peers": [
           {
@@ -2387,11 +2378,7 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
             "keepAlive": 25
           }
         ],
-        "reserved": [
-          168,
-          245,
-          160
-        ],
+        "reserved": [168, 245, 160],
         "secretKey": "dxNthrZtdevvvKZI5lfX9Kyk1OWaN06TmvF4VQJoSZk="
       },
       "tag": "freedom"
@@ -2428,45 +2415,33 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
     "domainStrategy": "IPIfNonMatch",
     "rules": [
       {
-        "inboundTag": [
-          "mixed-in"
-        ],
+        "inboundTag": ["mixed-in"],
         "port": 53,
         "outboundTag": "dns-out",
         "type": "field"
       },
       {
-        "inboundTag": [
-          "dns-in"
-        ],
+        "inboundTag": ["dns-in"],
         "outboundTag": "dns-out",
         "type": "field"
       },
       {
-        "inboundTag": [
-          "remote-dns"
-        ],
+        "inboundTag": ["remote-dns"],
         "outboundTag": "freedom",
         "type": "field"
       },
       {
-        "inboundTag": [
-          "dns"
-        ],
+        "inboundTag": ["dns"],
         "outboundTag": "direct",
         "type": "field"
       },
       {
-        "domain": [
-          "geosite:private"
-        ],
+        "domain": ["geosite:private"],
         "outboundTag": "direct",
         "type": "field"
       },
       {
-        "ip": [
-          "geoip:private"
-        ],
+        "ip": ["geoip:private"],
         "outboundTag": "direct",
         "type": "field"
       },
@@ -2524,11 +2499,7 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
         "udp": true
       },
       "sniffing": {
-        "destOverride": [
-          "http",
-          "tls",
-          "fakedns"
-        ],
+        "destOverride": ["http", "tls", "fakedns"],
         "enabled": true,
         "routeOnly": true
       },
@@ -2550,10 +2521,7 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
     {
       "protocol": "wireguard",
       "settings": {
-        "address": [
-          "172.16.0.2/32",
-          "2606:4700:110:884b:c7ad:a6f4:14b4:7d4a/128"
-        ],
+        "address": ["172.16.0.2/32", "2606:4700:110:884b:c7ad:a6f4:14b4:7d4a/128"],
         "mtu": 1280,
         "peers": [
           {
@@ -2562,11 +2530,7 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
             "keepAlive": 25
           }
         ],
-        "reserved": [
-          246,
-          9,
-          206
-        ],
+        "reserved": [246, 9, 206],
         "secretKey": "/6LBwoph6z3u/W2v5Xer6PNIR3XnGATLUHdlZ4VEBZY="
       },
       "streamSettings": {
@@ -2579,10 +2543,7 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
     {
       "protocol": "wireguard",
       "settings": {
-        "address": [
-          "172.16.0.2/32",
-          "2606:4700:110:83c7:4760:54fd:11a:ce32/128"
-        ],
+        "address": ["172.16.0.2/32", "2606:4700:110:83c7:4760:54fd:11a:ce32/128"],
         "mtu": 1280,
         "peers": [
           {
@@ -2591,11 +2552,7 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
             "keepAlive": 25
           }
         ],
-        "reserved": [
-          119,
-          52,
-          94
-        ],
+        "reserved": [119, 52, 94],
         "secretKey": "p6yN9dRtJF0ECUy47hAAOcuBFEdUSiyvCJqoQPw+0Js="
       },
       "tag": "freedom"
@@ -2632,45 +2589,33 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
     "domainStrategy": "IPIfNonMatch",
     "rules": [
       {
-        "inboundTag": [
-          "mixed-in"
-        ],
+        "inboundTag": ["mixed-in"],
         "port": 53,
         "outboundTag": "dns-out",
         "type": "field"
       },
       {
-        "inboundTag": [
-          "dns-in"
-        ],
+        "inboundTag": ["dns-in"],
         "outboundTag": "dns-out",
         "type": "field"
       },
       {
-        "inboundTag": [
-          "remote-dns"
-        ],
+        "inboundTag": ["remote-dns"],
         "outboundTag": "freedom",
         "type": "field"
       },
       {
-        "inboundTag": [
-          "dns"
-        ],
+        "inboundTag": ["dns"],
         "outboundTag": "direct",
         "type": "field"
       },
       {
-        "domain": [
-          "geosite:private"
-        ],
+        "domain": ["geosite:private"],
         "outboundTag": "direct",
         "type": "field"
       },
       {
-        "ip": [
-          "geoip:private"
-        ],
+        "ip": ["geoip:private"],
         "outboundTag": "direct",
         "type": "field"
       },
