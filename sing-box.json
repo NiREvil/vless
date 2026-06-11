@@ -9,7 +9,10 @@
       },
       {
         "server": "proxy-dns",
-        "source_ip_cidr": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"]
+        "source_ip_cidr": [
+          "172.19.0.1/30",
+          "fdfe:dcba:9876::1/126"
+        ]
       },
       {
         "clash_mode": "Direct",
@@ -42,39 +45,59 @@
   },
   "endpoints": [
     {
-      "address": ["172.16.0.2/32", "2606:4700:110:8155:fbc6:79c2:a4da:d1e7/128"],
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8155:fbc6:79c2:a4da:d1e7/128"
+      ],
       "detour": "direct",
       "mtu": 1280,
       "peers": [
         {
-          "address": "8.6.112.18",
-          "allowed_ips": ["0.0.0.0/0", "::/0"],
+          "address": "8.6.112.164",
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
           "persistent_keepalive_interval": 30,
-          "port": 4198,
+          "port": 7281,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "reserved": [72, 180, 93]
+          "reserved": [
+            134,
+            145,
+            69
+          ]
         }
       ],
-      "private_key": "OKATSuDku7/LZnho5f4xSju8oaIPcRsQvOj9KGfDuEA=",
+      "private_key": "GKOZtw3zNj5sHTiqGH1YwQWWwwTZtDrCJqctXhSxZUw=",
       "tag": "\u26aa\ufe0fIran",
       "type": "wireguard",
       "workers": 4
     },
     {
-      "address": ["172.16.0.3/32", "2606:4700:110:881f:999d:2604:1c73:e2d2/128"],
+      "address": [
+        "172.16.0.3/32",
+        "2606:4700:110:881f:999d:2604:1c73:e2d2/128"
+      ],
       "detour": "\u26aa\ufe0fIran",
       "mtu": 1280,
       "peers": [
         {
-          "address": "8.6.112.111",
-          "allowed_ips": ["0.0.0.0/0", "::/0"],
+          "address": "8.6.112.42",
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
           "persistent_keepalive_interval": 30,
-          "port": 1701,
+          "port": 1070,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-          "reserved": [41, 64, 52]
+          "reserved": [
+            178,
+            223,
+            43
+          ]
         }
       ],
-      "private_key": "SA0eR705dMmGcH96kRS71uot6RYWVwoFB+wWwv82WXE=",
+      "private_key": "2BrMiSN8VAiwPCHaoh1K2xRonwVj1oj4Zpd7zyli22M=",
       "tag": "\ud83d\udfe2Any",
       "type": "wireguard",
       "workers": 4
@@ -87,7 +110,10 @@
   },
   "inbounds": [
     {
-      "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
       "auto_route": true,
       "mtu": 9000,
       "platform": {
@@ -115,14 +141,21 @@
   "outbounds": [
     {
       "default": "auto",
-      "outbounds": ["auto", "\u26aa\ufe0fIran", "\ud83d\udfe2Any"],
+      "outbounds": [
+        "auto",
+        "\u26aa\ufe0fIran",
+        "\ud83d\udfe2Any"
+      ],
       "tag": "proxy",
       "type": "selector"
     },
     {
       "interrupt_exist_connections": false,
       "interval": "5m0s",
-      "outbounds": ["\u26aa\ufe0fIran", "\ud83d\udfe2Any"],
+      "outbounds": [
+        "\u26aa\ufe0fIran",
+        "\ud83d\udfe2Any"
+      ],
       "tag": "auto",
       "tolerance": 50,
       "type": "urltest",
@@ -193,7 +226,12 @@
       },
       {
         "outbound": "direct",
-        "rule_set": ["geoip-private", "geosite-private", "geosite-ir", "geoip-ir"]
+        "rule_set": [
+          "geoip-private",
+          "geosite-private",
+          "geosite-ir",
+          "geoip-ir"
+        ]
       },
       {
         "outbound": "block",
