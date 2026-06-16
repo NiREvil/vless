@@ -1,13 +1,13 @@
 name: SummerTime
 
 on:
-  push:
-    branches: 'main'
-    paths:
-      - '**/summer.*'
-      - 'sub/*.txt'
-  schedule:
-    - cron: '0 12 * * *'
+#  push:
+#    branches: 'main'
+#    paths:
+#      - '**/summer.*'
+#      - 'sub/*.txt'
+#  schedule:
+#    - cron: '0 12 * * *'
   workflow_dispatch:
 
 permissions:
