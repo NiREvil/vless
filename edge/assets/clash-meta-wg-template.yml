@@ -28,7 +28,7 @@ dns:
   respect-rules: true
   use-system-hosts: false
   nameserver:
-    - 1.1.1.1#🇮🇷 AUTO-IR-DIALER
+    - 1.1.1.1#🇮🇷AUTO-IR-DIALER
   proxy-server-nameserver:
     - 8.8.8.8#DIRECT
   direct-nameserver:
@@ -153,7 +153,7 @@ rules:
   - RULE-SET,private-cidr,DIRECT,no-resolve
   - RULE-SET,ir,DIRECT
   - RULE-SET,ir-cidr,DIRECT,no-resolve
-  - MATCH,⚪ PROXIES
+  - MATCH,⚪PROXIES
 
 ntp:
   enable: true
