@@ -19,11 +19,8 @@ from tenacity import (
 
 # --- Configuration ---
 NUM_PROXY_PAIRS = int(
-    os.environ.get("NUM_PROXY_PAIRS", 8)
-)  # Number of proxy pairs to generate
-NUM_IPV6_ENTRY_ENDPOINTS = int(
-    os.environ.get("NUM_IPV6_ENTRY_ENDPOINTS", 2)
-)  # How many Entry proxies should use an IPv6 server endpoint
+    os.environ.get("NUM_PROXY_PAIRS", 6)
+)  # Number of proxy pairs to generate (reduced to 6)
 
 SCRIPT_DIR = os.path.dirname(
     os.path.abspath(__file__)
@@ -41,10 +38,10 @@ OUTPUT_YAML_FILENAME = os.path.join(
 )  # Output YML filename
 
 # --- Proxy Naming Configuration ---
-DIALER_PROXY_BASE_NAME = os.environ.get("DIALER_PROXY_BASE_NAME", "SW-DIALER")
+DIALER_PROXY_BASE_NAME = os.environ.get("DIALER_PROXY_BASE_NAME", "EU-DIALER")
 ENTRY_PROXY_BASE_NAME = os.environ.get("ENTRY_PROXY_BASE_NAME", "IR-ENTRY")
-MAIN_SELECTOR_GROUP_NAME = os.environ.get("MAIN_SELECTOR_GROUP_NAME", "🔰 PROXIES")
-DIALER_URL_TEST_GROUP_NAME = f"🇸🇪 AUTO-{DIALER_PROXY_BASE_NAME}"
+MAIN_SELECTOR_GROUP_NAME = os.environ.get("MAIN_SELECTOR_GROUP_NAME", "⚪ PROXIES")
+DIALER_URL_TEST_GROUP_NAME = f"🇪🇺 AUTO-{DIALER_PROXY_BASE_NAME}"
 ENTRY_URL_TEST_GROUP_NAME = f"🇮🇷 AUTO-{ENTRY_PROXY_BASE_NAME}"
 
 # Log settings
@@ -318,25 +315,22 @@ def bind_keys(key_type):
         sys.exit(1)
 
 
-# IPv6 prefixes for generating endpoints
-ipv6_prefixes = ["2606:4700:d1", "2606:4700:d0"]
-
 # IPv4 prefixes for generating endpoints
 ipv4_prefixes = [
     "8.6.112.",
-    #   "8.34.70.",
-    "8.34.146.",
-    "8.35.211.",
-    "8.39.125.",
-    "8.39.204.",
-    "8.39.214.",
-    "8.47.69.",
-    "162.159.192.",
-    #   "162.159.195.",
-    #   "188.114.96.",
+#   "8.34.70.",
+#   "8.34.146.",
+#   "8.35.211.",
+#   "8.39.125.",
+#   "8.39.204.",
+#   "8.39.214.",
+#   "8.47.69.",
+#   "162.159.192.",
+#   "162.159.195.",
+#   "188.114.96.",
     "188.114.97.",
-    "188.114.98.",
-    #   "188.114.99.",
+#   "188.114.98.",
+#   "188.114.99.",
 ]
 
 # Available ports for endpoint generation
@@ -357,17 +351,6 @@ def generate_ipv4_endpoint():
     server = f"{prefix}{last_octet}"
     port = random.choice(available_ports)
     logger.debug(f"Generated IPv4 endpoint: {server}:{port}")
-    return server, port
-
-
-# Function to generate a random IPv6 endpoint
-def generate_ipv6_endpoint():
-    prefix = random.choice(ipv6_prefixes)
-    suffix = "".join(random.choice("0123456789abcdef") for _ in range(16))
-    formatted_suffix = ":".join(suffix[i : i + 4] for i in range(0, 16, 4))
-    server = f"{prefix}::{formatted_suffix}"
-    port = random.choice(available_ports)
-    logger.debug(f"Generated IPv6 endpoint: {server}:{port}")
     return server, port
 
 
@@ -411,28 +394,16 @@ def main():
         logger.info("Binding keys for Entry proxies...")
         priv_key_entry, reserved_entry, ip_v4_entry, ip_v6_entry = bind_keys("entry")
 
-        # Prepare unique interface IPs, adding CIDR notation
+        # Prepare unique interface IPs, adding CIDR notation (IPv4 only)
         ip_dialer = "172.16.0.3/32"
-        ipv6_dialer = (
-            f"{ip_v6_dialer}/128"
-            if ip_v6_dialer
-            else "2606:4700:110:8867:3f4a:906:1933:43c5/128"
-        )
         ip_entry = "172.16.0.2/32"
-        ipv6_entry = (
-            f"{ip_v6_entry}/128"
-            if ip_v6_entry
-            else "2606:4700:110:8c7d:2a45:f480:216b:b484/128"
-        )  # Different fallback
 
-        logger.info(f"Using Dialer IPs: {ip_dialer}, {ipv6_dialer}")
-        logger.info(f"Using Entry IPs: {ip_entry}, {ipv6_entry}")
+        logger.info(f"Using Dialer IP: {ip_dialer}")
+        logger.info(f"Using Entry IP: {ip_entry}")
 
         proxies_list = []
         dialer_proxy_names = []
         entry_proxy_names = []
-        ipv6_endpoint_count = 0  # Counter for limiting IPv6 endpoints
-        logger.info(f"IPv6 endpoint count: {ipv6_endpoint_count}")
 
         logger.info(f"Generating {NUM_PROXY_PAIRS} proxy pairs...")
         for i in range(NUM_PROXY_PAIRS):
@@ -443,15 +414,9 @@ def main():
             dialer_proxy_name = f"{DIALER_PROXY_BASE_NAME}-{pair_num:02d}"
             dialer_proxy_names.append(dialer_proxy_name)
 
-            # --- Choose Dialer endpoint based on pair number ---
-            if pair_num <= 6:
-                logger.debug(
-                    f"Using IPv4 endpoint for Dialer proxy {pair_num} (WiFi compatibility)"
-                )
-                server_dialer, port_dialer = generate_ipv4_endpoint()
-            else:
-                logger.debug(f"Using IPv6 endpoint for Dialer proxy {pair_num}")
-                server_dialer, port_dialer = generate_ipv6_endpoint()
+            # --- Always use IPv4 endpoint for Dialer proxy ---
+            logger.debug(f"Using IPv4 endpoint for Dialer proxy {pair_num}")
+            server_dialer, port_dialer = generate_ipv4_endpoint()
 
             entry_proxy_name = f"{ENTRY_PROXY_BASE_NAME}-{pair_num:02d}"
 
@@ -459,13 +424,12 @@ def main():
                 "name": dialer_proxy_name,
                 "type": "wireguard",
                 "ip": ip_dialer,
-                "ipv6": ipv6_dialer,
-                "ip-version": "dual",
+                "ip-version": "ipv4",
                 "private-key": priv_key_dialer,
                 "server": server_dialer,
                 "port": port_dialer,
                 "public-key": CLOUDFLARE_PUBLIC_KEY,
-                "allowed-ips": ["0.0.0.0/0", "::/0"],
+                "allowed-ips": ["0.0.0.0/0"],
                 "reserved": reserved_dialer,
                 "udp": True,
                 "mtu": 1280,
@@ -476,33 +440,24 @@ def main():
             # --- Create Entry Proxy SECOND ---
             entry_proxy_names.append(entry_proxy_name)
 
-            # --- Choose Entry endpoint based on pair number (same logic as Dialer for WiFi compatibility) ---
-            if pair_num <= 6:
-                logger.debug(
-                    f"Using IPv4 endpoint for Entry proxy {pair_num} (WiFi compatibility)"
-                )
-                server_entry, port_entry = generate_ipv4_endpoint()
-            else:
-                # or simply use IPv6 like the dialer. Here we mirror the dialer logic.
-                logger.debug(f"Using IPv6 endpoint for Entry proxy {pair_num}")
-                server_entry, port_entry = generate_ipv6_endpoint()
+            # --- Always use IPv4 endpoint for Entry proxy ---
+            logger.debug(f"Using IPv4 endpoint for Entry proxy {pair_num}")
+            server_entry, port_entry = generate_ipv4_endpoint()
 
-            # Note: The previous logic using ipv6_endpoint_count and NUM_IPV6_ENTRY_ENDPOINTS
             entry_proxy = {
                 "name": entry_proxy_name,
                 "type": "wireguard",
                 "ip": ip_entry,
-                "ipv6": ipv6_entry,
-                "ip-version": "dual",
+                "ip-version": "ipv4",
                 "private-key": priv_key_entry,
                 "server": server_entry,
                 "port": port_entry,
                 "public-key": CLOUDFLARE_PUBLIC_KEY,
-                "allowed-ips": ["0.0.0.0/0", "::/0"],
+                "allowed-ips": ["0.0.0.0/0"],
                 "reserved": reserved_entry,
                 "udp": True,
                 "mtu": 1280,
-                "amnezia-wg-option": {"jc": "5", "jmin": "200", "jmax": "201"},
+                "amnezia-wg-option": {"jc": 5, "jmin": 200, "jmax": 201},
             }
             proxies_list.append(entry_proxy)
 
