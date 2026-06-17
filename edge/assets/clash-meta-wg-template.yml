@@ -23,29 +23,33 @@ profile:
   store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:1053
+  listen: 127.0.0.1:1053
   ipv6: false
   respect-rules: true
   use-system-hosts: false
   nameserver:
-    - 1.1.1.1#⚪ PROXIES
+    - 1.1.1.1#🇮🇷 AUTO-IR-DIALER
   proxy-server-nameserver:
     - 8.8.8.8#DIRECT
+  direct-nameserver:
+    - 8.8.8.8#DIRECT
+  direct-nameserver-follow-policy: true
   nameserver-policy:
-    # Use 8.8.8.8#DIRECT for these common domains
     raw.githubusercontent.com: 8.8.8.8#DIRECT
     time.apple.com: 8.8.8.8#DIRECT
     rule-set:ir: 8.8.8.8#DIRECT
-  # Enhanced Mode (Fake IP)
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
   fake-ip-filter:
+    - "+.lan"
+    - "+.local"
     - "geosite:private"
 
 # TUN Settings
 tun:
   enable: true
-  stack: system
+  stack: mixed
   auto-route: true
   strict-route: true
   endpoint-independent-nat: false
