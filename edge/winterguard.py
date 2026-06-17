@@ -17,34 +17,22 @@ from tenacity import (
     retry_if_exception,
 )
 
-# --- Configuration ---
-NUM_PROXY_PAIRS = int(
-    os.environ.get("NUM_PROXY_PAIRS", 6)
-)  # Number of proxy pairs to generate (reduced to 6)
+NUM_PROXY_PAIRS = int(os.environ.get("NUM_PROXY_PAIRS", 6))  # Number of proxy pairs to generate
 
-SCRIPT_DIR = os.path.dirname(
-    os.path.abspath(__file__)
-)  # the (SCRIPT_DIR) = where the script is running, in this case: path:vless/edge
-PARENT_DIR = os.path.dirname(SCRIPT_DIR)  # Get the parent directory (repository root)
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # the (SCRIPT_DIR) = where the script is running, in this case: path:vless/edge
+PARENT_DIR = os.path.dirname(SCRIPT_DIR)
 
-CONFIG_TEMPLATE_PATH = os.path.join(
-    SCRIPT_DIR, "assets", "clash-meta-wg-template.yml"
-)  # Path to the template file
-CACHE_FILE_PATH = os.path.join(
-    PARENT_DIR, "sub", "key_cache.json"
-)  # Path for caching generated keys
-OUTPUT_YAML_FILENAME = os.path.join(
-    PARENT_DIR, "sub", "clash-meta-wg.yml"
-)  # Output YML filename
+CONFIG_TEMPLATE_PATH = os.path.join(SCRIPT_DIR, "assets", "clash-meta-wg-template.yml")  # Path to the template file
+CACHE_FILE_PATH = os.path.join(PARENT_DIR, "sub", "key_cache.json")  # Path for caching generated keys
+OUTPUT_YAML_FILENAME = os.path.join(PARENT_DIR, "sub", "clash-meta-wg.yml")  # Output YML filename
 
 # --- Proxy Naming Configuration ---
-DIALER_PROXY_BASE_NAME = os.environ.get("DIALER_PROXY_BASE_NAME", "EU-DIALER")
-ENTRY_PROXY_BASE_NAME = os.environ.get("ENTRY_PROXY_BASE_NAME", "IR-ENTRY")
-MAIN_SELECTOR_GROUP_NAME = os.environ.get("MAIN_SELECTOR_GROUP_NAME", "⚪ PROXIES")
-DIALER_URL_TEST_GROUP_NAME = f"🇪🇺 AUTO-{DIALER_PROXY_BASE_NAME}"
-ENTRY_URL_TEST_GROUP_NAME = f"🇮🇷 AUTO-{ENTRY_PROXY_BASE_NAME}"
+DIALER_PROXY_BASE_NAME = os.environ.get("DIALER_PROXY_BASE_NAME", "IR-DIALER")
+ENTRY_PROXY_BASE_NAME = os.environ.get("ENTRY_PROXY_BASE_NAME", "EU-ENTRY")
+MAIN_SELECTOR_GROUP_NAME = os.environ.get("MAIN_SELECTOR_GROUP_NAME", "⚪PROXIES")
+DIALER_URL_TEST_GROUP_NAME = f"🇮🇷AUTO-{DIALER_PROXY_BASE_NAME}"
+ENTRY_URL_TEST_GROUP_NAME = f"🇪🇺AUTO-{ENTRY_PROXY_BASE_NAME}"
 
-# Log settings
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -52,26 +40,22 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-
 # Custom exception for rate limiting
 class RateLimitError(Exception):
     pass
-
 
 # Function to encode bytes to base64
 def byte_to_base64(myb):
     return base64.b64encode(myb).decode("utf-8")
 
-
 # Function to generate a public key from private key bytes
 def generate_public_key(key_bytes):
     private_key = X25519PrivateKey.from_private_bytes(key_bytes)
     public_key = private_key.public_key()
-    public_key_bytes = public_key.public_bytes(
-        encoding=serialization.Encoding.Raw, format=serialization.PublicFormat.Raw
+    return public_key.public_bytes(
+        encoding=serialization.Encoding.Raw,
+        format=serialization.PublicFormat.Raw,
     )
-    return public_key_bytes
-
 
 # Function to generate a new private key with specific bit manipulations
 def generate_private_key():
@@ -82,13 +66,11 @@ def generate_private_key():
         format=serialization.PrivateFormat.Raw,
         encryption_algorithm=serialization.NoEncryption(),
     )
-
     key = list(private_bytes)
     key[0] &= 248
     key[31] &= 127
     key[31] |= 64
     return bytes(key)
-
 
 # Load cached keys
 def load_cached_keys():
@@ -109,7 +91,6 @@ def load_cached_keys():
             return []
     return []
 
-
 # Save cached keys
 def save_cached_keys(keys):
     try:
@@ -119,7 +100,6 @@ def save_cached_keys(keys):
         logger.info(f"Saved keys to cache file: {CACHE_FILE_PATH}")
     except IOError as e:
         logger.error(f"Error writing cache file {CACHE_FILE_PATH}: {e}")
-
 
 # Function to register a public key with Cloudflare API using tenacity for retries
 def should_retry(exception):
@@ -143,10 +123,10 @@ def log_before_sleep(retry_state):
 
 
 @retry(
-    stop=stop_after_attempt(6),  # Retry up to 6 times
-    wait=wait_exponential(multiplier=1, min=5, max=60),  # Exponential backoff
+    stop=stop_after_attempt(6),
+    wait=wait_exponential(multiplier=1, min=5, max=60),
     retry=retry_if_exception(should_retry),
-    reraise=True,  # Reraise the exception if all retries fail
+    reraise=True,
     before_sleep=log_before_sleep,
 )
 def register_key_on_CF(pub_key):
@@ -157,7 +137,6 @@ def register_key_on_CF(pub_key):
         fcm_token = (
             f"{install_id}:APA91b{base64.b64encode(os.urandom(138)).decode('utf-8')}"
         )
-
         body = {
             "key": pub_key,
             "install_id": install_id,
@@ -170,7 +149,6 @@ def register_key_on_CF(pub_key):
             "model": "PC",
             "locale": "en_US",
         }
-        bodyString = json.dumps(body)
         headers = {
             "Content-Type": "application/json; charset=UTF-8",
             "Host": "api.cloudflareclient.com",
@@ -178,23 +156,20 @@ def register_key_on_CF(pub_key):
             "Accept-Encoding": "gzip",
             "User-Agent": "okhttp/3.12.1",
         }
-
         time.sleep(random.uniform(1.5, 2.5))
-        with requests.post(url, data=bodyString, headers=headers, timeout=25) as r:
+        with requests.post(
+            url, data=json.dumps(body), headers=headers, timeout=25
+        ) as r:
             if r.status_code == 429:
                 logger.warning(f"Rate limit hit (429). Headers: {r.headers}")
                 retry_after = r.headers.get("Retry-After")
-                wait_time = (
-                    int(retry_after) if retry_after else 15
-                )  # Default wait if header missing
+                wait_time = int(retry_after) if retry_after else 15
                 logger.warning(f"Waiting for {wait_time} seconds due to rate limit.")
                 time.sleep(wait_time)
                 raise RateLimitError("Rate limit exceeded")
-
             logger.info(f"Cloudflare API response status: {r.status_code}")
-            r.raise_for_status()  # Raise HTTPError for other bad responses (4xx or 5xx)
+            r.raise_for_status()
             return r
-
     except requests.exceptions.Timeout:
         logger.error("Cloudflare API request timed out.")
         raise requests.exceptions.RequestException("API request timed out")
@@ -202,20 +177,8 @@ def register_key_on_CF(pub_key):
         logger.error(f"Failed to connect to Cloudflare API: {e}")
         raise
 
-
 # Function to generate and register private/public key pair, using cache
 def bind_keys(key_type):
-    """
-    Generates or retrieves a cached key pair and registers it with Cloudflare.
-    Uses client_id as the 'reserved' value and returns interface IPs.
-
-    Args:
-        key_type (str): The type of key ('dialer' or 'entry') for caching purposes.
-
-    Returns:
-        tuple: (private_key_base64, reserved_value (client_id), interface_v4, interface_v6)
-               Returns None for IPs if not found. Exits on failure.
-    """
     cached_keys = load_cached_keys()
     matching_keys = [k for k in cached_keys if k.get("type") == key_type]
 
@@ -240,21 +203,14 @@ def bind_keys(key_type):
     )
     priv_bytes = generate_private_key()
     priv_string = byte_to_base64(priv_bytes)
-    logger.info(f"Generated private key for {key_type}: {priv_string[:10]}...")
     pub_bytes = generate_public_key(priv_bytes)
     pub_string = byte_to_base64(pub_bytes)
-    logger.info(f"Generated public key for {key_type}: {pub_string[:10]}...")
 
     try:
         result = register_key_on_CF(pub_string)
-
         if result and result.status_code == 200:
             try:
                 response_data = result.json()
-                logger.debug(
-                    f"Full API response for {key_type}: {json.dumps(response_data, indent=2)}"
-                )
-
                 config_data = response_data.get("config", {})
                 client_id = config_data.get("client_id")
                 interface_data = config_data.get("interface", {})
@@ -265,14 +221,6 @@ def bind_keys(key_type):
                 if not client_id:
                     logger.error("Could not find 'client_id' in API response.")
                     sys.exit(1)
-                if not interface_v4:
-                    logger.warning(
-                        "Could not find 'v4' interface address in API response."
-                    )
-                if not interface_v6:
-                    logger.warning(
-                        "Could not find 'v6' interface address in API response."
-                    )
 
                 logger.info(
                     f"Successfully registered {key_type} with client_id: ...{client_id[-10:]}"
@@ -293,12 +241,10 @@ def bind_keys(key_type):
                 }
                 cached_keys.append(new_key_data)
                 save_cached_keys(cached_keys)
-
                 return priv_string, client_id, interface_v4, interface_v6
 
             except (json.JSONDecodeError, KeyError, TypeError) as e:
                 logger.error(f"Error parsing Cloudflare API response: {e}")
-                logger.debug(f"Response content: {result.text}")
                 sys.exit(1)
         else:
             status = result.status_code if result else "N/A"
@@ -307,13 +253,11 @@ def bind_keys(key_type):
                 f"API request failed after retries with status {status}: {text}"
             )
             sys.exit(1)
-
     except Exception as e:
         logger.error(
             f"Cloudflare API registration failed for {key_type}: {e}", exc_info=True
         )
         sys.exit(1)
-
 
 # IPv4 prefixes for generating endpoints
 ipv4_prefixes = [
@@ -339,10 +283,8 @@ ports_str = os.environ.get(
     "500 854 859 864 878 880 890 891 894 903 908 928 934 939 942 943 945 946 955 968 987 988 1002 1010 1014 1018 1070 1074 1180 1387 1701 1843 2371 2408 2506 3138 3476 3581 3854 4177 4198 4233 4500 5279 5956 7103 7152 7156 7281 7559 8319 8742 8854 8886",
 )
 available_ports = [int(p) for p in ports_str.split()]
-
 # Cloudflare's fixed public key for WireGuard
 CLOUDFLARE_PUBLIC_KEY = "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
-
 
 # Function to generate a random IPv4 endpoint
 def generate_ipv4_endpoint():
@@ -350,23 +292,21 @@ def generate_ipv4_endpoint():
     last_octet = random.randint(1, 254)
     server = f"{prefix}{last_octet}"
     port = random.choice(available_ports)
-    logger.debug(f"Generated IPv4 endpoint: {server}:{port}")
     return server, port
 
-
-# --- Main Script Logic ---
+# --- Main Logic ---
 def main():
     try:
         if os.path.exists(CACHE_FILE_PATH):
             logger.warning(f"Cache file exists: {CACHE_FILE_PATH}")
-            try:
-                if os.environ.get("FORCE_CLEAR_CACHE", "0") == "1":
+            if os.environ.get("FORCE_CLEAR_CACHE", "0") == "1":
+                try:
                     logger.warning(f"Deleting existing cache file: {CACHE_FILE_PATH}")
                     os.remove(CACHE_FILE_PATH)
                     logger.info("Cache file deleted successfully.")
-            except OSError as e:
-                logger.error(f"Error deleting cache file: {e}")
-                logger.warning("Continuing with existing cache file.")
+                except OSError as e:
+                    logger.error(f"Error deleting cache file: {e}")
+                    logger.warning("Continuing with existing cache file.")
 
         # Load the base configuration template (YAML format)
         logger.info(f"Loading config template from {CONFIG_TEMPLATE_PATH}")
@@ -385,21 +325,17 @@ def main():
             )
             sys.exit(1)
 
-        # Generate/retrieve keys for dialer and entry proxies
+        logger.info("Binding keys for Entry proxies...")
+        priv_key_entry, reserved_entry, ip_v4_entry, ip_v6_entry = bind_keys("entry")
+
         logger.info("Binding keys for Dialer proxies...")
         priv_key_dialer, reserved_dialer, ip_v4_dialer, ip_v6_dialer = bind_keys(
             "dialer"
         )
 
-        logger.info("Binding keys for Entry proxies...")
-        priv_key_entry, reserved_entry, ip_v4_entry, ip_v6_entry = bind_keys("entry")
-
         # Prepare unique interface IPs, adding CIDR notation (IPv4 only)
-        ip_dialer = "172.16.0.3/32"
         ip_entry = "172.16.0.2/32"
-
-        logger.info(f"Using Dialer IP: {ip_dialer}")
-        logger.info(f"Using Entry IP: {ip_entry}")
+        ip_dialer = "172.16.0.3/32"
 
         proxies_list = []
         dialer_proxy_names = []
@@ -408,17 +344,11 @@ def main():
         logger.info(f"Generating {NUM_PROXY_PAIRS} proxy pairs...")
         for i in range(NUM_PROXY_PAIRS):
             pair_num = i + 1
-            logger.debug(f"Generating pair {pair_num}/{NUM_PROXY_PAIRS}...")
 
-            # --- Create Dialer Proxy ---
+            # IR-DIALER: direct connection to Cloudflare, no dialer-proxy
             dialer_proxy_name = f"{DIALER_PROXY_BASE_NAME}-{pair_num:02d}"
             dialer_proxy_names.append(dialer_proxy_name)
-
-            # --- Always use IPv4 endpoint for Dialer proxy ---
-            logger.debug(f"Using IPv4 endpoint for Dialer proxy {pair_num}")
             server_dialer, port_dialer = generate_ipv4_endpoint()
-
-            entry_proxy_name = f"{ENTRY_PROXY_BASE_NAME}-{pair_num:02d}"
 
             dialer_proxy = {
                 "name": dialer_proxy_name,
@@ -433,15 +363,13 @@ def main():
                 "reserved": reserved_dialer,
                 "udp": True,
                 "mtu": 1280,
-                "dialer-proxy": entry_proxy_name,
+                "amnezia-wg-option": {"jc": 3, "jmin": 10, "jmax": 50},
             }
             proxies_list.append(dialer_proxy)
 
-            # --- Create Entry Proxy SECOND ---
+            # EU-ENTRY: tunneled through EU-DIALER via dialer-proxy
+            entry_proxy_name = f"{ENTRY_PROXY_BASE_NAME}-{pair_num:02d}"
             entry_proxy_names.append(entry_proxy_name)
-
-            # --- Always use IPv4 endpoint for Entry proxy ---
-            logger.debug(f"Using IPv4 endpoint for Entry proxy {pair_num}")
             server_entry, port_entry = generate_ipv4_endpoint()
 
             entry_proxy = {
@@ -457,7 +385,7 @@ def main():
                 "reserved": reserved_entry,
                 "udp": True,
                 "mtu": 1280,
-                "amnezia-wg-option": {"jc": 5, "jmin": 200, "jmax": 201},
+                "dialer-proxy": dialer_proxy_name,
             }
             proxies_list.append(entry_proxy)
 
@@ -474,43 +402,41 @@ def main():
                     ENTRY_URL_TEST_GROUP_NAME,
                     DIALER_URL_TEST_GROUP_NAME,
                     "DIRECT",
-                    *dialer_proxy_names,
                     *entry_proxy_names,
+                    *dialer_proxy_names,
                 ],
             },
             {
-                "name": ENTRY_URL_TEST_GROUP_NAME,
-                "type": "url-test",
-                "url": "https://www.gstatic.com/generate_204",
-                "interval": 180,
-                "tolerance": 50,
-                "timeout": 5000,
-                "max-failed-times": 3,
-                "proxies": entry_proxy_names,
-            },
-            {
+                # url-test on IR-DIALER (direct, no chain dependency) → always reachable
                 "name": DIALER_URL_TEST_GROUP_NAME,
                 "type": "url-test",
                 "url": "https://www.gstatic.com/generate_204",
-                "interval": 180,
+                "interval": 25,
                 "tolerance": 50,
                 "timeout": 5000,
                 "max-failed-times": 3,
                 "proxies": dialer_proxy_names,
             },
+            {
+                # url-test on EU-ENTRY (goes through IR-DIALER, tests full Entry chain)
+                "name": ENTRY_URL_TEST_GROUP_NAME,
+                "type": "url-test",
+                "url": "https://www.gstatic.com/generate_204",
+                "interval": 25,
+                "tolerance": 50,
+                "timeout": 5000,
+                "max-failed-times": 3,
+                "proxies": entry_proxy_names,
+            },
         ]
         config_template_dict["proxy-groups"] = proxy_groups
 
-        # Ensure the final MATCH rule uses the correct selector group name
         if "rules" in config_template_dict:
             updated_rules = []
             match_rule_found = False
             for rule in config_template_dict["rules"]:
                 if isinstance(rule, str) and rule.startswith("MATCH,"):
                     updated_rules.append(f"MATCH,{MAIN_SELECTOR_GROUP_NAME}")
-                    logger.info(
-                        f"Updated MATCH rule to use '{MAIN_SELECTOR_GROUP_NAME}' group."
-                    )
                     match_rule_found = True
                 else:
                     updated_rules.append(rule)
@@ -526,16 +452,8 @@ def main():
             if config_template_dict["dns"]["nameserver"]:
                 parts = config_template_dict["dns"]["nameserver"][0].split("#")
                 if len(parts) >= 1:
-                    # Rebuild tag using the main selector group name
                     config_template_dict["dns"]["nameserver"][0] = (
                         f"{parts[0]}#{MAIN_SELECTOR_GROUP_NAME}"
-                    )
-                    logger.info(
-                        f"Updated primary DNS nameserver to use '{MAIN_SELECTOR_GROUP_NAME}' group tag."
-                    )
-                else:
-                    logger.warning(
-                        "Primary DNS nameserver format unexpected. Could not update tag."
                     )
             else:
                 logger.warning("DNS nameserver list is empty in template.")
@@ -544,15 +462,13 @@ def main():
         logger.info(f"Writing output to {OUTPUT_YAML_FILENAME}")
         try:
             os.makedirs(os.path.dirname(OUTPUT_YAML_FILENAME), exist_ok=True)
-            # Add comments to the beginning of the file
             generation_time = datetime.datetime.now().isoformat()
             header_comment = "# Generated configs for clash-meta with WireGuard proxies that have amnesia values.\n"
             header_comment += f"# Time is: {generation_time}\n\n"
 
             with open(OUTPUT_YAML_FILENAME, "w", encoding="utf-8") as f:
                 f.write(header_comment)
-                # Dump the dictionary as YAML
-                yaml.dump(
+                yaml.dump(  # Dump the dictionary as YAML
                     config_template_dict,
                     f,
                     allow_unicode=True,
