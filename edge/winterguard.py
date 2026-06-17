@@ -17,14 +17,24 @@ from tenacity import (
     retry_if_exception,
 )
 
-NUM_PROXY_PAIRS = int(os.environ.get("NUM_PROXY_PAIRS", 6))  # Number of proxy pairs to generate
+NUM_PROXY_PAIRS = int(
+    os.environ.get("NUM_PROXY_PAIRS", 6)
+)  # Number of proxy pairs to generate
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # the (SCRIPT_DIR) = where the script is running, in this case: path:vless/edge
+SCRIPT_DIR = os.path.dirname(
+    os.path.abspath(__file__)
+)  # the (SCRIPT_DIR) = where the script is running, in this case: path:vless/edge
 PARENT_DIR = os.path.dirname(SCRIPT_DIR)
 
-CONFIG_TEMPLATE_PATH = os.path.join(SCRIPT_DIR, "assets", "clash-meta-wg-template.yml")  # Path to the template file
-CACHE_FILE_PATH = os.path.join(PARENT_DIR, "sub", "key_cache.json")  # Path for caching generated keys
-OUTPUT_YAML_FILENAME = os.path.join(PARENT_DIR, "sub", "clash-meta-wg.yml")  # Output YML filename
+CONFIG_TEMPLATE_PATH = os.path.join(
+    SCRIPT_DIR, "assets", "clash-meta-wg-template.yml"
+)  # Path to the template file
+CACHE_FILE_PATH = os.path.join(
+    PARENT_DIR, "sub", "key_cache.json"
+)  # Path for caching generated keys
+OUTPUT_YAML_FILENAME = os.path.join(
+    PARENT_DIR, "sub", "clash-meta-wg.yml"
+)  # Output YML filename
 
 # --- Proxy Naming Configuration ---
 DIALER_PROXY_BASE_NAME = os.environ.get("DIALER_PROXY_BASE_NAME", "IR-DIALER")
@@ -40,13 +50,16 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+
 # Custom exception for rate limiting
 class RateLimitError(Exception):
     pass
 
+
 # Function to encode bytes to base64
 def byte_to_base64(myb):
     return base64.b64encode(myb).decode("utf-8")
+
 
 # Function to generate a public key from private key bytes
 def generate_public_key(key_bytes):
@@ -56,6 +69,7 @@ def generate_public_key(key_bytes):
         encoding=serialization.Encoding.Raw,
         format=serialization.PublicFormat.Raw,
     )
+
 
 # Function to generate a new private key with specific bit manipulations
 def generate_private_key():
@@ -71,6 +85,7 @@ def generate_private_key():
     key[31] &= 127
     key[31] |= 64
     return bytes(key)
+
 
 # Load cached keys
 def load_cached_keys():
@@ -91,6 +106,7 @@ def load_cached_keys():
             return []
     return []
 
+
 # Save cached keys
 def save_cached_keys(keys):
     try:
@@ -100,6 +116,7 @@ def save_cached_keys(keys):
         logger.info(f"Saved keys to cache file: {CACHE_FILE_PATH}")
     except IOError as e:
         logger.error(f"Error writing cache file {CACHE_FILE_PATH}: {e}")
+
 
 # Function to register a public key with Cloudflare API using tenacity for retries
 def should_retry(exception):
@@ -176,6 +193,7 @@ def register_key_on_CF(pub_key):
     except requests.exceptions.RequestException as e:
         logger.error(f"Failed to connect to Cloudflare API: {e}")
         raise
+
 
 # Function to generate and register private/public key pair, using cache
 def bind_keys(key_type):
@@ -259,6 +277,7 @@ def bind_keys(key_type):
         )
         sys.exit(1)
 
+
 # IPv4 prefixes for generating endpoints
 ipv4_prefixes = [
     "8.6.112.",
@@ -286,6 +305,7 @@ available_ports = [int(p) for p in ports_str.split()]
 # Cloudflare's fixed public key for WireGuard
 CLOUDFLARE_PUBLIC_KEY = "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo="
 
+
 # Function to generate a random IPv4 endpoint
 def generate_ipv4_endpoint():
     prefix = random.choice(ipv4_prefixes)
@@ -293,6 +313,7 @@ def generate_ipv4_endpoint():
     server = f"{prefix}{last_octet}"
     port = random.choice(available_ports)
     return server, port
+
 
 # --- Main Logic ---
 def main():
