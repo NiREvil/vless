@@ -1,1917 +1,712 @@
 mixed-port: 7890
+ipv6: true
 allow-lan: true
-mode: Rule
-log-level: silent
+mode: rule
+log-level: warning
+disable-keep-alive: false
+keep-alive-idle: 10
+keep-alive-interval: 15
+unified-delay: true
+geo-auto-update: true
+geo-update-interval: 168
+external-controller: 127.0.0.1:9090
+external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
+external-ui: ui
+external-controller-cors:
+  allow-origins:
+  - '*'
+  allow-private-network: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: false
+  listen: 127.0.0.1:1053
+  respect-rules: true
+  use-system-hosts: false
+  nameserver:
+  - 1.1.1.1#⚪AUTO
+  proxy-server-nameserver:
+  - 8.8.8.8#DIRECT
+  direct-nameserver:
+  - 8.8.8.8#DIRECT
+  direct-nameserver-follow-policy: true
+  nameserver-policy:
+    rule-set:ir: 8.8.8.8#DIRECT
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+  - geosite:private
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  strict-route: true
+  endpoint-independent-nat: false
+  auto-detect-interface: true
+  dns-hijack:
+  - any:53
+  - tcp://any:53
+  mtu: 9000
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports:
+      - 80
+      - 8080
+      - 8880
+      - 2052
+      - 2082
+      - 2086
+      - 2095
+    TLS:
+      ports:
+      - 443
+      - 8443
+      - 2053
+      - 2083
+      - 2087
+      - 2096
+
 proxies:
-  - name: –Rose_Rtl_0
-    type: vmess
-    server: yal.fxlcn.com
-    port: 45263
-    udp: true
-    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Rtl_1
-    type: vmess
-    server: 57.129.24.124
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: –Rose_Rtl_2
-    type: vmess
-    server: 104.17.148.22
-    port: 443
-    udp: true
-    uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top/azumase.ren
-      headers:
-        Host: bitter-boat-6004.samineh-sfri-95.workers.dev
-    tls: true
-    skip-cert-verify: true
-    servername: bitter-boat-6004.samineh-sfri-95.workers.dev
-
-  - name: –Rose_Rtl_3
-    type: vmess
-    server: 64f6e0b2-sw1z40-t51bp0-1nyy5.hgc1.tcpbbr.net
-    port: 8080
-    udp: true
-    uuid: 8f7cb770-1305-11ee-b107-f23c91cfbbc9
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /
-
-  - name: –Rose_Rtl_4
-    type: vmess
-    server: lt.fxlcn.com
-    port: 45276
-    udp: true
-    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Rtl_5
-    type: vmess
-    server: cf.fovi.tk
-    port: 443
-    udp: true
-    uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /eisasqa
-      headers:
-        Host: foxlux.fovi.tk
-    tls: true
-    skip-cert-verify: true
-    servername: foxlux.fovi.tk
-
-  - name: –Rose_Rtl_6
-    type: vmess
-    server: 172.67.51.186
-    port: 443
-    udp: true
-    uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /eisasqa
-      headers:
-        Host: foxlux.fovi.tk
-    tls: true
-    skip-cert-verify: true
-    servername: foxlux.fovi.tk
-
-  - name: –Rose_Rtl_7
-    type: vmess
-    server: pq-brazil1.09vpn.com
-    port: 80
-    udp: true
-    uuid: c04c3b34-70fd-4fec-963e-c12d09f36bef
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-      headers:
-        Host: pq-brazil1.09vpn.com
-
-  - name: –Rose_Rtl_8
-    type: vmess
-    server: ye.fxlcn.com
-    port: 45246
-    udp: true
-    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Rtl_9
-    type: vmess
-    server: orvps2.horsenma.net
-    port: 8443
-    udp: true
-    uuid: 57e595e6-ef54-4e0d-b8df-e96db9612b99
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /horsen
-      headers:
-        Host: orvps2.horsenma.net
-    tls: true
-    skip-cert-verify: true
-    servername: orvps2.horsenma.net
-
-  - name: –Rose_Rtl_10
-    type: vmess
-    server: 5.253.41.147
-    port: 27750
-    udp: true
-    uuid: 4b1992cc-8e7c-4003-a45f-a28c3e6f6fa8
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Rtl_11
-    type: vmess
-    server: cf.fovi.tk
-    port: 443
-    udp: true
-    uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /eisasqa
-      headers:
-        Host: foxlux.fovi.tk
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: –Rose_Rtl_12
-    type: vmess
-    server: lt.fxlcn.com
-    port: 45271
-    udp: true
-    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Rtl_13
-    type: vmess
-    server: ysl.fxlcn.com
-    port: 45419
-    udp: true
-    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Rtl_14
-    type: vmess
-    server: 120.26.55.225
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Rtl_15
-    type: vmess
-    server: 57.129.24.125
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: –Rose_Rtl_16
-    type: vmess
-    server: 51.79.103.76
-    port: 80
-    udp: true
-    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /IOebhLMhl1CTbFHbL95myfRX2
-
-  - name: –Rose_Rtl_17
-    type: vmess
-    server: 94.136.185.230
-    port: 10534
-    udp: true
-    uuid: b01c7ef9-33ec-41f6-bfbf-77ddc4d21649
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Mci_18
-    type: vmess
-    server: lt.fxlcn.com
-    port: 45417
-    udp: true
-    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Mci_19
-    type: vmess
-    server: lt.fxlcn.com
-    port: 45235
-    udp: true
-    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Rtl_20
-    type: vmess
-    server: 43b5a616-sw04g0-swasv3-luwe.hgc1.tcpbbr.net
-    port: 8080
-    udp: true
-    uuid: a2b0fd2b-716f-0df8-d4e2-03a1c00e5f1a
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: 43b5a616-sw04g0-swasv3-luwe.hgc1.tcpbbr.net
-
-  - name: –Rose_Rtl_21
-    type: vmess
-    server: ysl.fxlcn.com
-    port: 45229
-    udp: true
-    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Rtl_22
-    type: vmess
-    server: 57.129.24.124
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: –Rose_Mtn_23
-    type: vmess
-    server: pq-brazil1.09vpn.com
-    port: 80
-    udp: true
-    uuid: 24b6bbfb-9b27-4f17-bd32-67523bf487d9
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /vmess/
-
-  - name: –Rose_Mtn_24
-    type: vmess
-    server: cf.fovi.tk
-    port: 443
-    udp: true
-    uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /eisasqa
-      headers:
-        Host: foxpol.fovi.tk
-    tls: true
-    skip-cert-verify: true
-    servername: cf.fovi.tk
-
-  - name: –Rose_Wifi_25
-    type: vmess
-    server: 45.12.145.111
-    port: 46290
-    udp: true
-    uuid: 1b41153e-c4d4-431b-83eb-10472f869f93
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Wifi_26
-    type: vmess
-    server: 84.247.146.161
-    port: 39530
-    udp: true
-    uuid: 7aa56e39-29b8-45c3-8b53-6d2a23b2461c
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Wifi_27
-    type: vmess
-    server: 120.210.205.59
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Wifi_28
-    type: vmess
-    server: codepen.io
-    port: 443
-    udp: true
-    uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /us.kkp.me.eu.org/aa
-      headers:
-        Host: farid.1.berozha.ir
-    tls: true
-    skip-cert-verify: true
-    servername: farid.1.berozha.ir
-
-  - name: –Rose_Wifi_29
-    type: vmess
-    server: lt.fxlcn.com
-    port: 45291
-    udp: true
-    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Wifi_30
-    type: vmess
-    server: lt.fxlcn.com
-    port: 45233
-    udp: true
-    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Wifi_31
-    type: vmess
-    server: 146.59.55.50
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: o.metuji.com
-    tls: true
-    skip-cert-verify: true
-    servername: o.metuji.com
-
-  - name: –Rose_Mci_32
-    type: vmess
-    server: 47.116.166.178
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Wifi_33
-    type: vmess
-    server: 57.129.24.124
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: aveiror.com
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: –Rose_Mci_34
-    type: vmess
-    server: 15.204.249.0
-    port: 48160
-    udp: true
-    uuid: 5b113c12-4dd4-4bb5-9c01-cff092b559e3
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Wifi_35
-    type: vmess
-    server: 84.247.148.192
-    port: 44396
-    udp: true
-    uuid: 3ca35e0a-e430-43fe-9c12-2e2eea70f873
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Wifi_36
-    type: vmess
-    server: 84.247.149.77
-    port: 47211
-    udp: true
-    uuid: fb674260-1c21-4f99-8bd0-3d1d341c6771
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Mci_37
-    type: vmess
-    server: yal.fxlcn.com
-    port: 45272
-    udp: true
-    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Mci_38
-    type: vmess
-    server: yal.fxlcn.com
-    port: 45273
-    udp: true
-    uuid: 469e0b31-30c3-4dab-800d-711232634ce1
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Mci_39
-    type: vmess
-    server: 154.26.129.247
-    port: 57143
-    udp: true
-    uuid: 28efbf36-079a-4c98-8470-d13458db6ee6
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Mtn_40
-    type: vmess
-    server: 185.189.32.179
-    port: 48737
-    udp: true
-    uuid: 3680a006-d824-4574-90f3-21226dae6903
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Mci_41
-    type: vmess
-    server: 57.129.28.69
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: baradiha.com
-    tls: true
-    skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-
-  - name: –Rose_Mtn_42
-    type: vmess
-    server: 51.79.102.253
-    port: 80
-    udp: true
-    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /IOebhLMhl1CTbFHbL95myfRX2
-      headers:
-        Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-
-  - name: –Rose_Mtn_43
-    type: vmess
-    server: 57.129.25.20
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 1
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: linkvws
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: –Rose_Mtn_44
-    type: vmess
-    server: 57.129.25.22
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: –Rose_Mtn_45
-    type: vmess
-    server: 47.104.186.133
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Mtn_46
-    type: vmess
-    server: 57.129.24.124
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    tls: true
-    skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-
-  - name: –Rose_Wifi_47
-    type: vmess
-    server: 43.153.104.62
-    port: 45113
-    udp: true
-    uuid: 97cc0323-de53-4a75-d69d-c6acdac5fdc7
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /97cc0323
-
-  - name: –Rose_Mci_48
-    type: vmess
-    server: 62.146.233.112
-    port: 36712
-    udp: true
-    uuid: 9266df42-0830-48c2-8509-4c57b30fe29d
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Mci_49
-    type: vmess
-    server: 57.129.25.25
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: f.khilei.com
-    tls: true
-    skip-cert-verify: true
-    servername: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-
-  - name: –Rose_Mci_50
-    type: vmess
-    server: 47.92.152.169
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-
-  - name: –Rose_Wifi_51
-    type: vmess
-    server: 57.129.28.65
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: kapelleng.com
-    tls: true
-    skip-cert-verify: true
-    servername: kapelleng.com
-
-  - name: –Rose_Wifi_52
-    type: vmess
-    server: 57.129.25.22
-    port: 443
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: o.metuji.com
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: –Rose_Mci_53
-    type: vmess
-    server: 95.164.4.140
-    port: 52937
-    udp: true
-    uuid: 71820e62-7b99-4ed9-a836-1e0f814c33a1
-    alterId: 0
-    cipher: auto
-
-  - name: –Rose_Rtl_54
-    type: vmess
-    server: 112.132.215.12
-    port: 50002
-    udp: true
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-
-  - name: –Rose_Mtn_55
-    type: ss
-    server: admin.c2.webramz.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: WstuSnlu4ieA9M0L
-
-  - name: –Rose_Mtn_56
-    type: ss
-    server: admin.c1.webramz.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: W74XFALLLuw6m5IA
-
-  - name: –Rose_Mci_57
-    type: ss
-    server: admin.c3.webramz.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: AlCsBGpsejHdVCME
-
-  - name: –Rose_Mci_58
-    type: ss
-    server: series-a2-mec.varzesh360.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: u17T3BvpYaaiuW2c
-
-  - name: –Rose_Mci_59
-    type: ss
-    server: 185.47.253.227
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: –Rose_Mci_60
-    type: ss
-    server: freakconfig13.felafel.org
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1xO2cqPazqjGfCfd
-
-  - name: –Rose_Rtl_61
-    type: ss
-    server: exchange.gameaurela.click
-    port: 52952
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj
-
-  - name: –Rose_Rtl_62
-    type: ss
-    server: beesyar.org
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: –Rose_Rtl_63
-    type: ss
-    server: 45.87.175.192
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: –Rose_Rtl_64
-    type: ss
-    server: 45.87.175.171
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: –Rose_Rtl_65
-    type: ss
-    server: 45.87.175.35
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: –Rose_Rtl_66
-    type: ss
-    server: 166.1.157.228
-    port: 55330
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: rtR4YX74vwqRJu9MGH3e1N3CQdGMWCUFkyLisijiFuvhkU9McV5TpygfkernJ4UQe63JtcDQkrQ9HfchzqQz1kLCnTRor8jg
-
-  - name: –Rose_Rtl_67
-    type: ss
-    server: 45.87.175.171
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: –Rose_Rtl_68
-    type: ss
-    server: 45.158.171.151
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: –Rose_Rtl_69
-    type: ss
-    server: beta.mattenadene.org
-    port: 54075
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: o38yuvzSe3m5aDNpHtUPH1zGwbGEXXMDsGwVaub2SYEmHUa2WGZUjiezX3Vvva9CCzpjxYtuJLgKsSnsyKBf9ciPVba3y4o3
-
-  - name: –Rose_Rtl_70
-    type: ss
-    server: 45.158.171.151
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: –Rose_Rtl_71
-    type: ss
-    server: 45.87.175.157
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: –Rose_Rtl_72
-    type: ss
-    server: 94.131.21.174
-    port: 54075
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: o38yuvzSe3m5aDNpHtUPH1zGwbGEXXMDsGwVaub2SYEmHUa2WGZUjiezX3Vvva9CCzpjxYtuJLgKsSnsyKBf9ciPVba3y4o3
-
-  - name: –Rose_Rtl_73
-    type: ss
-    server: 45.87.175.10
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: –Rose_Rtl_74
-    type: ss
-    server: series-a1.samanehha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: W74XFALLLuw6m5IA
-
-  - name: –Rose_Rtl_75
-    type: ss
-    server: 45.158.171.151
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: –Rose_Rtl_76
-    type: ss
-    server: 45.158.171.132
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: –Rose_Rtl_77
-    type: ss
-    server: series-a2.samanehha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: mps3FwmDjLrWaOVg
-
-  - name: –Rose_Rtl_78
-    type: ss
-    server: 45.87.175.171
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: –Rose_Rtl_79
-    type: ss
-    server: series-a1.samanehha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: mps3FwmDjLrWaOVg
-
-  - name: –Rose_Rtl_80
-    type: ss
-    server: old.afoothabs.monster
-    port: 55330
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: frsa5DFzRANYPs5yMexsVUrC7d6NY8pvBRFn4g1WkF4R71Y5a6E6qYp3SxP2EaUh2yXsAKbTAm7SmL5qk5xMGoDRjH5F8BBU
-
-  - name: –Rose_Rtl_81
-    type: ss
-    server: admin.c4.webramz.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 69MUii7VDwMqh7Hz
-
-  - name: –Rose_Rtl_82
-    type: ss
-    server: 45.87.175.192
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: –Rose_Rtl_83
-    type: ss
-    server: api.namasha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: u17T3BvpYaaiuW2c
-
-  - name: –Rose_Rtl_84
-    type: ss
-    server: series-a2.samanehha.co
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: W74XFALLLuw6m5IA
-
-  - name: –Rose_Rtl_85
-    type: ss
-    server: 45.87.175.178
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: –Rose_Rtl_86
-    type: ss
-    server: 45.87.175.28
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-
-  - name: –Rose_Rtl_87
-    type: ss
-    server: 45.87.175.192
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: –Rose_Rtl_88
-    type: ss
-    server: 45.158.171.132
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: fbx1Fw7mENCd7vZMvorQZ5
-
-  - name: –Rose_Rtl_89
-    type: ss
-    server: 45.158.171.132
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: –Rose_Rtl_90
-    type: ss
-    server: 45.87.175.171
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: –Rose_Rtl_91
-    type: ss
-    server: 45.158.171.132
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: –Rose_Rtl_92
-    type: ss
-    server: 45.87.175.192
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
-
-  - name: –Rose_Rtl_93
-    type: ss
-    server: 45.144.48.63
-    port: 57456
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: d3837224ed465f00
-
-  - name: –Rose_Wifi_94
-    type: ss
-    server: 45.87.175.178
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-
-  - name: –Rose_Wifi_95
-    type: ss
-    server: 185.47.255.22
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: –Rose_Mci_96
-    type: ss
-    server: beesyar.org
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-
-  - name: –Rose_Wifi_97
-    type: ss
-    server: 81.19.141.45
-    port: 443
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 3TnQdgm2mVJQbuSCXmR5Vc
-
-  - name: –Rose_Wifi_98
-    type: ss
-    server: 45.87.175.157
-    port: 8080
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-
-  - name: –Rose_Mci_99
-    type: ss
-    server: 92.38.171.215
-    port: 31348
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 0RsrcFJ1vOsWEqg3P55hvaacKfuShT0cc1h0t8AD0NA8u1uR
-
-  - name: –Rose_Mci_100
-    type: ss
-    server: 92.118.205.228
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: –Rose_Mci_101
-    type: ss
-    server: 185.93.173.218
-    port: 990
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-
-  - name: –Rose_Wifi_102
-    type: ss
-    server: 172.233.128.126
-    port: 1866
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: oXGp1+ihlfKg826H
-
-  - name: –Rose_Rtl_103
-    type: ss
-    server: portal.ninemakeda.cfd
-    port: 43669
-    udp: true
-    cipher: chacha20-ietf-poly1305
-    password: 23sUrwRcTBEAvxLS6VM6Aay57KQbws1upDAxr7Btf4hXu4gaUQW4BPbComjJjStM2JqJLDwVkteXL8V33k8eWkZR4UB8intz
-
-  - name: –Rose_Rtl_470
-    type: trojan
-    server: log.bpminecraft.com
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_471
-    type: trojan
-    server: 89.187.181.179
-    port: 43118
-    udp: true
-    password: ypDt8RkT7J
-    tls: true
-    skip-cert-verify: true
-    servername: 89.187.181.179
-
-  - name: –Rose_Rtl_472
-    type: trojan
-    server: 104.18.42.163
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_473
-    type: trojan
-    server: www.visa.com.sg
-    port: 8443
-    udp: true
-    password: trojan
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: pangpi.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: pangpi.pages.dev
-
-  - name: –Rose_Rtl_474
-    type: trojan
-    server: www.iplocation.net
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_475
-    type: trojan
-    server: whatismyipaddress.com
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_476
-    type: trojan
-    server: 172.66.44.230
-    port: 8443
-    udp: true
-    password: 8r<[9'l6hAO#8ZQi
-    network: ws
-    ws-opts:
-      path: /tro8sFW1S91B6sZrM1?ed=2560
-      headers:
-        Host: koma-yt.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: Koma-YT.PAGeS.Dev
-
-  - name: –Rose_Rtl_477
-    type: trojan
-    server: www.gco.gov.qa
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_478
-    type: trojan
-    server: dcf741e8.epeius-2gy.pages.dev
-    port: 443
-    udp: true
-    password: auto
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: dcf741e8.epeius-2gy.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: dcf741e8.epeius-2gy.pages.dev
-
-  - name: –Rose_Rtl_479
-    type: trojan
-    server: www.iakeys.com
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_480
-    type: trojan
-    server: 109.120.132.142
-    port: 2025
-    udp: true
-    password: vpn
-    network: ws
-    ws-opts:
-      path: /
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: –Rose_Rtl_481
-    type: trojan
-    server: www.visa.com.hk
-    port: 8443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_482
-    type: trojan
-    server: www.zsu.gov.ua
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_483
-    type: trojan
-    server: fbi.gov
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_484
-    type: trojan
-    server: www.gov.se
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_485
-    type: trojan
-    server: www.gov.ua
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_486
-    type: trojan
-    server: 92.243.75.49
-    port: 2087
-    udp: true
-    password: wb6368
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: hsdgbuys.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: hsdgbuys.pages.dev
-
-  - name: –Rose_Rtl_487
-    type: trojan
-    server: iplocation.io
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_488
-    type: trojan
-    server: www.csgo.com
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_489
-    type: trojan
-    server: 104.25.165.81
-    port: 8443
-    udp: true
-    password: 123456
-    network: ws
-    ws-opts:
-      path: /Az1.vpn.33.TOP/?ed=2560
-      headers:
-        Host: top-azx.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: top-azx.pages.dev
-
-  - name: –Rose_Rtl_490
-    type: trojan
-    server: www.ipaddress.my
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_491
-    type: trojan
-    server: 104.25.165.83
-    port: 8443
-    udp: true
-    password: 123456
-    network: ws
-    ws-opts:
-      path: /Az1.vpn.33.TOP/?ed=2560
-      headers:
-        Host: top-azx.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: top-azx.pages.dev
-
-  - name: –Rose_Rtl_492
-    type: trojan
-    server: koma-yt.pages.dev
-    port: 8443
-    udp: true
-    password: 8r<[9'l6hAO#8ZQi
-    network: ws
-    ws-opts:
-      path: /tro8sFW1S91B6sZrM1?ed=2560
-      headers:
-        Host: koma-yt.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: Koma-YT.PAGeS.Dev
-
-  - name: –Rose_Rtl_493
-    type: trojan
-    server: time.is
-    port: 2087
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_494
-    type: trojan
-    server: 172.66.46.254
-    port: 443
-    udp: true
-    password: auto
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: dcf741e8.epeius-2gy.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: dcf741e8.epeius-2gy.pages.dev
-
-  - name: –Rose_Rtl_495
-    type: trojan
-    server: ip.sb
-    port: 8443
-    udp: true
-    password: trojan
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: fofang.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: fofang.pages.dev
-
-  - name: –Rose_Rtl_496
-    type: trojan
-    server: www.udemy.com
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_497
-    type: trojan
-    server: singapore.com
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_498
-    type: trojan
-    server: 104.25.165.83
-    port: 8443
-    udp: true
-    password: 123456
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: top-azx.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: top-azx.pages.dev
-
-  - name: –Rose_Rtl_499
-    type: trojan
-    server: 104.17.148.22
-    port: 443
-    udp: true
-    password: redfree8
-    network: ws
-    ws-opts:
-      path: /trTelegram@@M4Dvpn/?ed=2560
-      headers:
-        Host: redfree8-p1.pooriashop.ir
-    tls: true
-    skip-cert-verify: true
-    servername: redfree8-p1.pooriashop.ir
-
-  - name: –Rose_Rtl_500
-    type: trojan
-    server: www.wto.org
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_501
-    type: trojan
-    server: 104.21.112.1
-    port: 443
-    udp: true
-    password: f8b7cd5e-60c4-4e95-9b7b-d561ef4eed8c
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: yellow-cloud-d53f.vavovi6084.workers.dev
-    tls: true
-    skip-cert-verify: true
-    servername: yellow-cloud-d53f.vavovi6084.workers.dev
-
-  - name: –Rose_Rtl_502
-    type: trojan
-    server: www.ipget.net
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_503
-    type: trojan
-    server: 104.18.27.94
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_504
-    type: trojan
-    server: www.pcmag.com
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_505
-    type: trojan
-    server: www.udacity.com
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_506
-    type: trojan
-    server: japan.com
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_507
-    type: trojan
-    server: www.visa.com.tw
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Wifi_508
-    type: trojan
-    server: 104.17.148.22
-    port: 80
-    udp: true
-    password: redfree8
-    network: ws
-    ws-opts:
-      path: /trLwW5jwrnymnOdqki?ed=2560
-      headers:
-        Host: redfree8-p1.pooriashop.ir
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: –Rose_Mci_509
-    type: trojan
-    server: 45.82.14.144
-    port: 2025
-    udp: true
-    password: vpn
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: dns.google.com
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: –Rose_Mtn_510
-    type: trojan
-    server: 38.207.133.204
-    port: 10002
-    udp: true
-    password: trojan
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: qingming-b08.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: qingming-b08.pages.dev
-
-  - name: –Rose_Mtn_511
-    type: trojan
-    server: 104.21.18.192
-    port: 443
-    udp: true
-    password: rXzh;?nW1GGKB(K8
-    network: ws
-    ws-opts:
-      path: /tr4BCdusB84159lWnu
-      headers:
-        Host: saikoxpubgm.zhkingkurd13.workers.dev
-    tls: true
-    skip-cert-verify: true
-    servername: sAiKOXpUbGm.ZhkinGkuRD13.WorkErs.dEV
-
-  - name: –Rose_Mtn_512
-    type: trojan
-    server: 109.120.132.142
-    port: 2025
-    udp: true
-    password: vpn
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: vkvd127.mycdn.me
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: –Rose_Mtn_513
-    type: trojan
-    server: 38.99.82.225
-    port: 443
-    udp: true
-    password: 71409d3e488548e8bb076d229778f008
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
-  - name: –Rose_Rtl_514
-    type: trojan
-    server: edtunnel-dgp.pages.dev
-    port: 443
-    udp: true
-    password: vip
-    network: ws
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: heihu880.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: heihu880.pages.dev
-
-  - name: –Rose_Rtl_515
-    type: trojan
-    server: 198.41.208.69
-    port: 8443
-    udp: true
-    password: 123456
-    network: ws
-    ws-opts:
-      path: /Az1.vpn.33.TOP/?ed=2560
-      headers:
-        Host: top-azx.pages.dev
-    tls: true
-    skip-cert-verify: true
-    servername: top-azx.pages.dev
-
-  - name: –Rose_Rtl_516
-    type: trojan
-    server: 109.120.132.80
-    port: 2025
-    udp: true
-    password: vpn
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: vkvd127.mycdn.me
-    tls: true
-    skip-cert-verify: true
-    servername: 
-
+- name: 🇸🇪Wind1-Stockholm-Sweden
+  type: wireguard
+  server: 79.142.76.199
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: P5X43E/SgvnJtbrKnJwLFxqFoZGsCghW2SxlXvfdzm0=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇸🇪Wind2-Stockholm-Sweden
+  type: wireguard
+  server: 79.142.76.199
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: P5X43E/SgvnJtbrKnJwLFxqFoZGsCghW2SxlXvfdzm0=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇨🇭Wind3-Zurich-Switzerland
+  type: wireguard
+  server: 89.187.165.99
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: G7LkwWk08Ase/Wi9mnOW77brNBC0vTCemvy1IW1nlV4=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇨🇭Wind4-Zurich-Switzerland
+  type: wireguard
+  server: 89.187.165.99
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: G7LkwWk08Ase/Wi9mnOW77brNBC0vTCemvy1IW1nlV4=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇮🇸Wind5-Reykjavik-Iceland
+  type: wireguard
+  server: 185.165.170.3
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: ua7TUXkcSiiHeTyCok5b3PX9DkJ4l5yVvGlSmJ34WU8=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇮🇸Wind6-Reykjavik-Iceland
+  type: wireguard
+  server: 185.165.170.3
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: ua7TUXkcSiiHeTyCok5b3PX9DkJ4l5yVvGlSmJ34WU8=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇬🇧Wind7-Edinburgh-UnitedKingdom
+  type: wireguard
+  server: 193.36.118.228
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: bGn6yuCFQWWF8+ZMGlJ0M6+IJRlkLXn0/UI/mvIyYwQ=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇸🇬Wind8-Singapore
+  type: wireguard
+  server: 103.107.198.228
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: tJa6iPx6mpOktn5KoalMslWcpg6pRUdVx3bKDi3wtDg=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇸🇬Wind9-Singapore
+  type: wireguard
+  server: 103.107.198.228
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: tJa6iPx6mpOktn5KoalMslWcpg6pRUdVx3bKDi3wtDg=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇨🇾Wind10-Nicosia-Cyprus
+  type: wireguard
+  server: 46.199.75.107
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 90fjr1sq0Hgv2l+DgMaaGQ009SDw7VxmzJwaYmclaFs=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇨🇾Wind11-Nicosia-Cyprus
+  type: wireguard
+  server: 46.199.75.107
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 90fjr1sq0Hgv2l+DgMaaGQ009SDw7VxmzJwaYmclaFs=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇲🇰Wind12-NorthMacedonia
+  type: wireguard
+  server: 185.225.28.52
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 9J0kA4c4i7N/+6B+3j0zFkDTHocZNsw6eK6+sLZ1qCQ=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇲🇰Wind13-NorthMacedonia
+  type: wireguard
+  server: 185.225.28.52
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 9J0kA4c4i7N/+6B+3j0zFkDTHocZNsw6eK6+sLZ1qCQ=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇺🇸Wind14-Boston-UnitedStates
+  type: wireguard
+  server: 199.217.104.228
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 5yBJlSpfxd8Hq4+X4ZD60MYc6tosaMh5inQwA18XCCk=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇺🇸Wind15-Detroit-UnitedStates
+  type: wireguard
+  server: 104.244.210.244
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: IMHoX/bhNghQVQB0pYKi14pwJhkOcLevpiMa7Khaz2I=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇺🇸Wind16-Orlando-UnitedStates
+  type: wireguard
+  server: 198.147.22.227
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: b5fIKEXhihCI7f4NOkQO/2BOd+bYHa0c05OylImgB0E=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇺🇸Wind17-Orlando-UnitedStates
+  type: wireguard
+  server: 198.147.22.227
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: b5fIKEXhihCI7f4NOkQO/2BOd+bYHa0c05OylImgB0E=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇺🇸Wind18-SantaClara-UnitedStates
+  type: wireguard
+  server: 167.88.60.244
+  port: 443
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: /oz2frQv99JveBgmTXW22QXIEulQURK79BW+ugk8fCE=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇧🇦Wind19-NoviTravnik-Bosnia
+  type: wireguard
+  server: 185.99.3.25
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 6oMHpHHL3pq6Pdr2HoDRYuyjcyQGxfQaSRQR+HPyvgc=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇧🇦Wind20-NoviTravnik-Bosnia
+  type: wireguard
+  server: 185.99.3.25
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 6oMHpHHL3pq6Pdr2HoDRYuyjcyQGxfQaSRQR+HPyvgc=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇨🇦Wind21-Toronto-Canada
+  type: wireguard
+  server: 149.57.28.226
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: vwimooPysZvNdJULeFQVovYfqhsLG5gVdzgoTnfm+iE=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇨🇦Wind22-Halifax-Canada
+  type: wireguard
+  server: 23.191.80.4
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: w262TI0UyIg9pFunMiekVURYUuT/z4qXRor2Z7VcOn4=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇨🇦Wind23-Toronto-Canada
+  type: wireguard
+  server: 149.57.28.226
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: vwimooPysZvNdJULeFQVovYfqhsLG5gVdzgoTnfm+iE=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇺Wind24-Sydney-Australia
+  type: wireguard
+  server: 103.1.213.212
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: jCi1I5HBTtwCblBbMzOFmOOFNG1GilYOZgst0kyq9gY=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇺Wind25-Melbourne-Victoria
+  type: wireguard
+  server: 116.206.228.180
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: r5BDU0T+VGZU6I+zuF3vlGrdORtgNvLhY08gQxrFRCw=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇺Wind26-Melbourne-Victoria
+  type: wireguard
+  server: 116.206.228.180
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: r5BDU0T+VGZU6I+zuF3vlGrdORtgNvLhY08gQxrFRCw=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇺Wind28-Brisbane-Queensland
+  type: wireguard
+  server: 103.108.95.228
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: iY4MhQqQTP4uT7U4w9DfUEVxi5I3HJvjZcIL2dwmtTw=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇺Wind29-Adelaide-Australia
+  type: wireguard
+  server: 103.108.92.84
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: Sb5VSMZhhqSo5absckjzPn9HWhT7UrKk1AQv0me0zhI=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇺Wind30-Perth-WesternAustralia
+  type: wireguard
+  server: 103.77.234.212
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: Jhhq6jvPxABM8OmzaM4/zJbcoRBR5OZalIHrZaFuXAU=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇺Wind31-Sydney-Australia
+  type: wireguard
+  server: 103.77.232.76
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: eSxX+L8qX+1MdmwjtlZGIDbDivFdURBh5Rm1KfUpYzc=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇰🇪Wind32-Nairobi-Kenya
+  type: wireguard
+  server: 45.138.86.228
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: S/qPJPWnfwfb1pWIcKN8FH71j5dFt9eH2KbEeU1+QlE=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇭🇰Wind33-HongKong
+  type: wireguard
+  server: 84.17.57.115
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: zi62xnrtbvAbaavB8MLoTF36BX/stxjfnGJ6mIsZYzg=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇵🇦Wind34-Panama
+  type: wireguard
+  server: 138.186.142.204
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 3L8yhe+v7TzBeesOFxSdU2VUa8FG4PTuoiiUoV7DAGY=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇿🇦Wind35-Johannesburg-SouthAfrica
+  type: wireguard
+  server: 197.242.159.229
+  port: 443
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: Nh5LEJT44xbuvTQnv3OZ0bXi09BFXV4SBB1XVMI12Ec=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇿🇦Wind36-Johannesburg-SouthAfrica
+  type: wireguard
+  server: 197.242.159.229
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: Nh5LEJT44xbuvTQnv3OZ0bXi09BFXV4SBB1XVMI12Ec=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇦🇷Wind37-BuenosAires-Argentina
+  type: wireguard
+  server: 190.103.176.148
+  port: 65142
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: 2+O8VAshLkyWM1b6Ye2Cuoa3R/guKZgQ+YLoCsseWCU=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
+- name: 🇻🇳Wind38-Vietnam
+  type: wireguard
+  server: 103.9.79.220
+  port: 80
+  ip: 100.80.234.177
+  private-key: cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+  public-key: SxBT11IISNRou7thGo5A1QtaMjfzPIzZXDxdYEbDxhE=
+  udp: true
+  pre-shared-key: N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+  mtu: 1280
+  amnezia-wg-option:
+    jc: 3
+    jmin: 10
+    jmax: 50
 proxy-groups:
-  - name: 🟢 auto
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-      - –Rose_Rtl_0
-      - –Rose_Rtl_1
-      - –Rose_Rtl_2
-      - –Rose_Rtl_3
-      - –Rose_Rtl_4
-      - –Rose_Rtl_5
-      - –Rose_Rtl_6
-      - –Rose_Rtl_7
-      - –Rose_Rtl_8
-      - –Rose_Rtl_9
-      - –Rose_Rtl_10
-      - –Rose_Rtl_11
-      - –Rose_Rtl_12
-      - –Rose_Rtl_13
-      - –Rose_Rtl_14
-      - –Rose_Rtl_15
-      - –Rose_Rtl_16
-      - –Rose_Rtl_17
-      - –Rose_Mci_18
-      - –Rose_Mci_19
-      - –Rose_Rtl_20
-      - –Rose_Rtl_21
-      - –Rose_Rtl_22
-      - –Rose_Mtn_23
-      - –Rose_Mtn_24
-      - –Rose_Wifi_25
-      - –Rose_Wifi_26
-      - –Rose_Wifi_27
-      - –Rose_Wifi_28
-      - –Rose_Wifi_29
-      - –Rose_Wifi_30
-      - –Rose_Wifi_31
-      - –Rose_Mci_32
-      - –Rose_Wifi_33
-      - –Rose_Mci_34
-      - –Rose_Wifi_35
-      - –Rose_Wifi_36
-      - –Rose_Mci_37
-      - –Rose_Mci_38
-      - –Rose_Mci_39
-      - –Rose_Mtn_40
-      - –Rose_Mci_41
-      - –Rose_Mtn_42
-      - –Rose_Mtn_43
-      - –Rose_Mtn_44
-      - –Rose_Mtn_45
-      - –Rose_Mtn_46
-      - –Rose_Wifi_47
-      - –Rose_Mci_48
-      - –Rose_Mci_49
-      - –Rose_Mci_50
-      - –Rose_Wifi_51
-      - –Rose_Wifi_52
-      - –Rose_Mci_53
-      - –Rose_Rtl_54
-      - –Rose_Mtn_55
-      - –Rose_Mtn_56
-      - –Rose_Mci_57
-      - –Rose_Mci_58
-      - –Rose_Mci_59
-      - –Rose_Mci_60
-      - –Rose_Rtl_61
-      - –Rose_Rtl_62
-      - –Rose_Rtl_63
-      - –Rose_Rtl_64
-      - –Rose_Rtl_65
-      - –Rose_Rtl_66
-      - –Rose_Rtl_67
-      - –Rose_Rtl_68
-      - –Rose_Rtl_69
-      - –Rose_Rtl_70
-      - –Rose_Rtl_71
-      - –Rose_Rtl_72
-      - –Rose_Rtl_73
-      - –Rose_Rtl_74
-      - –Rose_Rtl_75
-      - –Rose_Rtl_76
-      - –Rose_Rtl_77
-      - –Rose_Rtl_78
-      - –Rose_Rtl_79
-      - –Rose_Rtl_80
-      - –Rose_Rtl_81
-      - –Rose_Rtl_82
-      - –Rose_Rtl_83
-      - –Rose_Rtl_84
-      - –Rose_Rtl_85
-      - –Rose_Rtl_86
-      - –Rose_Rtl_87
-      - –Rose_Rtl_88
-      - –Rose_Rtl_89
-      - –Rose_Rtl_90
-      - –Rose_Rtl_91
-      - –Rose_Rtl_92
-      - –Rose_Rtl_93
-      - –Rose_Wifi_94
-      - –Rose_Wifi_95
-      - –Rose_Mci_96
-      - –Rose_Wifi_97
-      - –Rose_Wifi_98
-      - –Rose_Mci_99
-      - –Rose_Mci_100
-      - –Rose_Mci_101
-      - –Rose_Wifi_102
-      - –Rose_Rtl_103
-      - –Rose_Rtl_470
-      - –Rose_Rtl_471
-      - –Rose_Rtl_472
-      - –Rose_Rtl_473
-      - –Rose_Rtl_474
-      - –Rose_Rtl_475
-      - –Rose_Rtl_476
-      - –Rose_Rtl_477
-      - –Rose_Rtl_478
-      - –Rose_Rtl_479
-      - –Rose_Rtl_480
-      - –Rose_Rtl_481
-      - –Rose_Rtl_482
-      - –Rose_Rtl_483
-      - –Rose_Rtl_484
-      - –Rose_Rtl_485
-      - –Rose_Rtl_486
-      - –Rose_Rtl_487
-      - –Rose_Rtl_488
-      - –Rose_Rtl_489
-      - –Rose_Rtl_490
-      - –Rose_Rtl_491
-      - –Rose_Rtl_492
-      - –Rose_Rtl_493
-      - –Rose_Rtl_494
-      - –Rose_Rtl_495
-      - –Rose_Rtl_496
-      - –Rose_Rtl_497
-      - –Rose_Rtl_498
-      - –Rose_Rtl_499
-      - –Rose_Rtl_500
-      - –Rose_Rtl_501
-      - –Rose_Rtl_502
-      - –Rose_Rtl_503
-      - –Rose_Rtl_504
-      - –Rose_Rtl_505
-      - –Rose_Rtl_506
-      - –Rose_Rtl_507
-      - –Rose_Wifi_508
-      - –Rose_Mci_509
-      - –Rose_Mtn_510
-      - –Rose_Mtn_511
-      - –Rose_Mtn_512
-      - –Rose_Mtn_513
-      - –Rose_Rtl_514
-      - –Rose_Rtl_515
-      - –Rose_Rtl_516
+- name: ⚪AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 25
+  tolerance: 50
+  timeout: 5000
+  max-failed-times: 3
+  proxies: &id001
+  - 🇸🇪Wind1-Stockholm-Sweden
+  - 🇸🇪Wind2-Stockholm-Sweden
+  - 🇨🇭Wind3-Zurich-Switzerland
+  - 🇨🇭Wind4-Zurich-Switzerland
+  - 🇮🇸Wind5-Reykjavik-Iceland
+  - 🇮🇸Wind6-Reykjavik-Iceland
+  - 🇬🇧Wind7-Edinburgh-UnitedKingdom
+  - 🇸🇬Wind8-Singapore
+  - 🇸🇬Wind9-Singapore
+  - 🇨🇾Wind10-Nicosia-Cyprus
+  - 🇨🇾Wind11-Nicosia-Cyprus
+  - 🇲🇰Wind12-NorthMacedonia
+  - 🇲🇰Wind13-NorthMacedonia
+  - 🇺🇸Wind14-Boston-UnitedStates
+  - 🇺🇸Wind15-Detroit-UnitedStates
+  - 🇺🇸Wind16-Orlando-UnitedStates
+  - 🇺🇸Wind17-Orlando-UnitedStates
+  - 🇺🇸Wind18-SantaClara-UnitedStates
+  - 🇧🇦Wind19-NoviTravnik-Bosnia
+  - 🇧🇦Wind20-NoviTravnik-Bosnia
+  - 🇨🇦Wind21-Toronto-Canada
+  - 🇨🇦Wind22-Halifax-Canada
+  - 🇨🇦Wind23-Toronto-Canada
+  - 🇦🇺Wind24-Sydney-Australia
+  - 🇦🇺Wind25-Melbourne-Victoria
+  - 🇦🇺Wind26-Melbourne-Victoria
+  - 🇦🇺Wind28-Brisbane-Queensland
+  - 🇦🇺Wind29-Adelaide-Australia
+  - 🇦🇺Wind30-Perth-WesternAustralia
+  - 🇦🇺Wind31-Sydney-Australia
+  - 🇰🇪Wind32-Nairobi-Kenya
+  - 🇭🇰Wind33-HongKong
+  - 🇵🇦Wind34-Panama
+  - 🇿🇦Wind35-Johannesburg-SouthAfrica
+  - 🇿🇦Wind36-Johannesburg-SouthAfrica
+  - 🇦🇷Wind37-BuenosAires-Argentina
+  - 🇻🇳Wind38-Vietnam
+- name: ⚫FALLBACK
+  type: fallback
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies: *id001
+- name: SELECT
+  type: select
+  proxies:
+  - ⚪AUTO
+  - ⚫FALLBACK
+  - 🇸🇪Wind1-Stockholm-Sweden
+  - 🇸🇪Wind2-Stockholm-Sweden
+  - 🇨🇭Wind3-Zurich-Switzerland
+  - 🇨🇭Wind4-Zurich-Switzerland
+  - 🇮🇸Wind5-Reykjavik-Iceland
+  - 🇮🇸Wind6-Reykjavik-Iceland
+  - 🇬🇧Wind7-Edinburgh-UnitedKingdom
+  - 🇸🇬Wind8-Singapore
+  - 🇸🇬Wind9-Singapore
+  - 🇨🇾Wind10-Nicosia-Cyprus
+  - 🇨🇾Wind11-Nicosia-Cyprus
+  - 🇲🇰Wind12-NorthMacedonia
+  - 🇲🇰Wind13-NorthMacedonia
+  - 🇺🇸Wind14-Boston-UnitedStates
+  - 🇺🇸Wind15-Detroit-UnitedStates
+  - 🇺🇸Wind16-Orlando-UnitedStates
+  - 🇺🇸Wind17-Orlando-UnitedStates
+  - 🇺🇸Wind18-SantaClara-UnitedStates
+  - 🇧🇦Wind19-NoviTravnik-Bosnia
+  - 🇧🇦Wind20-NoviTravnik-Bosnia
+  - 🇨🇦Wind21-Toronto-Canada
+  - 🇨🇦Wind22-Halifax-Canada
+  - 🇨🇦Wind23-Toronto-Canada
+  - 🇦🇺Wind24-Sydney-Australia
+  - 🇦🇺Wind25-Melbourne-Victoria
+  - 🇦🇺Wind26-Melbourne-Victoria
+  - 🇦🇺Wind28-Brisbane-Queensland
+  - 🇦🇺Wind29-Adelaide-Australia
+  - 🇦🇺Wind30-Perth-WesternAustralia
+  - 🇦🇺Wind31-Sydney-Australia
+  - 🇰🇪Wind32-Nairobi-Kenya
+  - 🇭🇰Wind33-HongKong
+  - 🇵🇦Wind34-Panama
+  - 🇿🇦Wind35-Johannesburg-SouthAfrica
+  - 🇿🇦Wind36-Johannesburg-SouthAfrica
+  - 🇦🇷Wind37-BuenosAires-Argentina
+  - 🇻🇳Wind38-Vietnam
+rule-providers:
+  ir:
+    type: http
+    format: text
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ir.txt
+    path: ./ruleset/ir.txt
+    interval: 86400
+  ir-cidr:
+    type: http
+    format: text
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ircidr.txt
+    path: ./ruleset/ir-cidr.txt
+    interval: 86400
 rules:
- - MATCH,🟢 auto
+- RULE-SET,ir,DIRECT
+- RULE-SET,ir-cidr,DIRECT,no-resolve
+- MATCH,⚪AUTO
+ntp:
+  enable: true
+  server: time.apple.com
+  port: 123
+  interval: 30
