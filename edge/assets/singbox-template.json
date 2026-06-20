@@ -35,7 +35,7 @@
       {
         "server": "8.8.8.8",
         "tag": "direct-dns",
-        "type": "tcp"
+        "type": "udp"
       }
     ],
     "strategy": "prefer_ipv4"
@@ -50,7 +50,7 @@
     {
       "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
-      "mtu": 9000,
+      "mtu": 1500,
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -58,7 +58,7 @@
           "server_port": 2080
         }
       },
-      "stack": "mixed",
+      "stack": "gvisor",
       "tag": "tun-in",
       "type": "tun"
     },
