@@ -38,7 +38,7 @@
       {
         "server": "8.8.8.8",
         "tag": "direct-dns",
-        "type": "tcp"
+        "type": "udp"
       }
     ],
     "strategy": "prefer_ipv4"
@@ -50,57 +50,57 @@
         "2606:4700:110:8155:fbc6:79c2:a4da:d1e7/128"
       ],
       "detour": "direct",
-      "mtu": 1280,
+      "mtu": 1300,
       "peers": [
         {
-          "address": "8.6.112.240",
+          "address": "188.114.97.65",
           "allowed_ips": [
             "0.0.0.0/0",
             "::/0"
           ],
-          "persistent_keepalive_interval": 30,
-          "port": 8886,
+          "persistent_keepalive_interval": 25,
+          "port": 987,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
           "reserved": [
-            5,
-            181,
-            97
+            144,
+            203,
+            192
           ]
         }
       ],
-      "private_key": "wM7yuTMazUZjhl8IqB0x4ZO/83p3Rxrva7RtoEtNOk0=",
-      "tag": "\u26aa\ufe0fIran",
+      "private_key": "gOkSucgMrduo49bysT4bhjD6JB+ahbwaiW2Thzywdls=",
+      "tag": "\ud83c\uddee\ud83c\uddf7Iran",
       "type": "wireguard",
-      "workers": 4
+      "workers": 2
     },
     {
       "address": [
         "172.16.0.3/32",
         "2606:4700:110:881f:999d:2604:1c73:e2d2/128"
       ],
-      "detour": "\u26aa\ufe0fIran",
-      "mtu": 1280,
+      "detour": "\ud83c\uddee\ud83c\uddf7Iran",
+      "mtu": 1300,
       "peers": [
         {
-          "address": "8.6.112.17",
+          "address": "188.114.97.41",
           "allowed_ips": [
             "0.0.0.0/0",
             "::/0"
           ],
-          "persistent_keepalive_interval": 30,
-          "port": 968,
+          "persistent_keepalive_interval": 25,
+          "port": 8854,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
           "reserved": [
-            241,
-            216,
-            225
+            42,
+            53,
+            69
           ]
         }
       ],
-      "private_key": "0BqKW5ksxsuwAWvcHv2UH8G6GBrqVWOsnBcKTHgjklc=",
-      "tag": "\ud83d\udfe2Any",
+      "private_key": "YCBX5aVEodXEVfbUdYqSrrCRvv0W3s9N5gFHQ20kX1Y=",
+      "tag": "\ud83c\uddea\ud83c\uddfaEurope",
       "type": "wireguard",
-      "workers": 4
+      "workers": 2
     }
   ],
   "experimental": {
@@ -115,7 +115,7 @@
         "fdfe:dcba:9876::1/126"
       ],
       "auto_route": true,
-      "mtu": 9000,
+      "mtu": 1500,
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -123,7 +123,7 @@
           "server_port": 2080
         }
       },
-      "stack": "mixed",
+      "stack": "gvisor",
       "tag": "tun-in",
       "type": "tun"
     },
@@ -143,8 +143,8 @@
       "default": "auto",
       "outbounds": [
         "auto",
-        "\u26aa\ufe0fIran",
-        "\ud83d\udfe2Any"
+        "\ud83c\uddee\ud83c\uddf7Iran",
+        "\ud83c\uddea\ud83c\uddfaEurope"
       ],
       "tag": "proxy",
       "type": "selector"
@@ -153,8 +153,8 @@
       "interrupt_exist_connections": false,
       "interval": "5m0s",
       "outbounds": [
-        "\u26aa\ufe0fIran",
-        "\ud83d\udfe2Any"
+        "\ud83c\uddee\ud83c\uddf7Iran",
+        "\ud83c\uddea\ud83c\uddfaEurope"
       ],
       "tag": "auto",
       "tolerance": 50,
