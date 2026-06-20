@@ -8,30 +8,29 @@ import subprocess
 import sys
 import random
 
-# Set up logging
 logging.basicConfig(level=logging.INFO)
 
-IRAN_SYMBOL = "⚪️"
-FOREIGN_SYMBOL = "🟢"
+IRAN_SYMBOL = "🇮🇷"
+FOREIGN_SYMBOL = "🇪🇺"
 
 IR_TAG = f"{IRAN_SYMBOL}Iran"
-SW_TAG = f"{FOREIGN_SYMBOL}Any"
+EU_TAG = f"{FOREIGN_SYMBOL}Europe"
 
 # IPv4 prefixes associated with the CloudFlare WARP service
 warp_cidr = [
     "8.6.112.0/24",
-    #   "8.34.70.0/24",
-    #   "8.34.146.0/24",
-    #   "8.35.211.0/24",
-    #   "8.39.125.0/24",
-    #   "8.39.204.0/24",
-    #   "8.47.69.0/24",
-    #   "162.159.192.0/24",
-    #   "162.159.195.0/24",
-    #   "188.114.96.0/24",
+#   "8.34.70.0/24",
+#   "8.34.146.0/24",
+#   "8.35.211.0/24",
+#   "8.39.125.0/24",
+#   "8.39.204.0/24",
+#   "8.47.69.0/24",
+#   "162.159.192.0/24",
+#   "162.159.195.0/24",
+#   "188.114.96.0/24",
     "188.114.97.0/24",
-    #   "188.114.98.0/24",
-    #   "188.114.99.0/24",
+#   "188.114.98.0/24",
+#   "188.114.99.0/24",
 ]
 
 # Available ports for endpoint generation
@@ -67,7 +66,7 @@ main_warp_path = os.path.join(main_directory, "warp.json")
 def export_Hiddify(t_ips):
     config_prefix = (
         f"warp://A1@{t_ips[0]}#{IR_TAG} -> "
-        f"warp://A2@{t_ips[1]}?ifp=1-2&ifpm=m5#{SW_TAG}"
+        f"warp://A2@{t_ips[1]}?ifp=1-2&ifpm=m5#{EU_TAG}"
     )
     formatted_time = datetime.datetime.now().strftime("%A, %d %b %Y, %H:%M")
     return config_prefix, formatted_time
@@ -90,12 +89,12 @@ def toSingBox(tag, clean_ip, detour, addresses):
             wg = {
                 "address": addresses,
                 "detour": f"{detour}",
-                "mtu": 1280,
+                "mtu": 1300,
                 "peers": [
                     {
                         "address": f"{clean_ip.split(':')[0]}",
                         "allowed_ips": ["0.0.0.0/0", "::/0"],
-                        "persistent_keepalive_interval": 30,
+                        "persistent_keepalive_interval": 25,
                         "port": int(clean_ip.split(":")[1]),
                         "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
                         "reserved": data["config"]["reserved"],
@@ -104,7 +103,7 @@ def toSingBox(tag, clean_ip, detour, addresses):
                 "private_key": f"{data['private_key']}",
                 "tag": tag,
                 "type": "wireguard",
-                "workers": 4,
+                "workers": 2,
             }
 
             if os.path.exists("api.sh"):
@@ -137,8 +136,8 @@ def export_SingBox(t_ips):
     with open(template_path, "r") as f:
         data = json.load(f)
 
-    data["outbounds"][0]["outbounds"].extend([IR_TAG, SW_TAG])
-    data["outbounds"][1]["outbounds"].extend([IR_TAG, SW_TAG])
+    data["outbounds"][0]["outbounds"].extend([IR_TAG, EU_TAG])
+    data["outbounds"][1]["outbounds"].extend([IR_TAG, EU_TAG])
 
     tehran_wg = toSingBox(IR_TAG, t_ips[0], "direct", addresses_1)
     if tehran_wg:
@@ -146,11 +145,11 @@ def export_SingBox(t_ips):
     else:
         logging.error(f"Failed to generate {IR_TAG} configuration.")
 
-    Somewhere_wg = toSingBox(SW_TAG, t_ips[1], IR_TAG, addresses_2)
-    if Somewhere_wg:
-        data["endpoints"].append(Somewhere_wg)
+    europe_wg = toSingBox(EU_TAG, t_ips[1], IR_TAG, addresses_2)
+    if europe_wg:
+        data["endpoints"].append(europe_wg)
     else:
-        logging.error(f"Failed to generate {SW_TAG} configuration.")
+        logging.error(f"Failed to generate {EU_TAG} configuration.")
 
     with open(main_singbox_path, "w") as f:
         json.dump(data, f, indent=2)
@@ -173,7 +172,7 @@ def main():
             + base64.b64encode("Freedom to Dream 🤍".encode("utf-8")).decode("utf-8")
             + "\n"
         )
-        update_interval = "//profile-update-interval: 6\n"
+        update_interval = "//profile-update-interval: 10\n"
         sub_info = "//subscription-userinfo: upload = 800306368000; download = 2576980377600; total = 6012954214400; expire = 1794182399\n"
         profile_web = "//profile-web-page-url: https://github.com/NiREvil/vless\n"
         last_modified = "//last update on: " + formatted_time + "\n"
