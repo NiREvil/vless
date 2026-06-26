@@ -271,7 +271,9 @@ def build_proxies_block(
     lines.append("    h2: 2")
     lines.append("    h4: 3")
     lines.append("    h3: 4")
-    lines.append("    i1: <b 0xc800000001018800002b45615e996de27ff5ec5f583061ab38eac69fd8fec356802847cd1c7c15a87402bb0a433d4054defedc066e>")
+    lines.append(
+        "    i1: <b 0xc800000001018800002b45615e996de27ff5ec5f583061ab38eac69fd8fec356802847cd1c7c15a87402bb0a433d4054defedc066e>"
+    )
     lines.append("")
 
     lines.append("warp-entry-common: &warp-entry-common")
