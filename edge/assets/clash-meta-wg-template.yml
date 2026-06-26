@@ -1,19 +1,17 @@
 mixed-port: 7890
-ipv6: true
+ipv6: false
 allow-lan: true
 mode: rule
-log-level: warning
-disable-keep-alive: false
+log-level: error
+find-process-mode: strict
+global-client-fingerprint: chrome
 keep-alive-idle: 10
 keep-alive-interval: 15
 unified-delay: true
-geo-auto-update: true
-geo-update-interval: 168
-
-# External Controller & UI
-external-controller: 127.0.0.1:9090
-external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
+disable-keep-alive: false
 external-ui: ui
+external-controller: 127.0.0.1:9090
+external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
 external-controller-cors:
   allow-origins:
     - "*"
@@ -21,72 +19,49 @@ external-controller-cors:
 profile:
   store-selected: true
   store-fake-ip: true
+
 dns:
   enable: true
-  listen: 127.0.0.1:1053
   ipv6: false
   respect-rules: true
   use-system-hosts: false
+  listen: 0.0.0.0:1053
+  default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+    - 223.5.5.5
   nameserver:
-    - 1.1.1.1#🇮🇷AUTO-IR-DIALER
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+    - https://223.5.5.5/dns-query
+  fallback:
+    - tls://8.8.4.4
+    - tls://1.0.0.1
+    - tls://223.6.6.6
   proxy-server-nameserver:
     - 8.8.8.8#DIRECT
-  direct-nameserver:
-    - 8.8.8.8#DIRECT
-  direct-nameserver-follow-policy: true
-  nameserver-policy:
-    raw.githubusercontent.com: 8.8.8.8#DIRECT
-    time.apple.com: 8.8.8.8#DIRECT
-    rule-set:ir: 8.8.8.8#DIRECT
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - "+.lan"
     - "+.local"
-    - "geosite:private"
+    - geosite:private
 
-# TUN Settings
 tun:
   enable: true
+  mtu: 8880
   stack: mixed
   auto-route: true
-  strict-route: true
-  endpoint-independent-nat: false
+  auto-redirect: true
   auto-detect-interface: true
+  endpoint-independent-nat: false
   dns-hijack:
-    - any:53
-    - tcp://any:53
-  mtu: 9000
-sniffer:
-  enable: true
-  force-dns-mapping: true
-  parse-pure-ip: true
-  override-destination: true
-  sniff:
-    HTTP:
-      ports:
-        - 80
-        - 8080
-        - 8880
-        - 2052
-        - 2082
-        - 2086
-        - 2095
-    TLS:
-      ports:
-        - 443
-        - 8443
-        - 2053
-        - 2083
-        - 2087
-        - 2096
-proxies: []
+    - "any:53"
+    - "tcp://any:53"
 
-# Proxy Groups - Will be populated by the Python script
-proxy-groups: []
-
-# Rule Providers
+__PROXIES_BLOCK__
+__PROXY_GROUPS_BLOCK__
 rule-providers:
   phishing:
     type: http
@@ -144,6 +119,7 @@ rule-providers:
     url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ircidr.txt
     path: ./ruleset/ir-cidr.txt
     interval: 86400
+
 rules:
   - RULE-SET,phishing,REJECT
   - RULE-SET,malware,REJECT
@@ -153,10 +129,10 @@ rules:
   - RULE-SET,private-cidr,DIRECT,no-resolve
   - RULE-SET,ir,DIRECT
   - RULE-SET,ir-cidr,DIRECT,no-resolve
-  - MATCH,⚪PROXIES
+  - MATCH,__SELECTOR_GROUP__
 
 ntp:
   enable: true
-  server: time.apple.com
+  server: time.cloudflare.com
   port: 123
   interval: 30
