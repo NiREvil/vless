@@ -351,8 +351,7 @@ The list contains proxy IPs from well-known providers such as Google, Amazon, Cl
 >
 > https://www.nslookup.io/domains/di.nscl.ir/dns-records/
 >
-> https://www.nslookup.io/domains/tr.diam4.ggff.net/dns-records/
-> https://www.nslookup.io/domains/proxyip.cmliussss.net/dns-records/
+> https://www.nslookup.io/domains/tr.diam4.ggff.net/dns-records/ > https://www.nslookup.io/domains/proxyip.cmliussss.net/dns-records/
 >
 > https://www.nslookup.io/domains/proxyip.vultr.fxxk.dedyn.io/dns-records/
 >
