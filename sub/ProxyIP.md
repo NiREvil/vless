@@ -23,7 +23,13 @@
 > _This is a high-level domain with specific IPs._
 
 ```yaml
-nima.nscl.ir
+di.nscl.ir
+```
+
+🇹🇷 **Turkey, Istanbul, Stark Industries, PQ Hosting**
+
+```POV-Ray SDL
+tr.diam4.ggff.net
 ```
 
 🇮🇷 **Across Iran, BPB LTD**
@@ -39,20 +45,20 @@ proxyip.cmliussss.net
 ```
 
 <details>
-<summary>Click for More Locations</summary>
+<summary>Show More</summary>
 
 <br/>
 
 🇰🇷 **South Korea, Germany, USA, Singapore, Japan, Hong Kong**
 
-> _**IPs provided from Korea and**..._
+> _**IPs provided from Korea & Japan & Germany & etc**..._
 
 ```css
 ProxyIP.KR.CMLiussss.net
 ```
 
 ```css
-ProxyIP.DE.tp2024.CMLiussss.net
+ProxyIP.DE.CMLiussss.net
 ```
 
 ```css
@@ -69,24 +75,6 @@ ProxyIP.JP.CMLiussss.net
 
 ```css
 ProxyIP.HK.CMLiussss.net
-```
-
-🇸🇬 **Singapore**
-
-```css
-cdn-all.xn--b6gac.eu.org
-```
-
-🎌 **Global**
-
-```css
-my-telegram-is-herocore.onecf.eu.org
-```
-
-🇱🇨 **IPv6 proxies**
-
-```css
-ProxyIP.2602-fc59-b0-64--6812-29be.ip.090227.xyz
 ```
 
 🏳️ **Origin Unknown – Possibly Oracle Cloud**
@@ -107,6 +95,12 @@ proxyip.digitalocean.hw.090227.xyz
 proxyip.vultr.fxxk.dedyn.io
 ```
 
+🇸🇬 **Singapore**
+
+```css
+proxyip.aliyun.hw.090227.xyz
+```
+
 🏳️‍🌈 **Not Specified**
 
 ```css
@@ -119,13 +113,21 @@ edtproxyip.lzj.pp.ua
 
 ## Daily Scanned Proxies
 
-From now on, we will place our proxy IPs in this file. The IPs are automatically scanned and tested every 24 hours and are listed here by location. Ping testing and IP status verification are performed directly by Cloudflare. We have determined that only IPs with port 443 open will be listed, and only proxy IPs from world-renowned ISPs such as Google, Amazon, Cloudflare, OVH, DataCamp, Tencent, etc, will be included.
+From now on, proxy IPs will be stored in this file. The IPs are automatically scanned and tested every 24 hours and listed by location.
 
-‏<strong>پروکسی آی‌پی‌های خودمون رو از این به بعد در این فایل قرار میدیم، آی‌پی‌ها هر 24 ساعت یک‌بار اتومات اسکن و تست شده و اینجا لیست میشن به تفکیک لوکیشن، تست پینگ و وضعیت آی‌پی و اطلاعات اون توسط خود کلادفلر انجام میشه، تعیین کردیم که فقط آی‌پی‌های که پورت ۴۴۳ دارن لیست بشن و همچنین فقط پروکسی آی‌پی‌ از ISP‌های مطرح دنیا مانند: Google, Amazon, Cloudflare, OVH, DataCamp, Tencent و غیره لیست بشن. </strong>
+Only IPs with port 443 available are included after health checks (including ping and connectivity tests).
+
+The list contains proxy IPs from well-known providers such as Google, Amazon, Cloudflare, OVH, DataCamp, Hetzner, and similar infrastructure networks.
+
+‏<strong> از این به بعد، پروکسی آی‌پی‌ها در فایل زیر ذخیره می‌شوند. این آی‌پی‌ها به‌صورت خودکار هر ۲۴ ساعت اسکن و تست شده و بر اساس موقعیت جغرافیایی لیست می‌گردند.
+
+فقط آی‌پی‌هایی که پورت ۴۴۳ آن‌ها باز باشد، پس از انجام بررسی‌ها (از جمله تست پینگ و اتصال) در لیست قرار می‌گیرند.
+
+این لیست شامل پروکسی آی‌پی‌هایی از ارائه‌دهندگان بزرگ و معتبر زیرساختی دنیا مانند گوگل، آمازون، کلودفلر، هتزنر OVH، DataCamp، Oracle و شبکه‌های مشابه است. </strong>
 
 <div markdown='1' align='center'>
 
-**[برای مشاهده لیست پروکسی آی‌پی‌های روزانه اینجا کلیک کنید](./ProxyIP-Daily.md)**
+**[برای مشاهده لیست پروکسی آی‌پی‌های تست‌شده در 24 ساعت اخیر اینـــجا کلیک کنید](./ProxyIP-Daily.md)**
 
 </div>
 
@@ -239,7 +241,7 @@ From now on, we will place our proxy IPs in this file. The IPs are automatically
 <div dir="rtl">
 
 - آخرین نسخه اسکریپت ساخت کانفیگ VLESS روی Cloudflare: [[ZiZifn][zi]]
-- ساخت لینک ساب حاوی مخازن آی‌پی‌های تمیز کلادفلر برای کانفیگ‌های VLESS مبتنی بر Cloudflare Worker and Pages: [[Harmony][hr]]
+- ساخت لینک ساب حاوی آی‌پی‌های تمیز کلادفلر از چند مخزن آی‌پی برای کانفیگ‌های VLESS مبتنی بر Cloudflare Worker and Pages: [[Harmony][hr]]
 - پنل گرافیکی جهت دریافت کانفیگ و سابسکریپشن و تنظیمات مختلف و سایر امکانات: [[Bia Pain Bache][BPB]]
 
 ![rainbow]
@@ -339,7 +341,7 @@ From now on, we will place our proxy IPs in this file. The IPs are automatically
 
 > <br/>
 >
-> **یکی دیگه از روش‌های پیدا کردن پروکسی آی‌پی این بود که:**
+> **یکی دیگه از روش‌های پیدا کردن پروکسی آی‌پی این بود که:** (از کار افتاده، سایت nslookup دیگه پروکسی‌آی‌پی های پشت یه دامین رو برنمی‌گردونه)
 >
 > روی هر کدوم از لینک‌های زیر اگه کلیک کنی توی صفحه‌ای که باز شده یه لیست خواهی دید با کلی پروکسی‌ آی‌پی که پشت اون دامین‌ها قرار گرفتن، با کلیک کردن روی هرکدوم کادر مشخصات مربوط به آی‌پی باز میشه.
 >
@@ -347,17 +349,10 @@ From now on, we will place our proxy IPs in this file. The IPs are automatically
 >
 > https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
 >
-> https://www.nslookup.io/domains/nima.nscl.ir/dns-records/
+> https://www.nslookup.io/domains/di.nscl.ir/dns-records/
 >
-> https://www.nslookup.io/domains/my-telegram-is-herocore.onecf.eu.org/dns-records/
->
-> https://www.nslookup.io/domains/turk.radicalization.ir/dns-records/
->
+> https://www.nslookup.io/domains/tr.diam4.ggff.net/dns-records/
 > https://www.nslookup.io/domains/proxyip.cmliussss.net/dns-records/
->
-> https://www.nslookup.io/domains/edtproxyip.lzj.pp.ua/dns-records/
->
-> https://www.nslookup.io/domains/proxyip.digitalocean.hw.090227.xyz/dns-records/
 >
 > https://www.nslookup.io/domains/proxyip.vultr.fxxk.dedyn.io/dns-records/
 >
@@ -369,7 +364,7 @@ From now on, we will place our proxy IPs in this file. The IPs are automatically
 >
 > https://www.nslookup.io/domains/proxyip.aliyun.hw.090227.xyz/dns-records/
 >
-> https://www.nslookup.io/domains/ProxyIP.DE.tp2024.CMLiussss.net/dns-records/
+> https://www.nslookup.io/domains/ProxyIP.DE.CMLiussss.net/dns-records/
 >
 > https://www.nslookup.io/domains/ProxyIP.KR.CMLiussss.net/dns-records/
 >
@@ -396,9 +391,9 @@ From now on, we will place our proxy IPs in this file. The IPs are automatically
 
 </div>
 
-[^1]: https://t.me/s/F_NiREvil
+[^1]: https://telegram.me/NiREvil_GP
 
-[^2]: https://t.me/s/CMLiussss
+[^2]: https://telegram.me/s/CMLiussss
 
 [3]: https://github.com/NiREvil/vless/blob/main/edge/assets/Cloudflare_IP_ranges_by_country.md
 [4]: https://checker-3j2.pages.dev
