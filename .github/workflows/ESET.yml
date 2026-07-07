@@ -1,4 +1,4 @@
-name: ESET Account Generator
+name: ESET Account Generator #OUT OF WORK
 
 permissions:
   contents: write
@@ -39,8 +39,8 @@ on:
         description: Key-Gen Repository branch (default = main)
         required: false
         default: main
-  schedule:
-    - cron: '0 12 * * *'
+# schedule:
+#   - cron: '0 12 * * *'
 
 jobs:
   generate-and-commit:
