@@ -131,7 +131,9 @@ function generatePrompt(
   },
 ): string {
   const language = detectLanguage(filename);
-  const languageContext = language ? `You are a senior ${language} code reviewer with production experience. ` : "";
+  const languageContext = language
+    ? `You are a senior ${language} code reviewer with production experience. `
+    : "";
   const languageSpecificNote = language
     ? `Do not flag issues that are widely used and accepted patterns in ${language} even if it violates the criteria.`
     : "";
@@ -264,7 +266,15 @@ const createResponseSchema = () => ({
     finalVerdict: { type: Type.STRING },
     markdownReport: { type: Type.STRING },
   },
-  required: ["score", "summary", "strengths", "improvements", "metrics", "finalVerdict", "markdownReport"],
+  required: [
+    "score",
+    "summary",
+    "strengths",
+    "improvements",
+    "metrics",
+    "finalVerdict",
+    "markdownReport",
+  ],
 });
 
 class CodeAnalysisError extends Error {
