@@ -2,7 +2,14 @@ import { type NextRequest, NextResponse } from "next/server";
 import { GoogleGenAI, Type, ApiError } from "@google/genai";
 
 const MAX_CONTENT_LENGTH = 50000;
+const MAX_CUSTOM_CRITERIA = 5;
+const MAX_CRITERION_LENGTH = 200;
 const DEFAULT_TIMEOUT = 20000;
+
+const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_MAX_REQUESTS = 5;
+const rateLimitStore = new Map<string, number[]>();
+
 const SUPPORTED_LANGUAGES = {
   py: "Python",
   js: "JavaScript",
@@ -51,9 +58,28 @@ const SUPPORTED_LANGUAGES = {
 
 function detectLanguage(filename: string): string {
   if (!filename) return "";
-
   const extension = filename.split(".").pop()?.toLowerCase();
   return SUPPORTED_LANGUAGES[extension as keyof typeof SUPPORTED_LANGUAGES] || "";
+}
+
+function checkAuth(request: NextRequest): boolean {
+  const expected = process.env.COACH_ACCESS_TOKEN;
+  if (!expected) return true;
+  const provided = request.headers.get("x-access-token");
+  return provided === expected;
+}
+
+function checkRateLimit(key: string): boolean {
+  const now = Date.now();
+  const timestamps = rateLimitStore.get(key) || [];
+  const recent = timestamps.filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+  if (recent.length >= RATE_LIMIT_MAX_REQUESTS) {
+    rateLimitStore.set(key, recent);
+    return false;
+  }
+  recent.push(now);
+  rateLimitStore.set(key, recent);
+  return true;
 }
 
 function validateRequest(data: any): { isValid: boolean; error?: string } {
@@ -70,6 +96,23 @@ function validateRequest(data: any): { isValid: boolean; error?: string } {
       isValid: false,
       error: `حجم کد نمیتونه بیش‌تر از ${MAX_CONTENT_LENGTH} کاراکتر باشه.`,
     };
+  }
+
+  if (data.options?.customCriteria) {
+    if (!Array.isArray(data.options.customCriteria)) {
+      return { isValid: false, error: "فرمت معیارهای سفارشی نامعتبره" };
+    }
+    if (data.options.customCriteria.length > MAX_CUSTOM_CRITERIA) {
+      return {
+        isValid: false,
+        error: `حداکثر ${MAX_CUSTOM_CRITERIA} معیار سفارشی مجاز است`,
+      };
+    }
+    for (const criterion of data.options.customCriteria) {
+      if (typeof criterion !== "string" || criterion.length > MAX_CRITERION_LENGTH) {
+        return { isValid: false, error: "یکی از معیارهای سفارشی نامعتبره" };
+      }
+    }
   }
 
   return { isValid: true };
@@ -145,7 +188,7 @@ ${languageSpecificNote}
   "strengths": ["نقاط قوت کد به زبان فارسی"],
   "improvements": [
     {
-      "category": "نام دسته‌بندی به زبان فارسی", 
+      "category": "نام دسته‌بندی به زبان فارسی",
       "issue": "شرح مختصر و دقیق مشکل به زبان فارسی",
       "suggestion": "توصیه مختصر و کاربردی برای رفع مشکل به زبان فارسی",
       "severity": "high|medium|low",
@@ -224,21 +267,22 @@ async function analyzeWithGemini(prompt: string, retries: number = 2): Promise<a
   const ai = new GoogleGenAI({});
 
   for (let attempt = 0; attempt <= retries; attempt++) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), DEFAULT_TIMEOUT);
+
     try {
-      const result = await Promise.race([
-        ai.models.generateContent({
-          model: "gemini-2.5-flash",
-          contents: [{ role: "user", parts: [{ text: prompt }] }],
-          config: {
-            responseMimeType: "application/json",
-            responseSchema: createResponseSchema(),
-            temperature: 0.5,
-          },
-        }),
-        new Promise((_, reject) =>
-          setTimeout(() => reject(new Error("Request timeout")), DEFAULT_TIMEOUT),
-        ),
-      ]);
+      const result = await ai.models.generateContent({
+        model: "gemini-3.5-flash",
+        contents: [{ role: "user", parts: [{ text: prompt }] }],
+        config: {
+          responseMimeType: "application/json",
+          responseSchema: createResponseSchema(),
+          temperature: 0.5,
+          abortSignal: controller.signal,
+        },
+      });
+
+      clearTimeout(timeoutId);
 
       if (!result?.candidates?.[0]?.content?.parts?.[0]?.text) {
         throw new CodeAnalysisError("پاسخ نامعتبر از API دریافت شد", 500, {
@@ -250,6 +294,7 @@ async function analyzeWithGemini(prompt: string, retries: number = 2): Promise<a
       const jsonText = result.candidates[0].content.parts[0].text;
       return JSON.parse(jsonText);
     } catch (error) {
+      clearTimeout(timeoutId);
       console.warn(`تلاش ${attempt + 1} ناموفق:`, error);
 
       if (attempt === retries) {
@@ -266,6 +311,8 @@ async function analyzeWithGemini(prompt: string, retries: number = 2): Promise<a
       await new Promise((resolve) => setTimeout(resolve, 1000 * (attempt + 1)));
     }
   }
+
+  throw new CodeAnalysisError("خطا در تحلیل کد", 500);
 }
 
 export async function POST(request: NextRequest) {
@@ -274,6 +321,28 @@ export async function POST(request: NextRequest) {
   try {
     if (!process.env.GEMINI_API_KEY) {
       throw new CodeAnalysisError("GEMINI_API_KEY تنظیم نشده است", 500);
+    }
+
+    if (!checkAuth(request)) {
+      return NextResponse.json(
+        { error: "دسترسی غیرمجاز", timestamp: new Date().toISOString() },
+        { status: 401 },
+      );
+    }
+
+    const rateLimitKey =
+      request.headers.get("x-access-token") ||
+      request.headers.get("x-forwarded-for") ||
+      "anonymous";
+
+    if (!checkRateLimit(rateLimitKey)) {
+      return NextResponse.json(
+        {
+          error: "تعداد درخواست‌ها بیش از حد مجاز است، کمی صبر کنید",
+          timestamp: new Date().toISOString(),
+        },
+        { status: 429 },
+      );
     }
 
     const requestData = await request.json();
@@ -301,7 +370,7 @@ export async function POST(request: NextRequest) {
         contentLength: content.length,
         analysisTime: Date.now() - startTime,
         timestamp: new Date().toISOString(),
-        version: "2.0",
+        version: "2.1",
       },
     };
 
