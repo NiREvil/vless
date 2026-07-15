@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- ⚙️ Dive into the related file in telegram: "https://t.me/new_folder_revil/3562 BBVPN-arm64-v8a-v5.1.6.apk" -->
+<!-- ⚙️ Dive into the related file in telegram: "https://telegram.me/new_folder_revil/3660  BBVPN_Mod_v6.2.4.apk" -->
 <manifest
-	android:versionCode="366"
-	android:versionName="5.1.6"
+	android:versionCode="555"
+	android:versionName="6.2.4"
 	android:installLocation="preferExternal"
 	android:compileSdkVersion="35"
 	android:compileSdkVersionCodename="15"
@@ -11,8 +11,18 @@
 	platformBuildVersionName="15"
 	xmlns:android="http://schemas.android.com/apk/res/android">
 	<uses-sdk
-		android:minSdkVersion="23"
+		android:minSdkVersion="24"
 		android:targetSdkVersion="35" />
+	<permission
+		android:name="bbv.avdev.bbvpn.permission.WG_STATUS"
+		android:protectionLevel="signature" />
+	<uses-permission
+		android:name="bbv.avdev.bbvpn.permission.WG_STATUS" />
+	<permission
+		android:name="bbv.avdev.bbvpn.permission.XRAY_STATUS"
+		android:protectionLevel="signature" />
+	<uses-permission
+		android:name="bbv.avdev.bbvpn.permission.XRAY_STATUS" />
 	<!-- ✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️ PERMISSIONS ✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️ -->
 	<!-- Allows the app to create network sockets and use custom network protocols. The browser and other applications provide means to send data to the internet, so this permission is not required to send data to the internet. -->
 	<uses-permission
@@ -35,8 +45,9 @@
 	<!-- Allows the app to prevent the phone from going to sleep. -->
 	<uses-permission
 		android:name="android.permission.WAKE_LOCK" />
+	<!-- Allows the user to purchase items through Google Play from within this app. -->
 	<uses-permission
-		android:name="BBVpn" />
+		android:name="com.android.vending.BILLING" />
 	<!-- Allows the app to have itself started as soon as the system has finished booting. This can make it take longer to start the phone and allow the app to slow down the overall phone by always running. -->
 	<uses-permission
 		android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -46,64 +57,57 @@
 	<!-- Allows the app to control the vibrator. -->
 	<uses-permission
 		android:name="android.permission.VIBRATE" />
-	<!-- ✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️ PERMISSIONS ✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️ -->
-	<supports-screens
-		android:anyDensity="true"
-		android:smallScreens="true"
-		android:normalScreens="true"
-		android:largeScreens="true"
-		android:resizeable="true"
-		android:xlargeScreens="true" />
-	<queries>
-		<package
-			android:name="com.android.vending" />
-		<package
-			android:name="com.amazon.venezia" />
-		<package
-			android:name="com.sec.android.app.samsungapps" />
-		<package
-			android:name="com.huawei.appmarket" />
-		<intent>
-			<action
-				android:name="com.android.vending.billing.InAppBillingService.BIND" />
-		</intent>
-		<intent>
-			<action
-				android:name="com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND" />
-		</intent>
-		<intent>
-			<action
-				android:name="android.support.customtabs.action.CustomTabsService" />
-		</intent>
-		</intent>
-		<package
-			android:name="com.facebook.katana" />
-		<package
-			android:name="com.google.android.apps.maps" />
-	</queries>
-	<uses-feature
-		android:glEsVersion="0x20000"
-		android:required="true" />
+	<!-- Allows a publisher app to access a valid advertising ID directly or indirectly. -->
+	<uses-permission
+		android:name="com.google.android.gms.permission.AD_ID" />
+	<!-- Allows the app to access the basic telephony features of the device. -->
+	<uses-permission
+		android:name="android.permission.READ_BASIC_PHONE_STATE" />
+	<uses-permission
+		android:name="android.permission.ACCESS_ADSERVICES_TOPICS" />
+	<uses-permission
+		android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+	<uses-permission
+		android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+	<!-- Allows the app to retrieve its install referrer information. -->
+	<uses-permission
+		android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 	<permission
 		android:name="bbv.avdev.bbvpn.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
 		android:protectionLevel="signature" />
 	<uses-permission
 		android:name="bbv.avdev.bbvpn.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+	<!-- ✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️ PERMISSIONS ✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️ -->
 	<application
 		android:theme="@style/Theme.MyApp"
 		android:label="@string/app_name"
 		android:icon="@mipmap/ic_launcher_new"
-		android:name="bin.mt.signature.KillerApplication"
+		android:name="bbv.avdev.bbvpn.App"
 		android:noHistory="false"
 		android:allowBackup="false"
 		android:hardwareAccelerated="true"
 		android:supportsRtl="true"
-		android:usesCleartextTraffic="true"
+		android:extractNativeLibs="true"
 		android:networkSecurityConfig="@xml/network_security_config"
 		android:roundIcon="@mipmap/ic_launcher_new_round"
 		android:appComponentFactory="androidx.core.app.CoreComponentFactory">
 		<meta-data
+			android:name="com.google.android.gms.ads.APPLICATION_ID"
+			android:value="ca-app-pub-5729563999303118~3281080364" />
+		<meta-data
+			android:name="google_analytics_default_allow_ad_personalization_signals"
+			android:value="true" />
+		<meta-data
+			android:name="com.google.android.gms.ads.DELAY_APP_MEASUREMENT_INIT"
+			android:value="true" />
+		<meta-data
 			android:name="com.google.android.gms.wallet.api.enabled"
+			android:value="true" />
+		<meta-data
+			android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION"
+			android:value="true" />
+		<meta-data
+			android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING"
 			android:value="true" />
 		<activity
 			android:name="bbv.avdev.bbvpn.BBVActivity"
@@ -156,12 +160,6 @@
 			android:configChanges="keyboardHidden|orientation|screenSize"
 			android:hardwareAccelerated="true"
 			android:parentActivityName="bbv.avdev.bbvpn.BBVActivity" />
-		<activity
-			android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
-			android:name="bbv.avdev.bbvpn.VpnAuthActivity"
-			android:taskAffinity=".DisconnectVPN"
-			android:excludeFromRecents="true"
-			android:hardwareAccelerated="true" />
 		<service
 			android:name="bbv.avdev.bbvpn.core.OpenVPNService"
 			android:permission="android.permission.BIND_VPN_SERVICE"
@@ -175,48 +173,41 @@
 				android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
 				android:value="vpn" />
 		</service>
-		<activity
-			android:theme="@android:style/Theme.Translucent.NoTitleBar"
-			android:name="BBVpn"
-			android:exported="false"
-			android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"
-			android:hardwareAccelerated="true" />
-		<activity
-			android:theme="@android:style/Theme.Translucent.NoTitleBar"
-			android:name="BBVpn"
-			android:exported="false"
-			android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
 		<service
-			android:name="com.google.firebase.components.ComponentDiscoveryService"
+			android:name="bbv.avdev.bbvpn.xray.XrayVpnService"
+			android:permission="android.permission.BIND_VPN_SERVICE"
 			android:exported="false"
-			android:directBootAware="true">
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar" />
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar" />
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar" />
+			android:process=":xray"
+			android:foregroundServiceType="0x40000000">
+			<intent-filter>
+				<action
+					android:name="android.net.VpnService" />
+			</intent-filter>
+			<property
+				android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+				android:value="vpn" />
 		</service>
-		<uses-library
-			android:name="org.apache.http.legacy"
-			android:required="false" />
-		<activity
-			android:theme="@android:style/Theme.Translucent.NoTitleBar"
-			android:name="com.google.android.gms.common.api.GoogleApiActivity"
-			android:exported="false" />
-		<provider
-			android:name="com.google.firebase.provider.FirebaseInitProvider"
+		<service
+			android:name="bbv.avdev.bbvpn.wireguard.WireGuardVpnService"
+			android:permission="android.permission.BIND_VPN_SERVICE"
 			android:exported="false"
-			android:authorities="bbv.avdev.bbvpn.firebaseinitprovider"
-			android:initOrder="100"
-			android:directBootAware="true" />
+			android:process=":wireguard"
+			android:foregroundServiceType="0x40000000">
+			<intent-filter>
+				<action
+					android:name="android.net.VpnService" />
+			</intent-filter>
+			<property
+				android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+				android:value="vpn" />
+		</service>
 		<provider
 			android:name="androidx.startup.InitializationProvider"
 			android:exported="false"
 			android:authorities="bbv.avdev.bbvpn.androidx-startup">
+			<meta-data
+				android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+				android:value="androidx.startup" />
 			<meta-data
 				android:name="androidx.emoji2.text.EmojiCompatInitializer"
 				android:value="androidx.startup" />
@@ -224,12 +215,159 @@
 				android:name="androidx.work.WorkManagerInitializer"
 				android:value="androidx.startup" />
 			<meta-data
-				android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-				android:value="androidx.startup" />
-			<meta-data
 				android:name="androidx.profileinstaller.ProfileInstallerInitializer"
 				android:value="androidx.startup" />
 		</provider>
+		<activity
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:name="com.android.billingclient.api.ProxyBillingActivity"
+			android:exported="false"
+			android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"
+			android:noHistory="true"
+			android:hardwareAccelerated="true" />
+		<meta-data
+			android:name="com.google.android.play.billingclient.version"
+			android:value="9.1.0" />
+		<activity
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:name="com.android.billingclient.api.ProxyBillingActivityV2"
+			android:exported="false"
+			android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
+		<activity
+			android:theme="@style/Theme.GoogleMobileAds"
+			android:name="com.google.android.libraries.ads.mobile.sdk.common.AdActivity"
+			android:exported="false"
+			android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+		<activity
+			android:theme="@android:style/Theme.NoTitleBar"
+			android:name="com.ironsource.sdk.controller.ControllerActivity"
+			android:exported="false"
+			android:configChanges="orientation|screenSize"
+			android:hardwareAccelerated="true" />
+		<activity
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:name="com.ironsource.sdk.controller.InterstitialActivity"
+			android:exported="false"
+			android:configChanges="orientation|screenSize"
+			android:hardwareAccelerated="true" />
+		<activity
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:name="com.ironsource.sdk.controller.OpenUrlActivity"
+			android:exported="false"
+			android:configChanges="orientation|screenSize"
+			android:hardwareAccelerated="true" />
+		<activity
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:name="com.unity3d.services.ads.adunit.AdUnitActivity"
+			android:exported="false"
+			android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
+			android:hardwareAccelerated="true"
+			android:enableOnBackInvokedCallback="false" />
+		<activity
+			android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+			android:name="com.unity3d.services.ads.adunit.AdUnitTransparentActivity"
+			android:exported="false"
+			android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
+			android:hardwareAccelerated="true"
+			android:enableOnBackInvokedCallback="false" />
+		<activity
+			android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+			android:name="com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity"
+			android:exported="false"
+			android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
+			android:hardwareAccelerated="false"
+			android:enableOnBackInvokedCallback="false" />
+		<activity
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:name="com.unity3d.services.ads.adunit.AdUnitSoftwareActivity"
+			android:exported="false"
+			android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
+			android:hardwareAccelerated="false"
+			android:enableOnBackInvokedCallback="false" />
+		<activity
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:name="com.unity3d.ads.adplayer.FullScreenWebViewDisplay"
+			android:exported="false"
+			android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
+			android:hardwareAccelerated="true"
+			android:enableOnBackInvokedCallback="false" />
+		<service
+			android:name="com.google.firebase.components.ComponentDiscoveryService"
+			android:exported="false"
+			android:directBootAware="true">
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+		</service>
+		<receiver
+			android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+			android:enabled="true"
+			android:exported="false" />
+		<service
+			android:name="com.google.android.gms.measurement.AppMeasurementService"
+			android:enabled="true"
+			android:exported="false" />
+		<service
+			android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+			android:permission="android.permission.BIND_JOB_SERVICE"
+			android:enabled="true"
+			android:exported="false" />
+		<activity
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:name="com.google.android.gms.common.api.GoogleApiActivity"
+			android:exported="false" />
+		<activity
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:name="com.facebook.ads.AudienceNetworkActivity"
+			android:exported="false"
+			android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" />
+		<provider
+			android:name="com.facebook.ads.AudienceNetworkContentProvider"
+			android:exported="false"
+			android:authorities="bbv.avdev.bbvpn.AudienceNetworkContentProvider" />
+		<service
+			android:name="com.google.firebase.sessions.SessionLifecycleService"
+			android:enabled="false"
+			android:exported="false" />
+		<provider
+			android:name="com.google.firebase.provider.FirebaseInitProvider"
+			android:exported="false"
+			android:authorities="bbv.avdev.bbvpn.firebaseinitprovider"
+			android:initOrder="100"
+			android:directBootAware="true" />
 		<service
 			android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
 			android:enabled="@bool/enable_system_alarm_service_default"
@@ -321,9 +459,37 @@
 					android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
 			</intent-filter>
 		</receiver>
+		<receiver
+			android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+			android:permission="android.permission.DUMP"
+			android:enabled="true"
+			android:exported="true"
+			android:directBootAware="false">
+			<intent-filter>
+				<action
+					android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+			</intent-filter>
+		</receiver>
+		<uses-library
+			android:name="android.ext.adservices"
+			android:required="false" />
 		<meta-data
 			android:name="com.google.android.gms.version"
 			android:value="@integer/google_play_services_version" />
+		<service
+			android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+			android:exported="false">
+			<meta-data
+				android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+				android:value="cct" />
+		</service>
+		<service
+			android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+			android:permission="android.permission.BIND_JOB_SERVICE"
+			android:exported="false" />
+		<receiver
+			android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+			android:exported="false" />
 		<receiver
 			android:name="androidx.profileinstaller.ProfileInstallReceiver"
 			android:permission="android.permission.DUMP"
@@ -351,6 +517,29 @@
 			android:name="androidx.room.MultiInstanceInvalidationService"
 			android:exported="false"
 			android:directBootAware="true" />
+		<activity
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:name="com.unity3d.ironsourceads.internal.services.InlineStoreActivity"
+			android:configChanges="orientation|screenSize"
+			android:hardwareAccelerated="true" />
+		<activity
+			android:theme="@android:style/Theme.NoTitleBar"
+			android:name="com.ironsource.mediationsdk.testSuite.TestSuiteActivity"
+			android:exported="false"
+			android:configChanges="orientation|screenSize"
+			android:hardwareAccelerated="true">
+			<meta-data
+				android:name="android.webkit.WebView.EnableSafeBrowsing"
+				android:value="true" />
+		</activity>
+		<provider
+			android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
+			android:exported="false"
+			android:authorities="bbv.avdev.bbvpn.IronsourceLifecycleProvider" />
+		<provider
+			android:name="com.ironsource.lifecycle.LevelPlayActivityLifecycleProvider"
+			android:exported="false"
+			android:authorities="bbv.avdev.bbvpn.LevelPlayActivityLifecycleProvider" />
 		<activity
 			android:theme="@style/Theme.PlayCore.Transparent"
 			android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
