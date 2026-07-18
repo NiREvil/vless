@@ -10,31 +10,207 @@
  */
 
 const MAX_NOMINATIM_ATTEMPTS = 10;
-const NOMINATIM_USER_AGENT = 'DianaCl/1.1 (Cloudflare Worker; contact=NiREvil@proton.me)';
+const NOMINATIM_USER_AGENT = "DianaCl/1.1 (Cloudflare Worker; contact=NiREvil@proton.me)";
 
 const COUNTRY_DATA = {
-  US: { name: 'United States', coords: [{ lat: 37.7749, lng: -122.4194 }, { lat: 34.0522, lng: -118.2437 }], phonePrefix: '+1', phoneFormat: () => `(${rand(200, 999)}) ${rand(200, 999)}-${rand(1000, 9999)}` },
-  UK: { name: 'United Kingdom', coords: [{ lat: 51.5074, lng: -0.1278 }, { lat: 53.4808, lng: -2.2426 }], phonePrefix: '+44', phoneFormat: () => `${rand(1000, 9999)} ${rand(100000, 999999)}` },
-  FR: { name: 'France', coords: [{ lat: 48.8566, lng: 2.3522 }, { lat: 45.764, lng: 4.8357 }], phonePrefix: '+33', phoneFormat: () => `${rand(1, 9)} ${randDigits(8)}` },
-  DE: { name: 'Germany', coords: [{ lat: 52.52, lng: 13.405 }, { lat: 48.1351, lng: 11.582 }], phonePrefix: '+49', phoneFormat: () => `${rand(100, 999)} ${randDigits(7)}` },
-  CN: { name: 'China', coords: [{ lat: 39.9042, lng: 116.4074 }, { lat: 31.2304, lng: 121.4737 }], phonePrefix: '+86', phoneFormat: () => `${rand(130, 189)} ${randDigits(8)}` },
-  JP: { name: 'Japan', coords: [{ lat: 35.6895, lng: 139.6917 }, { lat: 34.6937, lng: 135.5023 }], phonePrefix: '+81', phoneFormat: () => `${rand(10, 99)} ${randDigits(8)}` },
-  IN: { name: 'India', coords: [{ lat: 28.6139, lng: 77.209 }, { lat: 19.076, lng: 72.8777 }], phonePrefix: '+91', phoneFormat: () => `${rand(700, 999)} ${randDigits(7)}` },
-  AU: { name: 'Australia', coords: [{ lat: -33.8688, lng: 151.2093 }, { lat: -37.8136, lng: 144.9631 }], phonePrefix: '+61', phoneFormat: () => `${rand(2, 9)} ${randDigits(8)}` },
-  BR: { name: 'Brazil', coords: [{ lat: -23.5505, lng: -46.6333 }, { lat: -22.9068, lng: -43.1729 }], phonePrefix: '+55', phoneFormat: () => `${rand(10, 99)} ${randDigits(8)}` },
-  CA: { name: 'Canada', coords: [{ lat: 43.65107, lng: -79.347015 }, { lat: 45.50169, lng: -73.567253 }], phonePrefix: '+1', phoneFormat: () => `(${rand(200, 999)}) ${rand(200, 999)}-${rand(1000, 9999)}` },
-  RU: { name: 'Russia', coords: [{ lat: 55.7558, lng: 37.6173 }, { lat: 59.9343, lng: 30.3351 }], phonePrefix: '+7', phoneFormat: () => `${rand(100, 999)} ${randDigits(7)}` },
-  ZA: { name: 'South Africa', coords: [{ lat: -33.9249, lng: 18.4241 }, { lat: -26.2041, lng: 28.0473 }], phonePrefix: '+27', phoneFormat: () => `${rand(10, 99)} ${randDigits(7)}` },
-  MX: { name: 'Mexico', coords: [{ lat: 19.4326, lng: -99.1332 }, { lat: 20.6597, lng: -103.3496 }], phonePrefix: '+52', phoneFormat: () => `${rand(10, 99)} ${randDigits(8)}` },
-  KR: { name: 'South Korea', coords: [{ lat: 37.5665, lng: 126.978 }, { lat: 35.1796, lng: 129.0756 }], phonePrefix: '+82', phoneFormat: () => `${rand(10, 99)} ${randDigits(8)}` },
-  IT: { name: 'Italy', coords: [{ lat: 41.9028, lng: 12.4964 }, { lat: 45.4642, lng: 9.19 }], phonePrefix: '+39', phoneFormat: () => `${rand(10, 99)} ${randDigits(8)}` },
-  ES: { name: 'Spain', coords: [{ lat: 40.4168, lng: -3.7038 }, { lat: 41.3851, lng: 2.1734 }], phonePrefix: '+34', phoneFormat: () => `${rand(10, 99)} ${randDigits(8)}` },
-  TR: { name: 'Turkey', coords: [{ lat: 41.0082, lng: 28.9784 }, { lat: 39.9334, lng: 32.8597 }], phonePrefix: '+90', phoneFormat: () => `${rand(200, 599)} ${randDigits(7)}` },
-  SA: { name: 'Saudi Arabia', coords: [{ lat: 24.7136, lng: 46.6753 }, { lat: 21.3891, lng: 39.8579 }], phonePrefix: '+966', phoneFormat: () => `5${rand(0, 9)} ${randDigits(7)}` },
-  AR: { name: 'Argentina', coords: [{ lat: -34.6037, lng: -58.3816 }, { lat: -31.4201, lng: -64.1888 }], phonePrefix: '+54', phoneFormat: () => `9 ${rand(11, 38)} ${randDigits(8)}` },
-  EG: { name: 'Egypt', coords: [{ lat: 30.0444, lng: 31.2357 }, { lat: 31.2156, lng: 29.9553 }], phonePrefix: '+20', phoneFormat: () => `1${rand(0, 2)}${rand(0, 9)} ${randDigits(8)}` },
-  NG: { name: 'Nigeria', coords: [{ lat: 6.5244, lng: 3.3792 }, { lat: 9.0579, lng: 7.4951 }], phonePrefix: '+234', phoneFormat: () => `${rand(7, 9)}0${rand(1, 9)} ${randDigits(7)}` },
-  ID: { name: 'Indonesia', coords: [{ lat: -6.2088, lng: 106.8456 }, { lat: -7.7956, lng: 110.3695 }], phonePrefix: '+62', phoneFormat: () => `8${rand(1, 9)}${rand(0, 9)} ${randDigits(8)}` },
+  US: {
+    name: "United States",
+    coords: [
+      { lat: 37.7749, lng: -122.4194 },
+      { lat: 34.0522, lng: -118.2437 },
+    ],
+    phonePrefix: "+1",
+    phoneFormat: () => `(${rand(200, 999)}) ${rand(200, 999)}-${rand(1000, 9999)}`,
+  },
+  UK: {
+    name: "United Kingdom",
+    coords: [
+      { lat: 51.5074, lng: -0.1278 },
+      { lat: 53.4808, lng: -2.2426 },
+    ],
+    phonePrefix: "+44",
+    phoneFormat: () => `${rand(1000, 9999)} ${rand(100000, 999999)}`,
+  },
+  FR: {
+    name: "France",
+    coords: [
+      { lat: 48.8566, lng: 2.3522 },
+      { lat: 45.764, lng: 4.8357 },
+    ],
+    phonePrefix: "+33",
+    phoneFormat: () => `${rand(1, 9)} ${randDigits(8)}`,
+  },
+  DE: {
+    name: "Germany",
+    coords: [
+      { lat: 52.52, lng: 13.405 },
+      { lat: 48.1351, lng: 11.582 },
+    ],
+    phonePrefix: "+49",
+    phoneFormat: () => `${rand(100, 999)} ${randDigits(7)}`,
+  },
+  CN: {
+    name: "China",
+    coords: [
+      { lat: 39.9042, lng: 116.4074 },
+      { lat: 31.2304, lng: 121.4737 },
+    ],
+    phonePrefix: "+86",
+    phoneFormat: () => `${rand(130, 189)} ${randDigits(8)}`,
+  },
+  JP: {
+    name: "Japan",
+    coords: [
+      { lat: 35.6895, lng: 139.6917 },
+      { lat: 34.6937, lng: 135.5023 },
+    ],
+    phonePrefix: "+81",
+    phoneFormat: () => `${rand(10, 99)} ${randDigits(8)}`,
+  },
+  IN: {
+    name: "India",
+    coords: [
+      { lat: 28.6139, lng: 77.209 },
+      { lat: 19.076, lng: 72.8777 },
+    ],
+    phonePrefix: "+91",
+    phoneFormat: () => `${rand(700, 999)} ${randDigits(7)}`,
+  },
+  AU: {
+    name: "Australia",
+    coords: [
+      { lat: -33.8688, lng: 151.2093 },
+      { lat: -37.8136, lng: 144.9631 },
+    ],
+    phonePrefix: "+61",
+    phoneFormat: () => `${rand(2, 9)} ${randDigits(8)}`,
+  },
+  BR: {
+    name: "Brazil",
+    coords: [
+      { lat: -23.5505, lng: -46.6333 },
+      { lat: -22.9068, lng: -43.1729 },
+    ],
+    phonePrefix: "+55",
+    phoneFormat: () => `${rand(10, 99)} ${randDigits(8)}`,
+  },
+  CA: {
+    name: "Canada",
+    coords: [
+      { lat: 43.65107, lng: -79.347015 },
+      { lat: 45.50169, lng: -73.567253 },
+    ],
+    phonePrefix: "+1",
+    phoneFormat: () => `(${rand(200, 999)}) ${rand(200, 999)}-${rand(1000, 9999)}`,
+  },
+  RU: {
+    name: "Russia",
+    coords: [
+      { lat: 55.7558, lng: 37.6173 },
+      { lat: 59.9343, lng: 30.3351 },
+    ],
+    phonePrefix: "+7",
+    phoneFormat: () => `${rand(100, 999)} ${randDigits(7)}`,
+  },
+  ZA: {
+    name: "South Africa",
+    coords: [
+      { lat: -33.9249, lng: 18.4241 },
+      { lat: -26.2041, lng: 28.0473 },
+    ],
+    phonePrefix: "+27",
+    phoneFormat: () => `${rand(10, 99)} ${randDigits(7)}`,
+  },
+  MX: {
+    name: "Mexico",
+    coords: [
+      { lat: 19.4326, lng: -99.1332 },
+      { lat: 20.6597, lng: -103.3496 },
+    ],
+    phonePrefix: "+52",
+    phoneFormat: () => `${rand(10, 99)} ${randDigits(8)}`,
+  },
+  KR: {
+    name: "South Korea",
+    coords: [
+      { lat: 37.5665, lng: 126.978 },
+      { lat: 35.1796, lng: 129.0756 },
+    ],
+    phonePrefix: "+82",
+    phoneFormat: () => `${rand(10, 99)} ${randDigits(8)}`,
+  },
+  IT: {
+    name: "Italy",
+    coords: [
+      { lat: 41.9028, lng: 12.4964 },
+      { lat: 45.4642, lng: 9.19 },
+    ],
+    phonePrefix: "+39",
+    phoneFormat: () => `${rand(10, 99)} ${randDigits(8)}`,
+  },
+  ES: {
+    name: "Spain",
+    coords: [
+      { lat: 40.4168, lng: -3.7038 },
+      { lat: 41.3851, lng: 2.1734 },
+    ],
+    phonePrefix: "+34",
+    phoneFormat: () => `${rand(10, 99)} ${randDigits(8)}`,
+  },
+  TR: {
+    name: "Turkey",
+    coords: [
+      { lat: 41.0082, lng: 28.9784 },
+      { lat: 39.9334, lng: 32.8597 },
+    ],
+    phonePrefix: "+90",
+    phoneFormat: () => `${rand(200, 599)} ${randDigits(7)}`,
+  },
+  SA: {
+    name: "Saudi Arabia",
+    coords: [
+      { lat: 24.7136, lng: 46.6753 },
+      { lat: 21.3891, lng: 39.8579 },
+    ],
+    phonePrefix: "+966",
+    phoneFormat: () => `5${rand(0, 9)} ${randDigits(7)}`,
+  },
+  AR: {
+    name: "Argentina",
+    coords: [
+      { lat: -34.6037, lng: -58.3816 },
+      { lat: -31.4201, lng: -64.1888 },
+    ],
+    phonePrefix: "+54",
+    phoneFormat: () => `9 ${rand(11, 38)} ${randDigits(8)}`,
+  },
+  EG: {
+    name: "Egypt",
+    coords: [
+      { lat: 30.0444, lng: 31.2357 },
+      { lat: 31.2156, lng: 29.9553 },
+    ],
+    phonePrefix: "+20",
+    phoneFormat: () => `1${rand(0, 2)}${rand(0, 9)} ${randDigits(8)}`,
+  },
+  NG: {
+    name: "Nigeria",
+    coords: [
+      { lat: 6.5244, lng: 3.3792 },
+      { lat: 9.0579, lng: 7.4951 },
+    ],
+    phonePrefix: "+234",
+    phoneFormat: () => `${rand(7, 9)}0${rand(1, 9)} ${randDigits(7)}`,
+  },
+  ID: {
+    name: "Indonesia",
+    coords: [
+      { lat: -6.2088, lng: 106.8456 },
+      { lat: -7.7956, lng: 110.3695 },
+    ],
+    phonePrefix: "+62",
+    phoneFormat: () => `8${rand(1, 9)}${rand(0, 9)} ${randDigits(8)}`,
+  },
 };
 
 const SUPPORTED_COUNTRIES = Object.keys(COUNTRY_DATA);
@@ -51,7 +227,7 @@ function rand(min, max) {
  * @param {number} count
  */
 function randDigits(count) {
-  let digits = '';
+  let digits = "";
   for (let i = 0; i < count; i++) {
     digits += Math.floor(Math.random() * 10);
   }
@@ -77,10 +253,10 @@ function getRandomLocationInCountry(country) {
  * @param {string | number} country
  */
 function formatAddress(address, country) {
-  const road = address.road || '';
-  const houseNumber = address.house_number || '';
-  const city = address.city || address.town || address.village || address.suburb || '';
-  const postcode = address.postcode || '';
+  const road = address.road || "";
+  const houseNumber = address.house_number || "";
+  const city = address.city || address.town || address.village || address.suburb || "";
+  const postcode = address.postcode || "";
   const countryName = COUNTRY_DATA[country]?.name || country;
 
   let formatted = `${houseNumber} ${road}`.trim();
@@ -88,7 +264,10 @@ function formatAddress(address, country) {
   if (postcode) formatted += `, ${postcode}`;
   formatted += `, ${countryName}`;
 
-  return formatted.replace(/^,\s*|\s*,\s*$/g, '').replace(/\s\s+/g, ' ').trim();
+  return formatted
+    .replace(/^,\s*|\s*,\s*$/g, "")
+    .replace(/\s\s+/g, " ")
+    .trim();
 }
 
 /**
@@ -110,10 +289,10 @@ function getRandomCountry() {
  * @param {string} selectedCountry
  */
 function getCountryOptions(selectedCountry) {
-  return SUPPORTED_COUNTRIES.map(code => {
+  return SUPPORTED_COUNTRIES.map((code) => {
     const name = COUNTRY_DATA[code].name;
-    return `<option value="${code}" ${code === selectedCountry ? 'selected' : ''}>${name}</option>`;
-  }).join('');
+    return `<option value="${code}" ${code === selectedCountry ? "selected" : ""}>${name}</option>`;
+  }).join("");
 }
 
 function getRandomName() {
@@ -134,25 +313,33 @@ async function findAddress(country) {
 
     try {
       const response = await fetch(apiUrl, {
-        headers: { 'User-Agent': NOMINATIM_USER_AGENT },
+        headers: { "User-Agent": NOMINATIM_USER_AGENT },
       });
 
       if (!response.ok) {
-        console.error(`Nominatim API error: ${response.status} ${response.statusText} for ${apiUrl}`);
+        console.error(
+          `Nominatim API error: ${response.status} ${response.statusText} for ${apiUrl}`,
+        );
         continue;
       }
 
       const data = await response.json();
 
-      if (data && data.address && data.address.road &&
-        (data.address.city || data.address.town || data.address.village || data.address.suburb)) {
+      if (
+        data &&
+        data.address &&
+        data.address.road &&
+        (data.address.city || data.address.town || data.address.village || data.address.suburb)
+      ) {
         return formatAddress(data.address, country);
       }
     } catch (error) {
       console.error(`Error fetching or parsing Nominatim data (Attempt ${i + 1}):`, error);
     }
   }
-  console.error(`Failed to find a valid address for country ${country} after ${MAX_NOMINATIM_ATTEMPTS} attempts.`);
+  console.error(
+    `Failed to find a valid address for country ${country} after ${MAX_NOMINATIM_ATTEMPTS} attempts.`,
+  );
   return null;
 }
 
@@ -164,7 +351,7 @@ export default {
    */
   async fetch(request, env, ctx) {
     return handleRequest(request);
-  }
+  },
 };
 
 /**
@@ -172,58 +359,63 @@ export default {
  */
 async function handleRequest(request) {
   const { searchParams } = new URL(request.url);
-  let country = searchParams.get('country')?.toUpperCase();
+  let country = searchParams.get("country")?.toUpperCase();
 
   if (!country || !SUPPORTED_COUNTRIES.includes(country)) {
     country = getRandomCountry();
   }
 
   const addressPromise = findAddress(country);
-  const userDataPromise = fetch('https://randomuser.me/api/?nat=' + country.toLowerCase());
+  const userDataPromise = fetch("https://randomuser.me/api/?nat=" + country.toLowerCase());
 
-  const [addressResult, userDataResponse] = await Promise.all([
-    addressPromise,
-    userDataPromise
-  ]);
+  const [addressResult, userDataResponse] = await Promise.all([addressPromise, userDataPromise]);
 
   const address = addressResult;
   if (!address) {
-    return new Response(`<html><body>
+    return new Response(
+      `<html><body>
       <h1>Address Generation Failed</h1>
       <p>Sorry, we couldn't find a suitable address for ${COUNTRY_DATA[country]?.name || country} after several attempts.</p>
       <button onclick="window.location.reload()">Try Again</button>
       <p><a href="?">Try a random country</a></p>
       </body></html>`,
-      { status: 500, headers: { 'content-type': 'text/html;charset=UTF-8' } }
+      { status: 500, headers: { "content-type": "text/html;charset=UTF-8" } },
     );
   }
 
-  let name, gender, timezone = { description: 'N/A', offset: '' }, picture = 'https://via.placeholder.com/120/cccccc/888888?text=No+Image';
+  let name,
+    gender,
+    timezone = { description: "N/A", offset: "" },
+    picture = "https://via.placeholder.com/120/cccccc/888888?text=No+Image";
 
   try {
     if (userDataResponse && userDataResponse.ok) {
       const userJson = await userDataResponse.json();
       if (userJson?.results?.length > 0) {
         const user = userJson.results[0];
-        name = `${user.name?.first || ''} ${user.name?.last || ''}`.trim();
-        gender = user.gender ? user.gender.charAt(0).toUpperCase() + user.gender.slice(1) : 'Unknown';
+        name = `${user.name?.first || ""} ${user.name?.last || ""}`.trim();
+        gender = user.gender
+          ? user.gender.charAt(0).toUpperCase() + user.gender.slice(1)
+          : "Unknown";
         if (user.location?.timezone) {
           timezone = {
-            description: user.location.timezone.description || 'Unknown Timezone',
-            offset: user.location.timezone.offset || ''
+            description: user.location.timezone.description || "Unknown Timezone",
+            offset: user.location.timezone.offset || "",
           };
         }
         picture = user.picture?.large || picture;
       }
     } else if (userDataResponse) {
-      console.error(`RandomUser API error: ${userDataResponse.status} ${userDataResponse.statusText}`);
+      console.error(
+        `RandomUser API error: ${userDataResponse.status} ${userDataResponse.statusText}`,
+      );
     }
   } catch (error) {
     console.error("Error fetching or parsing randomuser.me data:", error);
   }
 
   if (!name) name = getRandomName();
-  if (!gender) gender = 'Unknown';
+  if (!gender) gender = "Unknown";
 
   const phone = getRandomPhoneNumber(country);
 
@@ -492,10 +684,10 @@ async function handleRequest(request) {
     <div class="profile-header">
       <img src="${picture}" class="profile-photo" alt="Generated profile picture">
       <div class="user-info">
-        <h1 class="user-name">${name || 'Name Not Found'}</h1>
+        <h1 class="user-name">${name || "Name Not Found"}</h1>
         <div class="gender">${gender}</div>
-        <div class="timezone" title="${timezone.description || ''}">
-          ${timezone.description} ${timezone.offset ? `(UTC${timezone.offset})` : ''}
+        <div class="timezone" title="${timezone.description || ""}">
+          ${timezone.description} ${timezone.offset ? `(UTC${timezone.offset})` : ""}
         </div>
       </div>
     </div>
@@ -504,7 +696,7 @@ async function handleRequest(request) {
       <div class="detail-item">
         <div class="detail-label">Phone</div>
         <div class="detail-value">${phone}</div>
-        <button class="copy-button" aria-label="Copy phone number" onclick="copyToClipboard('${phone.replace(/[()\s-]/g, '')}', this)">Copy</button>
+        <button class="copy-button" aria-label="Copy phone number" onclick="copyToClipboard('${phone.replace(/[()\s-]/g, "")}', this)">Copy</button>
       </div>
 
       <div class="detail-item">
@@ -599,5 +791,5 @@ async function handleRequest(request) {
 </html>
 `;
 
-  return new Response(html, { headers: { 'content-type': 'text/html;charset=UTF-8' } });
+  return new Response(html, { headers: { "content-type": "text/html;charset=UTF-8" } });
 }
