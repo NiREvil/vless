@@ -76,7 +76,9 @@ You can either use the **DEMO** or simply Copy/Paste the [latest_worker.js](./la
 <br><br/>
 
 ## Credits
+
 **Many thanks to:**
+
 - [Grok 💛]
 - [Anthropic Claude 💛]
 
