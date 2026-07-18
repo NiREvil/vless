@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { connect } from 'cloudflare:sockets';
+import { connect } from "cloudflare:sockets";
 
 let temporaryTOKEN, permanentTOKEN;
 
@@ -12,7 +12,7 @@ export default {
   async fetch(request, env, ctx) {
     const websiteIcon = env.ICO || "https://pub-b3ab4c8172fb44e29854df3435aa223d.r2.dev/cf.svg";
     const url = new URL(request.url);
-    const UA = request.headers.get('User-Agent') || 'null';
+    const UA = request.headers.get("User-Agent") || "null";
     const path = url.pathname;
     const hostname = url.hostname;
     const currentDate = new Date();
@@ -24,17 +24,17 @@ export default {
     const scamalyticsApiKey = env.SCAMALYTICS_API_KEY;
     const scamalyticsApiBaseUrl = env.SCAMALYTICS_API_BASE_URL || "https://api.scamalytics.com";
 
-    if (path.toLowerCase() === '/check') {
-      if (!url.searchParams.has('proxyip'))
-        return new Response('Missing proxyip parameter', { status: 400 });
-      if (url.searchParams.get('proxyip') === '')
-        return new Response('Invalid proxyip parameter', { status: 400 });
+    if (path.toLowerCase() === "/check") {
+      if (!url.searchParams.has("proxyip"))
+        return new Response("Missing proxyip parameter", { status: 400 });
+      if (url.searchParams.get("proxyip") === "")
+        return new Response("Invalid proxyip parameter", { status: 400 });
       if (env.TOKEN) {
-        if (!url.searchParams.has('token') || url.searchParams.get('token') !== permanentTOKEN) {
+        if (!url.searchParams.has("token") || url.searchParams.get("token") !== permanentTOKEN) {
           return new Response(
             JSON.stringify(
               {
-                status: 'error',
+                status: "error",
                 message: `ProxyIP Check Failed: Invalid TOKEN`,
                 timestamp: new Date().toISOString(),
               },
@@ -44,37 +44,37 @@ export default {
             {
               status: 403,
               headers: {
-                'content-type': 'application/json; charset=UTF-8',
-                'Access-Control-Allow-Origin': '*',
+                "content-type": "application/json; charset=UTF-8",
+                "Access-Control-Allow-Origin": "*",
               },
             },
           );
         }
       }
-      const proxyIPInput = url.searchParams.get('proxyip').toLowerCase();
+      const proxyIPInput = url.searchParams.get("proxyip").toLowerCase();
       const result = await CheckProxyIP(proxyIPInput);
 
       return new Response(JSON.stringify(result, null, 2), {
         status: result.success ? 200 : 502,
         headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
         },
       });
-    } else if (path.toLowerCase() === '/debug-env') {
+    } else if (path.toLowerCase() === "/debug-env") {
       return new Response(JSON.stringify(env, null, 2), {
-        headers: { 'Content-Type': 'application/json' },
+        headers: { "Content-Type": "application/json" },
       });
-    } else if (path.toLowerCase() === '/scamalytics-lookup') {
+    } else if (path.toLowerCase() === "/scamalytics-lookup") {
       if (
-        !url.searchParams.has('token') ||
-        (url.searchParams.get('token') !== temporaryTOKEN &&
-          url.searchParams.get('token') !== permanentTOKEN)
+        !url.searchParams.has("token") ||
+        (url.searchParams.get("token") !== temporaryTOKEN &&
+          url.searchParams.get("token") !== permanentTOKEN)
       ) {
         return new Response(
           JSON.stringify(
             {
-              status: 'error',
+              status: "error",
               message: `Scamalytics Lookup Failed: Invalid TOKEN`,
               timestamp: new Date().toISOString(),
             },
@@ -84,20 +84,20 @@ export default {
           {
             status: 403,
             headers: {
-              'content-type': 'application/json; charset=UTF-8',
-              'Access-Control-Allow-Origin': '*',
+              "content-type": "application/json; charset=UTF-8",
+              "Access-Control-Allow-Origin": "*",
             },
           },
         );
       }
 
-      const ipToLookup = url.searchParams.get('ip');
+      const ipToLookup = url.searchParams.get("ip");
       if (!ipToLookup) {
-        return new Response(JSON.stringify({ error: 'Missing IP parameter' }), {
+        return new Response(JSON.stringify({ error: "Missing IP parameter" }), {
           status: 400,
           headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
           },
         });
       }
@@ -105,28 +105,28 @@ export default {
       if (!scamalyticsUsername || !scamalyticsApiKey) {
         return new Response(
           JSON.stringify({
-            error: 'Scamalytics API credentials not configured on server.',
+            error: "Scamalytics API credentials not configured on server.",
             message:
-              'Please set SCAMALYTICS_USERNAME and SCAMALYTICS_API_KEY environment variables.',
+              "Please set SCAMALYTICS_USERNAME and SCAMALYTICS_API_KEY environment variables.",
           }),
           {
             status: 500,
             headers: {
-              'Content-Type': 'application/json',
-              'Access-Control-Allow-Origin': '*',
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*",
             },
           },
         );
       }
 
-      const cleanIP = ipToLookup.replace(/[\[\]]/g, '');
+      const cleanIP = ipToLookup.replace(/[\[\]]/g, "");
       const scamalyticsUrl = `${scamalyticsApiBaseUrl}/${scamalyticsUsername}/?key=${scamalyticsApiKey}&ip=${cleanIP}`;
 
       try {
         const scamalyticsResponse = await fetch(scamalyticsUrl, {
-          method: 'GET',
+          method: "GET",
           headers: {
-            'User-Agent': 'Mozilla/5.0 (compatible; ProxyIPScanner/1.0)',
+            "User-Agent": "Mozilla/5.0 (compatible; ProxyIPScanner/1.0)",
           },
         });
 
@@ -141,44 +141,44 @@ export default {
         } catch (parseError) {
           return new Response(
             JSON.stringify({
-              error: 'Invalid JSON response from Scamalytics API',
+              error: "Invalid JSON response from Scamalytics API",
               details: `Response was not valid JSON: ${responseText.substring(0, 100)}...`,
             }),
             {
               status: 502,
-              headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+              headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
             },
           );
         }
 
         return new Response(JSON.stringify(responseBody), {
           headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
           },
         });
       } catch (error) {
         return new Response(
           JSON.stringify({
-            error: 'Failed to fetch from Scamalytics API',
+            error: "Failed to fetch from Scamalytics API",
             details: error.message,
           }),
           {
             status: 502,
-            headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+            headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
           },
         );
       }
-    } else if (path.toLowerCase() === '/resolve') {
+    } else if (path.toLowerCase() === "/resolve") {
       if (
-        !url.searchParams.has('token') ||
-        (url.searchParams.get('token') !== temporaryTOKEN &&
-          url.searchParams.get('token') !== permanentTOKEN)
+        !url.searchParams.has("token") ||
+        (url.searchParams.get("token") !== temporaryTOKEN &&
+          url.searchParams.get("token") !== permanentTOKEN)
       ) {
         return new Response(
           JSON.stringify(
             {
-              status: 'error',
+              status: "error",
               message: `Domain Resolve Failed: Invalid TOKEN`,
               timestamp: new Date().toISOString(),
             },
@@ -188,43 +188,43 @@ export default {
           {
             status: 403,
             headers: {
-              'content-type': 'application/json; charset=UTF-8',
-              'Access-Control-Allow-Origin': '*',
+              "content-type": "application/json; charset=UTF-8",
+              "Access-Control-Allow-Origin": "*",
             },
           },
         );
       }
-      if (!url.searchParams.has('domain'))
-        return new Response('Missing domain parameter', { status: 400 });
-      const domain = url.searchParams.get('domain');
+      if (!url.searchParams.has("domain"))
+        return new Response("Missing domain parameter", { status: 400 });
+      const domain = url.searchParams.get("domain");
 
       try {
         const ips = await resolveDomain(domain);
         return new Response(JSON.stringify({ success: true, domain, ips }), {
           headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
           },
         });
       } catch (error) {
         return new Response(JSON.stringify({ success: false, error: error.message }), {
           status: 500,
           headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
           },
         });
       }
-    } else if (path.toLowerCase() === '/ip-info') {
+    } else if (path.toLowerCase() === "/ip-info") {
       if (
-        !url.searchParams.has('token') ||
-        (url.searchParams.get('token') !== temporaryTOKEN &&
-          url.searchParams.get('token') !== permanentTOKEN)
+        !url.searchParams.has("token") ||
+        (url.searchParams.get("token") !== temporaryTOKEN &&
+          url.searchParams.get("token") !== permanentTOKEN)
       ) {
         return new Response(
           JSON.stringify(
             {
-              status: 'error',
+              status: "error",
               message: `IP Info Failed: Invalid TOKEN`,
               timestamp: new Date().toISOString(),
             },
@@ -234,20 +234,20 @@ export default {
           {
             status: 403,
             headers: {
-              'content-type': 'application/json; charset=UTF-8',
-              'Access-Control-Allow-Origin': '*',
+              "content-type": "application/json; charset=UTF-8",
+              "Access-Control-Allow-Origin": "*",
             },
           },
         );
       }
-      let ip = url.searchParams.get('ip') || request.headers.get('CF-Connecting-IP');
+      let ip = url.searchParams.get("ip") || request.headers.get("CF-Connecting-IP");
       if (!ip) {
         return new Response(
           JSON.stringify(
             {
-              status: 'error',
-              message: 'IP parameter not provided',
-              code: 'MISSING_PARAMETER',
+              status: "error",
+              message: "IP parameter not provided",
+              code: "MISSING_PARAMETER",
               timestamp: new Date().toISOString(),
             },
             null,
@@ -256,15 +256,15 @@ export default {
           {
             status: 400,
             headers: {
-              'content-type': 'application/json; charset=UTF-8',
-              'Access-Control-Allow-Origin': '*',
+              "content-type": "application/json; charset=UTF-8",
+              "Access-Control-Allow-Origin": "*",
             },
           },
         );
       }
 
-      if (ip.includes('[')) {
-        ip = ip.replace('[', '').replace(']', '');
+      if (ip.includes("[")) {
+        ip = ip.replace("[", "").replace("]", "");
       }
 
       try {
@@ -276,22 +276,22 @@ export default {
         data.timestamp = new Date().toISOString();
         return new Response(JSON.stringify(data, null, 4), {
           headers: {
-            'content-type': 'application/json; charset=UTF-8',
-            'Access-Control-Allow-Origin': '*',
+            "content-type": "application/json; charset=UTF-8",
+            "Access-Control-Allow-Origin": "*",
           },
         });
       } catch (error) {
         return new Response(
           JSON.stringify(
             {
-              status: 'error',
+              status: "error",
               message: `IP Info Failed: ${error.message}`,
-              code: 'API_REQUEST_FAILED',
+              code: "API_REQUEST_FAILED",
               query: ip,
               timestamp: new Date().toISOString(),
               details: {
                 errorType: error.name,
-                stack: error.stack ? error.stack.split('\n')[0] : null,
+                stack: error.stack ? error.stack.split("\n")[0] : null,
               },
             },
             null,
@@ -300,25 +300,25 @@ export default {
           {
             status: 500,
             headers: {
-              'content-type': 'application/json; charset=UTF-8',
-              'Access-Control-Allow-Origin': '*',
+              "content-type": "application/json; charset=UTF-8",
+              "Access-Control-Allow-Origin": "*",
             },
           },
         );
       }
     } else {
-      const envKey = env.URL302 ? 'URL302' : env.URL ? 'URL' : null;
+      const envKey = env.URL302 ? "URL302" : env.URL ? "URL" : null;
       if (envKey) {
         const URLs = await sanitizeURLs(env[envKey]);
         const URL = URLs[Math.floor(Math.random() * URLs.length)];
-        return envKey === 'URL302' ? Response.redirect(URL, 302) : fetch(new Request(URL, request));
+        return envKey === "URL302" ? Response.redirect(URL, 302) : fetch(new Request(URL, request));
       } else if (env.TOKEN) {
         return new Response(await nginxWelcomePage(), {
           headers: {
-            'Content-Type': 'text/html; charset=UTF-8',
+            "Content-Type": "text/html; charset=UTF-8",
           },
         });
-      } else if (path.toLowerCase() === '/favicon.ico') {
+      } else if (path.toLowerCase() === "/favicon.ico") {
         return Response.redirect(websiteIcon, 302);
       }
       return await generateHTMLPage(hostname, websiteIcon, temporaryTOKEN);
@@ -331,46 +331,48 @@ export default {
  * @param {string} domain
  */
 async function resolveDomain(domain) {
-  domain = domain.includes(':') ? domain.split(':')[0] : domain;
+  domain = domain.includes(":") ? domain.split(":")[0] : domain;
   try {
     const [ipv4Response, ipv6Response] = await Promise.all([
       fetch(`https://cloudflare-dns.com/dns-query?name=${domain}&type=A`, {
-        headers: { 
-          'Accept': 'application/dns-json',
-          'Cache-Control': 'no-cache'
+        headers: {
+          Accept: "application/dns-json",
+          "Cache-Control": "no-cache",
         },
-        cf: { cacheTtl: -1 }
+        cf: { cacheTtl: -1 },
       }),
       fetch(`https://cloudflare-dns.com/dns-query?name=${domain}&type=AAAA`, {
-        headers: { 
-          'Accept': 'application/dns-json',
-          'Cache-Control': 'no-cache'
+        headers: {
+          Accept: "application/dns-json",
+          "Cache-Control": "no-cache",
         },
-        cf: { cacheTtl: -1 }
-      })
+        cf: { cacheTtl: -1 },
+      }),
     ]);
 
     if (!ipv4Response.ok || !ipv6Response.ok) {
-       throw new Error(`DNS API HTTP Error: IPv4=${ipv4Response.status}, IPv6=${ipv6Response.status}`);
+      throw new Error(
+        `DNS API HTTP Error: IPv4=${ipv4Response.status}, IPv6=${ipv6Response.status}`,
+      );
     }
 
     const [ipv4Data, ipv6Data] = await Promise.all([ipv4Response.json(), ipv6Response.json()]);
 
     const ips = [];
     if (ipv4Data.Answer) {
-      const ipv4Addresses = ipv4Data.Answer.filter((/** @type {{ type: number; }} */ record) => record.type === 1).map(
-        (/** @type {{ data: any; }} */ record) => record.data,
-      );
+      const ipv4Addresses = ipv4Data.Answer.filter(
+        (/** @type {{ type: number; }} */ record) => record.type === 1,
+      ).map((/** @type {{ data: any; }} */ record) => record.data);
       ips.push(...ipv4Addresses);
     }
     if (ipv6Data.Answer) {
-      const ipv6Addresses = ipv6Data.Answer.filter((/** @type {{ type: number; }} */ record) => record.type === 28).map(
-        (/** @type {{ data: any; }} */ record) => `[${record.data}]`,
-      );
+      const ipv6Addresses = ipv6Data.Answer.filter(
+        (/** @type {{ type: number; }} */ record) => record.type === 28,
+      ).map((/** @type {{ data: any; }} */ record) => `[${record.data}]`);
       ips.push(...ipv6Addresses);
     }
     if (ips.length === 0) {
-      throw new Error('No DNS records (A or AAAA) found for this domain');
+      throw new Error("No DNS records (A or AAAA) found for this domain");
     }
     return ips;
   } catch (error) {
@@ -385,22 +387,22 @@ async function resolveDomain(domain) {
 async function CheckProxyIP(proxyIP) {
   let portRemote = 443;
   let hostToCheck = proxyIP;
-  if (proxyIP.includes('.tp')) {
+  if (proxyIP.includes(".tp")) {
     const portMatch = proxyIP.match(/\.tp(\d+)\./);
     if (portMatch) portRemote = parseInt(portMatch[1]);
-    hostToCheck = proxyIP.split('.tp')[0];
-  } else if (proxyIP.includes('[') && proxyIP.includes(']:')) {
-    portRemote = parseInt(proxyIP.split(']:')[1]);
-    hostToCheck = proxyIP.split(']:')[0] + ']';
-  } else if (proxyIP.includes(':') && !proxyIP.startsWith('[')) {
-    const parts = proxyIP.split(':');
-    if (parts.length === 2 && parts[0].includes('.')) {
+    hostToCheck = proxyIP.split(".tp")[0];
+  } else if (proxyIP.includes("[") && proxyIP.includes("]:")) {
+    portRemote = parseInt(proxyIP.split("]:")[1]);
+    hostToCheck = proxyIP.split("]:")[0] + "]";
+  } else if (proxyIP.includes(":") && !proxyIP.startsWith("[")) {
+    const parts = proxyIP.split(":");
+    if (parts.length === 2 && parts[0].includes(".")) {
       hostToCheck = parts[0];
       portRemote = parseInt(parts[1]) || 443;
     }
   }
 
-  const hostAddr = hostToCheck.includes(':') ? `[${hostToCheck}]` : hostToCheck;
+  const hostAddr = hostToCheck.includes(":") ? `[${hostToCheck}]` : hostToCheck;
   let socket = null;
   let tlsClient = null;
   const timeoutMs = 8000;
@@ -408,18 +410,18 @@ async function CheckProxyIP(proxyIP) {
   try {
     const startedAt = Date.now();
     socket = connect({ hostname: hostAddr, port: portRemote });
-    await withTimeout(socket.opened, timeoutMs, 'TCP Connect');
+    await withTimeout(socket.opened, timeoutMs, "TCP Connect");
 
     // Create custom TLS Client mimicking Cmliu's engine
-    tlsClient = new TlsClient(socket, { serverName: 'speed.cloudflare.com', timeout: timeoutMs });
-    await withTimeout(tlsClient.handshake(), timeoutMs, 'TLS Handshake');
+    tlsClient = new TlsClient(socket, { serverName: "speed.cloudflare.com", timeout: timeoutMs });
+    await withTimeout(tlsClient.handshake(), timeoutMs, "TLS Handshake");
 
     // Send HTTP GET request via TLS
     const httpRequest =
-      'GET /cdn-cgi/trace HTTP/1.1\r\n' +
-      'Host: speed.cloudflare.com\r\n' +
-      'User-Agent: checkip/diana/\r\n' +
-      'Connection: close\r\n\r\n';
+      "GET /cdn-cgi/trace HTTP/1.1\r\n" +
+      "Host: speed.cloudflare.com\r\n" +
+      "User-Agent: checkip/diana/\r\n" +
+      "Connection: close\r\n\r\n";
 
     await tlsClient.write(new TextEncoder().encode(httpRequest));
 
@@ -437,7 +439,8 @@ async function CheckProxyIP(proxyIP) {
     const statusMatch = responseText.match(/^HTTP\/\d\.\d\s+(\d+)/i);
     const statusCode = statusMatch ? parseInt(statusMatch[1]) : null;
 
-    const isSuccessful = statusCode === 200 && responseText.includes('cloudflare') && responseText.includes('colo=');
+    const isSuccessful =
+      statusCode === 200 && responseText.includes("cloudflare") && responseText.includes("colo=");
     const totalLatency = Date.now() - startedAt;
 
     const jsonResponse = {
@@ -459,8 +462,12 @@ async function CheckProxyIP(proxyIP) {
       error: error.message || error.toString(),
     };
   } finally {
-    try { tlsClient?.close(); } catch {}
-    try { if (!tlsClient) socket?.close(); } catch {}
+    try {
+      tlsClient?.close();
+    } catch {}
+    try {
+      if (!tlsClient) socket?.close();
+    } catch {}
   }
 }
 
@@ -483,10 +490,10 @@ function withTimeout(promise, timeoutMs, label) {
  * @param {string} content
  */
 async function sanitizeURLs(content) {
-  var replacedContent = content.replace(/[\r\n]+/g, '|').replace(/\|+/g, '|');
-  const addressArray = replacedContent.split('|');
+  var replacedContent = content.replace(/[\r\n]+/g, "|").replace(/\|+/g, "|");
+  const addressArray = replacedContent.split("|");
   const sanitizedArray = addressArray.filter((item, index) => {
-    return item !== '' && addressArray.indexOf(item) === index;
+    return item !== "" && addressArray.indexOf(item) === index;
   });
   return sanitizedArray;
 }
@@ -496,12 +503,12 @@ async function sanitizeURLs(content) {
  */
 async function doubleHash(text) {
   const encoder = new TextEncoder();
-  const firstHash = await crypto.subtle.digest('MD5', encoder.encode(text));
+  const firstHash = await crypto.subtle.digest("MD5", encoder.encode(text));
   const firstHashArray = Array.from(new Uint8Array(firstHash));
-  const firstHex = firstHashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
-  const secondHash = await crypto.subtle.digest('MD5', encoder.encode(firstHex.slice(7, 27)));
+  const firstHex = firstHashArray.map((byte) => byte.toString(16).padStart(2, "0")).join("");
+  const secondHash = await crypto.subtle.digest("MD5", encoder.encode(firstHex.slice(7, 27)));
   const secondHashArray = Array.from(new Uint8Array(secondHash));
-  const secondHex = secondHashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+  const secondHex = secondHashArray.map((byte) => byte.toString(16).padStart(2, "0")).join("");
   return secondHex.toLowerCase();
 }
 
@@ -2064,9 +2071,955 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
   </html>
   `;
   return new Response(html, {
-    headers: { 'content-type': 'text/html;charset=UTF-8' },
+    headers: { "content-type": "text/html;charset=UTF-8" },
   });
 }
 
 // ==================== TLS ENGINE ====================
-const e = 769, t = 771, n = 772, r = 20, i = 21, s = 22, a = 23, h = 1, c = 2, o = 4, l = 8, f = 11, u = 12, y = 13, p = 14, w = 15, d = 16, g = 20, k = 24, v = 0, A = 10, S = 11, m = 13, b = 16, C = 43, H = 45, T = 51, E = 0, L = new TextEncoder, K = new TextDecoder, P = new Uint8Array(0), U = new Map(Object.entries({ TLS_AES_128_GCM_SHA256: { id: 4865, keyLen: 16, ivLen: 12, hash: "SHA-256", tls13: !0 }, TLS_AES_256_GCM_SHA384: { id: 4866, keyLen: 32, ivLen: 12, hash: "SHA-384", tls13: !0 }, TLS_CHACHA20_POLY1305_SHA256: { id: 4867, keyLen: 32, ivLen: 12, hash: "SHA-256", tls13: !0, chacha: !0 }, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256: { id: 49199, keyLen: 16, ivLen: 4, hash: "SHA-256", kex: "ECDHE" }, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384: { id: 49200, keyLen: 32, ivLen: 4, hash: "SHA-384", kex: "ECDHE" }, TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256: { id: 52392, keyLen: 32, ivLen: 12, hash: "SHA-256", kex: "ECDHE", chacha: !0 }, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256: { id: 49195, keyLen: 16, ivLen: 4, hash: "SHA-256", kex: "ECDHE" }, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384: { id: 49196, keyLen: 32, ivLen: 4, hash: "SHA-384", kex: "ECDHE" }, TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256: { id: 52393, keyLen: 32, ivLen: 12, hash: "SHA-256", kex: "ECDHE", chacha: !0 } }).map((([, e]) => [e.id, e]))), I = new Map([[29, "X25519"], [23, "P-256"]]), x = [2052, 2053, 2054, 1025, 1281, 1537, 1027, 1283, 1539], _ = (...e) => { const t = e => { const n = []; for (const r of e) r instanceof Uint8Array ? n.push(...r) : Array.isArray(r) ? n.push(...t(r)) : "number" == typeof r && n.push(r); return n }; return new Uint8Array(t(e)) }, B = e => [e >> 8 & 255, 255 & e], R = (e, t) => e[t] << 8 | e[t + 1], M = (e, t) => e[t] << 16 | e[t + 1] << 8 | e[t + 2], W = (...e) => { const t = e.filter((e => e && e.length > 0)), n = t.reduce(((e, t) => e + t.length), 0), r = new Uint8Array(n); let i = 0; for (const e of t) r.set(e, i), i += e.length; return r }, D = e => crypto.getRandomValues(new Uint8Array(e)), N = (e, t) => { if (!e || !t || e.length !== t.length) return !1; let n = 0; for (let r = 0; r < e.length; r++)n |= e[r] ^ t[r]; return 0 === n }, q = e => "SHA-512" === e ? 64 : "SHA-384" === e ? 48 : 32; async function $(e, t, n) { const r = await crypto.subtle.importKey("raw", t, { name: "HMAC", hash: e }, !1, ["sign"]); return new Uint8Array(await crypto.subtle.sign("HMAC", r, n)) } async function G(e, t) { return new Uint8Array(await crypto.subtle.digest(e, t)) } async function V(e, t, n, r, i = "SHA-256") { const s = W(L.encode(t), n); let a = new Uint8Array(0), h = s; for (; a.length < r;) { h = await $(i, e, h); const t = await $(i, e, W(h, s)); a = W(a, t) } return a.slice(0, r) } async function X(e, t, n) { return t && t.length || (t = new Uint8Array(q(e))), $(e, t, n) } async function O(e, t, n, r, i) { const s = L.encode("tls13 " + n); return async function (e, t, n, r) { const i = q(e), s = Math.ceil(r / i); let a = new Uint8Array(0), h = new Uint8Array(0); for (let r = 1; r <= s; r++)h = await $(e, t, W(h, n, [r])), a = W(a, h); return a.slice(0, r) }(e, t, _(B(i), s.length, s, r.length, r), i) } async function F(e = "P-256") { if ("X25519" === e) { const e = await crypto.subtle.generateKey({ name: "X25519" }, !0, ["deriveBits"]); return { keyPair: e, publicKeyRaw: new Uint8Array(await crypto.subtle.exportKey("raw", e.publicKey)) } } const t = await crypto.subtle.generateKey({ name: "ECDH", namedCurve: e }, !0, ["deriveBits"]); return { keyPair: t, publicKeyRaw: new Uint8Array(await crypto.subtle.exportKey("raw", t.publicKey)) } } async function Y(e, t, n = "P-256") { if ("X25519" === n) { const n = await crypto.subtle.importKey("raw", t, { name: "X25519" }, !1, []); return new Uint8Array(await crypto.subtle.deriveBits({ name: "X25519", public: n }, e, 256)) } const r = await crypto.subtle.importKey("raw", t, { name: "ECDH", namedCurve: n }, !1, []), i = "P-384" === n ? 384 : "P-521" === n ? 528 : 256; return new Uint8Array(await crypto.subtle.deriveBits({ name: "ECDH", public: r }, e, i)) } async function j(e, t, n, r) { const i = await crypto.subtle.importKey("raw", e, { name: "AES-GCM" }, !1, ["encrypt"]); return new Uint8Array(await crypto.subtle.encrypt({ name: "AES-GCM", iv: t, additionalData: r, tagLength: 128 }, i, n)) } async function z(e, t, n, r) { const i = await crypto.subtle.importKey("raw", e, { name: "AES-GCM" }, !1, ["decrypt"]); return new Uint8Array(await crypto.subtle.decrypt({ name: "AES-GCM", iv: t, additionalData: r, tagLength: 128 }, i, n)) } function J(e, t) { return (e << t | e >>> 32 - t) >>> 0 } function Q(e, t, n, r, i) { e[t] = e[t] + e[n] >>> 0, e[i] = J(e[i] ^ e[t], 16), e[r] = e[r] + e[i] >>> 0, e[n] = J(e[n] ^ e[r], 12), e[t] = e[t] + e[n] >>> 0, e[i] = J(e[i] ^ e[t], 8), e[r] = e[r] + e[i] >>> 0, e[n] = J(e[n] ^ e[r], 7) } function Z(e, t, n) { const r = new Uint32Array(16); r[0] = 1634760805, r[1] = 857760878, r[2] = 2036477234, r[3] = 1797285236; const i = new DataView(e.buffer, e.byteOffset, e.byteLength); for (let e = 0; e < 8; e++)r[4 + e] = i.getUint32(4 * e, !0); r[12] = t; const s = new DataView(n.buffer, n.byteOffset, n.byteLength); r[13] = s.getUint32(0, !0), r[14] = s.getUint32(4, !0), r[15] = s.getUint32(8, !0); const a = new Uint32Array(r); for (let e = 0; e < 10; e++)Q(a, 0, 4, 8, 12), Q(a, 1, 5, 9, 13), Q(a, 2, 6, 10, 14), Q(a, 3, 7, 11, 15), Q(a, 0, 5, 10, 15), Q(a, 1, 6, 11, 12), Q(a, 2, 7, 8, 13), Q(a, 3, 4, 9, 14); for (let e = 0; e < 16; e++)a[e] = a[e] + r[e] >>> 0; return new Uint8Array(a.buffer.slice(0)) } function ee(e, t, n) { const r = new Uint8Array(n.length); let i = 1; for (let s = 0; s < n.length; s += 64) { const a = Z(e, i++, t), h = Math.min(64, n.length - s); for (let e = 0; e < h; e++)r[s + e] = n[s + e] ^ a[e] } return r } function te(e, t) { const n = function (e) { const t = new Uint8Array(e); return t[3] &= 15, t[7] &= 15, t[11] &= 15, t[15] &= 15, t[4] &= 252, t[8] &= 252, t[12] &= 252, t }(e.slice(0, 16)), r = e.slice(16, 32); let i = [0n, 0n, 0n, 0n, 0n]; const s = [0x3ffffffn & BigInt(n[0] | n[1] << 8 | n[2] << 16 | n[3] << 24), 0x3ffffffn & BigInt(n[3] >> 2 | n[4] << 6 | n[5] << 14 | n[6] << 22), 0x3ffffffn & BigInt(n[6] >> 4 | n[7] << 4 | n[8] << 12 | n[9] << 20), 0x3ffffffn & BigInt(n[9] >> 6 | n[10] << 2 | n[11] << 10 | n[12] << 18), 0x3ffffffn & BigInt(n[13] | n[14] << 8 | n[15] << 16)]; for (let e = 0; e < t.length; e += 16) { const n = t.slice(e, e + 16), r = new Uint8Array(17); r.set(n), r[n.length] = 1, i[0] += BigInt(r[0] | r[1] << 8 | r[2] << 16 | (3 & r[3]) << 24), i[1] += BigInt(r[3] >> 2 | r[4] << 6 | r[5] << 14 | (15 & r[6]) << 22), i[2] += BigInt(r[6] >> 4 | r[7] << 4 | r[8] << 12 | (63 & r[9]) << 20), i[3] += BigInt(r[9] >> 6 | r[10] << 2 | r[11] << 10 | r[12] << 18), i[4] += BigInt(r[13] | r[14] << 8 | r[15] << 16 | r[16] << 24); const a = [0n, 0n, 0n, 0n, 0n]; for (let e = 0; e < 5; e++)for (let t = 0; t < 5; t++) { const n = e + t; n < 5 ? a[n] += i[e] * s[t] : a[n - 5] += i[e] * s[t] * 5n } let h = 0n; for (let e = 0; e < 5; e++)a[e] += h, i[e] = 0x3ffffffn & a[e], h = a[e] >> 26n; i[0] += 5n * h, h = i[0] >> 26n, i[0] &= 0x3ffffffn, i[1] += h } let a = i[0] | i[1] << 26n | i[2] << 52n | i[3] << 78n | i[4] << 104n; a = a + r.reduce(((e, t, n) => e + (BigInt(t) << BigInt(8 * n))), 0n) & (1n << 128n) - 1n; const h = new Uint8Array(16); for (let e = 0; e < 16; e++)h[e] = Number(a >> BigInt(8 * e) & 0xffn); return h } function ne(e, t, n, r) { const i = Z(e, 0, t).slice(0, 32), s = ee(e, t, n), a = (16 - r.length % 16) % 16, h = (16 - s.length % 16) % 16, c = new Uint8Array(r.length + a + s.length + h + 16); c.set(r, 0), c.set(s, r.length + a); const o = new DataView(c.buffer, r.length + a + s.length + h); o.setBigUint64(0, BigInt(r.length), !0), o.setBigUint64(8, BigInt(s.length), !0); const l = te(i, c); return W(s, l) } function re(e, t, n, r) { if (n.length < 16) throw new Error("Ciphertext too short"); const i = n.slice(-16), s = n.slice(0, -16), a = Z(e, 0, t).slice(0, 32), h = (16 - r.length % 16) % 16, c = (16 - s.length % 16) % 16, o = new Uint8Array(r.length + h + s.length + c + 16); o.set(r, 0), o.set(s, r.length + h); const l = new DataView(o.buffer, r.length + h + s.length + c); l.setBigUint64(0, BigInt(r.length), !0), l.setBigUint64(8, BigInt(s.length), !0); const f = te(a, o); let u = 0; for (let e = 0; e < 16; e++)u |= i[e] ^ f[e]; if (0 !== u) throw new Error("ChaCha20-Poly1305 authentication failed"); return ee(e, t, s) } function ie(e, n, r = t) { return _(e, B(r), B(n.length), n) } function se(e, t) { return _(e, (e => [e >> 16 & 255, e >> 8 & 255, 255 & e])(t.length), t) } class ae { constructor() { this.buffer = new Uint8Array(0) } feed(e) { this.buffer = W(this.buffer, e) } next() { if (this.buffer.length < 5) return null; const e = this.buffer[0], t = R(this.buffer, 1), n = R(this.buffer, 3); if (this.buffer.length < 5 + n) return null; const r = this.buffer.slice(5, 5 + n); return this.buffer = this.buffer.slice(5 + n), { type: e, version: t, length: n, fragment: r } } } class he { constructor() { this.buffer = new Uint8Array(0) } feed(e) { this.buffer = W(this.buffer, e) } next() { if (this.buffer.length < 4) return null; const e = this.buffer[0], t = M(this.buffer, 1); if (this.buffer.length < 4 + t) return null; const n = this.buffer.slice(4, 4 + t), r = this.buffer.slice(0, 4 + t); return this.buffer = this.buffer.slice(4 + t), { type: e, length: t, body: n, raw: r } } } function ce(e) { let t = 0; const r = R(e, t); t += 2; const i = e.slice(t, t + 32); t += 32; const s = e[t++], a = e.slice(t, t + s); t += s; const h = R(e, t); t += 2; const c = e[t++]; let o = r, l = null, f = null; if (t < e.length) { const n = R(e, t); t += 2; const r = t + n; for (; t + 4 <= r;) { const n = R(e, t); t += 2; const r = R(e, t); t += 2; const i = e.slice(t, t + r); if (t += r, n === C && r >= 2) o = R(i, 0); else if (n === T && r >= 4) { const e = R(i, 0), t = R(i, 2); l = { group: e, key: i.slice(4, 4 + t) } } else n === b && r >= 3 && (f = K.decode(i.slice(3, 3 + i[2]))) } } const u = new Uint8Array([207, 33, 173, 116, 229, 154, 97, 17, 190, 29, 140, 2, 30, 101, 184, 145, 194, 162, 17, 22, 122, 187, 140, 94, 7, 158, 9, 226, 200, 168, 51, 156]); return { version: r, serverRandom: i, sessionId: a, cipherSuite: h, compression: c, selectedVersion: o, keyShare: l, alpn: f, isHRR: N(i, u), isTls13: o === n } } function oe(e) { let t = 0; t++; const n = R(e, t); t += 2; const r = e[t++]; return { namedCurve: n, serverPublicKey: e.slice(t, t + r) } } function le(e, t = 0) { let n = 0; if (t) { const t = e[n++]; n += t } if (n + 3 > e.length) return null; const r = M(e, n); if (n += 3, !r || n + 3 > e.length) return null; const i = M(e, n); return n += 3, i ? e.slice(n, n + i) : null } function fe(e) { const t = { alpn: null }; let n = 2; const r = 2 + R(e, 0); for (; n + 4 <= r;) { const r = R(e, n); n += 2; const i = R(e, n); if (n += 2, r === b && i >= 3) { const r = e[n + 2]; r > 0 && n + 3 + r <= n + i && (t.alpn = K.decode(e.slice(n + 3, n + 3 + r))) } n += i } return t } const F0 = e => { if (e = String(e ?? "").trim(), "[" === e[0] && "]" === e[e.length - 1] && (e = e.slice(1, -1)), !e || e.includes(":")) return ""; const t = e.split("."); if (4 !== t.length) return e; for (const n of t) { if ("" === n || n.length > 3) return e; let t = 0; for (let r = 0; r < n.length; r++) { const i = n.charCodeAt(r) - 48; if (i < 0 || i > 9) return e; t = 10 * t + i } if (t > 255) return e } return "" }, Z0 = e => e && 1 === e[0] && 112 === e[1]; function ue(e, n, r, { tls13: i = !0, tls12: s = !0, alpn: a = null } = {}) { n = F0(n); const c = []; i && c.push(4865, 4866, 4867), s && c.push(49199, 49200, 52392, 49195, 49196, 52393); const o = _(...c.flatMap(B)), l = [_(255, 1, 0, 1, 0)]; if (n) { const e = L.encode(n), t = _(0, B(e.length), e); l.push(_(B(v), B(t.length + 2), B(t.length), t)) } l.push(_(B(S), 0, 2, 1, 0)), l.push(_(B(A), 0, 6, 0, 4, 0, 29, 0, 23)); const f = _(...x.flatMap(B)); l.push(_(B(m), B(f.length + 2), B(f.length), f)); const u = Array.isArray(a) ? a.filter(Boolean) : a ? [a] : []; if (u.length) { const e = W(...u.map((e => { const t = L.encode(e); return _(t.length, t) }))); l.push(_(B(b), B(e.length + 2), B(e.length), e)) } if (i && r) { let e; if (l.push(s ? _(B(C), 0, 5, 4, 3, 4, 3, 3) : _(B(C), 0, 3, 2, 3, 4)), l.push(_(B(H), 0, 2, 1, 1)), r?.x25519 && r?.p256) e = W(_(0, 29, B(r.x25519.length), r.x25519), _(0, 23, B(r.p256.length), r.p256)); else if (r?.x25519) e = _(0, 29, B(r.x25519.length), r.x25519); else if (r?.p256) e = _(0, 23, B(r.p256.length), r.p256); else { if (!(r instanceof Uint8Array)) throw new Error("Invalid keyShares"); e = _(0, 23, B(r.length), r) } l.push(_(B(T), B(e.length + 2), B(e.length), e)) } const y = W(...l); return se(h, _(B(t), e, 0, B(o.length), o, 1, 0, B(y.length), y)) } const ye = e => { const t = new Uint8Array(8); return new DataView(t.buffer).setBigUint64(0, e, !1), t }, pe = (e, t) => { const n = e.slice(), r = ye(t); for (let e = 0; e < 8; e++)n[n.length - 8 + e] ^= r[e]; return n }, we = (e, t, n, r) => Promise.all([O(e, t, "key", P, n), O(e, t, "iv", P, r)]); class TlsClient { constructor(e, t = {}) { if (this.socket = e, this.serverName = t.serverName || "", this.supportTls13 = !1 !== t.tls13, this.supportTls12 = !1 !== t.tls12, !this.supportTls13 && !this.supportTls12) throw new Error("At least one TLS version must be enabled"); this.alpnProtocols = Array.isArray(t.alpn) ? t.alpn : t.alpn ? [t.alpn] : null, this.timeout = t.timeout ?? 3e4, this.clientRandom = D(32), this.serverRandom = null, this.handshakeChunks = [], this.handshakeComplete = !1, this.negotiatedAlpn = null, this.cipherSuite = null, this.cipherConfig = null, this.isTls13 = !1, this.masterSecret = null, this.handshakeSecret = null, this.clientWriteKey = null, this.serverWriteKey = null, this.clientWriteIv = null, this.serverWriteIv = null, this.clientHandshakeKey = null, this.serverHandshakeKey = null, this.clientHandshakeIv = null, this.serverHandshakeIv = null, this.clientAppKey = null, this.serverAppKey = null, this.clientAppIv = null, this.serverAppIv = null, this.clientSeqNum = 0n, this.serverSeqNum = 0n, this.recordParser = new ae, this.handshakeParser = new he, this.keyPairs = new Map, this.ecdhKeyPair = null, this.sawCert = !1 } recordHandshake(e) { this.handshakeChunks.push(e) } transcript() { return 1 === this.handshakeChunks.length ? this.handshakeChunks[0] : W(...this.handshakeChunks) } getCipherConfig(e) { return U.get(e) || null } async readChunk(e) { if (!this.timeout) return e.read(); let t; const n = e.read(), r = await Promise.race([n, new Promise(e => t = setTimeout(e, this.timeout, 0))]).finally(() => clearTimeout(t)); if (r) return r; try { await e.cancel("TLS read timeout") } catch { } try { await n } catch { } throw new Error("TLS read timeout") } async pr(e, t, n) { for (; ;) { let r; for (; r = this.recordParser.next();)if (await t(r)) return; const { value: i, done: s } = await this.readChunk(e); if (s) throw new Error(n); this.recordParser.feed(i) } } async ph(e, t, n) { for (let e; e = this.handshakeParser.next();)if (await t(e)) return; return this.pr(e, (async e => { if (e.type === i) { if (Z0(e.fragment)) return; throw new Error(`TLS Alert: ${e.fragment[1]}`) } if (e.type === s) { this.handshakeParser.feed(e.fragment); for (let e; e = this.handshakeParser.next();)if (await t(e)) return 1 } }), n) } async acceptCertificate(e) { if (!e?.length) throw new Error("Empty certificate"); this.sawCert = !0 } async handshake() { const [t, n] = await Promise.all([F("P-256"), F("X25519")]); this.keyPairs = new Map([[23, t], [29, n]]), this.ecdhKeyPair = t.keyPair; const r = this.socket.readable.getReader(), i = this.socket.writable.getWriter(); try { const a = ue(this.clientRandom, this.serverName, { x25519: n.publicKeyRaw, p256: t.publicKeyRaw }, { tls13: this.supportTls13, tls12: this.supportTls12, alpn: this.alpnProtocols }); this.recordHandshake(a), await i.write(ie(s, a, e)); const h = await this.receiveServerHello(r); if (h.isHRR) throw new Error("HelloRetryRequest is not supported by TLSClientMini"); if (h.keyShare?.group && this.keyPairs.has(h.keyShare.group)) { const e = this.keyPairs.get(h.keyShare.group); this.ecdhKeyPair = e.keyPair } h.isTls13 ? await this.handshakeTls13(r, i, h) : await this.handshakeTls12(r, i), this.handshakeComplete = !0 } finally { r.releaseLock(), i.releaseLock() } } async receiveServerHello(e) { for (; ;) { const { value: t, done: n } = await this.readChunk(e); if (n) throw new Error("Connection closed waiting for ServerHello"); let r; for (this.recordParser.feed(t); r = this.recordParser.next();) { if (r.type === i) { if (Z0(r.fragment)) continue; throw new Error(`TLS Alert: level=${r.fragment[0]}, desc=${r.fragment[1]}`) } if (r.type !== s) continue; let e; for (this.handshakeParser.feed(r.fragment); e = this.handshakeParser.next();) { if (e.type !== c) continue; this.recordHandshake(e.raw); const t = ce(e.body); if (this.serverRandom = t.serverRandom, this.cipherSuite = t.cipherSuite, this.cipherConfig = this.getCipherConfig(t.cipherSuite), this.isTls13 = t.isTls13, this.negotiatedAlpn = t.alpn || null, !this.cipherConfig) throw new Error(`Unsupported cipher suite: 0x${t.cipherSuite.toString(16)}`); return t } } } } async handshakeTls12(e, t) { let n = null, a = !1; if (await this.ph(e, (async e => { switch (e.type) { case f: { this.recordHandshake(e.raw); const t = le(e.body, 1); if (!t) throw new Error("Missing TLS 1.2 certificate"); await this.acceptCertificate(t); break } case u: this.recordHandshake(e.raw), n = oe(e.body); break; case p: return this.recordHandshake(e.raw), a = !0, 1; case y: throw new Error("Client certificate is not supported"); default: this.recordHandshake(e.raw) } }), "Connection closed during TLS 1.2 handshake"), !this.sawCert) throw new Error("Missing TLS 1.2 leaf certificate"); if (!n) throw new Error("Missing TLS 1.2 ServerKeyExchange"); const h = I.get(n.namedCurve); if (!h) throw new Error(`Unsupported named curve: 0x${n.namedCurve.toString(16)}`); const c = this.keyPairs.get(n.namedCurve); if (!c) throw new Error(`Missing key pair for curve: 0x${n.namedCurve.toString(16)}`); const o = await Y(c.keyPair.privateKey, n.serverPublicKey, h), l = se(d, _(c.publicKeyRaw.length, c.publicKeyRaw)); this.recordHandshake(l); const w = this.cipherConfig.hash; this.masterSecret = await V(o, "master secret", W(this.clientRandom, this.serverRandom), 48, w); const k = this.cipherConfig.keyLen, v = this.cipherConfig.ivLen, A = await V(this.masterSecret, "key expansion", W(this.serverRandom, this.clientRandom), 2 * k + 2 * v, w); this.clientWriteKey = A.slice(0, k), this.serverWriteKey = A.slice(k, 2 * k), this.clientWriteIv = A.slice(2 * k, 2 * k + v), this.serverWriteIv = A.slice(2 * k + v, 2 * k + 2 * v), await t.write(ie(s, l)), await t.write(ie(r, _(1))); const S = await V(this.masterSecret, "client finished", await G(w, this.transcript()), 12, w), m = se(g, S); this.recordHandshake(m), await t.write(ie(s, await this.encryptTls12(m, s))); let b = !1; await this.pr(e, (async e => { if (e.type === i) { if (Z0(e.fragment)) return; throw new Error(`TLS Alert: ${e.fragment[1]}`) } if (e.type === r) return void (b = !0); if (e.type !== s || !b) return; const t = await this.decryptTls12(e.fragment, s); if (t[0] !== g) return; const n = M(t, 1), a = t.slice(4, 4 + n), h = await V(this.masterSecret, "server finished", await G(w, this.transcript()), 12, w); if (!N(a, h)) throw new Error("TLS 1.2 server Finished verify failed"); return 1 }), "Connection closed waiting for TLS 1.2 Finished") } async handshakeTls13(e, t, n) { const h = I.get(n.keyShare?.group); if (!h || !n.keyShare?.key?.length) throw new Error("Missing TLS 1.3 key_share"); const c = this.cipherConfig.hash, o = q(c), u = this.cipherConfig.keyLen, p = this.cipherConfig.ivLen, d = await Y(this.ecdhKeyPair.privateKey, n.keyShare.key, h), k = await X(c, null, new Uint8Array(o)), v = await O(c, k, "derived", await G(c, P), o); this.handshakeSecret = await X(c, v, d); const A = await G(c, this.transcript()), S = await O(c, this.handshakeSecret, "c hs traffic", A, o), m = await O(c, this.handshakeSecret, "s hs traffic", A, o);[this.clientHandshakeKey, this.clientHandshakeIv] = await we(c, S, u, p), [this.serverHandshakeKey, this.serverHandshakeIv] = await we(c, m, u, p); const b = await O(c, m, "finished", P, o); let C = !1; const H = async e => { switch (e.type) { case l: { const t = fe(e.body); t.alpn && (this.negotiatedAlpn = t.alpn), this.recordHandshake(e.raw); break } case f: { const t = le(e.body); if (!t) throw new Error("Missing TLS 1.3 certificate"); await this.acceptCertificate(t), this.recordHandshake(e.raw); break } case y: throw new Error("Client certificate is not supported"); case w: this.recordHandshake(e.raw); break; case g: { const t = await $(c, b, await G(c, this.transcript())); if (!N(t, e.body)) throw new Error("TLS 1.3 server Finished verify failed"); this.recordHandshake(e.raw), C = !0; break } default: this.recordHandshake(e.raw) } }; await this.pr(e, (async e => { if (e.type === r || e.type === s) return; if (e.type === i) { if (Z0(e.fragment)) return; throw new Error(`TLS Alert: ${e.fragment[1]}`) } if (e.type !== a) return; const t = await this.decryptTls13Handshake(e.fragment), n = t[t.length - 1], h = t.slice(0, -1); if (n === s) { this.handshakeParser.feed(h); for (let e; e = this.handshakeParser.next();)if (await H(e), C) return 1 } }), "Connection closed during TLS 1.3 handshake"); const T = await G(c, this.transcript()), E = await O(c, this.handshakeSecret, "derived", await G(c, P), o), L = await X(c, E, new Uint8Array(o)), K = await O(c, L, "c ap traffic", T, o), U = await O(c, L, "s ap traffic", T, o);[this.clientAppKey, this.clientAppIv] = await we(c, K, u, p), [this.serverAppKey, this.serverAppIv] = await we(c, U, u, p); const x = await O(c, S, "finished", P, o), _ = await $(c, x, await G(c, this.transcript())), B = se(g, _); this.recordHandshake(B), await t.write(ie(a, await this.encryptTls13Handshake(W(B, [s])))), this.clientSeqNum = 0n, this.serverSeqNum = 0n } async encryptTls12(e, n) { const r = this.clientSeqNum++, i = ye(r), s = W(i, [n], B(t), B(e.length)); if (this.cipherConfig.chacha) { const t = pe(this.clientWriteIv, r); return ne(this.clientWriteKey, t, e, s) } const a = D(8); return W(a, await j(this.clientWriteKey, W(this.clientWriteIv, a), e, s)) } async decryptTls12(e, n) { const r = this.serverSeqNum++, i = ye(r); if (this.cipherConfig.chacha) { const s = pe(this.serverWriteIv, r); return re(this.serverWriteKey, s, e, W(i, [n], B(t), B(e.length - 16))) } const s = e.slice(0, 8), a = e.slice(8); return z(this.serverWriteKey, W(this.serverWriteIv, s), a, W(i, [n], B(t), B(a.length - 16))) } async encryptTls13Handshake(e) { const t = pe(this.clientHandshakeIv, this.clientSeqNum++), n = _(a, 3, 3, B(e.length + 16)); return this.cipherConfig.chacha ? ne(this.clientHandshakeKey, t, e, n) : j(this.clientHandshakeKey, t, e, n) } async decryptTls13Handshake(e) { const t = pe(this.serverHandshakeIv, this.serverSeqNum++), n = _(a, 3, 3, B(e.length)), r = await (this.cipherConfig.chacha ? re(this.serverHandshakeKey, t, e, n) : z(this.serverHandshakeKey, t, e, n)); let i = r.length - 1; for (; i >= 0 && !r[i];) i--; return i < 0 ? P : r.slice(0, i + 1) } async encryptTls13(e) { const t = W(e, [a]), n = pe(this.clientAppIv, this.clientSeqNum++), r = _(a, 3, 3, B(t.length + 16)); return this.cipherConfig.chacha ? ne(this.clientAppKey, n, t, r) : j(this.clientAppKey, n, t, r) } async decryptTls13(e) { const t = pe(this.serverAppIv, this.serverSeqNum++), n = _(a, 3, 3, B(e.length)), r = this.cipherConfig.chacha ? await re(this.serverAppKey, t, e, n) : await z(this.serverAppKey, t, e, n); let i = r.length - 1; for (; i >= 0 && !r[i];) i--; return i < 0 ? { data: P, type: 0 } : { data: r.slice(0, i), type: r[i] } } async write(e) { if (!this.handshakeComplete) throw new Error("Handshake not complete"); const t = this.socket.writable.getWriter(); try { this.isTls13 ? await t.write(ie(a, await this.encryptTls13(e))) : await t.write(ie(a, await this.encryptTls12(e, a))) } finally { t.releaseLock() } } async read() { for (; ;) { let e; for (; e = this.recordParser.next();) { if (e.type === i) { if (e.fragment[1] === E) return null; throw new Error(`TLS Alert: ${e.fragment[1]}`) } if (e.type !== a) continue; if (!this.isTls13) return this.decryptTls12(e.fragment, a); const { data: t, type: n } = await this.decryptTls13(e.fragment); if (n === a) return t; if (n === i) { if (t[1] === E) return null; throw new Error(`TLS Alert: ${t[1]}`) } if (n !== s) continue; let r; for (this.handshakeParser.feed(t); r = this.handshakeParser.next();) if (r.type !== o && r.type === k) throw new Error("TLS 1.3 KeyUpdate is not supported by TLSClientMini") } const t = this.socket.readable.getReader(); try { const { value: e, done: n } = await this.readChunk(t); if (n) return null; this.recordParser.feed(e) } finally { t.releaseLock() } } } close() { this.socket.close() } }
+const e = 769,
+  t = 771,
+  n = 772,
+  r = 20,
+  i = 21,
+  s = 22,
+  a = 23,
+  h = 1,
+  c = 2,
+  o = 4,
+  l = 8,
+  f = 11,
+  u = 12,
+  y = 13,
+  p = 14,
+  w = 15,
+  d = 16,
+  g = 20,
+  k = 24,
+  v = 0,
+  A = 10,
+  S = 11,
+  m = 13,
+  b = 16,
+  C = 43,
+  H = 45,
+  T = 51,
+  E = 0,
+  L = new TextEncoder(),
+  K = new TextDecoder(),
+  P = new Uint8Array(0),
+  U = new Map(
+    Object.entries({
+      TLS_AES_128_GCM_SHA256: { id: 4865, keyLen: 16, ivLen: 12, hash: "SHA-256", tls13: !0 },
+      TLS_AES_256_GCM_SHA384: { id: 4866, keyLen: 32, ivLen: 12, hash: "SHA-384", tls13: !0 },
+      TLS_CHACHA20_POLY1305_SHA256: {
+        id: 4867,
+        keyLen: 32,
+        ivLen: 12,
+        hash: "SHA-256",
+        tls13: !0,
+        chacha: !0,
+      },
+      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256: {
+        id: 49199,
+        keyLen: 16,
+        ivLen: 4,
+        hash: "SHA-256",
+        kex: "ECDHE",
+      },
+      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384: {
+        id: 49200,
+        keyLen: 32,
+        ivLen: 4,
+        hash: "SHA-384",
+        kex: "ECDHE",
+      },
+      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256: {
+        id: 52392,
+        keyLen: 32,
+        ivLen: 12,
+        hash: "SHA-256",
+        kex: "ECDHE",
+        chacha: !0,
+      },
+      TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256: {
+        id: 49195,
+        keyLen: 16,
+        ivLen: 4,
+        hash: "SHA-256",
+        kex: "ECDHE",
+      },
+      TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384: {
+        id: 49196,
+        keyLen: 32,
+        ivLen: 4,
+        hash: "SHA-384",
+        kex: "ECDHE",
+      },
+      TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256: {
+        id: 52393,
+        keyLen: 32,
+        ivLen: 12,
+        hash: "SHA-256",
+        kex: "ECDHE",
+        chacha: !0,
+      },
+    }).map(([, e]) => [e.id, e]),
+  ),
+  I = new Map([
+    [29, "X25519"],
+    [23, "P-256"],
+  ]),
+  x = [2052, 2053, 2054, 1025, 1281, 1537, 1027, 1283, 1539],
+  _ = (...e) => {
+    const t = (e) => {
+      const n = [];
+      for (const r of e)
+        r instanceof Uint8Array
+          ? n.push(...r)
+          : Array.isArray(r)
+            ? n.push(...t(r))
+            : "number" === typeof r && n.push(r);
+      return n;
+    };
+    return new Uint8Array(t(e));
+  },
+  B = (e) => [(e >> 8) & 255, 255 & e],
+  R = (e, t) => (e[t] << 8) | e[t + 1],
+  M = (e, t) => (e[t] << 16) | (e[t + 1] << 8) | e[t + 2],
+  W = (...e) => {
+    const t = e.filter((e) => e && e.length > 0),
+      n = t.reduce((e, t) => e + t.length, 0),
+      r = new Uint8Array(n);
+    let i = 0;
+    for (const e of t) r.set(e, i), (i += e.length);
+    return r;
+  },
+  D = (e) => crypto.getRandomValues(new Uint8Array(e)),
+  N = (e, t) => {
+    if (!e || !t || e.length !== t.length) return !1;
+    let n = 0;
+    for (let r = 0; r < e.length; r++) n |= e[r] ^ t[r];
+    return 0 === n;
+  },
+  q = (e) => ("SHA-512" === e ? 64 : "SHA-384" === e ? 48 : 32);
+async function $(e, t, n) {
+  const r = await crypto.subtle.importKey("raw", t, { name: "HMAC", hash: e }, !1, ["sign"]);
+  return new Uint8Array(await crypto.subtle.sign("HMAC", r, n));
+}
+async function G(e, t) {
+  return new Uint8Array(await crypto.subtle.digest(e, t));
+}
+async function V(e, t, n, r, i = "SHA-256") {
+  const s = W(L.encode(t), n);
+  let a = new Uint8Array(0),
+    h = s;
+  for (; a.length < r; ) {
+    h = await $(i, e, h);
+    const t = await $(i, e, W(h, s));
+    a = W(a, t);
+  }
+  return a.slice(0, r);
+}
+async function X(e, t, n) {
+  return (t && t.length) || (t = new Uint8Array(q(e))), $(e, t, n);
+}
+async function O(e, t, n, r, i) {
+  const s = L.encode("tls13 " + n);
+  return (async function (e, t, n, r) {
+    const i = q(e),
+      s = Math.ceil(r / i);
+    let a = new Uint8Array(0),
+      h = new Uint8Array(0);
+    for (let r = 1; r <= s; r++) (h = await $(e, t, W(h, n, [r]))), (a = W(a, h));
+    return a.slice(0, r);
+  })(e, t, _(B(i), s.length, s, r.length, r), i);
+}
+async function F(e = "P-256") {
+  if ("X25519" === e) {
+    const e = await crypto.subtle.generateKey({ name: "X25519" }, !0, ["deriveBits"]);
+    return {
+      keyPair: e,
+      publicKeyRaw: new Uint8Array(await crypto.subtle.exportKey("raw", e.publicKey)),
+    };
+  }
+  const t = await crypto.subtle.generateKey({ name: "ECDH", namedCurve: e }, !0, ["deriveBits"]);
+  return {
+    keyPair: t,
+    publicKeyRaw: new Uint8Array(await crypto.subtle.exportKey("raw", t.publicKey)),
+  };
+}
+async function Y(e, t, n = "P-256") {
+  if ("X25519" === n) {
+    const n = await crypto.subtle.importKey("raw", t, { name: "X25519" }, !1, []);
+    return new Uint8Array(await crypto.subtle.deriveBits({ name: "X25519", public: n }, e, 256));
+  }
+  const r = await crypto.subtle.importKey("raw", t, { name: "ECDH", namedCurve: n }, !1, []),
+    i = "P-384" === n ? 384 : "P-521" === n ? 528 : 256;
+  return new Uint8Array(await crypto.subtle.deriveBits({ name: "ECDH", public: r }, e, i));
+}
+async function j(e, t, n, r) {
+  const i = await crypto.subtle.importKey("raw", e, { name: "AES-GCM" }, !1, ["encrypt"]);
+  return new Uint8Array(
+    await crypto.subtle.encrypt(
+      { name: "AES-GCM", iv: t, additionalData: r, tagLength: 128 },
+      i,
+      n,
+    ),
+  );
+}
+async function z(e, t, n, r) {
+  const i = await crypto.subtle.importKey("raw", e, { name: "AES-GCM" }, !1, ["decrypt"]);
+  return new Uint8Array(
+    await crypto.subtle.decrypt(
+      { name: "AES-GCM", iv: t, additionalData: r, tagLength: 128 },
+      i,
+      n,
+    ),
+  );
+}
+function J(e, t) {
+  return ((e << t) | (e >>> (32 - t))) >>> 0;
+}
+function Q(e, t, n, r, i) {
+  (e[t] = (e[t] + e[n]) >>> 0),
+    (e[i] = J(e[i] ^ e[t], 16)),
+    (e[r] = (e[r] + e[i]) >>> 0),
+    (e[n] = J(e[n] ^ e[r], 12)),
+    (e[t] = (e[t] + e[n]) >>> 0),
+    (e[i] = J(e[i] ^ e[t], 8)),
+    (e[r] = (e[r] + e[i]) >>> 0),
+    (e[n] = J(e[n] ^ e[r], 7));
+}
+function Z(e, t, n) {
+  const r = new Uint32Array(16);
+  (r[0] = 1634760805), (r[1] = 857760878), (r[2] = 2036477234), (r[3] = 1797285236);
+  const i = new DataView(e.buffer, e.byteOffset, e.byteLength);
+  for (let e = 0; e < 8; e++) r[4 + e] = i.getUint32(4 * e, !0);
+  r[12] = t;
+  const s = new DataView(n.buffer, n.byteOffset, n.byteLength);
+  (r[13] = s.getUint32(0, !0)), (r[14] = s.getUint32(4, !0)), (r[15] = s.getUint32(8, !0));
+  const a = new Uint32Array(r);
+  for (let e = 0; e < 10; e++)
+    Q(a, 0, 4, 8, 12),
+      Q(a, 1, 5, 9, 13),
+      Q(a, 2, 6, 10, 14),
+      Q(a, 3, 7, 11, 15),
+      Q(a, 0, 5, 10, 15),
+      Q(a, 1, 6, 11, 12),
+      Q(a, 2, 7, 8, 13),
+      Q(a, 3, 4, 9, 14);
+  for (let e = 0; e < 16; e++) a[e] = (a[e] + r[e]) >>> 0;
+  return new Uint8Array(a.buffer.slice(0));
+}
+function ee(e, t, n) {
+  const r = new Uint8Array(n.length);
+  let i = 1;
+  for (let s = 0; s < n.length; s += 64) {
+    const a = Z(e, i++, t),
+      h = Math.min(64, n.length - s);
+    for (let e = 0; e < h; e++) r[s + e] = n[s + e] ^ a[e];
+  }
+  return r;
+}
+function te(e, t) {
+  const n = (function (e) {
+      const t = new Uint8Array(e);
+      return (
+        (t[3] &= 15),
+        (t[7] &= 15),
+        (t[11] &= 15),
+        (t[15] &= 15),
+        (t[4] &= 252),
+        (t[8] &= 252),
+        (t[12] &= 252),
+        t
+      );
+    })(e.slice(0, 16)),
+    r = e.slice(16, 32);
+  let i = [0n, 0n, 0n, 0n, 0n];
+  const s = [
+    0x3ffffffn & BigInt(n[0] | (n[1] << 8) | (n[2] << 16) | (n[3] << 24)),
+    0x3ffffffn & BigInt((n[3] >> 2) | (n[4] << 6) | (n[5] << 14) | (n[6] << 22)),
+    0x3ffffffn & BigInt((n[6] >> 4) | (n[7] << 4) | (n[8] << 12) | (n[9] << 20)),
+    0x3ffffffn & BigInt((n[9] >> 6) | (n[10] << 2) | (n[11] << 10) | (n[12] << 18)),
+    0x3ffffffn & BigInt(n[13] | (n[14] << 8) | (n[15] << 16)),
+  ];
+  for (let e = 0; e < t.length; e += 16) {
+    const n = t.slice(e, e + 16),
+      r = new Uint8Array(17);
+    r.set(n),
+      (r[n.length] = 1),
+      (i[0] += BigInt(r[0] | (r[1] << 8) | (r[2] << 16) | ((3 & r[3]) << 24))),
+      (i[1] += BigInt((r[3] >> 2) | (r[4] << 6) | (r[5] << 14) | ((15 & r[6]) << 22))),
+      (i[2] += BigInt((r[6] >> 4) | (r[7] << 4) | (r[8] << 12) | ((63 & r[9]) << 20))),
+      (i[3] += BigInt((r[9] >> 6) | (r[10] << 2) | (r[11] << 10) | (r[12] << 18))),
+      (i[4] += BigInt(r[13] | (r[14] << 8) | (r[15] << 16) | (r[16] << 24)));
+    const a = [0n, 0n, 0n, 0n, 0n];
+    for (let e = 0; e < 5; e++)
+      for (let t = 0; t < 5; t++) {
+        const n = e + t;
+        n < 5 ? (a[n] += i[e] * s[t]) : (a[n - 5] += i[e] * s[t] * 5n);
+      }
+    let h = 0n;
+    for (let e = 0; e < 5; e++) (a[e] += h), (i[e] = 0x3ffffffn & a[e]), (h = a[e] >> 26n);
+    (i[0] += 5n * h), (h = i[0] >> 26n), (i[0] &= 0x3ffffffn), (i[1] += h);
+  }
+  let a = i[0] | (i[1] << 26n) | (i[2] << 52n) | (i[3] << 78n) | (i[4] << 104n);
+  a = (a + r.reduce((e, t, n) => e + (BigInt(t) << BigInt(8 * n)), 0n)) & ((1n << 128n) - 1n);
+  const h = new Uint8Array(16);
+  for (let e = 0; e < 16; e++) h[e] = Number((a >> BigInt(8 * e)) & 0xffn);
+  return h;
+}
+function ne(e, t, n, r) {
+  const i = Z(e, 0, t).slice(0, 32),
+    s = ee(e, t, n),
+    a = (16 - (r.length % 16)) % 16,
+    h = (16 - (s.length % 16)) % 16,
+    c = new Uint8Array(r.length + a + s.length + h + 16);
+  c.set(r, 0), c.set(s, r.length + a);
+  const o = new DataView(c.buffer, r.length + a + s.length + h);
+  o.setBigUint64(0, BigInt(r.length), !0), o.setBigUint64(8, BigInt(s.length), !0);
+  const l = te(i, c);
+  return W(s, l);
+}
+function re(e, t, n, r) {
+  if (n.length < 16) throw new Error("Ciphertext too short");
+  const i = n.slice(-16),
+    s = n.slice(0, -16),
+    a = Z(e, 0, t).slice(0, 32),
+    h = (16 - (r.length % 16)) % 16,
+    c = (16 - (s.length % 16)) % 16,
+    o = new Uint8Array(r.length + h + s.length + c + 16);
+  o.set(r, 0), o.set(s, r.length + h);
+  const l = new DataView(o.buffer, r.length + h + s.length + c);
+  l.setBigUint64(0, BigInt(r.length), !0), l.setBigUint64(8, BigInt(s.length), !0);
+  const f = te(a, o);
+  let u = 0;
+  for (let e = 0; e < 16; e++) u |= i[e] ^ f[e];
+  if (0 !== u) throw new Error("ChaCha20-Poly1305 authentication failed");
+  return ee(e, t, s);
+}
+function ie(e, n, r = t) {
+  return _(e, B(r), B(n.length), n);
+}
+function se(e, t) {
+  return _(e, ((e) => [(e >> 16) & 255, (e >> 8) & 255, 255 & e])(t.length), t);
+}
+class ae {
+  constructor() {
+    this.buffer = new Uint8Array(0);
+  }
+  feed(e) {
+    this.buffer = W(this.buffer, e);
+  }
+  next() {
+    if (this.buffer.length < 5) return null;
+    const e = this.buffer[0],
+      t = R(this.buffer, 1),
+      n = R(this.buffer, 3);
+    if (this.buffer.length < 5 + n) return null;
+    const r = this.buffer.slice(5, 5 + n);
+    return (
+      (this.buffer = this.buffer.slice(5 + n)), { type: e, version: t, length: n, fragment: r }
+    );
+  }
+}
+class he {
+  constructor() {
+    this.buffer = new Uint8Array(0);
+  }
+  feed(e) {
+    this.buffer = W(this.buffer, e);
+  }
+  next() {
+    if (this.buffer.length < 4) return null;
+    const e = this.buffer[0],
+      t = M(this.buffer, 1);
+    if (this.buffer.length < 4 + t) return null;
+    const n = this.buffer.slice(4, 4 + t),
+      r = this.buffer.slice(0, 4 + t);
+    return (this.buffer = this.buffer.slice(4 + t)), { type: e, length: t, body: n, raw: r };
+  }
+}
+function ce(e) {
+  let t = 0;
+  const r = R(e, t);
+  t += 2;
+  const i = e.slice(t, t + 32);
+  t += 32;
+  const s = e[t++],
+    a = e.slice(t, t + s);
+  t += s;
+  const h = R(e, t);
+  t += 2;
+  const c = e[t++];
+  let o = r,
+    l = null,
+    f = null;
+  if (t < e.length) {
+    const n = R(e, t);
+    t += 2;
+    const r = t + n;
+    for (; t + 4 <= r; ) {
+      const n = R(e, t);
+      t += 2;
+      const r = R(e, t);
+      t += 2;
+      const i = e.slice(t, t + r);
+      if (((t += r), n === C && r >= 2)) o = R(i, 0);
+      else if (n === T && r >= 4) {
+        const e = R(i, 0),
+          t = R(i, 2);
+        l = { group: e, key: i.slice(4, 4 + t) };
+      } else n === b && r >= 3 && (f = K.decode(i.slice(3, 3 + i[2])));
+    }
+  }
+  const u = new Uint8Array([
+    207, 33, 173, 116, 229, 154, 97, 17, 190, 29, 140, 2, 30, 101, 184, 145, 194, 162, 17, 22, 122,
+    187, 140, 94, 7, 158, 9, 226, 200, 168, 51, 156,
+  ]);
+  return {
+    version: r,
+    serverRandom: i,
+    sessionId: a,
+    cipherSuite: h,
+    compression: c,
+    selectedVersion: o,
+    keyShare: l,
+    alpn: f,
+    isHRR: N(i, u),
+    isTls13: o === n,
+  };
+}
+function oe(e) {
+  let t = 0;
+  t++;
+  const n = R(e, t);
+  t += 2;
+  const r = e[t++];
+  return { namedCurve: n, serverPublicKey: e.slice(t, t + r) };
+}
+function le(e, t = 0) {
+  let n = 0;
+  if (t) {
+    const t = e[n++];
+    n += t;
+  }
+  if (n + 3 > e.length) return null;
+  const r = M(e, n);
+  if (((n += 3), !r || n + 3 > e.length)) return null;
+  const i = M(e, n);
+  return (n += 3), i ? e.slice(n, n + i) : null;
+}
+function fe(e) {
+  const t = { alpn: null };
+  let n = 2;
+  const r = 2 + R(e, 0);
+  for (; n + 4 <= r; ) {
+    const r = R(e, n);
+    n += 2;
+    const i = R(e, n);
+    if (((n += 2), r === b && i >= 3)) {
+      const r = e[n + 2];
+      r > 0 && n + 3 + r <= n + i && (t.alpn = K.decode(e.slice(n + 3, n + 3 + r)));
+    }
+    n += i;
+  }
+  return t;
+}
+const F0 = (e) => {
+    if (
+      ((e = String(e ?? "").trim()),
+      "[" === e[0] && "]" === e[e.length - 1] && (e = e.slice(1, -1)),
+      !e || e.includes(":"))
+    )
+      return "";
+    const t = e.split(".");
+    if (4 !== t.length) return e;
+    for (const n of t) {
+      if ("" === n || n.length > 3) return e;
+      let t = 0;
+      for (let r = 0; r < n.length; r++) {
+        const i = n.charCodeAt(r) - 48;
+        if (i < 0 || i > 9) return e;
+        t = 10 * t + i;
+      }
+      if (t > 255) return e;
+    }
+    return "";
+  },
+  Z0 = (e) => e && 1 === e[0] && 112 === e[1];
+function ue(e, n, r, { tls13: i = !0, tls12: s = !0, alpn: a = null } = {}) {
+  n = F0(n);
+  const c = [];
+  i && c.push(4865, 4866, 4867), s && c.push(49199, 49200, 52392, 49195, 49196, 52393);
+  const o = _(...c.flatMap(B)),
+    l = [_(255, 1, 0, 1, 0)];
+  if (n) {
+    const e = L.encode(n),
+      t = _(0, B(e.length), e);
+    l.push(_(B(v), B(t.length + 2), B(t.length), t));
+  }
+  l.push(_(B(S), 0, 2, 1, 0)), l.push(_(B(A), 0, 6, 0, 4, 0, 29, 0, 23));
+  const f = _(...x.flatMap(B));
+  l.push(_(B(m), B(f.length + 2), B(f.length), f));
+  const u = Array.isArray(a) ? a.filter(Boolean) : a ? [a] : [];
+  if (u.length) {
+    const e = W(
+      ...u.map((e) => {
+        const t = L.encode(e);
+        return _(t.length, t);
+      }),
+    );
+    l.push(_(B(b), B(e.length + 2), B(e.length), e));
+  }
+  if (i && r) {
+    let e;
+    if (
+      (l.push(s ? _(B(C), 0, 5, 4, 3, 4, 3, 3) : _(B(C), 0, 3, 2, 3, 4)),
+      l.push(_(B(H), 0, 2, 1, 1)),
+      r?.x25519 && r?.p256)
+    )
+      e = W(_(0, 29, B(r.x25519.length), r.x25519), _(0, 23, B(r.p256.length), r.p256));
+    else if (r?.x25519) e = _(0, 29, B(r.x25519.length), r.x25519);
+    else if (r?.p256) e = _(0, 23, B(r.p256.length), r.p256);
+    else {
+      if (!(r instanceof Uint8Array)) throw new Error("Invalid keyShares");
+      e = _(0, 23, B(r.length), r);
+    }
+    l.push(_(B(T), B(e.length + 2), B(e.length), e));
+  }
+  const y = W(...l);
+  return se(h, _(B(t), e, 0, B(o.length), o, 1, 0, B(y.length), y));
+}
+const ye = (e) => {
+    const t = new Uint8Array(8);
+    return new DataView(t.buffer).setBigUint64(0, e, !1), t;
+  },
+  pe = (e, t) => {
+    const n = e.slice(),
+      r = ye(t);
+    for (let e = 0; e < 8; e++) n[n.length - 8 + e] ^= r[e];
+    return n;
+  },
+  we = (e, t, n, r) => Promise.all([O(e, t, "key", P, n), O(e, t, "iv", P, r)]);
+class TlsClient {
+  constructor(e, t = {}) {
+    if (
+      ((this.socket = e),
+      (this.serverName = t.serverName || ""),
+      (this.supportTls13 = !1 !== t.tls13),
+      (this.supportTls12 = !1 !== t.tls12),
+      !this.supportTls13 && !this.supportTls12)
+    )
+      throw new Error("At least one TLS version must be enabled");
+    (this.alpnProtocols = Array.isArray(t.alpn) ? t.alpn : t.alpn ? [t.alpn] : null),
+      (this.timeout = t.timeout ?? 3e4),
+      (this.clientRandom = D(32)),
+      (this.serverRandom = null),
+      (this.handshakeChunks = []),
+      (this.handshakeComplete = !1),
+      (this.negotiatedAlpn = null),
+      (this.cipherSuite = null),
+      (this.cipherConfig = null),
+      (this.isTls13 = !1),
+      (this.masterSecret = null),
+      (this.handshakeSecret = null),
+      (this.clientWriteKey = null),
+      (this.serverWriteKey = null),
+      (this.clientWriteIv = null),
+      (this.serverWriteIv = null),
+      (this.clientHandshakeKey = null),
+      (this.serverHandshakeKey = null),
+      (this.clientHandshakeIv = null),
+      (this.serverHandshakeIv = null),
+      (this.clientAppKey = null),
+      (this.serverAppKey = null),
+      (this.clientAppIv = null),
+      (this.serverAppIv = null),
+      (this.clientSeqNum = 0n),
+      (this.serverSeqNum = 0n),
+      (this.recordParser = new ae()),
+      (this.handshakeParser = new he()),
+      (this.keyPairs = new Map()),
+      (this.ecdhKeyPair = null),
+      (this.sawCert = !1);
+  }
+  recordHandshake(e) {
+    this.handshakeChunks.push(e);
+  }
+  transcript() {
+    return 1 === this.handshakeChunks.length ? this.handshakeChunks[0] : W(...this.handshakeChunks);
+  }
+  getCipherConfig(e) {
+    return U.get(e) || null;
+  }
+  async readChunk(e) {
+    if (!this.timeout) return e.read();
+    let t;
+    const n = e.read(),
+      r = await Promise.race([n, new Promise((e) => (t = setTimeout(e, this.timeout, 0)))]).finally(
+        () => clearTimeout(t),
+      );
+    if (r) return r;
+    try {
+      await e.cancel("TLS read timeout");
+    } catch {}
+    try {
+      await n;
+    } catch {}
+    throw new Error("TLS read timeout");
+  }
+  async pr(e, t, n) {
+    for (;;) {
+      let r;
+      for (; (r = this.recordParser.next()); ) if (await t(r)) return;
+      const { value: i, done: s } = await this.readChunk(e);
+      if (s) throw new Error(n);
+      this.recordParser.feed(i);
+    }
+  }
+  async ph(e, t, n) {
+    for (let e; (e = this.handshakeParser.next()); ) if (await t(e)) return;
+    return this.pr(
+      e,
+      async (e) => {
+        if (e.type === i) {
+          if (Z0(e.fragment)) return;
+          throw new Error(`TLS Alert: ${e.fragment[1]}`);
+        }
+        if (e.type === s) {
+          this.handshakeParser.feed(e.fragment);
+          for (let e; (e = this.handshakeParser.next()); ) if (await t(e)) return 1;
+        }
+      },
+      n,
+    );
+  }
+  async acceptCertificate(e) {
+    if (!e?.length) throw new Error("Empty certificate");
+    this.sawCert = !0;
+  }
+  async handshake() {
+    const [t, n] = await Promise.all([F("P-256"), F("X25519")]);
+    (this.keyPairs = new Map([
+      [23, t],
+      [29, n],
+    ])),
+      (this.ecdhKeyPair = t.keyPair);
+    const r = this.socket.readable.getReader(),
+      i = this.socket.writable.getWriter();
+    try {
+      const a = ue(
+        this.clientRandom,
+        this.serverName,
+        { x25519: n.publicKeyRaw, p256: t.publicKeyRaw },
+        { tls13: this.supportTls13, tls12: this.supportTls12, alpn: this.alpnProtocols },
+      );
+      this.recordHandshake(a), await i.write(ie(s, a, e));
+      const h = await this.receiveServerHello(r);
+      if (h.isHRR) throw new Error("HelloRetryRequest is not supported by TLSClientMini");
+      if (h.keyShare?.group && this.keyPairs.has(h.keyShare.group)) {
+        const e = this.keyPairs.get(h.keyShare.group);
+        this.ecdhKeyPair = e.keyPair;
+      }
+      h.isTls13 ? await this.handshakeTls13(r, i, h) : await this.handshakeTls12(r, i),
+        (this.handshakeComplete = !0);
+    } finally {
+      r.releaseLock(), i.releaseLock();
+    }
+  }
+  async receiveServerHello(e) {
+    for (;;) {
+      const { value: t, done: n } = await this.readChunk(e);
+      if (n) throw new Error("Connection closed waiting for ServerHello");
+      let r;
+      for (this.recordParser.feed(t); (r = this.recordParser.next()); ) {
+        if (r.type === i) {
+          if (Z0(r.fragment)) continue;
+          throw new Error(`TLS Alert: level=${r.fragment[0]}, desc=${r.fragment[1]}`);
+        }
+        if (r.type !== s) continue;
+        let e;
+        for (this.handshakeParser.feed(r.fragment); (e = this.handshakeParser.next()); ) {
+          if (e.type !== c) continue;
+          this.recordHandshake(e.raw);
+          const t = ce(e.body);
+          if (
+            ((this.serverRandom = t.serverRandom),
+            (this.cipherSuite = t.cipherSuite),
+            (this.cipherConfig = this.getCipherConfig(t.cipherSuite)),
+            (this.isTls13 = t.isTls13),
+            (this.negotiatedAlpn = t.alpn || null),
+            !this.cipherConfig)
+          )
+            throw new Error(`Unsupported cipher suite: 0x${t.cipherSuite.toString(16)}`);
+          return t;
+        }
+      }
+    }
+  }
+  async handshakeTls12(e, t) {
+    let n = null,
+      a = !1;
+    if (
+      (await this.ph(
+        e,
+        async (e) => {
+          switch (e.type) {
+            case f: {
+              this.recordHandshake(e.raw);
+              const t = le(e.body, 1);
+              if (!t) throw new Error("Missing TLS 1.2 certificate");
+              await this.acceptCertificate(t);
+              break;
+            }
+            case u:
+              this.recordHandshake(e.raw), (n = oe(e.body));
+              break;
+            case p:
+              return this.recordHandshake(e.raw), (a = !0), 1;
+            case y:
+              throw new Error("Client certificate is not supported");
+            default:
+              this.recordHandshake(e.raw);
+          }
+        },
+        "Connection closed during TLS 1.2 handshake",
+      ),
+      !this.sawCert)
+    )
+      throw new Error("Missing TLS 1.2 leaf certificate");
+    if (!n) throw new Error("Missing TLS 1.2 ServerKeyExchange");
+    const h = I.get(n.namedCurve);
+    if (!h) throw new Error(`Unsupported named curve: 0x${n.namedCurve.toString(16)}`);
+    const c = this.keyPairs.get(n.namedCurve);
+    if (!c) throw new Error(`Missing key pair for curve: 0x${n.namedCurve.toString(16)}`);
+    const o = await Y(c.keyPair.privateKey, n.serverPublicKey, h),
+      l = se(d, _(c.publicKeyRaw.length, c.publicKeyRaw));
+    this.recordHandshake(l);
+    const w = this.cipherConfig.hash;
+    this.masterSecret = await V(o, "master secret", W(this.clientRandom, this.serverRandom), 48, w);
+    const k = this.cipherConfig.keyLen,
+      v = this.cipherConfig.ivLen,
+      A = await V(
+        this.masterSecret,
+        "key expansion",
+        W(this.serverRandom, this.clientRandom),
+        2 * k + 2 * v,
+        w,
+      );
+    (this.clientWriteKey = A.slice(0, k)),
+      (this.serverWriteKey = A.slice(k, 2 * k)),
+      (this.clientWriteIv = A.slice(2 * k, 2 * k + v)),
+      (this.serverWriteIv = A.slice(2 * k + v, 2 * k + 2 * v)),
+      await t.write(ie(s, l)),
+      await t.write(ie(r, _(1)));
+    const S = await V(this.masterSecret, "client finished", await G(w, this.transcript()), 12, w),
+      m = se(g, S);
+    this.recordHandshake(m), await t.write(ie(s, await this.encryptTls12(m, s)));
+    let b = !1;
+    await this.pr(
+      e,
+      async (e) => {
+        if (e.type === i) {
+          if (Z0(e.fragment)) return;
+          throw new Error(`TLS Alert: ${e.fragment[1]}`);
+        }
+        if (e.type === r) return void (b = !0);
+        if (e.type !== s || !b) return;
+        const t = await this.decryptTls12(e.fragment, s);
+        if (t[0] !== g) return;
+        const n = M(t, 1),
+          a = t.slice(4, 4 + n),
+          h = await V(this.masterSecret, "server finished", await G(w, this.transcript()), 12, w);
+        if (!N(a, h)) throw new Error("TLS 1.2 server Finished verify failed");
+        return 1;
+      },
+      "Connection closed waiting for TLS 1.2 Finished",
+    );
+  }
+  async handshakeTls13(e, t, n) {
+    const h = I.get(n.keyShare?.group);
+    if (!h || !n.keyShare?.key?.length) throw new Error("Missing TLS 1.3 key_share");
+    const c = this.cipherConfig.hash,
+      o = q(c),
+      u = this.cipherConfig.keyLen,
+      p = this.cipherConfig.ivLen,
+      d = await Y(this.ecdhKeyPair.privateKey, n.keyShare.key, h),
+      k = await X(c, null, new Uint8Array(o)),
+      v = await O(c, k, "derived", await G(c, P), o);
+    this.handshakeSecret = await X(c, v, d);
+    const A = await G(c, this.transcript()),
+      S = await O(c, this.handshakeSecret, "c hs traffic", A, o),
+      m = await O(c, this.handshakeSecret, "s hs traffic", A, o);
+    ([this.clientHandshakeKey, this.clientHandshakeIv] = await we(c, S, u, p)),
+      ([this.serverHandshakeKey, this.serverHandshakeIv] = await we(c, m, u, p));
+    const b = await O(c, m, "finished", P, o);
+    let C = !1;
+    const H = async (e) => {
+      switch (e.type) {
+        case l: {
+          const t = fe(e.body);
+          t.alpn && (this.negotiatedAlpn = t.alpn), this.recordHandshake(e.raw);
+          break;
+        }
+        case f: {
+          const t = le(e.body);
+          if (!t) throw new Error("Missing TLS 1.3 certificate");
+          await this.acceptCertificate(t), this.recordHandshake(e.raw);
+          break;
+        }
+        case y:
+          throw new Error("Client certificate is not supported");
+        case w:
+          this.recordHandshake(e.raw);
+          break;
+        case g: {
+          const t = await $(c, b, await G(c, this.transcript()));
+          if (!N(t, e.body)) throw new Error("TLS 1.3 server Finished verify failed");
+          this.recordHandshake(e.raw), (C = !0);
+          break;
+        }
+        default:
+          this.recordHandshake(e.raw);
+      }
+    };
+    await this.pr(
+      e,
+      async (e) => {
+        if (e.type === r || e.type === s) return;
+        if (e.type === i) {
+          if (Z0(e.fragment)) return;
+          throw new Error(`TLS Alert: ${e.fragment[1]}`);
+        }
+        if (e.type !== a) return;
+        const t = await this.decryptTls13Handshake(e.fragment),
+          n = t[t.length - 1],
+          h = t.slice(0, -1);
+        if (n === s) {
+          this.handshakeParser.feed(h);
+          for (let e; (e = this.handshakeParser.next()); ) if ((await H(e), C)) return 1;
+        }
+      },
+      "Connection closed during TLS 1.3 handshake",
+    );
+    const T = await G(c, this.transcript()),
+      E = await O(c, this.handshakeSecret, "derived", await G(c, P), o),
+      L = await X(c, E, new Uint8Array(o)),
+      K = await O(c, L, "c ap traffic", T, o),
+      U = await O(c, L, "s ap traffic", T, o);
+    ([this.clientAppKey, this.clientAppIv] = await we(c, K, u, p)),
+      ([this.serverAppKey, this.serverAppIv] = await we(c, U, u, p));
+    const x = await O(c, S, "finished", P, o),
+      _ = await $(c, x, await G(c, this.transcript())),
+      B = se(g, _);
+    this.recordHandshake(B),
+      await t.write(ie(a, await this.encryptTls13Handshake(W(B, [s])))),
+      (this.clientSeqNum = 0n),
+      (this.serverSeqNum = 0n);
+  }
+  async encryptTls12(e, n) {
+    const r = this.clientSeqNum++,
+      i = ye(r),
+      s = W(i, [n], B(t), B(e.length));
+    if (this.cipherConfig.chacha) {
+      const t = pe(this.clientWriteIv, r);
+      return ne(this.clientWriteKey, t, e, s);
+    }
+    const a = D(8);
+    return W(a, await j(this.clientWriteKey, W(this.clientWriteIv, a), e, s));
+  }
+  async decryptTls12(e, n) {
+    const r = this.serverSeqNum++,
+      i = ye(r);
+    if (this.cipherConfig.chacha) {
+      const s = pe(this.serverWriteIv, r);
+      return re(this.serverWriteKey, s, e, W(i, [n], B(t), B(e.length - 16)));
+    }
+    const s = e.slice(0, 8),
+      a = e.slice(8);
+    return z(this.serverWriteKey, W(this.serverWriteIv, s), a, W(i, [n], B(t), B(a.length - 16)));
+  }
+  async encryptTls13Handshake(e) {
+    const t = pe(this.clientHandshakeIv, this.clientSeqNum++),
+      n = _(a, 3, 3, B(e.length + 16));
+    return this.cipherConfig.chacha
+      ? ne(this.clientHandshakeKey, t, e, n)
+      : j(this.clientHandshakeKey, t, e, n);
+  }
+  async decryptTls13Handshake(e) {
+    const t = pe(this.serverHandshakeIv, this.serverSeqNum++),
+      n = _(a, 3, 3, B(e.length)),
+      r = await (this.cipherConfig.chacha
+        ? re(this.serverHandshakeKey, t, e, n)
+        : z(this.serverHandshakeKey, t, e, n));
+    let i = r.length - 1;
+    for (; i >= 0 && !r[i]; ) i--;
+    return i < 0 ? P : r.slice(0, i + 1);
+  }
+  async encryptTls13(e) {
+    const t = W(e, [a]),
+      n = pe(this.clientAppIv, this.clientSeqNum++),
+      r = _(a, 3, 3, B(t.length + 16));
+    return this.cipherConfig.chacha
+      ? ne(this.clientAppKey, n, t, r)
+      : j(this.clientAppKey, n, t, r);
+  }
+  async decryptTls13(e) {
+    const t = pe(this.serverAppIv, this.serverSeqNum++),
+      n = _(a, 3, 3, B(e.length)),
+      r = this.cipherConfig.chacha
+        ? await re(this.serverAppKey, t, e, n)
+        : await z(this.serverAppKey, t, e, n);
+    let i = r.length - 1;
+    for (; i >= 0 && !r[i]; ) i--;
+    return i < 0 ? { data: P, type: 0 } : { data: r.slice(0, i), type: r[i] };
+  }
+  async write(e) {
+    if (!this.handshakeComplete) throw new Error("Handshake not complete");
+    const t = this.socket.writable.getWriter();
+    try {
+      this.isTls13
+        ? await t.write(ie(a, await this.encryptTls13(e)))
+        : await t.write(ie(a, await this.encryptTls12(e, a)));
+    } finally {
+      t.releaseLock();
+    }
+  }
+  async read() {
+    for (;;) {
+      let e;
+      for (; (e = this.recordParser.next()); ) {
+        if (e.type === i) {
+          if (e.fragment[1] === E) return null;
+          throw new Error(`TLS Alert: ${e.fragment[1]}`);
+        }
+        if (e.type !== a) continue;
+        if (!this.isTls13) return this.decryptTls12(e.fragment, a);
+        const { data: t, type: n } = await this.decryptTls13(e.fragment);
+        if (n === a) return t;
+        if (n === i) {
+          if (t[1] === E) return null;
+          throw new Error(`TLS Alert: ${t[1]}`);
+        }
+        if (n !== s) continue;
+        let r;
+        for (this.handshakeParser.feed(t); (r = this.handshakeParser.next()); )
+          if (r.type !== o && r.type === k)
+            throw new Error("TLS 1.3 KeyUpdate is not supported by TLSClientMini");
+      }
+      const t = this.socket.readable.getReader();
+      try {
+        const { value: e, done: n } = await this.readChunk(t);
+        if (n) return null;
+        this.recordParser.feed(e);
+      } finally {
+        t.releaseLock();
+      }
+    }
+  }
+  close() {
+    this.socket.close();
+  }
+}
