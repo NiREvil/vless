@@ -259,7 +259,7 @@ The list contains proxy IPs from well-known providers such as Google, Amazon, Cl
 - [Yummy Scanner][6] — ابزار تست پراکسی تحت وب
 - [Cmliu Proxy Checker][7] — نمایش Ping پراکسی‌ها (فاقد قابلیت اسکن رنج/کشور)
 - برای مشاهده اطلاعات بیشتر ISP می‌توانید به [check-host.net][ch] مراجعه کنید.
-- برای تست دقیق‌تر و پیشرفته‌تر می‌توانید از [proxyip.edtunnel.best][ed] استفاده کنید. اطلاعات لازم را وارد کرده (در صورت عدم اطلاع از پورت، مقدار `443` را وارد کنید) و نتیجه تست را مشاهده نمایید.
+
 
 <div markdown='1' align='center'>
 
