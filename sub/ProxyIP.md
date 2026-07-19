@@ -260,7 +260,6 @@ The list contains proxy IPs from well-known providers such as Google, Amazon, Cl
 - [Cmliu Proxy Checker][7] — نمایش Ping پراکسی‌ها (فاقد قابلیت اسکن رنج/کشور)
 - برای مشاهده اطلاعات بیشتر ISP می‌توانید به [check-host.net][ch] مراجعه کنید.
 
-
 <div markdown='1' align='center'>
 
 <br/>
