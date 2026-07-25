@@ -531,23 +531,24 @@ async function handleMyConnection(request, env, ctx) {
       `https://api.harmonica.workers.dev/api/${clientIP}`,
       {
         headers: {
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-          "Accept": "application/json"
-        }
+          "User-Agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+          Accept: "application/json",
+        },
       },
-      4000
+      4000,
     );
 
     if (harmonicaRes.ok) {
       const data = await harmonicaRes.json();
-      
+
       if (data) {
         // Target the 'info' object to match Harmonica's JSON structure
         // Fallback to 'data' itself just in case the API structure changes again
         const targetObj = data.info || data;
-        
+
         threatScore = targetObj.score ?? targetObj.fraud_score ?? targetObj.threatScore ?? 0;
-        
+
         if (targetObj.risk) {
           risk = targetObj.risk.charAt(0).toUpperCase() + targetObj.risk.slice(1);
         }
@@ -567,9 +568,9 @@ async function handleMyConnection(request, env, ctx) {
       city: cf.city || "",
       isp: cf.asOrganization || "N/A",
       threatScore,
-      risk
+      risk,
     }),
-    { headers }
+    { headers },
   );
 }
 
@@ -637,10 +638,19 @@ async function handleConfigPage(userID, hostName, proxyAddress) {
       .replace(/{{PROXY_ADDRESS}}/g, proxyAddress)
       .replace(/{{CONFIG_DREAM}}/g, dream)
       .replace(/{{CONFIG_FREEDOM}}/g, freedom)
-      .replace(/{{URL_HIDDIFY}}/g, `hiddify://install-config?url=${encodeURIComponent(subXrayUrlH)}`)
+      .replace(
+        /{{URL_HIDDIFY}}/g,
+        `hiddify://install-config?url=${encodeURIComponent(subXrayUrlH)}`,
+      )
       .replace(/{{URL_V2RAYNG}}/g, `v2rayng://install-config?url=${subXrayUrlV}`)
-      .replace(/{{URL_CLASH}}/g, `clash://install-config?url=${encodeURIComponent(`https://revil-sub.pages.dev/sub/clash-meta?url=${subSbUrl}`)}`,)
-      .replace(/{{URL_EXCLAVE}}/g, `sn://subscription?url=${encodeURIComponent(subSbUrl)}&name=${encodedSubName}`,);
+      .replace(
+        /{{URL_CLASH}}/g,
+        `clash://install-config?url=${encodeURIComponent(`https://revil-sub.pages.dev/sub/clash-meta?url=${subSbUrl}`)}`,
+      )
+      .replace(
+        /{{URL_EXCLAVE}}/g,
+        `sn://subscription?url=${encodeURIComponent(subSbUrl)}&name=${encodedSubName}`,
+      );
 
     return new Response(finalHTML, { headers: { "Content-Type": "text/html; charset=utf-8" } });
   } catch (error) {
