@@ -5,11 +5,10 @@ let workerKey = null;
 
 async function getWorkerKey() {
   if (!workerKey) {
-    workerKey = await crypto.subtle.generateKey(
-      { name: "HMAC", hash: "SHA-256" },
-      true,
-      ["sign", "verify"]
-    );
+    workerKey = await crypto.subtle.generateKey({ name: "HMAC", hash: "SHA-256" }, true, [
+      "sign",
+      "verify",
+    ]);
   }
   return workerKey;
 }
@@ -29,7 +28,10 @@ async function generateSecureToken(hostname, timestamp, ua) {
 }
 
 function isPrivateIP(ip) {
-  const cleanIp = ip.replace(/[\[\]]/g, "").trim().toLowerCase();
+  const cleanIp = ip
+    .replace(/[\[\]]/g, "")
+    .trim()
+    .toLowerCase();
 
   const parts = cleanIp.split(".");
   if (parts.length === 4) {
@@ -102,16 +104,22 @@ export default {
 
     if (path.toLowerCase() === "/check") {
       if (!url.searchParams.has("proxyip") || url.searchParams.get("proxyip") === "") {
-        return new Response("Invalid or missing proxyip parameter", { status: 400, headers: corsHeaders });
+        return new Response("Invalid or missing proxyip parameter", {
+          status: 400,
+          headers: corsHeaders,
+        });
       }
 
       if (env.TOKEN) {
         if (!url.searchParams.has("token") || url.searchParams.get("token") !== permanentTOKEN) {
-          return jsonResponse({
-            status: "error",
-            message: `ProxyIP Check Failed: Invalid TOKEN`,
-            timestamp: new Date().toISOString(),
-          }, 403);
+          return jsonResponse(
+            {
+              status: "error",
+              message: `ProxyIP Check Failed: Invalid TOKEN`,
+              timestamp: new Date().toISOString(),
+            },
+            403,
+          );
         }
       }
 
@@ -121,7 +129,6 @@ export default {
 
       const result = await CheckProxyIP(proxyIPInput, timeoutParam);
       return jsonResponse(result, result.success ? 200 : 502);
-
     } else if (path.toLowerCase() === "/debug-env") {
       const tokenParam = url.searchParams.get("token");
       if (!env.TOKEN || tokenParam !== env.TOKEN) {
@@ -137,7 +144,6 @@ export default {
         }
       }
       return jsonResponse(safeEnv);
-
     } else if (path.toLowerCase() === "/scamalytics-lookup") {
       if (
         !url.searchParams.has("token") ||
@@ -210,15 +216,17 @@ export default {
           },
         );
       }
-
     } else if (path.toLowerCase() === "/resolve") {
       const clientToken = url.searchParams.get("token");
       if (!clientToken || (clientToken !== temporaryTOKEN && clientToken !== permanentTOKEN)) {
-        return jsonResponse({
-          status: "error",
-          message: `Domain Resolve Failed: Invalid TOKEN`,
-          timestamp: new Date().toISOString(),
-        }, 403);
+        return jsonResponse(
+          {
+            status: "error",
+            message: `Domain Resolve Failed: Invalid TOKEN`,
+            timestamp: new Date().toISOString(),
+          },
+          403,
+        );
       }
 
       if (!url.searchParams.has("domain")) {
@@ -232,25 +240,30 @@ export default {
       } catch (error) {
         return jsonResponse({ success: false, error: error.message }, 500);
       }
-
     } else if (path.toLowerCase() === "/ip-info") {
       const clientToken = url.searchParams.get("token");
       if (!clientToken || (clientToken !== temporaryTOKEN && clientToken !== permanentTOKEN)) {
-        return jsonResponse({
-          status: "error",
-          message: `IP Info Failed: Invalid TOKEN`,
-          timestamp: new Date().toISOString(),
-        }, 403);
+        return jsonResponse(
+          {
+            status: "error",
+            message: `IP Info Failed: Invalid TOKEN`,
+            timestamp: new Date().toISOString(),
+          },
+          403,
+        );
       }
 
       let ip = url.searchParams.get("ip") || request.headers.get("CF-Connecting-IP");
       if (!ip) {
-        return jsonResponse({
-          status: "error",
-          message: "IP parameter not provided",
-          code: "MISSING_PARAMETER",
-          timestamp: new Date().toISOString(),
-        }, 400);
+        return jsonResponse(
+          {
+            status: "error",
+            message: "IP parameter not provided",
+            code: "MISSING_PARAMETER",
+            timestamp: new Date().toISOString(),
+          },
+          400,
+        );
       }
 
       ip = ip.replace(/[\[\]]/g, "");
@@ -268,13 +281,16 @@ export default {
         data.timestamp = new Date().toISOString();
         return jsonResponse(data);
       } catch (error) {
-        return jsonResponse({
-          status: "error",
-          message: `IP Info Failed: ${error.message}`,
-          code: "API_REQUEST_FAILED",
-          query: ip,
-          timestamp: new Date().toISOString(),
-        }, 500);
+        return jsonResponse(
+          {
+            status: "error",
+            message: `IP Info Failed: ${error.message}`,
+            code: "API_REQUEST_FAILED",
+            query: ip,
+            timestamp: new Date().toISOString(),
+          },
+          500,
+        );
       }
     } else {
       const envKey = env.URL302 ? "URL302" : env.URL ? "URL" : null;
@@ -320,11 +336,15 @@ async function resolveDomain(domain) {
 
     const ips = [];
     if (ipv4Data.Answer) {
-      const ipv4Addresses = ipv4Data.Answer.filter((record) => record.type === 1).map((record) => record.data);
+      const ipv4Addresses = ipv4Data.Answer.filter((record) => record.type === 1).map(
+        (record) => record.data,
+      );
       ips.push(...ipv4Addresses);
     }
     if (ipv6Data.Answer) {
-      const ipv6Addresses = ipv6Data.Answer.filter((record) => record.type === 28).map((record) => `[${record.data}]`);
+      const ipv6Addresses = ipv6Data.Answer.filter((record) => record.type === 28).map(
+        (record) => `[${record.data}]`,
+      );
       ips.push(...ipv6Addresses);
     }
     if (ips.length === 0) {
@@ -376,8 +396,8 @@ async function CheckProxyIP(proxyIP, timeoutMs = 8000) {
   const hostAddr = hostToCheck.includes(":") ? `[${hostToCheck}]` : hostToCheck;
 
   const probeTargets = [
-    { host: 'ipv4.090227.xyz', path: '/' },
-    { host: 'ipv6.090227.xyz', path: '/' }
+    { host: "ipv4.090227.xyz", path: "/" },
+    { host: "ipv6.090227.xyz", path: "/" },
   ];
 
   const HEADER_BODY_SEPARATOR = Uint8Array.of(13, 10, 13, 10);
@@ -417,7 +437,8 @@ async function CheckProxyIP(proxyIP, timeoutMs = 8000) {
       tlsClient = new TlsClient(socket, { serverName: target.host, timeout: timeoutMs });
       await withTimeout(tlsClient.handshake(), timeoutMs, "TLS Handshake");
 
-      const httpRequest = `GET ${target.path} HTTP/1.1\r\n` +
+      const httpRequest =
+        `GET ${target.path} HTTP/1.1\r\n` +
         `Host: ${target.host}\r\n` +
         `User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0\r\n` +
         `Connection: close\r\n\r\n`;
@@ -436,9 +457,7 @@ async function CheckProxyIP(proxyIP, timeoutMs = 8000) {
       if (!rawResponse.length) throw new Error("Empty response");
 
       const splitIndex = indexOfBytes(rawResponse, HEADER_BODY_SEPARATOR);
-      const [headerBytes] = splitIndex < 0
-        ? [rawResponse]
-        : [rawResponse.subarray(0, splitIndex)];
+      const [headerBytes] = splitIndex < 0 ? [rawResponse] : [rawResponse.subarray(0, splitIndex)];
 
       const headerText = new TextDecoder().decode(headerBytes);
       const statusCode = Number(headerText.match(HTTP_STATUS_RE)?.[1] ?? 0) || null;
@@ -459,8 +478,12 @@ async function CheckProxyIP(proxyIP, timeoutMs = 8000) {
     } catch (error) {
       lastError = error.message || error.toString();
     } finally {
-      try { tlsClient?.close(); } catch { }
-      try { if (!tlsClient) socket?.close(); } catch { }
+      try {
+        tlsClient?.close();
+      } catch {}
+      try {
+        if (!tlsClient) socket?.close();
+      } catch {}
     }
   }
 
@@ -1947,7 +1970,6 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
   });
 }
 
-
 // ==================== TLS ENGINE ====================
 const e = 769,
   t = 771,
@@ -2086,7 +2108,7 @@ async function V(e, t, n, r, i = "SHA-256") {
   const s = W(L.encode(t), n);
   let a = new Uint8Array(0),
     h = s;
-  for (; a.length < r;) {
+  for (; a.length < r; ) {
     h = await $(i, e, h);
     const t = await $(i, e, W(h, s));
     a = W(a, t);
@@ -2196,18 +2218,18 @@ function ee(e, t, n) {
 }
 function te(e, t) {
   const n = (function (e) {
-    const t = new Uint8Array(e);
-    return (
-      (t[3] &= 15),
-      (t[7] &= 15),
-      (t[11] &= 15),
-      (t[15] &= 15),
-      (t[4] &= 252),
-      (t[8] &= 252),
-      (t[12] &= 252),
-      t
-    );
-  })(e.slice(0, 16)),
+      const t = new Uint8Array(e);
+      return (
+        (t[3] &= 15),
+        (t[7] &= 15),
+        (t[11] &= 15),
+        (t[15] &= 15),
+        (t[4] &= 252),
+        (t[8] &= 252),
+        (t[12] &= 252),
+        t
+      );
+    })(e.slice(0, 16)),
     r = e.slice(16, 32);
   let i = [0n, 0n, 0n, 0n, 0n];
   const s = [
@@ -2333,7 +2355,7 @@ function ce(e) {
     const n = R(e, t);
     t += 2;
     const r = t + n;
-    for (; t + 4 <= r;) {
+    for (; t + 4 <= r; ) {
       const n = R(e, t);
       t += 2;
       const r = R(e, t);
@@ -2388,7 +2410,7 @@ function fe(e) {
   const t = { alpn: null };
   let n = 2;
   const r = 2 + R(e, 0);
-  for (; n + 4 <= r;) {
+  for (; n + 4 <= r; ) {
     const r = R(e, n);
     n += 2;
     const i = R(e, n);
@@ -2401,26 +2423,26 @@ function fe(e) {
   return t;
 }
 const F0 = (e) => {
-  if (
-    ((e = String(e ?? "").trim()),
+    if (
+      ((e = String(e ?? "").trim()),
       "[" === e[0] && "]" === e[e.length - 1] && (e = e.slice(1, -1)),
       !e || e.includes(":"))
-  )
-    return "";
-  const t = e.split(".");
-  if (4 !== t.length) return e;
-  for (const n of t) {
-    if ("" === n || n.length > 3) return e;
-    let t = 0;
-    for (let r = 0; r < n.length; r++) {
-      const i = n.charCodeAt(r) - 48;
-      if (i < 0 || i > 9) return e;
-      t = 10 * t + i;
+    )
+      return "";
+    const t = e.split(".");
+    if (4 !== t.length) return e;
+    for (const n of t) {
+      if ("" === n || n.length > 3) return e;
+      let t = 0;
+      for (let r = 0; r < n.length; r++) {
+        const i = n.charCodeAt(r) - 48;
+        if (i < 0 || i > 9) return e;
+        t = 10 * t + i;
+      }
+      if (t > 255) return e;
     }
-    if (t > 255) return e;
-  }
-  return "";
-},
+    return "";
+  },
   Z0 = (e) => e && 1 === e[0] && 112 === e[1];
 function ue(e, n, r, { tls13: i = !0, tls12: s = !0, alpn: a = null } = {}) {
   n = F0(n);
@@ -2450,8 +2472,8 @@ function ue(e, n, r, { tls13: i = !0, tls12: s = !0, alpn: a = null } = {}) {
     let e;
     if (
       (l.push(s ? _(B(C), 0, 5, 4, 3, 4, 3, 3) : _(B(C), 0, 3, 2, 3, 4)),
-        l.push(_(B(H), 0, 2, 1, 1)),
-        r?.x25519 && r?.p256)
+      l.push(_(B(H), 0, 2, 1, 1)),
+      r?.x25519 && r?.p256)
     )
       e = W(_(0, 29, B(r.x25519.length), r.x25519), _(0, 23, B(r.p256.length), r.p256));
     else if (r?.x25519) e = _(0, 29, B(r.x25519.length), r.x25519);
@@ -2466,9 +2488,9 @@ function ue(e, n, r, { tls13: i = !0, tls12: s = !0, alpn: a = null } = {}) {
   return se(h, _(B(t), e, 0, B(o.length), o, 1, 0, B(y.length), y));
 }
 const ye = (e) => {
-  const t = new Uint8Array(8);
-  return new DataView(t.buffer).setBigUint64(0, e, !1), t;
-},
+    const t = new Uint8Array(8);
+    return new DataView(t.buffer).setBigUint64(0, e, !1), t;
+  },
   pe = (e, t) => {
     const n = e.slice(),
       r = ye(t);
@@ -2480,10 +2502,10 @@ class TlsClient {
   constructor(e, t = {}) {
     if (
       ((this.socket = e),
-        (this.serverName = t.serverName || ""),
-        (this.supportTls13 = !1 !== t.tls13),
-        (this.supportTls12 = !1 !== t.tls12),
-        !this.supportTls13 && !this.supportTls12)
+      (this.serverName = t.serverName || ""),
+      (this.supportTls13 = !1 !== t.tls13),
+      (this.supportTls12 = !1 !== t.tls12),
+      !this.supportTls13 && !this.supportTls12)
     )
       throw new Error("At least one TLS version must be enabled");
     (this.alpnProtocols = Array.isArray(t.alpn) ? t.alpn : t.alpn ? [t.alpn] : null),
@@ -2537,23 +2559,23 @@ class TlsClient {
     if (r) return r;
     try {
       await e.cancel("TLS read timeout");
-    } catch { }
+    } catch {}
     try {
       await n;
-    } catch { }
+    } catch {}
     throw new Error("TLS read timeout");
   }
   async pr(e, t, n) {
-    for (; ;) {
+    for (;;) {
       let r;
-      for (; (r = this.recordParser.next());) if (await t(r)) return;
+      for (; (r = this.recordParser.next()); ) if (await t(r)) return;
       const { value: i, done: s } = await this.readChunk(e);
       if (s) throw new Error(n);
       this.recordParser.feed(e);
     }
   }
   async ph(e, t, n) {
-    for (let e; (e = this.handshakeParser.next());) if (await t(e)) return;
+    for (let e; (e = this.handshakeParser.next()); ) if (await t(e)) return;
     return this.pr(
       e,
       async (e) => {
@@ -2563,7 +2585,7 @@ class TlsClient {
         }
         if (e.type === s) {
           this.handshakeParser.feed(e.fragment);
-          for (let e; (e = this.handshakeParser.next());) if (await t(e)) return 1;
+          for (let e; (e = this.handshakeParser.next()); ) if (await t(e)) return 1;
         }
       },
       n,
@@ -2603,28 +2625,28 @@ class TlsClient {
     }
   }
   async receiveServerHello(e) {
-    for (; ;) {
+    for (;;) {
       const { value: t, done: n } = await this.readChunk(e);
       if (n) throw new Error("Connection closed waiting for ServerHello");
       let r;
-      for (this.recordParser.feed(t); (r = this.recordParser.next());) {
+      for (this.recordParser.feed(t); (r = this.recordParser.next()); ) {
         if (r.type === i) {
           if (Z0(r.fragment)) continue;
           throw new Error(`TLS Alert: level=${r.fragment[0]}, desc=${r.fragment[1]}`);
         }
         if (r.type !== s) continue;
         let e;
-        for (this.handshakeParser.feed(r.fragment); (e = this.handshakeParser.next());) {
+        for (this.handshakeParser.feed(r.fragment); (e = this.handshakeParser.next()); ) {
           if (e.type !== c) continue;
           this.recordHandshake(e.raw);
           const t = ce(e.body);
           if (
             ((this.serverRandom = t.serverRandom),
-              (this.cipherSuite = t.cipherSuite),
-              (this.cipherConfig = this.getCipherConfig(t.cipherSuite)),
-              (this.isTls13 = t.isTls13),
-              (this.negotiatedAlpn = t.alpn || null),
-              !this.cipherConfig)
+            (this.cipherSuite = t.cipherSuite),
+            (this.cipherConfig = this.getCipherConfig(t.cipherSuite)),
+            (this.isTls13 = t.isTls13),
+            (this.negotiatedAlpn = t.alpn || null),
+            !this.cipherConfig)
           )
             throw new Error(`Unsupported cipher suite: 0x${t.cipherSuite.toString(16)}`);
           return t;
@@ -2660,7 +2682,7 @@ class TlsClient {
         },
         "Connection closed during TLS 1.2 handshake",
       ),
-        !this.sawCert)
+      !this.sawCert)
     )
       throw new Error("Missing TLS 1.2 leaf certificate");
     if (!n) throw new Error("Missing TLS 1.2 ServerKeyExchange");
@@ -2772,7 +2794,7 @@ class TlsClient {
           h = t.slice(0, -1);
         if (n === s) {
           this.handshakeParser.feed(h);
-          for (let e; (e = this.handshakeParser.next());) if ((await H(e), C)) return 1;
+          for (let e; (e = this.handshakeParser.next()); ) if ((await H(e), C)) return 1;
         }
       },
       "Connection closed during TLS 1.3 handshake",
@@ -2828,7 +2850,7 @@ class TlsClient {
         ? re(this.serverHandshakeKey, t, e, n)
         : z(this.serverHandshakeKey, t, e, n));
     let i = r.length - 1;
-    for (; i >= 0 && !r[i];) i--;
+    for (; i >= 0 && !r[i]; ) i--;
     return i < 0 ? P : r.slice(0, i + 1);
   }
   async encryptTls13(e) {
@@ -2846,7 +2868,7 @@ class TlsClient {
         ? await re(this.serverAppKey, t, e, n)
         : await z(this.serverAppKey, t, e, n);
     let i = r.length - 1;
-    for (; i >= 0 && !r[i];) i--;
+    for (; i >= 0 && !r[i]; ) i--;
     return i < 0 ? { data: P, type: 0 } : { data: r.slice(0, i), type: r[i] };
   }
   async write(e) {
@@ -2861,9 +2883,9 @@ class TlsClient {
     }
   }
   async read() {
-    for (; ;) {
+    for (;;) {
       let e;
-      for (; (e = this.recordParser.next());) {
+      for (; (e = this.recordParser.next()); ) {
         if (e.type === i) {
           if (e.fragment[1] === E) return null;
           throw new Error(`TLS Alert: ${e.fragment[1]}`);
@@ -2878,7 +2900,7 @@ class TlsClient {
         }
         if (n !== s) continue;
         let r;
-        for (this.handshakeParser.feed(t); (r = this.handshakeParser.next());)
+        for (this.handshakeParser.feed(t); (r = this.handshakeParser.next()); )
           if (r.type !== o && r.type === k)
             throw new Error("TLS 1.3 KeyUpdate is not supported by TLSClientMini");
       }
