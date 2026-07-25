@@ -1,70 +1,143 @@
 // @ts-nocheck
 import { connect } from "cloudflare:sockets";
 
-let temporaryTOKEN, permanentTOKEN;
+let workerKey = null;
+
+async function getWorkerKey() {
+  if (!workerKey) {
+    workerKey = await crypto.subtle.generateKey(
+      { name: "HMAC", hash: "SHA-256" },
+      true,
+      ["sign", "verify"]
+    );
+  }
+  return workerKey;
+}
+
+/**
+ * @param {string} hostname
+ * @param {number} timestamp
+ * @param {string} ua
+ */
+async function generateSecureToken(hostname, timestamp, ua) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(`${hostname}|${timestamp}|${ua}`);
+  const key = await getWorkerKey();
+  const signature = await crypto.subtle.sign("HMAC", key, data);
+  const hashArray = Array.from(new Uint8Array(signature));
+  return hashArray.map((byte) => byte.toString(16).padStart(2, "0")).join("");
+}
+
+function isPrivateIP(ip) {
+  const cleanIp = ip.replace(/[\[\]]/g, "").trim().toLowerCase();
+
+  const parts = cleanIp.split(".");
+  if (parts.length === 4) {
+    const first = parseInt(parts[0], 10);
+    const second = parseInt(parts[1], 10);
+
+    if (first === 10) return true;
+    if (first === 127) return true;
+    if (first === 169 && second === 254) return true;
+    if (first === 172 && second >= 16 && second <= 31) return true;
+    if (first === 192 && second === 168) return true;
+    if (first === 0) return true;
+  }
+
+  if (
+    cleanIp === "::1" ||
+    cleanIp.startsWith("fc00:") ||
+    cleanIp.startsWith("fd00:") ||
+    cleanIp.startsWith("fe80:")
+  ) {
+    return true;
+  }
+
+  return false;
+}
 
 export default {
   /**
-   * @param {RequestInit<CfProperties<unknown>>} request
-   * @param {{ [x: string]: any; ICO: string; TOKEN: string; SCAMALYTICS_USERNAME: any; SCAMALYTICS_API_KEY: any; SCAMALYTICS_API_BASE_URL: string; URL302: any; URL: any; }} env
+   * @param {Request} request
+   * @param {any} env
    * @param {any} ctx
    */
   async fetch(request, env, ctx) {
-    const websiteIcon = env.ICO || "https://pub-b3ab4c8172fb44e29854df3435aa223d.r2.dev/cf.svg";
     const url = new URL(request.url);
+    const origin = request.headers.get("Origin") || "*";
+
+    const corsHeaders = {
+      "Access-Control-Allow-Origin": origin,
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    };
+
+    if (request.method === "OPTIONS") {
+      return new Response(null, { headers: corsHeaders });
+    }
+
+    const websiteIcon = env.ICO || "https://pub-b3ab4c8172fb44e29854df3435aa223d.r2.dev/cf.svg";
     const UA = request.headers.get("User-Agent") || "null";
     const path = url.pathname;
     const hostname = url.hostname;
     const currentDate = new Date();
     const timestamp = Math.ceil(currentDate.getTime() / (1000 * 60 * 31));
-    temporaryTOKEN = await doubleHash(url.hostname + timestamp + UA);
-    permanentTOKEN = env.TOKEN || temporaryTOKEN;
+
+    const temporaryTOKEN = await generateSecureToken(hostname, timestamp, UA);
+    const permanentTOKEN = env.TOKEN || temporaryTOKEN;
 
     const scamalyticsUsername = env.SCAMALYTICS_USERNAME;
     const scamalyticsApiKey = env.SCAMALYTICS_API_KEY;
     const scamalyticsApiBaseUrl = env.SCAMALYTICS_API_BASE_URL || "https://api.scamalytics.com";
 
-    if (path.toLowerCase() === "/check") {
-      if (!url.searchParams.has("proxyip"))
-        return new Response("Missing proxyip parameter", { status: 400 });
-      if (url.searchParams.get("proxyip") === "")
-        return new Response("Invalid proxyip parameter", { status: 400 });
-      if (env.TOKEN) {
-        if (!url.searchParams.has("token") || url.searchParams.get("token") !== permanentTOKEN) {
-          return new Response(
-            JSON.stringify(
-              {
-                status: "error",
-                message: `ProxyIP Check Failed: Invalid TOKEN`,
-                timestamp: new Date().toISOString(),
-              },
-              null,
-              4,
-            ),
-            {
-              status: 403,
-              headers: {
-                "content-type": "application/json; charset=UTF-8",
-                "Access-Control-Allow-Origin": "*",
-              },
-            },
-          );
-        }
-      }
-      const proxyIPInput = url.searchParams.get("proxyip").toLowerCase();
-      const result = await CheckProxyIP(proxyIPInput);
-
-      return new Response(JSON.stringify(result, null, 2), {
-        status: result.success ? 200 : 502,
+    const jsonResponse = (data, status = 200) => {
+      return new Response(JSON.stringify(data, null, 2), {
+        status,
         headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json; charset=UTF-8",
+          ...corsHeaders,
         },
       });
+    };
+
+    if (path.toLowerCase() === "/check") {
+      if (!url.searchParams.has("proxyip") || url.searchParams.get("proxyip") === "") {
+        return new Response("Invalid or missing proxyip parameter", { status: 400, headers: corsHeaders });
+      }
+
+      if (env.TOKEN) {
+        if (!url.searchParams.has("token") || url.searchParams.get("token") !== permanentTOKEN) {
+          return jsonResponse({
+            status: "error",
+            message: `ProxyIP Check Failed: Invalid TOKEN`,
+            timestamp: new Date().toISOString(),
+          }, 403);
+        }
+      }
+
+      const proxyIPInput = url.searchParams.get("proxyip").toLowerCase();
+
+      const timeoutParam = parseInt(url.searchParams.get("timeout")) || 8000;
+
+      const result = await CheckProxyIP(proxyIPInput, timeoutParam);
+      return jsonResponse(result, result.success ? 200 : 502);
+
     } else if (path.toLowerCase() === "/debug-env") {
-      return new Response(JSON.stringify(env, null, 2), {
-        headers: { "Content-Type": "application/json" },
-      });
+      const tokenParam = url.searchParams.get("token");
+      if (!env.TOKEN || tokenParam !== env.TOKEN) {
+        return new Response("Unauthorized", { status: 403, headers: corsHeaders });
+      }
+
+      const safeEnv = {};
+      for (const [key, val] of Object.entries(env)) {
+        if (typeof val === "string" && val.length > 6) {
+          safeEnv[key] = `${val.substring(0, 3)}***${val.substring(val.length - 3)}`;
+        } else {
+          safeEnv[key] = "HIDDEN/SET";
+        }
+      }
+      return jsonResponse(safeEnv);
+
     } else if (path.toLowerCase() === "/scamalytics-lookup") {
       if (
         !url.searchParams.has("token") ||
@@ -75,7 +148,7 @@ export default {
           JSON.stringify(
             {
               status: "error",
-              message: `Scamalytics Lookup Failed: Invalid TOKEN`,
+              message: `Lookup Failed: Invalid TOKEN`,
               timestamp: new Date().toISOString(),
             },
             null,
@@ -102,55 +175,22 @@ export default {
         });
       }
 
-      if (!scamalyticsUsername || !scamalyticsApiKey) {
-        return new Response(
-          JSON.stringify({
-            error: "Scamalytics API credentials not configured on server.",
-            message:
-              "Please set SCAMALYTICS_USERNAME and SCAMALYTICS_API_KEY environment variables.",
-          }),
-          {
-            status: 500,
-            headers: {
-              "Content-Type": "application/json",
-              "Access-Control-Allow-Origin": "*",
-            },
-          },
-        );
-      }
-
       const cleanIP = ipToLookup.replace(/[\[\]]/g, "");
-      const scamalyticsUrl = `${scamalyticsApiBaseUrl}/${scamalyticsUsername}/?key=${scamalyticsApiKey}&ip=${cleanIP}`;
+      const harmonicaUrl = `https://api.harmonica.workers.dev/api/${cleanIP}`;
 
       try {
-        const scamalyticsResponse = await fetch(scamalyticsUrl, {
+        const response = await fetch(harmonicaUrl, {
           method: "GET",
           headers: {
             "User-Agent": "Mozilla/5.0 (compatible; ProxyIPScanner/1.0)",
           },
         });
 
-        if (!scamalyticsResponse.ok) {
-          throw new Error(`HTTP ${scamalyticsResponse.status}: ${scamalyticsResponse.statusText}`);
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
         }
 
-        const responseText = await scamalyticsResponse.text();
-        let responseBody;
-        try {
-          responseBody = JSON.parse(responseText);
-        } catch (parseError) {
-          return new Response(
-            JSON.stringify({
-              error: "Invalid JSON response from Scamalytics API",
-              details: `Response was not valid JSON: ${responseText.substring(0, 100)}...`,
-            }),
-            {
-              status: 502,
-              headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
-            },
-          );
-        }
-
+        const responseBody = await response.json();
         return new Response(JSON.stringify(responseBody), {
           headers: {
             "Content-Type": "application/json",
@@ -160,7 +200,8 @@ export default {
       } catch (error) {
         return new Response(
           JSON.stringify({
-            error: "Failed to fetch from Scamalytics API",
+            success: false,
+            error: "Failed to fetch from Custom Risk API",
             details: error.message,
           }),
           {
@@ -169,102 +210,53 @@ export default {
           },
         );
       }
+
     } else if (path.toLowerCase() === "/resolve") {
-      if (
-        !url.searchParams.has("token") ||
-        (url.searchParams.get("token") !== temporaryTOKEN &&
-          url.searchParams.get("token") !== permanentTOKEN)
-      ) {
-        return new Response(
-          JSON.stringify(
-            {
-              status: "error",
-              message: `Domain Resolve Failed: Invalid TOKEN`,
-              timestamp: new Date().toISOString(),
-            },
-            null,
-            4,
-          ),
-          {
-            status: 403,
-            headers: {
-              "content-type": "application/json; charset=UTF-8",
-              "Access-Control-Allow-Origin": "*",
-            },
-          },
-        );
+      const clientToken = url.searchParams.get("token");
+      if (!clientToken || (clientToken !== temporaryTOKEN && clientToken !== permanentTOKEN)) {
+        return jsonResponse({
+          status: "error",
+          message: `Domain Resolve Failed: Invalid TOKEN`,
+          timestamp: new Date().toISOString(),
+        }, 403);
       }
-      if (!url.searchParams.has("domain"))
-        return new Response("Missing domain parameter", { status: 400 });
+
+      if (!url.searchParams.has("domain")) {
+        return new Response("Missing domain parameter", { status: 400, headers: corsHeaders });
+      }
       const domain = url.searchParams.get("domain");
 
       try {
         const ips = await resolveDomain(domain);
-        return new Response(JSON.stringify({ success: true, domain, ips }), {
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-          },
-        });
+        return jsonResponse({ success: true, domain, ips });
       } catch (error) {
-        return new Response(JSON.stringify({ success: false, error: error.message }), {
-          status: 500,
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-          },
-        });
-      }
-    } else if (path.toLowerCase() === "/ip-info") {
-      if (
-        !url.searchParams.has("token") ||
-        (url.searchParams.get("token") !== temporaryTOKEN &&
-          url.searchParams.get("token") !== permanentTOKEN)
-      ) {
-        return new Response(
-          JSON.stringify(
-            {
-              status: "error",
-              message: `IP Info Failed: Invalid TOKEN`,
-              timestamp: new Date().toISOString(),
-            },
-            null,
-            4,
-          ),
-          {
-            status: 403,
-            headers: {
-              "content-type": "application/json; charset=UTF-8",
-              "Access-Control-Allow-Origin": "*",
-            },
-          },
-        );
-      }
-      let ip = url.searchParams.get("ip") || request.headers.get("CF-Connecting-IP");
-      if (!ip) {
-        return new Response(
-          JSON.stringify(
-            {
-              status: "error",
-              message: "IP parameter not provided",
-              code: "MISSING_PARAMETER",
-              timestamp: new Date().toISOString(),
-            },
-            null,
-            4,
-          ),
-          {
-            status: 400,
-            headers: {
-              "content-type": "application/json; charset=UTF-8",
-              "Access-Control-Allow-Origin": "*",
-            },
-          },
-        );
+        return jsonResponse({ success: false, error: error.message }, 500);
       }
 
-      if (ip.includes("[")) {
-        ip = ip.replace("[", "").replace("]", "");
+    } else if (path.toLowerCase() === "/ip-info") {
+      const clientToken = url.searchParams.get("token");
+      if (!clientToken || (clientToken !== temporaryTOKEN && clientToken !== permanentTOKEN)) {
+        return jsonResponse({
+          status: "error",
+          message: `IP Info Failed: Invalid TOKEN`,
+          timestamp: new Date().toISOString(),
+        }, 403);
+      }
+
+      let ip = url.searchParams.get("ip") || request.headers.get("CF-Connecting-IP");
+      if (!ip) {
+        return jsonResponse({
+          status: "error",
+          message: "IP parameter not provided",
+          code: "MISSING_PARAMETER",
+          timestamp: new Date().toISOString(),
+        }, 400);
+      }
+
+      ip = ip.replace(/[\[\]]/g, "");
+
+      if (isPrivateIP(ip)) {
+        return jsonResponse({ error: "SSRF Protection: Private IP blocked" }, 403);
       }
 
       try {
@@ -274,37 +266,15 @@ export default {
         }
         const data = await response.json();
         data.timestamp = new Date().toISOString();
-        return new Response(JSON.stringify(data, null, 4), {
-          headers: {
-            "content-type": "application/json; charset=UTF-8",
-            "Access-Control-Allow-Origin": "*",
-          },
-        });
+        return jsonResponse(data);
       } catch (error) {
-        return new Response(
-          JSON.stringify(
-            {
-              status: "error",
-              message: `IP Info Failed: ${error.message}`,
-              code: "API_REQUEST_FAILED",
-              query: ip,
-              timestamp: new Date().toISOString(),
-              details: {
-                errorType: error.name,
-                stack: error.stack ? error.stack.split("\n")[0] : null,
-              },
-            },
-            null,
-            4,
-          ),
-          {
-            status: 500,
-            headers: {
-              "content-type": "application/json; charset=UTF-8",
-              "Access-Control-Allow-Origin": "*",
-            },
-          },
-        );
+        return jsonResponse({
+          status: "error",
+          message: `IP Info Failed: ${error.message}`,
+          code: "API_REQUEST_FAILED",
+          query: ip,
+          timestamp: new Date().toISOString(),
+        }, 500);
       }
     } else {
       const envKey = env.URL302 ? "URL302" : env.URL ? "URL" : null;
@@ -314,9 +284,7 @@ export default {
         return envKey === "URL302" ? Response.redirect(URL, 302) : fetch(new Request(URL, request));
       } else if (env.TOKEN) {
         return new Response(await nginxWelcomePage(), {
-          headers: {
-            "Content-Type": "text/html; charset=UTF-8",
-          },
+          headers: { "Content-Type": "text/html; charset=UTF-8" },
         });
       } else if (path.toLowerCase() === "/favicon.ico") {
         return Response.redirect(websiteIcon, 302);
@@ -335,44 +303,32 @@ async function resolveDomain(domain) {
   try {
     const [ipv4Response, ipv6Response] = await Promise.all([
       fetch(`https://cloudflare-dns.com/dns-query?name=${domain}&type=A`, {
-        headers: {
-          Accept: "application/dns-json",
-          "Cache-Control": "no-cache",
-        },
+        headers: { Accept: "application/dns-json", "Cache-Control": "no-cache" },
         cf: { cacheTtl: -1 },
       }),
       fetch(`https://cloudflare-dns.com/dns-query?name=${domain}&type=AAAA`, {
-        headers: {
-          Accept: "application/dns-json",
-          "Cache-Control": "no-cache",
-        },
+        headers: { Accept: "application/dns-json", "Cache-Control": "no-cache" },
         cf: { cacheTtl: -1 },
       }),
     ]);
 
     if (!ipv4Response.ok || !ipv6Response.ok) {
-      throw new Error(
-        `DNS API HTTP Error: IPv4=${ipv4Response.status}, IPv6=${ipv6Response.status}`,
-      );
+      throw new Error(`DNS API HTTP Error`);
     }
 
     const [ipv4Data, ipv6Data] = await Promise.all([ipv4Response.json(), ipv6Response.json()]);
 
     const ips = [];
     if (ipv4Data.Answer) {
-      const ipv4Addresses = ipv4Data.Answer.filter(
-        (/** @type {{ type: number; }} */ record) => record.type === 1,
-      ).map((/** @type {{ data: any; }} */ record) => record.data);
+      const ipv4Addresses = ipv4Data.Answer.filter((record) => record.type === 1).map((record) => record.data);
       ips.push(...ipv4Addresses);
     }
     if (ipv6Data.Answer) {
-      const ipv6Addresses = ipv6Data.Answer.filter(
-        (/** @type {{ type: number; }} */ record) => record.type === 28,
-      ).map((/** @type {{ data: any; }} */ record) => `[${record.data}]`);
+      const ipv6Addresses = ipv6Data.Answer.filter((record) => record.type === 28).map((record) => `[${record.data}]`);
       ips.push(...ipv6Addresses);
     }
     if (ips.length === 0) {
-      throw new Error("No DNS records (A or AAAA) found for this domain");
+      throw new Error("No DNS records found");
     }
     return ips;
   } catch (error) {
@@ -381,10 +337,11 @@ async function resolveDomain(domain) {
 }
 
 /**
- * Core ProxyIP Check logic adapted from Cmliu using a robust TLS client handshake over raw TCP sockets
+ * Core ProxyIP Check logic updated to use Cmliu's stable testing endpoints
  * @param {string} proxyIP
+ * @param {number} timeoutMs
  */
-async function CheckProxyIP(proxyIP) {
+async function CheckProxyIP(proxyIP, timeoutMs = 8000) {
   let portRemote = 443;
   let hostToCheck = proxyIP;
   if (proxyIP.includes(".tp")) {
@@ -402,77 +359,122 @@ async function CheckProxyIP(proxyIP) {
     }
   }
 
-  const hostAddr = hostToCheck.includes(":") ? `[${hostToCheck}]` : hostToCheck;
-  let socket = null;
-  let tlsClient = null;
-  const timeoutMs = 8000;
+  if (isNaN(portRemote) || portRemote < 1 || portRemote > 65535) {
+    portRemote = 443;
+  }
 
-  try {
-    const startedAt = Date.now();
-    socket = connect({ hostname: hostAddr, port: portRemote });
-    await withTimeout(socket.opened, timeoutMs, "TCP Connect");
-
-    // Create custom TLS Client mimicking Cmliu's engine
-    tlsClient = new TlsClient(socket, { serverName: "speed.cloudflare.com", timeout: timeoutMs });
-    await withTimeout(tlsClient.handshake(), timeoutMs, "TLS Handshake");
-
-    // Send HTTP GET request via TLS
-    const httpRequest =
-      "GET /cdn-cgi/trace HTTP/1.1\r\n" +
-      "Host: speed.cloudflare.com\r\n" +
-      "User-Agent: checkip/diana/\r\n" +
-      "Connection: close\r\n\r\n";
-
-    await tlsClient.write(new TextEncoder().encode(httpRequest));
-
-    let responseData = new Uint8Array(0);
-    while (true) {
-      const chunk = await tlsClient.read();
-      if (!chunk || chunk.length === 0) break;
-      const nextData = new Uint8Array(responseData.length + chunk.length);
-      nextData.set(responseData);
-      nextData.set(chunk, responseData.length);
-      responseData = nextData;
-    }
-
-    const responseText = new TextDecoder().decode(responseData);
-    const statusMatch = responseText.match(/^HTTP\/\d\.\d\s+(\d+)/i);
-    const statusCode = statusMatch ? parseInt(statusMatch[1]) : null;
-
-    const isSuccessful =
-      statusCode === 200 && responseText.includes("cloudflare") && responseText.includes("colo=");
-    const totalLatency = Date.now() - startedAt;
-
-    const jsonResponse = {
-      success: isSuccessful,
-      proxyIP: hostToCheck,
-      portRemote: portRemote,
-      statusCode: statusCode || null,
-      responseSize: responseData.length,
-      latency: totalLatency,
-      timestamp: new Date().toISOString(),
-    };
-    return jsonResponse;
-  } catch (error) {
+  if (isPrivateIP(hostToCheck)) {
     return {
       success: false,
       proxyIP: hostToCheck,
       portRemote: portRemote,
       timestamp: new Date().toISOString(),
-      error: error.message || error.toString(),
+      error: "SSRF Protection: Private IP blocked.",
     };
-  } finally {
-    try {
-      tlsClient?.close();
-    } catch {}
-    try {
-      if (!tlsClient) socket?.close();
-    } catch {}
   }
+
+  const hostAddr = hostToCheck.includes(":") ? `[${hostToCheck}]` : hostToCheck;
+
+  const probeTargets = [
+    { host: 'ipv4.090227.xyz', path: '/' },
+    { host: 'ipv6.090227.xyz', path: '/' }
+  ];
+
+  const HEADER_BODY_SEPARATOR = Uint8Array.of(13, 10, 13, 10);
+  const HTTP_STATUS_RE = /^HTTP\/\d(?:\.\d)?\s+(\d{3})/;
+
+  function indexOfBytes(haystack, needle, start = 0) {
+    outer: for (let i = start; i <= haystack.length - needle.length; i++) {
+      for (let j = 0; j < needle.length; j++) {
+        if (haystack[i + j] !== needle[j]) continue outer;
+      }
+      return i;
+    }
+    return -1;
+  }
+
+  function concatBytes(chunks) {
+    const merged = new Uint8Array(chunks.reduce((sum, { length }) => sum + length, 0));
+    let offset = 0;
+    for (const chunk of chunks) {
+      merged.set(chunk, offset);
+      offset += chunk.length;
+    }
+    return merged;
+  }
+
+  let lastError = null;
+  let latency = 0;
+
+  for (const target of probeTargets) {
+    let socket = null;
+    let tlsClient = null;
+    try {
+      const startedAt = Date.now();
+      socket = connect({ hostname: hostAddr, port: portRemote });
+      await withTimeout(socket.opened, timeoutMs, "TCP Connect");
+
+      tlsClient = new TlsClient(socket, { serverName: target.host, timeout: timeoutMs });
+      await withTimeout(tlsClient.handshake(), timeoutMs, "TLS Handshake");
+
+      const httpRequest = `GET ${target.path} HTTP/1.1\r\n` +
+        `Host: ${target.host}\r\n` +
+        `User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0\r\n` +
+        `Connection: close\r\n\r\n`;
+
+      await tlsClient.write(new TextEncoder().encode(httpRequest));
+
+      const chunks = [];
+      while (true) {
+        const chunk = await tlsClient.read();
+        if (!chunk || chunk.length === 0) break;
+        chunks.push(chunk);
+      }
+      const rawResponse = concatBytes(chunks);
+      latency = Date.now() - startedAt;
+
+      if (!rawResponse.length) throw new Error("Empty response");
+
+      const splitIndex = indexOfBytes(rawResponse, HEADER_BODY_SEPARATOR);
+      const [headerBytes] = splitIndex < 0
+        ? [rawResponse]
+        : [rawResponse.subarray(0, splitIndex)];
+
+      const headerText = new TextDecoder().decode(headerBytes);
+      const statusCode = Number(headerText.match(HTTP_STATUS_RE)?.[1] ?? 0) || null;
+
+      if (statusCode === 200) {
+        return {
+          success: true,
+          proxyIP: hostToCheck,
+          portRemote: portRemote,
+          statusCode: statusCode,
+          responseSize: rawResponse.length,
+          latency: latency,
+          timestamp: new Date().toISOString(),
+        };
+      } else {
+        throw new Error(`Unexpected status code: ${statusCode}`);
+      }
+    } catch (error) {
+      lastError = error.message || error.toString();
+    } finally {
+      try { tlsClient?.close(); } catch { }
+      try { if (!tlsClient) socket?.close(); } catch { }
+    }
+  }
+
+  return {
+    success: false,
+    proxyIP: hostToCheck,
+    portRemote: portRemote,
+    timestamp: new Date().toISOString(),
+    error: lastError || "Connection failed.",
+  };
 }
 
 /**
- * @param {Promise<SocketInfo> | Promise<void>} promise
+ * @param {Promise<any>} promise
  * @param {number} timeoutMs
  * @param {string} label
  */
@@ -490,26 +492,11 @@ function withTimeout(promise, timeoutMs, label) {
  * @param {string} content
  */
 async function sanitizeURLs(content) {
-  var replacedContent = content.replace(/[\r\n]+/g, "|").replace(/\|+/g, "|");
+  const replacedContent = content.replace(/[\r\n]+/g, "|").replace(/\|+/g, "|");
   const addressArray = replacedContent.split("|");
-  const sanitizedArray = addressArray.filter((item, index) => {
+  return addressArray.filter((item, index) => {
     return item !== "" && addressArray.indexOf(item) === index;
   });
-  return sanitizedArray;
-}
-
-/**
- * @param {string} text
- */
-async function doubleHash(text) {
-  const encoder = new TextEncoder();
-  const firstHash = await crypto.subtle.digest("MD5", encoder.encode(text));
-  const firstHashArray = Array.from(new Uint8Array(firstHash));
-  const firstHex = firstHashArray.map((byte) => byte.toString(16).padStart(2, "0")).join("");
-  const secondHash = await crypto.subtle.digest("MD5", encoder.encode(firstHex.slice(7, 27)));
-  const secondHashArray = Array.from(new Uint8Array(secondHash));
-  const secondHex = secondHashArray.map((byte) => byte.toString(16).padStart(2, "0")).join("");
-  return secondHex.toLowerCase();
 }
 
 async function nginxWelcomePage() {
@@ -547,855 +534,749 @@ async function nginxWelcomePage() {
  */
 async function generateHTMLPage(_hostname, websiteIcon, token) {
   const html = `
-  <!DOCTYPE html>
+    <!DOCTYPE html>
   <html lang="en" dir="ltr">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>ProxyIP Checker - Advanced Risk Analysis</title>
-      <link rel="icon" href="${websiteIcon}" type="image/x-icon" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-      />
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <style>
-        @font-face {
-          font-family: "Styrene B LC";
-          src: url("https://pub-7a3b428c76aa411181a0f4dd7fa9064b.r2.dev/StyreneBLC-Regular.woff2")
-            format("woff2");
-          font-weight: 400;
-          font-style: normal;
-          font-display: swap;
-        }
-  
-        @font-face {
-          font-family: "Styrene B LC";
-          src: url("https://pub-7a3b428c76aa411181a0f4dd7fa9064b.r2.dev/StyreneBLC-Medium.woff2")
-            format("woff2");
-          font-weight: 500;
-          font-style: normal;
-          font-display: swap;
-        }
-  
-        :root {
-          --bg-primary: #0a0a0a;
-          --bg-secondary: #1a1a1a;
-          --bg-tertiary: #2a2a2a;
-          --text-primary: #ffffff;
-          --text-secondary: #b0b0b0;
-          --text-muted: #666666;
-          --accent-orange: #ff6b35;
-          --accent-orange-dark: #e55a2b;
-          --accent-orange-light: #ff8c5a;
-          --border-color: #333333;
-          --border-light: #444444;
-          --success-color: #10b981;
-          --success-bg: rgba(16, 185, 129, 0.1);
-          --success-border: rgba(16, 185, 129, 0.3);
-          --error-color: #ef4444;
-          --error-bg: rgba(239, 68, 68, 0.1);
-          --error-border: rgba(239, 68, 68, 0.3);
-          --warning-color: #f59e0b;
-          --warning-bg: rgba(245, 158, 11, 0.1);
-          --warning-border: rgba(245, 158, 11, 0.3);
-          --info-color: #3b82f6;
-          --info-bg: rgba(59, 130, 246, 0.1);
-          --info-border: rgba(59, 130, 246, 0.3);
-          --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-          --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
-          --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.25);
-          --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.4);
-          --radius-sm: 8px;
-          --radius-md: 12px;
-          --radius-lg: 16px;
-          --radius-xl: 20px;
-  
-          --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-          --mono-sans: "Styrene B LC", monospace;
-        }
-  
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-  
-        body {
-          font-family: var(--sans);
-          background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1a1a 100%);
-          color: var(--text-primary);
-          line-height: 1.6;
-          min-height: 100vh;
-          overflow-x: hidden;
-        }
-  
-        .container {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 2rem;
-        }
-  
-        .header {
-          text-align: center;
-          margin-bottom: 3rem;
-          position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 0.75rem;
-        }
-  
-        .header-icon {
-          font-size: clamp(1rem, 4vw, 0.6rem);
-          font-weight: 700;
-          color: var(--text-primary);
-          line-height: 1;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProxyIP Checker - Advanced Risk Analysis</title>
+    <link rel="icon" href="{{ICON_URL}}" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600&family=Courier+Prime:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      :root {
+        --paper: #e7e2d0;
+        --paper-dark: #d8d2ba;
+        --bg-primary: #16201c;
+        --bg-secondary: #202b26;
+        --bg-tertiary: #283530;
+        --ink: #201d16;
+        --ink-soft: #3a3a2e;
+        --text-primary: #ede7d1;
+        --text-secondary: #b7c2ba;
+        --text-muted: #7c8a82;
+        --brass: #6f9683;
+        --brass-light: #8fb39f;
+        --brass-dark: #4f7161;
+        --border-color: #3a4740;
+        --border-light: #4a5850;
+        --success-color: #7a9a5f;
+        --success-bg: rgba(122, 154, 95, 0.12);
+        --success-border: rgba(122, 154, 95, 0.4);
+        --error-color: #a85c3c;
+        --error-bg: rgba(168, 92, 60, 0.12);
+        --error-border: rgba(168, 92, 60, 0.4);
+        --warning-color: #b6903e;
+        --warning-bg: rgba(182, 144, 62, 0.12);
+        --warning-border: rgba(182, 144, 62, 0.4);
+        --accent-orange-light: var(--brass-light);
+        --status-success-icon: var(--success-color);
+        --status-error-icon: var(--error-color);
+        --status-warning-icon: var(--warning-color);
+        --text-light: var(--text-secondary);
+        --info-color: #6f8a9a;
+        --info-bg: rgba(111, 138, 154, 0.12);
+        --info-border: rgba(111, 138, 154, 0.4);
+        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.35);
+        --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.45);
+        --shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.55);
+        --shadow-xl: 0 22px 44px rgba(0, 0, 0, 0.6);
+        --radius-sm: 4px;
+        --radius-md: 6px;
+        --radius-lg: 10px;
+        --radius-xl: 14px;
+        --serif: "Cormorant Garamond", "EB Garamond", Georgia, serif;
+        --body-serif: "EB Garamond", Georgia, serif;
+        --mono-sans: "Courier Prime", "Consolas", "Special Elite", monospace;
+      }
 
-        .header-icon.spinning {
-          display: inline-block;
-          animation: spin 1s linear infinite;
-        }
-  
-        .header::before {
-          content: "";
-          position: absolute;
-          top: -50px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 200px;
-          height: 200px;
-          background: radial-gradient(
-            circle,
-            var(--accent-orange) 0%,
-            transparent 70%
-          );
-          opacity: 0.1;
-          border-radius: 50%;
-          z-index: -1;
-        }
-  
-        .main-title {
-          font-size: clamp(3rem, 5vw, 5rem);
-          font-weight: 700;
-          background: linear-gradient(
-            135deg,
-            var(--accent-orange) 0%,
-            var(--accent-orange-light) 100%
-          );
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          margin-bottom: 0;
-          text-shadow: 0 0 30px rgba(255, 107, 53, 0.3);
-        }
-  
-        .subtitle {
-          font-family: var(--mono-sans);
-          font-size: 1.2rem;
-          color: var(--text-secondary);
-          font-weight: 400;
-          text-align: center;
-          width: 100%;
-        }
-        
-        .title-group {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-  
-        .main-card {
-          background: linear-gradient(145deg, var(--bg-secondary) 0%, #1f1f1f 100%);
-          border-radius: var(--radius-xl);
-          padding: 3rem;
-          box-shadow: var(--shadow-xl);
-          border: 1px solid var(--border-color);
-          backdrop-filter: blur(10px);
-          position: relative;
-          overflow: hidden;
-        }
-  
-        .main-card::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 1px;
-          background: linear-gradient(
-            90deg,
-            transparent,
-            var(--accent-orange),
-            transparent
-          );
-          opacity: 0.5;
-        }
-  
-        .form-section {
-          display: grid;
-          gap: 2rem;
-          margin-bottom: 2rem;
-        }
-  
-        .input-group {
-          position: relative;
-        }
-  
-        .input-label {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          font-weight: 600;
-          color: var(--text-primary);
-          margin-bottom: 0.75rem;
-          font-size: 1.1rem;
-        }
-  
-        .input-label svg {
-          width: 20px;
-          height: 20px;
-          color: var(--accent-orange-light);
-        }
-  
-        .input-wrapper {
-          position: relative;
-        }
-  
-        .form-input {
-          width: 100%;
-          padding: 1rem 1.25rem;
-          font-family: var(--mono-sans);
-          font-size: 1rem;
-          background: var(--bg-tertiary);
-          border: 2px solid var(--border-color);
-          border-radius: var(--radius-md);
-          color: var(--text-primary);
-          transition: all 0.3s ease;
-          outline: none;
-        }
-  
-        .form-input:focus {
-          border-color: var(--accent-orange);
-          box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
-          transform: translateY(-1px);
-        }
-  
-        .form-input::placeholder {
-          color: var(--text-muted);
-        }
-  
-        .btn-primary {
-          background: linear-gradient(
-            135deg,
-            var(--accent-orange) 0%,
-            var(--accent-orange-dark) 100%
-          );
-          color: rgb(255, 255, 255);
-          border: none;
-          padding: 0.8rem 1.4rem;
-          border-radius: var(--radius-md);
-          font-size: 1.1rem;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          position: relative;
-          overflow: hidden;
-          align-items: baseline;
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-          box-shadow: var(--shadow-md);
-        }
-  
-        .btn-primary:hover {
-          transform: translateY(-2px);
-          box-shadow: var(--shadow-lg);
-        }
-  
-        .btn-primary:active {
-          transform: translateY(0);
-        }
-  
-        .btn-primary:disabled {
-          opacity: 0.6;
-          cursor: not-allowed;
-          transform: none;
-        }
-  
-        .btn-primary::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 255, 255, 0.2),
-            transparent
-          );
-          transition: left 0.5s;
-        }
-  
-        .btn-primary:hover::before {
-          left: 100%;
-        }
-  
-        .loading-spinner {
-          width: 20px;
-          height: 20px;
-          border: 2px solid rgba(255, 255, 255, 0.3);
-          border-top: 2px solid white;
-          border-radius: 50%;
-          animation: spin 1s linear infinite;
-          margin-left: 0.5rem;
-          display: none;
-        }
-  
-        @keyframes spin {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(360deg);
-          }
-        }
-  
-        .results-section {
-          margin-top: 3rem;
-        }
-  
-        .result-card {
-          font-family: var(--mono-sans);
-          background: var(--bg-secondary);
-          border-radius: var(--radius-lg);
-          padding: 2rem;
-          margin-bottom: 1.5rem;
-          border-left: 4px solid var(--border-color);
-          box-shadow: var(--shadow-md);
-          transition: all 0.3s ease;
-          position: relative;
-          overflow: hidden;
-        }
-  
-        .result-card::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 4px;
-          height: 100%;
-          background: var(--border-color);
-          transition: all 0.3s ease;
-        }
-  
-        .result-card.success {
-          border-left-color: var(--success-color);
-          background: linear-gradient(
-            145deg,
-            var(--success-bg),
-            var(--bg-secondary)
-          );
-        }
-        .result-card.success::before {
-          background: var(--success-color);
-        }
-        .result-card.error {
-          border-left-color: var(--error-color);
-          background: linear-gradient(
-            145deg,
-            var(--error-bg),
-            var(--bg-secondary)
-          );
-        }
-        .result-card.error::before {
-          background: var(--error-color);
-        }
-        .result-card.warning {
-          border-left-color: var(--warning-color);
-          background: linear-gradient(
-            145deg,
-            var(--warning-bg),
-            var(--bg-secondary)
-          );
-        }
-        .result-card.warning::before {
-          background: var(--warning-color);
-        }
-  
-        .result-header {
-          display: flex;
-          align-items: center;
-          margin-bottom: 1.5rem;
-          gap: 0.75rem;
-        }
-  
-        .result-title {
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--body-serif);
+        background: radial-gradient(ellipse at top, #2e2416 0%, var(--bg-primary) 60%, #17120b 100%);
+        color: var(--text-primary);
+        line-height: 1.65;
+        min-height: 100vh;
+        overflow-x: hidden;
+        background-attachment: fixed;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          radial-gradient(circle at 15% 20%, rgba(184, 137, 74, 0.05) 0%, transparent 40%),
+          radial-gradient(circle at 85% 70%, rgba(184, 137, 74, 0.04) 0%, transparent 45%);
+        z-index: 0;
+      }
+
+      .container {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 2.5rem 2rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .header-icon {
+        font-family: var(--mono-sans);
+        font-size: 1.1rem;
+        color: var(--brass-light);
+        line-height: 1;
+      }
+
+      .header-icon.spinning {
+        display: inline-block;
+        animation: spin 1.4s linear infinite;
+      }
+
+      .title-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 0.5rem 3rem;
+      }
+
+      .title-group::before,
+      .title-group::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 2.4rem;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--brass));
+      }
+
+      .title-group::before {
+        left: 0;
+      }
+
+      .title-group::after {
+        right: 0;
+        background: linear-gradient(90deg, var(--brass), transparent);
+      }
+
+      .main-title {
+        font-family: var(--serif);
+        font-size: clamp(2.4rem, 4.4vw, 3.6rem);
+        font-weight: 600;
+        color: var(--brass-light);
+        letter-spacing: 0.04em;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+      }
+
+      .subtitle {
+        font-family: var(--mono-sans);
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-top: 0.35rem;
+      }
+
+      .main-card {
+        background:
+          linear-gradient(160deg, rgba(255, 255, 255, 0.02), transparent 40%),
+          var(--bg-secondary);
+        border-radius: var(--radius-lg);
+        padding: 2.75rem;
+        box-shadow: var(--shadow-xl), inset 0 0 0 1px rgba(184, 137, 74, 0.08);
+        border: 1px solid var(--border-color);
+        position: relative;
+      }
+
+      .main-card::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        border: 1px solid rgba(184, 137, 74, 0.18);
+        border-radius: calc(var(--radius-lg) - 4px);
+        pointer-events: none;
+      }
+
+      .form-section {
+        display: grid;
+        gap: 1.75rem;
+        margin-bottom: 1.75rem;
+      }
+
+      .input-group {
+        position: relative;
+      }
+
+      .input-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: var(--serif);
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 0.6rem;
+        font-size: 1.05rem;
+        letter-spacing: 0.02em;
+      }
+
+      .input-label svg {
+        width: 18px;
+        height: 18px;
+        color: var(--brass);
+      }
+
+      .input-wrapper {
+        position: relative;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 0.85rem 1.1rem;
+        font-family: var(--mono-sans);
+        font-size: 0.92rem;
+        background: var(--paper);
+        color: var(--ink);
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-sm);
+        transition: all 0.25s ease;
+        outline: none;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
+      }
+
+      .form-input:focus {
+        border-color: var(--brass);
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25), 0 0 0 3px rgba(184, 137, 74, 0.2);
+      }
+
+      .form-input::placeholder {
+        color: #8a7a5c;
+      }
+
+      .btn-primary {
+        background: linear-gradient(160deg, var(--brass-light) 0%, var(--brass-dark) 100%);
+        color: #221b10;
+        border: 1px solid var(--brass-dark);
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--radius-md);
+        font-family: var(--serif);
+        font-size: 1.05rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        position: relative;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        box-shadow: var(--shadow-md);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-lg);
+        filter: brightness(1.05);
+      }
+
+      .btn-primary:active {
+        transform: translateY(0);
+      }
+
+      .btn-primary:disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .loading-spinner {
+        width: 18px;
+        height: 18px;
+        border: 2px solid rgba(34, 27, 16, 0.3);
+        border-top: 2px solid #221b10;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-left: 0.5rem;
+        display: none;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .results-section {
+        margin-top: 2.5rem;
+      }
+
+      .result-card {
+        font-family: var(--mono-sans);
+        background: linear-gradient(160deg, var(--paper) 0%, var(--paper-dark) 100%);
+        color: var(--ink);
+        border-radius: var(--radius-md);
+        padding: 1.75rem;
+        margin-bottom: 1.25rem;
+        border: 1px solid var(--border-light);
+        box-shadow: var(--shadow-md);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .result-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background: var(--border-color);
+      }
+
+      .result-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.25rem;
+        gap: 0.75rem;
+      }
+
+      .result-title {
+        font-family: var(--serif);
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      .result-content {
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .result-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.85rem 1rem;
+        background: rgba(0, 0, 0, 0.03);
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(0, 0, 0, 0.12);
+      }
+      
+        .result-icon {
           font-size: 1.5rem;
-          font-weight: 700;
-          color: var(--text-primary);
-        }
-  
-        .result-content {
-          display: grid;
-          gap: 1rem;
-        }
-  
-        .result-item {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 1rem;
-          background: rgba(255, 255, 255, 0.02);
-          border-radius: var(--radius-md);
-          border: 1px solid var(--border-light);
-          transition: background 0.2s;
-        }
-        .result-item:hover {
-          background: rgba(255, 255, 255, 0.05);
-        }
-        .result-label {
-          font-weight: 500;
-          color: var(--text-secondary);
-        }
-        .result-value {
-          font-weight: 600;
-          color: var(--text-primary);
+          line-height: 1;
           display: flex;
           align-items: center;
-          gap: 0.5rem;
         }
+        
+        .result-card.result-success::before,
+        .result-card.result-success { }
+        .result-card.result-success {
+          border-color: var(--success-border);
+          box-shadow: var(--shadow-md), inset 0 0 0 1px var(--success-border);
+        }
+        .result-card.result-success::before { background: var(--success-color); }
+        
+        .result-card.result-error {
+          border-color: var(--error-border);
+          box-shadow: var(--shadow-md), inset 0 0 0 1px var(--error-border);
+        }
+        .result-card.result-error::before { background: var(--error-color); }
+        
+        .result-card.result-warning {
+          border-color: var(--warning-border);
+          box-shadow: var(--shadow-md), inset 0 0 0 1px var(--warning-border);
+        }
+        .result-card.result-warning::before { background: var(--warning-color); }
+        
+      .result-card.success::before { background: var(--success-color); }
+      .result-card.success { box-shadow: var(--shadow-md), inset 0 0 0 1px var(--success-border); }
+      .result-card.error::before { background: var(--error-color); }
+      .result-card.error { box-shadow: var(--shadow-md), inset 0 0 0 1px var(--error-border); }
+      .result-card.warning::before { background: var(--warning-color); }
+      .result-card.warning { box-shadow: var(--shadow-md), inset 0 0 0 1px var(--warning-border); }
+      
+      .result-label {
+        font-weight: 500;
+        color: var(--ink-soft);
+      }
 
-        .result-card {
-          position: relative;
-          overflow: hidden;
-        }
-        
-        .flag-glow-overlay {
-          position: absolute;
-          top: -20px;
-          right: -30px;
-          width: 180px;
-          height: 120px;
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          filter: blur(25px) opacity(0.18);
-          transform: rotate(8deg) scale(1.15);
-          pointer-events: none;
-          z-index: 1;
-        }
+      .result-value {
+        font-weight: 700;
+        color: var(--ink);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      
+      .result-header, .result-content {
+        position: relative;
+        z-index: 2;
+      }
 
-        .result-header, .result-content {
-          position: relative;
-          z-index: 2;
-        }
-  
-        .badge {
-          display: inline-flex;
-          align-items: center;
-          padding: 0.25rem 0.75rem;
-          border-radius: 9999px;
-          font-size: 0.875rem;
-          font-weight: 500;
-          text-transform: uppercase;
-          letter-spacing: 0.025em;
-        }
-        .badge.success {
-          background: var(--success-bg);
-          color: var(--success-color);
-          border: 1px solid var(--success-border);
-        }
-        .badge.error {
-          background: var(--error-bg);
-          color: var(--error-color);
-          border: 1px solid var(--error-border);
-        }
-        .badge.warning {
-          background: var(--warning-bg);
-          color: var(--warning-color);
-          border: 1px solid var(--warning-border);
-        }
-        .badge.info {
-          background: var(--info-bg);
-          color: var(--info-color);
-          border: 1px solid var(--info-border);
-        }
-  
-        .copy-btn {
-          background: var(--bg-tertiary);
-          border: 1px solid var(--border-color);
-          color: var(--text-secondary);
-          padding: 0.25rem 0.5rem;
-          border-radius: var(--radius-sm);
-          font-size: 0.75rem;
-          cursor: pointer;
-          transition: all 0.2s ease;
-        }
-        .copy-btn:hover {
-          background: var(--accent-orange);
-          color: white;
-          border-color: var(--accent-orange);
-        }
-  
-        .toast {
-          position: fixed;
-          bottom: 2rem;
-          right: 2rem;
-          background: var(--bg-secondary);
-          color: var(--text-primary);
-          padding: 1rem 1.5rem;
-          border-radius: var(--radius-md);
-          box-shadow: var(--shadow-lg);
-          border: 1px solid var(--border-color);
-          z-index: 1000;
-          opacity: 0;
-          transform: translateY(100px);
-          transition: all 0.3s ease;
-        }
-        .toast.show {
-          opacity: 1;
-          transform: translateY(0);
-        }
-        
-        .api-docs {
-          margin-top: 3rem;
-          background: var(--bg-secondary);
-          border-radius: var(--radius-lg);
-          padding: 1.5rem;
-          border: 1px solid var(--border-color);
-        }
-  
-        .api-docs-header {
-          display: flex;
-          align-items: center;
-          gap: 0.75rem;
-          margin-bottom: 2rem;
-        }
-        
-        .api-docs-header h3 {
-          color: var(--text-primary);
-          font-size: 1.75rem;
-          font-weight: 700;
-        }
-        
-        .api-docs-header svg {
-          width: 28px;
-          height: 28px;
-          color: var(--accent-orange);
-        }
-  
-        .api-endpoints {
-          display: grid;
-          gap: 1rem;
-        }
-  
-        .api-endpoint {
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          background-color: var(--bg-tertiary);
-          padding: 1rem 1.2rem;
-          border-radius: var(--radius-md);
-          border: 1px solid var(--border-light);
-          transition: all 0.2s ease;
-        }
-        .api-endpoint:hover {
-          border-color: var(--accent-orange);
-          transform: translateY(-2px);
-        }
-  
-        .api-method {
-          font-family: var(--mono-sans);
-          font-weight: 700;
-          padding: 0.25rem 0.75rem;
-          border-radius: var(--radius-sm);
-          font-size: 0.9rem;
-          background-color: var(--success-bg);
-          color: var(--success-color);
-          border: 1px solid var(--success-border);
-        }
-  
-        .api-endpoint code {
-          font-family: var(--mono-sans);
+      .result-card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .flag-glow-overlay {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 3px solid var(--brass-dark);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 0 5px rgba(184, 137, 74, 0.15);
+        opacity: 0.95;
+        pointer-events: none;
+        z-index: 1;
+      }
+      
+      .status-icon-prefix,
+        .status-icon {
           font-size: 1rem;
-          color: var(--text-secondary);
-          flex-grow: 1;
         }
-  
-        .api-endpoint code span {
-          color: var(--accent-orange-light);
-        }
-  
-        .api-description {
-          font-size: 0.9rem;
-          color: var(--text-muted);
-          margin-left: auto;
-          white-space: nowrap;
-        }
-  
-        .footer {
-          font-family: var(--mono-sans);
-          text-align: center;
-          margin-top: 3rem;
-          padding: 2rem;
-          color: var(--text-muted);
-          border-top: 1px solid var(--border-color);
-        }
-        .footer a {
-          color: var(--accent-orange);
-          text-decoration: none;
-        }
-        .footer a:hover {
-          text-decoration: underline;
-        }
-  
-        @media (max-width: 768px) {
-          .container {
-            padding: 1rem;
-          }
-          .main-card {
-            padding: 2rem;
-          }
-          .header {
-            flex-direction: column;
-            gap: 1rem;
-          }
-          .result-item {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0.5rem;
-          }
-          .api-endpoint {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0.25rem;
-          }
-          .api-description {
-              margin-left: 0;
-              margin-top: 0.2rem;
-          }
-          .toast {
-            left: 1rem;
-            right: 1rem;
-            bottom: 1rem;
-          }
-        }
-  
-        .grid-2 {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 1.5rem;
-        }
-  
-        @media (max-width: 640px) {
-          .grid-2 {
-            grid-template-columns: 1fr;
-          }
-        }
-  
-        @media (max-width: 480px) {
-          .main-card {
-            padding: 1.2rem;
-          }
-          .main-title {
-            font-size: 1.8rem;
-          }
-          .subtitle {
-            font-size: 0.8rem;
-          }
-          .btn-primary {
-            font-size: 1rem;
-          }
-          .api-endpoint {
-            gap: 0.1rem;
-          }
-          .api-method {
-            font-weight: 600;
-            padding: 0.15rem 0.5rem;
-            font-size: 0.8rem;
-          }
-          .api-description {
-            font-size: 0.9rem;
-            margin-left: 0;
-            margin-top: 0rem;
-          }
-          .api-endpoint code {
-            font-size: 0.9rem;
-          }
-  
-          .api-endpoint code span {
-            font-size: 0.8rem;
-          }
-        }
-  
-        .flex-center {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.75rem;
-        }
-        .flex-center svg {
-          width: 22px;
-          height: 22px;
-        }
-  
-        .range-results {
-          margin-top: 2rem;
-        }
-        .ip-grid {
-          display: grid;
-          gap: 0.5rem;
-          max-height: 500px;
-          overflow-y: auto;
-          padding: 1rem;
-          background: var(--bg-tertiary);
-          border-radius: var(--radius-md);
-          border: 1px solid var(--border-color);
-        }
-        .ip-item {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0.75rem;
-          background: var(--bg-secondary);
-          border-radius: var(--radius-sm);
-          border: 1px solid var(--border-light);
-          transition: all 0.2s ease;
-        }
-        .ip-item:hover {
-          background: rgba(255, 107, 53, 0.05);
-          border-color: var(--accent-orange);
-        }
-        .status-indicator {
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          margin-right: 0.5rem;
-        }
-        .status-indicator.success {
-          background: var(--success-color);
-          box-shadow: 0 0 8px var(--success-color);
-        }
-        .status-indicator.error {
-          background: var(--error-color);
-          box-shadow: 0 0 8px var(--error-color);
-        }
-        .status-indicator.warning {
-          background: var(--warning-color);
-          box-shadow: 0 0 8px var(--warning-color);
-        }
-      </style>
-    </head>
-    <body>
-      <div class="container">
-        <header class="header">
-          <div class="title-group">
-              <h1 class="main-title">ProxyIP Checker</h1>
-              <p class="subtitle">Proxy IP Verification & Risk Analysis</p>
-          </div>
-        </header>
-  
-        <div class="main-card">
-          <div class="form-section">
-            <div class="grid-2">
-              <div class="input-group">
-                <label for="proxyip" class="input-label">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5" />
-                  </svg>
-                  Single IP / Domain
-                </label>
-                <div class="input-wrapper">
-                  <input
-                    type="text"
-                    id="proxyip"
-                    class="form-input"
-                    placeholder="127.0.0.1:443 or di.nscl.ir"
-                    autocomplete="off"
-                  />
-                </div>
-              </div>
-  
-              <div class="input-group">
-                <label for="proxyipRange" class="input-label">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 1.5m1-1.5l1 1.5m0 0l.5 1.5m-2-3l2 3m4.5-3l-1.5 2.25m-1.5-2.25l1.5 2.25m3-3l-1.5 2.25m1.5-2.25l1.5 2.25M9 12l-1.5 2.25M15 12l1.5 2.25" />
-                  </svg>
-                  IP Range
-                </label>
-                <div class="input-wrapper">
-                  <input
-                    type="text"
-                    id="proxyipRange"
-                    class="form-input"
-                    placeholder="127.0.0.0/24"
-                    autocomplete="off"
-                  />
-                </div>
-              </div>
-            </div>
-  
-            <button id="checkBtn" class="btn-primary" onclick="checkInputs()">
-              <span class="flex-center">
-                <span id="btn-icon" class="header-icon">&gt;_</span>
-                <span class="btn-text">Start Analysis</span>
-                <span class="loading-spinner"></span>
-              </span>
-            </button>
-          </div>
-  
-          <div id="result" class="results-section"></div>
-          <div id="rangeResult" class="range-results" style="display: none"></div>
+        
+        .status-icon-prefix.success,
+        .status-icon.success { color: var(--success-color); }
+        .status-icon-prefix.error,
+        .status-icon.error { color: var(--error-color); }
+        .status-icon-prefix.warning,
+        .status-icon.warning { color: var(--warning-color); }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.25rem 0.75rem;
+        border-radius: 2px;
+        font-family: var(--mono-sans);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .badge.success { background: var(--success-bg); color: #3f5730; border: 1px solid var(--success-border); }
+      .badge.error { background: var(--error-bg); color: #6b3720; border: 1px solid var(--error-border); }
+      .badge.warning { background: var(--warning-bg); color: #6b5220; border: 1px solid var(--warning-border); }
+      .badge.info { background: var(--info-bg); color: #3d5460; border: 1px solid var(--info-border); }
+
+      .copy-btn {
+        background: rgba(0, 0, 0, 0.05);
+        border: 1px solid var(--border-light);
+        color: var(--ink-soft);
+        padding: 0.2rem 0.5rem;
+        border-radius: var(--radius-sm);
+        font-size: 0.72rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .copy-btn:hover {
+        background: var(--brass);
+        color: #221b10;
+        border-color: var(--brass-dark);
+      }
+
+      .toast {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background: var(--bg-secondary);
+        color: var(--text-primary);
+        padding: 0.9rem 1.4rem;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--brass-dark);
+        font-family: var(--body-serif);
+        z-index: 1000;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 0.3s ease;
+      }
+      .toast.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .api-docs {
+        margin-top: 2.5rem;
+        background: var(--bg-secondary);
+        border-radius: var(--radius-lg);
+        padding: 1.75rem;
+        border: 1px solid var(--border-color);
+      }
+
+      .api-docs-header {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .api-docs-header h3 {
+        font-family: var(--serif);
+        color: var(--brass-light);
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .api-docs-header svg {
+        width: 24px;
+        height: 24px;
+        color: var(--brass);
+      }
+
+      .api-endpoints {
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .api-endpoint {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background: rgba(0, 0, 0, 0.15);
+        padding: 0.85rem 1.1rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-color);
+        transition: all 0.2s ease;
+      }
+      .api-endpoint:hover {
+        border-color: var(--brass);
+      }
+
+      .api-method {
+        font-family: var(--mono-sans);
+        font-weight: 700;
+        padding: 0.2rem 0.6rem;
+        border-radius: 2px;
+        font-size: 0.78rem;
+        background: var(--success-bg);
+        color: var(--success-color);
+        border: 1px solid var(--success-border);
+      }
+
+      .api-endpoint code {
+        font-family: var(--mono-sans);
+        font-size: 0.88rem;
+        color: var(--text-secondary);
+        flex-grow: 1;
+      }
+
+      .api-endpoint code span {
+        color: var(--brass-light);
+      }
+
+      .api-description {
+        font-family: var(--body-serif);
+        font-size: 0.85rem;
+        font-style: italic;
+        color: var(--text-muted);
+        margin-left: auto;
+        white-space: nowrap;
+      }
+
+      .footer {
+        font-family: var(--mono-sans);
+        text-align: center;
+        margin-top: 2.5rem;
+        padding: 1.75rem;
+        color: var(--text-muted);
+        border-top: 1px solid var(--border-color);
+        font-size: 0.8rem;
+        letter-spacing: 0.04em;
+      }
+      .footer a {
+        color: var(--brass-light);
+        text-decoration: none;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .container { padding: 1.5rem 1rem; }
+        .main-card { padding: 1.75rem; }
+        .header { flex-direction: column; gap: 1rem; }
+        .result-item { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+        .api-endpoint { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+        .api-description { margin-left: 0; margin-top: 0.2rem; }
+        .toast { left: 1rem; right: 1rem; bottom: 1rem; }
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      @media (max-width: 640px) {
+        .grid-2 { grid-template-columns: 1fr; }
+      }
+
+      @media (max-width: 480px) {
+        .main-card { padding: 1.25rem; }
+        .main-title { font-size: 1.9rem; }
+        .subtitle { font-size: 0.65rem; }
+        .btn-primary { font-size: 0.95rem; }
+      }
+
+      .flex-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.7rem;
+      }
+      .flex-center svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .range-results {
+        margin-top: 2rem;
+      }
+      .ip-grid {
+        display: grid;
+        gap: 0.5rem;
+        max-height: 500px;
+        overflow-y: auto;
+        padding: 1rem;
+        background: var(--bg-tertiary);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border-color);
+      }
+      .ip-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.7rem;
+        background: var(--paper);
+        color: var(--ink);
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-light);
+        font-family: var(--mono-sans);
+      }
+      .status-indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+      .status-indicator.success { background: var(--success-color); }
+      .status-indicator.error { background: var(--error-color); }
+      .status-indicator.warning { background: var(--warning-color); }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="title-group">
+          <h1 class="main-title">ProxyIP Checker</h1>
+          <p class="subtitle">Proxy IP Verification &amp; Risk Analysis</p>
         </div>
-  
-        <div class="api-docs">
-          <div class="api-docs-header">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 00-1.242 7.244" />
-            </svg>
-            <h3>API Documentation</h3>
+      </header>
+
+      <div class="main-card">
+        <div class="form-section">
+          <div class="grid-2">
+            <div class="input-group">
+              <label for="proxyip" class="input-label">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5" />
+                </svg>
+                Single IP / Domain
+              </label>
+              <div class="input-wrapper">
+                <input type="text" id="proxyip" class="form-input" placeholder="127.0.0.1:443 or di.nscl.ir" autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="proxyipRange" class="input-label">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 1.5m1-1.5l1 1.5m0 0l.5 1.5m-2-3l2 3m4.5-3l-1.5 2.25m-1.5-2.25l1.5 2.25m3-3l-1.5 2.25m1.5-2.25l1.5 2.25M9 12l-1.5 2.25M15 12l1.5 2.25" />
+                </svg>
+                IP Range
+              </label>
+              <div class="input-wrapper">
+                <input type="text" id="proxyipRange" class="form-input" placeholder="127.0.0.0/24" autocomplete="off" />
+              </div>
+            </div>
           </div>
-          <div class="api-endpoints">
-            <div class="api-endpoint">
-              <span class="api-method">GET</span>
-              <code>/check?proxyip=<span>IP1,IP2,...</span></code>
-              <span class="api-description">Check multiple IPs</span>
-            </div>
-            <div class="api-endpoint">
-              <span class="api-method">GET</span>
-              <code>/check?iprange=<span>IP_RANGE</span></code>
-              <span class="api-description">Check an IP range</span>
-            </div>
-            <div class="api-endpoint">
-              <span class="api-method">GET</span>
-              <code>/resolve?domain=<span>YOUR_DOMAIN</span></code>
-              <span class="api-description">Resolve domain to IP</span>
-            </div>
-            <div class="api-endpoint">
-              <span class="api-method">GET</span>
-              <code>/ip-info?ip=<span>TARGET_IP</span></code>
-              <span class="api-description">Get IP information</span>
-            </div>
-            <div class="api-endpoint">
-              <span class="api-method">GET</span>
-              <code>/scamalytics-lookup?ip=<span>TARGET_IP</span></code>
-              <span class="api-description">Scamalytics score</span>
-            </div>
+
+          <button id="checkBtn" class="btn-primary" onclick="checkInputs()">
+            <span class="flex-center">
+              <span id="btn-icon" class="header-icon">&gt;_</span>
+              <span class="btn-text">Start Analysis</span>
+              <span class="loading-spinner"></span>
+            </span>
+          </button>
+        </div>
+
+        <div id="result" class="results-section"></div>
+        <div id="rangeResult" class="range-results" style="display: none"></div>
+      </div>
+
+      <div class="api-docs">
+        <div class="api-docs-header">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 00-1.242 7.244" />
+          </svg>
+          <h3>API Documentation</h3>
+        </div>
+        <div class="api-endpoints">
+          <div class="api-endpoint">
+            <span class="api-method">GET</span>
+            <code>/check?proxyip=<span>IP1,IP2,...</span></code>
+            <span class="api-description">Check multiple IPs</span>
+          </div>
+          <div class="api-endpoint">
+            <span class="api-method">GET</span>
+            <code>/check?iprange=<span>IP_RANGE</span></code>
+            <span class="api-description">Check an IP range</span>
+          </div>
+          <div class="api-endpoint">
+            <span class="api-method">GET</span>
+            <code>/resolve?domain=<span>YOUR_DOMAIN</span></code>
+            <span class="api-description">Resolve domain to IP</span>
+          </div>
+          <div class="api-endpoint">
+            <span class="api-method">GET</span>
+            <code>/ip-info?ip=<span>TARGET_IP</span></code>
+            <span class="api-description">Get IP information</span>
+          </div>
+          <div class="api-endpoint">
+            <span class="api-method">GET</span>
+            <code>/scamalytics-lookup?ip=<span>TARGET_IP</span></code>
+            <span class="api-description">Scamalytics score</span>
           </div>
         </div>
-  
-        <footer class="footer">
-          <p>
-            <a href="https://github.com/NiREvil/vless/" target="_blank" rel="noopener noreferrer">
-              © ${new Date().getFullYear()} <strong>Dìana</strong> – ProxyIP checker
-            </a>
-          </p>
-        </footer>
+      </div>
+
+      <footer class="footer">
+        <p>
+          <a href="https://github.com/NiREvil/vless/" target="_blank" rel="noopener noreferrer">
+            © ${new Date().getFullYear()} <strong>Dìana</strong> – ProxyIP checker
+          </a>
+        </p>
+      </footer>
       </div>
   
       <div id="toast" class="toast"></div>
@@ -1503,7 +1384,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
                 const baseParts = baseIp.split('.');
                 if (baseParts.length === 4 ) {
                     for (let i = 1; i <= 255; i++) {
-                        ips.push(\"\${baseParts[0]}.\${baseParts[1]}.\${baseParts[2]}.\${i}\");
+                        ips.push(baseParts[0] + "." + baseParts[1] + "." + baseParts[2] + "." + i);
                     }
                 } else {
                      showToast('Invalid CIDR format. Expected x.x.x.0/24.');
@@ -1517,10 +1398,10 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
                 const ipParts = baseIpWithLastOctet.split('.');
                 if (ipParts.length === 4) {
                     const startOctet = parseInt(ipParts[3]);
-                    const prefix = \"\${ipParts[0]}.\${ipParts[1]}.\${ipParts[2]}\";
+                    const prefix = ipParts[0] + "." + ipParts[1] + "." + ipParts[2];
                     if (!isNaN(startOctet) && !isNaN(endOctet) && startOctet <= endOctet && startOctet >= 0 && endOctet <= 255) {
                         for (let i = startOctet; i <= endOctet; i++) {
-                            ips.push(\"\${prefix}.\${i}\");
+                            ips.push(prefix + "." + i);
                         }
                     } else {
                         showToast('Invalid range in x.x.x.A-B format.');
@@ -1573,43 +1454,20 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
         }
 
         function formatScamalyticsRiskInfo(data) {
-          if (!data || !data.scamalytics || data.scamalytics.status !== 'ok') {
+          if (!data || !data.info || data.info.success !== true) {
             return '<span class="badge info">Risk Unknown</span>';
           }
 
-          const sa = data.scamalytics;
-          const score = sa.scamalytics_score;
-          const risk = sa.scamalytics_risk;
+          const score = data.info.fraud_score;
+          const risk = data.info.risk || 'unknown';
+          const isVpn = data.details && data.details.vpn === "Yes" ? " | VPN" : "";
           
-          let riskText = "Unknown";
           let badgeClass = "info";
+          if (risk === "low") badgeClass = "success";
+          else if (risk === "medium") badgeClass = "warning";
+          else if (risk === "high" || risk === "very high") badgeClass = "error";
 
-          if (risk !== undefined && score !== undefined && risk !== null && score !== null) {
-            const riskCapitalized = risk.charAt(0).toUpperCase() + risk.slice(1);
-            riskText = \`\${score} - \${riskCapitalized}\`;
-
-            switch (risk.toLowerCase()) { 
-              case "low": badgeClass = "success"; break;
-              case "medium": badgeClass = "warning"; break;
-              case "high": case "very high": badgeClass = "error"; break;
-              default: 
-                badgeClass = "info";
-                riskText = \`Score \${score} - \${riskCapitalized || 'Status Unknown'}\`;
-                break;
-            }
-          } else if (score !== undefined && score !== null) {
-            riskText = \`Score \${score} - N/A\`; 
-          } else if (risk) {
-            const riskCapitalized = risk.charAt(0).toUpperCase() + risk.slice(1);
-            riskText = riskCapitalized;
-            switch (risk.toLowerCase()) {
-              case "low": badgeClass = "success"; break;
-              case "medium": badgeClass = "warning"; break;
-              case "high": case "very high": badgeClass = "error"; break;
-              default: badgeClass = "info"; riskText = "Status Unknown"; break;
-            }
-          }
-          
+          const riskText = score + " - " + risk.charAt(0).toUpperCase() + risk.slice(1) + isVpn;
           return \`<span class="badge \${badgeClass}">\${riskText}</span>\`;
         }
 
@@ -1651,7 +1509,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
             const currentHost = window.location.host;
             const currentProtocol = window.location.protocol;
             let redirectPathVal = singleIpToTest || rangeIpToTest || '';
-            const redirectUrl = \`\${currentProtocol}//\${currentHost}/\text{\${encodeURIComponent(redirectPathVal)}}\`;
+            const redirectUrl = \`\${currentProtocol}//\${currentHost}/\${encodeURIComponent(redirectPathVal)}\`;
             showToast('TOKEN expired, refreshing page...');
             setTimeout(() => { window.location.href = redirectUrl; }, 1000);
             return;
@@ -1700,7 +1558,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
                         <div class="result-content">
                           <div class="result-item">
                             <span class="result-label">Progress</span>
-                            <span class="result-value" id="rangeProgress">0/\${ipsInRange.length}</span>
+                            <span class="result-value" id="rangeProgress">0/\` + ipsInRange.length + \`</span>
                           </div>
                           <div class="result-item">
                             <span class="result-label">Successful IPs</span>
@@ -1718,7 +1576,8 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
                     for (let i = 0; i < ipsInRange.length; i += batchSize) {
                         const batch = ipsInRange.slice(i, i + batchSize);
                         const batchPromises = batch.map(ip => 
-                            fetchSingleIPCheck(ip + ':443') 
+
+                            fetchSingleIPCheck(ip + ':443', 2500) 
                                 .then(data => {
                                     checkedCount++;
                                     if (data.success) {
@@ -1735,7 +1594,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
                         );
                         await Promise.all(batchPromises);
                         
-                        document.getElementById('rangeProgress').textContent = \`\${checkedCount}/\text{\${ipsInRange.length}}\`;
+                        document.getElementById('rangeProgress').textContent = checkedCount + "/" + ipsInRange.length;
                         document.getElementById('rangeSuccess').textContent = successCount;
                         
                         if (i + batchSize < ipsInRange.length) {
@@ -1745,8 +1604,8 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
                     
                     const finalResultClass = successCount === ipsInRange.length ? 'success' : 
                                            successCount > 0 ? 'warning' : 'error';
-                    const finalIcon = successCount === ipsInRange.length ? '✅' : 
-                                    successCount > 0 ? '⚠️' : '❌';
+                    const finalIcon = successCount === ipsInRange.length ? '✓' : 
+                                    successCount > 0 ? '!!' : '✕';
                     
                     rangeResultDiv.innerHTML = \`
                       <div class="result-card \${finalResultClass}">
@@ -1792,7 +1651,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
                      rangeResultDiv.innerHTML = \`
                        <div class="result-card error">
                          <div class="result-header">
-                           <div class="result-icon error">❌</div>
+                           <div class="result-icon error">✕</div>
                            <h3 class="result-title">Invalid Range Format</h3>
                          </div>
                          <div class="result-content">
@@ -1807,7 +1666,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
             const errorMsg = \`
               <div class="result-card error">
                 <div class="result-header">
-                  <div class="result-icon error">✗</div>
+                  <div class="result-icon error">✕</div>
                   <h3 class="result-title">General Error</h3>
                 </div>
                 <div class="result-content">
@@ -1838,8 +1697,8 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
             }
         }
 
-        async function fetchSingleIPCheck(proxyipWithOptionalPort) {
-            const requestUrl = \`./check?proxyip=\${encodeURIComponent(proxyipWithOptionalPort)}&token=\${TEMP_TOKEN}&_t=\text{\${Date.now()}}\`;
+        async function fetchSingleIPCheck(proxyipWithOptionalPort, timeout = 8000) {
+            const requestUrl = \`./check?proxyip=\${encodeURIComponent(proxyipWithOptionalPort)}&token=\${TEMP_TOKEN}&timeout=\${timeout}&_t=\${Date.now()}\`;
             const response = await fetch(requestUrl, { cache: 'no-store' });
             return await response.json();
         }
@@ -1852,7 +1711,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
             ]);
       
             const resultClass = checkData.success ? 'success' : 'error';
-            const resultIcon = checkData.success ? '✅' : '❌';
+            const resultIcon = checkData.success ? '✓' : '✕';
             const resultTitle = checkData.success ? 'ProxyIP Valid' : 'ProxyIP Invalid';
       
             const riskInfoHTML = formatScamalyticsRiskInfo(riskInfo);
@@ -1956,16 +1815,16 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
             </div>
           \`;
 
-          const resolveResponse = await fetch(\`./resolve?domain=\${encodeURIComponent(cleanDomain)}&token=\${TEMP_TOKEN}&_t=\text{\text{\${Date.now()}}}\`, { cache: 'no-store' });
+          const resolveResponse = await fetch(\`./resolve?domain=\${encodeURIComponent(cleanDomain)}&token=\${TEMP_TOKEN}&_t=\${Date.now()}\`, { cache: 'no-store' });
           const resolveData = await resolveResponse.json();
           
           if (!resolveData.success) { 
-            resultDiv.innerHTML = \`<div class="result-card result-error"><h3><span class="status-icon-prefix">❌</span> Resolution Failed</h3><p>\${resolveData.error || 'Domain resolution failed for ' + createCopyButton(cleanDomain)}</p></div>\`;
+            resultDiv.innerHTML = \`<div class="result-card result-error"><h3><span class="status-icon-prefix">✕</span> Resolution Failed</h3><p>\${resolveData.error || 'Domain resolution failed for ' + createCopyButton(cleanDomain)}</p></div>\`;
             return;
           }
           const ips = resolveData.ips;
           if (!ips || ips.length === 0) { 
-            resultDiv.innerHTML = \`<div class="result-card result-error"><h3><span class="status-icon-prefix">❌</span> No IPs Found</h3><p>No IPs found for \${createCopyButton(cleanDomain)}.</p></div>\`;
+            resultDiv.innerHTML = \`<div class="result-card result-error"><h3><span class="status-icon-prefix">✕</span> No IPs Found</h3><p>No IPs found for \${createCopyButton(cleanDomain)}.</p></div>\`;
             return;
           }
           
@@ -2007,17 +1866,17 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
           if (validCount === ips.length && ips.length > 0) {
             resultCardHeader.childNodes[1].nodeValue = ' All Domain IPs Valid';
             domainCardIconEl.className = 'status-icon-prefix success';
-            domainCardIconEl.textContent = '✅';
+            domainCardIconEl.textContent = '✓';
             domainResultCardEl.classList.add('result-success');
           } else if (validCount === 0) {
             resultCardHeader.childNodes[1].nodeValue = ' All Domain IPs Invalid';
             domainCardIconEl.className = 'status-icon-prefix error';
-            domainCardIconEl.textContent = '❌';
+            domainCardIconEl.textContent = '✕';
             domainResultCardEl.classList.add('result-error');
           } else {
             resultCardHeader.childNodes[1].nodeValue = \` Some Domain IPs Valid (\${validCount}/\${ips.length})\`;
             domainCardIconEl.className = 'status-icon-prefix warning';
-            domainCardIconEl.textContent = '⚠️';
+            domainCardIconEl.textContent = '!!';
             domainResultCardEl.classList.add('result-warning');
           }
         }
@@ -2030,12 +1889,12 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
             ipCheckResults.set(ipToTest, result);
             
             if (statusIcon) {
-                 statusIcon.textContent = result.success ? \`✅ (\${result.latency} ms)\` : '❌';
+                 statusIcon.textContent = result.success ? \`✓ (\${result.latency} ms)\` : '✕';
                  statusIcon.style.color = result.success ? 'var(--status-success-icon)' : 'var(--status-error-icon)';
             }
           } catch (error) {
             if (statusIcon) {
-                statusIcon.textContent = '⚠️';
+                statusIcon.textContent = '!!';
                 statusIcon.style.color = 'var(--status-warning-icon)';
             }
             ipCheckResults.set(ip, { success: false, error: error.message });
@@ -2044,16 +1903,29 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
         
         async function getIPInfoWithIndex(ip, index) {
           try {
-            const ipInfo = await getIPInfo(ip.split(':')[0]);
+            const cleanIP = ip.split(':')[0];
+            const riskInfo = await fetchScamalyticsRiskInfo(cleanIP);
             const infoElement = document.getElementById(\`ip-info-\${index}\`);
-            if (infoElement) infoElement.innerHTML = formatIPInfo(ipInfo, true);
+            
+            if (infoElement && riskInfo && riskInfo.info && riskInfo.info.success) {
+                const country = riskInfo.details.country || 'N/A';
+                const as = riskInfo.details.asn ? 'AS' + riskInfo.details.asn : 'N/A';
+                const score = riskInfo.info.fraud_score !== undefined ? riskInfo.info.fraud_score : 0;
+                const risk = riskInfo.info.risk || 'low';
+                
+                let badgeClass = 'success';
+                if (risk === 'medium') badgeClass = 'warning';
+                else if (risk === 'high' || risk === 'very high') badgeClass = 'error';
+
+                infoElement.innerHTML = \` <span style="color: var(--text-light);">(\${country} - \${as})</span> <span class="badge \${badgeClass}" style="padding: 0.1rem 0.4rem; font-size: 0.72em; margin-left: 4px;">Score: \${score}</span>\`;
+            }
           } catch (error) { }
         }
 
         async function getIPInfo(ip) {
           try {
             const cleanIP = ip.replace(/[\[\]]/g, '');
-            const response = await fetch(\`./ip-info?ip=\${encodeURIComponent(cleanIP)}&token=\${TEMP_TOKEN}&_t=\text{\text{\${Date.now()}}}\`, { cache: 'no-store' });
+            const response = await fetch(\`./ip-info?ip=\${encodeURIComponent(cleanIP)}&token=\${TEMP_TOKEN}&_t=\${Date.now()}\`, { cache: 'no-store' });
             return await response.json();
           } catch (error) { return null; }
         }
@@ -2074,6 +1946,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
     headers: { "content-type": "text/html;charset=UTF-8" },
   });
 }
+
 
 // ==================== TLS ENGINE ====================
 const e = 769,
@@ -2213,7 +2086,7 @@ async function V(e, t, n, r, i = "SHA-256") {
   const s = W(L.encode(t), n);
   let a = new Uint8Array(0),
     h = s;
-  for (; a.length < r; ) {
+  for (; a.length < r;) {
     h = await $(i, e, h);
     const t = await $(i, e, W(h, s));
     a = W(a, t);
@@ -2323,18 +2196,18 @@ function ee(e, t, n) {
 }
 function te(e, t) {
   const n = (function (e) {
-      const t = new Uint8Array(e);
-      return (
-        (t[3] &= 15),
-        (t[7] &= 15),
-        (t[11] &= 15),
-        (t[15] &= 15),
-        (t[4] &= 252),
-        (t[8] &= 252),
-        (t[12] &= 252),
-        t
-      );
-    })(e.slice(0, 16)),
+    const t = new Uint8Array(e);
+    return (
+      (t[3] &= 15),
+      (t[7] &= 15),
+      (t[11] &= 15),
+      (t[15] &= 15),
+      (t[4] &= 252),
+      (t[8] &= 252),
+      (t[12] &= 252),
+      t
+    );
+  })(e.slice(0, 16)),
     r = e.slice(16, 32);
   let i = [0n, 0n, 0n, 0n, 0n];
   const s = [
@@ -2460,7 +2333,7 @@ function ce(e) {
     const n = R(e, t);
     t += 2;
     const r = t + n;
-    for (; t + 4 <= r; ) {
+    for (; t + 4 <= r;) {
       const n = R(e, t);
       t += 2;
       const r = R(e, t);
@@ -2515,7 +2388,7 @@ function fe(e) {
   const t = { alpn: null };
   let n = 2;
   const r = 2 + R(e, 0);
-  for (; n + 4 <= r; ) {
+  for (; n + 4 <= r;) {
     const r = R(e, n);
     n += 2;
     const i = R(e, n);
@@ -2528,26 +2401,26 @@ function fe(e) {
   return t;
 }
 const F0 = (e) => {
-    if (
-      ((e = String(e ?? "").trim()),
+  if (
+    ((e = String(e ?? "").trim()),
       "[" === e[0] && "]" === e[e.length - 1] && (e = e.slice(1, -1)),
       !e || e.includes(":"))
-    )
-      return "";
-    const t = e.split(".");
-    if (4 !== t.length) return e;
-    for (const n of t) {
-      if ("" === n || n.length > 3) return e;
-      let t = 0;
-      for (let r = 0; r < n.length; r++) {
-        const i = n.charCodeAt(r) - 48;
-        if (i < 0 || i > 9) return e;
-        t = 10 * t + i;
-      }
-      if (t > 255) return e;
-    }
+  )
     return "";
-  },
+  const t = e.split(".");
+  if (4 !== t.length) return e;
+  for (const n of t) {
+    if ("" === n || n.length > 3) return e;
+    let t = 0;
+    for (let r = 0; r < n.length; r++) {
+      const i = n.charCodeAt(r) - 48;
+      if (i < 0 || i > 9) return e;
+      t = 10 * t + i;
+    }
+    if (t > 255) return e;
+  }
+  return "";
+},
   Z0 = (e) => e && 1 === e[0] && 112 === e[1];
 function ue(e, n, r, { tls13: i = !0, tls12: s = !0, alpn: a = null } = {}) {
   n = F0(n);
@@ -2577,8 +2450,8 @@ function ue(e, n, r, { tls13: i = !0, tls12: s = !0, alpn: a = null } = {}) {
     let e;
     if (
       (l.push(s ? _(B(C), 0, 5, 4, 3, 4, 3, 3) : _(B(C), 0, 3, 2, 3, 4)),
-      l.push(_(B(H), 0, 2, 1, 1)),
-      r?.x25519 && r?.p256)
+        l.push(_(B(H), 0, 2, 1, 1)),
+        r?.x25519 && r?.p256)
     )
       e = W(_(0, 29, B(r.x25519.length), r.x25519), _(0, 23, B(r.p256.length), r.p256));
     else if (r?.x25519) e = _(0, 29, B(r.x25519.length), r.x25519);
@@ -2593,9 +2466,9 @@ function ue(e, n, r, { tls13: i = !0, tls12: s = !0, alpn: a = null } = {}) {
   return se(h, _(B(t), e, 0, B(o.length), o, 1, 0, B(y.length), y));
 }
 const ye = (e) => {
-    const t = new Uint8Array(8);
-    return new DataView(t.buffer).setBigUint64(0, e, !1), t;
-  },
+  const t = new Uint8Array(8);
+  return new DataView(t.buffer).setBigUint64(0, e, !1), t;
+},
   pe = (e, t) => {
     const n = e.slice(),
       r = ye(t);
@@ -2607,10 +2480,10 @@ class TlsClient {
   constructor(e, t = {}) {
     if (
       ((this.socket = e),
-      (this.serverName = t.serverName || ""),
-      (this.supportTls13 = !1 !== t.tls13),
-      (this.supportTls12 = !1 !== t.tls12),
-      !this.supportTls13 && !this.supportTls12)
+        (this.serverName = t.serverName || ""),
+        (this.supportTls13 = !1 !== t.tls13),
+        (this.supportTls12 = !1 !== t.tls12),
+        !this.supportTls13 && !this.supportTls12)
     )
       throw new Error("At least one TLS version must be enabled");
     (this.alpnProtocols = Array.isArray(t.alpn) ? t.alpn : t.alpn ? [t.alpn] : null),
@@ -2664,23 +2537,23 @@ class TlsClient {
     if (r) return r;
     try {
       await e.cancel("TLS read timeout");
-    } catch {}
+    } catch { }
     try {
       await n;
-    } catch {}
+    } catch { }
     throw new Error("TLS read timeout");
   }
   async pr(e, t, n) {
-    for (;;) {
+    for (; ;) {
       let r;
-      for (; (r = this.recordParser.next()); ) if (await t(r)) return;
+      for (; (r = this.recordParser.next());) if (await t(r)) return;
       const { value: i, done: s } = await this.readChunk(e);
       if (s) throw new Error(n);
-      this.recordParser.feed(i);
+      this.recordParser.feed(e);
     }
   }
   async ph(e, t, n) {
-    for (let e; (e = this.handshakeParser.next()); ) if (await t(e)) return;
+    for (let e; (e = this.handshakeParser.next());) if (await t(e)) return;
     return this.pr(
       e,
       async (e) => {
@@ -2690,7 +2563,7 @@ class TlsClient {
         }
         if (e.type === s) {
           this.handshakeParser.feed(e.fragment);
-          for (let e; (e = this.handshakeParser.next()); ) if (await t(e)) return 1;
+          for (let e; (e = this.handshakeParser.next());) if (await t(e)) return 1;
         }
       },
       n,
@@ -2730,28 +2603,28 @@ class TlsClient {
     }
   }
   async receiveServerHello(e) {
-    for (;;) {
+    for (; ;) {
       const { value: t, done: n } = await this.readChunk(e);
       if (n) throw new Error("Connection closed waiting for ServerHello");
       let r;
-      for (this.recordParser.feed(t); (r = this.recordParser.next()); ) {
+      for (this.recordParser.feed(t); (r = this.recordParser.next());) {
         if (r.type === i) {
           if (Z0(r.fragment)) continue;
           throw new Error(`TLS Alert: level=${r.fragment[0]}, desc=${r.fragment[1]}`);
         }
         if (r.type !== s) continue;
         let e;
-        for (this.handshakeParser.feed(r.fragment); (e = this.handshakeParser.next()); ) {
+        for (this.handshakeParser.feed(r.fragment); (e = this.handshakeParser.next());) {
           if (e.type !== c) continue;
           this.recordHandshake(e.raw);
           const t = ce(e.body);
           if (
             ((this.serverRandom = t.serverRandom),
-            (this.cipherSuite = t.cipherSuite),
-            (this.cipherConfig = this.getCipherConfig(t.cipherSuite)),
-            (this.isTls13 = t.isTls13),
-            (this.negotiatedAlpn = t.alpn || null),
-            !this.cipherConfig)
+              (this.cipherSuite = t.cipherSuite),
+              (this.cipherConfig = this.getCipherConfig(t.cipherSuite)),
+              (this.isTls13 = t.isTls13),
+              (this.negotiatedAlpn = t.alpn || null),
+              !this.cipherConfig)
           )
             throw new Error(`Unsupported cipher suite: 0x${t.cipherSuite.toString(16)}`);
           return t;
@@ -2787,7 +2660,7 @@ class TlsClient {
         },
         "Connection closed during TLS 1.2 handshake",
       ),
-      !this.sawCert)
+        !this.sawCert)
     )
       throw new Error("Missing TLS 1.2 leaf certificate");
     if (!n) throw new Error("Missing TLS 1.2 ServerKeyExchange");
@@ -2899,7 +2772,7 @@ class TlsClient {
           h = t.slice(0, -1);
         if (n === s) {
           this.handshakeParser.feed(h);
-          for (let e; (e = this.handshakeParser.next()); ) if ((await H(e), C)) return 1;
+          for (let e; (e = this.handshakeParser.next());) if ((await H(e), C)) return 1;
         }
       },
       "Connection closed during TLS 1.3 handshake",
@@ -2955,7 +2828,7 @@ class TlsClient {
         ? re(this.serverHandshakeKey, t, e, n)
         : z(this.serverHandshakeKey, t, e, n));
     let i = r.length - 1;
-    for (; i >= 0 && !r[i]; ) i--;
+    for (; i >= 0 && !r[i];) i--;
     return i < 0 ? P : r.slice(0, i + 1);
   }
   async encryptTls13(e) {
@@ -2973,7 +2846,7 @@ class TlsClient {
         ? await re(this.serverAppKey, t, e, n)
         : await z(this.serverAppKey, t, e, n);
     let i = r.length - 1;
-    for (; i >= 0 && !r[i]; ) i--;
+    for (; i >= 0 && !r[i];) i--;
     return i < 0 ? { data: P, type: 0 } : { data: r.slice(0, i), type: r[i] };
   }
   async write(e) {
@@ -2988,9 +2861,9 @@ class TlsClient {
     }
   }
   async read() {
-    for (;;) {
+    for (; ;) {
       let e;
-      for (; (e = this.recordParser.next()); ) {
+      for (; (e = this.recordParser.next());) {
         if (e.type === i) {
           if (e.fragment[1] === E) return null;
           throw new Error(`TLS Alert: ${e.fragment[1]}`);
@@ -3005,7 +2878,7 @@ class TlsClient {
         }
         if (n !== s) continue;
         let r;
-        for (this.handshakeParser.feed(t); (r = this.handshakeParser.next()); )
+        for (this.handshakeParser.feed(t); (r = this.handshakeParser.next());)
           if (r.type !== o && r.type === k)
             throw new Error("TLS 1.3 KeyUpdate is not supported by TLSClientMini");
       }
