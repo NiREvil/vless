@@ -21,7 +21,7 @@ const CLOUDFLARE_INDEX_ENDPOINT: &str = "/";
 const CLOUDFLARE_META_ENDPOINT: &str = "/meta";
 
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
-const DEFAULT_PROXY_FILE: &str = "edge/assets/p-legacies.yaml";
+const DEFAULT_PROXY_FILE: &str = "edge/assets/p-legacies.csv";
 const SECONDARY_PROXY_FILE: &str = "sub/country_proxies/02_proxies.csv";
 
 const MAX_CONCURRENT_SCANS: usize = 150;
@@ -299,6 +299,21 @@ async fn fetch_risk_assessment(ip: &str, api_host: &str) -> Result<(i64, String)
     }
 }
 
+fn risk_color_hex(score: i64) -> String {
+    let clamped = score.clamp(0, 100) as f32 / 100.0;
+    let low = (0xC9, 0xA2, 0x27);
+    let high = (0x8B, 0x1E, 0x1E);
+    let r = (low.0 as f32 + (high.0 as f32 - low.0 as f32) * clamped) as u8;
+    let g = (low.1 as f32 + (high.1 as f32 - low.1 as f32) * clamped) as u8;
+    let b = (low.2 as f32 + (high.2 as f32 - low.2 as f32) * clamped) as u8;
+    format!("{:02X}{:02X}{:02X}", r, g, b)
+}
+
+fn risk_badge_html(score: i64) -> String {
+    let color = risk_color_hex(score);
+    format!("<img src=\"https://img.shields.io/badge/-{}-{}\" />", score, color)
+}
+
 async fn scan_candidate(
     ip: String,
     port: u16,
@@ -344,11 +359,17 @@ async fn scan_candidate(
 
                         live_count.fetch_add(1, Ordering::Relaxed);
 
-                        let risk_badge = match info.risk.to_lowercase().as_str() {
-                            "low" => "⚪ LOW".green(),
-                            "medium" => "🟡 MEDIUM".yellow(),
-                            _ => "🔴 HIGH".red().bold(),
+                        let (r, g, b) = {
+                            let clamped = info.fraud_score.clamp(0, 100) as f32 / 100.0;
+                            let low = (0xC9, 0xA2, 0x27);
+                            let high = (0x8B, 0x1E, 0x1E);
+                            (
+                                (low.0 as f32 + (high.0 as f32 - low.0 as f32) * clamped) as u8,
+                                (low.1 as f32 + (high.1 as f32 - low.1 as f32) * clamped) as u8,
+                                (low.2 as f32 + (high.2 as f32 - low.2 as f32) * clamped) as u8,
+                            )
                         };
+                        let risk_badge = format!("{}", info.fraud_score).truecolor(r, g, b).bold();
 
                         let flag = generate_country_flag_emoji(&info.country_code);
 
@@ -570,18 +591,15 @@ fn write_markdown_report(proxies_by_country: &BTreeMap<String, Vec<ProxyInfo>>, 
                 sorted.sort_by_key(|info| info.fraud_score);
                 for info in sorted.iter() {
                     let location = format!("{}, {}", info.region, info.city);
-                    let emoji = match info.risk.to_lowercase().as_str() {
-                        "low" => "⚪",
-                        "medium" => "🟡",
-                        _ => "🔴",
-                    };
+                    let badge = risk_badge_html(info.fraud_score);
 
                     writeln!(
                         file,
-                        "| <pre><code>{}</code></pre> | {} | {} | {} {} |",
-                        info.ip, info.isp, location, info.fraud_score, emoji
+                        "| <pre><code>{}</code></pre> | {} | {} | {} |",
+                        info.ip, info.isp, location, badge
                     )?;
                 }
+
                 writeln!(file, "\n</details>\n\n---\n\n")?;
             }
         }
@@ -607,16 +625,12 @@ fn write_markdown_report(proxies_by_country: &BTreeMap<String, Vec<ProxyInfo>>, 
 
         for info in sorted_proxies.iter() {
             let location = format!("{}, {}", info.region, info.city);
-            let emoji = match info.risk.to_lowercase().as_str() {
-                "low" => "⚪",
-                "medium" => "🟡",
-                _ => "🔴",
-            };
+            let badge = risk_badge_html(info.fraud_score);
 
             writeln!(
                 file,
-                "| <pre><code>{}</code></pre> | {} | {} | {} {} |",
-                info.ip, info.isp, location, info.fraud_score, emoji
+                "| <pre><code>{}</code></pre> | {} | {} | {} |",
+                info.ip, info.isp, location, badge
             )?;
         }
 
@@ -664,55 +678,74 @@ fn generate_country_flag_emoji(code: &str) -> String {
 
 fn get_country_name(code: &str) -> String {
     match code.to_uppercase().as_str() {
-        "US" => "United States".to_string(),
-        "DE" => "Germany".to_string(),
-        "GB" => "United Kingdom".to_string(),
-        "FR" => "France".to_string(),
-        "NL" => "Netherlands".to_string(),
-        "CA" => "Canada".to_string(),
-        "AU" => "Australia".to_string(),
-        "JP" => "Japan".to_string(),
-        "CN" => "China".to_string(),
-        "SG" => "Singapore".to_string(),
-        "KR" => "South Korea".to_string(),
-        "IN" => "India".to_string(),
-        "RU" => "Russia".to_string(),
-        "BR" => "Brazil".to_string(),
-        "IT" => "Italy".to_string(),
-        "ES" => "Spain".to_string(),
-        "SE" => "Sweden".to_string(),
-        "CH" => "Switzerland".to_string(),
-        "TR" => "Turkey".to_string(),
-        "PL" => "Poland".to_string(),
-        "FI" => "Finland".to_string(),
-        "NO" => "Norway".to_string(),
-        "IE" => "Ireland".to_string(),
-        "BE" => "Belgium".to_string(),
-        "AT" => "Austria".to_string(),
-        "DK" => "Denmark".to_string(),
-        "CZ" => "Czech Republic".to_string(),
-        "UA" => "Ukraine".to_string(),
-        "HK" => "Hong Kong".to_string(),
-        "TW" => "Taiwan".to_string(),
-        "IR" => "Iran".to_string(),
-        "ZA" => "South Africa".to_string(),
-        "RO" => "Romania".to_string(),
-        "ID" => "Indonesia".to_string(),
-        "VN" => "Vietnam".to_string(),
-        "TH" => "Thailand".to_string(),
-        "MY" => "Malaysia".to_string(),
-        "MX" => "Mexico".to_string(),
-        "AR" => "Argentina".to_string(),
-        "CL" => "Chile".to_string(),
-        "CO" => "Colombia".to_string(),
-        "IL" => "Israel".to_string(),
         "AE" => "United Arab Emirates".to_string(),
-        "SA" => "Saudi Arabia".to_string(),
-        "PT" => "Portugal".to_string(),
-        "HU" => "Hungary".to_string(),
-        "GR" => "Greece".to_string(),
-        "BG" => "Bulgaria".to_string(),
+        "AL" => "Albania".to_string(),
         "AM" => "Armenia".to_string(),
+        "AR" => "Argentina".to_string(),
+        "AT" => "Austria".to_string(),
+        "AU" => "Australia".to_string(),
+        "AZ" => "Azerbaijan".to_string(),
+        "BE" => "Belgium".to_string(),
+        "BG" => "Bulgaria".to_string(),
+        "BR" => "Brazil".to_string(),
+        "CA" => "Canada".to_string(),
+        "CH" => "Switzerland".to_string(),
+        "CL" => "Chile".to_string(),
+        "CN" => "China".to_string(),
+        "CO" => "Colombia".to_string(),
+        "CY" => "Cyprus".to_string(),
+        "CZ" => "Czech Republic".to_string(),
+        "DE" => "Germany".to_string(),
+        "DK" => "Denmark".to_string(),
+        "EE" => "Estonia".to_string(),
+        "EG" => "Egypt".to_string(),
+        "ES" => "Spain".to_string(),
+        "FI" => "Finland".to_string(),
+        "FR" => "France".to_string(),
+        "GB" => "United Kingdom".to_string(),
+        "GE" => "Georgia".to_string(),
+        "GR" => "Greece".to_string(),
+        "HK" => "Hong Kong".to_string(),
+        "HU" => "Hungary".to_string(),
+        "ID" => "Indonesia".to_string(),
+        "IE" => "Ireland".to_string(),
+        "IL" => "Israel".to_string(),
+        "IN" => "India".to_string(),
+        "IR" => "Iran".to_string(),
+        "IT" => "Italy".to_string(),
+        "JP" => "Japan".to_string(),
+        "KR" => "South Korea".to_string(),
+        "KZ" => "Kazakhstan".to_string(),
+        "LT" => "Lithuania".to_string(),
+        "LU" => "Luxembourg".to_string(),
+        "LV" => "Latvia".to_string(),
+        "MD" => "Moldova".to_string(),
+        "MU" => "Mauritius".to_string(),
+        "MX" => "Mexico".to_string(),
+        "MY" => "Malaysia".to_string(),
+        "NL" => "Netherlands".to_string(),
+        "NO" => "Norway".to_string(),
+        "NZ" => "New Zealand".to_string(),
+        "PH" => "Philippines".to_string(),
+        "PL" => "Poland".to_string(),
+        "PR" => "Puerto Rico".to_string(),
+        "PT" => "Portugal".to_string(),
+        "QA" => "Qatar".to_string(),
+        "RO" => "Romania".to_string(),
+        "RS" => "Serbia".to_string(),
+        "RU" => "Russia".to_string(),
+        "SA" => "Saudi Arabia".to_string(),
+        "SE" => "Sweden".to_string(),
+        "SG" => "Singapore".to_string(),
+        "SK" => "Slovakia".to_string(),
+        "TH" => "Thailand".to_string(),
+        "TR" => "Turkey".to_string(),
+        "TW" => "Taiwan".to_string(),
+        "UA" => "Ukraine".to_string(),
+        "US" => "United States".to_string(),
+        "UZ" => "Uzbekistan".to_string(),
+        "VN" => "Vietnam".to_string(),
+        "ZA" => "South Africa".to_string(),
         _ => code.to_string(),
     }
 }
