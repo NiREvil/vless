@@ -20,8 +20,9 @@ const IP_RESOLVER_HOST: &str = "speed.cloudflare.com";
 const CLOUDFLARE_INDEX_ENDPOINT: &str = "/";
 const CLOUDFLARE_META_ENDPOINT: &str = "/meta";
 
-const DEFAULT_PROXY_FILE: &str = "edge/assets/p-legacies.yaml";
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
+const DEFAULT_PROXY_FILE: &str = "edge/assets/p-legacies.yaml";
+const SECONDARY_PROXY_FILE: &str = "sub/country_proxies/02_proxies.csv";
 
 const MAX_CONCURRENT_SCANS: usize = 150;
 const TIMEOUT_SECONDS: u64 = 8;
@@ -85,6 +86,20 @@ async fn main() -> Result<()> {
 
     let mut seen_ips: HashSet<String> = HashSet::new();
     let mut proxy_candidates: Vec<(String, u16, String)> = Vec::new();
+    
+    match read_csv_proxy_file(SECONDARY_PROXY_FILE) {
+      Ok(list) => {
+          let mut added = 0;
+          for (ip, port, isp) in list {
+              if seen_ips.insert(ip.clone()) {
+                  proxy_candidates.push((ip, port, isp));
+                  added += 1;
+              }
+          }
+          println!("Picked up {} candidates from the csv file", added);
+      }
+      Err(e) => println!("⚠️  Heads up — couldn't read the csv file: {}", e),
+    }
 
     match read_proxy_file(DEFAULT_PROXY_FILE) {
         Ok(list) => {
@@ -184,6 +199,32 @@ async fn main() -> Result<()> {
 
     println!("🥸 All done, Everything wrapped up nicely.");
     Ok(())
+}
+
+fn read_csv_proxy_file(file_path: &str) -> io::Result<Vec<(String, u16, String)>> {
+    let file = File::open(file_path)?;
+    let reader = BufReader::new(file);
+    let mut result = Vec::new();
+
+    for (i, line) in reader.lines().enumerate() {
+        let line = line?;
+        if i == 0 {
+            continue;
+        }
+        let trimmed = line.trim();
+        if trimmed.is_empty() {
+            continue;
+        }
+        let parts: Vec<&str> = trimmed.split(',').collect();
+        if parts.len() < 2 {
+            continue;
+        }
+        let ip = parts[0].trim().to_string();
+        let port: u16 = parts[1].trim().parse().unwrap_or(443);
+        result.push((ip, port, "Unknown ISP".to_string()));
+    }
+
+    Ok(result)
 }
 
 fn read_proxy_file(file_path: &str) -> io::Result<Vec<(String, u16, String)>> {
