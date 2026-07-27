@@ -1,59 +1,55 @@
-name: Upstream Sync
+name: Mirror Upstream
+
+on:
+  schedule:
+    - cron: "17 0 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
 
-on:
-  schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
+concurrency:
+  group: mirror-upstream-main
+  cancel-in-progress: false
 
 jobs:
-  sync_latest_from_upstream:
-    name: Sync latest commits from upstream repo
+  mirror:
+    if: github.event.repository.fork == true
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    if: ${{ github.event.repository.fork }}
 
     steps:
-      - name: Checkout target repo
+      - name: Checkout fork repository
         uses: actions/checkout@v4
         with:
+          ref: main
+          fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0  
 
-      - name: Configure Git
+      - name: Make fork identical to upstream
+        env:
+          UPSTREAM_REPO: NiREvil/vless
+          BRANCH: main
         run: |
-          git config --global user.name 'NET Sentinel Bot'
-          git config --global user.email '224584266+NetSentinel-Bot@users.noreply.github.com'
+          set -euo pipefail
 
-      - name: Sync upstream changes
-        id: sync
-        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
-        with:
-          upstream_sync_repo: NiREvil/vless
-          upstream_sync_branch: main
-          target_sync_branch: main
-          target_repo_token: ${{ secrets.GITHUB_TOKEN }}
-          test_mode: false
+          git config user.name "NET Sentinel Bot"
+          git config user.email "224584266+NetSentinel-Bot@users.noreply.github.com"
 
-      - name: Handle merge conflicts
-        if: failure() && steps.sync.conclusion == 'failure'
-        run: |
-          echo "⚠️ Merge conflicts detected!"
-          echo "Please resolve conflicts manually in your fork."
-          echo "After resolving conflicts, re-run this workflow."
-          exit 1
+          git remote add upstream "https://github.com/${UPSTREAM_REPO}.git" 2>/dev/null || true
+          git remote set-url upstream "https://github.com/${UPSTREAM_REPO}.git"
 
-      - name: General sync failure
-        if: failure() && steps.sync.conclusion != 'failure'
-        run: |
-          echo "[Error] Due to a change in the workflow file of the upstream repository, GitHub has automatically suspended the scheduled automatic update. You need to manually sync your fork."
-          exit 1
+          git fetch upstream "${BRANCH}"
 
-      - name: Success notification
-        if: success()
-        run: |
-          echo "✅ Successfully synced with upstream repository!"
-          echo "🔄 Your fork is now up to date with NiREvil/vless"
-          echo "📅 Sync completed at: $(date)"
+          LOCAL_SHA="$(git rev-parse HEAD)"
+          UPSTREAM_SHA="$(git rev-parse "upstream/${BRANCH}")"
+
+          if [ "$LOCAL_SHA" = "$UPSTREAM_SHA" ]; then
+            echo "✅ Fork already mirrors upstream."
+            exit 0
+          fi
+
+          git checkout -B "${BRANCH}" "upstream/${BRANCH}"
+          git push origin "HEAD:${BRANCH}" --force
+
+          echo "✅ Fork is now an exact mirror of ${UPSTREAM_REPO}:${BRANCH}"
