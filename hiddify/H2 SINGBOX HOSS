@@ -1,234 +1,186 @@
 //profile-title: base64:SDIgT04gU0lOR0JPWA==
 //profile-update-interval: 9
-//subscription-userinfo: upload=84424500944; download=45097156608; total=1073741824000; expire=1794182430
+//subscription-userinfo: upload=84424500944; download=45097156608; total=1073741824000; expire=1857328199
 //support-url: https://telegram.me/NiREvil_GP
 //profile-web-page-url: https://github.com/NiREvil/vless
 
+
 {
-  "log": {
-    "disabled": true,
-    "level": "panic"
-  },
   "dns": {
     "servers": [
       {
-        "type": "udp",
-        "tag": "Internet-dns",
-        "detour": "Internet",
-        "server": "1.1.1.2"
+        "type": "tcp",
+        "tag": "proxy-dns",
+        "detour": "proxy",
+        "domain_resolver": "local-dns",
+        "server": "8.8.8.8",
+        "server_port": 53
       },
       {
-        "type": "udp",
-        "tag": "direct-dns",
-        "server": "223.5.5.5"
+        "type": "local",
+        "tag": "direct-dns"
       },
       {
-        "type": "fakeip",
-        "tag": "fake-dns",
-        "inet4_range": "198.18.0.0/15",
-        "inet6_range": "fc00::/18"
+        "type": "local",
+        "tag": "local-dns"
       }
     ],
     "rules": [
       {
-        "outbound": "any",
-        "server": "direct-dns",
-        "rewrite_ttl": 60
-      },
-      {
-        "domain_suffix": [
-          ".ir",
-          ".xn--mgba3a4fra",
-          ".xn--mgba3a4f16a"
+        "source_ip_cidr": [
+          "172.19.0.0/30",
+          "fdfe:dcba:9876::1/126"
         ],
-        "server": "direct-dns",
-        "rewrite_ttl": 60
+        "clash_mode": "Global",
+        "server": "proxy-dns"
       },
       {
-        "outbound": "Internet",
-        "server": "Internet-dns",
-        "rewrite_ttl": 60
+        "clash_mode": "Direct",
+        "server": "direct-dns"
       },
       {
-        "inbound": "tun-in",
-        "query_type": [
-          "A",
-          "AAAA"
+        "source_ip_cidr": [
+          "172.19.0.0/30",
+          "fdfe:dcba:9876::1/126"
         ],
-        "server": "fake-dns",
-        "disable_cache": true
+        "server": "proxy-dns"
       }
     ],
-    "strategy": "prefer_ipv4",
-    "independent_cache": true
+    "final": "local-dns",
+    "strategy": "prefer_ipv4"
   },
   "inbounds": [
     {
       "type": "tun",
-      "tag": "tun-in",
-      "interface_name": "sing-box",
       "mtu": 9000,
       "address": [
-        "172.18.0.1/30",
+        "172.19.0.1/30",
         "fdfe:dcba:9876::1/126"
       ],
       "auto_route": true,
-      "strict_route": true,
-      "route_exclude_address": [
-        "192.168.0.0/16",
-        "fc00::/7"
-      ],
-      "stack": "gvisor"
+      "stack": "system",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 2080
+        }
+      }
+    },
+    {
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
     }
   ],
   "outbounds": [
     {
       "type": "selector",
-      "tag": "Internet",
+      "tag": "proxy",
       "outbounds": [
-        "Best Latency",
-        "🇸🇪 HY",
-        "🇸🇪 HHT",
-        "🇸🇪 HRE"
+        "auto",
+        "direct",
+        "🇺🇸US-1",
+        "🇺🇸US-2",
+        "🇺🇸US-3",
+        "🇺🇸US-4"
       ]
     },
     {
       "type": "urltest",
-      "tag": "Best Latency",
+      "tag": "auto",
       "outbounds": [
-        "🇸🇪 HY",
-        "🇸🇪 HHT",
-        "🇸🇪 HRE"
+        "🇺🇸US-1",
+        "🇺🇸US-2",
+        "🇺🇸US-3",
+        "🇺🇸US-4"
       ],
       "url": "http://www.gstatic.com/generate_204",
-      "interval": "3m0s",
-      "tolerance": 1,
-      "idle_timeout": "30m0s"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇸🇪 HY",
-      "server": "dd.openaccessnode.com",
-      "server_port": 989,
-      "obfs": {
-        "type": "salamander",
-        "password": "@JavidnamanIran-Javid-SHAH-King-Reza-Pahlavi"
-      },
-      "password": "f0338458fe5cda525d9f7961b4f3e353",
-      "tls": {
-        "enabled": true,
-        "server_name": "dd.ircybersec.org",
-        "alpn": "h3"
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇸🇪 HHT",
-      "server": "dd.openaccessnode.com",
-      "server_port": 502,
-      "uuid": "f0338458-fe5c-da52-5d9f-7961b4f3e353",
-      "security": "",
-      "transport": {
-        "type": "http",
-        "host": "refersion.com",
-        "path": "/@JavidnamanIran/Javid-SHAH-KingRezaPahlavi/",
-        "headers": {
-          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:146.0) Gecko/20100101 Firefox/146.0"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇪 HRE",
-      "server": "dd.openaccessnode.com",
-      "server_port": 503,
-      "uuid": "f0338458-fe5c-da52-5d9f-7961b4f3e353",
-      "tls": {
-        "enabled": true,
-        "server_name": "refersion.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "aNLPNNyjIC7QYLe7MpF4nxxHhO421dBSZaQgsDd1szs",
-          "short_id": "1d64e9805b4f9ae3"
-        }
-      }
+      "interval": "10m0s",
+      "tolerance": 50
     },
     {
       "type": "direct",
       "tag": "direct"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸US-1",
+      "server": "147.90.234.250",
+      "server_port": 11001,
+      "obfs": {
+        "type": "salamander",
+        "password": "KevinZakarian"
+      },
+      "password": "vHUS4WGikj",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "certificate_public_key_sha256": "P6nKMHmfV/JGUzE9DghdMVAI5q6dpssOV6YebMXI78Q="
+      }
+    },
+    {
+      "type": "anytls",
+      "tag": "🇺🇸US-2",
+      "server": "147.90.234.250",
+      "server_port": 11002,
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "certificate_public_key_sha256": "P6nKMHmfV/JGUzE9DghdMVAI5q6dpssOV6YebMXI78Q="
+      },
+      "password": "vHUS4WGikj"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸US-3",
+      "server": "147.90.234.250",
+      "server_port": 443,
+      "uuid": "4c6e69f0-6049-43e7-aa6b-a5ba77fdaa15",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "p30download.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "GaKX48Rx98nLPVJVZ792dvkgva0xgAI0e2QQJM5f_kg",
+          "short_id": "6dc6"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸US-4",
+      "server": "204.136.10.11",
+      "server_port": 11001,
+      "obfs": {
+        "type": "salamander",
+        "password": "KevinZakarian"
+      },
+      "password": "1MfundefinedpuYmDt",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "certificate_public_key_sha256": "+6U7KyHzwdhSeLi8iZW9MdFnhBQWl5MsC5Y/DzMCnB8="
+      }
     }
   ],
   "route": {
     "rules": [
       {
-        "action": "sniff"
-      },
-      {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "inbound": "dns-in"
-          },
-          {
-            "port": 53
-          },
-          {
-            "protocol": "dns"
-          }
-        ],
+        "protocol": "dns",
         "action": "hijack-dns"
       },
       {
-        "network": "tcp",
-        "port": 853,
-        "action": "reject"
-      },
-      {
-        "network": "udp",
-        "port": [
-          443,
-          853
-        ],
-        "action": "reject"
-      },
-      {
-        "protocol": "stun",
-        "action": "reject"
-      },
-      {
-        "source_ip_cidr": [
-          "224.0.0.0/3",
-          "ff00::/8"
-        ],
-        "ip_cidr": [
-          "224.0.0.0/3",
-          "ff00::/8"
-        ],
-        "action": "reject"
-      },
-      {
-        "domain_suffix": [
-          ".ir",
-          ".xn--mgba3a4fra",
-          ".xn--mgba3a4f16a"
-        ],
-        "outbound": "direct"
+        "action": "sniff"
       }
     ],
+    "final": "proxy",
     "auto_detect_interface": true,
-    "override_android_vpn": true
-  },
-  "experimental": {
-    "cache_file": {
-      "enabled": true,
-      "path": "cache.db",
-      "cache_id": "saeed",
-      "store_fakeip": true
-    }
+    "default_domain_resolver": "local-dns"
   }
 }
