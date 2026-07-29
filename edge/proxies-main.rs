@@ -585,8 +585,8 @@ fn write_markdown_report(proxies_by_country: &BTreeMap<String, Vec<ProxyInfo>>, 
                 writeln!(file, "## {} ({})", provider_title, list.len())?;
                 writeln!(file, "<details>")?;
                 writeln!(file, "<summary>Click to expand</summary>\n")?;
-                writeln!(file, "|   IP   |   ISP    |   Location   |   Risk Score   |")?;
-                writeln!(file, "|:-------|:---------|:------------:|:--------------:|")?;
+                writeln!(file, "|   IP   |   ISP    |   Location   |  Risk Score  |")?;
+                writeln!(file, "|:-------|:---------|:------------:|:------------:|")?;
                 let mut sorted = list.clone();
                 sorted.sort_by_key(|info| info.fraud_score);
                 for info in sorted.iter() {
@@ -600,7 +600,7 @@ fn write_markdown_report(proxies_by_country: &BTreeMap<String, Vec<ProxyInfo>>, 
                     )?;
                 }
 
-                writeln!(file, "\n</details>\n\n---\n\n")?;
+                writeln!(file, "\n</details>\n\n---\n")?;
             }
         }
     }
@@ -620,8 +620,8 @@ fn write_markdown_report(proxies_by_country: &BTreeMap<String, Vec<ProxyInfo>>, 
         )?;
         writeln!(file, "<details>")?;
         writeln!(file, "<summary>Click to expand</summary>\n")?;
-        writeln!(file, "|   IP   |   ISP   |   Location   |   Risk Score   |")?;
-        writeln!(file, "|:-------|:--------|:------------:|:--------------:|")?;
+        writeln!(file, "|   IP   |   ISP   |   Location   |  Risk Score  |")?;
+        writeln!(file, "|:-------|:--------|:------------:|:------------:|")?;
 
         for info in sorted_proxies.iter() {
             let location = format!("{}, {}", info.region, info.city);
@@ -634,8 +634,23 @@ fn write_markdown_report(proxies_by_country: &BTreeMap<String, Vec<ProxyInfo>>, 
             )?;
         }
 
-        writeln!(file, "\n</details>\n\n---\n\n")?;
+        writeln!(file, "\n</details>\n\n---\n")?;
     }
+
+if !proxies_by_country.is_empty() {
+    writeln!(
+        file,
+        r##"> <br/>
+>
+> <p><b>🪶 Credits</b></p>
+>
+> [<img src="https://img.shields.io/badge/Founder_%26_Owner-NiREvil-966600" />](https://github.com/NiREvil)  
+> [<img src="https://img.shields.io/badge/Scamalytics_Worker-Mehdi_Hexing-966600" />](https://github.com/mehdi-hexing/Cloudflare-Scamalytics)  
+> [<img src="https://img.shields.io/badge/Development_%26_Maintenance-Diana--Cl-966600" />](https://github.com/Diana-Cl)  
+>
+> <br/>
+"##
+    )?;
 
     println!("💠 Markdown report refreshed at {}", output_file);
     Ok(())
