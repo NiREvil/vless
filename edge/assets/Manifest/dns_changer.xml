@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ⚙️ Dive into the related file in: "https://telegram.me/new_folder_revil/3661  DNS Changer_v2.9.2.apk" --> 
+<manifest
+	android:versionCode="62"
+	android:versionName="2.9.2"
+	android:compileSdkVersion="35"
+	android:compileSdkVersionCodename="15"
+	package="com.appplanex.dnschanger"
+	platformBuildVersionCode="35"
+	platformBuildVersionName="15"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<uses-sdk
+		android:minSdkVersion="32"
+		android:targetSdkVersion="35" />
+	<!-- ✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️ PERMISSIONS ✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️ -->
+	<!-- Allows the app to create network sockets and use custom network protocols. The browser and other applications provide means to send data to the internet, so this permission is not required to send data to the internet. -->
+	<uses-permission
+		android:name="android.permission.INTERNET" />
+	<!-- Allows the app to view information about network connections such as which networks exist and are connected. -->
+	<uses-permission
+		android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<!-- Allows the app to view information about Wi-Fi networking, such as whether Wi-Fi is enabled and name of connected Wi-Fi devices. -->
+	<uses-permission
+		android:name="android.permission.ACCESS_WIFI_STATE" />
+	<!-- Allows the app to make use of foreground services. -->
+	<uses-permission
+		android:name="android.permission.FOREGROUND_SERVICE" />
+	<!-- Allows the app to make use of foreground services with the type "systemExempted" -->
+	<uses-permission
+		android:name="android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED" />
+	<!-- Allows the app to show notifications -->
+	<uses-permission
+		android:name="android.permission.POST_NOTIFICATIONS" />
+	<!-- Allows the app to have itself started as soon as the system has finished booting. This can make it take longer to start the phone and allow the app to slow down the overall phone by always running. -->
+	<uses-permission
+		android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<!-- Allows a publisher app to access a valid advertising ID directly or indirectly. -->
+	<uses-permission
+		android:name="com.google.android.gms.permission.AD_ID" />
+	<!-- Allows the app to use biometric hardware for authentication -->
+	<uses-permission
+		android:name="android.permission.USE_BIOMETRIC" />
+	<!-- Allows the app to write the contents of your shared storage. -->
+	<uses-permission
+		android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+		android:maxSdkVersion="29" />
+	<!-- Allows the app to read the contents of your shared storage. -->
+	<uses-permission
+		android:name="android.permission.READ_EXTERNAL_STORAGE"
+		android:maxSdkVersion="32" />
+	<!-- Allows the app to use fingerprint hardware for authentication -->
+	<uses-permission
+		android:name="android.permission.USE_FINGERPRINT" />
+	<!-- Allows the user to purchase items through Google Play from within this app. -->
+	<uses-permission
+		android:name="com.android.vending.BILLING" />
+	<!-- Allows the app to prevent the phone from going to sleep. -->
+	<uses-permission
+		android:name="android.permission.WAKE_LOCK" />
+	<!-- Allows the app to retrieve its install referrer information. -->
+	<uses-permission
+		android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+	<uses-permission
+		android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+	<uses-permission
+		android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+	<permission
+		android:name="com.appplanex.dnschanger.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+		android:protectionLevel="signature" />
+	<uses-permission
+		android:name="com.appplanex.dnschanger.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+	<!-- ✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️ PERMISSIONS ✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️ -->
+	<application
+		android:theme="@style/AppTheme.Dark.Green"
+		android:label="@string/app_name"
+		android:icon="@mipmap/ic_launcher"
+		android:name="com.appplanex.dnschanger.DnsChangerApp"
+		android:launchMode="singleTask"
+		android:allowBackup="false"
+		android:largeHeap="true"
+		android:supportsRtl="true"
+		android:fullBackupContent="false"
+		android:roundIcon="@mipmap/ic_launcher_round"
+		android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+		android:requestLegacyExternalStorage="true">
+		<activity
+			android:theme="@style/AppTheme.Launch"
+			android:name="com.appplanex.dnschanger.activities.MainHomeActivity"
+			android:exported="true"
+			android:launchMode="singleTask"
+			android:configChanges="keyboardHidden"
+			android:windowSoftInputMode="adjustPan|stateHidden">
+			<intent-filter>
+				<action
+					android:name="android.intent.action.MAIN" />
+				<category
+					android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<service
+			android:name="com.appplanex.dnschanger.services.DnsChangerService"
+			android:permission="android.permission.BIND_VPN_SERVICE"
+			android:exported="true"
+			android:stopWithTask="false"
+			android:foregroundServiceType="0x00000400">
+			<intent-filter>
+				<action
+					android:name="android.net.VpnService" />
+			</intent-filter>
+		</service>
+		<service
+			android:icon="@drawable/ic_tab_dns_change_tile"
+			android:name="com.appplanex.dnschanger.services.DnsTileService"
+			android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+			android:exported="true">
+			<intent-filter>
+				<action
+					android:name="android.service.quicksettings.action.QS_TILE" />
+			</intent-filter>
+		</service>
+		<activity
+			android:name="com.appplanex.dnschanger.activities.DnsServerListActivity"
+			android:exported="false"
+			android:screenOrientation="portrait"
+			android:configChanges="keyboardHidden"
+			android:windowSoftInputMode="stateAlwaysHidden" />
+		<activity
+			android:name="com.appplanex.dnschanger.activities.DnsServerAddActivity"
+			android:exported="false"
+			android:screenOrientation="portrait"
+			android:configChanges="keyboardHidden"
+			android:windowSoftInputMode="stateHidden" />
+		<activity
+			android:name="com.appplanex.dnschanger.activities.NetworkInfoActivity"
+			android:exported="false"
+			android:screenOrientation="portrait"
+			android:configChanges="keyboardHidden"
+			android:windowSoftInputMode="stateAlwaysHidden" />
+		<activity
+			android:name="com.appplanex.dnschanger.activities.DNSLookupActivity"
+			android:exported="false"
+			android:screenOrientation="portrait"
+			android:configChanges="keyboardHidden"
+			android:windowSoftInputMode="stateAlwaysHidden" />
+		<activity
+			android:name="com.appplanex.dnschanger.activities.AboutActivity"
+			android:exported="false"
+			android:screenOrientation="portrait"
+			android:configChanges="keyboardHidden"
+			android:windowSoftInputMode="stateAlwaysHidden" />
+		<activity
+			android:name="com.appplanex.dnschanger.activities.SettingsActivity"
+			android:exported="false"
+			android:screenOrientation="portrait"
+			android:configChanges="keyboardHidden"
+			android:windowSoftInputMode="stateAlwaysHidden" />
+		<activity
+			android:name="com.appplanex.dnschanger.activities.UpgradeToProActivity"
+			android:exported="false"
+			android:screenOrientation="portrait"
+			android:configChanges="keyboardHidden"
+			android:windowSoftInputMode="stateAlwaysHidden" />
+		<activity
+			android:name="com.appplanex.dnschanger.activities.StartupAppActivity"
+			android:exported="false"
+			android:screenOrientation="portrait"
+			android:configChanges="keyboardHidden"
+			android:windowSoftInputMode="stateAlwaysHidden" />
+		<activity
+			android:name="com.appplanex.dnschanger.activities.ViewPolicyTermsActivity"
+			android:exported="false"
+			android:screenOrientation="portrait"
+			android:configChanges="keyboardHidden"
+			android:windowSoftInputMode="stateAlwaysHidden" />
+		<activity
+			android:theme="@style/TransparentActivityTheme"
+			android:name="com.appplanex.dnschanger.activities.VerifyAuthActivity"
+			android:exported="false"
+			android:screenOrientation="portrait"
+			android:configChanges="keyboardHidden"
+			android:windowSoftInputMode="stateAlwaysHidden" />
+		<receiver
+			android:label="@string/app_name"
+			android:name="com.appplanex.dnschanger.receivers.DisconnectDNSChangerReceiver"
+			android:exported="false" />
+		<receiver
+			android:name="com.appplanex.dnschanger.receivers.StartupDnsChangerReceiver"
+			android:exported="true">
+			<intent-filter>
+				<action
+					android:name="android.intent.action.BOOT_COMPLETED" />
+				<action
+					android:name="android.intent.action.QUICKBOOT_POWERON" />
+				<category
+					android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</receiver>
+		<provider
+			android:name="androidx.core.content.FileProvider"
+			android:exported="false"
+			android:authorities="com.appplanex.dnschanger.fileprovider"
+			android:grantUriPermissions="true">
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/file_provider" />
+		</provider>
+		<service
+			android:name="androidx.room.MultiInstanceInvalidationService"
+			android:exported="false"
+			android:directBootAware="true" />
+		<meta-data
+			android:name="com.google.android.play.billingclient.version"
+			android:value="8.3.0" />
+		<activity
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:name="com.android.billingclient.api.ProxyBillingActivity"
+			android:exported="false"
+			android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
+		<activity
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:name="com.android.billingclient.api.ProxyBillingActivityV2"
+			android:exported="false"
+			android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
+		<service
+			android:name="com.google.firebase.components.ComponentDiscoveryService"
+			android:exported="false"
+			android:directBootAware="true">
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar" />
+		</service>
+		<provider
+			android:name="androidx.startup.InitializationProvider"
+			android:exported="false"
+			android:authorities="com.appplanex.dnschanger.androidx-startup">
+			<meta-data
+				android:name="androidx.emoji2.text.EmojiCompatInitializer"
+				android:value="androidx.startup" />
+			<meta-data
+				android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+				android:value="androidx.startup" />
+			<meta-data
+				android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+				android:value="androidx.startup" />
+		</provider>
+		<receiver
+			android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+			android:enabled="true"
+			android:exported="false" />
+		<service
+			android:name="com.google.android.gms.measurement.AppMeasurementService"
+			android:enabled="true"
+			android:exported="false" />
+		<service
+			android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+			android:permission="android.permission.BIND_JOB_SERVICE"
+			android:enabled="true"
+			android:exported="false" />
+		<activity
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:name="com.google.android.gms.common.api.GoogleApiActivity"
+			android:exported="false" />
+		<service
+			android:name="com.google.firebase.sessions.SessionLifecycleService"
+			android:enabled="false"
+			android:exported="false" />
+		<provider
+			android:name="com.google.firebase.provider.FirebaseInitProvider"
+			android:exported="false"
+			android:authorities="com.appplanex.dnschanger.firebaseinitprovider"
+			android:initOrder="100"
+			android:directBootAware="true" />
+		<uses-library
+			android:name="androidx.window.extensions"
+			android:required="false" />
+		<uses-library
+			android:name="androidx.window.sidecar"
+			android:required="false" />
+		<uses-library
+			android:name="android.ext.adservices"
+			android:required="false" />
+		<meta-data
+			android:name="com.google.android.gms.version"
+			android:value="@integer/google_play_services_version" />
+		<receiver
+			android:name="androidx.profileinstaller.ProfileInstallReceiver"
+			android:permission="android.permission.DUMP"
+			android:enabled="true"
+			android:exported="true"
+			android:directBootAware="false">
+			<intent-filter>
+				<action
+					android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+			</intent-filter>
+			<intent-filter>
+				<action
+					android:name="androidx.profileinstaller.action.SKIP_FILE" />
+			</intent-filter>
+			<intent-filter>
+				<action
+					android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+			</intent-filter>
+			<intent-filter>
+				<action
+					android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+			</intent-filter>
+		</receiver>
+		<service
+			android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+			android:exported="false">
+			<meta-data
+				android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+				android:value="cct" />
+		</service>
+		<service
+			android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+			android:permission="android.permission.BIND_JOB_SERVICE"
+			android:exported="false" />
+		<receiver
+			android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+			android:exported="false" />
+		<meta-data
+			android:name="com.android.stamp.source"
+			android:value="https://play.google.com/store" />
+		<meta-data
+			android:name="com.android.stamp.type"
+			android:value="STAMP_TYPE_DISTRIBUTION_APK" />
+		<meta-data
+			android:name="com.android.vending.splits"
+			android:resource="@xml/splits0" />
+		<meta-data
+			android:name="com.android.vending.derived.apk.id"
+			android:value="4" />
+		<meta-data
+			android:name="com.android.dynamic.apk.fused.modules"
+			android:value="base" />
+	</application>
+</manifest>
