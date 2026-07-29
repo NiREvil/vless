@@ -651,7 +651,7 @@ if !proxies_by_country.is_empty() {
 > <br/>
 "##
     )?;
-
+}
     println!("💠 Markdown report refreshed at {}", output_file);
     Ok(())
 }
