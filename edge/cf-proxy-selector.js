@@ -1,6 +1,6 @@
 /**
  * Cloudflare Worker Backend Proxy & Health Checker
- * 
+ *
  * - Proxies incoming HTTP requests to a randomized list of Cloudflare-backed domains.
  * - Parses optional environment variables (`HOST`, `PATH`, `CODE`) for customization.
  * - Performs a fast health check on candidate backends with a timeout.
@@ -41,12 +41,12 @@ const DEFAULT_BACKENDS = [
   "sky.rethinkdns.com",
   "creativecommons.org",
   "yakamoz.victoriacross.ir",
-  "static.cloudflareinsights.com"
+  "static.cloudflareinsights.com",
 ];
 
 /**
  * Parses a string containing space-, comma-, or newline-separated domains.
- * 
+ *
  * @param {string|undefined} envHost - Environment variable input.
  * @returns {string[]|null} Array of parsed hostnames or null if invalid.
  */
@@ -60,7 +60,7 @@ function parseHostEnv(envHost) {
 
 /**
  * Executes a fetch request wrapped in an AbortController timeout.
- * 
+ *
  * @param {string|Request} resource - Target resource URL.
  * @param {Object} options - Fetch options extending RequestInit with a `timeout` property.
  * @returns {Promise<Response>} Fetch response.
@@ -128,7 +128,7 @@ export default {
 
           // Prepare final request preserving original body, method, and headers
           const proxyRequest = new Request(finalUrl.toString(), request);
-          
+
           // Ensure Host header matches target domain to prevent routing failure
           proxyRequest.headers.set("Host", selectedHost);
 
