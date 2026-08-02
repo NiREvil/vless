@@ -34,16 +34,31 @@ const DNS_HOSTS = {
   "dns.sse.cisco.com": ["208.67.220.220", "208.67.222.222", "2620:119:35::35", "2620:119:53::53"],
   "dns.umbrella.com": ["208.67.220.220", "208.67.222.222", "2620:119:35::35", "2620:119:53::53"],
   "one.one.one.one": ["1.1.1.1", "1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001"],
-  "1dot1dot1dot1.cloudflare-dns.com": ["1.1.1.1", "1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001"],
+  "1dot1dot1dot1.cloudflare-dns.com": [
+    "1.1.1.1",
+    "1.0.0.1",
+    "2606:4700:4700::1111",
+    "2606:4700:4700::1001",
+  ],
   "dns.cloudflare.com": ["162.159.61.8", "172.64.41.8", "2a06:98c1:52::8", "2803:f800:53::8"],
-  "cloudflare-dns.com": ["104.16.248.249", "104.16.249.249", "2606:4700::6810:f8f9", "2606:4700::6810:f9f9"],
+  "cloudflare-dns.com": [
+    "104.16.248.249",
+    "104.16.249.249",
+    "2606:4700::6810:f8f9",
+    "2606:4700::6810:f9f9",
+  ],
   "engage.cloudflareclient.com": ["162.159.192.1", "2606:4700:d0::a29f:c001"],
   "doh.pub": ["1.12.12.12", "120.53.53.53"],
   "dot.pub": ["1.12.12.12", "120.53.53.53"],
   "dns.google": ["8.8.8.8", "8.8.4.4", "2001:4860:4860::8888", "2001:4860:4860::8844"],
   "dns.quad9.net": ["9.9.9.9", "149.112.112.112", "2620:fe::fe", "2620:fe::9"],
   "dns.sb": ["45.11.45.11", "185.222.222.222", "2a09::", "2a11::"],
-  "common.dot.dns.yandex.net": ["77.88.8.8", "77.88.8.1", "2a02:6b8::feed:0ff", "2a02:6b8:0:1::feed:0ff"],
+  "common.dot.dns.yandex.net": [
+    "77.88.8.8",
+    "77.88.8.1",
+    "2a02:6b8::feed:0ff",
+    "2a02:6b8:0:1::feed:0ff",
+  ],
 };
 
 function pickRandom(list) {
@@ -82,8 +97,18 @@ function buildConfig() {
       hosts: buildDnsHosts(),
       servers: [
         "https://cloudflare-dns.com/dns-query",
-        { address: "223.5.5.5", domains: ["geosite:private"], skipFallback: true, tag: "domestic-dns_0_0" },
-        { address: "223.5.5.5", domains: ["domain:ir", "geosite:category-ir"], skipFallback: true, tag: "domestic-dns_1_0" },
+        {
+          address: "223.5.5.5",
+          domains: ["geosite:private"],
+          skipFallback: true,
+          tag: "domestic-dns_0_0",
+        },
+        {
+          address: "223.5.5.5",
+          domains: ["domain:ir", "geosite:category-ir"],
+          skipFallback: true,
+          tag: "domestic-dns_1_0",
+        },
       ],
     },
     inbounds: [
@@ -130,13 +155,23 @@ function buildConfig() {
           },
           sockopt: {
             domainStrategy: "UseIP",
-            happyEyeballs: { tryDelayMs: 250, prioritizeIPv6: false, interleave: 2, maxConcurrentTry: 4 },
+            happyEyeballs: {
+              tryDelayMs: 250,
+              prioritizeIPv6: false,
+              interleave: 2,
+              maxConcurrentTry: 4,
+            },
           },
           finalmask: {
             tcp: [
               {
                 type: "fragment",
-                settings: { packets: "tlshello", lengths: ["5", "94", "1"], delays: ["0"], maxSplit: "0" },
+                settings: {
+                  packets: "tlshello",
+                  lengths: ["5", "94", "1"],
+                  delays: ["0"],
+                  maxSplit: "0",
+                },
               },
               {
                 type: "fragment",
@@ -161,7 +196,11 @@ function buildConfig() {
         { type: "field", domain: ["geosite:private"], outboundTag: "direct" },
         { type: "field", domain: ["domain:ir", "geosite:category-ir"], outboundTag: "direct" },
         { type: "field", ip: ["geoip:ir"], outboundTag: "direct" },
-        { type: "field", inboundTag: ["domestic-dns_0_0", "domestic-dns_1_0"], outboundTag: "direct" },
+        {
+          type: "field",
+          inboundTag: ["domestic-dns_0_0", "domestic-dns_1_0"],
+          outboundTag: "direct",
+        },
         { type: "field", inboundTag: ["dns-module"], outboundTag: "proxy" },
       ],
     },
