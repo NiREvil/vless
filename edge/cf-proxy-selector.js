@@ -1,135 +1,150 @@
 /**
- * We are all REvil
- * - This script handles incoming HTTP requests and proxies them to a list of backend domains.
- * - it parses the request URL and initializes a default list of backend domains.
- * - if provided, it updates the backend domain list from an environment variable.
- * - it attempts to forward the request to a randomly selected backend domain.
- * - if the response from the backend domain matches the expected status code, it returns the response.
- * - if all backend domains fail, it returns a 404 response.
- * - documentation: https://diana.nscl.ir/2025/01/18/cf-backend-selector
+ * Cloudflare Worker Backend Proxy & Health Checker
+ * 
+ * - Proxies incoming HTTP requests to a randomized list of Cloudflare-backed domains.
+ * - Parses optional environment variables (`HOST`, `PATH`, `CODE`) for customization.
+ * - Performs a fast health check on candidate backends with a timeout.
+ * - Forwards the original request with all headers and body intact upon finding a healthy backend.
+ * - Sets the correct `Host` header to prevent SNI/Host routing errors.
+ * - Returns a 404 response if all backend domains fail the health check.
+ * - More details: https://diana-cl.github.io/Diana-Cl/topics/cf-backend-selector
  */
 
+// Default list of Cloudflare-proxied backend domains
+const DEFAULT_BACKENDS = [
+  "ip.sb",
+  "fbi.gov",
+  "time.is",
+  "csgo.com",
+  "icook.hk",
+  "harbor.io",
+  "npmjs.com",
+  "unpkg.com",
+  "lb.nscl.ir",
+  "www.gov.ua",
+  "linkerd.io",
+  "medium.com",
+  "www.wto.org",
+  "chatgpt.com",
+  "jsdelivr.com",
+  "singapore.com",
+  "go.inmobi.com",
+  "www.cdnjs.com",
+  "auth.vercel.com",
+  "chat.openai.com",
+  "www.udacity.com",
+  "www.gitbook.com",
+  "www.ipaddress.my",
+  "www.glassdoor.com",
+  "www.ipchicken.com",
+  "www.speedtest.net",
+  "sky.rethinkdns.com",
+  "creativecommons.org",
+  "yakamoz.victoriacross.ir",
+  "static.cloudflareinsights.com"
+];
+
+/**
+ * Parses a string containing space-, comma-, or newline-separated domains.
+ * 
+ * @param {string|undefined} envHost - Environment variable input.
+ * @returns {string[]|null} Array of parsed hostnames or null if invalid.
+ */
+function parseHostEnv(envHost) {
+  if (!envHost) return null;
+  return envHost
+    .replace(/[ |"'\r\n]+/g, ",")
+    .split(",")
+    .filter(Boolean);
+}
+
+/**
+ * Executes a fetch request wrapped in an AbortController timeout.
+ * 
+ * @param {string|Request} resource - Target resource URL.
+ * @param {Object} options - Fetch options extending RequestInit with a `timeout` property.
+ * @returns {Promise<Response>} Fetch response.
+ */
+async function fetchWithTimeout(resource, options = {}) {
+  const { timeout = 1618, ...fetchOptions } = options;
+  const controller = new AbortController();
+  const timerId = setTimeout(() => controller.abort(), timeout);
+
+  try {
+    return await fetch(resource, {
+      ...fetchOptions,
+      signal: controller.signal,
+    });
+  } finally {
+    clearTimeout(timerId);
+  }
+}
+
 export default {
+  /**
+   * Main Cloudflare Worker fetch handler.
+   */
   async fetch(request, env, ctx) {
-    let url = new URL(request.url);
-    const path = url.pathname;
-    const params = url.search;
+    const originalUrl = new URL(request.url);
+    const targetPath = originalUrl.pathname;
+    const targetSearch = originalUrl.search;
 
-    // backend domain list
-    let backendDomains = [
-      "creativecommons.org",
-      "diana.nscl.ir",
-      "go.inmobi.com",
-      "gur.gov.ua",
-      "fbi.gov",
-      "ip.sb",
-      "icook.hk",
-      "nginx.nscl.ir",
-      "sky.rethinkdns.com",
-      "singapore.com",
-      "skk.moe",
-      "time.is",
-      "zula.ir",
-      "www.gov.ua",
-      "www.wto.org",
-      "www.csgo.com",
-      "www.cdnjs.com",
-      "www.iakeys.com",
-      "www.udacity.com",
-      "www.ipaddress.my",
-      "www.speedtest.net",
-      "www.ipchicken.com",
-      "www.glassdoor.com",
-    ];
+    // Load custom backends from env or fall back to default pool
+    const backendDomains = parseHostEnv(env.HOST) || [...DEFAULT_BACKENDS];
 
-    // If HOST exists in environment variables, get new backend domain list using ADD function
-    if (env.HOST) backendDomains = await ADD(env.HOST);
+    // Sanitize health check test path
+    const testPath = env.PATH ? (env.PATH.startsWith("/") ? env.PATH : "/" + env.PATH) : "/";
+    const expectedCode = parseInt(env.CODE || "200", 10);
 
-    // Get test path, default is '/sub'
-    let testPath = env.PATH || "/";
-    // Ensure test path starts with '/'
-    if (testPath.charAt(0) !== "/") testPath = "/" + testPath;
-    let responseCode = env.CODE || "200";
-    // Log number of backend domains and their list
-    console.log(
-      `Backend count: ${backendDomains.length}\nBackend domains: ${backendDomains}\nTest path: ${testPath}\nResponse code: ${responseCode}`,
-    );
+    // Create a mutable copy of backends to safely pull from during retries
+    const pool = [...backendDomains];
 
-    // Store failed backend domains
-    let failedBackends = [];
+    while (pool.length > 0) {
+      // Select and remove a random domain from the pool
+      const randomIndex = Math.floor(Math.random() * pool.length);
+      const selectedHost = pool.splice(randomIndex, 1)[0];
 
-    // Function to wrap request logic with timeout functionality
-    async function fetchWithTimeout(resource, options = {}) {
-      const { timeout = 1618 } = options;
+      // Construct health check URL
+      const testUrl = new URL(testPath, `https://${selectedHost}`);
 
-      const controller = new AbortController();
-      const id = setTimeout(() => controller.abort(), timeout);
+      try {
+        // Perform fast health check via GET request
+        const response = await fetchWithTimeout(testUrl.toString(), {
+          method: "GET",
+          timeout: 1618,
+          headers: {
+            "User-Agent": "Cloudflare-Worker-HealthCheck/1.0",
+          },
+        });
 
-      const response = await fetch(resource, {
-        ...options,
-        signal: controller.signal,
-      }).finally(() => clearTimeout(id));
+        if (response.status === expectedCode) {
+          console.log(`Using backend: ${selectedHost}`);
 
-      return response;
-    }
+          // Reconstruct target URL for the actual proxied request
+          const finalUrl = new URL(originalUrl.href);
+          finalUrl.hostname = selectedHost;
+          finalUrl.pathname = targetPath;
+          finalUrl.search = targetSearch;
 
-    // Function to select backend domain and make request
-    async function getValidResponse(request, backendDomains) {
-      // Loop while backend domain list is not empty
-      while (backendDomains.length > 0) {
-        // Randomly select a backend domain
-        const randomBackend = backendDomains[Math.floor(Math.random() * backendDomains.length)];
-        // Remove selected domain from the list
-        backendDomains = backendDomains.filter((host) => host !== randomBackend);
+          // Prepare final request preserving original body, method, and headers
+          const proxyRequest = new Request(finalUrl.toString(), request);
+          
+          // Ensure Host header matches target domain to prevent routing failure
+          proxyRequest.headers.set("Host", selectedHost);
 
-        url.hostname = randomBackend; // domain
-        url.pathname = testPath.split("?")[0];
-        url.search = testPath.split("?")[1] == "" ? "" : "?" + testPath.split("?")[1];
-        try {
-          // Make request with timeout
-          const response = await fetchWithTimeout(new Request(url), {
-            timeout: 1618,
-          });
-          // If response status is 200, request is successful
-          if (response.status.toString() == responseCode) {
-            if (path != "/") url.pathname = path;
-            console.log(`Using backend: ${url.hostname}`);
-            //console.log(`Failed backends: ${failedBackends}`);
-            console.log(`Remaining backends: ${backendDomains}`);
-            url.search = params;
-            return await fetch(new Request(url, request));
-          } else {
-            console.log(`Failed backend: ${url.hostname}:${response.status}`);
-          }
-        } catch (error) {
-          // Catch request errors, add failed backend to the failed list
-          failedBackends.push(randomBackend);
+          return await fetch(proxyRequest);
+        } else {
+          console.log(`Failed backend (Status ${response.status}): ${selectedHost}`);
         }
+      } catch (error) {
+        console.log(`Failed backend (Timeout/Error): ${selectedHost}`);
       }
-
-      // If all backends fail, throw error
-      return new Response("All backends are unavailable!", {
-        status: 404,
-        headers: { "content-type": "text/plain; charset=utf-8" },
-      });
     }
 
-    // Call getValidResponse function to get valid response
-    return await getValidResponse(request, backendDomains);
+    // Fallback response if all backends fail
+    return new Response("All backends are unavailable!", {
+      status: 404,
+      headers: { "content-type": "text/plain; charset=utf-8" },
+    });
   },
 };
-
-async function ADD(envadd) {
-  // Replace tabs, double quotes, single quotes and newlines with commas
-  // Then replace multiple consecutive commas with single comma
-  var addtext = envadd.replace(/[ |"'\r\n]+/g, ",").replace(/,+/g, ",");
-
-  // Remove leading and trailing commas (if any)
-  if (addtext.charAt(0) == ",") addtext = addtext.slice(1);
-  if (addtext.charAt(addtext.length - 1) == ",") addtext = addtext.slice(0, addtext.length - 1);
-
-  // Split string by comma to get address array
-  const add = addtext.split(",");
-
-  return add;
-}
