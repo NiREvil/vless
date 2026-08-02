@@ -1,141 +1,177 @@
-addEventListener('fetch', event => {
-    event.respondWith(handleRequest(event.request))
-  })
-  
-  async function handleRequest(request) {
-    const subscriptionUrls = [ 
-        'https://raw.githubusercontent.com/Rayan-Config/C-Sub/refs/heads/main/configs/proxy.txt',
-        'https://raw.githubusercontent.com/arshiacomplus/robinhood-v1-v2-v3ray/refs/heads/main/conf.txt',
-        'https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt',
-        'https://raw.githubusercontent.com/NiREvil/vless/main/sub/SSTime',
-        'https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/vless.html'
-    ]
-  
-    try {
-        const fetchWithTimeout = async (url, timeout = 15000) => {
-            const controller = new AbortController()
-            const timeoutId = setTimeout(() => controller.abort(), timeout)
-            
-            try {
-                const response = await fetch(url, { 
-                    signal: controller.signal,
-                    headers: {
-                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-                        'Accept': 'text/plain,*/*',
-                        'Cache-Control': 'no-cache'
-                    }
-                })
-                clearTimeout(timeoutId)
-                
-                if (!response.ok) {
-                    console.log(`${url} returned status: ${response.status}`)
-                    return { content: '', error: `HTTP ${response.status}`, url }
-                }
-                
-                const content = await response.text()
-                return { content, error: null, url }
-            } catch (error) {
-                clearTimeout(timeoutId)
-                console.error(`Error fetching ${url}:`, error.message)
-                return { content: '', error: error.message, url }
-            }
-        }
-  
-        const responses = await Promise.all(
-            subscriptionUrls.map(url => fetchWithTimeout(url))
-        )
-  
-        let debugInfo = '=== DEBUG INFO ===\n'
-        let combinedConfigs = ''
-        
-        for (let i = 0; i < responses.length; i++) {
-            const { content, error, url } = responses[i]
-            
-            debugInfo += `\nURL ${i+1}: ${url}\n`
-            debugInfo += `Status: ${error ? 'ERROR - ' + error : 'SUCCESS'}\n`
-            debugInfo += `Content Length: ${content.length} characters\n`
-            
-            if (content && content.trim()) {
-                // Checking whether the content is base64 or not.
-                const trimmedContent = content.trim()
-                let decodedContent = ''
-                let isBase64Content = false
-                
-                try {
-                    // Testing if it is base64.
-                    if (trimmedContent.length % 4 === 0 && /^[A-Za-z0-9+/]*={0,2}$/.test(trimmedContent)) {
-                        // To decode base64 with UTF-8 support.
-                        const decoded = decodeURIComponent(escape(atob(trimmedContent)))
-                        if (decoded && decoded.length > 0) {
-                            decodedContent = decoded
-                            isBase64Content = true
-                        }
-                    }
-                } catch (e) {
-                    // If it was not base64 or had UTF-8 error.
-                }
-                
-                if (!isBase64Content) {
-                    // The content is plain text.
-                    decodedContent = trimmedContent
-                }
-                
-                debugInfo += `Format: ${isBase64Content ? 'BASE64' : 'PLAIN TEXT'}\n`
-                debugInfo += `Decoded Length: ${decodedContent.length} characters\n`
-                debugInfo += `Lines Count: ${decodedContent.split('\n').length}\n`
-                debugInfo += `First 200 chars: ${decodedContent.substring(0, 200)}...\n`
-                
-                if (decodedContent) {
-                    combinedConfigs += decodedContent + '\n'
-                }
-            } else {
-                debugInfo += `Content: EMPTY\n`
-            }
-            debugInfo += '---\n'
-        }
-  
-        // Remove blank and duplicate lines.
-        const lines = combinedConfigs.split('\n')
-        const nonEmptyLines = lines.filter(line => line.trim().length > 0)
-        const uniqueLines = [...new Set(nonEmptyLines)]
-        const finalContent = uniqueLines.join('\n')
-        
-        debugInfo += `\n=== FINAL RESULT ===\n`
-        debugInfo += `Total unique configs: ${uniqueLines.length}\n`
-        debugInfo += `Final content length: ${finalContent.length} characters\n`
-  
-        // If the URL has ?debug=1, return debug information.
-        const url = new URL(request.url)
-        if (url.searchParams.get('debug') === '1') {
-            return new Response(debugInfo, {
-                headers: {
-                    'Content-Type': 'text/plain; charset=utf-8',
-                    'Access-Control-Allow-Origin': '*'
-                }
-            })
-        }
-  
-        // Return the final result as base64 with UTF-8 support.
-        const finalBase64 = btoa(unescape(encodeURIComponent(finalContent)))
-  
-        return new Response(finalBase64, {
-            headers: {
-                'Content-Type': 'text/plain',
-                'Access-Control-Allow-Origin': '*',
-                'Cache-Control': 'no-cache, no-store, must-revalidate',
-                'X-Total-Configs': uniqueLines.length.toString(),
-                'X-Content-Length': finalContent.length.toString()
-            }
-        })
-  
-    } catch (error) {
-        console.error('Main error:', error)
-        return new Response('Error: ' + error.message, {
-            status: 500,
-            headers: {
-                'Content-Type': 'text/plain',
-                'Access-Control-Allow-Origin': '*'
-            }
-        })
+/**
+ * Subscription Merger Worker
+ * - Fetches multiple VPN subscription links (plain text or base64), decodes/normalizes them,
+ *   deduplicates configs, and serves a single combined base64 subscription link.
+ * - Add or remove sources in SUBSCRIPTION_URLS as needed.
+ * - Optional KV caching: bind a KV namespace named SUB_CACHE in wrangler.toml to enable it;
+ *   without it, the worker fetches fresh on every request (no setup required).
+ * - Visit with ?debug=1 to see per-source fetch status instead of the final sub link.
+ */
+
+const SUBSCRIPTION_URLS = [
+  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mtn/sub_1.txt',
+  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mtn/sub_2.txt',
+  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mtn/sub_3.txt',
+  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mtn/sub_4.txt',
+  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mci/sub_1.txt',
+  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mci/sub_2.txt',
+  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mci/sub_3.txt',
+  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mci/sub_4.txt',
+  'https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/iran_top100_checked.txt',
+  'https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS%2BAll_RUS.txt',
+  'https://raw.githubusercontent.com/MahsaNetConfigTopic/config/refs/heads/main/xray_final.txt',
+];
+
+const FETCH_TIMEOUT_MS = 15000;
+const GLOBAL_TIMEOUT_MS = 25000;
+const CACHE_KEY = 'combined-sub-v1';
+const CACHE_TTL_SECONDS = 300;
+
+async function fetchWithTimeout(url, timeout = FETCH_TIMEOUT_MS) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+  try {
+    const response = await fetch(url, {
+      signal: controller.signal,
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0',
+        Accept: 'text/plain,*/*',
+        'Cache-Control': 'no-cache',
+      },
+    });
+    clearTimeout(timeoutId);
+
+    if (!response.ok) {
+      return { content: '', error: `HTTP ${response.status}`, url };
+    }
+
+    const content = await response.text();
+    return { content, error: null, url };
+  } catch (error) {
+    clearTimeout(timeoutId);
+    return { content: '', error: error.message, url };
+  }
+}
+
+function tryBase64Decode(str) {
+  try {
+    const binary = atob(str);
+    const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
+    return new TextDecoder().decode(bytes);
+  } catch (e) {
+    return null;
+  }
+}
+
+function isValidConfigText(text) {
+  return /(vless|vmess|trojan|ss|hysteria2?|tuic):\/\//.test(text);
+}
+
+function normalizeContent(rawContent) {
+  const trimmed = rawContent.trim();
+  if (!trimmed) return '';
+
+  const decoded = tryBase64Decode(trimmed);
+  if (decoded && isValidConfigText(decoded)) {
+    return decoded;
+  }
+  return trimmed;
+}
+
+function encodeBase64(text) {
+  const bytes = new TextEncoder().encode(text);
+  let binary = '';
+  for (let i = 0; i < bytes.length; i++) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+  return btoa(binary);
+}
+
+async function buildCombinedConfig() {
+  const results = await Promise.race([
+    Promise.all(SUBSCRIPTION_URLS.map((url) => fetchWithTimeout(url))),
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error('Global fetch timeout')), GLOBAL_TIMEOUT_MS)
+    ),
+  ]);
+
+  let combined = '';
+  const debugLines = [];
+
+  for (const { content, error, url } of results) {
+    debugLines.push(`URL: ${url}`);
+    debugLines.push(`Status: ${error ? 'ERROR - ' + error : 'SUCCESS'}`);
+    debugLines.push(`Content Length: ${content.length}`);
+
+    if (content) {
+      const normalized = normalizeContent(content);
+      if (normalized) combined += normalized + '\n';
+    }
+    debugLines.push('---');
+  }
+
+  const lines = combined.split('\n').filter((line) => line.trim().length > 0);
+  const uniqueLines = [...new Set(lines)];
+  const finalContent = uniqueLines.join('\n');
+
+  return { finalContent, uniqueCount: uniqueLines.length, debugInfo: debugLines.join('\n') };
+}
+
+async function getCachedOrFresh(env) {
+  const kv = env && env.SUB_CACHE;
+
+  if (kv) {
+    const cached = await kv.get(CACHE_KEY, { type: 'json' });
+    if (cached) {
+      return { ...cached, fromCache: true };
     }
   }
+
+  const fresh = await buildCombinedConfig();
+
+  if (kv) {
+    await kv.put(CACHE_KEY, JSON.stringify(fresh), { expirationTtl: CACHE_TTL_SECONDS });
+  }
+
+  return { ...fresh, fromCache: false };
+}
+
+export default {
+  async fetch(request, env) {
+    try {
+      const url = new URL(request.url);
+      const result = await getCachedOrFresh(env);
+
+      if (url.searchParams.get('debug') === '1') {
+        const debugHeader = `From Cache: ${result.fromCache}\nTotal Unique Configs: ${result.uniqueCount}\n\n`;
+        return new Response(debugHeader + result.debugInfo, {
+          headers: {
+            'Content-Type': 'text/plain; charset=utf-8',
+            'Access-Control-Allow-Origin': '*',
+          },
+        });
+      }
+
+      const finalBase64 = encodeBase64(result.finalContent);
+
+      return new Response(finalBase64, {
+        headers: {
+          'Content-Type': 'text/plain',
+          'Access-Control-Allow-Origin': '*',
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'X-Total-Configs': result.uniqueCount.toString(),
+          'X-From-Cache': result.fromCache.toString(),
+        },
+      });
+    } catch (error) {
+      return new Response('Error: ' + error.message, {
+        status: 500,
+        headers: {
+          'Content-Type': 'text/plain',
+          'Access-Control-Allow-Origin': '*',
+        },
+      });
+    }
+  },
+};
