@@ -56,7 +56,7 @@ proxy.farel.is-a.dev
 proxyip.leilaomi.cc.cd
 ```
 
-<br/>	 
+<br/>
 
 <details>
 <summary><b>Show More</b></summary>
@@ -151,9 +151,10 @@ The list contains proxy IPs from well-known providers such as Google, Amazon, Cl
 
 **[برای مشاهده لیست پروکسی آی‌پی‌های ماین و تست‌شده در 24 ساعت اخیر اینــجا کلیک کنید](./ProxyIP-Daily.md)**
 
-<br/>	 
+<br/>
 
 **[Click here to view the list of proxy IPs mined and tested in the last 24 hours](./ProxyIP-Daily.md)**
+
 </div>
 
 ![rainbow]
