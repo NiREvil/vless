@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{Golden}\mathrm{PR{\color{black}\O}XY\;IP}}" width="220px" />
+  <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{Golden}\mathrm{PR{\color{black}\O}XY\;IP}}" width="320px" />
 </p><br><br/>
 
 <p align="left">
@@ -12,17 +12,15 @@
 - [How to Test ProxyIPs](#how-to-test-proxyips)
 - [Latest Workers & Tools](#latest-workers--tools)
 
-![rainbow]
-
 <br/>
 
 ## Dynamic & Multi-Location Proxies
 
-🇺🇸 **USA, Google LLC, Tencent, Stark, Amazon Tech** [^1]
+🇺🇸 **USA, Google LLC, Amazon cloud, Hetzner, Microsoft & ...** [^1]
 
 > _This is a high-level domain with specific IPs._
 
-```yaml
+```POV-Ray SDL
 di.nscl.ir
 ```
 
@@ -32,20 +30,36 @@ di.nscl.ir
 tr.diam4.ggff.net
 ```
 
-🇮🇷 **Across Iran, BPB LTD**
+🇮🇷 **Across Iran, BPB LTD** [^2]
 
-```ruby
+```yaml
 bpb.yousef.isegaro.com
 ```
 
-🌎 **Worldwide IPs** [^2]
+🌎 **Worldwide IPs** [^3]
 
-```ruby
+```yaml
 proxyip.cmliussss.net
 ```
 
+🌐 **Random locations**
+
+```yaml
+pyip.ygkkk.dpdns.org
+```
+
+```yaml
+proxy.farel.is-a.dev
+```
+
+```yaml
+proxyip.leilaomi.cc.cd
+```
+
+<br/>	 
+
 <details>
-<summary>Show More</summary>
+<summary><b>Show More</b></summary>
 
 <br/>
 
@@ -107,9 +121,19 @@ proxyip.aliyun.hw.090227.xyz
 edtproxyip.lzj.pp.ua
 ```
 
+```css
+cdn.xn--b6gac.eu.org
+```
+
+```css
+cdn-all.xn--b6gac.eu.org
+```
+
 </details>
 
-<br/>
+![rainbow]
+
+<br><br/>
 
 ## Daily Scanned Proxies
 
@@ -119,23 +143,22 @@ Only IPs with port 443 available are included after health checks (including pin
 
 The list contains proxy IPs from well-known providers such as Google, Amazon, Cloudflare, OVH, DataCamp, Hetzner, and similar infrastructure networks.
 
-‏<strong> از این به بعد، پروکسی آی‌پی‌ها در فایل زیر ذخیره می‌شوند. این آی‌پی‌ها به‌صورت خودکار هر ۲۴ ساعت اسکن و تست شده و بر اساس موقعیت جغرافیایی لیست می‌گردند.
-
-فقط آی‌پی‌هایی که پورت ۴۴۳ آن‌ها باز باشد، پس از انجام بررسی‌ها (از جمله تست پینگ و اتصال) در لیست قرار می‌گیرند.
+‏<strong> از این به بعد، پروکسی آی‌پی‌ها در فایل زیر ذخیره می‌شوند. این آی‌پی‌ها به‌صورت خودکار هر ۲۴ ساعت اسکن و تست شده و بر اساس موقعیت جغرافیایی لیست می‌گردند. فقط آی‌پی‌هایی که پورت ۴۴۳ آن‌ها باز باشد پس از انجام بررسی‌ها (از جمله تست پینگ و اتصال tls) در لیست قرار می‌گیرند.
 
 این لیست شامل پروکسی آی‌پی‌هایی از ارائه‌دهندگان بزرگ و معتبر زیرساختی دنیا مانند گوگل، آمازون، کلودفلر، هتزنر OVH، DataCamp، Oracle و شبکه‌های مشابه است. </strong>
 
 <div markdown='1' align='center'>
 
-**[برای مشاهده لیست پروکسی آی‌پی‌های تست‌شده در 24 ساعت اخیر اینـــجا کلیک کنید](./ProxyIP-Daily.md)**
+**[برای مشاهده لیست پروکسی آی‌پی‌های ماین و تست‌شده در 24 ساعت اخیر اینــجا کلیک کنید](./ProxyIP-Daily.md)**
 
+<br/>	 
+
+**[Click here to view the list of proxy IPs mined and tested in the last 24 hours](./ProxyIP-Daily.md)**
 </div>
-
-<br></br>
 
 ![rainbow]
 
-<br/>
+<br></br>
 
 ## proxies by Country
 
@@ -155,7 +178,7 @@ The list contains proxy IPs from well-known providers such as Google, Amazon, Cl
 <br/>
 
 <details>
-<summary> ‏🦋 Click here to get proxies from a specific country </summary>
+<summary><b>‏🦋 Click here to get proxies from a specific country</b></summary>
 
 <br/>
 
@@ -264,12 +287,12 @@ The list contains proxy IPs from well-known providers such as Google, Amazon, Cl
 
 <br/>
 
-<img width="740" alt="VictoriaCross" src="https://github.com/user-attachments/assets/4a9bfa17-927e-422e-90f1-ee8b079fe819" />
+<img width="1080" height="1943" alt="VictoriaCross" src="https://github.com/user-attachments/assets/92be27ca-27c2-4b57-a5ae-f92fa1b9282e" />
 
 <br/>
 
 <details>  
-<summary> برای مشاهده تصاویر بیشتر کلیک کنید </summary>
+<summary><b>برای مشاهده تصاویر بیشتر کلیک کنید</b></summary>
 
 <br/>
 
@@ -281,7 +304,7 @@ The list contains proxy IPs from well-known providers such as Google, Amazon, Cl
 
 <br/>
 
-<img width="740" alt="CMLIU" src="https://github.com/user-attachments/assets/26fbd7c0-9c42-420c-bd31-71fcf8ba6711" />
+<img width="1080" height="2058" alt="CMLIU" src="https://github.com/user-attachments/assets/3a1b3fb0-2fc2-4e7c-ab3e-9f270b0d6292" />
 
 <br/>
 
@@ -368,7 +391,7 @@ The list contains proxy IPs from well-known providers such as Google, Amazon, Cl
 >
 > https://www.nslookup.io/domains/ProxyIP.US.CMLiussss.net/dns-records/
 >
-> https://www.nslookup.io/domains/ProxyIP.JP.CMLiussss.net/dns-records/
+> https://www.nslookup.io/domains/pyip.ygkkk.dpdns.org/dns-records/
 >
 > یکم خلاقیت ب خرج بدی خودت میفهمی که باید دنبال چی بگردی تو سایت
 >
@@ -391,7 +414,9 @@ The list contains proxy IPs from well-known providers such as Google, Amazon, Cl
 
 [^1]: https://telegram.me/NiREvil_GP
 
-[^2]: https://telegram.me/s/CMLiussss
+[^2]: https://github.com/bia-pain-bache/BPB-Worker-Panel
+
+[^3]: https://telegram.me/s/CMLiussss
 
 [3]: https://github.com/NiREvil/vless/blob/main/edge/assets/Cloudflare_IP_ranges_by_country.md
 [4]: https://checker-3j2.pages.dev
