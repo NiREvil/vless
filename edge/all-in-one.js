@@ -9,17 +9,12 @@
  */
 
 const SUBSCRIPTION_URLS = [
-  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mtn/sub_1.txt',
-  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mtn/sub_2.txt',
-  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mtn/sub_3.txt',
-  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mtn/sub_4.txt',
-  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mci/sub_1.txt',
-  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mci/sub_2.txt',
-  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mci/sub_3.txt',
-  'https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/main/mci/sub_4.txt',
-  'https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/iran_top100_checked.txt',
   'https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS%2BAll_RUS.txt',
-  'https://raw.githubusercontent.com/MahsaNetConfigTopic/config/refs/heads/main/xray_final.txt',
+  'https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/base64.txt',
+  'https://raw.githubusercontent.com/nscl5/5/refs/heads/main/configs/hysteria2.txt',
+  'https://raw.githubusercontent.com/Argh94/V2RayAutoConfig/refs/heads/main/configs/Hysteria2.txt',
+  'https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/iran_top100_checked.txt',
+  'https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vmess.txt',
 ];
 
 const FETCH_TIMEOUT_MS = 15000;
