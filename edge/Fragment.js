@@ -1,5 +1,5 @@
 /**
- * Last update: Sunday, 4:20 UTC, 2 Aug 2026
+ * Last update: Monday, 4:20 UTC, 3 Aug 2026
  * - VLESS fragment config generator (Cypher-style) using dual-layer finalmask fragmentation + unsafe fingerprint + custom cipherSuites.
  * - Replace DOMAIN, USER_UUID, and CLEAN_IP with your own Worker hostname, UUID, and preferred Cloudflare clean IP/domain.
  * - Fragment layers are tuned per patterniha's config; adjust lengths/delays/maxSplit in finalmask.tcp if DPI patterns change.
@@ -9,7 +9,7 @@
 const PORTS = [443, 8443, 2053, 2096, 2087, 2083];
 const DOMAIN = "in-god-we-trust.mathematical.workers.dev";
 const USER_UUID = "c84b1d08-1e9e-4e1c-977a-c7fff6ccb8ec";
-const CLEAN_IP = "188.114.97.6";
+const CLEAN_IP = "static.cloudflareinsights.com";
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
 const CIPHER_SUITES = [
