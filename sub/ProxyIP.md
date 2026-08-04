@@ -288,9 +288,9 @@ The list contains proxy IPs from well-known providers such as Google, Amazon, Cl
 
 <br/>
 
-<img width="1080" height="1943" alt="VictoriaCross" src="https://github.com/user-attachments/assets/92be27ca-27c2-4b57-a5ae-f92fa1b9282e" />
+<img width="1080" height="2063" alt="VictoriaCross" src="https://github.com/user-attachments/assets/d5197d81-54b1-4deb-9533-7dd0cee8ba90" />
 
-<br/>
+<br><br/>	 
 
 <details>  
 <summary><b>برای مشاهده تصاویر بیشتر کلیک کنید</b></summary>
