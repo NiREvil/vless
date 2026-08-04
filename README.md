@@ -553,9 +553,9 @@
 
 </div>
 
-- Some subscription links are available for [v2rayNG], [Exclave], [Singbox], [Hiddify], [MahsaNG], [Inci], [NekoBox], [Karing], [Husi], [Amnezia], [WgTunnel], [ProxyCloud], [ZedSecure], [ClashMeta], [FiClash], [ClashMI], [Nekoray], [Outline], [v2rayTun] and other clients.
+- Some subscription links are available for [v2rayNG], [PattNG], [Exclave], [Singbox], [Hiddify], [MahsaNG], [Inci], [NekoBox], [Karing], [Husi], [Amnezia], [WgTunnel], [ProxyCloud], [ZedSecure], [ClashMeta], [FiClash], [ClashMI], [Nekoray], [Outline], [v2rayTun] and other clients.
 
-- **Несколько ссылок для подписки на** v2rayNG, Exclave, Sing-Box, Hiddify, Incy, MahsaNG, NekoBox, Husi, Amnezia, Outline, Clash-Meta и ... Вернуть результат только
+- **Несколько ссылок для подписки на** v2rayNG, PattNG Exclave, Sing-Box, Hiddify, Incy, MahsaNG, NekoBox, Husi, Amnezia, Outline, Clash-Meta и ... Вернуть результат только
 
 <br/>
 
@@ -718,11 +718,29 @@
 
 <br/>
 
+https://raw.githubusercontent.com/JavidnamanIran-at-Telegram/x-ray_sub/refs/heads/main/x-ray_sub.txt [[JN?]]
+
 https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/base64.txt
 
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS%2BAll_RUS.txt
 
 https://robin.victoriacross.ir [[Ni?]]
+
+https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/url_work.txt
+
+https://raw.githubusercontent.com/PrinceVSFX/Adapt-Configs/main/Configs/Black_list.txt
+
+https://gitverse.ru/api/repos/MishaLan/MishaLan/raw/branch/master/MishaLan.txt
+
+https://raw.githubusercontent.com/zieng2/wl/main/vless_universal.txt
+
+https://raw.githubusercontent.com/mehdi-hexing/HTTP-PROXY/main/proxies/subscriptions/nekobox_http.txt
+
+https://raw.githubusercontent.com/hiztin/VLESS-PO-GRIBI/main/deploy/subscriptions/1.txt
+
+https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/refs/heads/main/Config/vless.txt
+
+https://raw.githubusercontent.com/shabane/kamaji/master/hub/merged.txt
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/SSTime
 
@@ -1074,7 +1092,318 @@ https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_l
 
 <br/>
 
-### Proton VPN WireGuards
+### Proton & windscribe VPN WireGuards
+
+**🇨🇭WIND#1**
+
+```ballerina
+# Name = 🇨🇭Wind1-Zurich-Switzerland
+[Interface]
+PrivateKey = cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+Address = 100.80.234.177/32
+MTU = 1280
+Jc = 5
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+
+[Peer]
+PublicKey = G7LkwWk08Ase/Wi9mnOW77brNBC0vTCemvy1IW1nlV4=
+Endpoint = 89.187.165.99:65142
+AllowedIPs = 0.0.0.0/0, ::/0
+PresharedKey = N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+PersistentKeepalive = 30
+```
+
+<br/>
+
+**🇸🇬WIND#2**
+
+```ballerina
+# Name = 🇸🇬Wind2-Singapore
+[Interface]
+PrivateKey = cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+Address = 100.80.234.177/32
+DNS = 76.76.2.5, 10.255.255.3, 1.1.1.1, 8.8.8.8, 185.228.168.9, 2606:1a40::5, 2606:4700:4700::1111
+MTU = 1280
+Jc = 5
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+
+[Peer]
+Endpoint = 103.107.198.228:65142
+PublicKey = tJa6iPx6mpOktn5KoalMslWcpg6pRUdVx3bKDi3wtDg=
+AllowedIPs = 0.0.0.0/0, ::/0
+PresharedKey = N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+PersistentKeepalive = 30
+```
+
+<br/>	
+
+**🇬🇧WIND#3**
+
+```ballerina
+# Name = 🇬🇧Wind3-Edinburgh-UnitedKingdom
+[Interface]
+PrivateKey = cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+Address = 100.80.234.177/32
+MTU = 1280
+Jc = 5
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+
+[Peer]
+Endpoint = 193.36.118.228:65142
+PublicKey = bGn6yuCFQWWF8+ZMGlJ0M6+IJRlkLXn0/UI/mvIyYwQ=
+AllowedIPs = 0.0.0.0/0, ::/0
+PresharedKey = N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+PersistentKeepalive = 30
+```
+
+<br/>	 
+
+**🇮🇸WIND#4**
+
+```ballerina
+# Name = 🇮🇸Wind4-Reykjavik-Iceland
+[Interface]
+PrivateKey = cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+Address = 100.80.234.177/32
+MTU = 1280
+Jc = 5
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+
+[Peer]
+Endpoint = 185.165.170.3:65142
+PublicKey = ua7TUXkcSiiHeTyCok5b3PX9DkJ4l5yVvGlSmJ34WU8=
+AllowedIPs = 0.0.0.0/0, ::/0
+PresharedKey = N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+PersistentKeepalive = 30
+```
+
+<br/>
+
+**🇮🇸WIND#5**
+
+```ballerina
+# Name = 🇮🇸Wind5-Reykjavik-Iceland
+[Interface]
+PrivateKey = cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+Address = 100.80.234.177/32
+MTU = 1280
+Jc = 5
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+
+[Peer]
+PublicKey = ua7TUXkcSiiHeTyCok5b3PX9DkJ4l5yVvGlSmJ34WU8=
+Endpoint = 185.165.170.3:80
+AllowedIPs = 0.0.0.0/0, ::/0
+PresharedKey = N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+PersistentKeepalive = 30
+```
+
+<br/>
+
+**🇰🇪WIND#6**
+
+```ballerina
+# Name = 🇰🇪Wind6-Nairobi-Kenya
+[Interface]
+PrivateKey = cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+Address = 100.80.234.177/32
+MTU = 1280
+Jc = 5
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+
+[Peer]
+Endpoint = 45.138.86.228:65142
+PublicKey = S/qPJPWnfwfb1pWIcKN8FH71j5dFt9eH2KbEeU1+QlE=
+AllowedIPs = 0.0.0.0/0, ::/0
+PresharedKey = N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+PersistentKeepalive = 30
+```
+
+<br/>
+
+**🇵🇦WIND#7**
+
+```ballerina
+# Name = 🇵🇦Wind7-Panama
+[Interface]
+PrivateKey = cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+Address = 100.80.234.177/32
+MTU = 1280
+Jc = 5
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+
+[Peer]
+Endpoint = 138.186.142.204:65142
+PublicKey = 3L8yhe+v7TzBeesOFxSdU2VUa8FG4PTuoiiUoV7DAGY=
+AllowedIPs = 0.0.0.0/0, ::/0
+PresharedKey = N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+PersistentKeepalive = 30
+```
+
+<br/>
+
+**🇿🇦WIND#8**
+
+```ballerina
+# Name = 🇿🇦Wind8-Johannesburg-SouthAfrica
+[Interface]
+PrivateKey = cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+Address = 100.80.234.177/32
+MTU = 1280
+Jc = 5
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+
+[Peer]
+Endpoint = 197.242.159.229:65142
+PublicKey = Nh5LEJT44xbuvTQnv3OZ0bXi09BFXV4SBB1XVMI12Ec=
+AllowedIPs = 0.0.0.0/0, ::/0
+PresharedKey = N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+PersistentKeepalive = 30
+```
+
+<br/>
+
+**🇦🇺WIND#9**
+
+```ballerina
+# Name = 🇦🇺Wind9-Melbourne-Victoria
+[Interface]
+PrivateKey = cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+Address = 100.80.234.177/32
+MTU = 1280
+Jc = 5
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+
+[Peer]
+Endpoint = 116.206.228.180:65142
+PublicKey = r5BDU0T+VGZU6I+zuF3vlGrdORtgNvLhY08gQxrFRCw=
+AllowedIPs = 0.0.0.0/0, ::/0
+PresharedKey = N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+PersistentKeepalive = 30
+```
+
+<br/>
+
+**🇧🇦WIND#10**
+
+```ballerina
+# Name = 🇧🇦Wind10-NoviTravnik-Bosnia
+[Interface]
+PrivateKey = cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+Address = 100.80.234.177/32
+MTU = 1280
+Jc = 5
+Jmin = 10
+Jmax = 50
+S1 = 0
+S2 = 0
+S3 = 0
+S4 = 0
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+I1 = <b 0x858000010001000000000669636c6f756403636f6d0000010001c00c000100010000105a00044d583737>
+
+[Peer]
+Endpoint = 185.99.3.25:65142
+PublicKey = 6oMHpHHL3pq6Pdr2HoDRYuyjcyQGxfQaSRQR+HPyvgc=
+AllowedIPs = 0.0.0.0/0, ::/0
+PresharedKey = N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+PersistentKeepalive = 30
+```
+
+<br/>
 
 **🇨🇭PROTON#8** [[ProtonVPN]]
 
@@ -1929,6 +2258,30 @@ https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yam
 
 https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/mihomo.yaml
 
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/Ruk1ng001.yaml [[10i?]]
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/SnapdragonLee_clash_config_extra_US.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/darkvpn/xray_final.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/itsyebekhe/xhttp.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/ermaozi.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/maimengmeng/AnyTLS.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/maimengmeng/500.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/server_channel_pro/vpnmarket.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/snakem982-clash/meta.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/peasoft.list/meta.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/ripaojiedian.yaml
+
+https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/darkvpn/xray_final.yaml
+
 https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/free-mihomo-sub/host.yaml
 
 https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Movaghat
@@ -1936,8 +2289,6 @@ https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Mo
 https://raw.githubusercontent.com/lagzian/TVC/main/lite/subscriptions/meta/mix [[LG?]]
 
 https://raw.githubusercontent.com/liketolivefree/kobabi/main/clash_mt_ir_prov_spr.yaml [[KB?]]
-
-https://raw.githubusercontent.com/10ium/free-config/refs/heads/main/free-mihomo-sub/rayan_proxy.yaml [[10i?]]
 
 https://raw.githubusercontent.com/10ium/MihomoSaz/main/Sublist/NiREvil_SSTime.yaml
 
@@ -2136,17 +2487,15 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
 
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/proton-wire.json
+https://free1.vpny.net:2096/sub/Kevin-US-KAN?format=json [[KV?]]
 
-https://vpny.net/Mobile [[KV?]]
-
-https://vpny.net/Home
-
-https://channel-freevpnhomes-subscription.shampoosirsehat.homes [[ME?]]
+https://free2.vpny.net:2096/sub/Kevin-US-NYC?format=json
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json [[Ni?]]
 
-https://cp.iranhope.org/sub/jnir_pub_12_2b/77c48356c463da59bd68fe63b0725bc6 [[JN?]]
+https://raw.githubusercontent.com/JavidnamanIran-at-Telegram/sing-box_sub/refs/heads/main/sing-box_sub.txt [[JN?]]
+
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/proton-wire.json
 
 https://raw.githubusercontent.com/4n0nymou3/Universal-Proxy-Finder/master/Output/singbox_subscription.json [[ANO?]]
 
@@ -2161,6 +2510,8 @@ https://igdux.top/~FREE2CONFIG,T,H [[FR?]]
 http://azadiazinjamigzare.github.io/SingBox [[AIM?]]
 
 https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox_l.json [[LK?]]
+
+https://channel-freevpnhomes-subscription.shampoosirsehat.homes [[ME?]]
 
 https://raw.githubusercontent.com/liketolivefree/kobabi/main/singbox_fkip.json
 
@@ -2674,13 +3025,15 @@ https://github.com/user-attachments/assets/8b70384a-2d6a-439a-acbe-580425574d6a
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml
 
-https://raw.githubusercontent.com/hamedp-71/test_clash_warp/main/test.yaml
-
-https://raw.githubusercontent.com/hamedp-71/Clash_New/refs/heads/main/hp.yaml [[HP?]]
-
-https://hamedp-71.github.io/clash_warp/
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta.yml
 
 https://raw.githubusercontent.com/DarknessShade/WoW/refs/heads/main/clash-wg.yml [[DS?]]
+
+https://raw.githubusercontent.com/hamedp-71/test_clash_warp/main/test.yaml [[HP?]]
+
+https://raw.githubusercontent.com/hamedp-71/Clash_New/refs/heads/main/hp.yaml
+
+https://hamedp-71.github.io/clash_warp/
 
 <br/>
 
@@ -3163,6 +3516,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Outline]: https://getoutline.org/get-started/#step-3
 [OldMan-Sub]: https://smbcryp.github.io/V2V/
 [ProtonVPN]: https://account.protonvpn.com/downloads
+[PattNG]: https://github.com/patterniha/v2rayNG/releases
 [ProtonGoogle]: https://play.google.com/store/apps/details?id=ch.protonvpn.android
 [ProtonIOS]: https://apps.apple.com/us/app/proton-vpn-fast-secure/id1437005085
 [ProtonToAmnezia]: https://protontestguide.github.io/ProtonVPN-Converter
