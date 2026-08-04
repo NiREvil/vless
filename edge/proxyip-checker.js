@@ -13,11 +13,6 @@ async function getWorkerKey() {
   return workerKey;
 }
 
-/**
- * @param {string} hostname
- * @param {number} timestamp
- * @param {string} ua
- */
 async function generateSecureToken(hostname, timestamp, ua) {
   const encoder = new TextEncoder();
   const data = encoder.encode(`${hostname}|${timestamp}|${ua}`);
@@ -59,11 +54,6 @@ function isPrivateIP(ip) {
 }
 
 export default {
-  /**
-   * @param {Request} request
-   * @param {any} env
-   * @param {any} ctx
-   */
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const origin = request.headers.get("Origin") || "*";
@@ -310,10 +300,7 @@ export default {
   },
 };
 
-/**
- * DNS resolver
- * @param {string} domain
- */
+// DNS resolver
 async function resolveDomain(domain) {
   domain = domain.includes(":") ? domain.split(":")[0] : domain;
   try {
@@ -356,11 +343,7 @@ async function resolveDomain(domain) {
   }
 }
 
-/**
- * Core ProxyIP Check logic updated to use Cmliu's stable testing endpoints
- * @param {string} proxyIP
- * @param {number} timeoutMs
- */
+// Core ProxyIP Check logic
 async function CheckProxyIP(proxyIP, timeoutMs = 8000) {
   let portRemote = 443;
   let hostToCheck = proxyIP;
@@ -496,11 +479,6 @@ async function CheckProxyIP(proxyIP, timeoutMs = 8000) {
   };
 }
 
-/**
- * @param {Promise<any>} promise
- * @param {number} timeoutMs
- * @param {string} label
- */
 function withTimeout(promise, timeoutMs, label) {
   let timer;
   return Promise.race([
@@ -511,9 +489,6 @@ function withTimeout(promise, timeoutMs, label) {
   ]).finally(() => clearTimeout(timer));
 }
 
-/**
- * @param {string} content
- */
 async function sanitizeURLs(content) {
   const replacedContent = content.replace(/[\r\n]+/g, "|").replace(/\|+/g, "|");
   const addressArray = replacedContent.split("|");
@@ -550,11 +525,6 @@ async function nginxWelcomePage() {
     `;
 }
 
-/**
- * @param {string} _hostname
- * @param {string} websiteIcon
- * @param {string} token
- */
 async function generateHTMLPage(_hostname, websiteIcon, token) {
   const html = `
     <!DOCTYPE html>
@@ -1970,7 +1940,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
   });
 }
 
-// ==================== TLS ENGINE ====================
+// -------------------- TLS ENGINE --------------------
 const e = 769,
   t = 771,
   n = 772,
