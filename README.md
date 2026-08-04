@@ -1155,7 +1155,7 @@ PresharedKey = N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
 PersistentKeepalive = 30
 ```
 
-<br/>	
+<br/>
 
 **🇬🇧WIND#3**
 
@@ -1186,7 +1186,7 @@ PresharedKey = N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
 PersistentKeepalive = 30
 ```
 
-<br/>	 
+<br/>
 
 **🇮🇸WIND#4**
 
