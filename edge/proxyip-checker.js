@@ -300,7 +300,6 @@ export default {
   },
 };
 
-// DNS resolver
 async function resolveDomain(domain) {
   domain = domain.includes(":") ? domain.split(":")[0] : domain;
   try {
@@ -343,7 +342,6 @@ async function resolveDomain(domain) {
   }
 }
 
-// Core ProxyIP Check logic
 async function CheckProxyIP(proxyIP, timeoutMs = 8000) {
   let portRemote = 443;
   let hostToCheck = proxyIP;
@@ -507,7 +505,7 @@ async function nginxWelcomePage() {
         body {
             width: 35em;
             margin: 0 auto;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
         }
     </style>
     </head>
@@ -534,55 +532,84 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ProxyIP Checker - Advanced Risk Analysis</title>
     <link rel="icon" href="{{ICON_URL}}" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600&family=Courier+Prime:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
       :root {
-        --paper: #e7e2d0;
-        --paper-dark: #d8d2ba;
-        --bg-primary: #16201c;
-        --bg-secondary: #202b26;
-        --bg-tertiary: #283530;
-        --ink: #201d16;
-        --ink-soft: #3a3a2e;
-        --text-primary: #ede7d1;
-        --text-secondary: #b7c2ba;
-        --text-muted: #7c8a82;
-        --brass: #6f9683;
-        --brass-light: #8fb39f;
-        --brass-dark: #4f7161;
-        --border-color: #3a4740;
-        --border-light: #4a5850;
-        --success-color: #7a9a5f;
-        --success-bg: rgba(122, 154, 95, 0.12);
-        --success-border: rgba(122, 154, 95, 0.4);
-        --error-color: #a85c3c;
-        --error-bg: rgba(168, 92, 60, 0.12);
-        --error-border: rgba(168, 92, 60, 0.4);
-        --warning-color: #b6903e;
-        --warning-bg: rgba(182, 144, 62, 0.12);
-        --warning-border: rgba(182, 144, 62, 0.4);
-        --accent-orange-light: var(--brass-light);
-        --status-success-icon: var(--success-color);
-        --status-error-icon: var(--error-color);
-        --status-warning-icon: var(--warning-color);
-        --text-light: var(--text-secondary);
-        --info-color: #6f8a9a;
-        --info-bg: rgba(111, 138, 154, 0.12);
-        --info-border: rgba(111, 138, 154, 0.4);
-        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.35);
-        --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.45);
-        --shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.55);
-        --shadow-xl: 0 22px 44px rgba(0, 0, 0, 0.6);
-        --radius-sm: 4px;
-        --radius-md: 6px;
-        --radius-lg: 10px;
-        --radius-xl: 14px;
-        --serif: "Cormorant Garamond", "EB Garamond", Georgia, serif;
-        --body-serif: "EB Garamond", Georgia, serif;
-        --mono-sans: "Courier Prime", "Consolas", "Special Elite", monospace;
+        --canvas-default: #22272e;
+        --canvas-subtle: #2d333b;
+        --canvas-inset: #1c2128;
+        --canvas-overlay: #2d333b;
+        --border-default: #444c56;
+        --border-muted: #373e47;
+        --fg-default: #adbac7;
+        --fg-muted: #768390;
+        --fg-subtle: #636e7b;
+        --fg-on-emphasis: #cdd9e5;
+        --accent-fg: #539bf5;
+        --accent-emphasis: #316dca;
+        --accent-subtle: rgba(83, 155, 245, 0.1);
+        --success-fg: #57ab5a;
+        --success-emphasis: #347d39;
+        --success-subtle: rgba(70, 149, 74, 0.15);
+        --success-border: rgba(70, 149, 74, 0.4);
+        --danger-fg: #e5534b;
+        --danger-emphasis: #b62324;
+        --danger-subtle: rgba(229, 83, 75, 0.15);
+        --danger-border: rgba(229, 83, 75, 0.4);
+        --attention-fg: #c69026;
+        --attention-emphasis: #966600;
+        --attention-subtle: rgba(197, 139, 33, 0.15);
+        --attention-border: rgba(197, 139, 33, 0.4);
+        --neutral-subtle: rgba(99, 110, 123, 0.15);
+        --neutral-border: rgba(99, 110, 123, 0.4);
+        --btn-bg: #373e47;
+        --btn-hover-bg: #444c56;
+        --btn-border: rgba(99, 110, 123, 0.4);
+        --btn-primary-bg:#2d333b;
+        --btn-primary-hover-bg:#373e47;
+        --btn-primary-fg:#cdd9e5;
+        --btn-primary-border:#545d68;
+        --shadow-md: 0 3px 6px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+        --radius-sm: 6px;
+        --radius-md: 8px;
+        --radius-lg: 8px;
+        --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+        --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+        --success-color: var(--success-fg);
+        --success-bg: var(--success-subtle);
+        --error-color: var(--danger-fg);
+        --error-bg: var(--danger-subtle);
+        --error-border: var(--danger-border);
+        --warning-color: var(--attention-fg);
+        --warning-bg: var(--attention-subtle);
+        --warning-border: var(--attention-border);
+        --info-color: var(--accent-fg);
+        --info-bg: var(--accent-subtle);
+        --info-border: rgba(83, 155, 245, 0.4);
+        --brass: var(--accent-fg);
+        --brass-light: var(--accent-fg);
+        --brass-dark: var(--accent-emphasis);
+        --border-color: var(--border-default);
+        --border-light: var(--border-muted);
+        --ink: var(--fg-default);
+        --ink-soft: var(--fg-muted);
+        --paper: var(--canvas-inset);
+        --paper-dark: var(--canvas-subtle);
+        --text-primary: var(--fg-default);
+        --text-secondary: var(--fg-muted);
+        --text-muted: var(--fg-subtle);
+        --text-light: var(--fg-muted);
+        --accent-orange-light: var(--accent-fg);
+        --status-success-icon: var(--success-fg);
+        --status-error-icon: var(--danger-fg);
+        --status-warning-icon: var(--attention-fg);
+        --bg-primary: var(--canvas-default);
+        --bg-secondary: var(--canvas-subtle);
+        --bg-tertiary: var(--canvas-inset);
+        --serif: var(--font-sans);
+        --body-serif: var(--font-sans);
+        --mono-sans: var(--font-mono);
       }
 
       * {
@@ -590,39 +617,70 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
         padding: 0;
         box-sizing: border-box;
       }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      button,
+      input {
+        -webkit-tap-highlight-color: transparent;
+      }
+      
+      button,
+      input,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      *::selection {
+        background: rgba(83, 155, 245, 0.4);
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #545d68;
+        border-radius: 999px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover{
+      background: #636e7b;
+      background-clip: content-box;
+      }
 
       body {
-        font-family: var(--body-serif);
-        background: radial-gradient(ellipse at top, #2e2416 0%, var(--bg-primary) 60%, #17120b 100%);
-        color: var(--text-primary);
-        line-height: 1.65;
+        font-family: var(--font-sans);
+        background: var(--canvas-default);
+        color: var(--fg-default);
+        line-height: 1.5;
         min-height: 100vh;
         overflow-x: hidden;
-        background-attachment: fixed;
+        font-size: 14px;
       }
 
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        background-image:
-          radial-gradient(circle at 15% 20%, rgba(184, 137, 74, 0.05) 0%, transparent 40%),
-          radial-gradient(circle at 85% 70%, rgba(184, 137, 74, 0.04) 0%, transparent 45%);
-        z-index: 0;
-      }
+      a { color: var(--accent-fg); text-decoration: none; }
+      a:hover { text-decoration: underline; }
 
       .container {
         max-width: 1160px;
         margin: 0 auto;
-        padding: 2.5rem 2rem;
+        padding: 2.5rem 1.5rem;
         position: relative;
         z-index: 1;
       }
 
       .header {
         text-align: center;
-        margin-bottom: 2.5rem;
+        margin-bottom: 16px;
         position: relative;
         display: flex;
         justify-content: center;
@@ -631,9 +689,9 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
       }
 
       .header-icon {
-        font-family: var(--mono-sans);
-        font-size: 1.1rem;
-        color: var(--brass-light);
+        font-family: var(--font-mono);
+        font-size: 1rem;
+        color: var(--accent-fg);
         line-height: 1;
       }
 
@@ -647,73 +705,38 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
         flex-direction: column;
         align-items: center;
         position: relative;
-        padding: 0.5rem 3rem;
-      }
-
-      .title-group::before,
-      .title-group::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        width: 2.4rem;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, var(--brass));
-      }
-
-      .title-group::before {
-        left: 0;
-      }
-
-      .title-group::after {
-        right: 0;
-        background: linear-gradient(90deg, var(--brass), transparent);
+        padding: 8px 0;
       }
 
       .main-title {
-        font-family: var(--serif);
-        font-size: clamp(2.4rem, 4.4vw, 3.6rem);
+        font-family: var(--font-sans);
+        font-size: clamp(1.75rem, 3.4vw, 2.25rem);
         font-weight: 600;
-        color: var(--brass-light);
-        letter-spacing: 0.04em;
-        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+        color: var(--fg-default);
+        letter-spacing: -0.01em;
       }
 
       .subtitle {
-        font-family: var(--mono-sans);
-        font-size: 0.85rem;
-        color: var(--text-muted);
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        color: var(--fg-muted);
+        letter-spacing: 0.04em;
         margin-top: 0.35rem;
       }
 
       .main-card {
-        background:
-          linear-gradient(160deg, rgba(255, 255, 255, 0.02), transparent 40%),
-          var(--bg-secondary);
+        background: var(--canvas-subtle);
         border-radius: var(--radius-lg);
-        padding: 2.75rem;
-        box-shadow: var(--shadow-xl), inset 0 0 0 1px rgba(184, 137, 74, 0.08);
-        border: 1px solid var(--border-color);
+        padding: 2rem;
+        box-shadow:none;
+        border: 1px solid var(--border-muted);
         position: relative;
-      }
-
-      .main-card::before {
-        content: "";
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
-        border: 1px solid rgba(184, 137, 74, 0.18);
-        border-radius: calc(var(--radius-lg) - 4px);
-        pointer-events: none;
       }
 
       .form-section {
         display: grid;
-        gap: 1.75rem;
-        margin-bottom: 1.75rem;
+        gap: 16px;
+        margin-bottom: 16px;
       }
 
       .input-group {
@@ -723,19 +746,18 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
       .input-label {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        font-family: var(--serif);
-        font-weight: 600;
-        color: var(--text-primary);
-        margin-bottom: 0.6rem;
-        font-size: 1.05rem;
-        letter-spacing: 0.02em;
+        gap: 0.4rem;
+        font-family: var(--font-sans);
+        font-weight: 500;
+        color: var(--fg-default);
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
       }
 
       .input-label svg {
-        width: 18px;
-        height: 18px;
-        color: var(--brass);
+        width: 16px;
+        height: 16px;
+        color: var(--fg-muted);
       }
 
       .input-wrapper {
@@ -744,65 +766,61 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
 
       .form-input {
         width: 100%;
-        padding: 0.85rem 1.1rem;
-        font-family: var(--mono-sans);
-        font-size: 0.92rem;
-        background: var(--paper);
-        color: var(--ink);
-        border: 1px solid var(--border-light);
+        padding: 0.5rem 0.75rem;
+        font-family: var(--font-mono);
+        font-size: 0.875rem;
+        background: var(--canvas-inset);
+        color: var(--fg-default);
+        border: 1px solid var(--border-default);
         border-radius: var(--radius-sm);
-        transition: all 0.25s ease;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
         outline: none;
-        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
       }
-
-      .form-input:focus {
-        border-color: var(--brass);
-        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25), 0 0 0 3px rgba(184, 137, 74, 0.2);
+      
+      .form-input:focus{
+        border-color:var(--accent-fg);
+        outline:2px solid var(--accent-fg);
+        outline-offset:-2px;
+        box-shadow:none;
       }
 
       .form-input::placeholder {
-        color: #8a7a5c;
+        color: var(--fg-subtle);
       }
 
       .btn-primary {
-        background: linear-gradient(160deg, var(--brass-light) 0%, var(--brass-dark) 100%);
-        color: #221b10;
-        border: 1px solid var(--brass-dark);
-        padding: 0.75rem 1.5rem;
+        background: var(--btn-primary-bg);
+        color: var(--btn-primary-fg);
+        border: 1px solid var(--btn-primary-border);
+        padding: 0.42rem 0.9rem;
         border-radius: var(--radius-md);
-        font-family: var(--serif);
-        font-size: 1.05rem;
-        font-weight: 600;
+        font-family: var(--font-sans);
+        font-size: 0.875rem;
+        font-weight: 500;
         cursor: pointer;
-        transition: all 0.25s ease;
+        transition: background-color 0.12s ease;
         position: relative;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        box-shadow: var(--shadow-md);
+        box-shadow:none;
       }
 
       .btn-primary:hover {
-        transform: translateY(-1px);
-        box-shadow: var(--shadow-lg);
-        filter: brightness(1.05);
+        background: var(--btn-primary-hover-bg);
       }
 
       .btn-primary:active {
-        transform: translateY(0);
+        background: var(--btn-hover-bg);
       }
 
       .btn-primary:disabled {
-        opacity: 0.55;
+        opacity: 0.6;
         cursor: not-allowed;
-        transform: none;
       }
 
       .loading-spinner {
-        width: 18px;
-        height: 18px;
-        border: 2px solid rgba(34, 27, 16, 0.3);
-        border-top: 2px solid #221b10;
+        width: 14px;
+        height: 14px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-top: 2px solid #ffffff;
         border-radius: 50%;
         animation: spin 1s linear infinite;
         margin-left: 0.5rem;
@@ -813,195 +831,249 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
       }
+      
+     @keyframes cursorBlink {
+        0%,
+        45% {
+          opacity: 1;
+        }
+      
+        50%,
+        95% {
+          opacity: 0;
+        }
+      
+        100% {
+          opacity: 1;
+        }
+      }
+      
+      .terminal-cursor {
+        display: inline-block;
+        animation: cursorBlink 1s step-end infinite;
+      }
+      
+      .btn-primary.loading .terminal-cursor {
+        display: none;
+      }
+      
+      .btn-primary.loading #btn-text::after {
+        content: "...";
+      }
 
       .results-section {
-        margin-top: 2.5rem;
+        margin-top: 2rem;
       }
 
       .result-card {
-        font-family: var(--mono-sans);
-        background: linear-gradient(160deg, var(--paper) 0%, var(--paper-dark) 100%);
-        color: var(--ink);
+        font-family: var(--font-sans);
+        background: var(--canvas-subtle);
+        color: var(--fg-default);
         border-radius: var(--radius-md);
-        padding: 1.75rem;
-        margin-bottom: 1.25rem;
-        border: 1px solid var(--border-light);
-        box-shadow: var(--shadow-md);
+        padding: 16px;
+        margin-bottom: 16px;
+        border: 1px solid var(--border-default);
+        box-shadow: none;
         position: relative;
         overflow: hidden;
       }
 
       .result-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 5px;
-        height: 100%;
-        background: var(--border-color);
+        content: none;
       }
 
       .result-header {
         display: flex;
         align-items: center;
-        margin-bottom: 1.25rem;
-        gap: 0.75rem;
+        margin-bottom: 8px;
+        gap: 8px;
       }
 
       .result-title {
-        font-family: var(--serif);
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: var(--ink);
+        font-family: var(--font-sans);
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--fg-default);
       }
 
       .result-content {
         display: grid;
-        gap: 0.75rem;
+        gap: 0;
       }
 
       .result-item {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.85rem 1rem;
-        background: rgba(0, 0, 0, 0.03);
-        border-radius: var(--radius-sm);
-        border: 1px solid rgba(0, 0, 0, 0.12);
+        padding: 8px 0;
+        background: transparent;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid var(--border-muted);
       }
-      
-        .result-icon {
-          font-size: 1.5rem;
-          line-height: 1;
-          display: flex;
-          align-items: center;
-        }
-        
-        .result-card.result-success::before,
-        .result-card.result-success { }
-        .result-card.result-success {
-          border-color: var(--success-border);
-          box-shadow: var(--shadow-md), inset 0 0 0 1px var(--success-border);
-        }
-        .result-card.result-success::before { background: var(--success-color); }
-        
-        .result-card.result-error {
-          border-color: var(--error-border);
-          box-shadow: var(--shadow-md), inset 0 0 0 1px var(--error-border);
-        }
-        .result-card.result-error::before { background: var(--error-color); }
-        
-        .result-card.result-warning {
-          border-color: var(--warning-border);
-          box-shadow: var(--shadow-md), inset 0 0 0 1px var(--warning-border);
-        }
-        .result-card.result-warning::before { background: var(--warning-color); }
-        
-      .result-card.success::before { background: var(--success-color); }
-      .result-card.success { box-shadow: var(--shadow-md), inset 0 0 0 1px var(--success-border); }
-      .result-card.error::before { background: var(--error-color); }
-      .result-card.error { box-shadow: var(--shadow-md), inset 0 0 0 1px var(--error-border); }
-      .result-card.warning::before { background: var(--warning-color); }
-      .result-card.warning { box-shadow: var(--shadow-md), inset 0 0 0 1px var(--warning-border); }
-      
+
+      .result-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .result-icon {
+        font-size: 16px;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+      }
+
+      .result-card.result-success,
+      .result-card.success {
+        background: var(--canvas-subtle);
+        border-color: var(--success-fg);
+        box-shadow: none;
+      }
+
+      .result-card.result-error,
+      .result-card.error {
+        background: var(--canvas-subtle);
+        border-color: var(--danger-fg);
+        box-shadow: none;
+      }
+
+      .result-card.result-warning,
+      .result-card.warning {
+        background: var(--canvas-subtle);
+        border-color: var(--attention-fg);
+        box-shadow: none;
+      }
+
+      .result-card.success::before,
+      .result-card.error::before,
+      .result-card.warning::before {
+        content: none;
+      }
+
       .result-label {
-        font-weight: 500;
-        color: var(--ink-soft);
+        font-weight: 400;
+        color: var(--fg-muted);
       }
 
       .result-value {
-        font-weight: 700;
-        color: var(--ink);
+        font-weight: 600;
+        color: var(--fg-default);
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 8px;
+        font-size: 13px;
       }
-      
+
       .result-header, .result-content {
         position: relative;
         z-index: 2;
       }
 
-      .result-card {
-        position: relative;
-        overflow: hidden;
-      }
-
       .flag-glow-overlay {
         position: absolute;
-        top: 12px;
-        right: 12px;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
+        top: -20px;
+        right: -20px;
+        width: 160px;
+        height: 160px;
+        border: none;
+        opacity: 0.06;
+        border-radius: 0;
+        box-shadow: none;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        border: 3px solid var(--brass-dark);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 0 5px rgba(184, 137, 74, 0.15);
-        opacity: 0.95;
+        filter: blur(2px) saturate(0.8);
         pointer-events: none;
+        user-select: none;
         z-index: 1;
       }
-      
+
       .status-icon-prefix,
-        .status-icon {
-          font-size: 1rem;
-        }
-        
-        .status-icon-prefix.success,
-        .status-icon.success { color: var(--success-color); }
-        .status-icon-prefix.error,
-        .status-icon.error { color: var(--error-color); }
-        .status-icon-prefix.warning,
-        .status-icon.warning { color: var(--warning-color); }
+      .status-icon {
+        font-size: 14px;
+        font-style: normal;
+      }
+
+      .status-icon-prefix.success,
+      .status-icon.success,
+      .result-icon.success { color: var(--success-fg); }
+      .status-icon-prefix.error,
+      .status-icon.error,
+      .result-icon.error { color: var(--danger-fg); }
+      .status-icon-prefix.warning,
+      .status-icon.warning,
+      .result-icon.warning { color: var(--attention-fg); }
 
       .badge {
         display: inline-flex;
         align-items: center;
-        padding: 0.25rem 0.75rem;
-        border-radius: 2px;
-        font-family: var(--mono-sans);
-        font-size: 0.78rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
+        padding: 0 8px;
+        border-radius: 2em;
+        font-family: var(--font-sans);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        text-transform: none;
+        letter-spacing: normal;
+        border: 1px solid transparent;
+        white-space: nowrap;
       }
-      .badge.success { background: var(--success-bg); color: #3f5730; border: 1px solid var(--success-border); }
-      .badge.error { background: var(--error-bg); color: #6b3720; border: 1px solid var(--error-border); }
-      .badge.warning { background: var(--warning-bg); color: #6b5220; border: 1px solid var(--warning-border); }
-      .badge.info { background: var(--info-bg); color: #3d5460; border: 1px solid var(--info-border); }
+      .badge.success {
+        background: var(--success-subtle);
+        color: var(--success-fg);
+        border-color: rgba(87, 171, 90, 0.25);
+      }
+      .badge.error {
+        background: var(--danger-subtle);
+        color: var(--danger-fg);
+        border-color: rgba(229, 83, 75, 0.25);
+      }
+      .badge.warning {
+        background: var(--attention-subtle);
+        color: var(--attention-fg);
+        border-color: rgba(218, 170, 63, 0.25);
+      }
+      .badge.info {
+        background: var(--accent-subtle);
+        color: var(--accent-fg);
+        border-color: rgba(83, 155, 245, 0.25);
+      }
 
       .copy-btn {
-        background: rgba(0, 0, 0, 0.05);
-        border: 1px solid var(--border-light);
-        color: var(--ink-soft);
-        padding: 0.2rem 0.5rem;
+        background: var(--btn-bg);
+        border: 1px solid var(--border-muted);
+        color: var(--fg-default);
+        height: 28px;
+        padding: 0 10px;
         border-radius: var(--radius-sm);
         font-size: 0.72rem;
+        font-family: var(--font-sans);
         cursor: pointer;
-        transition: all 0.2s ease;
+        transition: background-color 0.12s ease;
       }
-      .copy-btn:hover {
-        background: var(--brass);
-        color: #221b10;
-        border-color: var(--brass-dark);
+      
+      .copy-btn:hover{
+        background: var(--btn-hover-bg);
+        border-color: var(--border-default);
       }
 
       .toast {
         position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        background: var(--bg-secondary);
-        color: var(--text-primary);
-        padding: 0.9rem 1.4rem;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        background: var(--canvas-overlay);
+        color: var(--fg-default);
+        padding: 0.75rem 1.1rem;
         border-radius: var(--radius-md);
         box-shadow: var(--shadow-lg);
-        border: 1px solid var(--brass-dark);
-        font-family: var(--body-serif);
+        border: 1px solid var(--border-default);
+        font-family: var(--font-sans);
+        font-size: 0.85rem;
         z-index: 1000;
         opacity: 0;
-        transform: translateY(100px);
-        transition: all 0.3s ease;
+        transform: translateY(60px);
+        transition: all 0.25s ease;
       }
       .toast.show {
         opacity: 1;
@@ -1009,106 +1081,101 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
       }
 
       .api-docs {
-        margin-top: 2.5rem;
-        background: var(--bg-secondary);
+        margin-top: 2rem;
+        background: var(--canvas-subtle);
         border-radius: var(--radius-lg);
-        padding: 1.75rem;
-        border: 1px solid var(--border-color);
+        padding: 1.5rem;
+        border: 1px solid var(--border-default);
       }
 
       .api-docs-header {
         display: flex;
         align-items: center;
-        gap: 0.7rem;
-        margin-bottom: 1.5rem;
+        gap: 0.6rem;
+        margin-bottom: 1.25rem;
       }
 
       .api-docs-header h3 {
-        font-family: var(--serif);
-        color: var(--brass-light);
-        font-size: 1.5rem;
-        font-weight: 700;
+        font-family: var(--font-sans);
+        color: var(--fg-default);
+        font-size: 1.15rem;
+        font-weight: 500;
       }
 
       .api-docs-header svg {
-        width: 24px;
-        height: 24px;
-        color: var(--brass);
+        width: 20px;
+        height: 20px;
+        color: var(--fg-muted);
       }
 
       .api-endpoints {
         display: grid;
-        gap: 0.75rem;
+        gap: 8px;
       }
 
       .api-endpoint {
         display: flex;
         align-items: center;
         gap: 1rem;
-        background: rgba(0, 0, 0, 0.15);
-        padding: 0.85rem 1.1rem;
+        background: var(--canvas-inset);
+        padding: 8px 16px;
         border-radius: var(--radius-sm);
-        border: 1px solid var(--border-color);
-        transition: all 0.2s ease;
+        border: 1px solid var(--border-muted);
+        transition: border-color 0.15s ease;
       }
       .api-endpoint:hover {
-        border-color: var(--brass);
+        border-color: var(--border-default);
       }
 
       .api-method {
-        font-family: var(--mono-sans);
-        font-weight: 700;
-        padding: 0.2rem 0.6rem;
-        border-radius: 2px;
-        font-size: 0.78rem;
-        background: var(--success-bg);
-        color: var(--success-color);
+        font-family: var(--font-mono);
+        font-weight: 600;
+        padding: 0.1rem 0.5rem;
+        border-radius: 2em;
+        font-size: 0.72rem;
+        background: var(--success-subtle);
+        color: var(--success-fg);
         border: 1px solid var(--success-border);
       }
 
       .api-endpoint code {
-        font-family: var(--mono-sans);
-        font-size: 0.88rem;
-        color: var(--text-secondary);
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        color: var(--fg-muted);
         flex-grow: 1;
       }
 
       .api-endpoint code span {
-        color: var(--brass-light);
+        color: var(--accent-fg);
       }
 
       .api-description {
-        font-family: var(--body-serif);
-        font-size: 0.85rem;
-        font-style: italic;
-        color: var(--text-muted);
+        font-family: var(--font-sans);
+        font-size: 0.8rem;
+        font-style: normal;
+        color: var(--fg-subtle);
         margin-left: auto;
         white-space: nowrap;
       }
 
       .footer {
-        font-family: var(--mono-sans);
+        font-family: var(--font-sans);
         text-align: center;
-        margin-top: 2.5rem;
-        padding: 1.75rem;
-        color: var(--text-muted);
-        border-top: 1px solid var(--border-color);
+        margin-top: 2rem;
+        padding: 1.5rem;
+        color: var(--fg-subtle);
+        border-top: 1px solid var(--border-muted);
         font-size: 0.8rem;
-        letter-spacing: 0.04em;
       }
       .footer a {
-        color: var(--brass-light);
-        text-decoration: none;
-      }
-      .footer a:hover {
-        text-decoration: underline;
+        color: var(--accent-fg);
       }
 
       @media (max-width: 768px) {
         .container { padding: 1.5rem 1rem; }
-        .main-card { padding: 1.75rem; }
+        .main-card { padding: 1.25rem; }
         .header { flex-direction: column; gap: 1rem; }
-        .result-item { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+        .result-item { flex-direction: column; align-items: flex-start; gap: 4px; }
         .api-endpoint { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
         .api-description { margin-left: 0; margin-top: 0.2rem; }
         .toast { left: 1rem; right: 1rem; bottom: 1rem; }
@@ -1117,7 +1184,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
       .grid-2 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
+        gap: 16px;
       }
 
       @media (max-width: 640px) {
@@ -1125,56 +1192,57 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
       }
 
       @media (max-width: 480px) {
-        .main-card { padding: 1.25rem; }
-        .main-title { font-size: 1.9rem; }
+        .main-card { padding: 1rem; }
+        .main-title { font-size: 1.5rem; }
         .subtitle { font-size: 0.65rem; }
-        .btn-primary { font-size: 0.95rem; }
+        .btn-primary { font-size: 0.85rem; }
       }
 
       .flex-center {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 0.7rem;
+        gap: 0.5rem;
       }
       .flex-center svg {
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
       }
 
       .range-results {
-        margin-top: 2rem;
+        margin-top: 16px;
       }
       .ip-grid {
         display: grid;
-        gap: 0.5rem;
+        gap: 4px;
         max-height: 500px;
         overflow-y: auto;
-        padding: 1rem;
-        background: var(--bg-tertiary);
+        padding: 8px;
+        background: var(--canvas-inset);
         border-radius: var(--radius-md);
-        border: 1px solid var(--border-color);
+        border: 1px solid var(--border-muted);
       }
       .ip-item {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.7rem;
-        background: var(--paper);
-        color: var(--ink);
-        border-radius: var(--radius-sm);
-        border: 1px solid var(--border-light);
-        font-family: var(--mono-sans);
+        padding: 6px 8px;
+        background: var(--canvas-default);
+        color: var(--fg-default);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border-muted);
+        font-family: var(--font-mono);
+        font-size: 12px;
       }
       .status-indicator {
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        margin-right: 0.5rem;
+        margin-right: 8px;
       }
-      .status-indicator.success { background: var(--success-color); }
-      .status-indicator.error { background: var(--error-color); }
-      .status-indicator.warning { background: var(--warning-color); }
+      .status-indicator.success { background: var(--success-fg); }
+      .status-indicator.error { background: var(--danger-fg); }
+      .status-indicator.warning { background: var(--attention-fg); }
     </style>
   </head>
   <body>
@@ -1213,15 +1281,18 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
               </div>
             </div>
           </div>
-
+          
           <button id="checkBtn" class="btn-primary" onclick="checkInputs()">
             <span class="flex-center">
-              <span id="btn-icon" class="header-icon">&gt;_</span>
-              <span class="btn-text">Start Analysis</span>
+              <span id="btn-icon" class="header-icon">
+                &gt;<span id="btn-cursor" class="terminal-cursor">_</span>
+              </span>
               <span class="loading-spinner"></span>
+              <span id="btn-text" class="btn-text">
+                Start Analysis
+              </span>
             </span>
           </button>
-        </div>
 
         <div id="result" class="results-section"></div>
         <div id="rangeResult" class="range-results" style="display: none"></div>
@@ -1271,7 +1342,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
         </p>
       </footer>
       </div>
-  
+
       <div id="toast" class="toast"></div>
 
       <script>
@@ -1286,13 +1357,13 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
           const currentDate = new Date();
           return Math.ceil(currentDate.getTime() / (1000 * 60 * 31));
         }
-        
+
         document.addEventListener('DOMContentLoaded', function() {
           pageLoadTimestamp = calculateTimestamp();
           const singleIpInput = document.getElementById('proxyip');
           const rangeIpInput = document.getElementById('proxyipRange');
           singleIpInput.focus();
-          
+
           const urlParams = new URLSearchParams(window.location.search);
           let autoCheckValue = urlParams.get('autocheck');
           if (!autoCheckValue) {
@@ -1318,7 +1389,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
                 if (lastSearch) singleIpInput.value = lastSearch;
             } catch (e) { console.error('localStorage read error:', e); }
           }
-          
+
           singleIpInput.addEventListener('keypress', function(event) { if (event.key === 'Enter' && !isChecking) { checkInputs(); } });
           rangeIpInput.addEventListener('keypress', function(event) { if (event.key === 'Enter' && !isChecking) { checkInputs(); } });
           document.addEventListener('click', function(event) {
@@ -1344,12 +1415,12 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
             if(element) setTimeout(() => { element.textContent = originalText; }, 2000);
           }).catch(err => { showToast('Copy failed. Please copy manually.'); });
         }
-        
-        function createCopyButton(text) { 
+
+        function createCopyButton(text) {
           return \`<span class="result-value">
             <span>\${text}</span>
             <button class="copy-btn" data-copy="\${text}">Copy</button>
-          </span>\`; 
+          </span>\`;
         }
 
         function isValidProxyIPFormat(input) {
@@ -1382,12 +1453,12 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
                 } else {
                      showToast('Invalid CIDR format. Expected x.x.x.0/24.');
                 }
-            } 
+            }
             else if (/^(\\d{1,3}\\.){3}\\d{1,3}-\\d{1,3}$/.test(rangeInput)) {
                 const parts = rangeInput.split('-');
                 const baseIpWithLastOctet = parts[0];
                 const endOctet = parseInt(parts[1]);
-                
+
                 const ipParts = baseIpWithLastOctet.split('.');
                 if (ipParts.length === 4) {
                     const startOctet = parseInt(ipParts[3]);
@@ -1405,7 +1476,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
             }
             return ips;
         }
-        
+
         function preprocessInput(input) {
           if (!input) return input;
           let processed = input.trim();
@@ -1419,21 +1490,21 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
           if (!ip) return null;
           try {
             const cleanIP = ip.replace(/[\\[\\]]/g, '');
-            const workerLookupUrl = \`./scamalytics-lookup?ip=\${encodeURIComponent(cleanIP)}&token=\${TEMP_TOKEN}\`; 
+            const workerLookupUrl = \`./scamalytics-lookup?ip=\${encodeURIComponent(cleanIP)}&token=\${TEMP_TOKEN}\`;
             const response = await fetch(workerLookupUrl);
-        
+
             if (!response.ok) {
                console.error('Scamalytics request failed via Worker:', response.status, response.statusText);
                return null;
             }
-            
+
             const data = await response.json();
 
             if (data.status === 'error') {
               console.error('Scamalytics API error (from worker):', data.message || data.error);
               return null;
             }
-            
+
             if (data.scamalytics && data.scamalytics.status === 'error') {
                 console.error('Scamalytics API error (from Scamalytics):', data.scamalytics.error);
                 return null;
@@ -1454,7 +1525,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
           const score = data.info.fraud_score;
           const risk = data.info.risk || 'unknown';
           const isVpn = data.details && data.details.vpn === "Yes" ? " | VPN" : "";
-          
+
           let badgeClass = "info";
           if (risk === "low") badgeClass = "success";
           else if (risk === "medium") badgeClass = "warning";
@@ -1475,13 +1546,13 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
           const btnText = checkBtn.querySelector('.btn-text');
           const spinner = checkBtn.querySelector('.loading-spinner');
           const btnIcon = document.getElementById('btn-icon');
-          
+
           const rawSingleInput = singleIpInputEl.value;
           let singleIpToTest = preprocessInput(rawSingleInput);
-          
+
           const rawRangeInput = rangeIpInputEl.value;
           let rangeIpToTest = preprocessInput(rawRangeInput);
-          
+
           if (singleIpToTest && singleIpToTest !== rawSingleInput) {
             singleIpInputEl.value = singleIpToTest;
             showToast('Single IP input auto-corrected.');
@@ -1496,7 +1567,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
             singleIpInputEl.focus();
             return;
           }
-          
+
           const currentTimestamp = calculateTimestamp();
           if (currentTimestamp !== pageLoadTimestamp) {
             const currentHost = window.location.host;
@@ -1512,13 +1583,13 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
               try { localStorage.setItem('lastProxyIP', singleIpToTest);
               } catch (e) {}
           }
-          
+
           isChecking = true;
           checkBtn.disabled = true;
-          btnText.textContent = "Analyzing...";
-          btnIcon.classList.add("spinning");
-          spinner.style.display = 'inline-block';
-          
+          checkBtn.classList.add("loading");
+          btnText.textContent = "Analyzing";
+          spinner.style.display = "inline-block";
+
           resultDiv.innerHTML = '';
           rangeResultDiv.innerHTML = '';
           rangeResultDiv.style.display = 'none';
@@ -1532,7 +1603,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
             if (singleIpToTest) {
                 if (isIPAddress(singleIpToTest)) {
                     await checkAndDisplaySingleIP(singleIpToTest, resultDiv);
-                } else { 
+                } else {
                     await checkAndDisplayDomain(singleIpToTest, resultDiv);
                 }
             }
@@ -1568,38 +1639,38 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
                     const batchSize = 10;
                     for (let i = 0; i < ipsInRange.length; i += batchSize) {
                         const batch = ipsInRange.slice(i, i + batchSize);
-                        const batchPromises = batch.map(ip => 
+                        const batchPromises = batch.map(ip =>
 
-                            fetchSingleIPCheck(ip + ':443', 2500) 
+                            fetchSingleIPCheck(ip + ':443', 2500)
                                 .then(data => {
                                     checkedCount++;
                                     if (data.success) {
                                         successCount++;
                                         currentSuccessfulRangeIPs.push(data.proxyIP);
                                     }
-                                    return data; 
+                                    return data;
                                 })
                                 .catch(err => {
-                                    checkedCount++; 
+                                    checkedCount++;
                                     console.error("Error checking IP in range:", ip, err);
                                     return {success: false, proxyIP: ip, error: err.message};
                                 })
                         );
                         await Promise.all(batchPromises);
-                        
+
                         document.getElementById('rangeProgress').textContent = checkedCount + "/" + ipsInRange.length;
                         document.getElementById('rangeSuccess').textContent = successCount;
-                        
+
                         if (i + batchSize < ipsInRange.length) {
                             await new Promise(resolve => setTimeout(resolve, 200));
                         }
                     }
-                    
-                    const finalResultClass = successCount === ipsInRange.length ? 'success' : 
+
+                    const finalResultClass = successCount === ipsInRange.length ? 'success' :
                                            successCount > 0 ? 'warning' : 'error';
-                    const finalIcon = successCount === ipsInRange.length ? '✓' : 
+                    const finalIcon = successCount === ipsInRange.length ? '✓' :
                                     successCount > 0 ? '!!' : '✕';
-                    
+
                     rangeResultDiv.innerHTML = \`
                       <div class="result-card \${finalResultClass}">
                         <div class="result-header">
@@ -1638,7 +1709,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
                         \` : ''}
                       </div>
                     \`;
-                } else if (rangeIpToTest) { 
+                } else if (rangeIpToTest) {
                      showToast('Invalid IP Range format or empty range.');
                      rangeResultDiv.style.display = 'block';
                      rangeResultDiv.innerHTML = \`
@@ -1676,11 +1747,11 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
             isChecking = false;
             checkBtn.disabled = false;
             btnText.textContent = "Start Analysis";
-            btnIcon.classList.remove("spinning");
-            spinner.style.display = 'none';
+            checkBtn.classList.remove("loading");
+            spinner.style.display = "none";
           }
         }
-        
+
         function copySuccessfulRangeIPs() {
             if (currentSuccessfulRangeIPs.length > 0) {
                 const textToCopy = currentSuccessfulRangeIPs.join('\\n');
@@ -1702,17 +1773,17 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
               getIPInfo(proxyip.split(':')[0]),
               fetchScamalyticsRiskInfo(proxyip.split(':')[0])
             ]);
-      
+
             const resultClass = checkData.success ? 'success' : 'error';
             const resultIcon = checkData.success ? '✓' : '✕';
             const resultTitle = checkData.success ? 'ProxyIP Valid' : 'ProxyIP Invalid';
-      
+
             const riskInfoHTML = formatScamalyticsRiskInfo(riskInfo);
-      
-            const flagUrl = ipInfo && ipInfo.status === 'success' && ipInfo.countryCode 
-              ? \`https://flagcdn.com/w160/\${ipInfo.countryCode.toLowerCase()}.png\` 
+
+            const flagUrl = ipInfo && ipInfo.status === 'success' && ipInfo.countryCode
+              ? \`https://flagcdn.com/w160/\${ipInfo.countryCode.toLowerCase()}.png\`
               : '';
-      
+
             resultDiv.innerHTML = \`
               <div class="result-card \${resultClass}">
                 \${flagUrl ? \`<div class="flag-glow-overlay" style="background-image: url('\${flagUrl}');"></div>\` : ''}
@@ -1739,7 +1810,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
                     <span class="result-label">Security Risk</span>
                     <span class="result-value">\${riskInfoHTML}</span>
                   </div>
-                  
+
                   \${ipInfo && ipInfo.status === 'success' ? \`
                     <div class="result-item">
                       <span class="result-label">Location</span>
@@ -1772,7 +1843,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
         async function checkAndDisplayDomain(domain, resultDiv) {
           let portRemote = 443;
           let cleanDomain = domain;
-          
+
           if (domain.includes('.tp')) {
             const portMatch = domain.match(/\\.tp(\\d+)\\./);
             if (portMatch) portRemote = parseInt(portMatch[1]);
@@ -1788,7 +1859,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
                 if (!isNaN(parsedPort)) portRemote = parsedPort;
              }
           }
-          
+
           resultDiv.innerHTML = \`
             <div class="result-card warning">
               <div class="result-header">
@@ -1810,17 +1881,17 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
 
           const resolveResponse = await fetch(\`./resolve?domain=\${encodeURIComponent(cleanDomain)}&token=\${TEMP_TOKEN}&_t=\${Date.now()}\`, { cache: 'no-store' });
           const resolveData = await resolveResponse.json();
-          
-          if (!resolveData.success) { 
+
+          if (!resolveData.success) {
             resultDiv.innerHTML = \`<div class="result-card result-error"><h3><span class="status-icon-prefix">✕</span> Resolution Failed</h3><p>\${resolveData.error || 'Domain resolution failed for ' + createCopyButton(cleanDomain)}</p></div>\`;
             return;
           }
           const ips = resolveData.ips;
-          if (!ips || ips.length === 0) { 
+          if (!ips || ips.length === 0) {
             resultDiv.innerHTML = \`<div class="result-card result-error"><h3><span class="status-icon-prefix">✕</span> No IPs Found</h3><p>No IPs found for \${createCopyButton(cleanDomain)}.</p></div>\`;
             return;
           }
-          
+
           ipCheckResults.clear();
           resultDiv.innerHTML = \`
             <div class="result-card result-warning" id="domain-result-card">
@@ -1832,7 +1903,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
                 \${ips.map((ip, index) => \`
                   <div class="ip-item" id="ip-item-\${index}">
                     <div>
-                      \${createCopyButton(ip)} 
+                      \${createCopyButton(ip)}
                       <span id="ip-info-\${index}" style="font-size:0.8em;"></span>
                     </div>
                     <span class="status-icon" id="status-icon-\${index}">⟳</span>
@@ -1842,10 +1913,10 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
             </div>
           \`;
           resultDiv.classList.add('show');
-          
+
           const checkPromises = ips.map((ip, index) => checkDomainIPWithIndex(ip, portRemote, index));
           const ipInfoPromises = ips.map((ip, index) => getIPInfoWithIndex(ip, index));
-          
+
           await Promise.all([...checkPromises, ...ipInfoPromises]);
 
           const domainResultCardEl = document.getElementById('domain-result-card');
@@ -1853,7 +1924,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
           const resultCardHeader = domainResultCardEl.querySelector('h3');
 
           const validCount = Array.from(ipCheckResults.values()).filter(r => r.success).length;
-          
+
           domainResultCardEl.classList.remove('result-warning', 'result-success', 'result-error');
 
           if (validCount === ips.length && ips.length > 0) {
@@ -1880,7 +1951,7 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
             const ipToTest = ip.includes(':') || ip.includes(']:') ? ip : \`\${ip}:\${port}\`;
             const result = await fetchSingleIPCheck(ipToTest);
             ipCheckResults.set(ipToTest, result);
-            
+
             if (statusIcon) {
                  statusIcon.textContent = result.success ? \`✓ (\${result.latency} ms)\` : '✕';
                  statusIcon.style.color = result.success ? 'var(--status-success-icon)' : 'var(--status-error-icon)';
@@ -1893,19 +1964,19 @@ async function generateHTMLPage(_hostname, websiteIcon, token) {
             ipCheckResults.set(ip, { success: false, error: error.message });
           }
         }
-        
+
         async function getIPInfoWithIndex(ip, index) {
           try {
             const cleanIP = ip.split(':')[0];
             const riskInfo = await fetchScamalyticsRiskInfo(cleanIP);
             const infoElement = document.getElementById(\`ip-info-\${index}\`);
-            
+
             if (infoElement && riskInfo && riskInfo.info && riskInfo.info.success) {
                 const country = riskInfo.details.country || 'N/A';
                 const as = riskInfo.details.asn ? 'AS' + riskInfo.details.asn : 'N/A';
                 const score = riskInfo.info.fraud_score !== undefined ? riskInfo.info.fraud_score : 0;
                 const risk = riskInfo.info.risk || 'low';
-                
+
                 let badgeClass = 'success';
                 if (risk === 'medium') badgeClass = 'warning';
                 else if (risk === 'high' || risk === 'very high') badgeClass = 'error';
