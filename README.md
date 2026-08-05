@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="180x" </p>
+<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="220x" </p>
 
 <br><br/>
 
@@ -624,11 +624,10 @@
 >
 > | 🌐 Providers          | 🔗 Links                                                                                                                  |
 > | :-------------------- | :------------------------------------------------------------------------------------------------------------------------ |
+> | 🟫 **Hidashimora**    | [•v2ray][HD?]                                                                                                             |
 > | ⬜ **Matin Ghanbari** | [•v2ray][Matin-Ghanbari]                                                                                                  |
 > | ⬛ **F0rc3Run**       | [•v2ray][F0rc3Run]                                                                                                        |
-> | 🟫 **AFR Cloud**      | [•v2ray][AFRCloud]                                                                                                        |
 > | 🟪 **ShatakVPN**      | [•v2ray][ShatakVPN]                                                                                                       |
-> | 🟧 **Xray v2Key**     | [•v2ray][Xray-v2Key]                                                                                                      |
 > | 🟦 **It's YeBeKhe**   | [•v2ray][YeBeKhe-v2ray] <br/> [•T.proxies][YeBeKhe-T-pro] <br/> [•warp][YeBeKhe-Warp] <br/> [•warp-bot][YeBeKhe-Warp-Bot] |
 > | 🟩 **The Darkness**   | [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp]                                                                       |
 > | 🟨 **Arshia-ComPlus** | [•v2ray][Arshia-Sub]                                                                                                      |
@@ -725,6 +724,12 @@ https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/base64.t
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS%2BAll_RUS.txt
 
 https://robin.victoriacross.ir [[Ni?]]
+
+https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/26.1.txt [[HD?]]
+
+https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/26.2.txt
+
+https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/14.2.txt
 
 https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/url_work.txt
 
@@ -3439,6 +3444,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [GFW?]: https://github.com/GFW-knocker
 [GA?]: https://telegram.me/s/gheychiamoozesh/387
 [GZ?]: https://github.com/valid7996
+[HD?]: https://hidashimora.github.io/free-vpn-anti-rkn
 [HK?]: https://github.com/HosseinKoofi/GO_V2rayCollector
 [HP?]: https://github.com/hamedp-71
 [HC?]: https://github.com/hamedcod
@@ -3468,7 +3474,6 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [YA?]: https://github.com/youfoundamin/V2rayCollector
 [10ium-Sub]: https://10ium.github.io/free-sub-link
 [Ainita?]: https://ainita.net/vpn.html
-[AFRCloud]: https://www.afrcloud.site
 [APN]: https://t.me/F_NiREvil/3554
 [Arshia]: https://telegram.me/s/warpscanner
 [Arshia-Sub]: https://arshiacomplus.github.io/V2rayExtractor-page
@@ -3546,7 +3551,6 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [WIZ]: https://bia-pain-bache.github.io/BPB-Worker-Panel/fa/installation/wizard
 [WTF?]: https://github.com/NiREvil/vless/blob/main/sub/clash-meta-wg.yml#L40
 [Xpoury4.github.io/AI-Links]: https://xpoury4.github.io/AI-Links
-[Xray-v2Key]: https://xray.v2key.web.id
 [YB?]: https://telegram.me/s/YeBeKhe/527
 [YeBeKhe-v2ray]: https://itsyebekhe.github.io/PSG
 [YeBeKhe-T-pro]: https://itsyebekhe.github.io/tpro
