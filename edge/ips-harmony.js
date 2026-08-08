@@ -1,6 +1,6 @@
 /**
  * Harmony - VLESS Subscription Generator for Cloudflare Workers
- * - Last Update: Sun, November 16, 2025, 04:20 UTC.
+ * - Last Update: Thu, July 30, 2026, 04:20 UTC
  * - https://github.com/NiREvil/Harmony
  *
  * This worker builds a V2Ray subscription link with the ability to automatically add
@@ -23,13 +23,13 @@
  * - Fake subscription info for client compatibility
  * - Randomizable paths and SNI for better censorship resistance
  *
- * We are all REvil
  */
+
 
 // ——— USER CONFIGURATION SECTION ———
 const USER_SETTINGS = {
   // Your UUID - Replace with your own UUID
-  uuid: "2210f3f0-513d-4d17-9ce2-c094d2f54580",
+  uuid: "a22bff60-a40a-4250-bde2-4c660e363b47",
 
   // Number of configs (IPs) per group
   ipCount: 10,
@@ -38,8 +38,8 @@ const USER_SETTINGS = {
   ed: "2560",
   eh: "Sec-WebSocket-Protocol",
 
-  // ——— Configuration Groups ———
   /**
+   * ——— Configuration Groups ———
    * - You can add, remove, or modify groups as needed
    * - Each group can have different settings for hosts, ports, TLS, etc.
    *
@@ -51,51 +51,51 @@ const USER_SETTINGS = {
   groups: [
     {
       // ——— Group 1: TLS Configuration ———
-      name: "| HAЯMOИY ᵀᴸˢ |",
-      host: "index.forexample.workers.dev",
-      sni: "index.forexample.workers.dev",
-      path: "/random:16", // Path with 16 random characters
+      name: "Harmonyᵀᴸˢ",
+      host: "index.harmonica01.workers.dev",
+      sni: "index.harmonica01.workers.dev",
+      path: "/random:18", // Path with 16 random characters
       tls: true,
-      allowInsecure: true,
+      allowInsecure: false,
       ports: ["443", "8443", "2053", "2083", "2087", "2096"], // Standard cloudflare TLS ports
       alpn: "http/1.1", // Application-layer protocol negotiation (websocket only support http/1.1)
       fp: ["chrome"], // Client fingerprint (currently only chrome works reliably)
-      dataSource: "static", // Use static IPs
+      dataSource: "dynamic1", // Use the first IP source
       randomizeSni: true, // Set to true to randomize SNI character casing
     },
     {
       // ——— Group 2: Non-TLS Configuration (TCP), ONLY Workers, No pages.dev ———
-      name: "| HAЯMOИY ᵀᶜᴾ |",
-      host: "index.forexample.workers.dev",
+      name: "Harmonyᵀᶜᴾ",
+      host: "index.harmonica02.workers.dev",
       sni: "", // Must be empty for non-TLS
-      path: "/random:16",
+      path: "/random:18",
       tls: false,
       allowInsecure: false,
       ports: ["80", "8080", "8880", "2052", "2082", "2086", "2095"], // Standard cloudflare HTTP ports
       alpn: "", // Must be empty for non-TLS
       fp: ["chrome"],
-      dataSource: "dynamic1", // Use the first IP source
+      dataSource: "dynamic2", // Use the second IP source
       randomizeSni: false,
     },
     {
       // ——— Group 3: Alternative TLS Configuration ———
-      name: "| HAЯMOИY ᴱᴹˢ |",
-      host: "index.forexample.workers.dev",
-      sni: "index.forexample.workers.dev",
-      path: "/random:12?ed=2048", // Fixed path value optimized for xray core
+      name: "Harmonyᴱᴹˢ",
+      host: "ems.nscl.workers.dev",
+      sni: "ems.nscl.workers.dev",
+      path: "/random:14?ed=2048", // Fixed path value optimized for xray core
       tls: true,
-      allowInsecure: true,
-      ports: ["443", "8443", "2053"],
+      allowInsecure: false,
+      ports: ["443", "2053"],
       alpn: "http/1.1",
       fp: ["chrome"],
-      dataSource: "dynamic2", // Use the second IP source
+      dataSource: "static", // Use static IPs
       randomizeSni: true,
     },
   ],
 };
 
-// ——— IP DATA SOURCES ———
 /**
+ * ——— IP DATA SOURCES ———
  * Static IP list - Manually defined IPs and domains
  * You can add or remove IPs as needed
  */
@@ -717,244 +717,309 @@ const staticIPs = [
   "[::ffff:c7d4:5a31]",
   "[::ffff:c7d4:5a46]",
 
-  "creativecommons.org",
-  "sky.rethinkdns.com",
-  "www.speedtest.net",
-  "cfip.xxxxxxxx.tk",
-  "cfip.1323123.xyz",
-  "www.cdnjs.com",
-  "singapore.com",
-  "go.inmobi.com",
-  "cf.090227.xyz",
-  "www.visa.com",
-  "www.wto.org",
-  "lb.nscl.ir",
-  "cdnjs.com",
-  "csgo.com",
-  "zula.ir",
+  "zzula.ir",
   "fbi.gov",
   "time.is",
+  "lb.nscl.ir",
   "icook.hk",
-  "172.64.95.71",
-  "198.41.209.210",
-  "141.101.120.246",
-  "141.101.120.187",
-  "162.159.128.242",
-  "198.41.209.120",
-  "104.17.166.122",
-  "104.18.69.233",
-  "104.16.101.86",
-  "104.18.111.51",
-  "104.19.62.62",
-  "172.67.95.79",
-  "172.67.147.96",
-  "172.67.68.78",
-  "141.101.114.156",
-  "172.64.87.213",
-  "104.18.149.118",
-  "198.41.222.205",
-  "104.16.142.201",
-  "104.18.198.8",
-  "104.17.40.88",
-  "172.67.213.29",
-  "172.67.118.230",
-  "172.67.143.45",
-  "172.64.84.254",
-  "172.64.95.154",
-  "198.41.208.9",
-  "198.41.209.180",
-  "172.64.88.85",
-  "162.159.251.118",
-  "198.41.208.231",
-  "104.18.67.197",
-  "104.19.119.159",
-  "104.17.232.95",
-  "104.18.97.99",
-  "104.16.2.214",
-  "172.67.136.223",
-  "172.67.218.87",
-  "172.67.160.139",
-  "172.67.77.89",
-  "172.64.94.220",
-  "198.41.209.202",
-  "104.17.198.92",
-  "104.18.150.71",
-  "104.19.194.247",
-  "104.16.216.245",
-  "104.19.10.166",
-  "162.159.160.207",
-  "172.67.77.71",
-  "172.67.242.60",
-  "172.67.159.73",
-  "172.64.91.10",
-  "198.41.209.149",
-  "198.41.209.71",
-  "198.41.208.119",
-  "162.159.46.91",
-  "198.41.223.141",
-  "104.19.76.235",
-  "104.17.51.67",
-  "162.159.236.238",
-  "190.93.244.160",
-  "172.67.233.243",
-  "172.67.156.199",
-  "162.159.136.4",
-  "172.67.85.5",
-  "172.64.80.0",
-  "104.16.10.137",
-  "104.19.37.137",
-  "104.17.30.128",
-  "104.19.202.206",
-  "172.67.230.25",
-  "172.67.100.38",
-  "162.159.253.29",
-  "172.67.177.195",
-  "162.159.153.219",
-  "104.18.240.250",
+  "harbor.io",
+  "linkerd.io",
+  "cdnjs.com",
+  "csgo.com",
+  "nodejs.org",
+  "codepen.io",
+  "npmjs.com",
+  "jsdelivr.com",
+  "medium.com",
+  "www.wto.org",
+  "cf.090227.xyz",
+  "www.visa.com",
+  "singapore.com",
+  "go.inmobi.com",
+  "singapore.com",
+  "go.inmobi.com",
+  "www.cdnjs.com",
+  "cfip.xxxxxxxx.tk",
+  "cfip.1323123.xyz",
+  "sky.rethinkdns.com",
+  "www.speedtest.net",
+  "creativecommons.org",
+  "188.114.99.220",
+  "188.114.99.179",
+  "188.114.99.59",
+  "188.114.99.4",
+  "188.114.99.0",
+  "188.114.98.185",
+  "188.114.98.184",
+  "188.114.98.173",
+  "188.114.98.117",
+  "188.114.98.109",
+  "188.114.98.95",
+  "188.114.98.89",
+  "188.114.98.23",
+  "188.114.98.4",
+  "188.114.98.0",
+  "188.114.97.235",
+  "188.114.97.222",
+  "188.114.97.203",
+  "188.114.97.193",
+  "188.114.97.188",
+  "188.114.97.73",
+  "188.114.97.32",
+  "188.114.97.3",
+  "188.114.97.0",
+  "188.114.96.111",
+  "188.114.96.100",
+  "188.114.96.86",
+  "188.114.96.33",
+  "188.114.96.31",
+  "188.114.96.24",
+  "188.114.96.6",
+  "188.114.96.3",
+  "188.114.96.0",
+  "172.67.158.237",
+  "172.67.158.231",
+  "172.67.158.213",
+  "172.67.158.204",
+  "172.67.158.162",
+  "172.67.158.156",
+  "172.67.158.155",
+  "172.67.158.119",
+  "172.67.158.63",
+  "172.67.158.50",
+  "172.67.158.44",
+  "172.67.138.221",
+  "172.67.138.179",
+  "172.67.138.139",
+  "172.67.138.121",
+  "172.67.138.115",
+  "172.67.138.107",
+  "172.67.138.61",
+  "172.67.138.28",
+  "172.67.138.26",
+  "172.67.130.104",
+  "172.67.70.254",
+  "172.67.69.223",
+  "172.67.69.219",
+  "172.67.69.131",
+  "172.67.69.126",
+  "172.67.69.105",
+  "172.67.69.104",
+  "172.67.69.102",
+  "172.67.69.79",
+  "172.67.69.62",
+  "172.67.69.56",
+  "172.64.146.252",
+  "172.64.146.250",
+  "172.64.146.226",
+  "172.64.146.219",
+  "172.64.146.152",
+  "172.64.146.61",
+  "172.64.146.54",
+  "172.64.146.47",
+  "172.64.146.36",
+  "172.64.146.17",
+  "172.64.146.16",
+  "172.64.32.244",
+  "172.64.32.230",
+  "172.64.32.168",
+  "172.64.32.162",
+  "172.64.32.86",
+  "172.64.32.68",
+  "172.64.32.51",
+  "172.64.32.43",
+  "162.159.195.241",
+  "162.159.195.228",
+  "162.159.195.227",
+  "162.159.195.200",
+  "162.159.195.84",
+  "162.159.195.64",
+  "162.159.195.46",
+  "162.159.195.36",
+  "162.159.193.182",
+  "162.159.193.177",
+  "162.159.193.154",
+  "162.159.193.145",
+  "162.159.193.112",
+  "162.159.193.99",
+  "162.159.193.87",
+  "162.159.193.81",
+  "162.159.192.204",
+  "162.159.192.187",
+  "162.159.192.175",
+  "162.159.152.4",
+  "162.159.46.237",
   "162.159.46.235",
-  "104.16.220.241",
-  "104.17.44.95",
-  "104.17.62.168",
-  "172.67.104.222",
-  "172.67.107.11",
-  "172.67.129.49",
-  "172.67.96.109",
-  "172.67.152.198",
-  "104.19.123.25",
-  "104.19.59.13",
-  "104.19.150.205",
-  "104.16.70.248",
-  "104.19.160.88",
-  "172.67.112.255",
-  "172.67.83.17",
-  "172.67.107.239",
-  "162.159.192.61",
-  "172.67.75.253",
-  "198.41.208.202",
-  "198.41.209.100",
-  "104.17.89.249",
-  "104.18.252.190",
-  "172.64.80.139",
-  "104.16.107.178",
-  "104.19.47.115",
-  "172.67.81.232",
-  "172.67.101.45",
-  "172.67.84.9",
-  "172.67.104.160",
-  "172.67.80.46",
-  "198.41.208.133",
-  "162.159.251.118",
-  "162.159.248.151",
-  "162.159.241.246",
-  "198.41.208.155",
-  "104.17.166.89",
-  "104.16.101.86",
-  "104.17.83.101",
-  "104.18.94.92",
-  "104.18.92.16",
-  "172.67.111.151",
-  "162.159.240.58",
-  "172.67.140.210",
-  "172.67.204.218",
-  "141.101.120.173",
-  "198.41.209.149",
-  "198.41.209.202",
-  "198.41.209.100",
-  "198.41.208.133",
-  "162.159.241.246",
-  "104.18.97.145",
-  "104.17.187.58",
-  "104.16.190.213",
-  "198.41.211.223",
-  "104.18.13.44",
-  "172.67.179.77",
-  "172.67.165.145",
-  "172.64.72.202",
-  "172.67.230.145",
-  "141.101.115.151",
-  "141.101.121.104",
-  "172.64.89.84",
-  "198.41.208.186",
-  "198.41.209.192",
-  "104.19.104.246",
-  "141.101.120.147",
-  "104.17.218.30",
-  "104.19.10.163",
-  "198.41.208.176",
-  "104.18.202.108",
-  "162.159.134.101",
-  "172.67.250.209",
-  "172.67.207.35",
-  "172.64.100.216",
-  "172.67.219.103",
-  "198.41.208.176",
-  "198.41.209.0",
-  "172.64.94.9",
-  "162.159.248.151",
-  "141.101.115.46",
-  "104.17.158.150",
-  "172.67.134.226",
-  "141.101.121.104",
-  "172.64.89.84",
-  "198.41.208.186",
-  "198.41.209.192",
-  "104.19.104.246",
-  "141.101.120.147",
-  "104.17.218.30",
-  "104.19.10.163",
-  "198.41.208.176",
-  "104.18.202.108",
-  "162.159.134.101",
-  "172.67.250.209",
-  "172.67.207.35",
-  "172.64.100.216",
-  "172.67.219.103",
-  "198.41.208.176",
-  "198.41.209.0",
-  "172.64.94.9",
-  "162.159.248.151",
-  "141.101.115.46",
-  "104.17.158.150",
-  "172.67.134.226",
-  "104.16.126.178",
-  "162.159.255.101",
-  "104.24.177.69",
-  "172.67.164.46",
-  "172.67.132.179",
-  "162.159.237.238",
-  "172.67.146.28",
-  "172.67.116.63",
+  "162.159.46.223",
+  "162.159.46.216",
+  "162.159.46.113",
+  "162.159.46.93",
+  "162.159.46.87",
+  "162.159.46.81",
+  "162.159.46.42",
+  "162.159.46.31",
+  "162.159.46.25",
+  "162.159.36.239",
+  "162.159.36.206",
+  "162.159.36.158",
+  "162.159.36.107",
+  "162.159.36.88",
+  "162.159.36.83",
+  "162.159.36.77",
+  "162.159.36.49",
+  "162.159.36.41",
+  "162.159.36.26",
+  "162.159.36.2",
+  "104.26.14.30",
+  "104.26.13.140",
+  "104.26.4.254",
+  "104.26.4.252",
+  "104.26.4.243",
+  "104.26.4.205",
+  "104.26.4.38",
+  "104.26.4.33",
+  "104.26.4.16",
+  "104.26.4.15",
+  "104.26.4.1",
+  "104.21.95.215",
+  "104.21.33.34",
+  "104.21.8.91",
+  "104.20.6.239",
+  "104.20.6.207",
+  "104.20.6.195",
+  "104.20.6.120",
+  "104.20.6.96",
+  "104.20.6.82",
+  "104.20.6.77",
+  "104.20.6.76",
+  "104.20.6.49",
+  "104.20.6.28",
+  "104.20.5.134",
+  "104.18.34.21",
+  "104.18.15.19",
+  "104.17.222.73",
+  "104.17.222.71",
+  "104.17.222.67",
+  "104.17.222.62",
+  "104.17.222.58",
+  "104.17.222.21",
+  "104.17.222.16",
+  "104.17.222.12",
+  "104.17.222.11",
+  "104.17.222.4",
+  "104.17.148.247",
+  "104.17.148.228",
+  "104.17.148.220",
+  "104.17.148.214",
+  "104.17.148.200",
+  "104.17.148.22",
+  "104.17.148.17",
+  "104.17.134.117",
+  "104.16.212.131",
+  "104.16.163.32",
+  "104.16.148.253",
+  "104.16.148.252",
+  "104.16.148.248",
+  "104.16.148.123",
+  "104.16.148.121",
+  "104.16.148.112",
+  "104.16.148.101",
+  "104.16.148.99",
+  "104.16.148.46",
+  "104.16.148.44",
+  "104.16.148.43",
+  "104.16.148.41",
+  "104.16.148.32",
+  "104.16.148.16",
+  "104.16.148.6",
+  "104.16.147.248",
+  "104.16.147.193",
+  "104.16.147.182",
+  "104.16.147.142",
+  "104.16.147.137",
+  "104.16.147.132",
+  "104.16.147.113",
+  "104.16.147.104",
+  "104.16.147.93",
+  "104.16.147.91",
+  "104.16.147.87",
+  "104.16.147.80",
+  "104.16.147.11",
+  "104.16.92.240",
+  "104.16.92.238",
+  "104.16.92.215",
+  "104.16.92.209",
+  "104.16.92.208",
+  "104.16.92.146",
+  "104.16.92.141",
+  "104.16.92.115",
+  "104.16.92.109",
+  "104.16.92.96",
+  "104.16.92.74",
+  "104.16.0.235",
+  "104.16.0.213",
+  "104.16.0.210",
+  "104.16.0.199",
+  "104.16.0.188",
+  "104.16.0.186",
+  "104.16.0.183",
+  "104.16.0.169",
+  "104.16.0.150",
+  "104.16.0.112",
+  "104.16.0.90",
+  "104.16.0.66",
 ];
 
 // Dynamic IP source URLs
 const ipSourceURLs = {
-  // Cloudflare clean IPs are sourced from the NiREvil GitHub repository, updated every 3 hours.
+  // Cloudflare clean IPs are sourced from the NiREvil GitHub repository, updated every 6 hours
   dynamic1: "https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/Cloudflare-IPs.json",
   dynamic2: "https://strawberry.victoriacross.ir",
 };
 
-// ——— CAKE SUBSCRIPTION INFO SETTINGS ———
 /**
- * These values create fake usage statistics for subscription clients
- * Customize these values to display desired traffic and expiry information
+ * Generates fake subscription information header
+ * Creates dynamic usage statistics that change throughout the day
  */
-const CAKE_INFO = {
-  total_TB: 382, // Total traffic quota in Terabytes
+const CAKE_SETTINGS = {
+  total_TB: 440, // Total traffic quota in Terabytes
   base_GB: 88000, // Base usage that's always shown (in Gigabytes)
-  daily_growth_GB: 250, // Daily traffic growth (in Gigabytes) - simulates gradual usage
-  expire_date: "2028-04-20", // Subscription expiry date (YYYY-MM-DD)
+  daily_growth_GB: 450, // Daily traffic growth (in Gigabytes) - simulates gradual usage
+  expire_years: 2, // Validity period in years (dynamic)
 };
+
+function generateCakeSubscriptionInfo(expireYears = CAKE_SETTINGS.expire_years) {
+  const GB = 1024 * 1024 * 1024;
+  const TB = 1024 * GB;
+  // Split usage between upload and download
+  const total = CAKE_SETTINGS.total_TB * TB;
+  const base = CAKE_SETTINGS.base_GB * GB;
+  // Calculate dynamic usage based on current hour of day
+  const now = new Date();
+  const hours = now.getHours() + now.getMinutes() / 60;
+  const dailyGrowth = (hours / 24) * (CAKE_SETTINGS.daily_growth_GB * GB);
+
+  const used = base + dailyGrowth;
+  // Convert expiry date to Unix timestamp
+  const expire = Math.floor(Date.now() / 1000) + expireYears * 365 * 24 * 60 * 60;
+  // Return formatted subscription info string
+  return `upload=${Math.round(used / 2)}; download=${Math.round(used / 2)}; total=${total}; expire=${expire}`;
+}
 
 addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request));
 });
 
-// ——— MAIN REQUEST HANDLER ———
-/**
- * Generates VLESS configurations and returns them as a base64-encoded subscription
- * @param {Request} _request - The incoming HTTP request
- * @returns {Promise<Response>} - Response containing base64-encoded VLESS links
- */
+async function fetchWithTimeout(url, ms = 3000) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), ms);
+  try {
+    return await fetch(url, { signal: controller.signal });
+  } finally {
+    clearTimeout(timeoutId);
+  }
+}
+
 async function handleRequest(_request) {
   const url = new URL(_request.url);
   const subNameParam = url.searchParams.get("name");
@@ -965,21 +1030,17 @@ async function handleRequest(_request) {
   try {
     // Fetch dynamic IP lists from external sources
     const [ipv4listRE1, ipv4listRE2] = await Promise.all([
-      fetch(ipSourceURLs.dynamic1)
+      fetchWithTimeout(ipSourceURLs.dynamic1)
         .then((res) => res.json())
         .catch(() => ({ ipv4: [] })),
-      fetch(ipSourceURLs.dynamic2)
+      fetchWithTimeout(ipSourceURLs.dynamic2)
         .then((res) => res.json())
         .catch(() => ({ data: [] })),
     ]);
 
     // Extract IP addresses from responses
-    const ipListRE1 = (ipv4listRE1.ipv4 || [])
-      .map((/** @type {{ ip: any; }} */ ipData) => ipData.ip)
-      .filter((/** @type {any} */ ip) => ip);
-    const ipListRE2 = (ipv4listRE2.data || [])
-      .map((/** @type {{ ipv4: any; }} */ item) => item.ipv4)
-      .filter((/** @type {any} */ ip) => ip);
+    const ipListRE1 = (ipv4listRE1.ipv4 || []).map((ipData) => ipData.ip).filter((ip) => ip);
+    const ipListRE2 = (ipv4listRE2.data || []).map((item) => item.ipv4).filter((ip) => ip);
 
     // Prepare IP data sources with shuffled, deduplicated lists
     const ipDataSources = {
@@ -1005,12 +1066,10 @@ async function handleRequest(_request) {
 
     // Generate fake subscription info headers
     const subInfo = generateCakeSubscriptionInfo();
-
-    // Return base64-encoded configuration list with subscription headers
     const headers = {
-      "Content-Type": "text/plain; charset=utf-8",
+      "Content-Type": "text/plain; charset=utf-8", // Return base64-encoded configuration list with subscription headers
       "Profile-Update-Interval": "6", // Client should update every 6 hours
-      "Subscription-Userinfo": subInfo, // Cake usage statistics
+      "Subscription-Userinfo": subInfo,
     };
 
     if (profileTitle) {
@@ -1022,7 +1081,6 @@ async function handleRequest(_request) {
       headers: headers,
     });
   } catch (error) {
-    // Error handling - return empty config list on failure
     return new Response(btoa("# Error generating configurations"), {
       status: 200,
       headers: {
@@ -1032,13 +1090,9 @@ async function handleRequest(_request) {
   }
 }
 
-// ——— VLESS LINK GENERATION ———
 /**
+ * ——— VLESS LINK GENERATION ———
  * Creates a VLESS link based on group settings
- * @param {string} ip - The IP address or domain to use
- * @param {Object} group - Group configuration object
- * @param {Object} settings - Global user settings
- * @returns {string} - Complete VLESS URL
  */
 function createVlessLink(ip, group, settings) {
   // Select random port and fingerprint from group lists
@@ -1052,9 +1106,8 @@ function createVlessLink(ip, group, settings) {
       const length = parseInt(finalPath.match(/random:(\d+)/)?.[1] || "10");
       const randomString = generateRandomPath(length);
       finalPath = finalPath.replace(/random:\d+/, randomString);
-    } catch (e) {
-      // On error, keep original path
-    }
+    } catch (e) {}
+    // On error, keep original path
   }
 
   // Build query parameters for VLESS URL
@@ -1071,17 +1124,11 @@ function createVlessLink(ip, group, settings) {
   // Apply TLS-specific settings if enabled
   if (group.tls) {
     queryParams.set("security", "tls");
-
-    // Handle SNI (Server Name Indication)
     let sniValue = group.sni || group.host;
-
-    // Randomize SNI casing if enabled (helps bypass some filtering)
     if (group.randomizeSni) {
       sniValue = randomizeCase(sniValue);
     }
-
     queryParams.set("sni", sniValue);
-
     if (group.alpn) {
       queryParams.set("alpn", group.alpn);
     }
@@ -1094,29 +1141,23 @@ function createVlessLink(ip, group, settings) {
   return `vless://${settings.uuid}@${ip}:${randomPort}?${queryParams.toString()}#${ps}`;
 }
 
-// ——— UTILITY FUNCTIONS ———
 /**
+ * ——— UTILITY FUNCTIONS ———
  * Generates a random alphanumeric string for path obfuscation
- * @param {number} length - Desired length of random string
- * @returns {string} - Random string
  */
 function generateRandomPath(length) {
   let result = "";
   const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
   const charactersLength = characters.length;
-
   for (let i = 0; i < length; i++) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
-
   return result;
 }
 
 /**
  * Randomizes character casing in a string
  * Useful for SNI randomization to bypass certain filters
- * @param {string} str - Input string (e.g., SNI domain)
- * @returns {string} - String with randomized casing
  */
 function randomizeCase(str) {
   let result = "";
@@ -1127,11 +1168,7 @@ function randomizeCase(str) {
   return result;
 }
 
-/**
- * Shuffles an array using Fisher-Yates algorithm
- * @param {Array} array - Array to shuffle
- * @returns {Array} - Shuffled array
- */
+// Shuffles an array using Fisher-Yates algorithm
 function shuffleArray(array) {
   const shuffled = array.slice();
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -1139,33 +1176,4 @@ function shuffleArray(array) {
     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
   return shuffled;
-}
-
-/**
- * Generates fake subscription information header
- * Creates dynamic usage statistics that change throughout the day
- * @returns {string} - Formatted subscription info string
- */
-function generateCakeSubscriptionInfo() {
-  const GB_in_bytes = 1024 * 1024 * 1024;
-  const TB_in_bytes = 1024 * GB_in_bytes;
-
-  const total_bytes = CAKE_INFO.total_TB * TB_in_bytes;
-  const base_bytes = CAKE_INFO.base_GB * GB_in_bytes;
-
-  // Calculate dynamic usage based on current hour of day
-  const now = new Date();
-  const hours_passed = now.getHours() + now.getMinutes() / 60;
-  const daily_growth_bytes = (hours_passed / 24) * (CAKE_INFO.daily_growth_GB * GB_in_bytes);
-
-  // Split usage between upload and download
-  const total_used = base_bytes + daily_growth_bytes;
-  const cake_download = total_used / 2;
-  const cake_upload = total_used / 2;
-
-  // Convert expiry date to Unix timestamp
-  const expire_timestamp = Math.floor(new Date(CAKE_INFO.expire_date).getTime() / 1000);
-
-  // Return formatted subscription info string
-  return `upload=${Math.round(cake_upload)}; download=${Math.round(cake_download)}; total=${total_bytes}; expire=${expire_timestamp}`;
 }
