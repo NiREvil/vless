@@ -25,7 +25,6 @@
  *
  */
 
-
 // ——— USER CONFIGURATION SECTION ———
 const USER_SETTINGS = {
   // Your UUID - Replace with your own UUID
