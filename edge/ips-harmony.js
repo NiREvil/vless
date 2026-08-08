@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * Harmony - VLESS Subscription Generator for Cloudflare Workers
  * - Last Update: Thu, July 30, 2026, 04:20 UTC
  * - https://github.com/NiREvil/Harmony
@@ -25,7 +25,6 @@
  * - Randomizable paths and SNI for better censorship resistance
  *
  */
-
 
 // ——— USER CONFIGURATION SECTION ———
 const USER_SETTINGS = {
