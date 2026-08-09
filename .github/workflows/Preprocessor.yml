@@ -1,0 +1,45 @@
+name: Preprocessor
+
+on:
+  push:
+    branches: ['main']
+    paths:
+      - 'Cargo.toml'
+      - '**/cf-scanner.rs'
+      - '**/Preprocessor.yml'
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -e {0}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          submodules: recursive
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run CFScanner
+        run: cargo run --release --bin CFScanner
+
+      - name: Configure git
+        run: |
+          git config --local user.name "NET-Sentinel Bot"
+          git config --local user.email "224584266+NetSentinel-Bot@users.noreply.github.com"
+
+      - name: Commit and push changes
+        run: |
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Cloudflare IPs Refreshed at: $(TZ='Asia/Tehran' date '+%H:%M:%S')" -m "The list of Cloudflare IPs has been updated" --author="Diana-Cl <135276904+Diana-Cl@users.noreply.github.com>"
+            git push origin main
+          else
+            echo "No changes detected. Skipping commit and push."
+          fi
