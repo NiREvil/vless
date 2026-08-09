@@ -1,14 +1,73 @@
-*.log
-dist/
-build/
-.DS_Store
-.vscode/
-Thumbs.db
-node_modules/
-package-lock.json
-*.exe
-*.tar.gz
-*.db
+# Rust & Cargo
+/target/
+Cargo.lock
+**/*.rs.bk
+*.pdb
 
-# Ignore the build output directory
-target/
+# WebAssembly
+/pkg/
+*.wasm
+*.wasm.d.ts
+
+# Node & npm
+node_modules/
+/dist/
+.npm
+.eslintcache
+package-lock.json
+yarn.lock
+
+# Wrangler
+wrangler.toml.local
+.wrangler/
+wrangler.env
+.env
+.env.local
+.env.*.local
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+
+# OS
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Termux specific
+.termux/
+.cache/
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Build artifacts
+/build/
+/dist/
+*.o
+*.so
+*.dylib
+
+# Secrets & Credentials
+.env
+.env.local
+secrets.json
+credentials.json
+cloudflare.token
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~
+.#*
+
+# IDE temp files
+.vscode/settings.json
+.idea/workspace.xml
