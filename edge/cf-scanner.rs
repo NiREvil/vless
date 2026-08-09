@@ -22,12 +22,7 @@ const CF_HOST: &str = "cloudflare.com";
 const CF_PATH: &str = "/cdn-cgi/trace";
 
 const PRIORITY_RANGES: &[&str] = &[
-    "5.10.214.0/24",
     "8.6.112.0/24",
-    "8.34.70.0/24",
-    "8.39.125.0/24",
-    "190.93.245.0/24",
-    "190.93.247.0/24",
     "104.16.0.0/24",
     "104.16.92.0/24",
     "104.16.147.0/24",
@@ -48,6 +43,8 @@ const PRIORITY_RANGES: &[&str] = &[
     "188.114.97.0/24",
     "188.114.98.0/24",
     "188.114.99.0/24",
+    "190.93.245.0/24",
+    "190.93.247.0/24",
 ];
 
 const BLOCKED_RANGES: &[&str] = &[
@@ -63,8 +60,8 @@ const BLOCKED_RANGES: &[&str] = &[
 
 const IPV4_SAMPLES_PER_RANGE: usize = 120;
 const PRIORITY_SAMPLES_PER_RANGE: usize = 64;
-const IPV4_OUTPUT_COUNT: usize = 25;
-const IPV6_OUTPUT_COUNT: usize = 25;
+const IPV4_OUTPUT_COUNT: usize = 35;
+const IPV6_OUTPUT_COUNT: usize = 5;
 const MIN_PRIORITY_RESULTS: usize = 25;
 const CONCURRENCY: usize = 100;
 const TEST_TIMEOUT: Duration = Duration::from_secs(5);
@@ -469,7 +466,7 @@ fn make_record(result: &TestResult) -> IpRecord {
         latency: result.latency,
         line: "CF".to_string(),
         loss: 0,
-        node: "CFScanner".to_string(),
+        node: "NETCUP".to_string(),
         speed: 0,
         time: current_tehran_time(),
     }
@@ -482,7 +479,7 @@ fn make_ipv6_record(ip: Ipv6Addr) -> IpRecord {
         latency: 0,
         line: "CF".to_string(),
         loss: 0,
-        node: "CFScanner".to_string(),
+        node: "Diana".to_string(),
         speed: 0,
         time: current_tehran_time(),
     }
