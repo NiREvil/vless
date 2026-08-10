@@ -8,6 +8,7 @@ use serde::{Deserialize, Serialize};
 use std::{
     collections::HashSet,
     net::{IpAddr, Ipv4Addr, Ipv6Addr, SocketAddr},
+    sync::Arc,
     time::{Duration, Instant},
 };
 use tokio::{
@@ -66,12 +67,23 @@ const BLOCKED_RANGES: &[&str] = &[
     "131.0.72.0/22",
 ];
 
+const DEFAULT_IPV6_RANGES: &[&str] = &[
+    "2400:cb00::/32",
+    "2606:4700::/32",
+    "2803:f800::/32",
+    "2405:b500::/32",
+    "2405:8100::/32",
+    "2a06:98c0::/29",
+    "2c0f:f248::/32",
+];
+
 const IPV4_SAMPLES_PER_RANGE: usize = 120;
 const PRIORITY_SAMPLES_PER_RANGE: usize = 64;
 const IPV4_OUTPUT_COUNT: usize = 35;
 const IPV6_OUTPUT_COUNT: usize = 5;
 const MIN_PRIORITY_RESULTS: usize = 25;
 const CONCURRENCY: usize = 100;
+const PROBE_ATTEMPTS: usize = 3;
 const TEST_TIMEOUT: Duration = Duration::from_secs(5);
 
 #[derive(Debug, Deserialize)]
@@ -87,9 +99,37 @@ struct CloudflareRanges {
 }
 
 #[derive(Debug, Clone)]
+struct Ipv4Net {
+    network: u32,
+    mask: u32,
+}
+
+impl Ipv4Net {
+    fn parse(cidr: &str) -> Result<Self> {
+        let (address, prefix) = parse_ipv4_cidr(cidr)?;
+
+        let mask = if prefix == 0 {
+            0
+        } else {
+            u32::MAX << (32 - prefix as u32)
+        };
+
+        Ok(Self {
+            network: u32::from(address) & mask,
+            mask,
+        })
+    }
+
+    fn contains(&self, ip: Ipv4Addr) -> bool {
+        (u32::from(ip) & self.mask) == self.network
+    }
+}
+
+#[derive(Debug, Clone)]
 struct TestResult {
     ip: IpAddr,
     latency: u64,
+    loss: u8,
     colo: String,
 }
 
@@ -115,10 +155,11 @@ struct CloudflareOutput {
 async fn main() -> Result<()> {
     println!("Starting CFScanner...");
 
-    let ranges = fetch_ranges().await?;
+    let ranges = fetch_ranges_or_default().await;
+    let connector = Arc::new(build_connector()?);
 
     println!(
-        "Cloudflare API: {} IPv4 ranges, {} IPv6 ranges.",
+        "Cloudflare ranges: {} IPv4 ranges, {} IPv6 ranges.",
         ranges.ipv4_cidrs.len(),
         ranges.ipv6_cidrs.len()
     );
@@ -135,7 +176,7 @@ async fn main() -> Result<()> {
         priority_candidates.len()
     );
 
-    let mut ipv4_results = scan_ipv4(priority_candidates).await;
+    let mut ipv4_results = scan_ipv4(priority_candidates, connector.clone()).await;
 
     sort_results(&mut ipv4_results);
 
@@ -158,7 +199,7 @@ async fn main() -> Result<()> {
             fallback_candidates.len()
         );
 
-        let mut fallback_results = scan_ipv4(fallback_candidates).await;
+        let mut fallback_results = scan_ipv4(fallback_candidates, connector).await;
 
         sort_results(&mut fallback_results);
 
@@ -199,24 +240,26 @@ async fn main() -> Result<()> {
         .map(|ip| make_ipv6_record(*ip))
         .collect::<Vec<_>>();
 
+    std::fs::create_dir_all("sub")?;
+
     write_json("sub/Cf-ipv4.json", &ipv4_records)?;
     write_json("sub/Cf-ipv6.json", &ipv6_records)?;
-    
+
     let mut bpb_ips = String::new();
-    
+
     for record in &ipv4_records {
         bpb_ips.push_str(&record.ip);
         bpb_ips.push('\n');
     }
-    
+
     for record in &ipv6_records {
         bpb_ips.push('[');
         bpb_ips.push_str(&record.ip);
         bpb_ips.push_str("]\n");
     }
-    
+
     std::fs::write("sub/Cf-ip-bpb.txt", bpb_ips)?;
-    
+
     let output = CloudflareOutput {
         ipv4: ipv4_records,
         ipv6: ipv6_records,
@@ -230,6 +273,29 @@ async fn main() -> Result<()> {
     println!("IPv6: {}", output.ipv6.len());
 
     Ok(())
+}
+
+async fn fetch_ranges_or_default() -> CloudflareRanges {
+    match fetch_ranges().await {
+        Ok(ranges) => ranges,
+        Err(error) => {
+            eprintln!(
+                "Cloudflare API unavailable ({}). Using built-in ranges.",
+                error
+            );
+
+            CloudflareRanges {
+                ipv4_cidrs: PRIORITY_RANGES
+                    .iter()
+                    .map(|range| range.to_string())
+                    .collect(),
+                ipv6_cidrs: DEFAULT_IPV6_RANGES
+                    .iter()
+                    .map(|range| range.to_string())
+                    .collect(),
+            }
+        }
+    }
 }
 
 async fn fetch_ranges() -> Result<CloudflareRanges> {
@@ -258,16 +324,27 @@ async fn fetch_ranges() -> Result<CloudflareRanges> {
     Ok(body.result)
 }
 
+fn build_connector() -> Result<TlsConnector> {
+    let native_connector = NativeTlsConnector::builder()
+        .danger_accept_invalid_certs(false)
+        .build()?;
+
+    Ok(TlsConnector::from(native_connector))
+}
+
+fn blocked_nets() -> Result<Vec<Ipv4Net>> {
+    BLOCKED_RANGES
+        .iter()
+        .map(|cidr| Ipv4Net::parse(cidr))
+        .collect()
+}
+
 fn generate_priority_candidates() -> Result<Vec<Ipv4Addr>> {
     let mut candidates = HashSet::new();
+    let mut rng = rand::thread_rng();
 
     for cidr in PRIORITY_RANGES {
         let (network, prefix) = parse_ipv4_cidr(cidr)?;
-
-        if is_blocked_range(cidr) {
-            continue;
-        }
-
         let network = u32::from(network);
         let host_bits = 32u32 - prefix as u32;
         let host_count = 1u64 << host_bits;
@@ -277,8 +354,6 @@ fn generate_priority_candidates() -> Result<Vec<Ipv4Addr>> {
         } else {
             IPV4_SAMPLES_PER_RANGE
         };
-
-        let mut rng = rand::thread_rng();
 
         for _ in 0..samples {
             let offset = if host_count > 2 {
@@ -297,14 +372,11 @@ fn generate_priority_candidates() -> Result<Vec<Ipv4Addr>> {
 }
 
 fn generate_fallback_candidates(ranges: &[String]) -> Result<Vec<Ipv4Addr>> {
+    let blocked = blocked_nets()?;
     let mut rng = rand::thread_rng();
     let mut candidates = HashSet::new();
 
     for cidr in ranges {
-        if is_blocked_range(cidr) {
-            continue;
-        }
-
         let (network, prefix) = parse_ipv4_cidr(cidr)?;
         let network = u32::from(network);
         let host_bits = 32u32 - prefix as u32;
@@ -317,20 +389,26 @@ fn generate_fallback_candidates(ranges: &[String]) -> Result<Vec<Ipv4Addr>> {
                 0
             };
 
-            candidates.insert(Ipv4Addr::from(
+            let ip = Ipv4Addr::from(
                 network.wrapping_add(offset as u32),
-            ));
+            );
+
+            if blocked.iter().any(|net| net.contains(ip)) {
+                continue;
+            }
+
+            candidates.insert(ip);
         }
     }
 
     Ok(candidates.into_iter().collect())
 }
 
-fn is_blocked_range(cidr: &str) -> bool {
-    BLOCKED_RANGES.iter().any(|blocked| *blocked == cidr)
-}
-
 fn generate_ipv6_candidates(ranges: &[String]) -> Result<Vec<Ipv6Addr>> {
+    if ranges.is_empty() {
+        return Ok(Vec::new());
+    }
+
     let mut rng = rand::thread_rng();
     let mut candidates = HashSet::new();
 
@@ -356,12 +434,19 @@ fn generate_ipv6_candidates(ranges: &[String]) -> Result<Vec<Ipv6Addr>> {
     Ok(candidates.into_iter().collect())
 }
 
-async fn scan_ipv4(candidates: Vec<Ipv4Addr>) -> Vec<TestResult> {
+async fn scan_ipv4(
+    candidates: Vec<Ipv4Addr>,
+    connector: Arc<TlsConnector>,
+) -> Vec<TestResult> {
     stream::iter(candidates)
-        .map(|ip| async move {
-            match timeout(TEST_TIMEOUT, test_ipv4(ip)).await {
-                Ok(Ok(result)) => Some(result),
-                _ => None,
+        .map(|ip| {
+            let connector = connector.clone();
+
+            async move {
+                match timeout(TEST_TIMEOUT, test_ipv4(ip, connector)).await {
+                    Ok(Ok(result)) => Some(result),
+                    _ => None,
+                }
             }
         })
         .buffer_unordered(CONCURRENCY)
@@ -370,21 +455,57 @@ async fn scan_ipv4(candidates: Vec<Ipv4Addr>) -> Vec<TestResult> {
         .await
 }
 
-async fn test_ipv4(ip: Ipv4Addr) -> Result<TestResult> {
+async fn test_ipv4(
+    ip: Ipv4Addr,
+    connector: Arc<TlsConnector>,
+) -> Result<TestResult> {
+    let mut latencies = Vec::with_capacity(PROBE_ATTEMPTS);
+    let mut colo = None;
+
+    for _ in 0..PROBE_ATTEMPTS {
+        match test_ipv4_once(ip, connector.clone()).await {
+            Ok((latency, detected_colo)) => {
+                latencies.push(latency);
+                colo.get_or_insert(detected_colo);
+            }
+            Err(_) => {}
+        }
+    }
+
+    if latencies.is_empty() {
+        return Err(anyhow!("All probes failed for {}", ip));
+    }
+
+    latencies.sort_unstable();
+
+    let median = latencies[latencies.len() / 2];
+    let loss =
+        ((PROBE_ATTEMPTS - latencies.len()) * 100 / PROBE_ATTEMPTS) as u8;
+
+    let colo = colo.ok_or_else(|| anyhow!("No Cloudflare colo for {}", ip))?;
+
+    println!(
+        "OK {:<15} latency={}ms loss={}% colo={}",
+        ip, median, loss, colo
+    );
+
+    Ok(TestResult {
+        ip: IpAddr::V4(ip),
+        latency: median,
+        loss,
+        colo,
+    })
+}
+
+async fn test_ipv4_once(
+    ip: Ipv4Addr,
+    connector: Arc<TlsConnector>,
+) -> Result<(u64, String)> {
     let total_start = Instant::now();
     let address = SocketAddr::new(IpAddr::V4(ip), 443);
 
     let stream = TcpStream::connect(address).await?;
-
-    let native_connector = NativeTlsConnector::builder()
-        .danger_accept_invalid_certs(false)
-        .build()?;
-
-    let connector = TlsConnector::from(native_connector);
-
-    let tls_start = Instant::now();
     let mut stream = connector.connect(CF_HOST, stream).await?;
-    let tls_ms = tls_start.elapsed().as_millis() as u64;
 
     let request = format!(
         "GET {} HTTP/1.1\r\nHost: {}\r\nUser-Agent: CFScanner/1.0\r\nConnection: close\r\nAccept: */*\r\n\r\n",
@@ -402,29 +523,38 @@ async fn test_ipv4(ip: Ipv4Addr) -> Result<TestResult> {
 
     let response = String::from_utf8_lossy(&response);
 
-    if !is_successful_http_response(&response) {
-        return Err(anyhow!("HTTP validation failed for {}", ip));
-    }
-
-    let colo = parse_cf_ray_colo(&response)
-        .unwrap_or_else(|| "Default".to_string());
+    let colo = validate_cf_response(&response)
+        .ok_or_else(|| anyhow!("Cloudflare response validation failed for {}", ip))?;
 
     let total_ms = total_start.elapsed().as_millis() as u64;
 
-    println!(
-        "OK {:<15} total={}ms tls={}ms colo={}",
-        ip, total_ms, tls_ms, colo
-    );
-
-    Ok(TestResult {
-        ip: IpAddr::V4(ip),
-        latency: total_ms,
-        colo,
-    })
+    Ok((total_ms, colo))
 }
 
 fn sort_results(results: &mut Vec<TestResult>) {
-    results.sort_by_key(|result| result.latency);
+    results.sort_by(|a, b| {
+        (a.loss, a.latency).cmp(&(b.loss, b.latency))
+    });
+}
+
+fn validate_cf_response(response: &str) -> Option<String> {
+    if !is_successful_http_response(response) {
+        return None;
+    }
+
+    let colo = parse_cf_ray_colo(response)?;
+
+    let has_trace_data = response.lines().any(|line| {
+        let line = line.trim();
+
+        line.starts_with("colo=") || line.starts_with("fl=")
+    });
+
+    if !has_trace_data {
+        return None;
+    }
+
+    Some(colo)
 }
 
 fn is_successful_http_response(response: &str) -> bool {
@@ -448,23 +578,20 @@ fn is_successful_http_response(response: &str) -> bool {
 }
 
 fn parse_cf_ray_colo(response: &str) -> Option<String> {
-    response
-        .lines()
-        .find_map(|line| {
-            let (name, value) = line.split_once(':')?;
+    response.lines().find_map(|line| {
+        let (name, value) = line.split_once(':')?;
 
-            if name.eq_ignore_ascii_case("cf-ray") {
-                value
-                    .trim()
-                    .split('-')
-                    .nth(1)
-                    .map(str::trim)
-                    .filter(|colo| !colo.is_empty())
-                    .map(ToOwned::to_owned)
-            } else {
-                None
-            }
-        })
+        if name.eq_ignore_ascii_case("cf-ray") {
+            value
+                .trim()
+                .rsplit_once('-')
+                .map(|(_, colo)| colo.trim())
+                .filter(|colo| !colo.is_empty())
+                .map(ToOwned::to_owned)
+        } else {
+            None
+        }
+    })
 }
 
 fn make_record(result: &TestResult) -> IpRecord {
@@ -473,7 +600,7 @@ fn make_record(result: &TestResult) -> IpRecord {
         ip: result.ip.to_string(),
         latency: result.latency,
         line: "CF".to_string(),
-        loss: 0,
+        loss: result.loss,
         node: "NETCUP".to_string(),
         speed: 0,
         time: current_tehran_time(),
