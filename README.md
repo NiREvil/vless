@@ -2416,13 +2416,21 @@ https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.
 
 https://github.com/NiREvil/vless/blob/main/Cloudflare-IPs.json
 
+**Clean IPs for BPB panel**
+
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/Cf-ip-bpb.txt
+
+
 **Only IPv4**
 
 https://github.com/NiREvil/vless/blob/main/sub/Cf-ipv4.json
 
+
 **Only IPv6**
 
 https://github.com/NiREvil/vless/blob/main/sub/Cf-ipv6.json
+
+<br/> 
 
 ### Warp Endpoints
 
@@ -2469,8 +2477,8 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 ### Scan with Hiddify
 
 <p align="center">
-     <img src="edge/assets/QRCode-Dog.png" alt="QR" width="420px">
-     </p>
+   <img src="edge/assets/QRCode-Dog.png" alt="QR" width="420px">
+   </p>
 
 ![rainbow]
 
@@ -2490,7 +2498,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
 
 <br/>
 
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/H2%20SINGBOX%20HOSS
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/H2-for-SingBox.json
 
 https://free1.vpny.net:2096/sub/Kevin-US-KAN?format=json [[KV?]]
 
@@ -2500,7 +2508,7 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json [[
 
 https://raw.githubusercontent.com/JavidnamanIran-at-Telegram/sing-box_sub/refs/heads/main/sing-box_sub.txt [[JN?]]
 
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/proton-wire.json
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/proton-wire.json
 
 https://raw.githubusercontent.com/4n0nymou3/Universal-Proxy-Finder/master/Output/singbox_subscription.json [[ANO?]]
 
@@ -2557,17 +2565,11 @@ https://v2.alicivil.workers.dev/?protocol=wireguard&ip=188.114.99.137&output=hid
 
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/warp/config [[YB?]]
 
-**Warp in M1,M2, ... ,h04FA0A mode with random ip:port**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/rand-ip
-
-**Chaining Warp confs**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/WarpOnWarp.json
-
 **Warp On Warp [[TD?]]**  
 https://raw.githubusercontent.com/darknessm427/WoW/refs/heads/main/subwarp/warp
 
 **Warp + Proton for Hiddify with DNS clean**  
-https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/proton-wire.json
+https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/proton-wire.json
 
 **Some warp configs for Hidify [[MS?]]**
 https://raw.githubusercontent.com/mshojaei77/v2rayAuto/refs/heads/main/subs/warp
