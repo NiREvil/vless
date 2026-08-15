@@ -2420,17 +2420,15 @@ https://github.com/NiREvil/vless/blob/main/Cloudflare-IPs.json
 
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/Cf-ip-bpb.txt
 
-
 **Only IPv4**
 
 https://github.com/NiREvil/vless/blob/main/sub/Cf-ipv4.json
-
 
 **Only IPv6**
 
 https://github.com/NiREvil/vless/blob/main/sub/Cf-ipv6.json
 
-<br/> 
+<br/>
 
 ### Warp Endpoints
 
