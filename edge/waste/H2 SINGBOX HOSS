@@ -1,0 +1,217 @@
+//profile-title: base64:SDIgT04gU0lOR0JPWA==
+//profile-update-interval: 9
+//subscription-userinfo: upload=84424500944; download=45097156608; total=1073741824000; expire=1857328199
+//support-url: https://telegram.me/NiREvil_GP
+//profile-web-page-url: https://github.com/NiREvil/vless
+
+
+{
+  "dns": {
+    "servers": [
+      {
+        "type": "tcp",
+        "tag": "proxy-dns",
+        "detour": "proxy",
+        "domain_resolver": "local-dns",
+        "server": "8.8.8.8",
+        "server_port": 53
+      },
+      {
+        "type": "local",
+        "tag": "direct-dns"
+      },
+      {
+        "type": "local",
+        "tag": "local-dns"
+      }
+    ],
+    "rules": [
+      {
+        "source_ip_cidr": [
+          "172.19.0.0/30",
+          "fdfe:dcba:9876::1/126"
+        ],
+        "clash_mode": "Global",
+        "server": "proxy-dns"
+      },
+      {
+        "clash_mode": "Direct",
+        "server": "direct-dns"
+      },
+      {
+        "source_ip_cidr": [
+          "172.19.0.0/30",
+          "fdfe:dcba:9876::1/126"
+        ],
+        "server": "proxy-dns"
+      }
+    ],
+    "final": "local-dns",
+    "strategy": "prefer_ipv4"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "mtu": 9000,
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "stack": "system",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 2080
+        }
+      }
+    },
+    {
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "proxy",
+      "outbounds": [
+        "auto",
+        "direct",
+        "🇺🇸US-1",
+        "🇺🇸US-2",
+        "🇺🇸US-3",
+        "🇺🇸US-4",
+        "🇩🇪DE-5"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇺🇸US-1",
+        "🇺🇸US-2",
+        "🇺🇸US-3",
+        "🇺🇸US-4",
+        "🇩🇪DE-5"
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m0s",
+      "tolerance": 50
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸US-1",
+      "server": "147.90.234.250",
+      "server_port": 11001,
+      "obfs": {
+        "type": "salamander",
+        "password": "KevinZakarian"
+      },
+      "password": "vHUS4WGikj",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "certificate_public_key_sha256": "P6nKMHmfV/JGUzE9DghdMVAI5q6dpssOV6YebMXI78Q="
+      }
+    },
+    {
+      "type": "anytls",
+      "tag": "🇺🇸US-2",
+      "server": "147.90.234.250",
+      "server_port": 11002,
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "certificate_public_key_sha256": "P6nKMHmfV/JGUzE9DghdMVAI5q6dpssOV6YebMXI78Q="
+      },
+      "password": "vHUS4WGikj"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸US-3",
+      "server": "147.90.234.250",
+      "server_port": 443,
+      "uuid": "4c6e69f0-6049-43e7-aa6b-a5ba77fdaa15",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "p30download.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "GaKX48Rx98nLPVJVZ792dvkgva0xgAI0e2QQJM5f_kg",
+          "short_id": "6dc6"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸US-4",
+      "server": "204.136.10.11",
+      "server_port": 11001,
+      "obfs": {
+        "type": "salamander",
+        "password": "KevinZakarian"
+      },
+      "password": "1MfundefinedpuYmDt",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "certificate_public_key_sha256": "+6U7KyHzwdhSeLi8iZW9MdFnhBQWl5MsC5Y/DzMCnB8="
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇩🇪DE-5",
+      "domain_resolver": "direct-dns",
+      "server": "static.lotussec.com",
+      "server_port": 0,
+      "server_ports": "40000:50000",
+      "hop_interval": "1m0s",
+      "obfs": {
+        "type": "salamander",
+        "password": "Join-JavidnamanIran-on-Telegram"
+      },
+      "password": "Join-JavidnamanIran-on-Telegram",
+      "tls": {
+        "enabled": true,
+        "server_name": "static.lotussec.com",
+        "alpn": "h3",
+        "min_version": "1.3",
+        "ech": {
+          "enabled": true,
+          "config": [
+            "-----BEGIN ECH CONFIGS-----",
+            "AE7+DQBKAAAgACAoxkJCAtkZxny2fxZVB9k0SdtVOhlnj7wD29OXOP+QXQAMAAEA",
+            "AQABAAIAAQADABNzdGF0aWMubG90dXNzZWMuY29tAAA=",
+            "-----END ECH CONFIGS-----"
+          ]
+        }
+      }
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "action": "sniff"
+      }
+    ],
+    "final": "proxy",
+    "auto_detect_interface": true,
+    "default_domain_resolver": "local-dns"
+  }
+}
