@@ -622,17 +622,17 @@
 >
 > <br/>
 >
-> | 🌐 Providers          | 🔗 Links                                                                                                                  |
-> | :-------------------- | :------------------------------------------------------------------------------------------------------------------------ |
-> | 🟫 **Hidashimora**    | [•v2ray][HD?]                                                                                                             |
-> | ⬜ **Matin Ghanbari** | [•v2ray][Matin-Ghanbari]                                                                                                  |
-> | ⬛ **F0rc3Run**       | [•v2ray][F0rc3Run]                                                                                                        |
-> | 🟪 **ShatakVPN**      | [•v2ray][ShatakVPN]                                                                                                       |
-> | 🟦 **It's YeBeKhe**   | [•v2ray][YeBeKhe-v2ray] <br/> [•T.proxies][YeBeKhe-T-pro] <br/> [•warp][YeBeKhe-Warp] <br/>	[•rasad][YeBeKhe-Rasad] |
-> | 🟩 **The Darkness**   | [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp]                                                                       |
-> | 🟨 **Arshia-ComPlus** | [•v2ray][Arshia-Sub]                                                                                                      |
-> | 🟧 **10ium-Clashf**   | [•v2ray][10ium-Sub]                                                                                                       |
-> | 🟥 **The OldMan**     | [•v2ray][OldMan-Sub]                                                                                                      |
+> | 🌐 Providers          | 🔗 Links                                                                                                            |
+> | :-------------------- | :------------------------------------------------------------------------------------------------------------------ |
+> | 🟫 **Hidashimora**    | [•v2ray][HD?]                                                                                                       |
+> | ⬜ **Matin Ghanbari** | [•v2ray][Matin-Ghanbari]                                                                                            |
+> | ⬛ **F0rc3Run**       | [•v2ray][F0rc3Run]                                                                                                  |
+> | 🟪 **ShatakVPN**      | [•v2ray][ShatakVPN]                                                                                                 |
+> | 🟦 **It's YeBeKhe**   | [•v2ray][YeBeKhe-v2ray] <br/> [•T.proxies][YeBeKhe-T-pro] <br/> [•warp][YeBeKhe-Warp] <br/> [•rasad][YeBeKhe-Rasad] |
+> | 🟩 **The Darkness**   | [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp]                                                                 |
+> | 🟨 **Arshia-ComPlus** | [•v2ray][Arshia-Sub]                                                                                                |
+> | 🟧 **10ium-Clashf**   | [•v2ray][10ium-Sub]                                                                                                 |
+> | 🟥 **The OldMan**     | [•v2ray][OldMan-Sub]                                                                                                |
 >
 > ![rainbow]
 >
