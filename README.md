@@ -417,20 +417,20 @@
 > <details>
 > <summary>❗ توضیحات مربوط به 1.1.1.1 </summary><br/>
 >
-> برای من و چند نفر از بچه‌ها اپلیکیشن رسمی وارپ کلادفلر شروع به کار کرده. با نت‌ ایرانس و مخابرات و شاتل و حتی نت همراه اول
+> برای من و چند نفر از بچه‌ها اپلیکیشن رسمی وارپ کلادفلر شروع به کار کرده. با نت‌ ایرانسل و مخابرات و شاتل و حتی نت همراه‌اول
 >
-> برای راه‌اندازی هیچکاری نیاز نیست انجام بدید مطلقا هیچ‌کاری، فقط از مارکت گوگل یا اپل اونو نصب کرده و با یه وی‌پی‌ان فعال دیگه (فقط برای اولین ورود لازمه که vpn روشن برید داخلش تا client configuration رو درست انجام بده و ID برای دستگاه تعلق بگیره) وارد شده و هیچی دیگه کلیک کنید روی دکمه کانکت.
+> برای راه‌اندازی هیچ‌کاری نیاز نیست انجام بدید مطلقا هیچ‌کاری، فقط از مارکت گوگل یا اپل اونو نصب کرده و با یه وی‌پی‌ان فعال دیگه (فقط برای اولین ورود لازمه که vpn روشن برید داخلش تا client configuration رو درست انجام بده و ID برای دستگاه تعلق بگیره) وارد شده و هیچی دیگه کلیک کنید روی دکمه کانکت.
 >
 > - [لینک دانلود وارپ نسخه Android][WarpAndroid]
 > - [لینک دانلود وارپ نسخه IOS][WarpIOS]
 >
 > **نکته:**
 >
-> اگه از اینترنت سیم‌کارت استفاده می‌کنید حتما چک کنید تنظیمات APN دستگاه خودتون رو که APN Protocol باید روی IPv4/IPv6 قرار داشته باشه. [^10]
+> اگه از اینترنت سیم‌کارت استفاده می‌کنید چک کنید تنظیمات APN دستگاه خودتون رو که APN Protocol بهتره روی IPv4/IPv6 قرار داشته باشه. [^10]
 >
 > اگه اصلا نفهمیدید چی می‌گم [اینجارو بخونید][APN].
 >
-> واسه‌ی بعضیا حتی Zero Trust کلادفلر هم کار می‌کنه، یه روش غیرقانونی هست واسه فعال کردنش و یه روش قانونی، هردو رو می‌تونید از [این پست][ZeroTrust] داخل تلگرام بخونید.
+> واسه‌ی بعضیا حتی Zero Trust کلودفلر هم کار می‌کنه، یه روش غیرقانونی هست واسه فعال کردنش و یه روش قانونی، هردو رو می‌تونید از [این پست][ZeroTrust] داخل تلگرام بخونید.
 >
 > </details>
 >
@@ -495,7 +495,7 @@
 >
 > - **روش سوم وارد کردن کانفیگ‌ها:**
 >
-> روش سوم به این شکله که شما کانفیگ پروتون رو از سایت دانلود می‌کنی بعد تحویلش میدی به این ابزار شخص ثالث که بلا سرش بیاره، ابزار روسیه ولی با مترجم مرورگر اوکی میشه و قابل فهم، به زودی فارسیش می‌کنم یکم که سرم خلوت شد. تو این وب‌سایت [مبدل کانفیگ پروتون به Amnezia][ProtonToAmnezia] می‌تونید کانفیگ پروتون رو هم برای amnezia و wg-tunnel و هم برای کلش و هیدیفای تبدیل کنید. توضیح خاصی نداره، خودتون بازی کنید باهاش. آها، اگه بعد از تبدیل حس کردین کانقیگ جون نداره سایز MTU رو بیارید پایین رو 1280 بذارید، این مبدل گیر داده به 1420 تو این سایز سرعت آپلود تقریبا یک‌سوم می‌شه.
+> روش سوم به این شکله که شما کانفیگ پروتون رو از سایت دانلود می‌کنی بعد تحویلش میدی به این ابزار شخص ثالث که بلا سرش بیاره، ابزار روسیه ولی با مترجم مرورگر اوکی میشه، تو این وب‌سایت [مبدل کانفیگ پروتون به Amnezia][ProtonToAmnezia] می‌تونید کانفیگ پروتون رو هم برای amnezia و wg-tunnel و هم برای کلش و هیدیفای تبدیل کنید. و یا توسط این ابزار حرفه‌ای آقا منصور انجامش بدید [Darkness-Amnezia] , توضیح خاصی نداره، خودتون بازی کنید باهاش. آها، اگه بعد از تبدیل حس کردین کانقیگ جون نداره سایز MTU رو بیارید پایین رو 1280 بذارید، این مبدل گیر داده به 1420 تو این سایز سرعت آپلود تقریبا یک‌سوم می‌شه.
 >
 > <br/>
 >
@@ -628,7 +628,7 @@
 > | ⬜ **Matin Ghanbari** | [•v2ray][Matin-Ghanbari]                                                                                                  |
 > | ⬛ **F0rc3Run**       | [•v2ray][F0rc3Run]                                                                                                        |
 > | 🟪 **ShatakVPN**      | [•v2ray][ShatakVPN]                                                                                                       |
-> | 🟦 **It's YeBeKhe**   | [•v2ray][YeBeKhe-v2ray] <br/> [•T.proxies][YeBeKhe-T-pro] <br/> [•warp][YeBeKhe-Warp] <br/> [•warp-bot][YeBeKhe-Warp-Bot] |
+> | 🟦 **It's YeBeKhe**   | [•v2ray][YeBeKhe-v2ray] <br/> [•T.proxies][YeBeKhe-T-pro] <br/> [•warp][YeBeKhe-Warp] <br/>	[•rasad][YeBeKhe-Rasad] |
 > | 🟩 **The Darkness**   | [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp]                                                                       |
 > | 🟨 **Arshia-ComPlus** | [•v2ray][Arshia-Sub]                                                                                                      |
 > | 🟧 **10ium-Clashf**   | [•v2ray][10ium-Sub]                                                                                                       |
@@ -663,6 +663,7 @@
 > - [DNS SpeedTest]
 > - [Read more about DNS Test][iran-core]
 > - [Darkness Telegram proxies fetcher][Darkness-Fetcher]
+> - [Darkness Warp-To-All Converter][Darkness-Amnezia]
 >
 > <br/>
 >
@@ -671,7 +672,7 @@
 > - [Checker-3j2.pages.dev]
 > - [ProxyIP.VictoriaCross]
 > - [ProxyIP Checker Bot]
-> - [YumProxy.Vercel]
+> - [Cprx ProxyIP Checker]
 >
 > <br/>
 >
@@ -717,9 +718,19 @@
 
 <br/>
 
-https://raw.githubusercontent.com/JavidnamanIran-at-Telegram/x-ray_sub/refs/heads/main/x-ray_sub.txt [[JN?]]
-
 https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/base64.txt
+
+https://raw.githubusercontent.com/patterniha/Free-Configs/main/configs.txt
+
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/top100.txt [[RD?]]
+
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/refs/heads/main/protocols/vless_base64.txt
+
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/refs/heads/main/protocols/vmess_base64.txt
+
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/refs/heads/main/protocols/hysteria2_base64.txt
+
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/refs/heads/main/protocols/shadowsocks_base64.txt
 
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS%2BAll_RUS.txt
 
@@ -766,6 +777,8 @@ https://raw.githubusercontent.com/ShadowException/VPN/refs/heads/main/configs/VP
 https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt
 
 https://etoneya.su/1
+
+https://raw.githubusercontent.com/JavidnamanIran-at-Telegram/x-ray_sub/refs/heads/main/x-ray_sub.txt [[JN?]]
 
 https://gitverse.ru/api/repos/flaafix/AetrisVPN_Black_list/raw/branch/master/configs.txt
 
@@ -3456,6 +3469,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [LK?]: https://github.com/liketolivefree
 [PA?]: https://github.com/patterniha/Serverless-for-Iran
 [PI?]: https://t.me/firewebgroup
+[RD?]: https://github.com/0xRadikal/Free-v2ray-Configs
 [MB?]: https://github.com/mahdibland/ShadowsocksAggregator
 [ME?]: https://telegram.me/s/FreeVPNHomes/532
 [MG?]: https://github.com/MatinGhanbari/v2ray-configs
@@ -3483,7 +3497,9 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [BrowserLeaks]: https://browserleaks.com/ip
 [ClashMeta]: https://github.com/MetaCubeX/ClashMetaForAndroid/releases
 [ClashMI]: https://github.com/KaringX/clashmi/releases
+[Cprx ProxyIP Checker]: https://cprx.goku7.workers.dev
 [Checker-3j2.pages.dev]: https://checker-3j2.pages.dev
+[Darkness-Amnezia]: https://darknessshade.github.io/Amnezia-VPN-Config
 [Darkness-Tester]: https://darknessshade.github.io/DNS-Tester
 [Darkness-Sub]: https://darknessshade.github.io/Sub
 [Darkness-Warp]: https://darknessshade.github.io/Hiddify-warp
@@ -3553,10 +3569,9 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Xpoury4.github.io/AI-Links]: https://xpoury4.github.io/AI-Links
 [YB?]: https://telegram.me/s/YeBeKhe/527
 [YeBeKhe-v2ray]: https://itsyebekhe.github.io/PSG
-[YeBeKhe-T-pro]: https://itsyebekhe.github.io/tpro
+[YeBeKhe-T-pro]: https://itsyebekhe.github.io/MTProtoNexus
+[YeBeKhe-Rasad]: https://itsyebekhe.github.io/rasadai
 [YeBeKhe-Warp]: https://itsyebekhe.github.io/warp
-[YeBeKhe-Warp-Bot]: https://telegram.me/UWarpGenBot
-[YumProxy.Vercel]: https://yumiproxy.vercel.app
 [ZedSecure]: https://github.com/CluvexStudio/ZedSecure/releases
 [ZeroTrust]: https://t.me/F_NiREvil/4985
 [Zizifn]: https://github.com/NiREvil/zizifn
