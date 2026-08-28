@@ -161,9 +161,8 @@
 > <details>
 > <summary>❗ توضیحات مربوط به Avast VPN </summary><br/>   
 >  
-> **نکته:** اگه با لاگین کردن داخل avast مشکل داشتید از این نسخه‌ی برنامه استفاده کنید [[لیـنک]](https://t.me/NiREvil_GP/736522)  
+> **نکته:** اگه با لاگین کردن داخل avast مشکل داشتید از این نسخه‌ی برنامه استفاده کنید [[لیـنک]](https://t.me/NiREvil_GP/736522)
 >
-> 
 > چند وقته وی‌پی‌ان [Avast SecureLine] خیلی خوب کار می‌کنه با اکثر نت ها مخصوصا همراه اول و ایرانسل و شاتل و مخابرات، تنها کاری که باید کرد اینه که پروتکل رو بذاریم روی Mimic و انتخاب سرور هم اتومات بمونه یا یکی از سرورهای آمریکا، آلمان، انگلیس، هلند، ترکیه و ...  
 > مسائل مربوط به لایسنس و فایل نصبی و غیره رو از [انباری][New-Folder] دنبال کنید.
 >
@@ -604,7 +603,7 @@
 > | ⬛ **F0rc3Run**       | [•v2ray][F0rc3Run]                                                                                                  |
 > | 🟪 **ShatakVPN**      | [•v2ray][ShatakVPN]                                                                                                 |
 > | 🟦 **It's YeBeKhe**   | [•v2ray][YeBeKhe-v2ray] <br/> [•T.proxies][YeBeKhe-T-pro] <br/> [•warp][YeBeKhe-Warp] <br/> [•rasad][YeBeKhe-Rasad] |
-> | 🟩 **The Darkness**   | [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp] <br/>	[•amnezia][Darkness-Amnezia]                                                                |
+> | 🟩 **The Darkness**   | [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp] <br/> [•amnezia][Darkness-Amnezia]                              |
 > | 🟨 **Arshia-ComPlus** | [•v2ray][Arshia-Sub]                                                                                                |
 > | 🟧 **10ium-Clashf**   | [•v2ray][10ium-Sub]                                                                                                 |
 > | 🟥 **The OldMan**     | [•v2ray][OldMan-Sub]                                                                                                |
