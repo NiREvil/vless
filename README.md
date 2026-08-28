@@ -13,37 +13,6 @@
 >
 > [NiREvil/vless/wiki][WIKI]
 >
-> <details>
-> <summary> مشاهده لینک‌ها</summary><br/>
->
-> **Warp for Clash Meta:**
->
-> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/clash-meta-wg.yml
->
-> **Warp for Exclave:**
->
-> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/exclave-wg.txt
->
-> **Warp for Hiddify:**
->
-> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/warp.json
->
-> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/hiddify/proton-wire.json
->
-> **Warp for Singbox:**
->
-> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sing-box.json
->
-> **Warp for Nekobox:**
->
-> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/nekobox-wg.txt
->
-> **Warp for v2ray/MahsaNG:**
->
-> https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/v2rayng-wg.txt
->
-> </details>
->
 > <br/>
 
 <br><br/>
@@ -192,7 +161,10 @@
 > <details>
 > <summary>❗ توضیحات مربوط به Avast VPN </summary><br/>   
 >  
-> چند روزه وی‌پی‌ان [Avast SecureLine] خیلی خوب کار می‌کنه با اکثر نت ها مخصوصا همراه اول و ایرانسل و شاتل و مخابرات، تنها کاری که باید کرد اینه که پروتکل رو بذاریم روی Mimic و انتخاب سرور هم اتومات بمونه یا یکی از سرورهای آمریکا، آلمان، انگلیس، هلند، ترکیه و ...  
+> **نکته:** اگه با لاگین کردن داخل avast مشکل داشتید از این نسخه‌ی برنامه استفاده کنید [[لیـنک]](https://t.me/NiREvil_GP/736522)  
+>
+> 
+> چند وقته وی‌پی‌ان [Avast SecureLine] خیلی خوب کار می‌کنه با اکثر نت ها مخصوصا همراه اول و ایرانسل و شاتل و مخابرات، تنها کاری که باید کرد اینه که پروتکل رو بذاریم روی Mimic و انتخاب سرور هم اتومات بمونه یا یکی از سرورهای آمریکا، آلمان، انگلیس، هلند، ترکیه و ...  
 > مسائل مربوط به لایسنس و فایل نصبی و غیره رو از [انباری][New-Folder] دنبال کنید.
 >
 > </details>
@@ -224,6 +196,9 @@
 >  
 > <details>
 > <summary>❗ توضیحات مربوط به پنل BPB </summary><br/>
+>  
+>  
+> **نکته:** دستورالعمل‌ها تغییر کردن، دیگه BPB رو فقط باید از طریق ویزارد دپلوی کرد، [این لینک](http://Wizard.bpb-panel.workers.dev)
 >  
 > یه پنل BPB بالا آوردم به کمک ویزارد 90 ثانیه بیشتر طول نکشید (اکانت کلادفلر داشتم از قبل).
 >
@@ -322,13 +297,13 @@
 > پر از آی‌پی‌های خاص آمریکا:
 >
 > ```css
-> nima.nscl.ir
+> di.nscl.ir
 > ```
 >
 > پر از آی‌پی‌های خاص ترکیه:
 >
 > ```css
-> turk.radicalization.ir
+> tr.diam4.ggff.net
 > ```
 >
 > یا هر پروکسی دیگه‌ای که می‌خواستید اینجا پیدا میشه:  
@@ -629,7 +604,7 @@
 > | ⬛ **F0rc3Run**       | [•v2ray][F0rc3Run]                                                                                                  |
 > | 🟪 **ShatakVPN**      | [•v2ray][ShatakVPN]                                                                                                 |
 > | 🟦 **It's YeBeKhe**   | [•v2ray][YeBeKhe-v2ray] <br/> [•T.proxies][YeBeKhe-T-pro] <br/> [•warp][YeBeKhe-Warp] <br/> [•rasad][YeBeKhe-Rasad] |
-> | 🟩 **The Darkness**   | [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp]                                                                 |
+> | 🟩 **The Darkness**   | [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp] <br/>	[•amnezia][Darkness-Amnezia]                                                                |
 > | 🟨 **Arshia-ComPlus** | [•v2ray][Arshia-Sub]                                                                                                |
 > | 🟧 **10ium-Clashf**   | [•v2ray][10ium-Sub]                                                                                                 |
 > | 🟥 **The OldMan**     | [•v2ray][OldMan-Sub]                                                                                                |
@@ -673,6 +648,7 @@
 > - [ProxyIP.VictoriaCross]
 > - [ProxyIP Checker Bot]
 > - [Cprx ProxyIP Checker]
+> - [vauth]
 >
 > <br/>
 >
@@ -720,7 +696,7 @@
 
 https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/base64.txt
 
-https://raw.githubusercontent.com/patterniha/Free-Configs/main/configs.txt
+https://raw.githubusercontent.com/patterniha/Free-Configs/main/configs.txt [[PT?]]
 
 https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/top100.txt [[RD?]]
 
@@ -731,6 +707,10 @@ https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/refs/heads/main/p
 https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/refs/heads/main/protocols/hysteria2_base64.txt
 
 https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/refs/heads/main/protocols/shadowsocks_base64.txt
+
+https://raw.githubusercontent.com/mehdi-hexing/HTTP-PROXY/main/proxies/subscriptions/exclave_http.txt [[MZ?]]
+
+https://raw.githubusercontent.com/mehdi-hexing/HTTP-PROXY/main/proxies/subscriptions/exclave_socks5.txt
 
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS%2BAll_RUS.txt
 
@@ -749,8 +729,6 @@ https://raw.githubusercontent.com/PrinceVSFX/Adapt-Configs/main/Configs/Black_li
 https://gitverse.ru/api/repos/MishaLan/MishaLan/raw/branch/master/MishaLan.txt
 
 https://raw.githubusercontent.com/zieng2/wl/main/vless_universal.txt
-
-https://raw.githubusercontent.com/mehdi-hexing/HTTP-PROXY/main/proxies/subscriptions/nekobox_http.txt
 
 https://raw.githubusercontent.com/hiztin/VLESS-PO-GRIBI/main/deploy/subscriptions/1.txt
 
@@ -2264,6 +2242,12 @@ vpn://eyJjb25maWdfdmVyc2lvbiI6IDEuMCwgImFwaV9lbmRwb2ludCI6ICJodHRwczovL2FiYjZkYz
 
 <br/>
 
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml [[RD?]]
+
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/fast/clash.yaml
+
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/all/clash.yaml
+
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml [[MB?]]
 
 https://cdn.jsdelivr.net/gh/mahdibland/V2RayAggregator@master/update/provider/provider-meta-others.yml
@@ -3469,6 +3453,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [LK?]: https://github.com/liketolivefree
 [PA?]: https://github.com/patterniha/Serverless-for-Iran
 [PI?]: https://t.me/firewebgroup
+[PT?]: https://github.com/patterniha/Free-Configs
 [RD?]: https://github.com/0xRadikal/Free-v2ray-Configs
 [MB?]: https://github.com/mahdibland/ShadowsocksAggregator
 [ME?]: https://telegram.me/s/FreeVPNHomes/532
@@ -3476,6 +3461,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [MK?]: https://telegram.me/maviks_bot?start=680cff2cb34f9a1f3951470a
 [MS?]: https://github.com/mshojaei77
 [MT?]: https://github.com/MhdiTaheri
+[MZ?]: https://github.com/mehdi-hexing/HTTP-PROXY
 [Ni?]: https://telegram.me/F_NiREvil
 [PR?]: https://telegram.me/s/ProxyDaemi
 [SB?]: https://github.com/Surfboardv2ray
@@ -3502,7 +3488,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Darkness-Amnezia]: https://darknessshade.github.io/Amnezia-VPN-Config
 [Darkness-Tester]: https://darknessshade.github.io/DNS-Tester
 [Darkness-Sub]: https://darknessshade.github.io/Sub
-[Darkness-Warp]: https://darknessshade.github.io/Hiddify-warp
+[Darkness-Warp]: https://hiddify-warp.pages.dev
 [Darkness-Fetcher]: https://telegram-proxy-fetcher.pages.dev
 [Di4Diana]: https://telegram.me/Di4Diana
 [Diana-Cl.github.io]: https://diana-cl.github.io/Diana-Cl
@@ -3560,6 +3546,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [UWG?]: https://itsyebekhe.github.io/warp/
 [v2rayNG]: https://github.com/2dust/v2rayng/releases
 [v2rayTun]: https://play.google.com/store/apps/details?id=com.v2raytun.android
+[vauth]: https://github.com/vauth/proxy-ip-tester
 [WarpAndroid]: https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone
 [WarpIOS]: https://itunes.apple.com/us/app/1-1-1-1-faster-internet/id1423538627
 [WIKI]: https://github.com/NiREvil/vless/wiki
