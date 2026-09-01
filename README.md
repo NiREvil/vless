@@ -523,11 +523,11 @@
 
 ### Clients
 
-- تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، اکسکلیو، هیدیفای، نکوباکس، کلش‌متا، آمنزیا، آوت‌لاین، مهسا، ویتوری‌ و ...
+- تعدادی لینک اشتراک برای کلاینت‌های سینگ‌باکس، اکسکلیو، هیدیفای، نکوباکس، کلشا، آمنزیا، آوت‌لاین، مهسا، ویتوری‌ و ...
 
 </div>
 
-- Some subscription links are available for [v2rayNG], [PattNG], [Exclave], [Singbox], [Hiddify], [MahsaNG], [Inci], [NekoBox], [Karing], [Husi], [Amnezia], [WgTunnel], [ProxyCloud], [ZedSecure], [ClashMeta], [FiClash], [ClashMI], [Nekoray], [Outline], [v2rayTun] and other clients.
+- Some subscription links are available for [v2rayNG], [PattNG], [Exclave], [Singbox], [Hiddify], [MahsaNG], [Inci], [NekoBox], [Karing], [v2Box], [NPVT], [Husi], [Amnezia], [WgTunnel], [ProxyCloud], [ZedSecure], [ClashMeta], [FiClash], [ClashMI], [Nekoray], [Outline], [v2rayTun] and other clients.
 
 - **Несколько ссылок для подписки на** v2rayNG, PattNG Exclave, Sing-Box, Hiddify, Incy, MahsaNG, NekoBox, Husi, Amnezia, Outline, Clash-Meta и ... Вернуть результат только
 
@@ -538,7 +538,7 @@
 > <details>
 > <summary> In case of dissatisfaction </summary>
 >
-> سلام، امیدوارم حالتون عالی باشه 🌸
+> سلام، امیدوارم حالتون عالی باشه ⁠✿
 >
 > این مخزن در ابتدای شروع کار خودش جایی بود برای نوشتن ایده‌ها مربوط به کانفیگ‌های کاستوم علی الخصوص کانفیگ‌های وایرگارد برای کلاینت‌هایی مثل هیدیفای و ویتوری و غیره، کانفیگ‌های کاستوم شده با تکنیک فرگمنت حالت‌های متغیر و ترکیب کانفیگ‌های پروتون و نورد و وارپ و اینا با همدیگه داخل مخزن قرار می‌گرفت تا بقیه از از اونا ایده بگیرن و نسخه شخصی خودشون رو بسازن.  
 > ولی به مرور زمان ناخوداگاه علاوه‌بر اون‌ها تبدیل شد به یک مخزن از لینک‌‌های ساب‌‌اسکریپشن‌های عمومی و یه سری ابزار‌هایی که روتین واسه خیلی‌ها لازمه مثل اسکنر و پروکسی آی‌پی تستر‌های مختلف برای استفاده داخل وورکرها به تفکیک کشور‌های مختلف و آی‌پی تمیزهای کلادفلر واسه پنل‌هایی مثل BPB و وورکر zizifn و هارمونی، ابزارهای ساخت DNS و جنریت اتومات وارپ و کلش و این‌جور چیز‌ها.
@@ -596,17 +596,18 @@
 >
 > <br/>
 >
-> | 🌐 Providers          | 🔗 Links                                                                                                            |
+> | 🪩 Providers          | 🔗 Links                                                                                                            |
 > | :-------------------- | :------------------------------------------------------------------------------------------------------------------ |
+> | 🟥 **4Diana - Rose**    | [•v2ray][4Diana]                                                                                                       |
 > | 🟫 **Hidashimora**    | [•v2ray][HD?]                                                                                                       |
 > | ⬜ **Matin Ghanbari** | [•v2ray][Matin-Ghanbari]                                                                                            |
 > | ⬛ **F0rc3Run**       | [•v2ray][F0rc3Run]                                                                                                  |
 > | 🟪 **ShatakVPN**      | [•v2ray][ShatakVPN]                                                                                                 |
 > | 🟦 **It's YeBeKhe**   | [•v2ray][YeBeKhe-v2ray] <br/> [•T.proxies][YeBeKhe-T-pro] <br/> [•warp][YeBeKhe-Warp] <br/> [•rasad][YeBeKhe-Rasad] |
-> | 🟩 **The Darkness**   | [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp] <br/> [•amnezia][Darkness-Amnezia]                              |
+> | 🟥 **The Darkness**   | [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp] <br/> [•amnezia][Darkness-Amnezia]                              |
 > | 🟨 **Arshia-ComPlus** | [•v2ray][Arshia-Sub]                                                                                                |
 > | 🟧 **10ium-Clashf**   | [•v2ray][10ium-Sub]                                                                                                 |
-> | 🟥 **The OldMan**     | [•v2ray][OldMan-Sub]                                                                                                |
+> | 🟩 **The OldMan**     | [•v2ray][OldMan-Sub]                                                                                                |
 >
 > ![rainbow]
 >
@@ -693,6 +694,16 @@
 
 <br/>
 
+https://raw.githubusercontent.com/EEvanescence/4Diana/main/AllConfigsSub.txt [[EV?]]
+
+https://raw.githubusercontent.com/EEvanescence/4Diana/main/By-protocol/vless.txt
+
+https://raw.githubusercontent.com/EEvanescence/4Diana/main/By-protocol/vmess.txt
+
+https://raw.githubusercontent.com/EEvanescence/4Diana/main/By-protocol/ss.txt
+
+https://raw.githubusercontent.com/EEvanescence/4Diana/main/By-protocol/cloudflare.txt
+
 https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/base64.txt
 
 https://raw.githubusercontent.com/patterniha/Free-Configs/main/configs.txt [[PT?]]
@@ -775,8 +786,6 @@ https://gitverse.ru/api/repos/ru-wbl/wl/raw/branch/master/KvRuVPN%2FKvRuVPN.txt
 
 https://raw.githubusercontent.com/therealaleph/Iran-configs/refs/heads/main/ir_configs.txt
 
-http://66.42.50.118:12580/clash/proxies
-
 http://www.xrayvip.com/free.txt
 
 https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Movaghat
@@ -800,8 +809,6 @@ https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector
 https://github.com/LalatinaHub/Mineral/raw/refs/heads/master/result/nodes
 
 https://sub.irys.dpdns.org/auto
-
-https://gist.githubusercontent.com/senatorpersian/a6502622143da9e4ce80775a6b56ccf2/raw/0181d8f569be0a864398d5e6c72b41e5df40a3bf/subscription.txt
 
 https://rahi-eq3.pages.dev/api/configs?limit=all
 
@@ -840,8 +847,6 @@ https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/ss.txt 
 https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/vmess.txt
 
 https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/trojan.txt
-
-https://raw.githubusercontent.com/nscl5/4/refs/heads/main/Splitted-By-Protocol/ss.txt
 
 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/refs/heads/main/subscriptions/v2ray/super-sub.txt [[MG?]]
 
@@ -918,12 +923,6 @@ https://sub.amiralter.com/config
 https://raw.githubusercontent.com/DarknessShade/Sub/main/V2mix [[DS?]]
 
 https://raw.githubusercontent.com/DarknessShade/Sub/main/Ss
-
-https://raw.githubusercontent.com/nscl5/4/refs/heads/main/Splitted-By-Protocol/ss.txt [[L5?]]
-
-https://raw.githubusercontent.com/nscl5/5/refs/heads/main/configs/vmess.txt
-
-https://raw.githubusercontent.com/nscl5/5/refs/heads/main/configs/all.txt
 
 https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/hy2 [[YB?]]
 
@@ -3431,7 +3430,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [DS?]: https://github.com/Darknessshade
 [DN?]: https://telegram.me/s/DeamNet
 [EB?]: https://github.com/ebrasha/free-v2ray-public-list
-[EVA?]: https://t.me/evavpn_bot
+[EV?]: https://github.com/EEvanescence/4Diana
 [EP?]: https://github.com/Epodonios/v2ray-configs
 [F0?]: https://f0rc3run.github.io/F0rc3Run-panel
 [FR?]: https://telegram.me/s/FREE2CONFIG
@@ -3447,7 +3446,6 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [JN?]: https://telegram.me/s/JavidnamanIran
 [KB?]: https://github.com/liketolivefree
 [KV?]: https://telegram.me/s/KevinZakarian
-[L5?]: https://github.com/nscl5/5
 [LG?]: https://github.com/lagzian
 [LK?]: https://github.com/liketolivefree
 [PA?]: https://github.com/patterniha/Serverless-for-Iran
@@ -3472,6 +3470,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [WE?]: https://telegram.me/s/IranRamona
 [YA?]: https://github.com/youfoundamin/V2rayCollector
 [10ium-Sub]: https://10ium.github.io/free-sub-link
+[4Diana]: https://EEvanescence.github.io/4Diana
 [Ainita?]: https://ainita.net/vpn.html
 [APN]: https://t.me/F_NiREvil/3554
 [Arshia]: https://telegram.me/s/warpscanner
@@ -3519,6 +3518,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Nekoray]: https://github.com/MRT-project/Neko-ray/releases
 [New-Folder]: https://telegram.me/new_folder_revil/3437
 [NikaNG]: https://github.com/mahsanet/NikaNG/releases
+[NPVT]: https://play.google.com/store/apps/details?id=com.napsternetlabs.napsternetv
 [Outline]: https://getoutline.org/get-started/#step-3
 [OldMan-Sub]: https://smbcryp.github.io/V2V/
 [ProtonVPN]: https://account.protonvpn.com/downloads
@@ -3542,7 +3542,8 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [The Darkness]: https://telegram.me/s/ConfigWireguard
 [TERMUX]: https://github.com/termux/termux-app/releases
 [UUID]: https://www.uuidgenerator.net
-[UWG?]: https://itsyebekhe.github.io/warp/
+[UWG?]: https://itsyebekhe.github.io/warp
+[v2Box]: https://play.google.com/store/apps/details?id=dev.hexasoftware.v2box
 [v2rayNG]: https://github.com/2dust/v2rayng/releases
 [v2rayTun]: https://play.google.com/store/apps/details?id=com.v2raytun.android
 [vauth]: https://github.com/vauth/proxy-ip-tester
