@@ -598,7 +598,7 @@
 >
 > | 🪩 Providers          | 🔗 Links                                                                                                            |
 > | :-------------------- | :------------------------------------------------------------------------------------------------------------------ |
-> | 🟥 **4Diana - Rose**    | [•v2ray][4Diana]                                                                                                       |
+> | 🟥 **4Diana - Rose**  | [•v2ray][4Diana]                                                                                                    |
 > | 🟫 **Hidashimora**    | [•v2ray][HD?]                                                                                                       |
 > | ⬜ **Matin Ghanbari** | [•v2ray][Matin-Ghanbari]                                                                                            |
 > | ⬛ **F0rc3Run**       | [•v2ray][F0rc3Run]                                                                                                  |
