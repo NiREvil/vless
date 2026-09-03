@@ -8,12 +8,14 @@ on:
       - '**/cf-scanner.rs'
       - '**/Preprocessor.yml'
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '0 */4 * * *'
+      timezone: "Asia/Tehran"
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15 
     defaults:
       run:
         shell: bash -e {0}
@@ -26,7 +28,7 @@ jobs:
           submodules: recursive
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Run CFScanner
+      - name: Run Cloudflare IP scanner
         run: cargo run --release --bin CFScanner
 
       - name: Configure git
