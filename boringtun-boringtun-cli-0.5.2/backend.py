@@ -2521,7 +2521,9 @@ class ContainerBroker(DatabaseBroker):
         """
         self._commit_puts_stale_ok()
         with self.get() as connection:
-            sql = f"SELECT name FROM object WHERE {self._get_deleted_key(connection)}=0 "
+            sql = (
+                f"SELECT name FROM object WHERE {self._get_deleted_key(connection)}=0 "
+            )
             args = []
             if last_upper:
                 sql += "AND name > ? "
