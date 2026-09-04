@@ -75,7 +75,6 @@ export default [
   },
 
   // ---TypeScript---
-  ...tseslint.configs.recommended,
   {
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
@@ -83,30 +82,17 @@ export default [
       ecmaVersion: 2022,
       sourceType: "module",
       globals: {
-        ...globals.node,
-        ...globals.browser,
-        fetch: "readonly",
-        Response: "readonly",
-        URLSearchParams: "readonly",
-        btoa: "readonly",
-        atob: "readonly",
-        Headers: "readonly",
-        Blob: "readonly",
-        TextDecoder: "readonly",
-        TransformStream: "readonly",
-        WritableStream: "readonly",
-        ReadableStream: "readonly",
-        WebSocketPair: "readonly",
-        addEventListener: "readonly",
-        console: "readonly",
-        URL: "readonly",
+        ...globals.node, ...globals.browser, fetch: "readonly", Response: "readonly",
+        URLSearchParams: "readonly", btoa: "readonly", atob: "readonly", Headers: "readonly",
+        Blob: "readonly", TextDecoder: "readonly", TransformStream: "readonly",
+        WritableStream: "readonly", ReadableStream: "readonly", WebSocketPair: "readonly",
+        addEventListener: "readonly", console: "readonly", URL: "readonly",
       },
     },
     plugins: {
       "@typescript-eslint": tseslint,
     },
     rules: {
-      ...tseslint.configs.recommended.rules,
       "no-unused-vars": "off",
       "no-undef": "off",
       "@typescript-eslint/no-unused-vars": "warn",
