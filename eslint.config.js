@@ -1,9 +1,7 @@
 import js from "@eslint/js";
 import globals from "globals";
 import eslintPluginJsonc from "eslint-plugin-jsonc";
-import jsoncParser from "jsonc-eslint-parser";
 import eslintPluginYml from "eslint-plugin-yml";
-import ymlParser from "yaml-eslint-parser";
 import eslintPluginHtml from "eslint-plugin-html";
 import eslintConfigPrettier from "eslint-config-prettier";
 import tseslint from "@typescript-eslint/eslint-plugin";
@@ -17,27 +15,25 @@ export default [
       "build/**",
       "**/*.css",
       "**/*.scss",
+      "sub/**.md",
       "warp.json",
-      "hiddify/**",
       ".github/**",
-      "edge/waste/**",
+      "edge/waste/*",
       "edge/unite.js",
       "**/clash-12.**",
-      "sub/ProxyIP.md",
       "node_modules/**",
       "DNS over HTTPS/**",
       "package-lock.json",
       "sub/clash-meta.yml",
       "edge/all-in-one.js",
       "edge/LoadBalance.js",
-      "sub/ProxyIP-Daily.md",
       "real address generator/**",
       "boringtun-boringtun-cli-0.5.2/**",
       "edge/assets/clash-meta-wg-template.yml",
     ],
   },
 
-  // ➕ JavaScript
+  // ---JavaScript---
   {
     files: ["**/*.js", "**/*.mjs", "**/*.cjs"],
     languageOptions: {
@@ -82,7 +78,7 @@ export default [
     },
   },
 
-  // ➕ TypeScript
+  // ---TypeScript---
   {
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
@@ -124,39 +120,27 @@ export default [
     },
   },
 
-  // ➕ JSON — JSONC — JSON5
+  // ---JSON — JSONC — JSON5---
+  ...eslintPluginJsonc.configs["recommended-with-jsonc"],
   {
     files: ["**/*.json", "**/*.jsonc", "**/*.json5"],
-    plugins: {
-      jsonc: eslintPluginJsonc,
-    },
-    languageOptions: {
-      parser: jsoncParser,
-    },
     rules: {
-      ...eslintPluginJsonc.configs["recommended-with-jsonc"].rules,
       "jsonc/sort-keys": "error",
       ...eslintConfigPrettier.rules,
     },
   },
 
-  // ➕ YAML
+  // ---YAML---
+  ...eslintPluginYml.configs.standard,
+  ...eslintPluginYml.configs.prettier,
   {
     files: ["**/*.yaml", "**/*.yml"],
-    plugins: {
-      yml: eslintPluginYml,
-    },
-    languageOptions: {
-      parser: ymlParser,
-    },
     rules: {
-      ...eslintPluginYml.configs.standard.rules,
-      ...eslintPluginYml.configs.prettier.rules,
       ...eslintConfigPrettier.rules,
     },
   },
 
-  // ➕ HTML — For linting <script> blocks
+  // ---HTML — For linting <script> blocks---
   {
     files: ["**/*.html"],
     plugins: {
