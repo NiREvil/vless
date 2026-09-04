@@ -26,8 +26,9 @@ export default [
       "sub/clash-meta.yml",
       "edge/all-in-one.js",
       "edge/LoadBalance.js",
+      "sub/proton-wire.json",
       "real address generator/**",
-      "boringtun-boringtun-cli-0.5.2/**/*",
+      "boringtun-boringtun-cli-0.5.2/**,
       "edge/assets/clash-meta-wg-template.yml",
     ],
   },
@@ -104,6 +105,7 @@ export default [
       "@typescript-eslint": tseslint,
     },
     rules: {
+      ...tseslint.configs.recommended.rules,
       "no-unused-vars": "off",
       "no-undef": "off",
       "@typescript-eslint/no-unused-vars": "warn",
