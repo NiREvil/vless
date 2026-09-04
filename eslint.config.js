@@ -36,49 +36,32 @@ export default [
   // ---JavaScript---
   {
     files: ["**/*.js", "**/*.mjs", "**/*.cjs"],
+    ...js.configs.recommended,
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: "module",
       globals: {
         ...globals.node,
         ...globals.browser,
-        fetch: "readonly",
-        Response: "readonly",
-        URLSearchParams: "readonly",
-        btoa: "readonly",
-        atob: "readonly",
-        Headers: "readonly",
-        Blob: "readonly",
-        TextDecoder: "readonly",
-        TransformStream: "readonly",
-        WritableStream: "readonly",
-        ReadableStream: "readonly",
-        WebSocketPair: "readonly",
-        addEventListener: "readonly",
-        console: "readonly",
-        URL: "readonly",
+        fetch: "readonly", Response: "readonly", URLSearchParams: "readonly",
+        btoa: "readonly", atob: "readonly", Headers: "readonly", Blob: "readonly",
+        TextDecoder: "readonly", TransformStream: "readonly", WritableStream: "readonly",
+        ReadableStream: "readonly", WebSocketPair: "readonly", addEventListener: "readonly",
+        console: "readonly", URL: "readonly",
       },
     },
     rules: {
       curly: ["error", "all"],
       eqeqeq: ["error", "always"],
       "no-console": ["warn", { allow: ["warn", "error"] }],
-      "no-irregular-whitespace": [
-        "error",
-        {
-          skipStrings: true,
-          skipComments: false,
-          skipRegExps: true,
-          skipTemplates: true,
-        },
-      ],
+      "no-irregular-whitespace": ["error", { skipStrings: true, skipComments: false, skipRegExps: true, skipTemplates: true }],
       "no-undef": "error",
       "no-unused-vars": "warn",
-      ...eslintConfigPrettier.rules,
     },
   },
 
   // ---TypeScript---
+  ...tseslint.configs.recommended,
   {
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
@@ -86,23 +69,11 @@ export default [
       ecmaVersion: 2022,
       sourceType: "module",
       globals: {
-        ...globals.node,
-        ...globals.browser,
-        fetch: "readonly",
-        Response: "readonly",
-        URLSearchParams: "readonly",
-        btoa: "readonly",
-        atob: "readonly",
-        Headers: "readonly",
-        Blob: "readonly",
-        TextDecoder: "readonly",
-        TransformStream: "readonly",
-        WritableStream: "readonly",
-        ReadableStream: "readonly",
-        WebSocketPair: "readonly",
-        addEventListener: "readonly",
-        console: "readonly",
-        URL: "readonly",
+        ...globals.node, ...globals.browser, fetch: "readonly", Response: "readonly",
+        URLSearchParams: "readonly", btoa: "readonly", atob: "readonly", Headers: "readonly",
+        Blob: "readonly", TextDecoder: "readonly", TransformStream: "readonly",
+        WritableStream: "readonly", ReadableStream: "readonly", WebSocketPair: "readonly",
+        addEventListener: "readonly", console: "readonly", URL: "readonly",
       },
     },
     plugins: {
@@ -110,13 +81,11 @@ export default [
     },
     rules: {
       "no-unused-vars": "off",
+      "no-undef": "off",
       "@typescript-eslint/no-unused-vars": "warn",
-      ...tseslint.configs.recommended.rules,
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/explicit-function-return-type": "warn",
       eqeqeq: ["error", "always"],
-      "no-undef": "off",
-      ...eslintConfigPrettier.rules,
     },
   },
 
@@ -126,31 +95,21 @@ export default [
     files: ["**/*.json", "**/*.jsonc", "**/*.json5"],
     rules: {
       "jsonc/sort-keys": "error",
-      ...eslintConfigPrettier.rules,
     },
   },
+  ...eslintPluginJsonc.configs.prettier,
 
   // ---YAML---
   ...eslintPluginYml.configs.standard,
+  { files: ["**/*.yaml", "**/*.yml"] },
   ...eslintPluginYml.configs.prettier,
-  {
-    files: ["**/*.yaml", "**/*.yml"],
-    rules: {
-      ...eslintConfigPrettier.rules,
-    },
-  },
 
   // ---HTML — For linting <script> blocks---
   {
     files: ["**/*.html"],
-    plugins: {
-      html: eslintPluginHtml,
-    },
-    languageOptions: {
-      globals: { ...globals.browser },
-    },
-    rules: {
-      ...eslintConfigPrettier.rules,
-    },
+    plugins: { html: eslintPluginHtml },
+    languageOptions: { globals: { ...globals.browser } },
   },
+
+  eslintConfigPrettier,
 ];
