@@ -11,7 +11,6 @@ extend-exclude = [
 [lint]
 ignore = [
     "LOG015",  # info() call on root logger
-    "DTZ005",  # datetime.datetime.now() without tz
     "BLE001",  # Do not catch blind exception
     "PLW1510", # subprocess.run without check
     "PLW1508", # Invalid type for environment variable default
