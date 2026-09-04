@@ -998,8 +998,7 @@ class ContainerBroker(DatabaseBroker):
         while not data:
             try:
                 data = conn.execute(
-                    
-                        f"""
+                    f"""
                     SELECT account, container, created_at, put_timestamp,
                         delete_timestamp, status_changed_at,
                         object_count, bytes_used,
@@ -1008,7 +1007,6 @@ class ContainerBroker(DatabaseBroker):
                         id, {trailing_sync}, {trailing_pol}
                         FROM container_stat
                 """
-                    
                 ).fetchone()
             except sqlite3.OperationalError as err:
                 err_msg = str(err)
@@ -1688,7 +1686,9 @@ class ContainerBroker(DatabaseBroker):
             if to_add:
                 vals = ",".join("?" * len(SHARD_RANGE_KEYS))
                 curs.executemany(
-                    "INSERT INTO {} ({}) VALUES ({})".format(SHARD_RANGE_TABLE, ",".join(SHARD_RANGE_KEYS), vals),
+                    "INSERT INTO {} ({}) VALUES ({})".format(
+                        SHARD_RANGE_TABLE, ",".join(SHARD_RANGE_KEYS), vals
+                    ),
                     tuple(
                         [item[k] for k in SHARD_RANGE_KEYS] for item in to_add.values()
                     ),
@@ -1896,9 +1896,7 @@ class ContainerBroker(DatabaseBroker):
         )
 
     def _reclaim_other_stuff(self, conn, age_timestamp, sync_timestamp):
-        super()._reclaim_other_stuff(
-            conn, age_timestamp, sync_timestamp
-        )
+        super()._reclaim_other_stuff(conn, age_timestamp, sync_timestamp)
         # populate instance cache, but use existing conn to avoid deadlock
         # when it has a pending update
         self._populate_instance_cache(conn=conn)
@@ -2461,8 +2459,7 @@ class ContainerBroker(DatabaseBroker):
             self._root_account, self._root_container = split_path("/" + path, 2, 2)
         except ValueError:
             raise ValueError(
-                f"Expected {hdr} to be of the form "
-                f"'account/container', got {path!r}"
+                f"Expected {hdr} to be of the form 'account/container', got {path!r}"
             )
 
     @property
@@ -2524,9 +2521,7 @@ class ContainerBroker(DatabaseBroker):
         """
         self._commit_puts_stale_ok()
         with self.get() as connection:
-            sql = "SELECT name FROM object WHERE {}=0 ".format(self._get_deleted_key(
-                connection
-            ))
+            sql = f"SELECT name FROM object WHERE {self._get_deleted_key(connection)}=0 "
             args = []
             if last_upper:
                 sql += "AND name > ? "
