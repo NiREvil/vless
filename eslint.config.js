@@ -10,15 +10,14 @@ import tsParser from "@typescript-eslint/parser";
 export default [
   {
     ignores: [
-      "**/*.md",
       "dist/**",
       "build/**",
       "**/*.css",
       "**/*.scss",
-      "sub/**.md",
       "warp.json",
       ".github/**",
-      "edge/waste/*",
+      "sub/**/*.md",
+      "edge/waste/**",
       "edge/unite.js",
       "**/clash-12.**",
       "node_modules/**",
@@ -28,7 +27,7 @@ export default [
       "edge/all-in-one.js",
       "edge/LoadBalance.js",
       "real address generator/**",
-      "boringtun-boringtun-cli-0.5.2/**",
+      "boringtun-boringtun-cli-0.5.2/**/*",
       "edge/assets/clash-meta-wg-template.yml",
     ],
   },
