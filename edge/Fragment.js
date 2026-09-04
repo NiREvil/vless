@@ -1,5 +1,5 @@
 /**
- * Last update: Tuesday, 4:20 UTC, 4 Aug 2026
+ * Last update: Sat, 5 Sep 2026, 4:20 UTC
  * - VLESS fragment config generator (Cypher-style) using dual-layer finalmask fragmentation + unsafe fingerprint + custom cipherSuites.
  * - Replace DEFAULT_HOSTNAME, DEFAULT_UUID, and CLEAN_ADDRESSES with your own Worker hostname, UUID, and preferred Cloudflare clean IP/domain,
  *   Also you can add Environment variables with: VLESS_CLEAN_ADDRESS, VLESS_PORT, VLESS_WS_PATH, VLESS_HOSTNAME, VLESS_UUID, VLESS_REMARKS
@@ -7,13 +7,19 @@
  * - Requires xray-core with finalmask support — test against your client's core version before deploying.
  */
 
+
+
 // Default / fallback values
-const DEFAULT_HOSTNAME = "in-god-we-trust.mathematical.workers.dev";
-const DEFAULT_UUID = "c84b1d08-1e9e-4e1c-977a-c7fff6ccb8ec";
+const DEFAULT_HOSTNAME = "1n88h88nacvdhrxpkuae2rx.pages.dev";
+const DEFAULT_UUID = "792c5244-6870-48a8-a2b1-6eef3fcfd94f";
 const DEFAULT_REMARKS = "Cypherand";
 
 const CLEAN_ADDRESSES = [
   "npmjs.com",
+  "www.wto.org",
+  "jsdelivr.com",
+  "188.114.97.6",
+  "singapore.com",
   "www.gitbook.com",
   "auth.vercel.com",
   "chat.openai.com",
@@ -26,8 +32,10 @@ const CLEAN_ADDRESSES = [
 
 const PORTS = [443, 8443, 2053, 2096, 2087, 2083];
 
+
 // Randomization flags
 const RANDOMIZE_SERVER_NAME_CASE = true;
+
 
 // TLS cipher suites from patternihas serverless conf
 const CIPHER_SUITES =
@@ -45,39 +53,26 @@ const CIPHER_SUITES =
   "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256:" +
   "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256";
 
+
 const DNS_HOSTS = {
   "domain:googleapis.cn": "googleapis.com",
   "dns.alidns.com": ["223.5.5.5", "223.6.6.6", "2400:3200::1", "2400:3200:baba::1"],
   "dns.sse.cisco.com": ["208.67.220.220", "208.67.222.222", "2620:119:35::35", "2620:119:53::53"],
   "dns.umbrella.com": ["208.67.220.220", "208.67.222.222", "2620:119:35::35", "2620:119:53::53"],
   "one.one.one.one": ["1.1.1.1", "1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001"],
-  "1dot1dot1dot1.cloudflare-dns.com": [
-    "1.1.1.1",
-    "1.0.0.1",
-    "2606:4700:4700::1111",
-    "2606:4700:4700::1001",
-  ],
+  "1dot1dot1dot1.cloudflare-dns.com": ["1.1.1.1", "1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001"],
   "dns.cloudflare.com": ["162.159.61.8", "172.64.41.8", "2a06:98c1:52::8", "2803:f800:53::8"],
-  "cloudflare-dns.com": [
-    "104.16.248.249",
-    "104.16.249.249",
-    "2606:4700::6810:f8f9",
-    "2606:4700::6810:f9f9",
-  ],
+  "cloudflare-dns.com": ["104.16.248.249", "104.16.249.249", "2606:4700::6810:f8f9", "2606:4700::6810:f9f9"],
   "engage.cloudflareclient.com": ["162.159.192.1", "2606:4700:d0::a29f:c001"],
   "doh.pub": ["1.12.12.12", "120.53.53.53"],
   "dot.pub": ["1.12.12.12", "120.53.53.53"],
   "dns.google": ["8.8.8.8", "8.8.4.4", "2001:4860:4860::8888", "2001:4860:4860::8844"],
   "dns.quad9.net": ["9.9.9.9", "149.112.112.112", "2620:fe::fe", "2620:fe::9"],
   "dns.sb": ["45.11.45.11", "185.222.222.222", "2a09::", "2a11::"],
-  "common.dot.dns.yandex.net": [
-    "77.88.8.8",
-    "77.88.8.1",
-    "2a02:6b8::feed:0ff",
-    "2a02:6b8:0:1::feed:0ff",
-  ],
-  "npmjs.com": ["104.17.134.117", "104.17.135.117"],
+  "common.dot.dns.yandex.net": ["77.88.8.8", "77.88.8.1", "2a02:6b8::feed:0ff", "2a02:6b8:0:1::feed:0ff"],
+  "npmjs.com": ["104.17.134.117", "104.17.135.117"]
 };
+
 
 function selectRandomItem(items) {
   return items[Math.floor(Math.random() * items.length)];
@@ -118,35 +113,41 @@ function resolveWsPath(env) {
   return generateWsPath();
 }
 
+
 function buildConfig(env) {
   env = env || {};
 
-  const hostname = String(env.VLESS_HOSTNAME || DEFAULT_HOSTNAME)
-    .trim()
-    .toLowerCase();
+  const hostname = String(env.VLESS_HOSTNAME || DEFAULT_HOSTNAME).trim().toLowerCase();
   const uuid = String(env.VLESS_UUID || DEFAULT_UUID).trim();
 
-  const address = String(env.VLESS_CLEAN_ADDRESS || selectRandomItem(CLEAN_ADDRESSES)).trim();
+  const address = String(
+    env.VLESS_CLEAN_ADDRESS || selectRandomItem(CLEAN_ADDRESSES)
+  ).trim();
 
   const rawPort = Number(env.VLESS_PORT || selectRandomItem(PORTS));
   const port =
-    Number.isFinite(rawPort) && rawPort > 0 && rawPort <= 65535 ? Math.floor(rawPort) : 443;
+    Number.isFinite(rawPort) && rawPort > 0 && rawPort <= 65535
+      ? Math.floor(rawPort)
+      : 443;
 
   const wsPath = resolveWsPath(env);
-  const remarks = String(env.VLESS_REMARKS || DEFAULT_REMARKS).trim() || DEFAULT_REMARKS;
+  const remarks =
+    String(env.VLESS_REMARKS || DEFAULT_REMARKS).trim() || DEFAULT_REMARKS;
 
   if (!hostname) throw new Error("Hostname is empty.");
   if (!uuid) throw new Error("UUID is empty.");
   if (!address) throw new Error("Clean address is empty.");
 
-  const serverName = RANDOMIZE_SERVER_NAME_CASE ? randomizeCase(hostname) : hostname;
+  const serverName = RANDOMIZE_SERVER_NAME_CASE
+    ? randomizeCase(hostname)
+    : hostname;
 
   const tlsSettings = {
     allowInsecure: false,
     alpn: ["http/1.1"],
     cipherSuites: CIPHER_SUITES,
     fingerprint: "unsafe",
-    serverName: serverName,
+    serverName: serverName
   };
 
   return {
@@ -155,7 +156,7 @@ function buildConfig(env) {
     dns: {
       hosts: DNS_HOSTS,
       servers: ["https://cloudflare-dns.com/dns-query"],
-      tag: "dns-module",
+      tag: "dns-module"
     },
     inbounds: [
       {
@@ -166,9 +167,9 @@ function buildConfig(env) {
         sniffing: {
           destOverride: ["http", "tls", "quic"],
           enabled: true,
-          routeOnly: false,
+          routeOnly: false
         },
-        tag: "socks",
+        tag: "socks"
       },
       {
         listen: "127.0.0.1",
@@ -178,10 +179,10 @@ function buildConfig(env) {
         sniffing: {
           destOverride: ["http", "tls", "quic"],
           enabled: true,
-          routeOnly: false,
+          routeOnly: false
         },
-        tag: "http",
-      },
+        tag: "http"
+      }
     ],
     outbounds: [
       {
@@ -193,7 +194,7 @@ function buildConfig(env) {
           flow: "",
           id: uuid,
           level: 8,
-          port: port,
+          port: port
         },
         streamSettings: {
           finalmask: {
@@ -204,8 +205,8 @@ function buildConfig(env) {
                   packets: "tlshello",
                   lengths: ["5", "94", "1"],
                   delays: ["0"],
-                  maxSplit: "0",
-                },
+                  maxSplit: "0"
+                }
               },
               {
                 type: "fragment",
@@ -213,10 +214,10 @@ function buildConfig(env) {
                   packets: "1-1",
                   lengths: ["109", "1"],
                   delays: ["1"],
-                  maxSplit: "355",
-                },
-              },
-            ],
+                  maxSplit: "355"
+                }
+              }
+            ]
           },
           network: "ws",
           security: "tls",
@@ -226,30 +227,30 @@ function buildConfig(env) {
               interleave: 2,
               maxConcurrentTry: 4,
               prioritizeIPv6: false,
-              tryDelayMs: 250,
-            },
+              tryDelayMs: 250
+            }
           },
           tlsSettings: tlsSettings,
           wsSettings: {
             host: hostname,
-            path: wsPath,
-          },
+            path: wsPath
+          }
         },
-        tag: "proxy",
+        tag: "proxy"
       },
       {
         protocol: "freedom",
         streamSettings: {
           network: "tcp",
-          sockopt: { domainStrategy: "UseIP" },
+          sockopt: { domainStrategy: "UseIP" }
         },
-        tag: "direct",
+        tag: "direct"
       },
       {
         protocol: "blackhole",
         settings: {},
-        tag: "block",
-      },
+        tag: "block"
+      }
     ],
     routing: {
       domainStrategy: "AsIs",
@@ -257,12 +258,13 @@ function buildConfig(env) {
         {
           inboundTag: ["dns-module"],
           outboundTag: "proxy",
-          type: "field",
-        },
-      ],
-    },
+          type: "field"
+        }
+      ]
+    }
   };
 }
+
 
 function jsonResponse(body, status) {
   return new Response(body, {
@@ -270,8 +272,8 @@ function jsonResponse(body, status) {
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
-      "Content-Type": "application/json;charset=utf-8",
-    },
+      "Content-Type": "application/json;charset=utf-8"
+    }
   });
 }
 
@@ -282,8 +284,8 @@ function optionsResponse() {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, OPTIONS",
       "Access-Control-Allow-Headers": "*",
-      "Access-Control-Max-Age": "86400",
-    },
+      "Access-Control-Max-Age": "86400"
+    }
   });
 }
 
@@ -293,10 +295,11 @@ function methodNotAllowedResponse() {
     headers: {
       Allow: "GET, OPTIONS",
       "Access-Control-Allow-Origin": "*",
-      "Content-Type": "text/plain;charset=utf-8",
-    },
+      "Content-Type": "text/plain;charset=utf-8"
+    }
   });
 }
+
 
 async function handleRequest(request, env) {
   try {
@@ -307,8 +310,12 @@ async function handleRequest(request, env) {
     return jsonResponse(JSON.stringify(config, null, 2), 200);
   } catch (error) {
     const detail = error instanceof Error ? error.message : String(error);
-    return jsonResponse(JSON.stringify({ error: "WorkerException", detail: detail }, null, 2), 500);
+    return jsonResponse(
+      JSON.stringify({ error: "WorkerException", detail: detail }, null, 2),
+      500
+    );
   }
 }
+
 
 export default { fetch: handleRequest };
