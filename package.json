@@ -1,5 +1,27 @@
 {
+  "name": "vless",
+  "version": "1.0.3",
   "description": "Freedom to Dream",
+  "type": "module",
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "printWidth": 100,
+    "semi": true,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
+  },
+  "scripts": {
+    "format": "npm run format:js-family && npm run format:py",
+    "format:js-family": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml,yaml,html,css,scss,vue}\"",
+    "format:py": "ruff format .",
+    "lint": "npm run lint:js && npm run lint:py",
+    "lint-format": "npm run format && npm run lint",
+    "lint:js": "eslint --fix .",
+    "lint:py": "ruff check --fix --unsafe-fixes ."
+  },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^8.69.0",
@@ -16,17 +38,5 @@
   },
   "engines": {
     "node": "^20.19.0 || ^22.13.0 || >=24.0.0"
-  },
-  "name": "vless",
-  "scripts": {
-    "format": "npm run format:js-family && npm run format:py",
-    "format:js-family": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml,yaml,html,css,scss,vue}\"",
-    "format:py": "ruff format .",
-    "lint": "npm run lint:js && npm run lint:py",
-    "lint-format": "npm run format && npm run lint",
-    "lint:js": "eslint --fix .",
-    "lint:py": "ruff check --fix --unsafe-fixes ."
-  },
-  "type": "module",
-  "version": "1.0.3"
+  }
 }
