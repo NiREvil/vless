@@ -50,9 +50,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install "black==26.5.1" "ruff==0.16.6"
 
-      - name: Install JavaScript tools
+      - name: Install JS tools & Rebuild package-lock.json
         if: matrix.language == 'javascript'
-        run: npm install 
+        run: |
+          rm -f package-lock.json
+          npm install
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git add package-lock.json
+          if ! git diff --quiet --staged; then
+            git commit -m "chore: rebuild package-lock.json for ESLint 10"
+            git push
+          fi
 
       - name: Run Formatting for Python
         if: matrix.language == 'python'
