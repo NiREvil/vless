@@ -1,8 +1,23 @@
 {
-  "name": "vless",
-  "version": "1.0.3",
   "description": "Freedom to Dream",
-  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.69.0",
+    "@typescript-eslint/parser": "^8.69.0",
+    "eslint": "^10.10.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-html": "^8.2.0",
+    "eslint-plugin-jsonc": "^3.4.2",
+    "eslint-plugin-yml": "^3.8.1",
+    "globals": "^17.12.0",
+    "jsonc-eslint-parser": "^3.3.0",
+    "prettier": "^3.9.6",
+    "yaml-eslint-parser": "^2.1.0"
+  },
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24.0.0"
+  },
+  "name": "vless",
   "prettier": {
     "arrowParens": "always",
     "bracketSpacing": true,
@@ -22,21 +37,6 @@
     "lint:js": "eslint --fix .",
     "lint:py": "ruff check --fix --unsafe-fixes ."
   },
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@typescript-eslint/eslint-plugin": "^8.69.0",
-    "@typescript-eslint/parser": "^8.69.0",
-    "eslint": "^10.10.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-html": "^8.2.0",
-    "eslint-plugin-jsonc": "^3.4.2",
-    "eslint-plugin-yml": "^3.8.1",
-    "globals": "^17.12.0",
-    "jsonc-eslint-parser": "^3.3.0",
-    "prettier": "^3.9.6",
-    "yaml-eslint-parser": "^2.1.0"
-  },
-  "engines": {
-    "node": "^20.19.0 || ^22.13.0 || >=24.0.0"
-  }
+  "type": "module",
+  "version": "1.0.3"
 }
