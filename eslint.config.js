@@ -28,6 +28,7 @@ export default [
       "edge/LoadBalance.js",
       "sub/proton-wire.json",
       "sub/H2-for-SingBox.json",
+      "edge/assets/clash-11.yaml",
       "real address generator/**",
       "boringtun-boringtun-cli-0.5.2/**",
       "edge/assets/clash-meta-wg-template.yml",
