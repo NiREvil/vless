@@ -52,7 +52,7 @@ jobs:
 
       - name: Install JavaScript tools
         if: matrix.language == 'javascript'
-        run: npm ci
+        run: npm install 
 
       - name: Run Formatting for Python
         if: matrix.language == 'python'
