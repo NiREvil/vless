@@ -4,9 +4,9 @@ import ipaddress
 import json
 import logging
 import os
+import random
 import subprocess
 import sys
-import random
 
 logging.basicConfig(level=logging.INFO)
 
@@ -169,7 +169,7 @@ def main():
         # Hiddify profile details
         title = (
             "//profile-title: base64:"
-            + base64.b64encode("Freedom to Dream 🤍".encode("utf-8")).decode("utf-8")
+            + base64.b64encode("Freedom to Dream 🤍".encode()).decode("utf-8")
             + "\n"
         )
         update_interval = "//profile-update-interval: 10\n"

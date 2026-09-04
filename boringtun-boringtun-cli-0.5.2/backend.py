@@ -9,44 +9,41 @@ Pluggable Back-ends for Container Server
 """
 
 import errno
-
 import os
+import sqlite3
 from uuid import uuid4
 
 import six
-from six.moves import range
-from six.moves.urllib.parse import unquote
-import sqlite3
 from eventlet import tpool
-
+from six.moves.urllib.parse import unquote
 from swift.common.constraints import CONTAINER_LISTING_LIMIT
-from swift.common.exceptions import LockTimeout
-from swift.common.utils import (
-    Timestamp,
-    encode_timestamps,
-    decode_timestamps,
-    extract_swift_bytes,
-    storage_directory,
-    hash_path,
-    ShardRange,
-    renamer,
-    MD5_OF_EMPTY_STRING,
-    mkdirs,
-    get_db_files,
-    parse_db_filename,
-    make_db_file_path,
-    split_path,
-    RESERVED_BYTE,
-    filter_shard_ranges,
-    ShardRangeList,
-)
 from swift.common.db import (
+    BROKER_TIMEOUT,
+    SQLITE_ARG_LIMIT,
+    DatabaseAlreadyExists,
     DatabaseBroker,
     utf8encode,
-    BROKER_TIMEOUT,
     zero_like,
-    DatabaseAlreadyExists,
-    SQLITE_ARG_LIMIT,
+)
+from swift.common.exceptions import LockTimeout
+from swift.common.utils import (
+    MD5_OF_EMPTY_STRING,
+    RESERVED_BYTE,
+    ShardRange,
+    ShardRangeList,
+    Timestamp,
+    decode_timestamps,
+    encode_timestamps,
+    extract_swift_bytes,
+    filter_shard_ranges,
+    get_db_files,
+    hash_path,
+    make_db_file_path,
+    mkdirs,
+    parse_db_filename,
+    renamer,
+    split_path,
+    storage_directory,
 )
 
 DATADIR = "containers"
@@ -286,7 +283,7 @@ def update_new_item_from_existing(new_item, existing):
     # new_item and restore existing to its original state
     for item in (new_item, existing):
         if item["swift_bytes"]:
-            item["content_type"] += ";swift_bytes=%s" % item["swift_bytes"]
+            item["content_type"] += ";swift_bytes={}".format(item["swift_bytes"])
         del item["swift_bytes"]
 
     return any(newer_than_existing)
@@ -403,7 +400,7 @@ class ContainerBroker(DatabaseBroker):
             base_db_file = db_file
         else:
             base_db_file = make_db_file_path(db_file, None)
-        super(ContainerBroker, self).__init__(
+        super().__init__(
             base_db_file,
             timeout,
             logger,
@@ -553,7 +550,7 @@ class ContainerBroker(DatabaseBroker):
 
     @property
     def db_epoch(self):
-        hash_, epoch, ext = parse_db_filename(self.db_file)
+        hash_, epoch, _ext = parse_db_filename(self.db_file)
         return epoch
 
     @property
@@ -565,7 +562,7 @@ class ContainerBroker(DatabaseBroker):
     @property
     def path(self):
         self._populate_instance_cache()
-        return "%s/%s" % (self.account, self.container)
+        return f"{self.account}/{self.container}"
 
     def _initialize(self, conn, put_timestamp, storage_policy_index):
         """
@@ -689,8 +686,8 @@ class ContainerBroker(DatabaseBroker):
         # *any* in-progress cursor will otherwise trip a "database is locked"
         # error.
         conn.execute(
-            """
-            CREATE TABLE %s (
+            f"""
+            CREATE TABLE {SHARD_RANGE_TABLE} (
                 ROWID INTEGER PRIMARY KEY AUTOINCREMENT,
                 name TEXT,
                 timestamp TEXT,
@@ -707,17 +704,15 @@ class ContainerBroker(DatabaseBroker):
                 tombstones INTEGER DEFAULT -1
             );
         """
-            % SHARD_RANGE_TABLE
         )
 
         conn.execute(
-            """
-            CREATE TRIGGER shard_range_update BEFORE UPDATE ON %s
+            f"""
+            CREATE TRIGGER shard_range_update BEFORE UPDATE ON {SHARD_RANGE_TABLE}
             BEGIN
                 SELECT RAISE(FAIL, 'UPDATE not allowed; DELETE and INSERT');
             END;
         """
-            % SHARD_RANGE_TABLE
         )
 
     def get_db_version(self, conn):
@@ -991,7 +986,7 @@ class ContainerBroker(DatabaseBroker):
         return info, self._is_deleted_info(**info)
 
     def get_replication_info(self):
-        info = super(ContainerBroker, self).get_replication_info()
+        info = super().get_replication_info()
         info["shard_max_row"] = self.get_max_row(SHARD_RANGE_TABLE)
         return info
 
@@ -1003,18 +998,17 @@ class ContainerBroker(DatabaseBroker):
         while not data:
             try:
                 data = conn.execute(
-                    (
-                        """
+                    
+                        f"""
                     SELECT account, container, created_at, put_timestamp,
                         delete_timestamp, status_changed_at,
                         object_count, bytes_used,
                         reported_put_timestamp, reported_delete_timestamp,
                         reported_object_count, reported_bytes_used, hash,
-                        id, %s, %s
+                        id, {trailing_sync}, {trailing_pol}
                         FROM container_stat
                 """
-                    )
-                    % (trailing_sync, trailing_pol)
+                    
                 ).fetchone()
             except sqlite3.OperationalError as err:
                 err_msg = str(err)
@@ -1487,7 +1481,7 @@ class ContainerBroker(DatabaseBroker):
         content-type and meta timestamps and the metadata timestamp is used as
         the last-modified time value.
         """
-        t_data, t_ctype, t_meta = decode_timestamps(record[1])
+        _t_data, _t_ctype, t_meta = decode_timestamps(record[1])
         return (record[0], t_meta.internal) + record[2:5]
 
     def _record_to_dict(self, rec):
@@ -1541,7 +1535,7 @@ class ContainerBroker(DatabaseBroker):
                         "etag, deleted, storage_policy_index "
                         "FROM object WHERE "
                         + query_mod
-                        + " name IN (%s)" % ",".join("?" * len(chunk)),
+                        + " name IN ({})".format(",".join("?" * len(chunk))),
                         chunk,
                     )
                 )
@@ -1657,9 +1651,8 @@ class ContainerBroker(DatabaseBroker):
                 records.update(
                     (rec[0], rec)
                     for rec in curs.execute(
-                        "SELECT %s FROM %s "
-                        "WHERE deleted IN (0, 1) AND name IN (%s)"
-                        % (
+                        "SELECT {} FROM {} "
+                        "WHERE deleted IN (0, 1) AND name IN ({})".format(
                             ", ".join(SHARD_RANGE_KEYS),
                             SHARD_RANGE_TABLE,
                             ",".join("?" * len(chunk)),
@@ -1688,15 +1681,14 @@ class ContainerBroker(DatabaseBroker):
 
             if to_delete:
                 curs.executemany(
-                    "DELETE FROM %s WHERE deleted in (0, 1) "
-                    "AND name = ?" % SHARD_RANGE_TABLE,
+                    f"DELETE FROM {SHARD_RANGE_TABLE} WHERE deleted in (0, 1) "
+                    "AND name = ?",
                     ((item_ident,) for item_ident in to_delete),
                 )
             if to_add:
                 vals = ",".join("?" * len(SHARD_RANGE_KEYS))
                 curs.executemany(
-                    "INSERT INTO %s (%s) VALUES (%s)"
-                    % (SHARD_RANGE_TABLE, ",".join(SHARD_RANGE_KEYS), vals),
+                    "INSERT INTO {} ({}) VALUES ({})".format(SHARD_RANGE_TABLE, ",".join(SHARD_RANGE_KEYS), vals),
                     tuple(
                         [item[k] for k in SHARD_RANGE_KEYS] for item in to_add.values()
                     ),
@@ -1706,7 +1698,7 @@ class ContainerBroker(DatabaseBroker):
         migrations = {
             "no such column: reported": self._migrate_add_shard_range_reported,
             "no such column: tombstones": self._migrate_add_shard_range_tombstones,
-            ("no such table: %s" % SHARD_RANGE_TABLE): self.create_shard_range_table,
+            (f"no such table: {SHARD_RANGE_TABLE}"): self.create_shard_range_table,
         }
         migrations_done = set()
         with self.get() as conn:
@@ -1785,7 +1777,7 @@ class ContainerBroker(DatabaseBroker):
                 if "no such column: storage_policy_index" not in str(err):
                     raise
                 return []
-            return list(dict(row) for row in cur.fetchall())
+            return [dict(row) for row in cur.fetchall()]
 
     def _migrate_add_container_sync_points(self, conn):
         """
@@ -1848,25 +1840,7 @@ class ContainerBroker(DatabaseBroker):
             if "duplicate column" not in str(e):
                 raise
 
-        column_names = ", ".join(
-            (
-                "account",
-                "container",
-                "created_at",
-                "put_timestamp",
-                "delete_timestamp",
-                "reported_put_timestamp",
-                "reported_object_count",
-                "reported_bytes_used",
-                "hash",
-                "id",
-                "status",
-                "status_changed_at",
-                "metadata",
-                "x_container_sync_point1",
-                "x_container_sync_point2",
-            )
-        )
+        column_names = "account, container, created_at, put_timestamp, delete_timestamp, reported_put_timestamp, reported_object_count, reported_bytes_used, hash, id, status, status_changed_at, metadata, x_container_sync_point1, x_container_sync_point2"
 
         conn.executescript(
             "BEGIN;"
@@ -1885,13 +1859,12 @@ class ContainerBroker(DatabaseBroker):
             """
             + POLICY_STAT_TRIGGER_SCRIPT
             + CONTAINER_INFO_TABLE_SCRIPT
-            + """
-                INSERT INTO container_info (%s)
-                SELECT %s FROM container_stat;
+            + f"""
+                INSERT INTO container_info ({column_names})
+                SELECT {column_names} FROM container_stat;
 
                 DROP TABLE IF EXISTS container_stat;
             """
-            % (column_names, column_names)
             + CONTAINER_STAT_VIEW_SCRIPT
             + "COMMIT;"
         )
@@ -1901,13 +1874,12 @@ class ContainerBroker(DatabaseBroker):
         Add the reported column to the 'shard_range' table.
         """
         conn.executescript(
-            """
+            f"""
             BEGIN;
-            ALTER TABLE %s
+            ALTER TABLE {SHARD_RANGE_TABLE}
             ADD COLUMN reported INTEGER DEFAULT 0;
             COMMIT;
         """
-            % SHARD_RANGE_TABLE
         )
 
     def _migrate_add_shard_range_tombstones(self, conn):
@@ -1915,17 +1887,16 @@ class ContainerBroker(DatabaseBroker):
         Add the tombstones column to the 'shard_range' table.
         """
         conn.executescript(
-            """
+            f"""
             BEGIN;
-            ALTER TABLE %s
+            ALTER TABLE {SHARD_RANGE_TABLE}
             ADD COLUMN tombstones INTEGER DEFAULT -1;
             COMMIT;
         """
-            % SHARD_RANGE_TABLE
         )
 
     def _reclaim_other_stuff(self, conn, age_timestamp, sync_timestamp):
-        super(ContainerBroker, self)._reclaim_other_stuff(
+        super()._reclaim_other_stuff(
             conn, age_timestamp, sync_timestamp
         )
         # populate instance cache, but use existing conn to avoid deadlock
@@ -1933,15 +1904,14 @@ class ContainerBroker(DatabaseBroker):
         self._populate_instance_cache(conn=conn)
         try:
             conn.execute(
-                """
-                DELETE FROM %s WHERE deleted = 1 AND timestamp < ?
+                f"""
+                DELETE FROM {SHARD_RANGE_TABLE} WHERE deleted = 1 AND timestamp < ?
                 AND name != ?
-            """
-                % SHARD_RANGE_TABLE,
+            """,
                 (sync_timestamp, self.path),
             )
         except sqlite3.OperationalError as err:
-            if ("no such table: %s" % SHARD_RANGE_TABLE) not in str(err):
+            if (f"no such table: {SHARD_RANGE_TABLE}") not in str(err):
                 raise
 
     def _get_shard_range_rows(
@@ -1994,7 +1964,7 @@ class ContainerBroker(DatabaseBroker):
                 conditions.append("deleted=0")
             if included_states:
                 conditions.append(
-                    "state in (%s)" % ",".join("?" * len(included_states))
+                    "state in ({})".format(",".join("?" * len(included_states)))
                 )
                 params.extend(included_states)
             if not include_own:
@@ -2008,13 +1978,13 @@ class ContainerBroker(DatabaseBroker):
             columns = SHARD_RANGE_KEYS[:-2]
             for column in SHARD_RANGE_KEYS[-2:]:
                 if column in defaults:
-                    columns += (("%s as %s" % (default_values[column], column)),)
+                    columns += ((f"{default_values[column]} as {column}"),)
                 else:
                     columns += (column,)
             sql = """
-            SELECT %s
-            FROM %s%s;
-            """ % (
+            SELECT {}
+            FROM {}{};
+            """.format(
                 ", ".join(columns),
                 SHARD_RANGE_TABLE,
                 condition,
@@ -2031,13 +2001,13 @@ class ContainerBroker(DatabaseBroker):
                 try:
                     return do_query(conn, defaults)
                 except sqlite3.OperationalError as err:
-                    if ("no such table: %s" % SHARD_RANGE_TABLE) in str(err):
+                    if (f"no such table: {SHARD_RANGE_TABLE}") in str(err):
                         return []
                     if not attempts:
                         raise
                     new_defaults = set()
-                    for column in default_values.keys():
-                        if "no such column: %s" % column in str(err):
+                    for column in default_values:
+                        if f"no such column: {column}" in str(err):
                             new_defaults.add(column)
                     if not new_defaults:
                         raise
@@ -2255,7 +2225,7 @@ class ContainerBroker(DatabaseBroker):
             )
             return False
         state = self.get_db_state()
-        if not state == UNSHARDED:
+        if state != UNSHARDED:
             self.logger.warning(
                 "Container '%s' cannot be set to sharding state while in %s state",
                 self.path,
@@ -2270,7 +2240,7 @@ class ContainerBroker(DatabaseBroker):
         tmp_dir = os.path.join(self.get_device_path(), "tmp")
         if not os.path.exists(tmp_dir):
             mkdirs(tmp_dir)
-        tmp_db_file = os.path.join(tmp_dir, "fresh%s.db" % str(uuid4()))
+        tmp_db_file = os.path.join(tmp_dir, f"fresh{uuid4()!s}.db")
         fresh_broker = ContainerBroker(
             tmp_db_file, self.timeout, self.logger, self.account, self.container
         )
@@ -2339,7 +2309,7 @@ class ContainerBroker(DatabaseBroker):
             otherwise.
         """
         state = self.get_db_state()
-        if not state == SHARDING:
+        if state != SHARDING:
             self.logger.warning(
                 "Container %r cannot be set to sharded state while in %s state",
                 self.path,
@@ -2362,7 +2332,7 @@ class ContainerBroker(DatabaseBroker):
             self.logger.debug("Unlinked retiring db %r", retiring_file)
         except OSError as err:
             if err.errno != errno.ENOENT:
-                self.logger.exception("Failed to unlink %r" % self._db_file)
+                self.logger.exception(f"Failed to unlink {self._db_file!r}")
             return False
 
         self.reload_db_files()
@@ -2388,7 +2358,7 @@ class ContainerBroker(DatabaseBroker):
         """
         if len(self.db_files) > 2:
             self.logger.warning(
-                "Unexpected db files will be ignored: %s" % self.db_files[:-2]
+                f"Unexpected db files will be ignored: {self.db_files[:-2]}"
             )
         brokers = []
         db_files = self.db_files[-2:]
@@ -2491,8 +2461,8 @@ class ContainerBroker(DatabaseBroker):
             self._root_account, self._root_container = split_path("/" + path, 2, 2)
         except ValueError:
             raise ValueError(
-                "Expected %s to be of the form "
-                "'account/container', got %r" % (hdr, path)
+                f"Expected {hdr} to be of the form "
+                f"'account/container', got {path!r}"
             )
 
     @property
@@ -2509,7 +2479,7 @@ class ContainerBroker(DatabaseBroker):
 
     @property
     def root_path(self):
-        return "%s/%s" % (self.root_account, self.root_container)
+        return f"{self.root_account}/{self.root_container}"
 
     def is_root_container(self):
         """
@@ -2554,9 +2524,9 @@ class ContainerBroker(DatabaseBroker):
         """
         self._commit_puts_stale_ok()
         with self.get() as connection:
-            sql = "SELECT name FROM object WHERE %s=0 " % self._get_deleted_key(
+            sql = "SELECT name FROM object WHERE {}=0 ".format(self._get_deleted_key(
                 connection
-            )
+            ))
             args = []
             if last_upper:
                 sql += "AND name > ? "
@@ -2608,7 +2578,7 @@ class ContainerBroker(DatabaseBroker):
         progress_reliable = True
         # update initial state to account for any existing shard ranges
         if existing_ranges:
-            if all([sr.state == ShardRange.FOUND for sr in existing_ranges]):
+            if all(sr.state == ShardRange.FOUND for sr in existing_ranges):
                 progress = sum([sr.object_count for sr in existing_ranges])
             else:
                 # else: object count in existing shard ranges may have changed
@@ -2641,7 +2611,7 @@ class ContainerBroker(DatabaseBroker):
                     )
                 except (sqlite3.OperationalError, LockTimeout):
                     self.logger.exception(
-                        "Problem finding shard upper in %r: " % self.db_file
+                        f"Problem finding shard upper in {self.db_file!r}: "
                     )
                     break
 
