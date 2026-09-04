@@ -1,0 +1,26 @@
+# Ruff configuration file
+extend-exclude = [
+    ".github",
+    "node_modules",
+    "boringtun-boringtun-cli-0.5.2",
+    "edge/waste",
+    "DNS over HTTPS",
+    "real address generator",
+]
+
+[lint]
+ignore = [
+    "LOG015",  # info() call on root logger
+    "DTZ005",  # datetime.datetime.now() without tz
+    "BLE001",  # Do not catch blind exception
+    "PLW1510", # subprocess.run without check
+    "PLW1508", # Invalid type for environment variable default
+    "RUF012",  # Mutable default value for class attribute
+    "RUF059",  # Unpacked variable never used
+    "PLR1704", # Redefining argument
+    "SIM103",  # Return condition directly
+    "SIM102",  # Nested if statements
+    "UP031",   # Use format specifiers
+    "G201",    # Logging .exception() should be used
+    "SIM113",  # Use enumerate()
+]
