@@ -21,9 +21,6 @@ jobs:
     name: Format & Lint
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    strategy:
-      matrix:
-        language: [python, javascript]
 
     steps:
       - name: Checkout repository
@@ -32,61 +29,46 @@ jobs:
           submodules: 'recursive'
 
       - name: Set up Python
-        if: matrix.language == 'python'
         uses: actions/setup-python@v7
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Set up Node.js
-        if: matrix.language == 'javascript'
         uses: actions/setup-node@v7
         with:
           cache: 'npm'
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install Python tools
-        if: matrix.language == 'python'
         run: |
           python -m pip install --upgrade pip
           pip install "black==26.5.1" "ruff==0.16.6"
 
-      - name: Install JS tools & Rebuild package-lock.json
-        if: matrix.language == 'javascript'
+      - name: Rebuild package-lock.json & Install JS tools
         run: |
           rm -f package-lock.json
           npm install
-          git config --local user.name "GitHub Actions"
-          git config --local user.email "actions@github.com"
-          git add package-lock.json
-          if ! git diff --quiet --staged; then
-            git commit -m "chore: rebuild package-lock.json for ESLint 10"
-            git push
-          fi
 
-      - name: Run Formatting for Python
-        if: matrix.language == 'python'
-        run: npm run format:py || true
-
-      - name: Run Lint for Python
-        if: matrix.language == 'python'
-        run: npm run lint:py || true
-
-      - name: Run Formatting for JavaScript family
-        if: matrix.language == 'javascript'
-        run: npm run format:js-family || true
-
-      - name: Run Lint for JavaScript (ESLint)
-        if: matrix.language == 'javascript'
-        run: npm run lint:js || true
+      - name: Run Formatting & Linting
+        run: |
+          npm run format:py || true
+          npm run lint:py || true
+          npm run format:js-family || true
+          npm run lint:js || true
 
       - name: Commit and Push changes
         if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
         run: |
-          git config --local user.name "Github Actions"
+          git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
           git add -A
           if ! git diff --quiet --staged; then
-            git commit -m "style: apply code formatting and linting standards" -m "Applied automatic formatting using Prettier — Black and linting using ESLint — Ruff" --author="Diana <135276904+Diana-Cl@users.noreply.github.com>"
+            git commit -m "chore: rebuild package-lock.json and apply formatting/linting" \
+              -m "Applied automatic formatting using Prettier/Black and linting using ESLint/Ruff" \
+              --author="Diana <135276904+Diana-Cl@users.noreply.github.com>"
+            
+            git pull --rebase || true
+            
             git push
           else
             echo "No formatting changes to commit."
