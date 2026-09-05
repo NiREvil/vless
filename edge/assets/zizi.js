@@ -502,7 +502,7 @@ async function createDnsPipeline(webSocket, vlessResponseHeader, log) {
   let isHeaderSent = false;
   const transformStream = new TransformStream({
     transform(chunk, controller) {
-      for (let index = 0; index < chunk.byteLength; ) {
+      for (let index = 0; index < chunk.byteLength;) {
         const lengthBuffer = chunk.slice(index, index + 2);
         const udpPacketLength = new DataView(lengthBuffer).getUint16(0);
         const udpData = new Uint8Array(chunk.slice(index + 2, index + 2 + udpPacketLength));
