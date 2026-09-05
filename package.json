@@ -1,23 +1,33 @@
 {
   "description": "Freedom to Dream",
   "devDependencies": {
-    "@eslint/js": "^9.21.0",
-    "@typescript-eslint/eslint-plugin": "^8.38.0",
-    "@typescript-eslint/parser": "^8.38.0",
-    "eslint": "^9.21.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-html": "^8.1.1",
-    "eslint-plugin-jsonc": "^2.16.0",
-    "eslint-plugin-yml": "^1.14.0",
-    "globals": "^15.8.0",
-    "jsonc-eslint-parser": "^2.4.0",
-    "prettier": "^3.5.2",
-    "yaml-eslint-parser": "^1.2.3"
+    "@eslint/js": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.69.0",
+    "@typescript-eslint/parser": "^8.69.0",
+    "eslint": "^10.10.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-html": "^8.2.0",
+    "eslint-plugin-jsonc": "^3.4.2",
+    "eslint-plugin-yml": "^3.8.1",
+    "globals": "^17.12.0",
+    "jsonc-eslint-parser": "^3.3.0",
+    "prettier": "^3.9.6",
+    "yaml-eslint-parser": "^2.1.0"
   },
   "engines": {
-    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+    "node": "^20.19.0 || ^22.13.0 || >=24.0.0"
   },
   "name": "vless",
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "printWidth": 100,
+    "semi": true,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
+  },
   "scripts": {
     "format": "npm run format:js-family && npm run format:py",
     "format:js-family": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml,yaml,html,css,scss,vue}\"",
@@ -28,5 +38,5 @@
     "lint:py": "ruff check --fix --unsafe-fixes ."
   },
   "type": "module",
-  "version": "1.0.2"
+  "version": "1.0.3"
 }

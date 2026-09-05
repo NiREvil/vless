@@ -2127,7 +2127,7 @@ const e = 769,
       n = t.reduce((e, t) => e + t.length, 0),
       r = new Uint8Array(n);
     let i = 0;
-    for (const e of t) r.set(e, i), (i += e.length);
+    for (const e of t) (r.set(e, i), (i += e.length));
     return r;
   },
   D = (e) => crypto.getRandomValues(new Uint8Array(e)),
@@ -2149,7 +2149,7 @@ async function V(e, t, n, r, i = "SHA-256") {
   const s = W(L.encode(t), n);
   let a = new Uint8Array(0),
     h = s;
-  for (; a.length < r; ) {
+  for (; a.length < r;) {
     h = await $(i, e, h);
     const t = await $(i, e, W(h, s));
     a = W(a, t);
@@ -2157,7 +2157,7 @@ async function V(e, t, n, r, i = "SHA-256") {
   return a.slice(0, r);
 }
 async function X(e, t, n) {
-  return (t && t.length) || (t = new Uint8Array(q(e))), $(e, t, n);
+  return ((t && t.length) || (t = new Uint8Array(q(e))), $(e, t, n));
 }
 async function O(e, t, n, r, i) {
   const s = L.encode("tls13 " + n);
@@ -2166,7 +2166,7 @@ async function O(e, t, n, r, i) {
       s = Math.ceil(r / i);
     let a = new Uint8Array(0),
       h = new Uint8Array(0);
-    for (let r = 1; r <= s; r++) (h = await $(e, t, W(h, n, [r]))), (a = W(a, h));
+    for (let r = 1; r <= s; r++) ((h = await $(e, t, W(h, n, [r]))), (a = W(a, h)));
     return a.slice(0, r);
   })(e, t, _(B(i), s.length, s, r.length, r), i);
 }
@@ -2217,33 +2217,33 @@ function J(e, t) {
   return ((e << t) | (e >>> (32 - t))) >>> 0;
 }
 function Q(e, t, n, r, i) {
-  (e[t] = (e[t] + e[n]) >>> 0),
+  ((e[t] = (e[t] + e[n]) >>> 0),
     (e[i] = J(e[i] ^ e[t], 16)),
     (e[r] = (e[r] + e[i]) >>> 0),
     (e[n] = J(e[n] ^ e[r], 12)),
     (e[t] = (e[t] + e[n]) >>> 0),
     (e[i] = J(e[i] ^ e[t], 8)),
     (e[r] = (e[r] + e[i]) >>> 0),
-    (e[n] = J(e[n] ^ e[r], 7));
+    (e[n] = J(e[n] ^ e[r], 7)));
 }
 function Z(e, t, n) {
   const r = new Uint32Array(16);
-  (r[0] = 1634760805), (r[1] = 857760878), (r[2] = 2036477234), (r[3] = 1797285236);
+  ((r[0] = 1634760805), (r[1] = 857760878), (r[2] = 2036477234), (r[3] = 1797285236));
   const i = new DataView(e.buffer, e.byteOffset, e.byteLength);
   for (let e = 0; e < 8; e++) r[4 + e] = i.getUint32(4 * e, !0);
   r[12] = t;
   const s = new DataView(n.buffer, n.byteOffset, n.byteLength);
-  (r[13] = s.getUint32(0, !0)), (r[14] = s.getUint32(4, !0)), (r[15] = s.getUint32(8, !0));
+  ((r[13] = s.getUint32(0, !0)), (r[14] = s.getUint32(4, !0)), (r[15] = s.getUint32(8, !0)));
   const a = new Uint32Array(r);
   for (let e = 0; e < 10; e++)
-    Q(a, 0, 4, 8, 12),
+    (Q(a, 0, 4, 8, 12),
       Q(a, 1, 5, 9, 13),
       Q(a, 2, 6, 10, 14),
       Q(a, 3, 7, 11, 15),
       Q(a, 0, 5, 10, 15),
       Q(a, 1, 6, 11, 12),
       Q(a, 2, 7, 8, 13),
-      Q(a, 3, 4, 9, 14);
+      Q(a, 3, 4, 9, 14));
   for (let e = 0; e < 16; e++) a[e] = (a[e] + r[e]) >>> 0;
   return new Uint8Array(a.buffer.slice(0));
 }
@@ -2283,13 +2283,13 @@ function te(e, t) {
   for (let e = 0; e < t.length; e += 16) {
     const n = t.slice(e, e + 16),
       r = new Uint8Array(17);
-    r.set(n),
+    (r.set(n),
       (r[n.length] = 1),
       (i[0] += BigInt(r[0] | (r[1] << 8) | (r[2] << 16) | ((3 & r[3]) << 24))),
       (i[1] += BigInt((r[3] >> 2) | (r[4] << 6) | (r[5] << 14) | ((15 & r[6]) << 22))),
       (i[2] += BigInt((r[6] >> 4) | (r[7] << 4) | (r[8] << 12) | ((63 & r[9]) << 20))),
       (i[3] += BigInt((r[9] >> 6) | (r[10] << 2) | (r[11] << 10) | (r[12] << 18))),
-      (i[4] += BigInt(r[13] | (r[14] << 8) | (r[15] << 16) | (r[16] << 24)));
+      (i[4] += BigInt(r[13] | (r[14] << 8) | (r[15] << 16) | (r[16] << 24))));
     const a = [0n, 0n, 0n, 0n, 0n];
     for (let e = 0; e < 5; e++)
       for (let t = 0; t < 5; t++) {
@@ -2297,8 +2297,8 @@ function te(e, t) {
         n < 5 ? (a[n] += i[e] * s[t]) : (a[n - 5] += i[e] * s[t] * 5n);
       }
     let h = 0n;
-    for (let e = 0; e < 5; e++) (a[e] += h), (i[e] = 0x3ffffffn & a[e]), (h = a[e] >> 26n);
-    (i[0] += 5n * h), (h = i[0] >> 26n), (i[0] &= 0x3ffffffn), (i[1] += h);
+    for (let e = 0; e < 5; e++) ((a[e] += h), (i[e] = 0x3ffffffn & a[e]), (h = a[e] >> 26n));
+    ((i[0] += 5n * h), (h = i[0] >> 26n), (i[0] &= 0x3ffffffn), (i[1] += h));
   }
   let a = i[0] | (i[1] << 26n) | (i[2] << 52n) | (i[3] << 78n) | (i[4] << 104n);
   a = (a + r.reduce((e, t, n) => e + (BigInt(t) << BigInt(8 * n)), 0n)) & ((1n << 128n) - 1n);
@@ -2312,9 +2312,9 @@ function ne(e, t, n, r) {
     a = (16 - (r.length % 16)) % 16,
     h = (16 - (s.length % 16)) % 16,
     c = new Uint8Array(r.length + a + s.length + h + 16);
-  c.set(r, 0), c.set(s, r.length + a);
+  (c.set(r, 0), c.set(s, r.length + a));
   const o = new DataView(c.buffer, r.length + a + s.length + h);
-  o.setBigUint64(0, BigInt(r.length), !0), o.setBigUint64(8, BigInt(s.length), !0);
+  (o.setBigUint64(0, BigInt(r.length), !0), o.setBigUint64(8, BigInt(s.length), !0));
   const l = te(i, c);
   return W(s, l);
 }
@@ -2326,9 +2326,9 @@ function re(e, t, n, r) {
     h = (16 - (r.length % 16)) % 16,
     c = (16 - (s.length % 16)) % 16,
     o = new Uint8Array(r.length + h + s.length + c + 16);
-  o.set(r, 0), o.set(s, r.length + h);
+  (o.set(r, 0), o.set(s, r.length + h));
   const l = new DataView(o.buffer, r.length + h + s.length + c);
-  l.setBigUint64(0, BigInt(r.length), !0), l.setBigUint64(8, BigInt(s.length), !0);
+  (l.setBigUint64(0, BigInt(r.length), !0), l.setBigUint64(8, BigInt(s.length), !0));
   const f = te(a, o);
   let u = 0;
   for (let e = 0; e < 16; e++) u |= i[e] ^ f[e];
@@ -2356,7 +2356,8 @@ class ae {
     if (this.buffer.length < 5 + n) return null;
     const r = this.buffer.slice(5, 5 + n);
     return (
-      (this.buffer = this.buffer.slice(5 + n)), { type: e, version: t, length: n, fragment: r }
+      (this.buffer = this.buffer.slice(5 + n)),
+      { type: e, version: t, length: n, fragment: r }
     );
   }
 }
@@ -2374,7 +2375,7 @@ class he {
     if (this.buffer.length < 4 + t) return null;
     const n = this.buffer.slice(4, 4 + t),
       r = this.buffer.slice(0, 4 + t);
-    return (this.buffer = this.buffer.slice(4 + t)), { type: e, length: t, body: n, raw: r };
+    return ((this.buffer = this.buffer.slice(4 + t)), { type: e, length: t, body: n, raw: r });
   }
 }
 function ce(e) {
@@ -2396,7 +2397,7 @@ function ce(e) {
     const n = R(e, t);
     t += 2;
     const r = t + n;
-    for (; t + 4 <= r; ) {
+    for (; t + 4 <= r;) {
       const n = R(e, t);
       t += 2;
       const r = R(e, t);
@@ -2445,13 +2446,13 @@ function le(e, t = 0) {
   const r = M(e, n);
   if (((n += 3), !r || n + 3 > e.length)) return null;
   const i = M(e, n);
-  return (n += 3), i ? e.slice(n, n + i) : null;
+  return ((n += 3), i ? e.slice(n, n + i) : null);
 }
 function fe(e) {
   const t = { alpn: null };
   let n = 2;
   const r = 2 + R(e, 0);
-  for (; n + 4 <= r; ) {
+  for (; n + 4 <= r;) {
     const r = R(e, n);
     n += 2;
     const i = R(e, n);
@@ -2488,7 +2489,7 @@ const F0 = (e) => {
 function ue(e, n, r, { tls13: i = !0, tls12: s = !0, alpn: a = null } = {}) {
   n = F0(n);
   const c = [];
-  i && c.push(4865, 4866, 4867), s && c.push(49199, 49200, 52392, 49195, 49196, 52393);
+  (i && c.push(4865, 4866, 4867), s && c.push(49199, 49200, 52392, 49195, 49196, 52393));
   const o = _(...c.flatMap(B)),
     l = [_(255, 1, 0, 1, 0)];
   if (n) {
@@ -2496,7 +2497,7 @@ function ue(e, n, r, { tls13: i = !0, tls12: s = !0, alpn: a = null } = {}) {
       t = _(0, B(e.length), e);
     l.push(_(B(v), B(t.length + 2), B(t.length), t));
   }
-  l.push(_(B(S), 0, 2, 1, 0)), l.push(_(B(A), 0, 6, 0, 4, 0, 29, 0, 23));
+  (l.push(_(B(S), 0, 2, 1, 0)), l.push(_(B(A), 0, 6, 0, 4, 0, 29, 0, 23)));
   const f = _(...x.flatMap(B));
   l.push(_(B(m), B(f.length + 2), B(f.length), f));
   const u = Array.isArray(a) ? a.filter(Boolean) : a ? [a] : [];
@@ -2530,7 +2531,7 @@ function ue(e, n, r, { tls13: i = !0, tls12: s = !0, alpn: a = null } = {}) {
 }
 const ye = (e) => {
     const t = new Uint8Array(8);
-    return new DataView(t.buffer).setBigUint64(0, e, !1), t;
+    return (new DataView(t.buffer).setBigUint64(0, e, !1), t);
   },
   pe = (e, t) => {
     const n = e.slice(),
@@ -2549,7 +2550,7 @@ class TlsClient {
       !this.supportTls13 && !this.supportTls12)
     )
       throw new Error("At least one TLS version must be enabled");
-    (this.alpnProtocols = Array.isArray(t.alpn) ? t.alpn : t.alpn ? [t.alpn] : null),
+    ((this.alpnProtocols = Array.isArray(t.alpn) ? t.alpn : t.alpn ? [t.alpn] : null),
       (this.timeout = t.timeout ?? 3e4),
       (this.clientRandom = D(32)),
       (this.serverRandom = null),
@@ -2579,7 +2580,7 @@ class TlsClient {
       (this.handshakeParser = new he()),
       (this.keyPairs = new Map()),
       (this.ecdhKeyPair = null),
-      (this.sawCert = !1);
+      (this.sawCert = !1));
   }
   recordHandshake(e) {
     this.handshakeChunks.push(e);
@@ -2609,14 +2610,14 @@ class TlsClient {
   async pr(e, t, n) {
     for (;;) {
       let r;
-      for (; (r = this.recordParser.next()); ) if (await t(r)) return;
+      for (; (r = this.recordParser.next());) if (await t(r)) return;
       const { value: i, done: s } = await this.readChunk(e);
       if (s) throw new Error(n);
       this.recordParser.feed(e);
     }
   }
   async ph(e, t, n) {
-    for (let e; (e = this.handshakeParser.next()); ) if (await t(e)) return;
+    for (let e; (e = this.handshakeParser.next());) if (await t(e)) return;
     return this.pr(
       e,
       async (e) => {
@@ -2626,7 +2627,7 @@ class TlsClient {
         }
         if (e.type === s) {
           this.handshakeParser.feed(e.fragment);
-          for (let e; (e = this.handshakeParser.next()); ) if (await t(e)) return 1;
+          for (let e; (e = this.handshakeParser.next());) if (await t(e)) return 1;
         }
       },
       n,
@@ -2638,11 +2639,11 @@ class TlsClient {
   }
   async handshake() {
     const [t, n] = await Promise.all([F("P-256"), F("X25519")]);
-    (this.keyPairs = new Map([
+    ((this.keyPairs = new Map([
       [23, t],
       [29, n],
     ])),
-      (this.ecdhKeyPair = t.keyPair);
+      (this.ecdhKeyPair = t.keyPair));
     const r = this.socket.readable.getReader(),
       i = this.socket.writable.getWriter();
     try {
@@ -2652,17 +2653,17 @@ class TlsClient {
         { x25519: n.publicKeyRaw, p256: t.publicKeyRaw },
         { tls13: this.supportTls13, tls12: this.supportTls12, alpn: this.alpnProtocols },
       );
-      this.recordHandshake(a), await i.write(ie(s, a, e));
+      (this.recordHandshake(a), await i.write(ie(s, a, e)));
       const h = await this.receiveServerHello(r);
       if (h.isHRR) throw new Error("HelloRetryRequest is not supported by TLSClientMini");
       if (h.keyShare?.group && this.keyPairs.has(h.keyShare.group)) {
         const e = this.keyPairs.get(h.keyShare.group);
         this.ecdhKeyPair = e.keyPair;
       }
-      h.isTls13 ? await this.handshakeTls13(r, i, h) : await this.handshakeTls12(r, i),
-        (this.handshakeComplete = !0);
+      (h.isTls13 ? await this.handshakeTls13(r, i, h) : await this.handshakeTls12(r, i),
+        (this.handshakeComplete = !0));
     } finally {
-      r.releaseLock(), i.releaseLock();
+      (r.releaseLock(), i.releaseLock());
     }
   }
   async receiveServerHello(e) {
@@ -2670,14 +2671,14 @@ class TlsClient {
       const { value: t, done: n } = await this.readChunk(e);
       if (n) throw new Error("Connection closed waiting for ServerHello");
       let r;
-      for (this.recordParser.feed(t); (r = this.recordParser.next()); ) {
+      for (this.recordParser.feed(t); (r = this.recordParser.next());) {
         if (r.type === i) {
           if (Z0(r.fragment)) continue;
           throw new Error(`TLS Alert: level=${r.fragment[0]}, desc=${r.fragment[1]}`);
         }
         if (r.type !== s) continue;
         let e;
-        for (this.handshakeParser.feed(r.fragment); (e = this.handshakeParser.next()); ) {
+        for (this.handshakeParser.feed(r.fragment); (e = this.handshakeParser.next());) {
           if (e.type !== c) continue;
           this.recordHandshake(e.raw);
           const t = ce(e.body);
@@ -2711,10 +2712,10 @@ class TlsClient {
               break;
             }
             case u:
-              this.recordHandshake(e.raw), (n = oe(e.body));
+              (this.recordHandshake(e.raw), (n = oe(e.body)));
               break;
             case p:
-              return this.recordHandshake(e.raw), (a = !0), 1;
+              return (this.recordHandshake(e.raw), (a = !0), 1);
             case y:
               throw new Error("Client certificate is not supported");
             default:
@@ -2745,15 +2746,15 @@ class TlsClient {
         2 * k + 2 * v,
         w,
       );
-    (this.clientWriteKey = A.slice(0, k)),
+    ((this.clientWriteKey = A.slice(0, k)),
       (this.serverWriteKey = A.slice(k, 2 * k)),
       (this.clientWriteIv = A.slice(2 * k, 2 * k + v)),
       (this.serverWriteIv = A.slice(2 * k + v, 2 * k + 2 * v)),
       await t.write(ie(s, l)),
-      await t.write(ie(r, _(1)));
+      await t.write(ie(r, _(1))));
     const S = await V(this.masterSecret, "client finished", await G(w, this.transcript()), 12, w),
       m = se(g, S);
-    this.recordHandshake(m), await t.write(ie(s, await this.encryptTls12(m, s)));
+    (this.recordHandshake(m), await t.write(ie(s, await this.encryptTls12(m, s))));
     let b = !1;
     await this.pr(
       e,
@@ -2789,21 +2790,21 @@ class TlsClient {
     const A = await G(c, this.transcript()),
       S = await O(c, this.handshakeSecret, "c hs traffic", A, o),
       m = await O(c, this.handshakeSecret, "s hs traffic", A, o);
-    ([this.clientHandshakeKey, this.clientHandshakeIv] = await we(c, S, u, p)),
-      ([this.serverHandshakeKey, this.serverHandshakeIv] = await we(c, m, u, p));
+    (([this.clientHandshakeKey, this.clientHandshakeIv] = await we(c, S, u, p)),
+      ([this.serverHandshakeKey, this.serverHandshakeIv] = await we(c, m, u, p)));
     const b = await O(c, m, "finished", P, o);
     let C = !1;
     const H = async (e) => {
       switch (e.type) {
         case l: {
           const t = fe(e.body);
-          t.alpn && (this.negotiatedAlpn = t.alpn), this.recordHandshake(e.raw);
+          (t.alpn && (this.negotiatedAlpn = t.alpn), this.recordHandshake(e.raw));
           break;
         }
         case f: {
           const t = le(e.body);
           if (!t) throw new Error("Missing TLS 1.3 certificate");
-          await this.acceptCertificate(t), this.recordHandshake(e.raw);
+          (await this.acceptCertificate(t), this.recordHandshake(e.raw));
           break;
         }
         case y:
@@ -2814,7 +2815,7 @@ class TlsClient {
         case g: {
           const t = await $(c, b, await G(c, this.transcript()));
           if (!N(t, e.body)) throw new Error("TLS 1.3 server Finished verify failed");
-          this.recordHandshake(e.raw), (C = !0);
+          (this.recordHandshake(e.raw), (C = !0));
           break;
         }
         default:
@@ -2835,7 +2836,7 @@ class TlsClient {
           h = t.slice(0, -1);
         if (n === s) {
           this.handshakeParser.feed(h);
-          for (let e; (e = this.handshakeParser.next()); ) if ((await H(e), C)) return 1;
+          for (let e; (e = this.handshakeParser.next());) if ((await H(e), C)) return 1;
         }
       },
       "Connection closed during TLS 1.3 handshake",
@@ -2845,15 +2846,15 @@ class TlsClient {
       L = await X(c, E, new Uint8Array(o)),
       K = await O(c, L, "c ap traffic", T, o),
       U = await O(c, L, "s ap traffic", T, o);
-    ([this.clientAppKey, this.clientAppIv] = await we(c, K, u, p)),
-      ([this.serverAppKey, this.serverAppIv] = await we(c, U, u, p));
+    (([this.clientAppKey, this.clientAppIv] = await we(c, K, u, p)),
+      ([this.serverAppKey, this.serverAppIv] = await we(c, U, u, p)));
     const x = await O(c, S, "finished", P, o),
       _ = await $(c, x, await G(c, this.transcript())),
       B = se(g, _);
-    this.recordHandshake(B),
+    (this.recordHandshake(B),
       await t.write(ie(a, await this.encryptTls13Handshake(W(B, [s])))),
       (this.clientSeqNum = 0n),
-      (this.serverSeqNum = 0n);
+      (this.serverSeqNum = 0n));
   }
   async encryptTls12(e, n) {
     const r = this.clientSeqNum++,
@@ -2891,7 +2892,7 @@ class TlsClient {
         ? re(this.serverHandshakeKey, t, e, n)
         : z(this.serverHandshakeKey, t, e, n));
     let i = r.length - 1;
-    for (; i >= 0 && !r[i]; ) i--;
+    for (; i >= 0 && !r[i];) i--;
     return i < 0 ? P : r.slice(0, i + 1);
   }
   async encryptTls13(e) {
@@ -2909,7 +2910,7 @@ class TlsClient {
         ? await re(this.serverAppKey, t, e, n)
         : await z(this.serverAppKey, t, e, n);
     let i = r.length - 1;
-    for (; i >= 0 && !r[i]; ) i--;
+    for (; i >= 0 && !r[i];) i--;
     return i < 0 ? { data: P, type: 0 } : { data: r.slice(0, i), type: r[i] };
   }
   async write(e) {
@@ -2926,7 +2927,7 @@ class TlsClient {
   async read() {
     for (;;) {
       let e;
-      for (; (e = this.recordParser.next()); ) {
+      for (; (e = this.recordParser.next());) {
         if (e.type === i) {
           if (e.fragment[1] === E) return null;
           throw new Error(`TLS Alert: ${e.fragment[1]}`);
@@ -2941,7 +2942,7 @@ class TlsClient {
         }
         if (n !== s) continue;
         let r;
-        for (this.handshakeParser.feed(t); (r = this.handshakeParser.next()); )
+        for (this.handshakeParser.feed(t); (r = this.handshakeParser.next());)
           if (r.type !== o && r.type === k)
             throw new Error("TLS 1.3 KeyUpdate is not supported by TLSClientMini");
       }

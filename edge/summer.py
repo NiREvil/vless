@@ -1,11 +1,12 @@
-import re
-import os
 import logging
+import os
+import random
+import re
+import time
+from datetime import datetime
+
 import requests
 from bs4 import BeautifulSoup
-from datetime import datetime
-import random
-import time
 
 # Set up logging for better debugging and tracking
 logging.basicConfig(
@@ -100,7 +101,7 @@ def fetch_telegram_page(channel_url, max_pages=5, max_retries=3):
             )
             time.sleep(2)  # Delay to avoid being blocked
         except Exception as e:
-            logger.error(f"Error fetching page {url}: {str(e)}")
+            logger.error(f"Error fetching page {url}: {e!s}")
             break
 
     return all_html
@@ -225,7 +226,7 @@ def fetch_configs():
                     f"Completely rewrote {config_type} configs with {len(diwire_configs[config_type])} configs in chronological order"
                 )
         except Exception as e:
-            logger.error(f"Error fetching from Diwire: {str(e)}")
+            logger.error(f"Error fetching from Diwire: {e!s}")
 
         # Fetch configs from freewireguard
         try:
@@ -246,11 +247,11 @@ def fetch_configs():
             )
             logger.info(f"Wrote {len(latest_v2ray_configs)} configs to v2rayng-wg.txt")
         except Exception as e:
-            logger.error(f"Error fetching from freewireguard: {str(e)}")
+            logger.error(f"Error fetching from freewireguard: {e!s}")
 
         logger.info(f"Successfully synced at - {datetime.now()}")
     except Exception as e:
-        logger.error(f"Error occurred in fetch_configs: {str(e)}")
+        logger.error(f"Error occurred in fetch_configs: {e!s}")
         raise
 
 
@@ -259,4 +260,4 @@ if __name__ == "__main__":
         fetch_configs()
         logger.info("Completed the configuration fetch process successfully")
     except Exception as e:
-        logger.error(f"Script execution failed: {str(e)}")
+        logger.error(f"Script execution failed: {e!s}")

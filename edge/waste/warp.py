@@ -1,10 +1,10 @@
+import base64
+import datetime
 import ipaddress
+import json
+import os
 import platform
 import subprocess
-import os
-import datetime
-import base64
-import json
 
 warp_cidr = [
     "162.159.192.0/24",
@@ -46,7 +46,7 @@ else:
 
 def arch_suffix():
     machine = platform.machine().lower()
-    if machine.startswith("i386") or machine.startswith("i686"):
+    if machine.startswith(("i386", "i686")):
         return "386"
     elif machine.startswith(("x86_64", "amd64")):
         return "amd64"
@@ -88,8 +88,7 @@ with open(result_path, "r") as csv_file:
             break
 
 with open("Bestip.txt", "w") as f:
-    for ip in Bestip:
-        f.write(f"{ip}\n")
+    f.writelines(f"{ip}\n" for ip in Bestip)
 
 
 formatted_time = datetime.datetime.now().strftime("%A, %d %b %Y, %H:%M")
@@ -102,7 +101,7 @@ def export_Hiddify(t_ips):
 
 title = (
     "//profile-title: base64:"
-    + base64.b64encode("Freedom to Dream 💛✨".encode("utf-8")).decode("utf-8")
+    + base64.b64encode("Freedom to Dream 💛✨".encode()).decode("utf-8")
     + "\n"
 )
 update_interval = "//profile-update-interval: 4\n"

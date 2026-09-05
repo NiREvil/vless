@@ -1,5 +1,5 @@
 /**
- * Last update: Tuesday, 4:20 UTC, 4 Aug 2026
+ * Last update: Sat, 5 Sep 2026, 4:20 UTC
  * - VLESS fragment config generator (Cypher-style) using dual-layer finalmask fragmentation + unsafe fingerprint + custom cipherSuites.
  * - Replace DEFAULT_HOSTNAME, DEFAULT_UUID, and CLEAN_ADDRESSES with your own Worker hostname, UUID, and preferred Cloudflare clean IP/domain,
  *   Also you can add Environment variables with: VLESS_CLEAN_ADDRESS, VLESS_PORT, VLESS_WS_PATH, VLESS_HOSTNAME, VLESS_UUID, VLESS_REMARKS
@@ -8,12 +8,16 @@
  */
 
 // Default / fallback values
-const DEFAULT_HOSTNAME = "in-god-we-trust.mathematical.workers.dev";
-const DEFAULT_UUID = "c84b1d08-1e9e-4e1c-977a-c7fff6ccb8ec";
+const DEFAULT_HOSTNAME = "1n88h88nacvdhrxpkuae2rx.pages.dev";
+const DEFAULT_UUID = "792c5244-6870-48a8-a2b1-6eef3fcfd94f";
 const DEFAULT_REMARKS = "Cypherand";
 
 const CLEAN_ADDRESSES = [
   "npmjs.com",
+  "www.wto.org",
+  "jsdelivr.com",
+  "188.114.97.6",
+  "singapore.com",
   "www.gitbook.com",
   "auth.vercel.com",
   "chat.openai.com",

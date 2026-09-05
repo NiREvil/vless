@@ -1,15 +1,16 @@
-import os
 import base64
-import random
-import json
-import sys
-import requests
 import datetime
+import json
 import logging
+import os
+import random
+import sys
 import time
+
+import requests
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric.x25519 import X25519PrivateKey
-from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception
+from tenacity import retry, retry_if_exception, stop_after_attempt, wait_exponential
 
 NUM_PROXY_PAIRS = int(os.environ.get("NUM_PROXY_PAIRS", 5))
 
@@ -84,7 +85,7 @@ def load_cached_keys():
                 f"Cache file {CACHE_FILE_PATH} is corrupted. Starting fresh."
             )
             return []
-        except IOError as e:
+        except OSError as e:
             logger.error(f"Error reading cache file {CACHE_FILE_PATH}: {e}")
             return []
     return []
@@ -95,7 +96,7 @@ def save_cached_keys(keys):
         os.makedirs(os.path.dirname(CACHE_FILE_PATH), exist_ok=True)
         with open(CACHE_FILE_PATH, "w", encoding="utf-8") as f:
             json.dump(keys, f, indent=2)
-    except IOError as e:
+    except OSError as e:
         logger.error(f"Error writing cache file {CACHE_FILE_PATH}: {e}")
 
 
@@ -400,7 +401,7 @@ def main():
     try:
         with open(CONFIG_TEMPLATE_PATH, "r", encoding="utf-8") as f:
             template_str = f.read()
-    except IOError as e:
+    except OSError as e:
         logger.error(f"Error reading template: {e}")
         sys.exit(1)
 
@@ -440,7 +441,7 @@ def main():
             f.write(f"# Time is: {generation_time}\n\n")
             f.write(output)
         logger.info(f"Successfully generated '{OUTPUT_YAML_FILENAME}'")
-    except IOError as e:
+    except OSError as e:
         logger.error(f"Error writing output: {e}")
         sys.exit(1)
 

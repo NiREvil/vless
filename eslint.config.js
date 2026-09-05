@@ -1,9 +1,7 @@
 import js from "@eslint/js";
 import globals from "globals";
 import eslintPluginJsonc from "eslint-plugin-jsonc";
-import jsoncParser from "jsonc-eslint-parser";
 import eslintPluginYml from "eslint-plugin-yml";
-import ymlParser from "yaml-eslint-parser";
 import eslintPluginHtml from "eslint-plugin-html";
 import eslintConfigPrettier from "eslint-config-prettier";
 import tseslint from "@typescript-eslint/eslint-plugin";
@@ -12,34 +10,35 @@ import tsParser from "@typescript-eslint/parser";
 export default [
   {
     ignores: [
-      "**/*.md",
       "dist/**",
       "build/**",
       "**/*.css",
       "**/*.scss",
       "warp.json",
-      "hiddify/**",
       ".github/**",
+      "sub/**/*.md",
       "edge/waste/**",
       "edge/unite.js",
       "**/clash-12.**",
-      "sub/ProxyIP.md",
       "node_modules/**",
       "DNS over HTTPS/**",
       "package-lock.json",
       "sub/clash-meta.yml",
       "edge/all-in-one.js",
       "edge/LoadBalance.js",
-      "sub/ProxyIP-Daily.md",
+      "sub/proton-wire.json",
+      "sub/H2-for-SingBox.json",
+      "edge/assets/clash-11.yaml",
       "real address generator/**",
       "boringtun-boringtun-cli-0.5.2/**",
       "edge/assets/clash-meta-wg-template.yml",
     ],
   },
 
-  // ➕ JavaScript
+  // ---JavaScript---
   {
     files: ["**/*.js", "**/*.mjs", "**/*.cjs"],
+    ...js.configs.recommended,
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: "module",
@@ -69,20 +68,14 @@ export default [
       "no-console": ["warn", { allow: ["warn", "error"] }],
       "no-irregular-whitespace": [
         "error",
-        {
-          skipStrings: true,
-          skipComments: false,
-          skipRegExps: true,
-          skipTemplates: true,
-        },
+        { skipStrings: true, skipComments: false, skipRegExps: true, skipTemplates: true },
       ],
       "no-undef": "error",
       "no-unused-vars": "warn",
-      ...eslintConfigPrettier.rules,
     },
   },
 
-  // ➕ TypeScript
+  // ---TypeScript---
   {
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
@@ -114,59 +107,35 @@ export default [
     },
     rules: {
       "no-unused-vars": "off",
+      "no-undef": "off",
       "@typescript-eslint/no-unused-vars": "warn",
-      ...tseslint.configs.recommended.rules,
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/explicit-function-return-type": "warn",
       eqeqeq: ["error", "always"],
-      "no-undef": "off",
-      ...eslintConfigPrettier.rules,
     },
   },
 
-  // ➕ JSON — JSONC — JSON5
+  // ---JSON — JSONC — JSON5---
+  ...eslintPluginJsonc.configs["recommended-with-jsonc"],
   {
     files: ["**/*.json", "**/*.jsonc", "**/*.json5"],
-    plugins: {
-      jsonc: eslintPluginJsonc,
-    },
-    languageOptions: {
-      parser: jsoncParser,
-    },
     rules: {
-      ...eslintPluginJsonc.configs["recommended-with-jsonc"].rules,
       "jsonc/sort-keys": "error",
-      ...eslintConfigPrettier.rules,
     },
   },
+  ...eslintPluginJsonc.configs.prettier,
 
-  // ➕ YAML
-  {
-    files: ["**/*.yaml", "**/*.yml"],
-    plugins: {
-      yml: eslintPluginYml,
-    },
-    languageOptions: {
-      parser: ymlParser,
-    },
-    rules: {
-      ...eslintPluginYml.configs.standard.rules,
-      ...eslintPluginYml.configs.prettier.rules,
-      ...eslintConfigPrettier.rules,
-    },
-  },
+  // ---YAML---
+  ...eslintPluginYml.configs.standard,
+  { files: ["**/*.yaml", "**/*.yml"] },
+  ...eslintPluginYml.configs.prettier,
 
-  // ➕ HTML — For linting <script> blocks
+  // ---HTML — For linting <script> blocks---
   {
     files: ["**/*.html"],
-    plugins: {
-      html: eslintPluginHtml,
-    },
-    languageOptions: {
-      globals: { ...globals.browser },
-    },
-    rules: {
-      ...eslintConfigPrettier.rules,
-    },
+    plugins: { html: eslintPluginHtml },
+    languageOptions: { globals: { ...globals.browser } },
   },
+
+  eslintConfigPrettier,
 ];

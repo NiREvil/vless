@@ -14,85 +14,83 @@
 # limitations under the License.
 
 import json
+import math
 import os
 import time
 import traceback
-import math
-
-from eventlet import Timeout
 
 import six
-from six.moves.urllib.parse import quote
-
 import swift.common.db
-from swift.container.sync_store import ContainerSyncStore
-from swift.container.backend import (
-    ContainerBroker,
-    DATADIR,
-    RECORD_TYPE_SHARD,
-    UNSHARDED,
-    SHARDING,
-    SHARDED,
-    SHARD_UPDATE_STATES,
-)
-from swift.container.replicator import ContainerReplicatorRpc
-from swift.common.db import DatabaseAlreadyExists
-from swift.common.container_sync_realms import ContainerSyncRealms
-from swift.common.request_helpers import (
-    split_and_validate_path,
-    is_sys_or_user_meta,
-    validate_internal_container,
-    validate_internal_obj,
-    validate_container_params,
-)
-from swift.common.utils import (
-    get_logger,
-    hash_path,
-    public,
-    Timestamp,
-    storage_directory,
-    validate_sync_to,
-    config_true_value,
-    timing_stats,
-    replication,
-    override_bytes_from_content_type,
-    get_log_line,
-    config_fallocate_value,
-    fs_has_free_space,
-    list_from_csv,
-    ShardRange,
-)
-from swift.common.constraints import (
-    valid_timestamp,
-    check_utf8,
-    check_drive,
-    AUTO_CREATE_ACCOUNT_PREFIX,
-)
+from eventlet import Timeout
+from six.moves.urllib.parse import quote
+from swift.common.base_storage_server import BaseStorageServer
 from swift.common.bufferedhttp import http_connect
+from swift.common.constraints import (
+    AUTO_CREATE_ACCOUNT_PREFIX,
+    check_drive,
+    check_utf8,
+    valid_timestamp,
+)
+from swift.common.container_sync_realms import ContainerSyncRealms
+from swift.common.db import DatabaseAlreadyExists
 from swift.common.exceptions import ConnectionTimeout
+from swift.common.header_key_dict import HeaderKeyDict
 from swift.common.http import HTTP_NO_CONTENT, HTTP_NOT_FOUND, is_success
 from swift.common.middleware import listing_formats
+from swift.common.request_helpers import (
+    is_sys_or_user_meta,
+    split_and_validate_path,
+    validate_container_params,
+    validate_internal_container,
+    validate_internal_obj,
+)
 from swift.common.storage_policy import POLICIES
-from swift.common.base_storage_server import BaseStorageServer
-from swift.common.header_key_dict import HeaderKeyDict
 from swift.common.swob import (
     HTTPAccepted,
     HTTPBadRequest,
     HTTPConflict,
     HTTPCreated,
+    HTTPException,
+    HTTPInsufficientStorage,
     HTTPInternalServerError,
+    HTTPMethodNotAllowed,
+    HTTPMovedPermanently,
     HTTPNoContent,
     HTTPNotFound,
     HTTPPreconditionFailed,
-    HTTPMethodNotAllowed,
     Request,
     Response,
-    HTTPInsufficientStorage,
-    HTTPException,
-    HTTPMovedPermanently,
-    wsgi_to_str,
     str_to_wsgi,
+    wsgi_to_str,
 )
+from swift.common.utils import (
+    ShardRange,
+    Timestamp,
+    config_fallocate_value,
+    config_true_value,
+    fs_has_free_space,
+    get_log_line,
+    get_logger,
+    hash_path,
+    list_from_csv,
+    override_bytes_from_content_type,
+    public,
+    replication,
+    storage_directory,
+    timing_stats,
+    validate_sync_to,
+)
+from swift.container.backend import (
+    DATADIR,
+    RECORD_TYPE_SHARD,
+    SHARD_UPDATE_STATES,
+    SHARDED,
+    SHARDING,
+    UNSHARDED,
+    ContainerBroker,
+)
+from swift.container.replicator import ContainerReplicatorRpc
+from swift.container.sync_store import ContainerSyncStore
 
 
 def gen_resp_headers(info, is_deleted=False):
@@ -164,7 +162,7 @@ class ContainerController(BaseStorageServer):
     server_type = "container-server"
 
     def __init__(self, conf, logger=None):
-        super(ContainerController, self).__init__(conf)
+        super().__init__(conf)
         self.logger = logger or get_logger(conf, log_route="container-server")
         self.log_requests = config_true_value(conf.get("log_requests", "true"))
         self.root = conf.get("devices", "/srv/node")
@@ -260,7 +258,7 @@ class ContainerController(BaseStorageServer):
             raise HTTPBadRequest(
                 request=req,
                 content_type="text/plain",
-                body="Invalid %s %r" % (header, policy_index),
+                body=f"Invalid {header} {policy_index!r}",
             )
         else:
             return int(policy)
@@ -314,7 +312,7 @@ class ContainerController(BaseStorageServer):
 
         for account_host, account_device in updates:
             account_ip, account_port = account_host.rsplit(":", 1)
-            new_path = "/" + "/".join([account, container])
+            new_path = "/" + f"{account}/{container}"
             info = broker.get_info()
             account_headers = HeaderKeyDict(
                 {
@@ -324,7 +322,7 @@ class ContainerController(BaseStorageServer):
                     "x-bytes-used": info["bytes_used"],
                     "x-trans-id": req.headers.get("x-trans-id", "-"),
                     "X-Backend-Storage-Policy-Index": info["storage_policy_index"],
-                    "user-agent": "container-server %s" % os.getpid(),
+                    "user-agent": f"container-server {os.getpid()}",
                     "referer": req.as_referer(),
                 }
             )
@@ -375,7 +373,7 @@ class ContainerController(BaseStorageServer):
             self.sync_store.update_sync_store(broker)
         except Exception:
             self.logger.exception(
-                "Failed to update sync_store %s during %s" % (broker.db_file, method)
+                f"Failed to update sync_store {broker.db_file} during {method}"
             )
 
     def _redirect_to_shard(self, req, broker, obj_name):
@@ -408,7 +406,7 @@ class ContainerController(BaseStorageServer):
         # sharding parent. get_shard_ranges will return the created sub-shard
         # in preference to the parent, which is the desired result.
         containing_range = shard_ranges[0]
-        location = "/%s/%s" % (containing_range.name, obj_name)
+        location = f"/{containing_range.name}/{obj_name}"
         if location != quote(location) and not config_true_value(
             req.headers.get("x-backend-accept-quoted-location", False)
         ):
@@ -563,13 +561,12 @@ class ContainerController(BaseStorageServer):
             if key.lower() in self.save_headers or is_sys_or_user_meta("container", key)
         }
         if metadata:
-            if "X-Container-Sync-To" in metadata:
-                if (
-                    "X-Container-Sync-To" not in broker.metadata
-                    or metadata["X-Container-Sync-To"][0]
-                    != broker.metadata["X-Container-Sync-To"][0]
-                ):
-                    broker.set_x_container_sync_points(-1, -1)
+            if "X-Container-Sync-To" in metadata and (
+                "X-Container-Sync-To" not in broker.metadata
+                or metadata["X-Container-Sync-To"][0]
+                != broker.metadata["X-Container-Sync-To"][0]
+            ):
+                broker.set_x_container_sync_points(-1, -1)
             broker.update_metadata(metadata, validate_metadata=True)
             self._update_sync_store(broker, method)
 
@@ -580,7 +577,7 @@ class ContainerController(BaseStorageServer):
         drive, part, account, container, obj = get_obj_name_and_placement(req)
         req_timestamp = valid_timestamp(req)
         if "x-container-sync-to" in req.headers:
-            err, sync_to, realm, realm_key = validate_sync_to(
+            err, _sync_to, _realm, _realm_key = validate_sync_to(
                 req.headers["x-container-sync-to"],
                 self.allowed_sync_hosts,
                 self.realms_conf,
@@ -626,7 +623,7 @@ class ContainerController(BaseStorageServer):
                 # validate incoming data...
                 shard_ranges = [ShardRange.from_dict(sr) for sr in json.loads(req.body)]
             except (ValueError, KeyError, TypeError) as err:
-                return HTTPBadRequest("Invalid body: %r" % err)
+                return HTTPBadRequest(f"Invalid body: {err!r}")
             created = self._maybe_autocreate(
                 broker, req_timestamp, account, requested_policy_index, req
             )
@@ -669,7 +666,7 @@ class ContainerController(BaseStorageServer):
     @timing_stats(sample_rate=0.1)
     def HEAD(self, req):
         """Handle HTTP HEAD request."""
-        drive, part, account, container, obj = get_obj_name_and_placement(req)
+        drive, part, account, container, _obj = get_obj_name_and_placement(req)
         out_content_type = listing_formats.get_listing_content_type(req)
         try:
             check_drive(self.root, drive, self.mount_check)
@@ -806,7 +803,7 @@ class ContainerController(BaseStorageServer):
         :param req: an instance of :class:`swift.common.swob.Request`
         :returns: an instance of :class:`swift.common.swob.Response`
         """
-        drive, part, account, container, obj = get_obj_name_and_placement(req)
+        drive, part, account, container, _obj = get_obj_name_and_placement(req)
         params = validate_container_params(req)
         path = params.get("path")
         prefix = params.get("prefix")
@@ -954,7 +951,7 @@ class ContainerController(BaseStorageServer):
         Handle HTTP REPLICATE request (json-encoded RPC calls for replication.)
         """
         post_args = split_and_validate_path(req, 3)
-        drive, partition, hash = post_args
+        drive, _partition, _hash = post_args
         try:
             check_drive(self.root, drive, self.mount_check)
         except ValueError:
@@ -1003,7 +1000,7 @@ class ContainerController(BaseStorageServer):
         drive, part, account, container = get_container_name_and_placement(req)
         req_timestamp = valid_timestamp(req)
         if "x-container-sync-to" in req.headers:
-            err, sync_to, realm, realm_key = validate_sync_to(
+            err, _sync_to, _realm, _realm_key = validate_sync_to(
                 req.headers["x-container-sync-to"],
                 self.allowed_sync_hosts,
                 self.realms_conf,

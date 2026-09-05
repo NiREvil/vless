@@ -1,6 +1,6 @@
 # Demo: https://arshiastest.pythonanywhere.com
 # It can be deployed on "PythonAnywhere" and "Serv00".
-from flask import Flask, request, render_template_string, redirect, url_for
+from flask import Flask, redirect, render_template_string, request, url_for
 
 app = Flask(__name__)
 OWNER = "Arshia"
