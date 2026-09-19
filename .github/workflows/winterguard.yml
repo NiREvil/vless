@@ -2,7 +2,7 @@ name: Clash config generator
 
 on:
   push:
-    branches: 'main'
+    branches: ['main']
     paths:
       - '**/winterguard.*'
       - 'edge/assets/*.yml'
@@ -14,15 +14,19 @@ jobs:
   build:
     runs-on: ubuntu-26.04
     timeout-minutes: 10
+    strategy:
+      matrix:
+        python-version: ['3.13']
+        dummy: ['single']
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
           submodules: 'recursive'
           token: ${{ secrets.GITHUB_TOKEN }}
-
+    
       - name: List directory contents
         run: |
           ls -R edge
@@ -31,21 +35,19 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v7
         with:
-          python-version: '3.13'
-          cache: pip
-
-      - name: Cache Python packages
-        uses: actions/cache@v7
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('edge/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
+          python-version: ${{ matrix.python-version }}
+          architecture: x64
+          cache: 'pip'
+          cache-dependency-path: 'edge/requirements.txt'
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip || exit 1
-          pip install -r edge/requirements.txt || exit 1
+          python -m pip install --upgrade pip
+          if [ -f edge/requirements.txt ]; then
+            pip install -r edge/requirements.txt
+          else
+            echo "requirements.txt not found, skipping dependency installation."
+          fi
        
       - name: Run config generation script
         run: |
