@@ -2,12 +2,12 @@ name: SummerTime
 
 on:
 #  push:
-#    branches: 'main'
+#    branches: ['main']
 #    paths:
 #      - '**/summer.*'
 #      - 'sub/*.txt'
 #  schedule:
-#    - cron: '0 12 * * *'
+#    - cron: '30 1,9,17 * * *'
   workflow_dispatch:
 
 permissions:
@@ -15,30 +15,24 @@ permissions:
 
 jobs:
   update-configs:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     strategy:
       matrix:
         dummy: ['single']
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
           submodules: 'recursive'
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: '3.13'
-          cache: pip
-
-      - name: Cache Python packages
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
+          architecture: x64
+          cache: 'pip'
+          cache-dependency-path: 'edge/requirements.txt'
 
       - name: Install dependencies
         run: |
@@ -51,8 +45,8 @@ jobs:
 
       - name: Commit and push if changes any
         run: |
-          git config --local user.name "Workflow Wizard"
-          git config --local user.email "workflow.wizard@gmail.com"
+          git config --local user.name "google-labs-jules[bot]'"
+          git config --local user.email "161369871+google-labs-jules[bot]@users.noreply.github.com"
           git add sub/*.txt
 
           if ! git diff --quiet || ! git diff --staged --quiet; then
