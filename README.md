@@ -24,135 +24,23 @@
 > <br/>
 >
 > <details>
-> <summary>❗ توضیحات F-Secure Freedom </summary><br/>
+> <summary>❗ توضیحات Katabump Free Hy2 </summary><br/>
 >
-> اکانت 91 روزه وی‌پی‌ان F-Secure Freedom  
-> یکی از قدیمی‌ترین سرویس‌های دنیا. اکانت با ارزشی داره خیلی ✋🏿
+> دریافت سرور مجازی رایگان و ساخت کانفیگ Hysteria, Vless, Xhttp and etc به راحتی هر چه تمام‌تر
+> 
+> [مهدی عزیز آموزش قدم به قدم رو در سایتش قرار داده][kata]
 >
-> فقط با آی‌پی سوئد می‌شه از این آفر استفاده کرد و اکانت ساخت، من با سوئد [AVAST VPN][New-Folder] انجام دادم به راحتی، و دومین بار با آی‌پی سوئد همین وی‌پی‌ان ساختم داخل تلگرام.
->
-> یه ایمیل فیک نیاز داری، از هر سایت و سرویسی که دلت می‌خواد استفاده کن، من دوتا برای نمونه میذارم:
->
-> سایت:  
-> [mail.tm][MailTM]
->
-> و یا این ربات تلگرامی:  
-> [@TempMail_org_bot][TempMailBot]
->
-> از هرکدوم که خواستی ایمیلت رو کپی کن و برگرد.
->
-> این لینک‌رو باز کن و ثبت‌نام رو انجام بده:  
-> [F-Secure—Freedom VPN][F-Secure]
->
-> اسم و ایمیل و پسوورد تعیین کن و دوتا تیک پایین صفحه رو بزن بره. (ایمیل و پسووردی که تعیین کردی رو جایی یادداشت کن، مثلا بفرست سیو مسیج تلگرامت).
->
-> اگه با موفقیت انجام بشه پایینش می‌نویسه:
->
-> - Your account has been successfully created
->
-> زیرش یه گزینه آبی هست که نوشته:
->
-> - Add subscription code
->
-> اونو بزن و این کد لایسنس رو وارد کن:
->
-> ```Elixir
-> BNAUH-EFCTO-EQOCZ-RXHES
-> ```
->
-> و بعدش continue رو برن بره. اگه بعد چند ثانیه نوشت:
->
-> - Your subscription code is valid
->
-> یعنی اوکیه و بزن بره مرحله بعدی، اگه هرچی غیر از این نوشته بود یعنی آی‌پی سوئدت کیکه و واقعی نیست. می‌تونی از [اینجا چک کنی لوکیشنت رو][BrowserLeaks] ببینی واقعا سوئد هست یانه.
->
-> حالا می‌تونی از منوی بالا Log out کنی‌ یا همین‌جوری عادی ببندی صفحه رو و برگردی سمت سایت یا رباتی که ازش ایمیل گرفتیم چون ایمیلی که فرستادن رو باید وریفای کنیم.
->
-> <br/>
->
-> روی آخرین ایمیلی که اومده بزن و صبر کن، سایت ایمیل موقت که بالا اومد برو تا پایین صفحه تا محتوای صندوق ورودی رو ببینی، اون ایمیلی که روش اینجوری نوشته رو بازش کن:
->
-> - Active your F Secure VPN account
->
-> بزن روش و تو صفحه جدید که باز می‌شه یه لینک آبی رنگ خیلی طولانی خواهی دید دوباره بزن روش و چند ثانیه بعد تایید شده و تمومه، اینم ببند بره.
->
-> <br/>
->
-> **و حالا نصب اپلیکیشن**  
-> نسخه مناسب دستگاه خودت رو نصب کن:
->
-> - [ANDROID][F-Secure-Android]
-> - [IOS][F-Secure-IOS]
-> - [WINDOWS][F-Secure-Windows]
-> - [MAC][F-Secure-macOS]
->
-> پس از نصب و اجرای برنامه، روی گزینه login کلیک کرده و در قسمت Select account گزینه اول یعنی **F-Secure** رو انتخاب می‌کنی، با ایمیل و پسووردی که ثبت‌نام رو انجام دادی وارد شو، یه اسم الکی واسه دستگاه تعیین کن، تو صفحه بعدی تیک رو بزن تا قوانین تایید شن و اکسپت.
->
-> حالا برنامه رو یه بار ببند (چون لاگین مجدد نشونت میده در حالی که انجام دادی قبلا) ببند برنامه رو بعد از اول وارد شو تا مستقیم بره صفحه اصلی، اگه پاپ‌آپ نشون داد تایید کن، مثل همه ‌VPNها باید دسترسی به اینترنت داشته باشه، هیچ تنظیماتی براش نیاز نیست فقط بزن رو دکمه وسط کانکت شه یا لوکیشن انتخاب کن و بعد بزنید کانکت شه. لوکیشن پیشنهادی: آلمان، ایتالیا، اتریش، انگلیس، چک و ...
->
-> من از منوی سمت چپ از داخل تنظیمات تیک گزینه‌‌های:
->
-> - Automatic Kill switch
-> - Usage Analytics
->
-> رو برداشتم که وقتی نت قطع میشه نت رو بلاک نکنه واسه بقیه برنامه‌ها و دومین تیک هم که واسه گزارش عملکرد برنامه به توسعه‌دهنده‌ برنامه‌ است که ~~کون لقش~~ نمی‌خوام گزارشی براش ارسال بشه.‌
->
-> ❕ **هر اکانت فقط برای پنج دستگاه همزمان قابل استفاده است به مدت ۹۱ روز.**
->
-> می‌تونید هرچندتا اکانت خواستید بسازید ولی اگه واقعا نیاز نداشتید این‌کارو نکنید که آفر ~~جنده~~ نشه!!
->
+> و همچنین از وبلاگ مهدی بخونید درباره [ساخت پروکسی MTProto روی سرویس Katabump][katap]
+> 
 > <br/>
 >
 > **⚠️ نکته:**
 >
-> چند نفرو دیدم می‌گفتن ممکنه بعضیا داخل برنامه نتونن اشتراک فعالشون رو ببینن بعد از چندبار لاگین شدن و این حرفا، در این‌صورت [نسخه جایگزین برنامه][F-Secure-Android2] رو نصب کنید، یذره شلوغ پلوغ تره چون فقط وی‌پی‌ان نیست و آنتتی ویروس همین کمپانیه که داخلش وی‌پی‌ان هم داره ولی می‌گفتن انگار با اون نسخه مشکلشون حل می‌شده. ب هر حال، خودم که همون اپ اول و اصلی رو ترجیح می‌دم، ساده و کم‌حجم و سریع.
+> تنها نقطه ضعف پروژه اینه که هر چهار روز یک‌بار باید از داشبورد سایت وارد سرور شده و کلیک کنی روی گزینه Renew تا نخوابه.
 >
-> اگه مشکلی داشتید یا نتونستید خودتون اکانت بسازید تو گروه بگید بچه‌ها براتون می‌فرستن.
+> اگه مشکلی داشتید یا نتونستید خودتون اکانت بسازید و سرور رو کانفیگ کنید تو گروه بگید بچه‌ها راهنماییتون می‌کنن.
 >
 > [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/x-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP)
->
-> <details>
-> <summary> اگه نیاز به اسکرین شات داشتید کلیک کنید</summary><br/>
->
-> <img src="https://github.com/user-attachments/assets/126a852f-aaf8-44ec-998b-7b421f420b7d" alt="F-Secure-VPN-1" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/b9060480-fb9d-4916-b06e-6b9b1f4a19af" alt="F-Secure-VPN-2" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/10e5257c-7f86-4385-922f-0db023ea2841" alt="F-Secure-VPN-3" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/22a160c9-dc40-421a-b7c6-d756eaa1d996" alt="F-Secure-VPN-4" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/f4ff68ea-5b33-4245-872d-379720a4c56d" alt="F-Secure-VPN-5" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/bebb5385-e710-425a-9903-cd82e3963f22" alt="F-Secure-VPN-6" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/179083ed-1322-4e8f-9ac0-dd948a81ad79" alt="F-Secure-VPN-7" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/98d6e1ca-3619-4f5e-9d07-be38630fe887" alt="F-Secure-VPN-8" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/c12b95f7-2e14-4297-b140-23dba0dd8cd4" alt="F-Secure-VPN-9" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/fa4f92f1-7f80-4a07-9f5c-95ae90f37f4d" alt="F-Secure-VPN-10" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/0c4fc804-4c07-48d1-b524-e4476d433aa2" alt="F-Secure-VPN-11" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/eb573750-543a-48c2-b767-1f5e66967c82" alt="F-Secure-VPN-12" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/093d7f9f-7ca0-4b73-9752-0877789acc32" alt="F-Secure-VPN-13" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/753a2637-ee11-40a6-8fb5-c124c7f6c462" alt="F-Secure-VPN-14" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/b06a1d05-423f-4f84-ac85-3dadbaac6715" alt="F-Secure-VPN-15" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/ac57611b-24dc-4fdc-ae23-5fa350d8e943" alt="F-Secure-VPN-16" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/28b77533-83f8-4024-851c-0a63069b6de2" alt="F-Secure-VPN-16" width="360"/>
->
-> <img src="https://github.com/user-attachments/assets/85fe2b23-fd65-4f47-adc3-b306aac0c380" alt="F-Secure-VPN-16" width="360"/>
->
-> تامام
->
-> </details>
 >
 > </details>
 >
@@ -200,7 +88,7 @@
 >
 > یه پنل BPB بالا آوردم به کمک ویزارد 90 ثانیه بیشتر طول نکشید (اکانت کلادفلر داشتم از قبل).
 >
-> بعد از اینکه پنل رو ایجاد کردید (ترجیحا نوع وورکر بسازید که برای این شرایط بهتره، چون میشه از پورت‌های فاقد tls مثل پورت 80 هم استفاده کرد)، داخل پنل می‌تونید به عنوان تنظیمات و چندتا آی‌پی تمیز از این فایل بکاپ من استفاده کنید. کافیه [[این فایل]](edge/assets/BPB-settings.dat.txt) رو از گزینه مشخص شده در پنل [^6] آپلود کنید تا تنظیمات من اعمال بشه براتون.
+> بعد از اینکه پنل رو ایجاد کردید (ترجیحا نوع وورکر بسازید که برای این شرایط بهتره، چون میشه از پورت‌های فاقد tls مثل پورت 80 هم استفاده کرد)، داخل پنل می‌تونید به عنوان تنظیمات و چندتا آی‌پی تمیز از این فایل بکاپ من استفاده کنید. کافیه [[این فایل]](edge/assets/BPB-settings.dat) رو از گزینه مشخص شده در پنل [^6] آپلود کنید تا تنظیمات من اعمال بشه براتون.
 >
 > از داخل پنل لینک ساب نرمال رو اضافه کنید داخل v2rayNG یا Hiddify و URL Test بگیرید می‌بینید که نصف بیشترشون پینگ دادن مخصوصا اوتایی که دامین خود وورکر رو دارن یا دامین `www.speedtest.net` و `creativecommons.org` پینگ عالی میدن. تست شده با ابرانسل و شاتل و همراه و مخابرات و آسیاتک. [^7] [^8]
 >
@@ -3508,6 +3396,8 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Inci]: https://github.com/INCY-DEV/incy-platforms
 [iran-core]: https://diana-cl.github.io/Diana-Cl/topics/iran-core
 [IRCF]: https://t.me/ircfspace/1383
+[kata]: https://mehdi-hexing.github.io/mehdi-hexing/topics/KataBumpConfigSetup
+[katap]: https://mehdi-hexing.github.io/mehdi-hexing/topics/KataBumpMTProtoSetup
 [Karing]: https://github.com/KaringX/karing/releases
 [MailTM]: https://mail.tm
 [MahsaNG]: https://github.com/mahsanet/MahsaaNG/releases
