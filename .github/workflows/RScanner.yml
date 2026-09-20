@@ -12,15 +12,15 @@ on:
 
 jobs:
   update-proxies:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     name: Scan and test proxies
-    timeout-minutes: 30
+    timeout-minutes: 20
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
       with:
-          fetch-depth: 0
+          fetch-depth: 1
           submodules: 'recursive'
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -29,8 +29,10 @@ jobs:
 
     - name: Cache Rust dependencies
       uses: Swatinem/rust-cache@v2
+      with:
+        cache-on-failure: true
 
-    - name: Build Rust Project (Release)
+    - name: Build Rust Project
       run: cargo build --release
 
     - name: Give Execute Permission to Binary
@@ -45,8 +47,8 @@ jobs:
     - name: Commit and Push if Changed
       if: ${{ success() }}
       run: |
-        git config --global user.name "NET-Sentinel Bot"
-        git config --global user.email "224584266+NetSentinel-Bot@users.noreply.github.com"
+        git config --global user.name "google-labs-jules[bot]"
+        git config --global user.email "161369871+google-labs-jules[bot]@users.noreply.github.com"
         git add sub/ProxyIP-Daily.md
         git diff --cached --quiet || git commit -m "ProxyIP Daily Update | $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S') | Fetched, validated, enriched & risk-scored all active proxies"
         git -c committer.name="Diana-Cl" -c committer.email="135276904+Diana-Cl@users.noreply.github.com" commit --amend --no-edit
