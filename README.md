@@ -555,6 +555,8 @@
 >
 > - [Real Fake Address Gen]
 >
+> - [Daimonna Address Gen][Daimonna]
+>
 > <br/>
 >
 > **AI-powered coding tools:** AI code editors, code completion engines, review assistants, refactoring agents, LLMs for developers, and tools that turn natural language into code.
@@ -3375,6 +3377,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Darkness-Sub]: https://darknessshade.github.io/Sub
 [Darkness-Warp]: https://hiddify-warp.pages.dev
 [Darkness-Fetcher]: https://telegram-proxy-fetcher.pages.dev
+[Daimonna]: http://address.daimonna.com
 [Di4Diana]: https://telegram.me/Di4Diana
 [Diana-Cl.github.io]: https://diana-cl.github.io/Diana-Cl
 [Diana-Cl.github.io/Ai]: https://diana-cl.github.io/Diana-Cl/topics/ai
