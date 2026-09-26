@@ -24,7 +24,7 @@ const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
 const DEFAULT_PROXY_FILE: &str = "edge/assets/p-legacies.csv";
 const SECONDARY_PROXY_FILE: &str = "sub/country_proxies/02_proxies.csv";
 
-const MAX_CONCURRENT_SCANS: usize = 150;
+const MAX_CONCURRENT_SCANS: usize = 100;
 const TIMEOUT_SECONDS: u64 = 8;
 const TARGET_PROXY_PORT: u16 = 443;
 
@@ -120,25 +120,25 @@ async fn main() -> Result<()> {
             .filter(|l| !l.is_empty())
             .collect();
 
-        println!("🔍 Resolving {} domain(s) from the Northern Territory...", domains.len());
+        println!("🌎 Receiving {} sheets from the Northern Territory...", domains.len());
         for domain in domains {
             if let Ok(ips) = resolve_domain(&domain).await {
                 for ip in ips {
                     if seen_ips.insert(ip.clone()) {
-                        proxy_candidates.push((ip, TARGET_PROXY_PORT, "Private Domain".to_string()));
+                        proxy_candidates.push((ip, TARGET_PROXY_PORT, "Private".to_string()));
                     }
                 }
             }
         }
     }
 
-    println!("🧮 A total of {} unique candidates queued for scanning", proxy_candidates.len());
+    println!("📥 A total of {} unique candidates queued for scanning", proxy_candidates.len());
 
     let scanner_ip = match get_scanner_ip().await {
         Ok(ip) => ip,
         Err(_) => "0.0.0.0".to_string(),
     };
-    println!("✋🏿 Our own exit IP looks like: {}\n", scanner_ip);
+    println!("😬 Own exit IP looks like: {}\n", scanner_ip);
 
     let validated_proxies = Arc::new(Mutex::new(BTreeMap::<String, Vec<ProxyInfo>>::new()));
 
@@ -146,7 +146,7 @@ async fn main() -> Result<()> {
     let live_count = Arc::new(AtomicUsize::new(0));
     let failed_count = Arc::new(AtomicUsize::new(0));
 
-    println!("::group::🐾 Live Scan - tap to peek");
+    println!("::group::🌀 Live Scan - tap to peek");
 
     let tasks = futures::stream::iter(proxy_candidates.into_iter().map(|(ip, port, isp_source)| {
         let validated_proxies = Arc::clone(&validated_proxies);
@@ -177,10 +177,10 @@ async fn main() -> Result<()> {
     println!("\n{}", "==============================================".cyan().bold());
     println!("{}", "       🌌  SCAN WRAPPED - HERE'S THE LOWDOWN       ".cyan().bold());
     println!("{}\n", "==============================================".cyan().bold());
-    println!("  🧶 Candidates tested  : {}", total_candidates.to_string().bold());
+    println!("  🌠 Candidates tested  : {}", total_candidates.to_string().bold());
     println!("  🟢 Alive & kicking    : {}", total_live.to_string().green().bold());
     println!("  🔴 Dead / timed out   : {}", total_failed.to_string().red());
-    println!("  🌐 Countries covered  : {}", locked_proxies.len().to_string().yellow().bold());
+    println!("  🌏 Countries covered  : {}", locked_proxies.len().to_string().yellow().bold());
     println!("\n{}", "----------------------------------------------".dimmed());
     println!("{}", "  🪩 Active proxies per country:".bold());
     
@@ -284,7 +284,7 @@ async fn fetch_risk_assessment(ip: &str, api_host: &str) -> Result<(i64, String)
 
     let resp = client
         .get(&url)
-        .header("User-Agent", "RustClient/1.0")
+        .header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36")
         .send()
         .await?;
 
@@ -345,7 +345,7 @@ async fn scan_candidate(
 
                         let (fraud_score, risk) = fetch_risk_assessment(&ip, api_host)
                             .await
-                            .unwrap_or((100, "high".to_string()));
+                            .unwrap_or((0, "low".to_string()));
 
                         let info = ProxyInfo {
                             ip: ip.clone(),
