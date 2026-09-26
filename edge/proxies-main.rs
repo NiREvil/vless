@@ -22,7 +22,6 @@ const CLOUDFLARE_META_ENDPOINT: &str = "/meta";
 
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
 const DEFAULT_PROXY_FILE: &str = "edge/assets/p-legacies.csv";
-const SECONDARY_PROXY_FILE: &str = "sub/country_proxies/02_proxies.csv";
 
 const MAX_CONCURRENT_SCANS: usize = 100;
 const TIMEOUT_SECONDS: u64 = 8;
@@ -77,7 +76,26 @@ impl CookieJar {
 
 #[tokio::main]
 async fn main() -> Result<()> {
-    let api_host = std::env::var(RISK_API_HOST_ENV).expect("Environment variable RISK_API_HOST is missing");
+    let raw_api_hosts = std::env::var(RISK_API_HOST_ENV).expect("Environment variable RISK_API_HOST is missing");
+
+    let api_hosts: Vec<String> = raw_api_hosts
+        .split(|c| c == ',' || c == '\n')
+        .map(|h| {
+            h.trim()
+                .trim_start_matches("https://")
+                .trim_start_matches("http://")
+                .trim_end_matches('/')
+                .to_string()
+        })
+        .filter(|h| !h.is_empty())
+        .collect();
+
+    if api_hosts.is_empty() {
+        panic!("No valid RISK_API_HOST provided!");
+    }
+    println!("📡 Configured with {} Risk API worker(s)", api_hosts.len());
+
+    let worker_cursor = Arc::new(AtomicUsize::new(0));
 
     if let Some(parent) = Path::new(DEFAULT_OUTPUT_FILE).parent() {
         fs::create_dir_all(parent)?;
@@ -86,20 +104,6 @@ async fn main() -> Result<()> {
 
     let mut seen_ips: HashSet<String> = HashSet::new();
     let mut proxy_candidates: Vec<(String, u16, String)> = Vec::new();
-    
-    match read_csv_proxy_file(SECONDARY_PROXY_FILE) {
-      Ok(list) => {
-          let mut added = 0;
-          for (ip, port, isp) in list {
-              if seen_ips.insert(ip.clone()) {
-                  proxy_candidates.push((ip, port, isp));
-                  added += 1;
-              }
-          }
-          println!("Picked up {} candidates from the csv file", added);
-      }
-      Err(e) => println!("⚠️  Heads up — couldn't read the csv file: {}", e),
-    }
 
     match read_proxy_file(DEFAULT_PROXY_FILE) {
         Ok(list) => {
@@ -138,7 +142,7 @@ async fn main() -> Result<()> {
         Ok(ip) => ip,
         Err(_) => "0.0.0.0".to_string(),
     };
-    println!("😬 Own exit IP looks like: {}\n", scanner_ip);
+    println!("🧸 Own exit IP looks like: {}\n", scanner_ip);
 
     let validated_proxies = Arc::new(Mutex::new(BTreeMap::<String, Vec<ProxyInfo>>::new()));
 
@@ -151,12 +155,14 @@ async fn main() -> Result<()> {
     let tasks = futures::stream::iter(proxy_candidates.into_iter().map(|(ip, port, isp_source)| {
         let validated_proxies = Arc::clone(&validated_proxies);
         let scanner_ip = scanner_ip.clone();
-        let api_host = api_host.clone();
+        let api_hosts = api_hosts.clone();
+        let worker_cursor = Arc::clone(&worker_cursor);
         let live_count = Arc::clone(&live_count);
         let failed_count = Arc::clone(&failed_count);
         async move {
+            let start_index = worker_cursor.fetch_add(1, Ordering::Relaxed);
             scan_candidate(
-                ip, port, isp_source, &validated_proxies, &scanner_ip, &api_host,
+                ip, port, isp_source, &validated_proxies, &scanner_ip, &api_hosts, start_index,
                 &live_count, &failed_count
             ).await;
         }
@@ -274,29 +280,62 @@ async fn get_scanner_ip() -> Result<String> {
         .ok_or_else(|| "No clientIp in response".into())
 }
 
-async fn fetch_risk_assessment(ip: &str, api_host: &str) -> Result<(i64, String)> {
+async fn fetch_risk_assessment(
+    ip: &str,
+    api_hosts: &[String],
+    start_index: usize,
+) -> Result<(i64, String)> {
     let client = reqwest::Client::builder()
         .timeout(Duration::from_secs(TIMEOUT_SECONDS))
         .danger_accept_invalid_certs(true)
         .build()?;
 
-    let url = format!("https://{}/api/{}", api_host, ip);
+    let total_hosts = api_hosts.len();
+    let attempts = if total_hosts > 1 { 2 } else { 1 };
 
-    let resp = client
-        .get(&url)
-        .header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36")
-        .send()
-        .await?;
+    let mut last_err = String::from("Unknown error");
 
-    let val: Value = resp.json().await?;
+    for i in 0..attempts {
+        let current_host = &api_hosts[(start_index + i) % total_hosts];
+        let url = format!("https://{}/api/{}", current_host, ip);
 
-    if let Some(info) = val.get("info") {
-        let score = info.get("fraud_score").and_then(|v| v.as_i64()).unwrap_or(100);
-        let risk = info.get("risk").and_then(|v| v.as_str()).unwrap_or("high").to_string();
-        Ok((score, risk))
-    } else {
-        Err("Invalid API JSON Structure".into())
+        let resp = client
+            .get(&url)
+            .header(
+                "User-Agent",
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            )
+            .header("Accept", "application/json")
+            .send()
+            .await;
+
+        match resp {
+            Ok(res) => {
+                let status = res.status();
+                if status.is_success() {
+                    let val: Value = res.json().await?;
+                    if let Some(info) = val.get("info") {
+                        let score = info.get("fraud_score").and_then(|v| v.as_i64()).unwrap_or(100);
+                        let risk = info.get("risk").and_then(|v| v.as_str()).unwrap_or("high").to_string();
+                        return Ok((score, risk));
+                    } else {
+                        last_err = format!("Host {} returned JSON missing 'info'", current_host);
+                    }
+                } else {
+                    last_err = format!("Host {} returned HTTP status {}", current_host, status);
+                }
+            }
+            Err(e) => {
+                last_err = format!("Host {} failed: {}", current_host, e);
+            }
+        }
+
+        if i + 1 < attempts {
+            tokio::time::sleep(Duration::from_millis(300)).await;
+        }
     }
+
+    Err(last_err.into())
 }
 
 fn risk_color_hex(score: i64) -> String {
@@ -320,7 +359,8 @@ async fn scan_candidate(
     isp_source: String,
     validated_proxies: &Arc<Mutex<BTreeMap<String, Vec<ProxyInfo>>>>,
     scanner_ip: &str,
-    api_host: &str,
+    api_hosts: &[String],
+    start_index: usize,
     live_count: &Arc<AtomicUsize>,
     failed_count: &Arc<AtomicUsize>,
 ) {
@@ -343,9 +383,13 @@ async fn scan_candidate(
                             .map(String::from)
                             .unwrap_or(isp_source);
 
-                        let (fraud_score, risk) = fetch_risk_assessment(&ip, api_host)
-                            .await
-                            .unwrap_or((0, "low".to_string()));
+                        let (fraud_score, risk) = match fetch_risk_assessment(&ip, api_hosts, start_index).await {
+                            Ok(res) => res,
+                            Err(e) => {
+                                eprintln!("  ⚠️ Risk check failed for {}: {}", ip, e);
+                                (20, "low".to_string())
+                            }
+                        };
 
                         let info = ProxyInfo {
                             ip: ip.clone(),
