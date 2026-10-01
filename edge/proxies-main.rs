@@ -28,10 +28,12 @@ static API_INDEX_COUNTER: AtomicUsize = AtomicUsize::new(0);
 
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
 const DEFAULT_PROXY_FILE: &str = "edge/assets/p-legacies.csv";
+
 const MAX_CONCURRENT_SCANS: usize = 80;
-const PROXY_TEST_TIMEOUT: u64 = 5;
-const RISK_API_TIMEOUT: u64 = 8;
+const TIMEOUT_SECONDS: u64 = 5;
+const RISK_TIMEOUT_SECONDS: u64 = 12;
 const TARGET_PROXY_PORT: u16 = 443;
+
 const NORTHERN_TERRITORY_ENV: &str = "NORTHERN_TERRITORY";
 
 type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;
@@ -66,7 +68,7 @@ async fn main() -> Result<()> {
             }
             println!("Picked up {} candidates from the proxy list", proxy_candidates.len());
         }
-        Err(e) => println!("⚠️  Heads up — couldn't read the proxy file: {}", e),
+        Err(e) => println!("⚠️ Heads up, Couldn't read the proxy file: {}", e),
     }
 
     if let Ok(raw_domains) = std::env::var(NORTHERN_TERRITORY_ENV) {
@@ -76,7 +78,7 @@ async fn main() -> Result<()> {
             .filter(|l| !l.is_empty())
             .collect();
 
-        println!("🌎 Receiving {} sheets from the Northern Territory...", domains.len());
+        println!("🔭 Receiving {} 🤷🏻‍♀️ from the Northern Territory", domains.len());
         for domain in domains {
             if let Ok(ips) = resolve_domain(&domain).await {
                 for ip in ips {
@@ -94,7 +96,7 @@ async fn main() -> Result<()> {
         Ok(ip) => ip,
         Err(_) => "0.0.0.0".to_string(),
     };
-    println!("😬 Own exit IP: {}\n", scanner_ip.yellow());
+    println!("☁️ Own exit IP: {}\n", scanner_ip.yellow());
 
     let validated_proxies = Arc::new(Mutex::new(BTreeMap::<String, Vec<ProxyInfo>>::new()));
     let total_candidates = proxy_candidates.len();
@@ -128,14 +130,14 @@ async fn main() -> Result<()> {
     let total_live = live_count.load(Ordering::Relaxed);
     let total_failed = failed_count.load(Ordering::Relaxed);
 
-    println!("\n{}", "==============================================".cyan().bold());
-    println!("{}", "       🌌  SCAN WRAPPED - HERE'S THE LOWDOWN       ".cyan().bold());
-    println!("{}\n", "==============================================".cyan().bold());
+    println!("\n{}", "============================================".cyan().bold());
+    println!("{}", "     🌌  SCAN WRAPPED - HERE'S THE LOWDOWN       ".cyan().bold());
+    println!("{}\n", "============================================".cyan().bold());
     println!("  🌠 Candidates tested  : {}", total_candidates.to_string().bold());
     println!("  🟢 Alive & kicking    : {}", total_live.to_string().green().bold());
     println!("  🔴 Dead / timed out   : {}", total_failed.to_string().red());
     println!("  🌏 Countries covered  : {}", locked_proxies.len().to_string().yellow().bold());
-    println!("\n{}", "----------------------------------------------".dimmed());
+    println!("\n{}", "--------------------------------------------".dimmed());
     println!("{}", "  🪩 Active proxies per country:".bold());
     
     for (country_code, proxies) in locked_proxies.iter() {
@@ -149,8 +151,8 @@ async fn main() -> Result<()> {
             proxies.len().to_string().green().bold()
         );
     }
-    println!("{}\n", "==============================================".cyan().bold());
-
+    println!("{}\n", "============================================".cyan().bold());
+    
     println!("🥸 All done, Everything wrapped up nicely.");
     Ok(())
 }
@@ -267,11 +269,11 @@ async fn register_success(
 
 async fn fetch_risk_assessment_balanced(ip: &str) -> (i64, String) {
     let client = match reqwest::Client::builder()
-        .timeout(Duration::from_secs(RISK_API_TIMEOUT))
+        .timeout(Duration::from_secs(RISK_TIMEOUT_SECONDS))
         .danger_accept_invalid_certs(true)
         .build() {
             Ok(c) => c,
-            Err(_) => return (44, "low".to_string()),
+            Err(_) => return (0, "low".to_string()),
         };
 
     let start_idx = API_INDEX_COUNTER.fetch_add(1, Ordering::Relaxed);
@@ -281,20 +283,35 @@ async fn fetch_risk_assessment_balanced(ip: &str) -> (i64, String) {
         let current_host = RISK_API_HOSTS[(start_idx + i) % total_apis];
         let url = format!("https://{}/api/{}", current_host, ip);
 
-        let resp = client.get(&url)
-            .header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36")
+        let resp_result = client.get(&url)
+            .header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36")
             .header("Accept", "application/json")
             .send()
             .await;
 
-        if let Ok(res) = resp {
-            if res.status().is_success() {
-                if let Ok(val) = res.json::<Value>().await {
-                    if let Some(info) = val.get("info") {
-                        let score = info.get("fraud_score").and_then(|v| v.as_i64()).unwrap_or(0);
-                        let risk = info.get("risk").and_then(|v| v.as_str()).unwrap_or("low").to_string();
-                        return (score, risk);
+        match resp_result {
+            Ok(res) => {
+                let status = res.status();
+                if status.is_success() {
+                    if let Ok(val) = res.json::<Value>().await {
+                        if val.get("error").and_then(|e| e.as_bool()).unwrap_or(false) {
+                            continue;
+                        }
+                        if let Some(info) = val.get("info") {
+                            let score = info.get("fraud_score").and_then(|v| v.as_i64()).unwrap_or(0);
+                            let risk = info.get("risk").and_then(|v| v.as_str()).unwrap_or("low").to_string();
+                            return (score, risk);
+                        }
                     }
+                } else {
+                    eprintln!("⚠️Risk API [{}] returned HTTP {}", current_host, status);
+                }
+            }
+            Err(err) => {
+                if err.is_timeout() {
+                    eprintln!("⚠️Risk API [{}] timed out for IP {}", current_host, ip);
+                } else {
+                    eprintln!("⚠️Risk API [{}] request failed: {}", current_host, err);
                 }
             }
         }
@@ -309,7 +326,7 @@ async fn raw_socket_request(
     proxy_ip: &str,
     proxy_port: u16,
 ) -> Result<(u16, String)> {
-    let timeout = Duration::from_secs(PROXY_TEST_TIMEOUT);
+    let timeout = Duration::from_secs(TIMEOUT_SECONDS);
 
     tokio::time::timeout(timeout, async {
         let stream = TcpStream::connect(format!("{}:{}", proxy_ip, proxy_port)).await?;
@@ -379,7 +396,7 @@ fn parse_trace_details(text: &str) -> (String, String) {
 
 async fn get_scanner_ip() -> Result<String> {
     let client = reqwest::Client::builder()
-        .timeout(Duration::from_secs(RISK_API_TIMEOUT))
+        .timeout(Duration::from_secs(TIMEOUT_SECONDS))
         .build()?;
     
     if let Ok(resp) = client.get(format!("https://{}", PRIMARY_WORKER_HOST)).send().await {
@@ -463,7 +480,7 @@ fn write_markdown_report(proxies_by_country: &BTreeMap<String, Vec<ProxyInfo>>, 
             .replace('+', "%2B")
             .replace('(', "%28")
             .replace(')', "%29")
-   }
+    }
 
     let last_badge_label = encode_badge_label(&format!("{} (UTC+3:30)", last_updated_str));
     let next_badge_label = encode_badge_label(&format!("{} (UTC+3:30)", next_update_str));
