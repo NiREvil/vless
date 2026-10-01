@@ -28,11 +28,10 @@ static API_INDEX_COUNTER: AtomicUsize = AtomicUsize::new(0);
 
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
 const DEFAULT_PROXY_FILE: &str = "edge/assets/p-legacies.csv";
-
 const MAX_CONCURRENT_SCANS: usize = 80;
-const TIMEOUT_SECONDS: u64 = 8;
+const PROXY_TEST_TIMEOUT: u64 = 5;
+const RISK_API_TIMEOUT: u64 = 8;
 const TARGET_PROXY_PORT: u16 = 443;
-
 const NORTHERN_TERRITORY_ENV: &str = "NORTHERN_TERRITORY";
 
 type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;
@@ -268,7 +267,7 @@ async fn register_success(
 
 async fn fetch_risk_assessment_balanced(ip: &str) -> (i64, String) {
     let client = match reqwest::Client::builder()
-        .timeout(Duration::from_secs(TIMEOUT_SECONDS))
+        .timeout(Duration::from_secs(RISK_API_TIMEOUT))
         .danger_accept_invalid_certs(true)
         .build() {
             Ok(c) => c,
@@ -283,7 +282,7 @@ async fn fetch_risk_assessment_balanced(ip: &str) -> (i64, String) {
         let url = format!("https://{}/api/{}", current_host, ip);
 
         let resp = client.get(&url)
-            .header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36")
+            .header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36")
             .header("Accept", "application/json")
             .send()
             .await;
@@ -310,7 +309,7 @@ async fn raw_socket_request(
     proxy_ip: &str,
     proxy_port: u16,
 ) -> Result<(u16, String)> {
-    let timeout = Duration::from_secs(TIMEOUT_SECONDS);
+    let timeout = Duration::from_secs(PROXY_TEST_TIMEOUT);
 
     tokio::time::timeout(timeout, async {
         let stream = TcpStream::connect(format!("{}:{}", proxy_ip, proxy_port)).await?;
@@ -380,7 +379,7 @@ fn parse_trace_details(text: &str) -> (String, String) {
 
 async fn get_scanner_ip() -> Result<String> {
     let client = reqwest::Client::builder()
-        .timeout(Duration::from_secs(TIMEOUT_SECONDS))
+        .timeout(Duration::from_secs(RISK_API_TIMEOUT))
         .build()?;
     
     if let Ok(resp) = client.get(format!("https://{}", PRIMARY_WORKER_HOST)).send().await {
