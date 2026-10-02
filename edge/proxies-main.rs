@@ -14,27 +14,37 @@ use native_tls::TlsConnector as NativeTlsConnector;
 use serde_json::Value;
 use tokio::io::{AsyncReadExt, AsyncWriteExt};
 use tokio::net::TcpStream;
+use tokio::sync::Semaphore;
 use tokio_native_tls::TlsConnector as TokioTlsConnector;
+
+static API_INDEX_COUNTER: AtomicUsize = AtomicUsize::new(0);
+static RISK_DIRECT_SUCCESS: AtomicUsize = AtomicUsize::new(0);
+static RISK_CORSPROXY_SUCCESS: AtomicUsize = AtomicUsize::new(0);
+static RISK_CODETABS_SUCCESS: AtomicUsize = AtomicUsize::new(0);
+static RISK_ALLORIGINS_SUCCESS: AtomicUsize = AtomicUsize::new(0);
+static RISK_THINGPROXY_SUCCESS: AtomicUsize = AtomicUsize::new(0);
+static RISK_JSONP_SUCCESS: AtomicUsize = AtomicUsize::new(0);
+static RISK_UNKNOWN_SOURCE_SUCCESS: AtomicUsize = AtomicUsize::new(0);
+static RISK_CONCURRENCY: Semaphore = Semaphore::const_new(6);
+static RISK_FAILURES: AtomicUsize = AtomicUsize::new(0);
 
 const PRIMARY_WORKER_HOST: &str = "cf-connecting.pages.dev";
 const CF_TRACE_HOST: &str = "1.1.1.1";
 const RISK_API_HOSTS: &[&str] = &[
-    "api.harmonica.workers.dev",
+    "api.cf-connect.workers.dev",
+    "apii.cf-connect.workers.dev",
+    "api.serpents.workers.dev",
     "harmonica.serpents.workers.dev",
-    "apiiii.pages.dev",
 ];
 
-static API_INDEX_COUNTER: AtomicUsize = AtomicUsize::new(0);
-
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
-const DEFAULT_PROXY_FILE: &str = "edge/assets/p-legacies.csv";
-
-const MAX_CONCURRENT_SCANS: usize = 80;
-const TIMEOUT_SECONDS: u64 = 5;
-const RISK_TIMEOUT_SECONDS: u64 = 12;
-const TARGET_PROXY_PORT: u16 = 443;
-
+const DEFAULT_PROXY_FILE: &str = "edge/assets/REvil-proxies.csv";
 const NORTHERN_TERRITORY_ENV: &str = "NORTHERN_TERRITORY";
+
+const MAX_CONCURRENT_SCANS: usize = 100;
+const TIMEOUT_SECONDS: u64 = 5;
+const RISK_TIMEOUT_SECONDS: u64 = 8;
+const TARGET_PROXY_PORT: u16 = 443;
 
 type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;
 
@@ -153,8 +163,52 @@ async fn main() -> Result<()> {
     }
     println!("{}\n", "============================================".cyan().bold());
     
-    println!("🥸 All done, Everything wrapped up nicely.");
-    Ok(())
+    let risk_failures = RISK_FAILURES.load(Ordering::Relaxed);
+
+    if risk_failures > 0 {
+      println!("  ⚠️ Risk unavailable     : {}", risk_failures);
+      println!();
+      println!("🔬 Risk acquisition diagnostics");
+      println!("--------------------------------------------");
+  
+      println!(
+          "Direct       : SUCCESS={}",
+          RISK_DIRECT_SUCCESS.load(Ordering::Relaxed)
+      );
+  
+      println!(
+          "CorsProxyIO  : SUCCESS={}",
+          RISK_CORSPROXY_SUCCESS.load(Ordering::Relaxed)
+      );
+  
+      println!(
+          "Codetabs     : SUCCESS={}",
+          RISK_CODETABS_SUCCESS.load(Ordering::Relaxed)
+      );
+  
+      println!(
+          "AllOrigins   : SUCCESS={}",
+          RISK_ALLORIGINS_SUCCESS.load(Ordering::Relaxed)
+      );
+  
+      println!(
+          "ThingProxy   : SUCCESS={}",
+          RISK_THINGPROXY_SUCCESS.load(Ordering::Relaxed)
+      );
+  
+      println!(
+          "JSONP        : SUCCESS={}",
+          RISK_JSONP_SUCCESS.load(Ordering::Relaxed)
+      );
+  
+      println!(
+          "Unknown      : SUCCESS={}",
+          RISK_UNKNOWN_SOURCE_SUCCESS.load(Ordering::Relaxed)
+      );
+  
+      println!("============================================");
+  }
+      Ok(())
 }
 
 async fn scan_candidate(
@@ -235,7 +289,10 @@ async fn register_success(
     live_count: &Arc<AtomicUsize>,
     source: &str,
 ) {
-    let (fraud_score, risk) = fetch_risk_assessment_balanced(&ip).await;
+    let risk_result = fetch_risk_assessment_balanced(&ip).await;
+    let (fraud_score, risk) = risk_result
+      .map(|(score, risk)| (score, risk))
+      .unwrap_or((-1, "unknown".to_string()));
 
     let country_clean = country_code.trim().to_uppercase();
     let country_final = if country_clean.len() > 2 { country_clean[..2].to_string() } else { country_clean };
@@ -253,11 +310,17 @@ async fn register_success(
     live_count.fetch_add(1, Ordering::Relaxed);
 
     let flag = generate_country_flag_emoji(&info.country_code);
+    let score_display = if info.fraud_score >= 0 {
+    info.fraud_score.to_string()
+    } else {
+        "N/A".to_string()
+    };
+    
     println!(
         "  ✅ {:<7} | {:<15} | Score: {:<3} | Via: {:<8} | {} {}",
         "ALIVE".green().bold(),
         ip.bold(),
-        info.fraud_score,
+        score_display,
         source.magenta(),
         flag,
         info.country_code.cyan()
@@ -267,14 +330,26 @@ async fn register_success(
     locked.entry(info.country_code.clone()).or_default().push(info);
 }
 
-async fn fetch_risk_assessment_balanced(ip: &str) -> (i64, String) {
+async fn fetch_risk_assessment_balanced(ip: &str) -> Option<(i64, String)> {
+    let _permit = match RISK_CONCURRENCY.acquire().await {
+        Ok(permit) => permit,
+        Err(_) => {
+            RISK_FAILURES.fetch_add(1, Ordering::Relaxed);
+            return None;
+        }
+    };
+
     let client = match reqwest::Client::builder()
         .timeout(Duration::from_secs(RISK_TIMEOUT_SECONDS))
         .danger_accept_invalid_certs(true)
-        .build() {
-            Ok(c) => c,
-            Err(_) => return (0, "low".to_string()),
-        };
+        .build()
+    {
+        Ok(c) => c,
+        Err(_) => {
+            RISK_FAILURES.fetch_add(1, Ordering::Relaxed);
+            return None;
+        }
+    };
 
     let start_idx = API_INDEX_COUNTER.fetch_add(1, Ordering::Relaxed);
     let total_apis = RISK_API_HOSTS.len();
@@ -283,41 +358,91 @@ async fn fetch_risk_assessment_balanced(ip: &str) -> (i64, String) {
         let current_host = RISK_API_HOSTS[(start_idx + i) % total_apis];
         let url = format!("https://{}/api/{}", current_host, ip);
 
-        let resp_result = client.get(&url)
-            .header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36")
+        let response = match client
+            .get(&url)
+            .header(
+                "User-Agent",
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            )
             .header("Accept", "application/json")
             .send()
-            .await;
+            .await
+        {
+            Ok(response) => response,
+            Err(_) => continue,
+        };
 
-        match resp_result {
-            Ok(res) => {
-                let status = res.status();
-                if status.is_success() {
-                    if let Ok(val) = res.json::<Value>().await {
-                        if val.get("error").and_then(|e| e.as_bool()).unwrap_or(false) {
-                            continue;
-                        }
-                        if let Some(info) = val.get("info") {
-                            let score = info.get("fraud_score").and_then(|v| v.as_i64()).unwrap_or(0);
-                            let risk = info.get("risk").and_then(|v| v.as_str()).unwrap_or("low").to_string();
-                            return (score, risk);
-                        }
-                    }
-                } else {
-                    eprintln!("⚠️Risk API [{}] returned HTTP {}", current_host, status);
-                }
+        if !response.status().is_success() {
+            continue;
+        }
+
+        let value = match response.json::<Value>().await {
+            Ok(value) => value,
+            Err(_) => continue,
+        };
+        
+        if value
+            .get("error")
+            .and_then(|e| e.as_bool())
+            .unwrap_or(false)
+        {
+            continue;
+        }
+
+        let info = match value.get("info") {
+            Some(info) => info,
+            None => continue,
+        };
+
+        let score = match info
+            .get("fraud_score")
+            .and_then(|v| v.as_i64())
+        {
+            Some(score) if (0..=100).contains(&score) => score,
+            _ => continue,
+        };
+
+        let risk = match info
+            .get("risk")
+            .and_then(|v| v.as_str())
+        {
+            Some(risk) if !risk.is_empty() => risk.to_string(),
+            _ => continue,
+        };
+
+        match info
+            .get("risk_source")
+            .and_then(|v| v.as_str())
+            .unwrap_or("unknown")
+        {
+            "Direct" => {
+                RISK_DIRECT_SUCCESS.fetch_add(1, Ordering::Relaxed);
             }
-            Err(err) => {
-                if err.is_timeout() {
-                    eprintln!("⚠️Risk API [{}] timed out for IP {}", current_host, ip);
-                } else {
-                    eprintln!("⚠️Risk API [{}] request failed: {}", current_host, err);
-                }
+            "CorsProxyIO" => {
+                RISK_CORSPROXY_SUCCESS.fetch_add(1, Ordering::Relaxed);
+            }
+            "Codetabs" => {
+                RISK_CODETABS_SUCCESS.fetch_add(1, Ordering::Relaxed);
+            }
+            "AllOrigins" | "AllOrigins Raw" => {
+                RISK_ALLORIGINS_SUCCESS.fetch_add(1, Ordering::Relaxed);
+            }
+            "ThingProxy" => {
+                RISK_THINGPROXY_SUCCESS.fetch_add(1, Ordering::Relaxed);
+            }
+            "JSONPlaceholder Proxy" | "JSONP" => {
+                RISK_JSONP_SUCCESS.fetch_add(1, Ordering::Relaxed);
+            }
+            _ => {
+                RISK_UNKNOWN_SOURCE_SUCCESS.fetch_add(1, Ordering::Relaxed);
             }
         }
+
+        return Some((score, risk));
     }
 
-    (0, "low".to_string())
+    RISK_FAILURES.fetch_add(1, Ordering::Relaxed);
+    None
 }
 
 async fn raw_socket_request(
