@@ -618,7 +618,7 @@ fn write_markdown_report(proxies_by_country: &BTreeMap<String, Vec<ProxyInfo>>, 
     writeln!(
         file,
         r##"<p align="left">
- <img src="https://latex.codecogs.com/svg.image?\huge&space;{{\color{{Golden}}\mathrm{{PR{{\color{{black}}\O}}XY\;IP}}" width=220px" </p><br/>
+ <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{&hash;C39026}\mathrm{PR}{\color{&hash;966600}\O}\mathrm{XY}\;\mathrm{IP}}" width="280px" </p><br/>
 
 > [!WARNING]
 >
@@ -720,8 +720,8 @@ if !proxies_by_country.is_empty() {
 > <p><b>🪶 Credits</b></p>
 >
 > [<img src="https://img.shields.io/badge/Founder_%26_Owner-NiREvil-966600" />](https://github.com/NiREvil)  
-> [<img src="https://img.shields.io/badge/Scamalytics_Worker-Mehdi_Hexing-966600" />](https://github.com/mehdi-hexing/Cloudflare-Scamalytics)  
-> [<img src="https://img.shields.io/badge/Development_%26_Maintenance-Diana--Cl-966600" />](https://github.com/Diana-Cl)  
+> [<img src="https://img.shields.io/badge/Development_%26_Maintenance-Diana--Cl-966600" />](https://github.com/Diana-Cl)     
+> [<img src="https://img.shields.io/badge/IP_Risk_API_%26_Contributions-Mehdi_Hexing-966600" />](https://github.com/mehdi-hexing/Cloudflare-Scamalytics)    
 >
 > <br/>
 "##
@@ -738,7 +738,7 @@ fn generate_provider_logo_html(isp: &str) -> Option<String> {
         ("Cloudflare", "cloudflare.com"),
         ("Hetzner", "hetzner.com"),
         ("Hostinger", "hostinger.com"),
-        ("OVH", "ovh.com"),
+        ("OVH", "ovhcloud.com"),
         ("DigitalOcean", "digitalocean.com"),
         ("Vultr", "vultr.com"),
     ];
