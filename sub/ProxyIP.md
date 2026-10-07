@@ -2,7 +2,7 @@
   <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{&hash;C39026}\mathrm{PR}{\color{&hash;966600}\O}\mathrm{XY}\;\mathrm{IP}}" width="320px" />
 </p>
 
-  <br><br/>
+<br><br/>
 
 <p align="left">
   <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{&hash;C39026}\sqsubseteq\mathrm{We}\;\mathrm{have}" width="180px" />
@@ -25,6 +25,7 @@
 ```POV-Ray SDL
 di.nscl.ir
 ```
+
 <br><br/>
 
 🇹🇷 **Turkey, Istanbul, Stark Industries, PQ Hosting**
@@ -32,6 +33,7 @@ di.nscl.ir
 ```POV-Ray SDL
 tr.diam4.ggff.net
 ```
+
 <br><br/>
 
 🧭 **Across Iran, BPB LTD** [^2]
@@ -39,6 +41,7 @@ tr.diam4.ggff.net
 ```yaml
 bpb.yousef.isegaro.com
 ```
+
 <br><br/>
 
 🪩 **Worldwide IPs** [^3]
@@ -46,6 +49,7 @@ bpb.yousef.isegaro.com
 ```yaml
 proxyip.cmliussss.net
 ```
+
 <br><br/>
 
 ☁️ **Cloudflare Proxy IP's**
@@ -53,6 +57,7 @@ proxyip.cmliussss.net
 ```ruby
 proxy.zjcloud.us.ci
 ```
+
 <br><br/>
 
 🎲 **Random locations**
@@ -60,11 +65,13 @@ proxy.zjcloud.us.ci
 ```yaml
 pyip.ygkkk.dpdns.org
 ```
+
 <br/>
 
 ```yaml
 proxy.farel.is-a.dev
 ```
+
 <br/>
 
 ```yaml
@@ -105,6 +112,7 @@ ProxyIP.JP.CMLiussss.net
 ```css
 ProxyIP.HK.CMLiussss.net
 ```
+
 <br><br/>
 
 🏳️ **Origin Unknown – Possibly Oracle Cloud**
@@ -112,6 +120,7 @@ ProxyIP.HK.CMLiussss.net
 ```css
 proxyip.oracle.fxxk.dedyn.io
 ```
+
 <br/>
 
 🏳️‍🌈 **Origin Unknown – Possibly Digital Ocean LLC**
@@ -119,6 +128,7 @@ proxyip.oracle.fxxk.dedyn.io
 ```css
 proxyip.digitalocean.hw.090227.xyz
 ```
+
 <br/>
 
 🏳️‍🌈 **Origin Unknown – Possibly Vultr Holdings LLC**
@@ -126,6 +136,7 @@ proxyip.digitalocean.hw.090227.xyz
 ```css
 proxyip.vultr.fxxk.dedyn.io
 ```
+
 <br/>
 
 🇸🇬 **Singapore**
@@ -133,6 +144,7 @@ proxyip.vultr.fxxk.dedyn.io
 ```css
 proxyip.aliyun.hw.090227.xyz
 ```
+
 <br/>
 
 🏳️‍🌈 **Not Specified**
@@ -140,11 +152,13 @@ proxyip.aliyun.hw.090227.xyz
 ```css
 edtproxyip.lzj.pp.ua
 ```
+
 <br/>
 
 ```css
 cdn.xn--b6gac.eu.org
 ```
+
 <br/>
 
 ```css
@@ -418,7 +432,8 @@ The list contains proxy IPs from well-known providers such as Google, Amazon, Cl
 >
 > یکم خلاقیت ب خرج بدی خودت میفهمی که باید دنبال چی بگردی تو سایت
 >
-> <br/>   
+> <br/>
+
 <br/>
 
 <img width="1080" height="2219" alt="nima.nscl.ir" src="https://github.com/user-attachments/assets/4c0b3f7b-6acd-4168-99e2-6f62ada4f5b1" />
