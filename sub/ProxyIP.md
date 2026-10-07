@@ -1,9 +1,11 @@
-<p align="left">
-  <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{Golden}\mathrm{PR{\color{black}\O}XY\;IP}}" width="320px" />
-</p><br><br/>
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{&hash;C39026}\mathrm{PR}{\color{&hash;966600}\O}\mathrm{XY}\;\mathrm{IP}}" width="320px" />
+</p>
+
+  <br><br/>
 
 <p align="left">
-  <img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{{\color{Golden}\sqsubseteq&space;We\;have}}" width="150px" />
+  <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{&hash;C39026}\sqsubseteq\mathrm{We}\;\mathrm{have}" width="180px" />
 </p>
 
 - [Dynamic & Multi-Location Proxies](#dynamic--multi-location-proxies)
@@ -16,41 +18,54 @@
 
 ## Dynamic & Multi-Location Proxies
 
-🇺🇸 **USA, Google LLC, Amazon cloud, Hetzner, Microsoft & ...** [^1]
+🇺🇸 **USA & Germany, Google LLC, Amazon cloud, Hetzner, Microsoft Cloudflare & ...** [^1]
 
 > _This is a high-level domain with specific IPs._
 
 ```POV-Ray SDL
 di.nscl.ir
 ```
+<br><br/>
 
 🇹🇷 **Turkey, Istanbul, Stark Industries, PQ Hosting**
 
 ```POV-Ray SDL
 tr.diam4.ggff.net
 ```
+<br><br/>
 
-🇮🇷 **Across Iran, BPB LTD** [^2]
+🧭 **Across Iran, BPB LTD** [^2]
 
 ```yaml
 bpb.yousef.isegaro.com
 ```
+<br><br/>
 
-🌎 **Worldwide IPs** [^3]
+🪩 **Worldwide IPs** [^3]
 
 ```yaml
 proxyip.cmliussss.net
 ```
+<br><br/>
 
-🌐 **Random locations**
+☁️ **Cloudflare Proxy IP's**
+
+```ruby
+proxy.zjcloud.us.ci
+```
+<br><br/>
+
+🎲 **Random locations**
 
 ```yaml
 pyip.ygkkk.dpdns.org
 ```
+<br/>
 
 ```yaml
 proxy.farel.is-a.dev
 ```
+<br/>
 
 ```yaml
 proxyip.leilaomi.cc.cd
@@ -59,7 +74,7 @@ proxyip.leilaomi.cc.cd
 <br/>
 
 <details>
-<summary><b>Show More</b></summary>
+<summary><b>   See More</b></summary>
 
 <br/>
 
@@ -90,40 +105,47 @@ ProxyIP.JP.CMLiussss.net
 ```css
 ProxyIP.HK.CMLiussss.net
 ```
+<br><br/>
 
 🏳️ **Origin Unknown – Possibly Oracle Cloud**
 
 ```css
 proxyip.oracle.fxxk.dedyn.io
 ```
+<br/>
 
 🏳️‍🌈 **Origin Unknown – Possibly Digital Ocean LLC**
 
 ```css
 proxyip.digitalocean.hw.090227.xyz
 ```
+<br/>
 
 🏳️‍🌈 **Origin Unknown – Possibly Vultr Holdings LLC**
 
 ```css
 proxyip.vultr.fxxk.dedyn.io
 ```
+<br/>
 
 🇸🇬 **Singapore**
 
 ```css
 proxyip.aliyun.hw.090227.xyz
 ```
+<br/>
 
 🏳️‍🌈 **Not Specified**
 
 ```css
 edtproxyip.lzj.pp.ua
 ```
+<br/>
 
 ```css
 cdn.xn--b6gac.eu.org
 ```
+<br/>
 
 ```css
 cdn-all.xn--b6gac.eu.org
@@ -143,7 +165,7 @@ Only IPs with port 443 available are included after health checks (including pin
 
 The list contains proxy IPs from well-known providers such as Google, Amazon, Cloudflare, OVH, DataCamp, Hetzner, and similar infrastructure networks.
 
-‏<strong> از این به بعد، پروکسی آی‌پی‌ها در فایل زیر ذخیره می‌شوند. این آی‌پی‌ها به‌صورت خودکار هر ۲۴ ساعت اسکن و تست شده و بر اساس موقعیت جغرافیایی لیست می‌گردند. فقط آی‌پی‌هایی که پورت ۴۴۳ آن‌ها باز باشد پس از انجام بررسی‌ها (از جمله تست پینگ و اتصال tls) در لیست قرار می‌گیرند.
+‏<strong> از این به بعد، پروکسی آی‌پی‌ها در فایل زیر ذخیره می‌شوند. این آی‌پی‌ها به‌صورت خودکار هر ۲۴ ساعت اسکن و تست شده و بر اساس موقعیت جغرافیایی لیست می‌گردند. فقط آی‌پی‌هایی که پورت ۴۴۳ آن‌ها باز باشد پس از انجام بررسی‌های لازم در لیست قرار می‌گیرند.
 
 این لیست شامل پروکسی آی‌پی‌هایی از ارائه‌دهندگان بزرگ و معتبر زیرساختی دنیا مانند گوگل، آمازون، کلودفلر، هتزنر OVH، DataCamp، Oracle و شبکه‌های مشابه است. </strong>
 
@@ -396,14 +418,12 @@ The list contains proxy IPs from well-known providers such as Google, Amazon, Cl
 >
 > یکم خلاقیت ب خرج بدی خودت میفهمی که باید دنبال چی بگردی تو سایت
 >
-> <br/>
-
+> <br/>   
 <br/>
 
-<img width="1080" height="2219" alt="nima.nscl.ir" src="https://github.com/user-attachments/assets/4c0b3f7b-6acd-4168-99e2-6f62ada4f5b1" /><br/>
+<img width="1080" height="2219" alt="nima.nscl.ir" src="https://github.com/user-attachments/assets/4c0b3f7b-6acd-4168-99e2-6f62ada4f5b1" />
 
-</details>
-
+</details>  
 </div>
 
 <p align="center">
@@ -422,16 +442,16 @@ The list contains proxy IPs from well-known providers such as Google, Amazon, Cl
 [3]: https://github.com/NiREvil/vless/blob/main/edge/assets/Cloudflare_IP_ranges_by_country.md
 [4]: https://checker-3j2.pages.dev
 [5]: https://t.me/ProxyIPTesterBot
-[6]: https://yumiproxy.vercel.app/
-[7]: https://check.proxyip.cmliussss.net/
+[6]: https://yumiproxy.vercel.app
+[7]: https://check.proxyip.cmliussss.net
 [vc]: https://proxyip.victoriacross.workers.dev
 [ch]: https://check-host.net/ip-info
 [ed]: https://proxyip.edtunnel.best
 [bpb]: https://github.com/bia-pain-bache/BPB-Worker-Panel
 [wr]: https://whoer.net
 [sp]: https://www.speedtest.net
-[zi]: https://github.com/NiREvil/zizifn/
-[hr]: https://github.com/NiREvil/Harmony/
+[zi]: https://github.com/NiREvil/zizifn
+[hr]: https://github.com/NiREvil/Harmony
 [Rentry.co/CF-proxyIP]: https://rentry.co/CF-proxyIP
 [Telegra.ph]: https://telegra.ph/How-to-find-proxy-ip-for-VLESS-CF-WORKER-01-06
 [rainbow]: https://github.com/NiREvil/vless/assets/126243832/1aca7f5d-6495-44b7-aced-072bae52f256
