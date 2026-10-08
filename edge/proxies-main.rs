@@ -714,7 +714,7 @@ fn write_markdown_report(proxies_by_country: &BTreeMap<String, Vec<ProxyInfo>>, 
     writeln!(
         file,
         r##"<p align="left">
- <img src="https://latex.codecogs.com/svg.image?\huge&space;{\color{&hash;C39026}\mathrm{PR}{\color{&hash;966600}\O}\mathrm{XY}\;\mathrm{IP}}" width="280px" </p><br/>
+  <img src="https://latex.codecogs.com/svg.image?\huge&space;{{\color{{&hash;C39026}}\mathrm{{PR}}{{\color{{&hash;966600}}\O}}\mathrm{{XY}}\;\mathrm{{IP}}}}" width="280px" </p><br/>
 
 > [!WARNING]
 >
