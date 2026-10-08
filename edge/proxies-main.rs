@@ -69,6 +69,8 @@ struct ZizifnProxy {
     country: String,
     city: String,
     region: String,
+    score: i64,
+    risk: String,
 }
 
 #[derive(Debug, Serialize)]
@@ -630,6 +632,8 @@ fn write_zizifn_json(
                 country: country.clone(),
                 city: info.city.clone(),
                 region: info.region.clone(),
+                score: info.fraud_score,
+                risk: info.risk.clone(),
             });
 
             countries
