@@ -11,6 +11,7 @@ use chrono::{Duration as ChronoDuration, Utc};
 use chrono_tz::Asia::Tehran;
 use futures::StreamExt;
 use native_tls::TlsConnector as NativeTlsConnector;
+use serde::Serialize;
 use serde_json::Value;
 use tokio::io::{AsyncReadExt, AsyncWriteExt};
 use tokio::net::TcpStream;
@@ -38,6 +39,7 @@ const RISK_API_HOSTS: &[&str] = &[
 ];
 
 const DEFAULT_OUTPUT_FILE: &str = "sub/ProxyIP-Daily.md";
+const ZIZIFN_JSON_FILE: &str = "sub/ProxyIP-for-zizifn.json";
 const DEFAULT_PROXY_FILE: &str = "edge/assets/REvil-proxies.csv";
 const NORTHERN_TERRITORY_ENV: &str = "NORTHERN_TERRITORY";
 
@@ -57,6 +59,24 @@ struct ProxyInfo {
     region: String,
     fraud_score: i64,
     risk: String,
+}
+
+#[derive(Debug, Serialize)]
+struct ZizifnProxy {
+    ip: String,
+    port: u16,
+    isp: String,
+    country: String,
+    city: String,
+    region: String,
+}
+
+#[derive(Debug, Serialize)]
+struct ZizifnDataset {
+    updated_at: String,
+    proxies: Vec<ZizifnProxy>,
+    providers: BTreeMap<String, Vec<String>>,
+    countries: BTreeMap<String, Vec<String>>,
 }
 
 #[tokio::main]
@@ -135,7 +155,9 @@ async fn main() -> Result<()> {
     println!("::endgroup::");
 
     let locked_proxies = validated_proxies.lock().unwrap_or_else(|e| e.into_inner());
+
     write_markdown_report(&locked_proxies, DEFAULT_OUTPUT_FILE)?;
+    write_zizifn_json(&locked_proxies, ZIZIFN_JSON_FILE)?;
 
     let total_live = live_count.load(Ordering::Relaxed);
     let total_failed = failed_count.load(Ordering::Relaxed);
@@ -584,6 +606,80 @@ fn risk_color_hex(score: i64) -> String {
 fn risk_badge_html(score: i64) -> String {
     let color = risk_color_hex(score);
     format!("<img src=\"https://img.shields.io/badge/-{}-{}\" />", score, color)
+}
+
+fn write_zizifn_json(
+    proxies_by_country: &BTreeMap<String, Vec<ProxyInfo>>,
+    output_file: &str,
+) -> io::Result<()> {
+    let mut proxies = Vec::new();
+    let mut providers: BTreeMap<String, Vec<String>> = BTreeMap::new();
+    let mut countries: BTreeMap<String, Vec<String>> = BTreeMap::new();
+    let mut seen = HashSet::new();
+
+    for (country, country_proxies) in proxies_by_country {
+        for info in country_proxies {
+            if !seen.insert(info.ip.clone()) {
+                continue;
+            }
+
+            proxies.push(ZizifnProxy {
+                ip: info.ip.clone(),
+                port: 443,
+                isp: info.isp.clone(),
+                country: country.clone(),
+                city: info.city.clone(),
+                region: info.region.clone(),
+            });
+
+            countries
+                .entry(country.clone())
+                .or_default()
+                .push(info.ip.clone());
+
+            for provider in ["Google", "Amazon", "Cloudflare", "OVH", "Hetzner"] {
+                if info
+                    .isp
+                    .to_lowercase()
+                    .contains(&provider.to_lowercase())
+                {
+                    providers
+                        .entry(provider.to_string())
+                        .or_default()
+                        .push(info.ip.clone());
+                }
+            }
+        }
+    }
+
+    for ips in providers.values_mut() {
+        ips.sort();
+        ips.dedup();
+    }
+
+    for ips in countries.values_mut() {
+        ips.sort();
+        ips.dedup();
+    }
+
+    let dataset = ZizifnDataset {
+        updated_at: Utc::now().to_rfc3339(),
+        proxies,
+        providers,
+        countries,
+    };
+
+    let json = serde_json::to_string_pretty(&dataset)?;
+
+    if let Some(parent) = Path::new(output_file).parent() {
+        fs::create_dir_all(parent)?;
+    }
+
+    fs::write(output_file, json)?;
+
+    println!("💠 Zizifn JSON refreshed at {}", output_file);
+
+    Ok(())
 }
 
 fn write_markdown_report(proxies_by_country: &BTreeMap<String, Vec<ProxyInfo>>, output_file: &str) -> io::Result<()> {
