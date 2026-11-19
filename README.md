@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="220x" </p>
+<img src="https://latex.codecogs.com/svg.image?\huge&space;\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" title="\mathrm{NiR{\!\mathrm{{\color{Red}\sum}}\!\!\!\mathbf{v}il}}" width="260x" </p>
 
 <br><br/>
 
@@ -24,21 +24,16 @@
 > <br/>
 >
 > <details>
-> <summary>❗ توضیحات Katabump Free Hy2 </summary><br/>
+> <summary><b>❗ توضیحات مربوط به Masque</b></summary><br/>
 >
-> دریافت سرور مجازی رایگان و ساخت کانفیگ Hysteria, Vless, Xhttp and etc به راحتی هر چه تمام‌تر
+> کانفیگ‌های **MASQUE** چند وقته با اکثر نت‌ها کار می‌کنن، منظورم کانفیگ‌های با ترنسپورت HTTP/2 هستن!!  
+> شخصا کلاینت [PattNG] رو ترجیح میدم برای استفاده، چون هم از طریق خود کلاینت از طریق گزینه + و Add aether config manually می‌شه اقدام کرد برای ایجاد یک کانفیگ (پروتکل masque و ترنسپورت http/2 و فینگرپرینت firefox) و هم اینکه می‌شه اژ طریق جنریتور منصور خان به تعداد دلخواه از این نوع کانفیگ ساخت و داخل کلاینت اضافه کرد، لینک این ابزار فوق‌العاده:
 >
-> [مهدی عزیز آموزش قدم به قدم رو در سایتش قرار داده][kata]
->
-> و همچنین از وبلاگ مهدی بخونید درباره [ساخت پروکسی MTProto روی سرویس Katabump][katap]
->
+> **[Darkness Masque Generator][DarkMasq]**  
+> 
 > <br/>
 >
-> **⚠️ نکته:**
->
-> تنها نقطه ضعف پروژه اینه که هر چهار روز یک‌بار باید از داشبورد سایت وارد سرور شده و کلیک کنی روی گزینه Renew تا نخوابه.
->
-> اگه مشکلی داشتید یا نتونستید خودتون اکانت بسازید و سرور رو کانفیگ کنید تو گروه بگید بچه‌ها راهنماییتون می‌کنن.
+> ⚠️ اگه مشکلی داشتید یا نتونستید خودتون کانفیگ بسازید تو گروه بگید بچه‌ها راهنماییتون می‌کنن.
 >
 > [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP/106699) [![War Zone](https://img.shields.io/badge/x-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP) [![War Zone](https://img.shields.io/badge/0-darkred)](https://t.me/NiREvil_GP)
 >
@@ -46,10 +41,11 @@
 >
 > <br/>
 >
-> <details>
-> <summary>❗ توضیحات مربوط به Avast VPN </summary><br/>
 >
-> **نکته:** اگه با لاگین کردن داخل avast مشکل داشتید از این نسخه‌ی برنامه استفاده کنید [[لیـنک]](https://t.me/NiREvil_GP/736522)
+> <details>
+> <summary><b>❗ توضیحات مربوط به Avast VPN </b></summary><br/>
+>
+> **⚠️ نکته:** اگه با لاگین کردن داخل avast مشکل داشتید از این نسخه‌ی برنامه استفاده کنید [[لیـنک]](https://t.me/NiREvil_GP/736522)
 >
 > چند وقته وی‌پی‌ان [Avast SecureLine] خیلی خوب کار می‌کنه با اکثر نت ها مخصوصا همراه اول و ایرانسل و شاتل و مخابرات، تنها کاری که باید کرد اینه که پروتکل رو بذاریم روی Mimic و انتخاب سرور هم اتومات بمونه یا یکی از سرورهای آمریکا، آلمان، انگلیس، هلند، ترکیه و ...  
 > مسائل مربوط به لایسنس و فایل نصبی و غیره رو از [انباری][New-Folder] دنبال کنید.
@@ -59,10 +55,11 @@
 > <br/>
 >
 > <details>
-> <summary>❗ توضیحات مربوط به سایفون  </summary><br/>
+> <summary><b>❗ توضیحات مربوط به سایفون  </b></summary><br/>
 >
 > ما برای دسترسی به اینترنت بین الملل با همین حداقل پهنای باند از سایفون استفاده می‌کنیم، سایفون نسخه سایت، نسخه مارکت گوگل اصلا یه چیز دیگه‌است و ظاهرا بی ربط به سایفونه!!
-> **نکته:** حواستون باشه سایفون صرفا به درد شرایط اضطراری می‌خوره (۹ روز آخر جنگ)، برای وقتایی که پهنای باند کف زمینه و اختلال بی‌نهایت. برای مواقع عادی خوب نیست، نه سرعت دانلود و آپلود مناسبی داره و نه کیفیت مناسب آی‌پی رو داره.
+> 
+> **⚠️ نکته:** حواستون باشه سایفون صرفا به درد شرایط اضطراری می‌خوره (۹ روز آخر جنگ)، برای وقتایی که پهنای باند کف زمینه و اختلال بی‌نهایت. برای مواقع عادی خوب نیست، نه سرعت دانلود و آپلود مناسبی داره و نه کیفیت مناسب آی‌پی رو داره.
 >
 > من هم اسکرین‌شات از تنطیمات سایفون قرار میدم و هم به شکل متن می‌نویسم همینجا.
 >
@@ -82,9 +79,9 @@
 > <br/>
 >
 > <details>
-> <summary>❗ توضیحات مربوط به پنل BPB </summary><br/>
+> <summary><b>❗ توضیحات مربوط به پنل BPB </b></summary><br/>
 >
-> **نکته:** دستورالعمل‌ها تغییر کردن، دیگه BPB رو فقط باید از طریق ویزارد دپلوی کرد، [این لینک](http://Wizard.bpb-panel.workers.dev)
+> **⚠️ نکته:** دستورالعمل‌ها تغییر کردن، دیگه BPB رو فقط باید از طریق ابزار ویزارد دپلوی کرد، [این لینک](http://Wizard.bpb-panel.workers.dev)
 >
 > یه پنل BPB بالا آوردم به کمک ویزارد 90 ثانیه بیشتر طول نکشید (اکانت کلادفلر داشتم از قبل).
 >
@@ -103,7 +100,9 @@
 >
 > <br/>
 >
-> بعد از اینکه ترماکس اندروید رو از [[مخزن گیت‌هاب]][TERMUX] دانلود و نصب (یا ترمینال ویندوز (CMD) یا لینوکس) رو باز کردید؛  
+> **توضیحات زیر منسوخ شده‌اند**  
+>
+> بعد از اینکه ترموکس اندروید رو از [[مخزن گیت‌هاب]][TERMUX] دانلود و نصب (یا ترمینال ویندوز (CMD) یا لینوکس) رو باز کردید؛  
 > دستور زیر رو اجرا کنید:
 >
 > ```powershell
@@ -246,7 +245,7 @@
 > <br/>
 >
 > <details>
-> <summary>❗ چرا نباید از MahsaNG استفاده کرد </summary><br/>
+> <summary><b>❗ چرا نباید از MahsaNG استفاده کرد </b></summary><br/>
 >
 > فقط دو دسته از آدم‌ها از MahsaNG استفاده نمی‌کنن:
 >
@@ -276,7 +275,7 @@
 > <br/>
 >
 > <details>
-> <summary>❗ توضیحات مربوط به 1.1.1.1 </summary><br/>
+> <summary><b>❗ توضیحات مربوط به 1.1.1.1 </b></summary><br/>
 >
 > برای من و چند نفر از بچه‌ها اپلیکیشن رسمی وارپ کلادفلر شروع به کار کرده. با نت‌ ایرانسل و مخابرات و شاتل و حتی نت همراه‌اول
 >
@@ -285,7 +284,7 @@
 > - [لینک دانلود وارپ نسخه Android][WarpAndroid]
 > - [لینک دانلود وارپ نسخه IOS][WarpIOS]
 >
-> **نکته:**
+> **⚠️ نکته:**
 >
 > اگه از اینترنت سیم‌کارت استفاده می‌کنید چک کنید تنظیمات APN دستگاه خودتون رو که APN Protocol بهتره روی IPv4/IPv6 قرار داشته باشه. [^10]
 >
@@ -298,7 +297,7 @@
 > <br/>
 >
 > <details>
-> <summary>❗ توضیحات مربوط به Proton </summary><br/>
+> <summary><b>❗ توضیحات مربوط به Proton </b></summary><br/>
 >
 > طبق چیزهایی که شنیدم کانفیگ‌های وایرگارد سرویس رایگان [ProtonVPN] در داخل [Amnezia] و [WgTunnel] خیلی خوب کار می‌کنن. دریافت کانفیگ از اون اصلا کار سختی نیست.
 >
@@ -479,11 +478,11 @@
 
 > [!NOTE]
 >
-> No Bullshit, Just Links (Updated Hourly)
+> **No Bullshit**, Just Links (Updated Hourly)
 >
 > <br/>
 >
-> | 🪩 Providers          | 🔗 Links                                                                                                            |
+> | **🪩 Providers**     | **🔗 Links**                                                                                                       |
 > | :-------------------- | :------------------------------------------------------------------------------------------------------------------ |
 > | 🟥 **4Diana - Rose**  | [•v2ray][4Diana]                                                                                                    |
 > | 🟫 **Hidashimora**    | [•v2ray][HD?]                                                                                                       |
@@ -491,7 +490,7 @@
 > | ⬛ **F0rc3Run**       | [•v2ray][F0rc3Run]                                                                                                  |
 > | 🟪 **ShatakVPN**      | [•v2ray][ShatakVPN]                                                                                                 |
 > | 🟦 **It's YeBeKhe**   | [•v2ray][YeBeKhe-v2ray] <br/> [•T.proxies][YeBeKhe-T-pro] <br/> [•warp][YeBeKhe-Warp] <br/> [•rasad][YeBeKhe-Rasad] |
-> | 🟥 **The Darkness**   | [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp] <br/> [•amnezia][Darkness-Amnezia]                              |
+> | 🟥 **The Darkness**   | [•masque][DarkMasq] <br/> [•v2ray][Darkness-Sub] <br/> [•warp][Darkness-Warp] <br/> [•amnezia][Darkness-Amnezia]                              |
 > | 🟨 **Arshia-ComPlus** | [•v2ray][Arshia-Sub]                                                                                                |
 > | 🟧 **10ium-Clashf**   | [•v2ray][10ium-Sub]                                                                                                 |
 > | 🟩 **The OldMan**     | [•v2ray][OldMan-Sub]                                                                                                |
@@ -512,12 +511,6 @@
 >
 > <br/>
 >
-> This article is your golden ticket to flip Gemini and Grok into advanced mode, unleashing them without any pesky censorship or restrictions.
->
-> - [Diana-Cl.github.io]
->
-> <br/>
->
 > **DNS Speed Test Benchmarks,** Find the Fastest DNS Server for Your Location
 > Tip — use DoH to bypass restrictions on YouTube, Instagram, and more.
 >
@@ -526,6 +519,7 @@
 > - [Read more about DNS Test][iran-core]
 > - [Darkness Telegram proxies fetcher][Darkness-Fetcher]
 > - [Darkness Warp-To-All Converter][Darkness-Amnezia]
+> - [Darkness Masque Generator][DarkMasq]
 >
 > <br/>
 >
@@ -562,6 +556,12 @@
 > **AI-powered coding tools:** AI code editors, code completion engines, review assistants, refactoring agents, LLMs for developers, and tools that turn natural language into code.
 >
 > - [Diana-Cl.github.io/Ai]
+>
+> <br/>
+>
+> ~~This article is your golden ticket to flip Gemini and Grok into advanced mode, unleashing them without any pesky censorship or restrictions.~~
+>
+> - [Diana-Cl.github.io]
 >
 > <br/>
 >
@@ -621,6 +621,110 @@ https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/26.
 
 https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/14.2.txt
 
+https://raw.githubusercontent.com/ThomasJasperthecat/sub/main/sublist1.txt
+
+https://raw.githubusercontent.com/Ali-Anv1/C-Meta/refs/heads/main/C-Meta.txt
+
+https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/base64.txt
+
+https://gitverse.ru/api/repos/flaafix/AetrisVPN_Black_list/raw/branch/master/configs.txt
+
+https://gitverse.ru/api/repos/flaafix/AetrisVPN/raw/branch/master/AetrisVPN.txt
+
+https://mifa.world/axe
+
+https://etoneya.su/whitelist
+
+https://etoneya.su/1
+
+https://etoneya.su/gemini
+
+https://etoneya.su/main.yaml
+
+http://www.xrayvip.com/free.txt
+
+https://sub.namazvpn.workers.dev
+
+https://proxypool.link/clash/proxies
+
+http://66.42.50.118:12580/clash/proxies
+
+https://weoknow.com/data/dayupdate/1/z.txt
+
+https://vip.baidu365.org/api/raw/0nxNK2
+
+https://rahim-mohamadi-2580.pages.dev/api/configs
+
+https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub2.txt
+
+https://raw.githubusercontent.com/Created-By/Telegram--Eag1e_YT/refs/heads/main/Hiddify-Next
+
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/Vless-Reality-White-Lists-Rus-Mobile.txt
+
+https://raw.githubusercontent.com/ByeWhiteLists/ByeWhiteLists2/refs/heads/main/ByeWhiteLists2.txt
+
+https://raw.githubusercontent.com/SeyedNG/proxy/refs/heads/main/configs/proxy_configs_tested.txt
+
+https://raw.githubusercontent.com/SeyedNG/proxy/refs/heads/main/configs/proxy_configs_tested.txt
+
+https://raw.githubusercontent.com/SeyedNG/proxy/refs/heads/main/configs/fragment_fingerprint.txt
+
+https://raw.githubusercontent.com/BlueKnightNet/blueknight_net-sub-link/refs/heads/blue-knight-net/BlueKnight.txt
+
+https://raw.githubusercontent.com/danesh1118/kdpektofuuebfotnjyt9376tehfosngoypwudbhmhosleofuebtlhgpzhegocsksjsss/refs/heads/main/sub
+
+https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-all.txt
+
+https://raw.githubusercontent.com/inaz266/In-az-26/refs/heads/main/filtee.txt
+
+https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config_extra.yaml
+
+https://raw.githubusercontent.com/Mahdi0024/ProxyCollector/master/sub/proxies.txt
+
+https://github.com/nikita29a/FreeProxyList/raw/refs/heads/main/mirror/1.txt
+
+https://raw.githubusercontent.com/blueshekan/tcc/main/sub.html
+
+https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/v2ray
+
+https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/all
+
+https://cdn.jsdelivr.net/gh/firefoxmmx2/v2rayshare_subcription/subscription/vray_sub.txt
+
+https://raw.githubusercontent.com/Farid-Karimi/Config-Collector/refs/heads/main/trojan_iran.txt
+
+https://raw.githubusercontent.com/teknovpnhub/v2ray-subscription/refs/heads/main/servers.txt
+
+https://raw.githubusercontent.com/peweza/PUBLICSUB/refs/heads/main/PewezaVPNPubSUB
+
+https://raw.githubusercontent.com/free1zona/Keyfreetee/refs/heads/main/razlo4ka7
+
+https://raw.githubusercontent.com/v2FreeHub/v2hub-configs/refs/heads/main/Sub-AutoUpdate
+
+https://raw.githubusercontent.com/IranUnlocked/Sub/refs/heads/main/Sub-IranUnlocked.txt
+
+https://raw.githubusercontent.com/acymz/AutoVPN/refs/heads/main/data/V2.txt
+
+https://raw.githubusercontent.com/AliDev-ir/FreeVPN/main/vpn
+
+https://raw.githubusercontent.com/zieng2/wl/refs/heads/main/vless_lite.txt
+
+https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector/refs/heads/main/category/vless.txt
+
+https://raw.githubusercontent.com/hiztin/VLESS-PO-GRIBI/main/deploy/subscriptions/1.txt
+
+https://github.com/ksenkovsolo/HardVPN-bypass-WhiteLists-/raw/refs/heads/main/vpn-lte/WHITELIST-ALL.txt
+
+https://raw.githubusercontent.com/bobrinaw/vlessforu/refs/heads/main/working_configs.txt
+
+https://raw.githubusercontent.com/teknovpnhub/v2ray-subscription/refs/heads/main/servers.txt
+
+https://raw.githubusercontent.com/Danialsamadi/v2go/refs/heads/main/Splitted-By-Protocol/ss.txt
+
+
+
+
+
 https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/url_work.txt
 
 https://raw.githubusercontent.com/PrinceVSFX/Adapt-Configs/main/Configs/Black_list.txt
@@ -628,8 +732,6 @@ https://raw.githubusercontent.com/PrinceVSFX/Adapt-Configs/main/Configs/Black_li
 https://gitverse.ru/api/repos/MishaLan/MishaLan/raw/branch/master/MishaLan.txt
 
 https://raw.githubusercontent.com/zieng2/wl/main/vless_universal.txt
-
-https://raw.githubusercontent.com/hiztin/VLESS-PO-GRIBI/main/deploy/subscriptions/1.txt
 
 https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/refs/heads/main/Config/vless.txt
 
@@ -653,8 +755,6 @@ https://raw.githubusercontent.com/ShadowException/VPN/refs/heads/main/configs/VP
 
 https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt
 
-https://etoneya.su/1
-
 https://raw.githubusercontent.com/JavidnamanIran-at-Telegram/x-ray_sub/refs/heads/main/x-ray_sub.txt [[JN?]]
 
 https://gitverse.ru/api/repos/flaafix/AetrisVPN_Black_list/raw/branch/master/configs.txt
@@ -673,11 +773,7 @@ https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub
 
 https://gitverse.ru/api/repos/ru-wbl/wl/raw/branch/master/KvRuVPN%2FKvRuVPN.txt
 
-https://raw.githubusercontent.com/therealaleph/Iran-configs/refs/heads/main/ir_configs.txt
-
-http://www.xrayvip.com/free.txt
-
-https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Movaghat
+https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality
 
 https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/mix.txt
 
@@ -685,13 +781,16 @@ https://raw.githubusercontent.com/aqayerez/MatnOfficial-VPN/refs/heads/main/Matn
 
 https://gh-proxy.com/raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/yudou66.txt
 
-https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality
-
 https://raw.githubusercontent.com/hamedp-71/Sub_Checker_Creator/refs/heads/main/final.txt
 
 https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_links.txt
 
 https://raw.githubusercontent.com/MrBihal/Hddify/refs/heads/main/HDDIFY
+
+https://raw.githubusercontent.com/MrBihal/Channel-Hddify/refs/heads/main/ROSE
+
+https://raw.githubusercontent.com/MrBihal/Channel-Hddify/refs/heads/main/cooking
+
 
 https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector/refs/heads/main/category/vless.txt
 
@@ -813,9 +912,13 @@ https://raw.githubusercontent.com/DarknessShade/Sub/main/V2mix [[DS?]]
 
 https://raw.githubusercontent.com/DarknessShade/Sub/main/Ss
 
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/hy2 [[YB?]]
+https://raw.githubusercontent.com/itsyebekhe/PSG/refs/heads/main/subscriptions/xray/mix [[YB?]]
 
-https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/normal/vmess
+https://raw.githubusercontent.com/itsyebekhe/PSG/refs/heads/main/subscriptions/xray/vmess
+
+https://raw.githubusercontent.com/itsyebekhe/PSG/refs/heads/main/subscriptions/xray/cdn
+
+https://raw.githubusercontent.com/itsyebekhe/PSG/refs/heads/main/subscriptions/xray/ss
 
 https://raw.githubusercontent.com/lagzian/IranConfigCollector/main/Base64.txt
 
@@ -2141,6 +2244,10 @@ https://cdn.jsdelivr.net/gh/mahdibland/V2RayAggregator@master/update/provider/pr
 
 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/EternityAir.yml
 
+https://raw.githubusercontent.com/dalazhi/v2ray/refs/heads/main/data/mihomo-1.yaml
+
+https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
+
 https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output_iran/converted/iran_top100_clash_config.yaml
 
 https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml
@@ -2423,6 +2530,8 @@ https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/husi-wg.txt
 
 **Warp for [Exclave]**  
 https://raw.githubusercontent.com/NiREvil/vless/refs/heads/main/sub/exclave-wg.txt
+
+https://raw.githubusercontent.com/SeyedNG/proxy/refs/heads/main/warp/sing-box-warp.json
 
 **All of them**  
 https://raw.githubusercontent.com/ndsphonemy/proxy-sub/refs/heads/main/mobile.txt
@@ -2996,74 +3105,15 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpyMGZySUFuTGVhbTFGcmhsYkM4bzlJ@176.124.207.10
 
 <br/>
 
-<!-- I'm commenting on the links to Soroush's repository for now so that we can find out later what happened to her GitHub repository. 🤷🏻‍♀️
-
 ## COUNTRIES
 
 > [!NOTE]
 >
-> **Credits: Dear [[SR?]]**
+> **Credits: Dears [[EV?]] and [[10i?]]**
 >
 > Based on country for services that result in account bans if the location is changed,
 >
 > such as social media and artificial intelligence services.
-
-<br/>
-
-| Code |       Country Name        |                                                    Subscription Link                                                     | Code |       Country Name        |                                                    Subscription Link                                                     |
-| :--: | :-----------------------: | :----------------------------------------------------------------------------------------------------------------------: | :--: | :-----------------------: | :----------------------------------------------------------------------------------------------------------------------: |
-|  AL  |          Albania          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/al/mixed) |  AR  |         Argentina         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ar/mixed) |
-|  AM  |          Armenia          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/am/mixed) |  AU  |         Australia         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/au/mixed) |
-|  AT  |          Austria          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/at/mixed) |  BH  |          Bahrain          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/bh/mixed) |
-|  BY  |          Belarus          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/by/mixed) |  BE  |          Belgium          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/be/mixed) |
-|  BZ  |          Belize           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/bz/mixed) |  BA  |  Bosnia and Herzegovina   | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ba/mixed) |
-|  BR  |          Brazil           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/br/mixed) |  BG  |         Bulgaria          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/bg/mixed) |
-|  CA  |          Canada           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ca/mixed) |  CL  |           Chile           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/cl/mixed) |
-|  CN  |           China           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/cn/mixed) |  CO  |         Colombia          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/co/mixed) |
-|  HR  |          Croatia          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/hr/mixed) |  CY  |          Cyprus           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/cy/mixed) |
-|  CZ  |          Czechia          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/cz/mixed) |  DK  |          Denmark          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/dk/mixed) |
-|  EC  |          Ecuador          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ec/mixed) |  EE  |          Estonia          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ee/mixed) |
-|  FI  |          Finland          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/fi/mixed) |  FR  |          France           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/fr/mixed) |
-|  DE  |          Germany          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/de/mixed) |  GR  |          Greece           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/gr/mixed) |
-|  GT  |         Guatemala         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/gt/mixed) |  HK  |         Hong Kong         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/hk/mixed) |
-|  IS  |          Iceland          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/is/mixed) |  IN  |           India           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/in/mixed) |
-|  ID  |         Indonesia         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/id/mixed) |  IR  | Iran, Islamic Republic of | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ir/mixed) |
-|  IE  |          Ireland          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ie/mixed) |  IL  |          Israel           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/il/mixed) |
-|  IT  |           Itay           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/it/mixed) |  JP  |           Japan           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/jp/mixed) |
-|  JO  |          Jordan           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/jo/mixed) |  KZ  |        Kazakhstan         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/kz/mixed) |
-|  KE  |           Kenya           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ke/mixed) |  KR  |    Korea, Republic of     | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/kr/mixed) |
-|  LV  |          Latvia           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/lv/mixed) |  LT  |         Lithuania         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/lt/mixed) |
-|  LU  |        Luxembourg         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/lu/mixed) |  MO  |           Macao           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/mo/mixed) |
-|  MY  |         Malaysia          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/my/mixed) |  MT  |           Malta           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/mt/mixed) |
-|  MX  |          Mexico           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/mx/mixed) |  MD  |   Moldova, Republic of    | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/md/mixed) |
-|  MN  |         Mongolia          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/mn/mixed) |  NL  |        Netherlands        | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/nl/mixed) |
-|  MK  |      North Macedonia      | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/mk/mixed) |  NO  |          Norway           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/no/mixed) |
-|  NA  |       Not Available       | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/na/mixed) |  OM  |           Oman            | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/om/mixed) |
-|  PA  |          Panama           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/pa/mixed) |  PE  |           Peru            | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/pe/mixed) |
-|  PL  |          Poland           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/pl/mixed) |  QA  |           Qatar           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/qa/mixed) |
-|  RO  |          Romania          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ro/mixed) |  RU  |    Russian Federation     | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ru/mixed) |
-|  SA  |       Saudi Arabia        | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/sa/mixed) |  RS  |          Serbia           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/rs/mixed) |
-|  SC  |        Seychelles         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/sc/mixed) |  SG  |         Singapore         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/sg/mixed) |
-|  SK  |         Slovakia          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/sk/mixed) |  SI  |         Slovenia          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/si/mixed) |
-|  ZA  |       South Africa        | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/za/mixed) |  ES  |           Spain           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/es/mixed) |
-|  SE  |          Sweden           | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/se/mixed) |  CH  |        Switzerland        | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ch/mixed) |
-|  TW  | Taiwan, Province of China | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/tw/mixed) |  TR  |          Türkiye          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/tr/mixed) |
-|  UA  |          Ukraine          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ua/mixed) |  AE  |   United Arab Emirates    | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/ae/mixed) |
-|  GB  |      United Kingdom       | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/gb/mixed) |  US  |       United States       | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/us/mixed) |
-|  UY  |          Uruguay          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/uy/mixed) |  UZ  |        Uzbekistan         | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/uz/mixed) |
-|  VN  |         Viet Nam          | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/vn/mixed) |  VG  |  Virgin Islands, British  | [Subscription Link](https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/countries/vg/mixed) |
-
--->
-
-![rainbow]
-
-<br/>
-
-## COUNTRIES
-
-> [!NOTE]
->
-> **Credits — Dear [[10i?]]** <br/>
 >
 > [🗺 **Go Back**](#table-of-contents)
 >
@@ -3071,7 +3121,67 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpyMGZySUFuTGVhbTFGcmhsYkM4bzlJ@176.124.207.10
 
 <br/>
 
-| **Country Name**                                                                                               | **How many?** | **Sub Links**                                                                                                                                         |
+| **Country code** | **Country Name** | **Subscription Link** |
+| :------------- | :--------------- | ----------------- |
+| 🇦🇪 AE | United Arab Emirates | [Sub Link][subAE] |
+| 🇦🇲 AM | Armenia | [Sub Link][subAM] |
+| 🇦🇹 AT | Austria | [Sub Link][subAT] |
+| 🇦🇺 AU | Australia | [Sub Link][subAU] |
+| 🇧🇪 BE | Belgium | [Sub Link][subBE] |
+| 🇧🇬 BG | Bulgaria | [Sub Link][subBG] |
+| 🇧🇭 BH | Bahrain | [Sub Link][subBH] |
+| 🇧🇷 BR | Brazil | [Sub Link][subBR] |
+| 🇧🇾 BY | Belarus | [Sub Link][subBY] |
+| 🇨🇦 CA | Canada | [Sub Link][subCA] |
+| 🇨🇭 CH | Switzerland | [Sub Link][subCH] |
+| 🇨🇱 CL | Chile | [Sub Link][subCL] |
+| 🇨🇳 CN | China | [Sub Link][subCN] |
+| 🇨🇾 CY | Cyprus | [Sub Link][subCY] |
+| 🇨🇿 CZ | Czechia | [Sub Link][subCZ] |
+| 🇩🇪 DE | Germany | [Sub Link][subDE] |
+| 🇪🇪 EE | Estonia | [Sub Link][subEE] |
+| 🇪🇸 ES | Spain | [Sub Link][subES] |
+| 🇫🇮 FI | Finland | [Sub Link][subFI] |
+| 🇫🇷 FR | France | [Sub Link][subFR] |
+| 🇬🇧 GB | United Kingdom | [Sub Link][subGB] |
+| 🇬🇷 GR | Greece | [Sub Link][subGR] |
+| 🇭🇰 HK | Hong Kong | [Sub Link][subHK] |
+| 🇮🇩 ID | Indonesia | [Sub Link][subID] |
+| 🇮🇱 IL | Israel | [Sub Link][subIL] |
+| 🇮🇳 IN | India | [Sub Link][subIN] |
+| 🇮🇶 IQ | Iraq | [Sub Link][subIQ] |
+| 🇮🇹 IT | Italy | [Sub Link][subIT] |
+| 🇯🇵 JP | Japan | [Sub Link][subJP] |
+| 🇰🇷 KR | South Korea | [Sub Link][subKR] |
+| 🇰🇿 KZ | Kazakhstan | [Sub Link][subKZ] |
+| 🇱🇹 LT | Lithuania | [Sub Link][subLT] |
+| 🇱🇻 LV | Latvia | [Sub Link][subLV] |
+| 🇲🇽 MX | Mexico | [Sub Link][subMX] |
+| 🇲🇾 MY | Malaysia | [Sub Link][subMY] |
+| 🇳🇬 NG | Nigeria | [Sub Link][subNG] |
+| 🇳🇱 NL | Netherlands | [Sub Link][subNL] |
+| 🇵🇱 PL | Poland | [Sub Link][subPL] |
+| 🇷🇴 RO | Romania | [Sub Link][subRO] |
+| 🇷🇺 RU | Russia | [Sub Link][subRU] |
+| 🇸🇦 SA | Saudi Arabia | [Sub Link][subSA] |
+| 🇸🇨 SC | Seychelles | [Sub Link][subSC] |
+| 🇸🇪 SE | Sweden | [Sub Link][subSE] |
+| 🇸🇬 SG | Singapore | [Sub Link][subSG] |
+| 🇸🇰 SK | Slovakia | [Sub Link][subSK] |
+| 🇹🇭 TH | Thailand | [Sub Link][subTH] |
+| 🇹🇷 TR | Türkiye | [Sub Link][subTR] |
+| 🇹🇼 TW | Taiwan | [Sub Link][subTW] |
+| 🇺🇦 UA | Ukraine | [Sub Link][subUA] |
+| 🇺🇸 US | United States | [Sub Link][subUS] |
+| 🇻🇳 VN | Vietnam | [Sub Link][subVN] |
+| 🇿🇦 ZA | South Africa | [Sub Link][subZA] |
+| 🇺🇳 UN | Unknown | [Sub Link][subUN] |
+
+![rainbow]
+
+<br/>
+
+| **Country Name**                                                                                               | **How many** | **Subscription Link**                                                                                                                                         |
 | -------------------------------------------------------------------------------------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <img src="https://flagcdn.com/w20/af.png" width="20" alt="Afghanistan flag"> Afghanistan                       | 8             | [`Afghanistan.txt`](https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Afghanistan.txt)                       |
 | <img src="https://flagcdn.com/w20/ar.png" width="20" alt="Argentina flag"> Argentina                           | 7             | [`Argentina.txt`](https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Argentina.txt)                           |
@@ -3160,80 +3270,6 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpyMGZySUFuTGVhbTFGcmhsYkM4bzlJ@176.124.207.10
 | <img src="https://flagcdn.com/w20/us.png" width="20" alt="USA flag"> USA                                       | 8534          | [`USA.txt`](https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/USA.txt)                                       |
 | <img src="https://flagcdn.com/w20/ua.png" width="20" alt="Ukraine flag"> Ukraine                               | 15            | [`Ukraine.txt`](https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Ukraine.txt)                               |
 | <img src="https://flagcdn.com/w20/vn.png" width="20" alt="Vietnam flag"> Vietnam                               | 43            | [`Vietnam.txt`](https://raw.githubusercontent.com/10ium/ScrapeAndCategorize/refs/heads/main/output_configs/Vietnam.txt)                               |
-
-<br/>
-
-> [!NOTE]
->
-> **Credits — Dear [[EP?]]**
->
-> And next up ...
->
-> [🗺 Go Back to Contents](#table-of-contents)
->
-> <br/>
-
-<br/>
-
-**🇺🇸**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/United%20States/config.txt
-
-**🇬🇧**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/United%20Kingdom/config.txt
-
-**🇩🇪**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Germany/config.txt
-
-**🇮🇷**  
-https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/raw/main/sub/Iran/config.txt
-
-**🇫🇮**  
-https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/raw/main/sub/Finland/config.txt
-
-**🇸🇪**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Swedden/config.txt
-
-**🇨🇭**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Switzerland/config.txt
-
-**🇫🇷**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/France/config.txt
-
-**🇧🇭**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Bahrain/config.txt
-
-**🇮🇪**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Ireland/config.txt
-
-**🇨🇦**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Canada/config.txt
-
-**🇮🇹**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Italy/config.txt
-
-**🇹🇷**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Turkey/config.txt
-
-**🇵🇱**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Poland/config.txt
-
-**🇳🇱**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Netherlands/config.txt
-
-**🇷🇸**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Serbia/config.txt
-
-**🇸🇬**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Singapore/config.txt
-
-**🇦🇹**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Austria/config.txt
-
-**🇨🇿**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Czech%20Republic/config.txt
-
-**🇦🇪**  
-https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/United%20Arab%20Emirates/config.txt
 
 ![rainbow]
 
@@ -3376,6 +3412,7 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [Darkness-Tester]: https://darknessshade.github.io/DNS-Tester
 [Darkness-Sub]: https://darknessshade.github.io/Sub
 [Darkness-Warp]: https://hiddify-warp.pages.dev
+[DarkMasq]: https://darknessshade.github.io/Masque-Generator
 [Darkness-Fetcher]: https://telegram-proxy-fetcher.pages.dev
 [Daimonna]: http://address.daimonna.com
 [Di4Diana]: https://telegram.me/Di4Diana
@@ -3480,3 +3517,56 @@ https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-conf
 [M24]: https://telegram.me/s/v2FreeHub
 [M25]: https://telegram.me/s/Go_vpns
 [M26]: https://telegram.me/s/habsiop
+[subAE]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/AE.txt
+[subAM]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/AM.txt
+[subAT]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/AT.txt
+[subAU]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/AU.txt
+[subBE]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/BE.txt
+[subBG]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/BG.txt
+[subBH]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/BH.txt
+[subBR]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/BR.txt
+[subBY]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/BY.txt
+[subCA]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/CA.txt
+[subCH]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/CH.txt
+[subCL]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/CL.txt
+[subCN]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/CN.txt
+[subCY]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/CY.txt
+[subCZ]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/CZ.txt
+[subDE]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/DE.txt
+[subEE]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/EE.txt
+[subES]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/ES.txt
+[subFI]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/FI.txt
+[subFR]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/FR.txt
+[subGB]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/GB.txt
+[subGR]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/GR.txt
+[subHK]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/HK.txt
+[subID]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/ID.txt
+[subIL]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/IL.txt
+[subIN]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/IN.txt
+[subIQ]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/IQ.txt
+[subIT]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/IT.txt
+[subJP]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/JP.txt
+[subKR]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/KR.txt
+[subKZ]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/KZ.txt
+[subLT]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/LT.txt
+[subLV]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/LV.txt
+[subMX]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/MX.txt
+[subMY]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/MY.txt
+[subNG]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/NG.txt
+[subNL]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/NL.txt
+[subPL]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/PL.txt
+[subRO]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/RO.txt
+[subRU]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/RU.txt
+[subSA]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/SA.txt
+[subSC]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/SC.txt
+[subSE]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/SE.txt
+[subSG]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/SG.txt
+[subSK]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/SK.txt
+[subTH]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/TH.txt
+[subTR]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/TR.txt
+[subTW]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/TW.txt
+[subUA]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/UA.txt
+[subUS]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/US.txt
+[subVN]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/VN.txt
+[subZA]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/ZA.txt
+[subUN]: https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/By-country/Unknown.txt
