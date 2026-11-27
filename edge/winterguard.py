@@ -26,14 +26,50 @@ ENTRY_PROXY_BASE_NAME = os.environ.get("ENTRY_PROXY_BASE_NAME", "EU-ENTRY")
 MAIN_SELECTOR_GROUP_NAME = os.environ.get("MAIN_SELECTOR_GROUP_NAME", "⚪PROXIES")
 DIALER_URL_TEST_GROUP_NAME = f"🇮🇷AUTO-{DIALER_PROXY_BASE_NAME}"
 ENTRY_URL_TEST_GROUP_NAME = f"🇪🇺AUTO-{ENTRY_PROXY_BASE_NAME}"
+MASQUE_URL_TEST_GROUP_NAME = "AUTO-MASQUE"
+ENTRY_SERVER = "162.159.192.1"
+ENTRY_PORT = 2408
 
-MASQUE_PRIVATE_KEY = "MHcCAQEEIOkcsGqzwUFIGp+Je205ipuWNfma1yqMRvahFSXj9mG5oAoGCCqGSM49AwEHoUQDQgAEdNtk2zEZ9eDjbUfgjuM9oV9inJ9CiY8J9Nx6ZvxSm8mXcm52wy+ql1+PTrwkFKH948jv53PWsSqh1GekL8HKew=="
 MASQUE_PUBLIC_KEY = "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w=="
-MASQUE_IP = "172.16.0.2"
-MASQUE_IPV6 = "2606:4700:110:8142:4b68:f1cd:25f:56b6"
-MASQUE_SERVER = "162.159.198.2"
-MASQUE_PORT = 443
-MASQUE_SNI = "4pda.to"
+MASQUE_CONFIGS = [
+    {
+        "name": "MASQUE-01",
+        "server": "162.159.198.90",
+        "port": 500,
+        "sni": "www.cloudflare.com",
+        "private_key": "MHcCAQEEIEH+0J3SjeA8/nWSIWAT+z37prtg/dCCFyZFaZxh+eKYoAoGCCqGSM49AwEHoUQDQgAEsROcukB88dfTeTyj9EgLk2LMviMrg0Ell0Z7tjz78c4RQn3p4rdI1OLAGXKMix+MPdMrX5SYaEpjwJPkocH0Cg==",
+        "ip": "172.16.0.2",
+        "ipv6": "2606:4700:110:8904:8bf8:d2b9:f16:1f66",
+    },
+    {
+        "name": "MASQUE-02",
+        "server": "162.159.198.171",
+        "port": 443,
+        "sni": "profile.activision.com",
+        "private_key": "MHcCAQEEIEH+0J3SjeA8/nWSIWAT+z37prtg/dCCFyZFaZxh+eKYoAoGCCqGSM49AwEHoUQDQgAEsROcukB88dfTeTyj9EgLk2LMviMrg0Ell0Z7tjz78c4RQn3p4rdI1OLAGXKMix+MPdMrX5SYaEpjwJPkocH0Cg==",
+        "ip": "172.16.0.2",
+        "ipv6": "2606:4700:110:8904:8bf8:d2b9:f16:1f66",
+    },
+    {
+        "name": "MASQUE-03",
+        "server": "162.159.198.17",
+        "port": 4443,
+        "sni": "tgju.org",
+        "private_key": "MHcCAQEEIK+pLLvBNNV366AIXqqoga8KGEOqua8+0mBB1mSzRb7EoAoGCCqGSM49AwEHoUQDQgAEF5WW5QFXDf8Uato4niqZsUAF9kqItM79F2tyeY6+S02d63toZ0TwTERdquYKsgNPbf/NZPtZ5Gpx1CZsS/07jg==",
+        "ip": "172.16.0.2",
+        "ipv6": "2606:4700:110:88d7:db6d:f4ca:114a:1a11",
+    },
+    {
+        "name": "MASQUE-04",
+        "server": "162.159.198.126",
+        "port": 443,
+        "sni": "repo.steampowered.com",
+        "private_key": "MHcCAQEEIK+pLLvBNNV366AIXqqoga8KGEOqua8+0mBB1mSzRb7EoAoGCCqGSM49AwEHoUQDQgAEF5WW5QFXDf8Uato4niqZsUAF9kqItM79F2tyeY6+S02d63toZ0TwTERdquYKsgNPbf/NZPtZ5Gpx1CZsS/07jg==",
+        "ip": "172.16.0.2",
+        "ipv6": "2606:4700:110:88d7:db6d:f4ca:114a:1a11",
+    },
+]
+MASQUE_PROXY_NAMES = [c["name"] for c in MASQUE_CONFIGS]
 
 logging.basicConfig(
     level=logging.INFO,
@@ -229,7 +265,7 @@ def bind_keys(key_type):
         sys.exit(1)
 
 
-ipv4_prefixes = ["8.6.112.", "188.114.97."]
+ipv4_prefixes = ["8.6.112.", "162.159.195.", "188.114.97.", "188.114.98."]
 
 ports_str = os.environ.get(
     "AVAILABLE_PORTS",
@@ -247,66 +283,71 @@ def generate_ipv4_endpoint():
 
 
 def build_proxies_block(
-    pairs, priv_dialer, reserved_dialer, priv_entry, reserved_entry
+    pairs,
+    priv_dialer,
+    reserved_dialer,
+    v4_dialer,
+    v6_dialer,
+    priv_entry,
+    reserved_entry,
+    v4_entry,
+    v6_entry,
 ):
     lines = []
 
     lines.append("warp-dialer-common: &warp-dialer-common")
     lines.append("  type: wireguard")
-    lines.append("  ip: 172.16.0.2/32")
+    lines.append(f"  ip: {v4_dialer or '172.16.0.2'}/32")
+    if v6_dialer:
+        lines.append(f"  ipv6: {v6_dialer}/128")
     lines.append("  ip-version: ipv4")
     lines.append(f"  private-key: {priv_dialer}")
     lines.append(f"  public-key: {CLOUDFLARE_PUBLIC_KEY}")
     lines.append("  allowed-ips:")
     lines.append("    - 0.0.0.0/0")
+    lines.append("    - ::/0")
     lines.append(f"  reserved: {reserved_dialer}")
     lines.append("  udp: true")
-    lines.append("  mtu: 1280")
+    lines.append("  mtu: 1300")
     lines.append("  amnezia-wg-option:")
     lines.append("    jc: 3")
     lines.append("    jmin: 10")
     lines.append("    jmax: 50")
-    lines.append("    s1: 0")
-    lines.append("    s2: 0")
-    lines.append("    h1: 1")
-    lines.append("    h2: 2")
-    lines.append("    h4: 3")
-    lines.append("    h3: 4")
-    lines.append(
-        "    i1: <b 0xc800000001018800002b45615e996de27ff5ec5f583061ab38eac69fd8fec356802847cd1c7c15a87402bb0a433d4054defedc066e>"
-    )
     lines.append("")
 
     lines.append("warp-entry-common: &warp-entry-common")
     lines.append("  type: wireguard")
-    lines.append("  ip: 172.16.0.3/32")
+    lines.append(f"  ip: {v4_entry or '172.16.0.2'}/32")
+    if v6_entry:
+        lines.append(f"  ipv6: {v6_entry}/128")
     lines.append("  ip-version: ipv4")
     lines.append(f"  private-key: {priv_entry}")
     lines.append(f"  public-key: {CLOUDFLARE_PUBLIC_KEY}")
     lines.append("  allowed-ips:")
     lines.append("    - 0.0.0.0/0")
+    lines.append("    - ::/0")
     lines.append(f"  reserved: {reserved_entry}")
     lines.append("  udp: true")
-    lines.append("  mtu: 1120")
+    lines.append("  mtu: 1160")
     lines.append("")
 
     lines.append("masque-common: &masque-common")
     lines.append("  type: masque")
-    lines.append(f"  private-key: {MASQUE_PRIVATE_KEY}")
     lines.append(f"  public-key: {MASQUE_PUBLIC_KEY}")
-    lines.append(f"  ip: {MASQUE_IP}")
-    lines.append(f"  ipv6: {MASQUE_IPV6}")
+    lines.append("  uri: https://cloudflareaccess.com")
     lines.append("  mtu: 1280")
     lines.append("  udp: true")
     lines.append("  remote-dns-resolve: true")
+    lines.append("  congestion-controller: bbr")
+    lines.append("  network: h2")
     lines.append("  dns:")
     lines.append("    - 1.1.1.1")
-    lines.append("    - 1.0.0.1")
+    lines.append("    - 8.8.8.8")
     lines.append("")
 
     lines.append("proxies:")
 
-    for num, (s_dialer, p_dialer, s_entry, p_entry) in enumerate(pairs, 1):
+    for num, (s_dialer, p_dialer) in enumerate(pairs, 1):
         tag = f"{num:02d}"
         entry_name = f"{ENTRY_PROXY_BASE_NAME}-{tag}"
 
@@ -318,40 +359,31 @@ def build_proxies_block(
 
         lines.append(f"  - name: {entry_name}")
         lines.append("    <<: *warp-entry-common")
-        lines.append(f"    server: {s_entry}")
-        lines.append(f"    port: {p_entry}")
+        lines.append(f"    server: {ENTRY_SERVER}")
+        lines.append(f"    port: {ENTRY_PORT}")
         lines.append(f"    dialer-proxy: {DIALER_PROXY_BASE_NAME}-{tag}")
         lines.append("")
 
-    lines.append("  - name: MASQUE")
-    lines.append("    <<: *masque-common")
-    lines.append(f"    server: {MASQUE_SERVER}")
-    lines.append(f"    port: {MASQUE_PORT}")
-    lines.append(f"    sni: {MASQUE_SNI}")
-    lines.append("")
-
-    lines.append("  - name: MASQUE-H2")
-    lines.append("    <<: *masque-common")
-    lines.append(f"    server: {MASQUE_SERVER}")
-    lines.append(f"    port: {MASQUE_PORT}")
-    lines.append(f"    sni: {MASQUE_SNI}")
-    lines.append("    network: h2")
-    lines.append("")
+    for cfg in MASQUE_CONFIGS:
+        lines.append(f"  - name: {cfg['name']}")
+        lines.append("    <<: *masque-common")
+        lines.append(f"    private-key: {cfg['private_key']}")
+        lines.append(f"    ip: {cfg['ip']}")
+        lines.append(f"    ipv6: {cfg['ipv6']}")
+        lines.append(f"    server: {cfg['server']}")
+        lines.append(f"    port: {cfg['port']}")
+        lines.append(f"    sni: {cfg['sni']}")
+        lines.append("")
 
     return "\n".join(lines)
 
 
 def build_proxy_groups_block(dialer_names, entry_names):
     all_proxies = (
-        [
-            ENTRY_URL_TEST_GROUP_NAME,
-            DIALER_URL_TEST_GROUP_NAME,
-            "DIRECT",
-            "MASQUE",
-            "MASQUE-H2",
-        ]
-        + dialer_names
+        [MASQUE_URL_TEST_GROUP_NAME, ENTRY_URL_TEST_GROUP_NAME]
         + entry_names
+        + MASQUE_PROXY_NAMES
+        + ["DIRECT"]
     )
 
     lines = ["proxy-groups:"]
@@ -377,12 +409,22 @@ def build_proxy_groups_block(dialer_names, entry_names):
 
     lines.append(f"  - name: {ENTRY_URL_TEST_GROUP_NAME}")
     lines.append("    type: url-test")
-    lines.append("    url: http://speed.cloudflare.com")
+    lines.append("    url: https://www.gstatic.com/generate_204")
     lines.append("    icon: https://pub-b3ab4c8172fb44e29854df3435aa223d.r2.dev/eu.svg")
     lines.append("    interval: 180")
     lines.append("    tolerance: 50")
     lines.append("    proxies:")
     for p in entry_names:
+        lines.append(f"      - {p}")
+    lines.append("")
+
+    lines.append(f"  - name: {MASQUE_URL_TEST_GROUP_NAME}")
+    lines.append("    type: url-test")
+    lines.append("    url: https://www.gstatic.com/generate_204")
+    lines.append("    interval: 180")
+    lines.append("    tolerance: 50")
+    lines.append("    proxies:")
+    for p in MASQUE_PROXY_NAMES:
         lines.append(f"      - {p}")
     lines.append("")
 
@@ -405,8 +447,8 @@ def main():
         logger.error(f"Error reading template: {e}")
         sys.exit(1)
 
-    priv_dialer, reserved_dialer, _, _ = bind_keys("dialer")
-    priv_entry, reserved_entry, _, _ = bind_keys("entry")
+    priv_dialer, reserved_dialer, v4_dialer, v6_dialer = bind_keys("dialer")
+    priv_entry, reserved_entry, v4_entry, v6_entry = bind_keys("entry")
 
     pairs = []
     dialer_names = []
@@ -415,13 +457,20 @@ def main():
     for i in range(NUM_PROXY_PAIRS):
         tag = f"{i + 1:02d}"
         s_d, p_d = generate_ipv4_endpoint()
-        s_e, p_e = generate_ipv4_endpoint()
-        pairs.append((s_d, p_d, s_e, p_e))
+        pairs.append((s_d, p_d))
         dialer_names.append(f"{DIALER_PROXY_BASE_NAME}-{tag}")
         entry_names.append(f"{ENTRY_PROXY_BASE_NAME}-{tag}")
 
     proxies_block = build_proxies_block(
-        pairs, priv_dialer, reserved_dialer, priv_entry, reserved_entry
+        pairs,
+        priv_dialer,
+        reserved_dialer,
+        v4_dialer,
+        v6_dialer,
+        priv_entry,
+        reserved_entry,
+        v4_entry,
+        v6_entry,
     )
     groups_block = build_proxy_groups_block(dialer_names, entry_names)
 
@@ -429,6 +478,7 @@ def main():
         template_str.replace("__PROXIES_BLOCK__", proxies_block)
         .replace("__PROXY_GROUPS_BLOCK__", groups_block)
         .replace("__SELECTOR_GROUP__", MAIN_SELECTOR_GROUP_NAME)
+        .replace("__DIALER_GROUP__", DIALER_URL_TEST_GROUP_NAME)
     )
 
     try:
