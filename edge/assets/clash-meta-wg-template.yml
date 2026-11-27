@@ -1,5 +1,5 @@
 mixed-port: 7890
-ipv6: false
+ipv6: true
 allow-lan: true
 mode: rule
 log-level: error
@@ -23,22 +23,14 @@ profile:
 dns:
   enable: true
   ipv6: false
-  respect-rules: true
+  respect-rules: false
   use-system-hosts: false
-  listen: 0.0.0.0:1053
-  default-nameserver:
-    - 1.1.1.1
-    - 8.8.8.8
-    - 223.5.5.5
+  listen: 127.0.0.1:1053
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
-    - https://223.5.5.5/dns-query
-  fallback:
-    - tls://8.8.4.4
-    - tls://1.0.0.1
-    - tls://223.6.6.6
+    - "1.1.1.1#__DIALER_GROUP__"
   proxy-server-nameserver:
+    - 8.8.8.8#DIRECT
+  direct-nameserver:
     - 8.8.8.8#DIRECT
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
@@ -46,7 +38,6 @@ dns:
   fake-ip-filter:
     - "+.lan"
     - "+.local"
-    - geosite:private
 
 tun:
   enable: true
@@ -62,73 +53,7 @@ tun:
 
 __PROXIES_BLOCK__
 __PROXY_GROUPS_BLOCK__
-rule-providers:
-  phishing:
-    type: http
-    format: text
-    behavior: domain
-    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.txt
-    path: ./ruleset/phishing.txt
-    interval: 86400
-  malware:
-    type: http
-    format: text
-    behavior: domain
-    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.txt
-    path: ./ruleset/malware.txt
-    interval: 86400
-  cryptominers:
-    type: http
-    format: text
-    behavior: domain
-    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.txt
-    path: ./ruleset/cryptominers.txt
-    interval: 86400
-  category-ads-all:
-    type: http
-    format: text
-    behavior: domain
-    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.txt
-    path: ./ruleset/category-ads-all.txt
-    interval: 86400
-  private:
-    type: http
-    format: yaml
-    behavior: domain
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml
-    path: ./ruleset/private.yaml
-    interval: 86400
-  private-cidr:
-    type: http
-    format: yaml
-    behavior: ipcidr
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.yaml
-    path: ./ruleset/private-cidr.yaml
-    interval: 86400
-  ir:
-    type: http
-    format: text
-    behavior: domain
-    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ir.txt
-    path: ./ruleset/ir.txt
-    interval: 86400
-  ir-cidr:
-    type: http
-    format: text
-    behavior: ipcidr
-    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ircidr.txt
-    path: ./ruleset/ir-cidr.txt
-    interval: 86400
-
 rules:
-  - RULE-SET,phishing,REJECT
-  - RULE-SET,malware,REJECT
-  - RULE-SET,cryptominers,REJECT
-  - RULE-SET,category-ads-all,REJECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,private-cidr,DIRECT,no-resolve
-  - RULE-SET,ir,DIRECT
-  - RULE-SET,ir-cidr,DIRECT,no-resolve
   - MATCH,__SELECTOR_GROUP__
 
 ntp:
