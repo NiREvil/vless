@@ -265,7 +265,7 @@ def bind_keys(key_type):
         sys.exit(1)
 
 
-ipv4_prefixes = ["8.6.112.", "162.159.195.", "188.114.97.", "188.114.98."]
+ipv4_prefixes = ["8.6.112.", "162.159.195.", "188.114.96.", "188.114.97."]
 
 ports_str = os.environ.get(
     "AVAILABLE_PORTS",
@@ -308,7 +308,7 @@ def build_proxies_block(
     lines.append("    - ::/0")
     lines.append(f"  reserved: {reserved_dialer}")
     lines.append("  udp: true")
-    lines.append("  mtu: 1300")
+    lines.append("  mtu: 1280")
     lines.append("  amnezia-wg-option:")
     lines.append("    jc: 3")
     lines.append("    jmin: 10")
@@ -328,7 +328,7 @@ def build_proxies_block(
     lines.append("    - ::/0")
     lines.append(f"  reserved: {reserved_entry}")
     lines.append("  udp: true")
-    lines.append("  mtu: 1160")
+    lines.append("  mtu: 1280")
     lines.append("")
 
     lines.append("masque-common: &masque-common")
